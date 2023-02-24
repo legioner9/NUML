@@ -1,0 +1,144 @@
+
+    @startuml
+    nwdiag {
+      network Network {
+        Control     [shape = control]     
+        Database    [shape = database]    
+        Entity      [shape = entity]      
+        File        [shape = file]        
+        Folder      [shape = folder]      
+        Frame       [shape = frame]       
+        Hexagon     [shape = hexagon]     
+        Interface   [shape = interface]   
+      }
+    
+      network Network_2 {
+        Control_2     [shape = control]     
+        Database_2    [shape = database]    
+        Entity_      [shape = entity]      
+        File_2        [shape = file]        
+        Folder_2     [shape = folder]      
+        Frame_2      [shape = frame]       
+        Hexagon_2    [shape = hexagon]     
+        Interface_2   [shape = interface]   
+      }
+    
+    }
+    @enduml
+
+
+```plantuml
+@startuml
+nwdiag {
+  network Network {
+    Control     [shape = control]     
+    Database    [shape = database]    
+    Entity      [shape = entity]      
+    File        [shape = file]        
+    Folder      [shape = folder]      
+    Frame       [shape = frame]       
+    Hexagon     [shape = hexagon]     
+    Interface   [shape = interface]   
+  }
+
+  network Network_2 {
+    Control_2     [shape = control]     
+    Database_2    [shape = database]    
+    Entity_      [shape = entity]      
+    File_2        [shape = file]        
+    Folder_2     [shape = folder]      
+    Frame_2      [shape = frame]       
+    Hexagon_2    [shape = hexagon]     
+    Interface_2   [shape = interface]   
+  }
+
+}
+@enduml
+```
+
+```plantuml
+@startuml
+listopeniconic
+@enduml
+```
+
+
+    @startsalt
+    {
+      Login<&person> | "MyName   "
+      Password<&key> | "****     "
+      [Cancel <&circle-x>] | [OK <&account-login>]
+    }
+    @endsalt
+
+```plantuml
+@startuml
+@startsalt
+{
+  Login<&person> | "MyName   "
+  Password<&key> | "****     "
+  [Cancel <&circle-x>] | [OK <&account-login>]
+}
+@endsalt
+@enduml
+```
+
+    @startsalt
+     {
+     [X] checkbox|[] checkbox
+     () radio | (X) radio
+     This is a text|[This is my button]|This is another text
+     "A field"|"Another long Field"|[A button]
+     <<folder
+     ............
+     .XXXXX......
+     .X...X......
+     .XXXXXXXXXX.
+     .X........X.
+     .X........X.
+     .X........X.
+     .X........X.
+     .XXXXXXXXXX.
+     ............
+     >>|<color:blue>other folder|<<folder>>
+    ^Droplist^
+    }
+    @endsalt
+
+
+```plantuml
+@startsalt
+ {
+ [X] checkbox|[] checkbox
+ () radio | (X) radio
+ This is a text|[This is my button]|This is another text
+ "A field"|"Another long Field"|[A button]
+ <<folder
+ ............
+ .XXXXX......
+ .X...X......
+ .XXXXXXXXXX.
+ .X........X.
+ .X........X.
+ .X........X.
+ .X........X.
+ .XXXXXXXXXX.
+ ............
+ >>|<color:blue>other folder|<<folder>>
+^Droplist^
+}
+@endsalt
+```
+
+    @startuml
+    stdlib
+    @enduml
+
+```plantuml
+@startuml
+stdlib
+@enduml
+```
+
+
+
