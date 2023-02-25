@@ -56,87 +56,97 @@ nwdiag {
 @enduml
 ```
 
+
 ```plantuml
 @startuml
-listopeniconic
+nwdiag {
+group {
+  color = "#CCFFCC";
+  description = "Long group description";
+
+  web01;
+  web02;
+  db01;
+}
+
+network dmz {
+web01;
+web02;
+  }
+  network internal {
+  web01;
+  web02;
+  db01 [address = ".101", shape = database];
+}
+}
 @enduml
 ```
 
-
-    @startsalt
-    {
-      Login<&person> | "MyName   "
-      Password<&key> | "****     "
-      [Cancel <&circle-x>] | [OK <&account-login>]
-    }
-    @endsalt
-
 ```plantuml
 @startuml
-@startsalt
-{
-  Login<&person> | "MyName   "
-  Password<&key> | "****     "
-  [Cancel <&circle-x>] | [OK <&account-login>]
+!include <office/Servers/application_server>
+!include <office/Servers/database_server>
+
+nwdiag {
+network dmz {
+address = "210.x.x.x/24"
+
+// set multiple addresses (using comma)
+web01 [address = "210.x.x.1, 210.x.x.20",  description = "<$application_server>\n web01"]
+web02 [address = "210.x.x.2",  description = "<$application_server>\n web02"];
+  }
+  network internal {
+  address = "172.x.x.x/24";
+
+  web01 [address = "172.x.x.1"];
+  web02 [address = "172.x.x.2"];
+  db01 [address = "172.x.x.100",  description = "<$database_server>\n db01"];
+  db02 [address = "172.x.x.101",  description = "<$database_server>\n db02"];
 }
-@endsalt
+}
 @enduml
 ```
 
-    @startsalt
-     {
-     [X] checkbox|[] checkbox
-     () radio | (X) radio
-     This is a text|[This is my button]|This is another text
-     "A field"|"Another long Field"|[A button]
-     <<folder
-     ............
-     .XXXXX......
-     .X...X......
-     .XXXXXXXXXX.
-     .X........X.
-     .X........X.
-     .X........X.
-     .X........X.
-     .XXXXXXXXXX.
-     ............
-     >>|<color:blue>other folder|<<folder>>
-    ^Droplist^
-    }
-    @endsalt
-
-
 ```plantuml
-@startsalt
- {
- [X] checkbox|[] checkbox
- () radio | (X) radio
- This is a text|[This is my button]|This is another text
- "A field"|"Another long Field"|[A button]
- <<folder
- ............
- .XXXXX......
- .X...X......
- .XXXXXXXXXX.
- .X........X.
- .X........X.
- .X........X.
- .X........X.
- .XXXXXXXXXX.
- ............
- >>|<color:blue>other folder|<<folder>>
-^Droplist^
-}
-@endsalt
-```
+@startuml
 
-    @startuml
-    stdlib
-    @enduml
+nwdiag {
+group nightly {
+  color = "#FFAAAA";
+  description = "<&clock> Restarted nightly <&clock>";
+  web02;
+  db01;
+}
+network dmz {
+address = "210.x.x.x/24"
+
+user [description = "<&person*4.5>\n user1"];
+// set multiple addresses (using comma)
+web01 [address = "210.x.x.1, 210.x.x.20",  description = "<&cog*4>\nweb01"]
+web02 [address = "210.x.x.2",  description = "<&cog*4>\nweb02"];
+
+  }
+  network internal {
+  address = "172.x.x.x/24";
+
+  web01 [address = "172.x.x.1"];
+  web02 [address = "172.x.x.2"];
+  db01 [address = "172.x.x.100",  description = "<&spreadsheet*4>\n db01"];
+  db02 [address = "172.x.x.101",  description = "<&spreadsheet*4>\n db02"];
+  ptr  [address = "172.x.x.110",  description = "<&print*4>\n ptr01"];
+}
+}
+@enduml
+```
 
 ```plantuml
 @startuml
-stdlib
+!include /home/st/REPOBARE_ARCH/_repo/plantuml-stdlib/kubernetes/k8s-sprites-labeled-full.puml
+package "Infrastructure" {
+  component "<$master>\nmaster" as master
+  component "<$etcd>\netcd" as etcd
+  component "<$node>\nnode" as node
+}
 @enduml
 ```
 
