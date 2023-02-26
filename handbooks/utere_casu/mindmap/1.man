@@ -1,0 +1,48 @@
+```plantuml
+@startmindmap
+caption figure 1
+title My super title
+
+* <&flag>Debian
+** <&globe>Ubuntu
+*** Linux Mint
+*** Kubuntu
+*** Lubuntu
+*** KDE Neon
+** <&graph>LMDE
+** <&pulse>SolydXK
+** <&people>SteamOS
+** <&star>Raspbian with a very long name
+*** <s>Raspmbc</s> => OSMC
+*** <s>Raspyfi</s> => Volumio
+
+caption figure 1
+title My super title
+
+header
+My super header
+endheader
+
+center footer My super footer
+
+legend right
+  Short
+  legend
+  vfdv
+  vdsfv
+  vsdfv
+  tgfhn
+  ngf
+  ** dfbg
+  bdfg
+  dfgbb
+  
+endlegend
+
+' note left 
+'  * Bullet lis
+' * Second item  ** Sub itemend no
+' end note
+@endmindmap
+
+```

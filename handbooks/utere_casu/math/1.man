@@ -1,0 +1,5 @@
+```plantuml
+@startmath
+f()=(a_2)/2 + sum(n=0)^oo
+@endmath
+```

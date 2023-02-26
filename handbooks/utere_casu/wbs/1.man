@@ -1,0 +1,12 @@
+```plantuml
+@startwbs
++ world
+++ asia
++++ cha
+++ europ
++++ france
++++ germany
+--- russia
+@endwbs
+
+```
