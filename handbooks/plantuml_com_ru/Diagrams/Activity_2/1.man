@@ -1,5 +1,14 @@
 ```plantuml
 @startuml
-testdot
+
+if (условие?) then
+  :ошибка;
+  stop
+
+endif
+
+#palegreen :активность;
+
 @enduml
+
 ```

@@ -1,8 +1,4 @@
-```plantuml
-@startuml
-testdot
-@enduml
-```
+
 
 ```plantuml
 @startuml
@@ -17,6 +13,7 @@ testdot
 @startuml
 (*) -up-> "Do that"
 "Do that" -right-> "far 1"
+"Do that" -up-> "far 3"
 "Do that" -left-> [lable] "far 2"
 "far 1" -down-> (*)
 @enduml
@@ -28,12 +25,168 @@ testdot
 @startuml
 (*) --> " Start Flow "
 if "Some test" then
--->[true] "true activity"
+-->[true] "true activity" 
+--> "other action"
+-right-> (*)
 
 else 
 -->[false] "false activity"
+-left->(*)
 
 endif
 @enduml
 ```
 
+### Barier
+
+```plantuml
+@startuml
+(*) --> ===B1===
+--> "Parallel activity 1"
+--> ===B2===
+
+===B1=== --> "Parallel activity 2"
+--> ===B2===
+--> (*)
+@enduml
+`{ut}
+```
+
+### long comments, tags
+
+
+```plantuml
+@startuml
+(*) -left-> "this size 20 <size:20> Activity </size>
+\<b\> <b> this bolt </b>
+\<del\> <del> this del </del>
+\<i\> <i> this italy </i>
+\<sup\> <sup> this italy </sup>
+\<sub\> <sub> this sub </sub>
+
+
+\<img\> <img:1.png>
+
+\<color\> <color:red> red </color>
+ 
+
+" as A1
+A1 --> "Far"
+A1 --> "Far2"
+
+@enduml
+`{ut}
+```
+
+### notes
+
+```plantuml
+@startuml
+(*) --> " Activ "
+note right: this note right
+note left: this note left
+@enduml
+`{ut}
+```
+
+### partition
+
+```plantuml
+@startuml
+partition Prt_1 {
+(*) --> " Activ "
+} 
+partition Prt_2{
+--> "More acts"
+}
+partition Prt_1 {
+-up-> " Go Far"
+-right-> (*)
+} 
+@enduml
+`{ut}
+```
+
+### skinparam 
+
+```plantuml
+@startuml
+skinparam activityShape octagon
+skinparam backgroundColor #AAFFBB
+skinparam activity {
+    StartColor #900
+    BarColor #800
+    BackgroundColor Peru
+    BackgroundColor<< Begin>> Olive
+    BorderColor #990
+    FontName Impact
+
+}
+
+(*) --> "Climbs on Platform" << Begin >>
+--> === S1 ===
+--> Bows
+--> === S2 ===
+--> Wave
+--> (*)
+@enduml
+`{ut}
+```
+
+### full example 
+
+```plantuml
+@startuml
+title Servlet Container
+
+(*) --> "ClickServlet.handleRequest()"
+--> "new Page"
+
+if "Page.onSecurityCheck" then
+  ->[true] "Page.onInit()"
+
+  if "isForward?" then
+   ->[no] "Process controls"
+
+   if "continue processing?" then
+     -->[yes] ===RENDERING===
+   else
+     -->[no] ===REDIRECT_CHECK===
+   endif
+
+  else
+   -->[yes] ===RENDERING===
+  endif
+
+  if "is Post?" then
+    -->[yes] "Page.onPost()"
+    --> "Page.onRender()" as render
+    --> ===REDIRECT_CHECK===
+  else
+    -->[no] "Page.onGet()"
+    --> render
+  endif
+
+else
+  -->[false] ===REDIRECT_CHECK===
+endif
+
+if "Do redirect?" then
+ ->[yes] "redirect request"
+ --> ==BEFORE_DESTROY===
+else
+ if "Do Forward?" then
+  -left->[yes] "Forward request"
+  --> ==BEFORE_DESTROY===
+ else
+  -right->[no] "Render page template"
+  --> ==BEFORE_DESTROY===
+ endif
+endif
+
+--> "Page.onDestroy()"
+-->(*)
+
+@enduml
+
+```
