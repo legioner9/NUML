@@ -1,0 +1,6 @@
+```plantuml
+@startuml
+Bob -> Alice
+Alice --> Bob
+@enduml
+```

@@ -1,0 +1,39 @@
+```plantuml
+@startuml
+testdot
+@enduml
+```
+
+```plantuml
+@startuml
+testdot
+@enduml
+`{ut}
+```
+
+### simplex
+
+```plantuml
+@startuml
+(*) -up-> "Do that"
+"Do that" -right-> "far 1"
+"Do that" -left-> [lable] "far 2"
+"far 1" -down-> (*)
+@enduml
+```
+
+### if else
+
+```plantuml
+@startuml
+(*) --> " Start Flow "
+if "Some test" then
+-->[true] "true activity"
+
+else 
+-->[false] "false activity"
+
+endif
+@enduml
+```
+
