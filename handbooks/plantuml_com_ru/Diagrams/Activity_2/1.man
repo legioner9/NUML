@@ -12,3 +12,16 @@ endif
 @enduml
 
 ```
+
+```plantuml
+if (condition) then (yes)
+: true thread ; 
+stop
+else (no)
+: do it ;
+: far ;
+endif
+
+#555 : I m do it;
+
+```
