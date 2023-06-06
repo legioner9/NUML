@@ -1,0 +1,12 @@
+```plantuml
+@startmindmap
+* fn01
+** fn2
+** fn3
+* fn02
+** fn2
+** fn3
+
+@endmindmap
+
+```

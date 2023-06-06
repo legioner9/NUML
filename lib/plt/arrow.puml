@@ -1,0 +1,14 @@
+```plantuml
+
+@startuml
+participant Alice as a
+participant Bob as b
+a -> b 
+a ->> b 
+a -\ b 
+a -> b 
+b -> a 
+a o-> b 
+@enduml
+
+```
