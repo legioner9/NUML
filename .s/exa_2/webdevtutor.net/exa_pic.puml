@@ -1,0 +1,32 @@
+@startuml
+
+!include exa_depl.puml
+
+!define SPRITESURL https://raw.githubusercontent.com/rabelenda/cicon-plantuml-sprites/v1.0/sprites
+!includeurl SPRITESURL/server.puml
+!includeurl SPRITESURL/kafka.puml
+!includeurl SPRITESURL/haproxy.puml
+
+rectangle "<$server>\n Service A" as serviceA
+rectangle "<$server>\n Service B" as serviceB
+queue "<$kafka>\n Queue A" as queueA
+queue "<$kafka>\n Queue B" as queueB
+rectangle "<$server>\n Service C" as serviceC
+rectangle "<$server>\n Service D" as serviceD
+rectangle "<$server>\n Service E" as serviceE
+rectangle "<$server>\n Service F" as serviceF
+
+  queue "<$kafka>\n Queue C" as queueC
+  queue "<$kafka>\n Queue D" as queueD
+
+rectangle "<$haproxy>\n LoadBalancer" as loadBalancer
+
+serviceA --> queueA
+serviceB --> queueB
+serviceC --> queueC
+serviceD --> queueD
+serviceE --> loadBalancer
+serviceF --> loadBalancer
+loadBalancer --> serviceC
+loadBalancer --> serviceD
+@enduml

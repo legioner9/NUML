@@ -1,0 +1,17 @@
+@startuml
+
+node "Web Server" {
+    [Web App]
+}
+
+node "Application Server" {
+    [API Server]
+}
+
+database "Database Server" {
+    [Database]
+}
+
+[Web App] --> [API Server]
+[API Server] --> [Database]
+@enduml
