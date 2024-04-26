@@ -1,0 +1,1016 @@
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<script data-ezscrex='false' data-cfasync='false' data-pagespeed-no-defer>var __ez=__ez||{};__ez.stms=Date.now();__ez.evt={};__ez.script={};__ez.ck=__ez.ck||{};__ez.template={};__ez.template.isOrig=false;__ez.queue=function(){var e=0,i=0,t=[],n=!1,o=[],r=[],s=!0,a=function(e,i,n,o,r,s,a){var l=arguments.length>7&&void 0!==arguments[7]?arguments[7]:window,d=this;this.name=e,this.funcName=i,this.parameters=null===n?null:p(n)?n:[n],this.isBlock=o,this.blockedBy=r,this.deleteWhenComplete=s,this.isError=!1,this.isComplete=!1,this.isInitialized=!1,this.proceedIfError=a,this.fWindow=l,this.isTimeDelay=!1,this.process=function(){f("... func = "+e),d.isInitialized=!0,d.isComplete=!0,f("... func.apply: "+e);var i=d.funcName.split("."),n=null,o=this.fWindow||window;i.length>3||(n=3===i.length?o[i[0]][i[1]][i[2]]:2===i.length?o[i[0]][i[1]]:o[d.funcName]),null!=n&&n.apply(null,this.parameters),!0===d.deleteWhenComplete&&delete t[e],!0===d.isBlock&&(f("----- F'D: "+d.name),u())}},l=function(e,i,t,n,o,r,s){var a=arguments.length>7&&void 0!==arguments[7]?arguments[7]:window,l=this;this.name=e,this.path=i,this.async=o,this.defer=r,this.isBlock=t,this.blockedBy=n,this.isInitialized=!1,this.isError=!1,this.isComplete=!1,this.proceedIfError=s,this.fWindow=a,this.isTimeDelay=!1,this.isPath=function(e){return"/"===e[0]&&"/"!==e[1]},this.getSrc=function(e){return void 0!==window.__ezScriptHost&&this.isPath(e)&&"banger.js"!==this.name?window.__ezScriptHost+e:e},this.process=function(){l.isInitialized=!0,f("... file = "+e);var i=this.fWindow?this.fWindow.document:document,t=i.createElement("script");t.src=this.getSrc(this.path),!0===o?t.async=!0:!0===r&&(t.defer=!0),t.onerror=function(){var e={url:window.location.href,name:l.name,path:l.path,user_agent:window.navigator.userAgent};"undefined"!=typeof _ezaq&&(e.pageview_id=_ezaq.page_view_id);var i=encodeURIComponent(JSON.stringify(e)),t=new XMLHttpRequest;t.open("GET","//g.ezoic.net/ezqlog?d="+i,!0),t.send(),f("----- ERR'D: "+l.name),l.isError=!0,!0===l.isBlock&&u()},t.onreadystatechange=t.onload=function(){var e=t.readyState;f("----- F'D: "+l.name),e&&!/loaded|complete/.test(e)||(l.isComplete=!0,!0===l.isBlock&&u())},i.getElementsByTagName("head")[0].appendChild(t)}},d=function(e,i){this.name=e,this.path="",this.async=!1,this.defer=!1,this.isBlock=!1,this.blockedBy=[],this.isInitialized=!0,this.isError=!1,this.isComplete=i,this.proceedIfError=!1,this.isTimeDelay=!1,this.process=function(){}};function c(e){!0!==h(e)&&0!=s&&e.process()}function h(e){if(!0===e.isTimeDelay&&!1===n)return f(e.name+" blocked = TIME DELAY!"),!0;if(p(e.blockedBy))for(var i=0;i<e.blockedBy.length;i++){var o=e.blockedBy[i];if(!1===t.hasOwnProperty(o))return f(e.name+" blocked = "+o),!0;if(!0===e.proceedIfError&&!0===t[o].isError)return!1;if(!1===t[o].isComplete)return f(e.name+" blocked = "+o),!0}return!1}function f(e){var i=window.location.href,t=new RegExp("[?&]ezq=([^&#]*)","i").exec(i);"1"===(t?t[1]:null)&&console.debug(e)}function u(){++e>200||(f("let's go"),m(o),m(r))}function m(e){for(var i in e)if(!1!==e.hasOwnProperty(i)){var t=e[i];!0===t.isComplete||h(t)||!0===t.isInitialized||!0===t.isError?!0===t.isError?f(t.name+": error"):!0===t.isComplete?f(t.name+": complete already"):!0===t.isInitialized&&f(t.name+": initialized already"):t.process()}}function p(e){return"[object Array]"==Object.prototype.toString.call(e)}return window.addEventListener("load",(function(){setTimeout((function(){n=!0,f("TDELAY -----"),u()}),5e3)}),!1),{addFile:function(e,i,n,s,a,d,h,f,u){var m=new l(e,i,n,s,a,d,h,u);!0===f?o[e]=m:r[e]=m,t[e]=m,c(m)},addDelayFile:function(e,i){var n=new l(e,i,!1,[],!1,!1,!0);n.isTimeDelay=!0,f(e+" ...  FILE! TDELAY"),r[e]=n,t[e]=n,c(n)},addFunc:function(e,n,s,l,d,h,f,u,m,p){!0===h&&(e=e+"_"+i++);var w=new a(e,n,s,l,d,f,u,p);!0===m?o[e]=w:r[e]=w,t[e]=w,c(w)},addDelayFunc:function(e,i,n){var o=new a(e,i,n,!1,[],!0,!0);o.isTimeDelay=!0,f(e+" ...  FUNCTION! TDELAY"),r[e]=o,t[e]=o,c(o)},items:t,processAll:u,setallowLoad:function(e){s=e},markLoaded:function(e){if(e&&0!==e.length){if(e in t){var i=t[e];!0===i.isComplete?f(i.name+" "+e+": error loaded duplicate"):(i.isComplete=!0,i.isInitialized=!0)}else t[e]=new d(e,!0);f("markLoaded dummyfile: "+t[e].name)}},logWhatsBlocked:function(){for(var e in t)!1!==t.hasOwnProperty(e)&&h(t[e])}}}();__ez.evt.add=function(e,t,n){e.addEventListener?e.addEventListener(t,n,!1):e.attachEvent?e.attachEvent("on"+t,n):e["on"+t]=n()},__ez.evt.remove=function(e,t,n){e.removeEventListener?e.removeEventListener(t,n,!1):e.detachEvent?e.detachEvent("on"+t,n):delete e["on"+t]};__ez.script.add=function(e){var t=document.createElement("script");t.src=e,t.async=!0,t.type="text/javascript",document.getElementsByTagName("head")[0].appendChild(t)};__ez.dot={};__ez.queue.addFile('/detroitchicago/boise.js', '/detroitchicago/boise.js?gcb=195-2&cb=2', true, [], true, false, true, false);__ez.queue.addFile('/parsonsmaize/abilene.js', '/parsonsmaize/abilene.js?gcb=195-2&cb=28', true, [], true, false, true, false);</script>
+<script data-ezscrex="false" type="text/javascript" data-cfasync="false">window._ezaq = Object.assign({}, typeof window._ezaq !== "undefined" ? window._ezaq : {}, {"ad_cache_level":1,"domain_id":173770,"ezcache_level":2,"ezcache_skip_code":0,"has_bad_image":0,"has_bad_words":0,"is_sitespeed":0,"lt_cache_level":0,"page_view_id":"9fb06e25-a979-49f1-5a04-a235bb4dbde9","response_size_orig":129212,"response_time_orig":5,"template_id":134,"url":"https://plantuml.com/en/activity-diagram-beta","word_count":3069,"worst_bad_word_level":0});__ez.queue.markLoaded('ezaqBaseReady');</script>
+<script type="text/javascript">(function(){function storageAvailable(type){var storage;try{storage=window[type];var x='__storage_test__';storage.setItem(x,x);storage.removeItem(x);return true;}
+catch(e){return e instanceof DOMException&&(e.code===22||e.code===1014||e.name==='QuotaExceededError'||e.name==='NS_ERROR_DOM_QUOTA_REACHED')&&(storage&&storage.length!==0);}}
+function remove_ama_config(){if(storageAvailable('localStorage')){localStorage.removeItem("google_ama_config");}}
+remove_ama_config()})()</script>
+<script type="text/javascript">var ezoicTestActive = true</script>
+<script data-ezscrex="false" type="text/javascript" data-cfasync="false">window._ezaq = Object.assign({}, typeof window._ezaq !== "undefined" ? window._ezaq : {}, {"ab_test_id":"mod174-c","ad_cache_level":1,"ad_count_adjustment":0,"ad_lazyload_version":0,"ad_load_version":1,"ad_location_ids":"","adx_ad_count":0,"ai_placeholder_cache_level":1,"ai_placeholder_placement_cnt":-1,"bidder_method":1,"bidder_version":3,"city":"Krasnoyarsk","country":"RU","days_since_last_visit":-1,"display_ad_count":0,"domain_id":173770,"domain_test_group":20230802,"ds_adsize_opt_id":-1,"engaged_time_visit":0,"ezcache_level":2,"ezcache_skip_code":0,"form_factor_id":1,"framework_id":1,"has_bad_image":0,"has_bad_words":0,"iab_category":"","iab_category_0":"596","is_embed":false,"is_from_recommended_pages":false,"is_return_visitor":false,"is_sitespeed":0,"last_page_load":"","last_pageview_id":"","lt_cache_level":0,"max_ads":0,"metro_code":0,"optimization_version":1,"page_ad_positions":"","page_view_count":1257,"page_view_id":"9fb06e25-a979-49f1-5a04-a235bb4dbde9","position_selection_id":0,"postal_code":"660000","pv_event_count":0,"response_size_orig":129212,"response_time_orig":5,"serverid":"i-05081d731ed3876af","state":"KYA","sub_page_ad_positions":"","t_epoch":1697691336,"template_id":134,"time_on_site_visit":0,"url":"https://plantuml.com/en/activity-diagram-beta","word_count":3069,"worst_bad_word_level":0});__ez.queue.markLoaded('ezaqReady');</script>
+<script data-ezscrex='false' data-cfasync='false' data-pagespeed-no-defer>__ez.queue.addFile('/parsonsmaize/mulvane.js', '/parsonsmaize/mulvane.js?gcb=195-2&cb=5', true, ['/parsonsmaize/abilene.js'], true, false, true, false);__ez.queue.addFile('/parsonsmaize/olathe.js', '/parsonsmaize/olathe.js?gcb=195-2&cb=20', false, ['/parsonsmaize/abilene.js','/parsonsmaize/mulvane.js'], true, false, true, false);__ez.queue.addFile('/porpoiseant/et.js', '/porpoiseant/et.js?gcb=195-2&cb=2', false, [], true, false, true, false);!function(){var e;__ez.vep=(e=[],{Add:function(i,t){__ez.dot.isDefined(i)&&__ez.dot.isValid(t)&&e.push({type:"video",video_impression_id:i,domain_id:__ez.dot.getDID(),t_epoch:__ez.dot.getEpoch(0),data:__ez.dot.dataToStr(t)})},Fire:function(){if(void 0===document.visibilityState||"prerender"!==document.visibilityState){if(__ez.dot.isDefined(e)&&e.length>0)for(;e.length>0;){var i=5;i>e.length&&(i=e.length);var t=e.splice(0,i),o=__ez.dot.getURL("/detroitchicago/grapefruit.gif")+"?orig="+(!0===__ez.template.isOrig?1:0)+"&v="+btoa(JSON.stringify(t));__ez.dot.Fire(o)}e=[]}}})}();</script><script data-ezscrex='false' data-cfasync='false' data-pagespeed-no-defer>!function(){function e(i){return e="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e},e(i)}__ez.pel=function(){var i=[];function t(t,o,d,_,n,r,a,s){if(__ez.dot.isDefined(t)&&0!=__ez.dot.isAnyDefined(t.getSlotElementId,t.ElementId)){void 0===s&&(s=!1);var p=parseInt(__ez.dot.getTargeting(t,"ap")),f=__ez.dot.getSlotIID(t),u=__ez.dot.getAdUnit(t,s),z=parseInt(__ez.dot.getTargeting(t,"compid")),g=0,c=0,l=function(i){if("undefined"==typeof _ezim_d)return!1;var t=__ez.dot.getAdUnitPath(i).split("/").pop();if("object"===("undefined"==typeof _ezim_d?"undefined":e(_ezim_d))&&_ezim_d.hasOwnProperty(t))return _ezim_d[t];for(var o in _ezim_d)if(o.split("/").pop()===t)return _ezim_d[o];return!1}(t);"object"==e(l)&&(void 0!==l.creative_id&&(c=l.creative_id),void 0!==l.line_item_id&&(g=l.line_item_id)),__ez.dot.isDefined(f,u)&&__ez.dot.isValid(o)&&("0"===f&&!0!==s||""===u||i.push({type:"impression",impression_id:f,domain_id:__ez.dot.getDID(),unit:u,t_epoch:__ez.dot.getEpoch(0),revenue:d,est_revenue:_,ad_position:p,ad_size:"",bid_floor_filled:n,bid_floor_prev:r,stat_source_id:a,country_code:__ez.dot.getCC(),pageview_id:__ez.dot.getPageviewId(),comp_id:z,line_item_id:g,creative_id:c,data:__ez.dot.dataToStr(o),is_orig:s||__ez.template.isOrig}))}}function o(){void 0!==document.visibilityState&&"prerender"===document.visibilityState||(__ez.dot.isDefined(i)&&i.length>0&&[i.filter((function(e){return e.is_orig})),i.filter((function(e){return!e.is_orig}))].forEach((function(e){for(;e.length>0;){var i=e[0].is_orig||!1,t=5;t>e.length&&(t=e.length);var o=e.splice(0,t),d=__ez.dot.getURL("/porpoiseant/army.gif")+"?orig="+(!0===i?1:0)+"&sts="+btoa(JSON.stringify(o));(void 0!==window.isAmp&&isAmp||void 0!==window.ezWp&&ezWp)&&void 0!==window._ezaq&&_ezaq.hasOwnProperty("domain_id")&&(d+="&visit_uuid="+_ezaq.visit_uuid),__ez.dot.Fire(d)}})),i=[])}return{Add:t,AddAndFire:function(e,i){t(e,i,0,0,0,0,0),o()},AddAndFireOrig:function(e,i){t(e,i,0,0,0,0,0,!0),o()},AddById:function(e,t,o,d){var _=e.split("/");if(__ez.dot.isDefined(e)&&3===_.length&&__ez.dot.isValid(t)){var n=_[0],r={type:"impression",impression_id:_[2],domain_id:__ez.dot.getDID(),unit:n,t_epoch:__ez.dot.getEpoch(0),pageview_id:__ez.dot.getPageviewId(),data:__ez.dot.dataToStr(t),is_orig:o||__ez.template.isOrig};void 0!==d&&(r.revenue=d),i.push(r)}},Fire:o,GetPixels:function(){return i}}}()}();__ez.queue.addFile('/detroitchicago/raleigh.js', '/detroitchicago/raleigh.js?gcb=195-2&cb=6', false, ['/parsonsmaize/abilene.js'], true, false, true, false);__ez.queue.addFile('/detroitchicago/vista.js', '/detroitchicago/vista.js?gcb=195-2&cb=5', false, ['/parsonsmaize/abilene.js'], true, false, true, false);__ez.queue.addFile('/detroitchicago/tampa.js', '/detroitchicago/tampa.js?gcb=195-2&cb=5', false, ['/parsonsmaize/abilene.js'], true, false, true, false);</script><base href=""/><meta name="flattr:id" content="1ew3x0"/><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "url": "https://plantuml.com",
+  "name": "PlantUML",
+  "sameAs" : ["https://twitter.com/plantuml","https://en.wikipedia.org/wiki/PlantUML","https://www.wikidata.org/wiki/Q18346546"],
+  "logo": "https://cdn-0.plantuml.com/logo3.png",
+  "contactPoint": [{
+    "@type": "ContactPoint",
+    "email": "plantuml@gmail.com",
+    "url": "https://plantuml.com",
+    "contactType": "customer service"
+  }]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+    "@type": "ListItem",
+    "position": 1,
+    "item": {
+      "@id": "https://plantuml.com",
+      "name": "Home"
+    }
+  },{
+    "@type": "ListItem",
+    "position": 2,
+    "item": {
+      "@id": "https://plantuml.com/sitemap-language-specification",
+      "name": "Language specification"
+    }
+  },{
+    "@type": "ListItem",
+    "position": 3,
+    "item": {
+      "@id": "https://plantuml.com/activity-diagram-beta",
+      "name": "Activity Diagram (beta)"
+  }
+  }]
+}
+</script><link rel="canonical" href="../activity-diagram-beta.html"/><link rel="alternate" hreflang="x-default" href="../activity-diagram-beta.html"/><link rel="alternate" hreflang="de" href="../de/activity-diagram-beta.html"/><link rel="alternate" hreflang="en" href="../activity-diagram-beta.html"/><link rel="alternate" hreflang="es" href="../es/activity-diagram-beta.html"/><link rel="alternate" hreflang="fr" href="../fr/activity-diagram-beta.html"/><link rel="alternate" hreflang="ja" href="../ja/activity-diagram-beta.html"/><link rel="alternate" hreflang="ru" href="../ru/activity-diagram-beta.html"/><link rel="alternate" hreflang="ko" href="../ko/activity-diagram-beta.html"/><link rel="alternate" hreflang="zh" href="../zh/activity-diagram-beta.html"/><link rel="shortcut icon" href="../favicon.ico"/><link rel="preload" as="image" href="../svgrepo-house.svg"/><link rel="preload" as="image" href="../svgrepo-text-news.svg"/><link rel="preload" as="image" href="../svgrepo-rocket-3-start.svg"/><link rel="preload" as="image" href="../svgrepo-server.svg"/><link rel="preload" as="image" href="../svgrepo-play.svg"/><link rel="preload" as="image" href="../svgrepo-forum.svg"/><link rel="preload" as="image" href="../svgrepo-add-to-online-cart.svg"/><link rel="preload" as="image" href="../svgrepo-forum-message.svg"/><link rel="preload" as="image" href="../svgrepo-palette-fill.svg"/><link rel="preload" as="image" href="../svgrepo-cpu.svg"/><link rel="preload" as="image" href="../svgrepo-books-library.svg"/><link rel="preload" as="image" href="../svgrepo-signpost-fill.svg"/><link rel="preload" as="image" href="../svgrepo-library.svg"/><link rel="preload" as="image" href="../flags21.png"/><link rel="preload" as="image" href="../svgrepo-uxwing-light-mode-toggle.svg"/><title>New Activity Diagram Beta syntax and features</title><meta name="description" content="The new syntax is more consistent. You can have start, stop, labels, conditions, while loops, repeat loops, notes, partitions. Changing fonts and colors is also possible."/><meta property="og:type" content="article"/><meta property="og:title" content="New Activity Diagram Beta syntax and features"/><meta property="og:description" content="The new syntax is more consistent. You can have start, stop, labels, conditions, while loops, repeat loops, notes, partitions. Changing fonts and colors is also possible."/><meta property="og:url" content="https://plantuml.com/activity-diagram-beta"/><meta property="og:site_name" content="PlantUML.com"/><meta name="twitter:image" content="https://plantuml.com/og-activity-diagram-beta"/><meta property="og:locale" content="en"/><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="New Activity Diagram Beta syntax and features"/><meta name="twitter:description" content="The new syntax is more consistent. You can have start, stop, labels, conditions, while loops, repeat loops, notes, partitions. Changing fonts and colors is also possible."/><meta name="twitter:site" content="@PlantUML"/><meta name="twitter:creator" content="@PlantUML"/><script>if(window.location.href.indexOf("/en/")==-1){var lg=navigator.language.substring(0,2);if(lg=="de"){window.location.href="/de/activity-diagram-beta"}if(lg=="es"){window.location.href="/es/activity-diagram-beta"}if(lg=="fr"){window.location.href="/fr/activity-diagram-beta"}if(lg=="ja"){window.location.href="/ja/activity-diagram-beta"}if(lg=="ko"){window.location.href="/ko/activity-diagram-beta"}if(lg=="ru"){window.location.href="/ru/activity-diagram-beta"}if(lg=="zh"){window.location.href="/zh/activity-diagram-beta"}};</script><style>li{margin:2px}#external li{margin:13px}.pezoic{max-width:970px}@media screen and (max-width:1600px){.pezoic{max-width:768px}}.coptable{max-width:90%}.mytab{display:inline-block;border-radius:3px;border:1px solid #e1e4e8}.mytab:hover{border:1px dashed #0366d6;cursor:pointer;color:#0366d6;background:#f6f8fa}.cop{margin:25px 10px 0 10px}.cop:hover{cursor:pointer;filter:invert(30%) sepia(75%) saturate(4001%) hue-rotate(201deg) brightness(88%) contrast(98%)}.cop2{margin:25px 10px 0 10px}.cop2:hover{cursor:pointer}.msg{position:absolute;color:#396;background-color:#FFF;margin-top:55px;display:none;border-radius:3px;border:1px solid #4dff00}.mycell0{float:left;vertical-align:top;padding:10px}.mycell0 code:hover{cursor:default;color:#000}.mycell{float:right;vertical-align:top;padding:10px;max-width:55vw;overflow-x:auto}.mycell0 pre{max-width:55vw;overflow-x:auto}.cod{background:#edeff3;padding:2px 5px;border-radius:3px}.colo{display:inline-block;background:#edeff3;padding:7px 12px;border-radius:3px}.tag,.tagg,.tago,.tagr{text-rendering:optimizeLegibility;display:inline-block;padding:3px 5px 2px 4px;text-decoration:none;white-space:nowrap;border:1px solid #999;text-transform:uppercase;text-align:center;border-radius:3px;font-size:11px;font-weight:bold;line-height:90%}.tag{background-color:#eee}.tagg{background-color:#98fb98}.tago{background-color:#fafa00}.tagr{background-color:#ff4500}a{text-decoration:none;color:#0366d6}a:hover{text-decoration:underline}.menu1{border:0;font-family:Helvetica,sans-serif;font-size:14px;padding:0;margin:0;white-space:nowrap;overflow:hidden;vertical-align:middle;line-height:30px}.menu1 a{text-align:center;padding:10px 7px 10px 7px;text-decoration:none;color:#637282}.menu1 a:hover{color:#0366d6}#menu0{top:0;z-index:4;margin:0 0 0 10px;padding:0}@media screen and (max-width:1200px){#menu0{visibility:hidden}}.mhov img{margin:0 5px 0 0;padding:0}.mhov:hover{filter:invert(25%) sepia(97%) saturate(2026%) hue-rotate(201deg) brightness(91%) contrast(98%)}#menuside2{border:0;font-family:Helvetica,sans-serif;font-size:14px;padding:20px 0 4px 0;margin:0}#menuside2 span{vertical-align:top}#menuside2 li{list-style:none;position:relative;padding:0;margin:10px 20px 10px 10px;border:0}#menuside2 li a{display:inline-block;text-decoration:none;color:#637282;width:100%}#BC{z-index:0;padding-top:5px;top:35px}.breadcrumb{z-index:1;font-family:Helvetica,sans-serif;font-size:14px;text-align:center;display:inline-block;overflow:hidden;border-radius:5px}.breadcrumb a{text-decoration:none;outline:0;display:block;float:left;font-size:12px;line-height:24px;color:#373f49;padding:0 10px 0 35px;background:#f0f1f1;background:linear-gradient(#f0f1f1,#c6d2d2);position:relative}.breadcrumb a:first-child{padding-left:21px;border-radius:5px 0 0 5px}.breadcrumb a:first-child:before{left:14px}.breadcrumb a:last-child{visibility:hidden}.breadcrumb a.active,.breadcrumb a:hover{color:#0366d6;background:#c6d2d2;background:linear-gradient(#e3e4e4,#b8c7c7)}.breadcrumb a.active:after,.breadcrumb a:hover:after{background:#c6d2d2;background:linear-gradient(135deg,#e3e4e4,#b8c7c7)}.breadcrumb a:after{content:'';position:absolute;top:0;right:-12px;width:24px;height:24px;transform:scale(0.707) rotate(45deg);z-index:1;background:#f0f1f1;background:linear-gradient(135deg,#f0f1f1,#c6d2d2);box-shadow:2px -2px 0 2px rgba(0,0,0,0.1),3px -3px 0 2px rgba(255,255,255,0.1);border-radius:0 5px 0 50px}.breadcrumb a:last-child:after{content:none;visibility:hidden}.lga,.lga a,.lgi,.lgi a{font-family:Helvetica,sans-serif;font-size:13px;text-align:center;color:#fff;padding:0 5px;margin:0}.lga,.lga a{background-color:#008}.lgi,.lgi a{background-color:#888}.lga:hover,.lga:hover a{text-decoration:none;color:#BBB}.lgi:hover,.lgi:hover a{text-decoration:none;color:#CCC}</style><style>.backtop{margin:0 10px}.backtop:hover{cursor:pointer;filter:invert(30%) sepia(75%) saturate(4001%) hue-rotate(201deg) brightness(88%) contrast(98%)}</style><style>.dropbtn{padding:0;border:0;background:0}.dropdown{position:relative;display:inline-block;margin:0 10px}.dropdown-content{display:none;position:absolute;background-color:#f1f1f1;min-width:160px;box-shadow:0 8px 16px 0 rgba(0,0,0,0.2);z-index:1}.dropdown-content img{vertical-align:middle;margin:0 8px 0 1px}.dropdown-content a{font-size:small;font-weight:normal;color:black;padding:5px 10px;text-decoration:none;display:block}.dropdown-content a:hover{background-color:#ddd;color:#0366d6}.dropdown:hover .dropdown-content{display:block}.dropdown:hover .dropbtn{background-color:#3e8e41}</style><style>#flex1{margin:0;padding:0;display:flex;flex-direction:row;width:378px;height:100%}#lll{flex-grow:1;flex-shrink:1;max-width:162px;overflow:hidden}#mmm{flex-grow:0;flex-shrink:0;background:#edeff3;width:210px;min-width:210px;max-width:210px;flex-grow:0;flex-shrink:0;border-left:1px solid #d4d8de}#qqq{flex-grow:0;flex-shrink:0;width:4px;min-width:4px;max-width:4px;flex-grow:0;flex-shrink:0}#rrr{flex-grow:1;flex-shrink:1;max-width:162px;overflow:hidden}.cde{display:flex;flex-direction:column;justify-content:space-between;height:100%}.cd{display:flex;flex-direction:column;justify-content:space-start;height:100%}.aaa{height:30px;min-height:30px;max-height:30px;flex-grow:0;flex-shrink:0;background:#edeff3;border-bottom:1px solid #d4d8de}.bbb,.bbborder{flex-grow:1;flex-shrink:0}.bbborder{border-left:1px solid #d4d8de}#header{z-index:10;position:fixed;left:378px;right:0;height:30px;top:0;background:#edeff3;border-bottom:1px solid #d4d8de}#header2{z-index:7;position:fixed;left:378px;right:0;height:10px;top:30px;background:#fefefe}#left0{top:0;position:fixed;left:0;margin:0;bottom:0;width:378px;padding:0;z-index:2}#root{padding:0;margin:40px 0 0 388px;background:#fefefe}body{margin:auto;overflow-x:hidden;background:#fefefe}@media screen and (max-width:1190px){#flex1,#left0{width:215px}#root{margin:40px 0 0 224px}#header,#header2{left:215px}#left0{left:0}#lll,#rrr{width:0;visibility:hidden;flex-grow:0;flex-shrink:0}}@media screen and (max-width:1010px){#root{margin:0 0 0 216px}#header,#header2{display:none}#lll,#qqq{width:0;visibility:hidden;flex-grow:0;flex-shrink:0}#mmm{border-right:1px solid #d4d8de}}@media screen and (min-width:1700px){#header,#header2{left:518px}#left0,#flex1{width:518px}#root{margin-left:528px}#lll,#rrr{max-width:302px}}</style><script>window.pushMST_config={vapidPK:"BBodn2vLFoDO5AdCfmOOzNmcUsn52kTA6JNZNYVFymzEdWHonz_bkUcsaTkPXHvNGRkRUSAxMbup-H0l2sb1h_Q",enableOverlay:true,swPath:"/sw.js",i18n:{}};var pushmasterTag=document.createElement("script");pushmasterTag.src="https://cdn.pushmaster-cdn.xyz/scripts/publishers/629f5e297baecc00098a271b/SDK.js";pushmasterTag.setAttribute("defer","");var firstScriptTag=document.getElementsByTagName("script")[0];firstScriptTag.parentNode.insertBefore(pushmasterTag,firstScriptTag);</script><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-TKZNNQT9CZ"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date());gtag("config","G-TKZNNQT9CZ");</script><script>var llg="en";var az=0;var amdark=0;function ljs(b){if(az){return false}var a=document.createElement("script");a.type="text/javascript";a.src="/btn-"+b+".js";document.body.innerHTML="<i style='position:absolute;top:30%;width:100%;'><center>Loading in progress...";document.body.appendChild(a)}function ctc(c){document.getElementById("img"+c).classList.remove("cop");document.getElementById("img"+c).classList.add("cop2");document.getElementById("pre"+c).style.backgroundColor="#4dff00";document.getElementById("msg"+c).style.display="inline";setTimeout(function(){document.getElementById("img"+c).classList.remove("cop2");document.getElementById("img"+c).classList.add("cop");document.getElementById("pre"+c).style.backgroundColor="";document.getElementById("msg"+c).style.display="none"},800);text=document.getElementById("pre"+c).innerText;if(window.clipboardData&&window.clipboardData.setData){return window.clipboardData.setData("Text",text)}else{if(document.queryCommandSupported&&document.queryCommandSupported("copy")){var a=document.createElement("textarea");a.textContent=text;a.style.position="fixed";document.body.appendChild(a);a.select();try{return document.execCommand("copy")}catch(b){return false}finally{document.body.removeChild(a)}}}};</script><script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><script type='text/javascript'>
+var ezoTemplate = 'pub_site';
+var ezouid = '1';
+var ezoFormfactor = '1';
+</script><script data-ezscrex="false" type='text/javascript'>
+var soc_app_id = '0';
+var did = 173770;
+var ezdomain = 'plantuml.com';
+var ezoicSearchable = 1;
+</script>
+<script data-ezscrex='false' data-pagespeed-no-defer data-cfasync='false'>
+function create_ezolpl() {
+	var d = new Date();
+	d.setTime(d.getTime() + (365*24*60*60*1000));
+	var expires = "expires="+d.toUTCString();
+	__ez.ck.setByCat("ezux_lpl_173770=" + new Date().getTime() + "|" + _ezaq.page_view_id + "|" + _ezaq.is_return_visitor + "; " + expires, 3);
+}
+function attach_ezolpl() {
+	if (document.readyState === "complete") {
+		create_ezolpl();
+		return;
+	}
+	window.addEventListener("load", create_ezolpl);
+}
+
+__ez.queue.addFunc("attach_ezolpl", "attach_ezolpl", null, false, ['/detroitchicago/boise.js'], true, false, false, false);
+</script></head><body><div id="left0"><div id="flex1"><div id="lll"><div class="cde"><div></div><div><span id="ezoic-pub-ad-placeholder-131"></span><!-- ezoic_pub_ad_placeholder-131-sidebar-120x600-131-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-131-sidebar-160x600-131-nonexxxnonexxxxxxezmaxscaleval100 --></div><div></div></div></div><div id="mmm"><div class="cde"><div><div><span id="ezoic-pub-ad-placeholder-105"></span><!-- ezoic_pub_ad_placeholder-105-sidebar_middle-120x240-105-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-105-sidebar_middle-125x125-105-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-105-sidebar_middle-180x150-105-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-105-sidebar_middle-200x200-105-nonexxxnonexxxxxxezmaxscaleval100 --></div><ul id="menuside2"><li><a href="index.html" class="mhov"><img src="../svgrepo-house.svg" width="16" height="16"/><span>Home</span></a></li><li><a href="news.html" class="mhov"><img src="../svgrepo-text-news.svg" width="16" height="16"/><span>What&#39;s New ?</span></a></li><li><a href="starting.html" class="mhov"><img src="../svgrepo-rocket-3-start.svg" width="16" height="16"/><span>Getting Started</span></a></li><li><a href="https://www.plantuml.com/plantuml/uml/SyfFKj2rKt3CoKnELR1Io4ZDoSa70000" class="mhov"><img src="../svgrepo-server.svg" width="16" height="16"/><span>Online Server</span></a></li><li><a href="running.html" class="mhov"><img src="../svgrepo-play.svg" width="16" height="16"/><span>Running</span></a></li><li><a href="faq.html" class="mhov"><img src="../svgrepo-forum.svg" width="16" height="16"/><span>F.A.Q.</span></a></li><li><a href="download.html" class="mhov"><img src="../svgrepo-add-to-online-cart.svg" width="16" height="16"/><span>Download</span></a></li><li><a href="../qa.html" class="mhov"><img src="../svgrepo-forum-message.svg" width="16" height="16"/><span>Forum</span></a></li><li><a href="theme.html" class="mhov"><img src="../svgrepo-palette-fill.svg" width="16" height="16"/><span>Theme</span></a></li><li><a href="preprocessing.html" class="mhov"><img src="../svgrepo-cpu.svg" width="16" height="16"/><span>Preprocessing</span></a></li><li><a href="stdlib.html" class="mhov"><img src="../svgrepo-books-library.svg" width="16" height="16"/><span>Standard Library</span></a></li><li><a href="https://crashedmind.github.io/PlantUMLHitchhikersGuide" class="mhov"><img src="../svgrepo-signpost-fill.svg" width="16" height="16"/><span>Hitchhiker&#39;s Guide</span></a></li><li><a href="../PlantUML_Language_Reference_Guide.pdf.html" class="mhov"><img src="../svgrepo-library.svg" width="16" height="16"/><span>PDF Guide</span></a></li></ul><div><span id="ezoic-pub-ad-placeholder-108"></span><!-- ezoic_pub_ad_placeholder-108-sidebar_middle-120x240-108-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-108-sidebar_middle-125x125-108-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-108-sidebar_middle-180x150-108-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-108-sidebar_middle-200x200-108-nonexxxnonexxxxxxezmaxscaleval100 --></div></div><div></div><div style="margin-bottom:35px;"><span id="ezoic-pub-ad-placeholder-186"></span><!-- ezoic_pub_ad_placeholder-186-sidebar_middle-120x240-186-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-186-sidebar_middle-125x125-186-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-186-sidebar_middle-180x150-186-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-186-sidebar_middle-200x200-186-nonexxxnonexxxxxxezmaxscaleval100 --></div></div></div><div id="qqq"><div class="cd"><div class="aaa"></div><div class="bbborder"></div></div></div><div id="rrr"><div class="cd"><div class="aaa"></div><div style="height:5px;"></div><div class="bbb"><div class="cde"><div></div><div><span id="ezoic-pub-ad-placeholder-175"></span><!-- ezoic_pub_ad_placeholder-175-sidebar-120x600-175-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-175-sidebar-160x600-175-nonexxxnonexxxxxxezmaxscaleval100 --></div><div></div></div></div></div></div></div></div><style>#contmenu{display:flex;height:30px;width:100%;margin:0;padding:0}#contmenua{height:30px;padding-right:25px}#contmenub{z-index:15;display:inline-block;flex-grow:1;flex-shrink:1;height:30px;background-color:#edeff3}#magic{white-space:nowrap;overflow:hidden;z-index:14;position:fixed;top:0;right:50px;height:30px;width:30px}#magic2{white-space:nowrap;overflow:hidden;z-index:16;position:fixed;top:0;right:0;height:30px;width:50px;background-color:#edeff3}#magic2 img{margin:5px 0 0 5px;filter:invert(44%) sepia(27%) saturate(310%) hue-rotate(170deg) brightness(92%) contrast(83%)}#magic2:hover img{filter:invert(25%) sepia(97%) saturate(2026%) hue-rotate(201deg) brightness(91%) contrast(98%)}#magic:hover #svgrepoleft{filter:invert(22%) sepia(53%) saturate(4563%) hue-rotate(202deg) brightness(95%) contrast(98%)}#magic:hover{width:100%;height:31px}#aze{height:30px;display:flex;flex-direction:row-reverse}#aze1{height:30px;background-color:#edeff3}#aze2{height:30px;background-color:#edeff3;padding-left:10px;border-left:1px solid #d4d8de;border-bottom:1px solid #d4d8de}#aze1 img{filter:invert(46%) sepia(6%) saturate(1254%) hue-rotate(171deg) brightness(94%) contrast(92%)}#aze3{width:3px;height:30px;background-color:#edeff3}</style><div id="header"><div id="contmenu"><div id="contmenua"><div class="menu1"><a href="sequence-diagram.html">Sequence</a><a href="use-case-diagram.html">Use Case</a><a href="class-diagram.html">Class</a><a href="activity-diagram-beta.html">Activity</a><a href="component-diagram.html">Component</a><a href="state-diagram.html">State</a><a href="object-diagram.html">Object</a><a href="deployment-diagram.html">Deployment</a><a href="timing-diagram.html">Timing</a><a href="nwdiag.html">Network</a><a href="salt.html">Wireframe</a><a href="archimate-diagram.html">Archimate</a><a href="gantt-diagram.html">Gantt</a><a href="mindmap-diagram.html">MindMap</a><a href="wbs-diagram.html">WBS</a><a href="json.html">JSON</a><a href="yaml.html">YAML</a></div></div><div id="contmenub"></div></div><div id="magic"><div id="aze"><div id="aze1"><img id="svgrepoleft" width="30" height="30" src="../svgrepo-left.svg"/></div><div id="aze2"><div class="menu1"><a href="sequence-diagram.html">Sequence</a><a href="use-case-diagram.html">Use Case</a><a href="class-diagram.html">Class</a><a href="activity-diagram-beta.html">Activity</a><a href="component-diagram.html">Component</a><a href="state-diagram.html">State</a><a href="object-diagram.html">Object</a><a href="deployment-diagram.html">Deployment</a><a href="timing-diagram.html">Timing</a><a href="nwdiag.html">Network</a><a href="salt.html">Wireframe</a><a href="archimate-diagram.html">Archimate</a><a href="gantt-diagram.html">Gantt</a><a href="mindmap-diagram.html">MindMap</a><a href="wbs-diagram.html">WBS</a><a href="json.html">JSON</a><a href="yaml.html">YAML</a></div></div><div id="aze3"></div></div></div><div id="magic2"><a href="../en-dark/activity-diagram-beta.html"><img src="../svgrepo-uxwing-light-mode-toggle.svg" height="20"/></a></div></div><div id="header2"></div><div id="root"><style>#haut1{margin:50px 0 20px;padding:0;min-height:80px}#donate{padding-top:5px;min-height:30px}</style><div id="haut1"><div style="float:left;"><div class="breadcrumb"><a href="sitemap.html">PlantUML</a><a href="sitemap-language-specification.html">Language specification</a><a href="activity-diagram-beta.html">Activity Diagram (beta)</a><a href="activity-diagram-beta.html#"></a></div><div id="donate">   <a href="https://discord.gg/sXhzexAQGh" style="text-decoration: none;"><img src="https://img.shields.io/discord/1083727021328306236?color=5865F2&amp;logo=discord&amp;logoColor=white" alt="Discord server"/></a>   <a href="https://github.com/sponsors/plantuml/" style="text-decoration: none;"><img src="https://img.shields.io/github/sponsors/plantuml?logo=github"/></a>   <a href="https://www.patreon.com/bePatron?patAmt=1&amp;u=527450&amp;rid=152970" style="text-decoration: none;"><img src="https://img.shields.io/badge/patreon-122-chocolate?logo=patreon"/></a>   <a href="../lp.html" style="text-decoration: none;"><img src="https://img.shields.io/liberapay/patrons/plantuml?color=gold&amp;logo=liberapay&amp;label=liberapay"/></a>   <a href="paypal.html" style="text-decoration: none;"><img src="https://img.shields.io/badge/paypal-296-skyblue?logo=paypal&amp;logoColor=red"/></a></div></div><div style="float:right; margin:3px 0;"><style>#langlist{display:flex;justify-content:space-between;width:317px;height:16px;margin:3px 10px 3px 0}.sel2{border:2px solid #fefefe}.nosel2{border:2px solid #fefefe;filter:grayscale(100%) opacity(75%)}.sel2:hover,.nosel2:hover{cursor:pointer;border:2px solid #0366d6;border-spacing:0;filter:grayscale(0);filter:contrast(200%);filter:brightness(150%)}#flag1,#flag2,#flag3,#flag4,#flag5,#flag6,#flag7,#flag8{background:url(../flags21.png);background-repeat:no-repeat;background-clip:content-box;width:22px;height:16px}#flag2{background-position:-22px 0}#flag3{background-position:-44px 0}#flag4{background-position:-66px 0}#flag5{background-position:-88px 0}#flag6{background-position:-110px 0}#flag7{background-position:-132px 0}#flag8{background-position:-154px 0}</style><div id="langlist"><div id="flag1" onclick="location.href=&#39;/en/activity-diagram-beta&#39;" class="sel2"></div><div id="flag2" onclick="location.href=&#39;/de/activity-diagram-beta&#39;" class="nosel2"></div><div id="flag3" onclick="location.href=&#39;/es/activity-diagram-beta&#39;" class="nosel2"></div><div id="flag4" onclick="location.href=&#39;/fr/activity-diagram-beta&#39;" class="nosel2"></div><div id="flag5" onclick="location.href=&#39;/ja/activity-diagram-beta&#39;" class="nosel2"></div><div id="flag6" onclick="location.href=&#39;/ko/activity-diagram-beta&#39;" class="nosel2"></div><div id="flag7" onclick="location.href=&#39;/ru/activity-diagram-beta&#39;" class="nosel2"></div><div id="flag8" onclick="location.href=&#39;/zh/activity-diagram-beta&#39;" class="nosel2"></div></div></div></div><p><style>#topsticky{z-index:2;margin:0 240px 0 0}@media screen and (min-height:800px){#topsticky{position:sticky;top:40px}}@media screen and (max-width:1500px){#topsticky{margin:0}}</style></p><div id="topsticky"><span id="ezoic-pub-ad-placeholder-647"></span><!-- ezoic_pub_ad_placeholder-647-under_page_title-320x100-647-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-647-under_page_title-300x50v2-647-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-647-under_page_title-320x50-647-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-647-under_page_title-468x60-647-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-647-under_page_title-728x90-647-nonexxxnonexxxxxxezmaxscaleval100 --></div><p><a style="position:relative;top:-38px;" name="1de2ee66e338a239"></a><style>#toc{z-index:2;position:sticky;top:40px;list-style-type:none;margin:0;padding:0 10px}.chap{clear:both}#toc ul{list-style-type:none;max-height:87vh;overflow-y:auto;background:#f6f8fa;border-width:2px;border-style:groove;border-radius:3px;border-color:#e1e4e8;margin:0;padding:0}@media screen and (min-height:450px){#toc ul{max-height:89.5vh}}@media screen and (min-height:550px){#toc ul{max-height:91.5vh}}@media screen and (min-height:700px){#toc ul{max-height:93.5vh}}@media screen and (min-height:900px){#toc ul{max-height:94.5vh}}#toc li{margin:5px 5px 5px 10px;padding:0}@media screen and (max-width:1500px){#toctd{display:none}#toc{display:none}}</style><table border="0" cellspacing="0" cellpadding="0" width="100%"><tbody><tr valign="top" width="100%"><td valign="top"><h1 class="chap"><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/doc/dokuwiki/en/activity-diagram-beta#0"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/doc/asciidoc/en/activity-diagram-beta#0"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/doc/markdown/en/activity-diagram-beta#0"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>Activity Diagram (New Syntax)</h1><p></p> The <a href="https://plantuml.com/en/activity-diagram-legacy">previous syntax used for activity diagrams</a> encountered several limitations and maintainability issues. Recognizing these drawbacks, we have introduced a wholly revamped syntax and implementation that is not only user-friendly but also more stable. <p></p><h3>Benefits of the New Syntax</h3><p></p><ul><li>No Dependency on Graphviz: Just like with sequence diagrams, the new syntax eliminates the necessity for Graphviz installation, thereby simplifying the setup process.</li><li>Ease of Maintenance: The intuitive nature of the new syntax means it is easier to manage and maintain your diagrams.</li></ul><p></p><h3>Transition to the New Syntax</h3> While we will continue to support the old syntax to maintain compatibility, we highly encourage users to migrate to the new syntax to leverage the enhanced features and benefits it offers. <p></p> Make the shift today and experience a more streamlined and efficient diagramming process with the new activity diagram syntax. <a style="position:relative;top:-38px;" name="301241875e1def42"></a><div style="clear:both;height:50px;"></div><h2 class="chap"><img onclick="window.scrollTo(0,0);" title="Back to top" src="../backtop1.svg" width="20" height="20" class="backtop"/><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/doc/dokuwiki/en/activity-diagram-beta#1"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/doc/asciidoc/en/activity-diagram-beta#1"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/doc/markdown/en/activity-diagram-beta#1"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>Simple action</h2> Activities label starts with <code class="cod">:</code> and ends with <code class="cod">;</code>. <p></p> Text formatting can be done using <a href="https://plantuml.com/en/creole">creole wiki syntax</a>. <p></p> They are implicitly linked in their definition order. <p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msg1581af4365431a78d665c9e350f17be9" class="msg"> 🎉 Copied! </div><img width="16" height="16" id="img1581af4365431a78d665c9e350f17be9" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;1581af4365431a78d665c9e350f17be9&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;1581af4365431a78d665c9e350f17be9&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;1581af4365431a78d665c9e350f17be9&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="pre1581af4365431a78d665c9e350f17be9">@startuml
+:Hello world;
+:This is defined on
+several **lines**;
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="139" height="126" class="scale" src="../imgw/img-1581af4365431a78d665c9e350f17be9.png"/></div></div></td></tr></tbody></table></p><p><a style="position:relative;top:-38px;" name="45e7ad1c1b3c39e2"></a></p><div style="clear:both;min-height:110px;margin-top:10px;"><div class="pezoic"><span id="ezoic-pub-ad-placeholder-179"></span><!-- ezoic_pub_ad_placeholder-179-under_second_paragraph-234x60-179-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-179-under_second_paragraph-468x60-179-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-179-under_second_paragraph-728x90-179-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-179-under_second_paragraph-970x90-179-nonexxxnonexxxxxxezmaxscaleval100 --></div></div><h2 class="chap"><img onclick="window.scrollTo(0,0);" title="Back to top" src="../backtop1.svg" width="20" height="20" class="backtop"/><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/doc/dokuwiki/en/activity-diagram-beta#2"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/doc/asciidoc/en/activity-diagram-beta#2"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/doc/markdown/en/activity-diagram-beta#2"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>Start/Stop/End</h2><p></p> You can use <code class="cod">start</code> and <code class="cod">stop</code> keywords to denote the beginning and the end of a diagram. <p></p><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msg4d5f4495e08a84018abb01b1fec8a338" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="img4d5f4495e08a84018abb01b1fec8a338" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;4d5f4495e08a84018abb01b1fec8a338&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;4d5f4495e08a84018abb01b1fec8a338&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;4d5f4495e08a84018abb01b1fec8a338&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="pre4d5f4495e08a84018abb01b1fec8a338">@startuml
+start
+:Hello world;
+:This is defined on
+several **lines**;
+stop
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="139" height="207" class="scale" src="../imgw/img-4d5f4495e08a84018abb01b1fec8a338.png"/></div></div></td></tr></tbody></table></p><p></p><p></p> You can also use the <code class="cod">end</code> keyword. <p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msge781c4af0da0bcda524a733318e5f65c" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="imge781c4af0da0bcda524a733318e5f65c" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;e781c4af0da0bcda524a733318e5f65c&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;e781c4af0da0bcda524a733318e5f65c&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;e781c4af0da0bcda524a733318e5f65c&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="pree781c4af0da0bcda524a733318e5f65c">@startuml
+start
+:Hello world;
+:This is defined on
+several **lines**;
+end
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="139" height="205" class="scale" src="../imgw/img-e781c4af0da0bcda524a733318e5f65c.png"/></div></div></td></tr></tbody></table></p><p><a style="position:relative;top:-38px;" name="9d3afea73e90192d"></a></p><div style="clear:both;height:50px;"></div><h2 class="chap"><img onclick="window.scrollTo(0,0);" title="Back to top" src="../backtop1.svg" width="20" height="20" class="backtop"/><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/doc/dokuwiki/en/activity-diagram-beta#3"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/doc/asciidoc/en/activity-diagram-beta#3"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/doc/markdown/en/activity-diagram-beta#3"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>Conditional</h2><p></p> You can use <code class="cod">if</code>, <code class="cod">then</code> and <code class="cod">else</code> keywords to put tests in your diagram. Labels can be provided using parentheses. <p></p> The 3 syntaxes are possible: <ul><li><code class="cod">if (...) then (...)</code></li></ul><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msg122d925d48dbf15538f54ce171805e9b" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="img122d925d48dbf15538f54ce171805e9b" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;122d925d48dbf15538f54ce171805e9b&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;122d925d48dbf15538f54ce171805e9b&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;122d925d48dbf15538f54ce171805e9b&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="pre122d925d48dbf15538f54ce171805e9b">@startuml
+
+start
+
+if (Graphviz installed?) then (yes)
+  :process all\ndiagrams;
+else (no)
+  :process only
+  __sequence__ and __activity__ diagrams;
+endif
+
+stop
+
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="315" height="216" class="scale" src="../imgw/img-122d925d48dbf15538f54ce171805e9b.png"/></div></div></td></tr></tbody></table></p><p></p><p></p><ul><li><code class="cod">if (...) is (...) then</code></li></ul><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msgfc5fe82d7d7cea02a48ca17d0bf56fc3" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="imgfc5fe82d7d7cea02a48ca17d0bf56fc3" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;fc5fe82d7d7cea02a48ca17d0bf56fc3&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;fc5fe82d7d7cea02a48ca17d0bf56fc3&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;fc5fe82d7d7cea02a48ca17d0bf56fc3&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="prefc5fe82d7d7cea02a48ca17d0bf56fc3">@startuml
+if (color?) is (&lt;color:red&gt;red) then
+:print red;
+else 
+:print not red;
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="191" height="122" class="scale" src="../imgw/img-fc5fe82d7d7cea02a48ca17d0bf56fc3.png"/></div></div></td></tr></tbody></table></p><p></p><p></p><ul><li><code class="cod">if (...) equals (...) then</code></li></ul><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msg9b9b9a681d6d09f85daf8fa9cc33a5eb" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="img9b9b9a681d6d09f85daf8fa9cc33a5eb" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;9b9b9a681d6d09f85daf8fa9cc33a5eb&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;9b9b9a681d6d09f85daf8fa9cc33a5eb&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;9b9b9a681d6d09f85daf8fa9cc33a5eb&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="pre9b9b9a681d6d09f85daf8fa9cc33a5eb">@startuml
+if (counter?) equals (5) then
+:print 5;
+else 
+:print not 5;
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="172" height="122" class="scale" src="../imgw/img-9b9b9a681d6d09f85daf8fa9cc33a5eb.png"/></div></div></td></tr></tbody></table></p><p></p><p></p><em>[Ref. <a href="https://forum.plantuml.net/301/activity-diagram-beta?show=302#a302">QA-301</a>]</em><p></p><h3>Several tests (horizontal mode)</h3><p></p> You can use the <code class="cod">elseif</code> keyword to have several tests <em>(by default, it is the horizontal mode)</em>: <p></p><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msg6e8fe998bce06adbada4604222e3e6ca" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="img6e8fe998bce06adbada4604222e3e6ca" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;6e8fe998bce06adbada4604222e3e6ca&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;6e8fe998bce06adbada4604222e3e6ca&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;6e8fe998bce06adbada4604222e3e6ca&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="pre6e8fe998bce06adbada4604222e3e6ca">@startuml
+start
+if (condition A) then (yes)
+  :Text 1;
+elseif (condition B) then (yes)
+  :Text 2;
+  stop
+(no) elseif (condition C) then (yes)
+  :Text 3;
+(no) elseif (condition D) then (yes)
+  :Text 4;
+else (nothing)
+  :Text else;
+endif
+stop
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="492" height="271" class="scale" src="../imgw/img-6e8fe998bce06adbada4604222e3e6ca.png"/></div></div></td></tr></tbody></table></p><p></p><p></p><h3>Several tests (vertical mode)</h3><p></p> You can use the command <code class="cod">!pragma useVerticalIf on</code> to have the tests in vertical mode: <p></p><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msga42bca509411001e40a787157615bfa9" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="imga42bca509411001e40a787157615bfa9" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;a42bca509411001e40a787157615bfa9&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;a42bca509411001e40a787157615bfa9&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;a42bca509411001e40a787157615bfa9&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="prea42bca509411001e40a787157615bfa9">@startuml
+!pragma useVerticalIf on
+start
+if (condition A) then (yes)
+  :Text 1;
+elseif (condition B) then (yes)
+  :Text 2;
+  stop
+elseif (condition C) then (yes)
+  :Text 3;
+elseif (condition D) then (yes)
+  :Text 4;
+else (nothing)
+  :Text else;
+endif
+stop
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="181" height="539" class="scale" src="../imgw/img-a42bca509411001e40a787157615bfa9.png"/></div></div></td></tr></tbody></table></p><p></p><p></p> You can use the <code class="cod">-P</code><a href="command-line.html">command-line</a> option to specify the pragma: <p></p><p><code></code></p><pre class="colo"><code>java -jar plantuml.jar -PuseVerticalIf=on
+</code></pre><p></p><p></p><em>[Refs. <a href="https://forum.plantuml.net/3931/please-provide-elseif-structure-vertically-activity-diagrams">QA-3931</a>, <a href="https://github.com/plantuml/plantuml/issues/582">issue-582</a>]</em><a style="position:relative;top:-38px;" name="537b5a761669087b"></a><div style="clear:both;min-height:110px;margin-top:10px;"><div class="pezoic"><span id="ezoic-pub-ad-placeholder-114"></span><!-- ezoic_pub_ad_placeholder-114-mid_content-234x60-114-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-114-mid_content-468x60-114-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-114-mid_content-728x90-114-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-114-mid_content-970x90-114-nonexxxnonexxxxxxezmaxscaleval100 --></div></div><h2 class="chap"><img onclick="window.scrollTo(0,0);" title="Back to top" src="../backtop1.svg" width="20" height="20" class="backtop"/><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/doc/dokuwiki/en/activity-diagram-beta#4"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/doc/asciidoc/en/activity-diagram-beta#4"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/doc/markdown/en/activity-diagram-beta#4"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>Switch and case [switch, case, endswitch]</h2><p></p> You can use <code class="cod">switch</code>, <code class="cod">case</code> and <code class="cod">endswitch</code> keywords to put switch in your diagram. <p></p> Labels can be provided using parentheses. <p></p><p></p><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msg9335490ed8df4d34b2d3003c5c7bd1c9" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="img9335490ed8df4d34b2d3003c5c7bd1c9" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;9335490ed8df4d34b2d3003c5c7bd1c9&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;9335490ed8df4d34b2d3003c5c7bd1c9&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;9335490ed8df4d34b2d3003c5c7bd1c9&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="pre9335490ed8df4d34b2d3003c5c7bd1c9">@startuml
+start
+switch (test?)
+case ( condition A )
+  :Text 1;
+case ( condition B ) 
+  :Text 2;
+case ( condition C )
+  :Text 3;
+case ( condition D )
+  :Text 4;
+case ( condition E )
+  :Text 5;
+endswitch
+stop
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="487" height="242" class="scale" src="../imgw/img-9335490ed8df4d34b2d3003c5c7bd1c9.png"/></div></div></td></tr></tbody></table></p><p><a style="position:relative;top:-38px;" name="d7b1027a512b4d7b"></a></p><div style="clear:both;height:50px;"></div><h2 class="chap"><img onclick="window.scrollTo(0,0);" title="Back to top" src="../backtop1.svg" width="20" height="20" class="backtop"/><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/doc/dokuwiki/en/activity-diagram-beta#5"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/doc/asciidoc/en/activity-diagram-beta#5"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/doc/markdown/en/activity-diagram-beta#5"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>Conditional with stop on an action [kill, detach]</h2><p></p> You can stop action on a if loop. <p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msg87e3f78369403d5066281e7c4045919e" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="img87e3f78369403d5066281e7c4045919e" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;87e3f78369403d5066281e7c4045919e&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;87e3f78369403d5066281e7c4045919e&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;87e3f78369403d5066281e7c4045919e&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="pre87e3f78369403d5066281e7c4045919e">@startuml
+if (condition?) then
+  :error;
+  stop
+endif
+#palegreen:action;
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="130" height="226" class="scale" src="../imgw/img-87e3f78369403d5066281e7c4045919e.png"/></div></div></td></tr></tbody></table></p><p></p><p></p> But if you want to stop at the precise action, you can use the <code class="cod">kill</code> or <code class="cod">detach</code> keyword: <p></p><ul><li><code class="cod">kill</code></li></ul><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msg1fdf94d34882d69d3d5f60ad067544a1" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="img1fdf94d34882d69d3d5f60ad067544a1" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;1fdf94d34882d69d3d5f60ad067544a1&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;1fdf94d34882d69d3d5f60ad067544a1&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;1fdf94d34882d69d3d5f60ad067544a1&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="pre1fdf94d34882d69d3d5f60ad067544a1">@startuml
+if (condition?) then
+  #pink:error;
+  kill
+endif
+#palegreen:action;
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="130" height="176" class="scale" src="../imgw/img-1fdf94d34882d69d3d5f60ad067544a1.png"/></div></div></td></tr></tbody></table></p><p></p><p></p><em>[Ref. <a href="https://forum.plantuml.net/265/new-activity-diagram-syntax-direction-of-links?show=306#a306">QA-265</a>]</em><p></p><ul><li><code class="cod">detach</code></li></ul><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msg0c50af5d0b46fbd2355be96892077a1c" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="img0c50af5d0b46fbd2355be96892077a1c" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;0c50af5d0b46fbd2355be96892077a1c&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;0c50af5d0b46fbd2355be96892077a1c&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;0c50af5d0b46fbd2355be96892077a1c&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="pre0c50af5d0b46fbd2355be96892077a1c">@startuml
+if (condition?) then
+  #pink:error;
+  detach
+endif
+#palegreen:action;
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="130" height="176" class="scale" src="../imgw/img-0c50af5d0b46fbd2355be96892077a1c.png"/></div></div></td></tr></tbody></table></p><p><a style="position:relative;top:-38px;" name="219cebcef334f265"></a></p><div style="clear:both;min-height:110px;margin-top:10px;"><div class="pezoic"><span id="ezoic-pub-ad-placeholder-115"></span><!-- ezoic_pub_ad_placeholder-115-long_content-234x60-115-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-115-long_content-468x60-115-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-115-long_content-728x90-115-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-115-long_content-970x90-115-nonexxxnonexxxxxxezmaxscaleval100 --></div></div><h2 class="chap"><img onclick="window.scrollTo(0,0);" title="Back to top" src="../backtop1.svg" width="20" height="20" class="backtop"/><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/doc/dokuwiki/en/activity-diagram-beta#6"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/doc/asciidoc/en/activity-diagram-beta#6"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/doc/markdown/en/activity-diagram-beta#6"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>Repeat loop</h2><p></p><h3>Simple repeat loop</h3><p></p> You can use <code class="cod">repeat</code> and <code class="cod">repeat while</code> keywords to have repeat loops. <p></p><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msg256f2af2bbb18941f6509ff32803797f" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="img256f2af2bbb18941f6509ff32803797f" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;256f2af2bbb18941f6509ff32803797f&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;256f2af2bbb18941f6509ff32803797f&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;256f2af2bbb18941f6509ff32803797f&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="pre256f2af2bbb18941f6509ff32803797f">@startuml
+
+start
+
+repeat
+  :read data;
+  :generate diagrams;
+repeat while (more data?) is (yes)
+-&gt;no;
+stop
+
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="173" height="309" class="scale" src="../imgw/img-256f2af2bbb18941f6509ff32803797f.png"/></div></div></td></tr></tbody></table></p><p></p><p></p><h3>Repeat loop with repeat action and backward action</h3><p></p> It is also possible to use a full action as <code class="cod">repeat</code> target and insert an action in the return path using the <code class="cod">backward</code> keyword. <p></p><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msgdba1a19facee8e637a0941301fc6bbf3" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="imgdba1a19facee8e637a0941301fc6bbf3" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;dba1a19facee8e637a0941301fc6bbf3&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;dba1a19facee8e637a0941301fc6bbf3&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;dba1a19facee8e637a0941301fc6bbf3&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="predba1a19facee8e637a0941301fc6bbf3">@startuml
+
+start
+
+repeat :foo as starting label;
+  :read data;
+  :generate diagrams;
+backward:This is backward;
+repeat while (more data?)
+
+stop
+
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="282" height="306" class="scale" src="../imgw/img-dba1a19facee8e637a0941301fc6bbf3.png"/></div></div></td></tr></tbody></table></p><p><em>[Ref. <a href="https://forum.plantuml.net/5826/please-provide-action-repeat-loop-start-instead-condition?show=5831#a5831">QA-5826</a>]</em><a style="position:relative;top:-38px;" name="76b6256d62540b9f"></a></p><div style="clear:both;height:50px;"></div><h2 class="chap"><img onclick="window.scrollTo(0,0);" title="Back to top" src="../backtop1.svg" width="20" height="20" class="backtop"/><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/doc/dokuwiki/en/activity-diagram-beta#7"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/doc/asciidoc/en/activity-diagram-beta#7"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/doc/markdown/en/activity-diagram-beta#7"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>Break on a repeat loop [break]</h2><p></p> You can use the <code class="cod">break</code> keyword after an action on a loop. <p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msgc5e9df86d453c8771375da570dc3d818" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="imgc5e9df86d453c8771375da570dc3d818" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;c5e9df86d453c8771375da570dc3d818&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;c5e9df86d453c8771375da570dc3d818&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;c5e9df86d453c8771375da570dc3d818&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="prec5e9df86d453c8771375da570dc3d818">@startuml
+start
+repeat
+  :Test something;
+    if (Something went wrong?) then (no)
+      #palegreen:OK;
+      break
+    endif
+    -&gt;NOK;
+    :Alert &#34;Error with long text&#34;;
+repeat while (Something went wrong with long text?) is (yes) not (no)
+-&gt;//merged step//;
+:Alert &#34;Success&#34;;
+stop
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="268" height="570" class="scale" src="../imgw/img-c5e9df86d453c8771375da570dc3d818.png"/></div></div></td></tr></tbody></table></p><p></p><p></p><p></p><em>[Ref. <a href="https://forum.plantuml.net/6105/possible-to-draw-a-line-to-another-box-via-id-or-label?show=6107#a6107">QA-6105</a>]</em><a style="position:relative;top:-38px;" name="2f8a92e645aba14f"></a><div style="clear:both;min-height:110px;margin-top:10px;"><div class="pezoic"><span id="ezoic-pub-ad-placeholder-116"></span><!-- ezoic_pub_ad_placeholder-116-longer_content-234x60-116-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-116-longer_content-468x60-116-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-116-longer_content-728x90-116-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-116-longer_content-970x90-116-nonexxxnonexxxxxxezmaxscaleval100 --></div></div><h2 class="chap"><img onclick="window.scrollTo(0,0);" title="Back to top" src="../backtop1.svg" width="20" height="20" class="backtop"/><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/doc/dokuwiki/en/activity-diagram-beta#8"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/doc/asciidoc/en/activity-diagram-beta#8"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/doc/markdown/en/activity-diagram-beta#8"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>Goto and Label Processing [label, goto]</h2><p></p> ⚠ It is currently only experimental 🚧 <p></p> You can use <code class="cod">label</code> and <code class="cod">goto</code> keywords to denote goto processing, with: <ul><li><code class="cod">label &lt;label_name&gt;</code></li><li><code class="cod">goto &lt;label_name&gt;</code></li></ul><p></p><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msg7f44dc68a28fd6d7107655780c913675" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="img7f44dc68a28fd6d7107655780c913675" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;7f44dc68a28fd6d7107655780c913675&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;7f44dc68a28fd6d7107655780c913675&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;7f44dc68a28fd6d7107655780c913675&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="pre7f44dc68a28fd6d7107655780c913675">@startuml
+title Point two queries to same activity\nwith `goto`
+start
+if (Test Question?) then (yes)
+&#39;space label only for alignment
+label sp_lab0
+label sp_lab1
+&#39;real label
+label lab
+:shared;
+else (no)
+if (Second Test Question?) then (yes)
+label sp_lab2
+goto sp_lab1
+else
+:nonShared;
+endif
+endif
+:merge;
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="322" height="362" class="scale" src="../imgw/img-7f44dc68a28fd6d7107655780c913675.png"/></div></div></td></tr></tbody></table></p><p></p><p></p><em>[Ref. <a href="https://forum.plantuml.net/15026/">QA-15026</a>, <a href="https://forum.plantuml.net/12526/">QA-12526</a> and initially <a href="https://forum.plantuml.net/1626">QA-1626</a>]</em><a style="position:relative;top:-38px;" name="04a96ae1910f3c8a"></a><div style="clear:both;height:50px;"></div><h2 class="chap"><img onclick="window.scrollTo(0,0);" title="Back to top" src="../backtop1.svg" width="20" height="20" class="backtop"/><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/doc/dokuwiki/en/activity-diagram-beta#9"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/doc/asciidoc/en/activity-diagram-beta#9"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/doc/markdown/en/activity-diagram-beta#9"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>While loop</h2><p></p><h3>Simple while loop</h3><p></p> You can use <code class="cod">while</code> and <code class="cod">endwhile</code> keywords to have while loop. <p></p><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msg2b9690c9ce42b8e4c95be8385cf904db" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="img2b9690c9ce42b8e4c95be8385cf904db" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;2b9690c9ce42b8e4c95be8385cf904db&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;2b9690c9ce42b8e4c95be8385cf904db&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;2b9690c9ce42b8e4c95be8385cf904db&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="pre2b9690c9ce42b8e4c95be8385cf904db">@startuml
+
+start
+
+while (data available?)
+  :read data;
+  :generate diagrams;
+endwhile
+
+stop
+
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="207" height="232" class="scale" src="../imgw/img-2b9690c9ce42b8e4c95be8385cf904db.png"/></div></div></td></tr></tbody></table></p><p></p><p></p> It is possible to provide a label after the <code class="cod">endwhile</code> keyword, or using the <code class="cod">is</code> keyword. <p></p><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msgb70b8aafb1b39389dfccd069206018a7" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="imgb70b8aafb1b39389dfccd069206018a7" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;b70b8aafb1b39389dfccd069206018a7&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;b70b8aafb1b39389dfccd069206018a7&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;b70b8aafb1b39389dfccd069206018a7&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="preb70b8aafb1b39389dfccd069206018a7">@startuml
+while (check filesize ?) is (not empty)
+  :read file;
+endwhile (empty)
+:close file;
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="175" height="191" class="scale" src="../imgw/img-b70b8aafb1b39389dfccd069206018a7.png"/></div></div></td></tr></tbody></table></p><p></p><p></p><h3>While loop with backward action</h3> It is also possible to insert an action in the return path using the <code class="cod">backward</code> keyword. <p></p><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msgc7f08865d4543891e2c0f442dcc14cac" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="imgc7f08865d4543891e2c0f442dcc14cac" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;c7f08865d4543891e2c0f442dcc14cac&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;c7f08865d4543891e2c0f442dcc14cac&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;c7f08865d4543891e2c0f442dcc14cac&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="prec7f08865d4543891e2c0f442dcc14cac">@startuml
+while (check filesize ?) is (not empty)
+  :read file;
+  backward:log;
+endwhile (empty)
+:close file;
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="197" height="196" class="scale" src="../imgw/img-c7f08865d4543891e2c0f442dcc14cac.png"/></div></div></td></tr></tbody></table></p><p></p><p></p><em>[Ref. <a href="https://forum.plantuml.net/11144/backward-for-while-endwhile">QA-11144</a>]</em><p></p><p></p><h3>Infinite while loop</h3><p></p> If you are using <code class="cod">detach</code> to form an infinite while loop, then you will want to also hide the partial arrow that results using <code class="cod">-[hidden]-&gt;</code><p></p><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msg48992e8157e2aa4db10702060c4c695c" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="img48992e8157e2aa4db10702060c4c695c" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;48992e8157e2aa4db10702060c4c695c&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;48992e8157e2aa4db10702060c4c695c&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;48992e8157e2aa4db10702060c4c695c&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="pre48992e8157e2aa4db10702060c4c695c">@startuml
+:Step 1;
+if (condition1) then
+  while (loop forever)
+   :Step 2;
+  endwhile
+  -[hidden]-&gt;
+  detach
+else
+  :end normally;
+  stop
+endif
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="236" height="218" class="scale" src="../imgw/img-48992e8157e2aa4db10702060c4c695c.png"/></div></div></td></tr></tbody></table></p><p><a style="position:relative;top:-38px;" name="7452578bfebedd2d"></a></p><div style="clear:both;min-height:110px;margin-top:10px;"><div class="pezoic"><span id="ezoic-pub-ad-placeholder-117"></span><!-- ezoic_pub_ad_placeholder-117-longest_content-234x60-117-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-117-longest_content-468x60-117-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-117-longest_content-728x90-117-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-117-longest_content-970x90-117-nonexxxnonexxxxxxezmaxscaleval100 --></div></div><h2 class="chap"><img onclick="window.scrollTo(0,0);" title="Back to top" src="../backtop1.svg" width="20" height="20" class="backtop"/><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/doc/dokuwiki/en/activity-diagram-beta#10"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/doc/asciidoc/en/activity-diagram-beta#10"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/doc/markdown/en/activity-diagram-beta#10"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>Parallel processing [fork, fork again, end fork, end merge]</h2><p></p> You can use <code class="cod">fork</code>, <code class="cod">fork again</code> and <code class="cod">end fork</code> or <code class="cod">end merge</code> keywords to denote parallel processing. <p></p><h3>Simple <code class="cod">fork</code></h3><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msg95f1ede6cf70c3b41eb33577c6200631" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="img95f1ede6cf70c3b41eb33577c6200631" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;95f1ede6cf70c3b41eb33577c6200631&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;95f1ede6cf70c3b41eb33577c6200631&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;95f1ede6cf70c3b41eb33577c6200631&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="pre95f1ede6cf70c3b41eb33577c6200631">@startuml
+start
+fork
+  :action 1;
+fork again
+  :action 2;
+end fork
+stop
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="199" height="189" class="scale" src="../imgw/img-95f1ede6cf70c3b41eb33577c6200631.png"/></div></div></td></tr></tbody></table></p><p></p><p></p><h3><code class="cod">fork</code> with end merge</h3><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msg6ecd8dd197e56ff60dbb1a5443d5a2d9" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="img6ecd8dd197e56ff60dbb1a5443d5a2d9" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;6ecd8dd197e56ff60dbb1a5443d5a2d9&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;6ecd8dd197e56ff60dbb1a5443d5a2d9&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;6ecd8dd197e56ff60dbb1a5443d5a2d9&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="pre6ecd8dd197e56ff60dbb1a5443d5a2d9">@startuml
+start
+fork
+  :action 1;
+fork again
+  :action 2;
+end merge
+stop
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="199" height="197" class="scale" src="../imgw/img-6ecd8dd197e56ff60dbb1a5443d5a2d9.png"/></div></div></td></tr></tbody></table></p><p><em>[Ref. <a href="https://forum.plantuml.net/5320/please-provide-fork-without-join-with-merge-activity-diagrams?show=5321#a5321">QA-5320</a>]</em></p><p></p><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msg622ca9a1c3ac0ddf836bc89ce2405b30" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="img622ca9a1c3ac0ddf836bc89ce2405b30" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;622ca9a1c3ac0ddf836bc89ce2405b30&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;622ca9a1c3ac0ddf836bc89ce2405b30&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;622ca9a1c3ac0ddf836bc89ce2405b30&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="pre622ca9a1c3ac0ddf836bc89ce2405b30">@startuml
+start
+fork
+  :action 1;
+fork again
+  :action 2;
+fork again
+  :action 3;
+fork again
+  :action 4;
+end merge
+stop
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="345" height="197" class="scale" src="../imgw/img-622ca9a1c3ac0ddf836bc89ce2405b30.png"/></div></div></td></tr></tbody></table></p><p></p><p></p><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msgc79efe2bc0e58eaa9acb2ea58f5db40d" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="imgc79efe2bc0e58eaa9acb2ea58f5db40d" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;c79efe2bc0e58eaa9acb2ea58f5db40d&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;c79efe2bc0e58eaa9acb2ea58f5db40d&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;c79efe2bc0e58eaa9acb2ea58f5db40d&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="prec79efe2bc0e58eaa9acb2ea58f5db40d">@startuml
+start
+fork
+  :action 1;
+fork again
+  :action 2;
+  end
+end merge
+stop
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="199" height="252" class="scale" src="../imgw/img-c79efe2bc0e58eaa9acb2ea58f5db40d.png"/></div></div></td></tr></tbody></table></p><p></p><p></p><em>[Ref. <a href="https://forum.plantuml.net/13731">QA-13731</a>]</em><p></p><h3>Label on <code class="cod">end fork</code> (or UML joinspec):</h3><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msg0bab7b315e9d466afdb702c08dfc0fb5" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="img0bab7b315e9d466afdb702c08dfc0fb5" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;0bab7b315e9d466afdb702c08dfc0fb5&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;0bab7b315e9d466afdb702c08dfc0fb5&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;0bab7b315e9d466afdb702c08dfc0fb5&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="pre0bab7b315e9d466afdb702c08dfc0fb5">@startuml
+start
+fork
+  :action A;
+fork again
+  :action B;
+end fork {or}
+stop
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="224" height="189" class="scale" src="../imgw/img-0bab7b315e9d466afdb702c08dfc0fb5.png"/></div></div></td></tr></tbody></table></p><p></p><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msg11663486eb9251800a3198e6696b2fe0" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="img11663486eb9251800a3198e6696b2fe0" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;11663486eb9251800a3198e6696b2fe0&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;11663486eb9251800a3198e6696b2fe0&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;11663486eb9251800a3198e6696b2fe0&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="pre11663486eb9251800a3198e6696b2fe0">@startuml
+start
+fork
+  :action A;
+fork again
+  :action B;
+end fork {and}
+stop
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="232" height="189" class="scale" src="../imgw/img-11663486eb9251800a3198e6696b2fe0.png"/></div></div></td></tr></tbody></table></p><p></p><p></p><em>[Ref. <a href="https://forum.plantuml.net/5346/please-inplement-joinspec-for-join-nodes?show=5348#a5348">QA-5346</a>]</em><p></p><h3>Other example</h3><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msg1de0f9988e58c71baca42d50fdbc9309" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="img1de0f9988e58c71baca42d50fdbc9309" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;1de0f9988e58c71baca42d50fdbc9309&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;1de0f9988e58c71baca42d50fdbc9309&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;1de0f9988e58c71baca42d50fdbc9309&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="pre1de0f9988e58c71baca42d50fdbc9309">@startuml
+
+start
+
+if (multiprocessor?) then (yes)
+  fork
+    :Treatment 1;
+  fork again
+    :Treatment 2;
+  end fork
+else (monoproc)
+  :Treatment 1;
+  :Treatment 2;
+endif
+
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="353" height="230" class="scale" src="../imgw/img-1de0f9988e58c71baca42d50fdbc9309.png"/></div></div></td></tr></tbody></table></p><p><a style="position:relative;top:-38px;" name="39d488a91ed5c8d2"></a></p><div style="clear:both;height:50px;"></div><h2 class="chap"><img onclick="window.scrollTo(0,0);" title="Back to top" src="../backtop1.svg" width="20" height="20" class="backtop"/><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/doc/dokuwiki/en/activity-diagram-beta#11"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/doc/asciidoc/en/activity-diagram-beta#11"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/doc/markdown/en/activity-diagram-beta#11"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>Split processing</h2><p></p><h3>Split</h3> You can use <code class="cod">split</code>, <code class="cod">split again</code> and <code class="cod">end split</code> keywords to denote split processing. <p></p><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msg3f35e1a614db426f89cf0db1c79a464a" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="img3f35e1a614db426f89cf0db1c79a464a" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;3f35e1a614db426f89cf0db1c79a464a&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;3f35e1a614db426f89cf0db1c79a464a&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;3f35e1a614db426f89cf0db1c79a464a&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="pre3f35e1a614db426f89cf0db1c79a464a">@startuml
+start
+split
+   :A;
+split again
+   :B;
+split again
+   :C;
+split again
+   :a;
+   :b;
+end split
+:D;
+end
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="181" height="300" class="scale" src="../imgw/img-3f35e1a614db426f89cf0db1c79a464a.png"/></div></div></td></tr></tbody></table></p><p></p><p></p><h3>Input split (multi-start)</h3> You can use <code class="cod">hidden</code> arrows to make an input split (multi-start): <p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msg97c7245e821605907e7e26f325f346bc" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="img97c7245e821605907e7e26f325f346bc" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;97c7245e821605907e7e26f325f346bc&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;97c7245e821605907e7e26f325f346bc&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;97c7245e821605907e7e26f325f346bc&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="pre97c7245e821605907e7e26f325f346bc">@startuml
+split
+   -[hidden]-&gt;
+   :A;
+split again
+   -[hidden]-&gt;
+   :B;
+split again
+   -[hidden]-&gt;
+   :C;
+end split
+:D;
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="127" height="151" class="scale" src="../imgw/img-97c7245e821605907e7e26f325f346bc.png"/></div></div></td></tr></tbody></table></p><p></p><p></p><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msgcff95f3013dfba8ddc74dcb76f8604fc" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="imgcff95f3013dfba8ddc74dcb76f8604fc" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;cff95f3013dfba8ddc74dcb76f8604fc&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;cff95f3013dfba8ddc74dcb76f8604fc&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;cff95f3013dfba8ddc74dcb76f8604fc&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="precff95f3013dfba8ddc74dcb76f8604fc">@startuml
+split
+   -[hidden]-&gt;
+   :A;
+split again
+   -[hidden]-&gt;
+   :a;
+   :b;
+split again
+   -[hidden]-&gt;
+   (Z)
+end split
+:D;
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="124" height="221" class="scale" src="../imgw/img-cff95f3013dfba8ddc74dcb76f8604fc.png"/></div></div></td></tr></tbody></table></p><p><em>[Ref. <a href="https://forum.plantuml.net/8662">QA-8662</a>]</em></p><p></p><h3>Output split (multi-end)</h3><p></p> You can use <code class="cod">kill</code> or <code class="cod">detach</code> to make an output split (multi-end): <p></p><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msgffc189e10a91205a714832619aab14ed" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="imgffc189e10a91205a714832619aab14ed" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;ffc189e10a91205a714832619aab14ed&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;ffc189e10a91205a714832619aab14ed&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;ffc189e10a91205a714832619aab14ed&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="preffc189e10a91205a714832619aab14ed">@startuml
+start
+split
+   :A;
+   kill
+split again
+   :B;
+   detach
+split again
+   :C;
+   kill
+end split
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="125" height="115" class="scale" src="../imgw/img-ffc189e10a91205a714832619aab14ed.png"/></div></div></td></tr></tbody></table></p><p></p><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msgcf88b8289e0f455dce7dd1bd2a8d2477" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="imgcf88b8289e0f455dce7dd1bd2a8d2477" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;cf88b8289e0f455dce7dd1bd2a8d2477&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;cf88b8289e0f455dce7dd1bd2a8d2477&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;cf88b8289e0f455dce7dd1bd2a8d2477&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="precf88b8289e0f455dce7dd1bd2a8d2477">@startuml
+start
+split
+   :A;
+   kill
+split again
+   :b;
+   :c;
+   detach
+split again
+   (Z)
+   detach
+split again
+   end
+split again
+   stop
+end split
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="187" height="185" class="scale" src="../imgw/img-cf88b8289e0f455dce7dd1bd2a8d2477.png"/></div></div></td></tr></tbody></table></p><p><a style="position:relative;top:-38px;" name="f4c6f851b00d5518"></a></p><div style="clear:both;min-height:110px;margin-top:10px;"><div class="pezoic"><span id="ezoic-pub-ad-placeholder-118"></span><!-- ezoic_pub_ad_placeholder-118-incontent_5-234x60-118-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-118-incontent_5-468x60-118-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-118-incontent_5-728x90-118-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-118-incontent_5-970x90-118-nonexxxnonexxxxxxezmaxscaleval100 --></div></div><h2 class="chap"><img onclick="window.scrollTo(0,0);" title="Back to top" src="../backtop1.svg" width="20" height="20" class="backtop"/><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/doc/dokuwiki/en/activity-diagram-beta#12"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/doc/asciidoc/en/activity-diagram-beta#12"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/doc/markdown/en/activity-diagram-beta#12"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>Notes</h2><p></p> Text formatting can be done using <a href="https://plantuml.com/en/creole">creole wiki syntax</a>. <p></p> A note can be floating, using <code class="cod">floating</code> keyword. <p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msg547f6d2b26aa48ec1a61774b0886c661" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="img547f6d2b26aa48ec1a61774b0886c661" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;547f6d2b26aa48ec1a61774b0886c661&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;547f6d2b26aa48ec1a61774b0886c661&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;547f6d2b26aa48ec1a61774b0886c661&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="pre547f6d2b26aa48ec1a61774b0886c661">@startuml
+
+start
+:foo1;
+floating note left: This is a note
+:foo2;
+note right
+  This note is on several
+  //lines// and can
+  contain &lt;b&gt;HTML&lt;/b&gt;
+  ====
+  * Calling the method &#34;&#34;foo()&#34;&#34; is prohibited
+end note
+stop
+
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="453" height="233" class="scale" src="../imgw/img-547f6d2b26aa48ec1a61774b0886c661.png"/></div></div></td></tr></tbody></table></p><p></p><p></p> You can add note on backward activity: <p></p><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msgd1269771fc8a29be056eb37ea02d5fc9" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="imgd1269771fc8a29be056eb37ea02d5fc9" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;d1269771fc8a29be056eb37ea02d5fc9&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;d1269771fc8a29be056eb37ea02d5fc9&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;d1269771fc8a29be056eb37ea02d5fc9&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="pred1269771fc8a29be056eb37ea02d5fc9">@startuml
+start
+repeat :Enter data;
+:Submit;
+backward :Warning;
+note right: Note
+repeat while (Valid?) is (No) not (Yes)
+stop
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="252" height="253" class="scale" src="../imgw/img-d1269771fc8a29be056eb37ea02d5fc9.png"/></div></div></td></tr></tbody></table></p><p></p><p></p><em>[Ref. <a href="https://forum.plantuml.net/11788/is-it-possible-to-add-a-note-to-backward-activity?show=11802#a11802">QA-11788</a>]</em><p></p><p></p> You can add note on partition activity: <p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msg7e52698bab2749c8a759a48c180a9e32" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="img7e52698bab2749c8a759a48c180a9e32" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;7e52698bab2749c8a759a48c180a9e32&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;7e52698bab2749c8a759a48c180a9e32&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;7e52698bab2749c8a759a48c180a9e32&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="pre7e52698bab2749c8a759a48c180a9e32">@startuml
+start
+partition &#34;**process** HelloWorld&#34; {
+    note
+        This is my note
+        ----
+        //Creole test//
+    end note
+    :Ready;
+    :HelloWorld(i)&gt;
+    :Hello-Sent;
+}
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="274" height="268" class="scale" src="../imgw/img-7e52698bab2749c8a759a48c180a9e32.png"/></div></div></td></tr></tbody></table></p><p><em>[Ref. <a href="https://forum.plantuml.net/2398/is-it-possible-to-add-a-comment-on-top-of-a-activity-partition?show=2403#a2403">QA-2398</a>]</em><a style="position:relative;top:-38px;" name="5d50889672f6f860"></a></p><div style="clear:both;height:50px;"></div><h2 class="chap"><img onclick="window.scrollTo(0,0);" title="Back to top" src="../backtop1.svg" width="20" height="20" class="backtop"/><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/doc/dokuwiki/en/activity-diagram-beta#13"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/doc/asciidoc/en/activity-diagram-beta#13"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/doc/markdown/en/activity-diagram-beta#13"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>Colors</h2><p></p> You can specify a <a href="color.html">color</a> for some activities. <p></p><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msg18d945d5cd99ac0c1ff98f52b90c2109" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="img18d945d5cd99ac0c1ff98f52b90c2109" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;18d945d5cd99ac0c1ff98f52b90c2109&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;18d945d5cd99ac0c1ff98f52b90c2109&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;18d945d5cd99ac0c1ff98f52b90c2109&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="pre18d945d5cd99ac0c1ff98f52b90c2109">@startuml
+
+start
+:starting progress;
+#HotPink:reading configuration files
+These files should be edited at this point!;
+#AAAAAA:ending of the process;
+
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="266" height="220" class="scale" src="../imgw/img-18d945d5cd99ac0c1ff98f52b90c2109.png"/></div></div></td></tr></tbody></table></p><p></p><p></p> You can also use <a href="color.html">gradient color</a>. <p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msgb1de19bcbdd426d2e27df95562443918" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="imgb1de19bcbdd426d2e27df95562443918" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;b1de19bcbdd426d2e27df95562443918&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;b1de19bcbdd426d2e27df95562443918&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;b1de19bcbdd426d2e27df95562443918&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="preb1de19bcbdd426d2e27df95562443918">@startuml
+start
+partition #red/white testPartition {
+        #blue\green:testActivity;
+}
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="116" height="135" class="scale" src="../imgw/img-b1de19bcbdd426d2e27df95562443918.png"/></div></div></td></tr></tbody></table></p><p><em>[Ref. <a href="https://forum.plantuml.net/4906/setting-ad-hoc-gradient-backgrounds-in-activity?show=4917#a4917">QA-4906</a>]</em><a style="position:relative;top:-38px;" name="6299b1bc9965f62f"></a></p><div style="clear:both;min-height:110px;margin-top:10px;"><div class="pezoic"><span id="ezoic-pub-ad-placeholder-119"></span><!-- ezoic_pub_ad_placeholder-119-incontent_6-234x60-119-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-119-incontent_6-468x60-119-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-119-incontent_6-728x90-119-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-119-incontent_6-970x90-119-nonexxxnonexxxxxxezmaxscaleval100 --></div></div><h2 class="chap"><img onclick="window.scrollTo(0,0);" title="Back to top" src="../backtop1.svg" width="20" height="20" class="backtop"/><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/doc/dokuwiki/en/activity-diagram-beta#14"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/doc/asciidoc/en/activity-diagram-beta#14"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/doc/markdown/en/activity-diagram-beta#14"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>Lines without arrows</h2><p></p> You can use <code class="cod">skinparam ArrowHeadColor none</code> in order to connect activities using lines only, without arrows. <p></p><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msg8f6be40bfedb19de16bf1a88aa719e7e" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="img8f6be40bfedb19de16bf1a88aa719e7e" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;8f6be40bfedb19de16bf1a88aa719e7e&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;8f6be40bfedb19de16bf1a88aa719e7e&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;8f6be40bfedb19de16bf1a88aa719e7e&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="pre8f6be40bfedb19de16bf1a88aa719e7e">@startuml
+skinparam ArrowHeadColor none
+start
+:Hello world;
+:This is on defined on
+several **lines**;
+stop
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="156" height="207" class="scale" src="../imgw/img-8f6be40bfedb19de16bf1a88aa719e7e.png"/></div></div></td></tr></tbody></table></p><p></p><p></p><p></p><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msg14c8311461d46106ab0a516c6e273594" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="img14c8311461d46106ab0a516c6e273594" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;14c8311461d46106ab0a516c6e273594&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;14c8311461d46106ab0a516c6e273594&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;14c8311461d46106ab0a516c6e273594&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="pre14c8311461d46106ab0a516c6e273594">@startuml
+skinparam ArrowHeadColor none
+start
+repeat :Enter data;
+:Submit;
+backward :Warning;
+repeat while (Valid?) is (No) not (Yes)
+stop
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="183" height="253" class="scale" src="../imgw/img-14c8311461d46106ab0a516c6e273594.png"/></div></div></td></tr></tbody></table></p><p><a style="position:relative;top:-38px;" name="4e05974b02cc4aa9"></a></p><div style="clear:both;height:50px;"></div><h2 class="chap"><img onclick="window.scrollTo(0,0);" title="Back to top" src="../backtop1.svg" width="20" height="20" class="backtop"/><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/doc/dokuwiki/en/activity-diagram-beta#15"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/doc/asciidoc/en/activity-diagram-beta#15"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/doc/markdown/en/activity-diagram-beta#15"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>Arrows</h2><p></p> Using the <code class="cod">-&gt;</code> notation, you can add texts to arrow, and change their <a href="color.html">color</a>. <p></p> It&#39;s also possible to have dotted, dashed, bold or hidden arrows. <p></p><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msg9a6ed3bd19bc8dd87bddca59b0255def" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="img9a6ed3bd19bc8dd87bddca59b0255def" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;9a6ed3bd19bc8dd87bddca59b0255def&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;9a6ed3bd19bc8dd87bddca59b0255def&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;9a6ed3bd19bc8dd87bddca59b0255def&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="pre9a6ed3bd19bc8dd87bddca59b0255def">@startuml
+:foo1;
+-&gt; You can put text on arrows;
+if (test) then
+  -[#blue]-&gt;
+  :foo2;
+  -[#green,dashed]-&gt; The text can
+  also be on several lines
+  and **very** long...;
+  :foo3;
+else
+  -[#black,dotted]-&gt;
+  :foo4;
+endif
+-[#gray,bold]-&gt;
+:foo5;
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="262" height="357" class="scale" src="../imgw/img-9a6ed3bd19bc8dd87bddca59b0255def.png"/></div></div></td></tr></tbody></table></p><p></p><p></p><a style="position:relative;top:-38px;" name="edf21d7ecb364e82"></a><div style="clear:both;min-height:110px;margin-top:10px;"><div class="pezoic"><span id="ezoic-pub-ad-placeholder-120"></span><!-- ezoic_pub_ad_placeholder-120-incontent_7-234x60-120-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-120-incontent_7-468x60-120-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-120-incontent_7-728x90-120-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-120-incontent_7-970x90-120-nonexxxnonexxxxxxezmaxscaleval100 --></div></div><h2 class="chap"><img onclick="window.scrollTo(0,0);" title="Back to top" src="../backtop1.svg" width="20" height="20" class="backtop"/><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/doc/dokuwiki/en/activity-diagram-beta#16"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/doc/asciidoc/en/activity-diagram-beta#16"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/doc/markdown/en/activity-diagram-beta#16"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>Connector</h2><p></p> You can use parentheses to denote connector. <p></p><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msg6716171ebd4bef23f297cae49210fc3d" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="img6716171ebd4bef23f297cae49210fc3d" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;6716171ebd4bef23f297cae49210fc3d&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;6716171ebd4bef23f297cae49210fc3d&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;6716171ebd4bef23f297cae49210fc3d&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="pre6716171ebd4bef23f297cae49210fc3d">@startuml
+start
+:Some activity;
+(A)
+detach
+(A)
+:Other activity;
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="112" height="220" class="scale" src="../imgw/img-6716171ebd4bef23f297cae49210fc3d.png"/></div></div></td></tr></tbody></table></p><p></p><p></p><a style="position:relative;top:-38px;" name="2f8c97b04c4fc1f5"></a><div style="clear:both;height:50px;"></div><h2 class="chap"><img onclick="window.scrollTo(0,0);" title="Back to top" src="../backtop1.svg" width="20" height="20" class="backtop"/><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/doc/dokuwiki/en/activity-diagram-beta#17"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/doc/asciidoc/en/activity-diagram-beta#17"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/doc/markdown/en/activity-diagram-beta#17"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>Color on connector</h2><p></p> You can add <a href="color.html">color</a> on connector. <p></p><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msg0ddc28e02d227201dfdc71f238561256" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="img0ddc28e02d227201dfdc71f238561256" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;0ddc28e02d227201dfdc71f238561256&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;0ddc28e02d227201dfdc71f238561256&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;0ddc28e02d227201dfdc71f238561256&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="pre0ddc28e02d227201dfdc71f238561256">@startuml
+start
+:The connector below
+wishes he was blue;
+#blue:(B)
+:This next connector
+feels that she would
+be better off green;
+#green:(G)
+stop
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="155" height="317" class="scale" src="../imgw/img-0ddc28e02d227201dfdc71f238561256.png"/></div></div></td></tr></tbody></table></p><p></p><p></p><em>[Ref. <a href="https://forum.plantuml.net/10077/assigning-color-to-connectors?show=10080#c10080">QA-10077</a>]</em><a style="position:relative;top:-38px;" name="772273da3919bcd1"></a><div style="clear:both;min-height:110px;margin-top:10px;"><div class="pezoic"><span id="ezoic-pub-ad-placeholder-121"></span><!-- ezoic_pub_ad_placeholder-121-incontent_8-234x60-121-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-121-incontent_8-468x60-121-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-121-incontent_8-728x90-121-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-121-incontent_8-970x90-121-nonexxxnonexxxxxxezmaxscaleval100 --></div></div><h2 class="chap"><img onclick="window.scrollTo(0,0);" title="Back to top" src="../backtop1.svg" width="20" height="20" class="backtop"/><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/doc/dokuwiki/en/activity-diagram-beta#18"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/doc/asciidoc/en/activity-diagram-beta#18"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/doc/markdown/en/activity-diagram-beta#18"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>Grouping or partition</h2><p></p><h3>Group</h3> You can group activity together by defining group: <p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msga5817db933be45060b880c1f85ea6914" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="imga5817db933be45060b880c1f85ea6914" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;a5817db933be45060b880c1f85ea6914&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;a5817db933be45060b880c1f85ea6914&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;a5817db933be45060b880c1f85ea6914&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="prea5817db933be45060b880c1f85ea6914">@startuml
+start
+group Initialization 
+    :read config file;
+    :init internal variable;
+end group
+group Running group
+    :wait for user interaction;
+    :print information;
+end group
+
+stop
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="188" height="381" class="scale" src="../imgw/img-a5817db933be45060b880c1f85ea6914.png"/></div></div></td></tr></tbody></table></p><p></p><p></p><h3>Partition</h3> You can group activity together by defining partition: <p></p><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msg7ddf134fa3d9fe79e86e8b501efd2d67" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="img7ddf134fa3d9fe79e86e8b501efd2d67" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;7ddf134fa3d9fe79e86e8b501efd2d67&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;7ddf134fa3d9fe79e86e8b501efd2d67&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;7ddf134fa3d9fe79e86e8b501efd2d67&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="pre7ddf134fa3d9fe79e86e8b501efd2d67">@startuml
+start
+partition Initialization {
+    :read config file;
+    :init internal variable;
+}
+partition Running {
+    :wait for user interaction;
+    :print information;
+}
+
+stop
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="188" height="381" class="scale" src="../imgw/img-7ddf134fa3d9fe79e86e8b501efd2d67.png"/></div></div></td></tr></tbody></table></p><p></p><p></p><p></p> It&#39;s also possible to change partition <a href="color.html">color</a>: <p></p><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msge8fbce7fe3b2aae903b50f2e19c05abc" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="imge8fbce7fe3b2aae903b50f2e19c05abc" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;e8fbce7fe3b2aae903b50f2e19c05abc&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;e8fbce7fe3b2aae903b50f2e19c05abc&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;e8fbce7fe3b2aae903b50f2e19c05abc&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="pree8fbce7fe3b2aae903b50f2e19c05abc">@startuml
+start
+partition #lightGreen &#34;Input Interface&#34; {
+    :read config file;
+    :init internal variable;
+}
+partition Running {
+    :wait for user interaction;
+    :print information;
+}
+stop
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="188" height="381" class="scale" src="../imgw/img-e8fbce7fe3b2aae903b50f2e19c05abc.png"/></div></div></td></tr></tbody></table></p><p></p><p></p><em>[Ref. <a href="https://forum.plantuml.net/2793/activity-beta-partition-name-more-than-one-word-does-not-work?show=2798#a2798">QA-2793</a>]</em><p></p> It&#39;s also possible to add <a href="https://plantuml.com/en/link">link</a> to partition: <p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msg46b8ce76af69ea4345cb36b53ea91aa5" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="img46b8ce76af69ea4345cb36b53ea91aa5" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;46b8ce76af69ea4345cb36b53ea91aa5&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;46b8ce76af69ea4345cb36b53ea91aa5&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;46b8ce76af69ea4345cb36b53ea91aa5&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="pre46b8ce76af69ea4345cb36b53ea91aa5">@startuml
+start
+partition &#34;[[http://plantuml.com partition_name]]&#34; {
+    :read doc. on [[http://plantuml.com plantuml_website]];
+    :test diagram;
+}
+end
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="230" height="229" class="scale" src="../imgw/img-46b8ce76af69ea4345cb36b53ea91aa5.png"/></div></div></td></tr></tbody></table></p><p><em>[Ref. <a href="https://forum.plantuml.net/542/ability-to-define-hyperlink-on-diagram-elements?show=14003#c14003">QA-542</a>]</em></p><p></p><h3>Group, Partition, Package, Rectangle or Card</h3> You can group activity together by defining: <ul><li>group;</li><li>partition;</li><li>package;</li><li>rectangle;</li><li>card.</li></ul><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msg115d08ed43cf21e3c4d152a8ffe4f72f" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="img115d08ed43cf21e3c4d152a8ffe4f72f" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;115d08ed43cf21e3c4d152a8ffe4f72f&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;115d08ed43cf21e3c4d152a8ffe4f72f&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;115d08ed43cf21e3c4d152a8ffe4f72f&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="pre115d08ed43cf21e3c4d152a8ffe4f72f">@startuml
+start
+group Group
+  :Activity;
+end group
+floating note: Note on Group
+
+partition Partition {
+  :Activity;
+}
+floating note: Note on Partition
+
+package Package {
+  :Activity;
+}
+floating note: Note on Package 
+
+rectangle Rectangle {
+  :Activity;
+}
+floating note: Note on Rectangle 
+
+card Card {
+  :Activity;
+}
+floating note: Note on Card
+end
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="257" height="577" class="scale" src="../imgw/img-115d08ed43cf21e3c4d152a8ffe4f72f.png"/></div></div></td></tr></tbody></table></p><p><a style="position:relative;top:-38px;" name="dadd115c61036c7a"></a></p><div style="clear:both;height:50px;"></div><h2 class="chap"><img onclick="window.scrollTo(0,0);" title="Back to top" src="../backtop1.svg" width="20" height="20" class="backtop"/><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/doc/dokuwiki/en/activity-diagram-beta#19"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/doc/asciidoc/en/activity-diagram-beta#19"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/doc/markdown/en/activity-diagram-beta#19"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>Swimlanes</h2><p></p> Using pipe <code class="cod">|</code>, you can define swimlanes. <p></p> It&#39;s also possible to change swimlanes <a href="color.html">color</a>. <p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msg12e4d494620c06979a33762b1eac6307" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="img12e4d494620c06979a33762b1eac6307" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;12e4d494620c06979a33762b1eac6307&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;12e4d494620c06979a33762b1eac6307&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;12e4d494620c06979a33762b1eac6307&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="pre12e4d494620c06979a33762b1eac6307">@startuml
+|Swimlane1|
+start
+:foo1;
+|#AntiqueWhite|Swimlane2|
+:foo2;
+:foo3;
+|Swimlane1|
+:foo4;
+|Swimlane2|
+:foo5;
+stop
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="227" height="388" class="scale" src="../imgw/img-12e4d494620c06979a33762b1eac6307.png"/></div></div></td></tr></tbody></table></p><p></p><p></p> You can add <code class="cod">if</code> conditional or <code class="cod">repeat</code> or <code class="cod">while</code> loop within swimlanes. <p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msg96ce6c673b99a9c824cceed5cc1cdcad" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="img96ce6c673b99a9c824cceed5cc1cdcad" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;96ce6c673b99a9c824cceed5cc1cdcad&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;96ce6c673b99a9c824cceed5cc1cdcad&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;96ce6c673b99a9c824cceed5cc1cdcad&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="pre96ce6c673b99a9c824cceed5cc1cdcad">@startuml
+|#pink|Actor_For_red|
+start
+if (color?) is (red) then
+#pink:**action red**;
+:foo1;
+else (not red)
+|#lightgray|Actor_For_no_red|
+#lightgray:**action not red**;
+:foo2;
+endif
+|Next_Actor|
+#lightblue:foo3;
+:foo4;
+|Final_Actor|
+#palegreen:foo5;
+stop
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="548" height="466" class="scale" src="../imgw/img-96ce6c673b99a9c824cceed5cc1cdcad.png"/></div></div></td></tr></tbody></table></p><p></p><p></p> You can also use <code class="cod">alias</code> with swimlanes, with this syntax: <ul><li><code class="cod">|[#&lt;color&gt;|]&lt;swimlane_alias&gt;| &lt;swimlane_title&gt;</code></li></ul><p></p><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msgbcba78f253fff585fbde79c89422d4b6" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="imgbcba78f253fff585fbde79c89422d4b6" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;bcba78f253fff585fbde79c89422d4b6&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;bcba78f253fff585fbde79c89422d4b6&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;bcba78f253fff585fbde79c89422d4b6&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="prebcba78f253fff585fbde79c89422d4b6">@startuml
+|#palegreen|f| fisherman
+|c| cook
+|#gold|e| eater
+|f|
+start
+:go fish;
+|c|
+:fry fish;
+|e|
+:eat fish;
+stop
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="261" height="278" class="scale" src="../imgw/img-bcba78f253fff585fbde79c89422d4b6.png"/></div></div></td></tr></tbody></table></p><p></p><p></p><em>[Ref. <a href="https://forum.plantuml.net/2681/possible-define-alias-swimlane-place-alias-everywhere-else?show=2685#a2685">QA-2681</a>]</em><a style="position:relative;top:-38px;" name="d02f7ddcfafa91da"></a><div style="clear:both;min-height:110px;margin-top:10px;"><div class="pezoic"><span id="ezoic-pub-ad-placeholder-122"></span><!-- ezoic_pub_ad_placeholder-122-incontent_9-234x60-122-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-122-incontent_9-468x60-122-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-122-incontent_9-728x90-122-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-122-incontent_9-970x90-122-nonexxxnonexxxxxxezmaxscaleval100 --></div></div><h2 class="chap"><img onclick="window.scrollTo(0,0);" title="Back to top" src="../backtop1.svg" width="20" height="20" class="backtop"/><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/doc/dokuwiki/en/activity-diagram-beta#20"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/doc/asciidoc/en/activity-diagram-beta#20"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/doc/markdown/en/activity-diagram-beta#20"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>Detach or kill [detach, kill]</h2><p></p> It&#39;s possible to remove an arrow using the <code class="cod">detach</code> or <code class="cod">kill</code> keyword: <p></p><ul><li><code class="cod">detach</code></li></ul><p></p><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msg9cdc8428fd5ca48f175c9feb68702c81" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="img9cdc8428fd5ca48f175c9feb68702c81" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;9cdc8428fd5ca48f175c9feb68702c81&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;9cdc8428fd5ca48f175c9feb68702c81&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;9cdc8428fd5ca48f175c9feb68702c81&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="pre9cdc8428fd5ca48f175c9feb68702c81">@startuml
+ :start;
+ fork
+   :foo1;
+   :foo2;
+ fork again
+   :foo3;
+   detach
+ endfork
+ if (foo4) then
+   :foo5;
+   detach
+ endif
+ :foo6;
+ detach
+ :foo7;
+ stop
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="161" height="496" class="scale" src="../imgw/img-9cdc8428fd5ca48f175c9feb68702c81.png"/></div></div></td></tr></tbody></table></p><p></p><p></p><ul><li><code class="cod">kill</code></li></ul><p></p><p></p><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msg869bcdae8c9365becd9faf139cc6102e" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="img869bcdae8c9365becd9faf139cc6102e" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;869bcdae8c9365becd9faf139cc6102e&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;869bcdae8c9365becd9faf139cc6102e&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;869bcdae8c9365becd9faf139cc6102e&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="pre869bcdae8c9365becd9faf139cc6102e">@startuml
+ :start;
+ fork
+   :foo1;
+   :foo2;
+ fork again
+   :foo3;
+   kill
+ endfork
+ if (foo4) then
+   :foo5;
+   kill
+ endif
+ :foo6;
+ kill
+ :foo7;
+ stop
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="161" height="496" class="scale" src="../imgw/img-869bcdae8c9365becd9faf139cc6102e.png"/></div></div></td></tr></tbody></table></p><p><a style="position:relative;top:-38px;" name="7420c7766a064a28"></a></p><div style="clear:both;height:50px;"></div><h2 class="chap"><img onclick="window.scrollTo(0,0);" title="Back to top" src="../backtop1.svg" width="20" height="20" class="backtop"/><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/doc/dokuwiki/en/activity-diagram-beta#21"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/doc/asciidoc/en/activity-diagram-beta#21"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/doc/markdown/en/activity-diagram-beta#21"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>SDL (Specification and Description Language)</h2><p></p><h3>Table of SDL Shape Name</h3><p></p><table border="1" cellspacing="0" cellpadding="5"><tbody><tr><td><b> Name </b></td><td><b> Old syntax </b></td><td><b> Stereotype syntax </b></td></tr><tr><td> Input </td><td><code class="cod">&lt;</code></td><td><code class="cod">&lt;&lt;input&gt;&gt;</code></td></tr><tr><td> Output </td><td><code class="cod">&gt;</code></td><td><code class="cod">&lt;&lt;output&gt;&gt;</code></td></tr><tr><td> Procedure </td><td><code class="cod">|</code></td><td><code class="cod">&lt;&lt;procedure&gt;&gt;</code></td></tr><tr><td> Load </td><td><code class="cod">\</code></td><td><code class="cod">&lt;&lt;load&gt;&gt;</code></td></tr><tr><td> Save </td><td><code class="cod">/</code></td><td><code class="cod">&lt;&lt;save&gt;&gt;</code></td></tr><tr><td> Continuous </td><td><code class="cod">}</code></td><td><code class="cod">&lt;&lt;continuous&gt;&gt;</code></td></tr><tr><td> Task </td><td><code class="cod">]</code></td><td><code class="cod">&lt;&lt;task&gt;&gt;</code></td></tr></tbody></table><p></p><em>[Ref. <a href="https://forum.plantuml.net/11518/issues-with-final-separator-latex-math-expression-activity?show=17268#a17268">QA-11518</a>, <a href="https://github.com/plantuml/plantuml/discussions/1270">GH-1270</a>]</em><p></p><h3>SDL using final separator (Deprecated form)</h3> By changing the final <code class="cod">;</code> separator, you can set different rendering for the activity: <ul><li><code class="cod">|</code></li><li><code class="cod">&lt;</code></li><li><code class="cod">&gt;</code></li><li><code class="cod">/</code></li><li><code class="cod">\\</code></li><li><code class="cod">]</code></li><li><code class="cod">}</code></li></ul><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msg269bc7b15f58628728466f8e17fc6d81" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="img269bc7b15f58628728466f8e17fc6d81" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;269bc7b15f58628728466f8e17fc6d81&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;269bc7b15f58628728466f8e17fc6d81&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;269bc7b15f58628728466f8e17fc6d81&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="pre269bc7b15f58628728466f8e17fc6d81">@startuml
+:Ready;
+:next(o)|
+:Receiving;
+split
+ :nak(i)&lt;
+ :ack(o)&gt;
+split again
+ :ack(i)&lt;
+ :next(o)
+ on several lines|
+ :i := i + 1]
+ :ack(o)&gt;
+split again
+ :err(i)&lt;
+ :nak(o)&gt;
+split again
+ :foo/
+split again
+ :bar\\
+split again
+ :i &gt; 5}
+stop
+end split
+:finish;
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="452" height="511" class="scale" src="../imgw/img-269bc7b15f58628728466f8e17fc6d81.png"/></div></div></td></tr></tbody></table></p><p></p><p></p><h3>SDL using Normal separator and Stereotype (Current offiial form)</h3><p></p><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msg880f809ceaec84f96896b55f1613caa4" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="img880f809ceaec84f96896b55f1613caa4" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;880f809ceaec84f96896b55f1613caa4&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;880f809ceaec84f96896b55f1613caa4&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;880f809ceaec84f96896b55f1613caa4&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="pre880f809ceaec84f96896b55f1613caa4">@startuml
+start
+:SDL Shape;
+:input; &lt;&lt;input&gt;&gt;
+:output; &lt;&lt;output&gt;&gt;
+:procedure; &lt;&lt;procedure&gt;&gt;
+:load; &lt;&lt;load&gt;&gt;
+:save; &lt;&lt;save&gt;&gt;
+:continuous; &lt;&lt;continuous&gt;&gt;
+:task; &lt;&lt;task&gt;&gt;
+end
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="110" height="520" class="scale" src="../imgw/img-880f809ceaec84f96896b55f1613caa4.png"/></div></div></td></tr></tbody></table></p><p></p><p></p><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msg549ae6ba285093e9b95bb5a3726f6779" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="img549ae6ba285093e9b95bb5a3726f6779" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;549ae6ba285093e9b95bb5a3726f6779&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;549ae6ba285093e9b95bb5a3726f6779&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;549ae6ba285093e9b95bb5a3726f6779&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="pre549ae6ba285093e9b95bb5a3726f6779">@startuml
+:Ready;
+:next(o); &lt;&lt;procedure&gt;&gt;
+:Receiving;
+split
+ :nak(i); &lt;&lt;input&gt;&gt;
+ :ack(o); &lt;&lt;output&gt;&gt;
+split again
+ :ack(i); &lt;&lt;input&gt;&gt;
+ :next(o)
+ on several lines; &lt;&lt;procedure&gt;&gt;
+ :i := i + 1; &lt;&lt;task&gt;&gt;
+ :ack(o); &lt;&lt;output&gt;&gt;
+split again
+ :err(i); &lt;&lt;input&gt;&gt;
+ :nak(o); &lt;&lt;output&gt;&gt;
+split again
+ :foo; &lt;&lt;save&gt;&gt;
+split again
+ :bar; &lt;&lt;load&gt;&gt;
+split again
+ :i &gt; 5; &lt;&lt;continuous&gt;&gt;
+stop
+end split
+:finish;
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="452" height="511" class="scale" src="../imgw/img-549ae6ba285093e9b95bb5a3726f6779.png"/></div></div></td></tr></tbody></table></p><p><a style="position:relative;top:-38px;" name="d23dee2d0707a741"></a></p><div style="clear:both;min-height:110px;margin-top:10px;"><div class="pezoic"><span id="ezoic-pub-ad-placeholder-123"></span><!-- ezoic_pub_ad_placeholder-123-incontent_10-234x60-123-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-123-incontent_10-468x60-123-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-123-incontent_10-728x90-123-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-123-incontent_10-970x90-123-nonexxxnonexxxxxxezmaxscaleval100 --></div></div><h2 class="chap"><img onclick="window.scrollTo(0,0);" title="Back to top" src="../backtop1.svg" width="20" height="20" class="backtop"/><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/doc/dokuwiki/en/activity-diagram-beta#22"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/doc/asciidoc/en/activity-diagram-beta#22"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/doc/markdown/en/activity-diagram-beta#22"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>Complete example</h2><p></p><p></p><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msg048fe55caa58513defa64b2a90c507a2" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="img048fe55caa58513defa64b2a90c507a2" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;048fe55caa58513defa64b2a90c507a2&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;048fe55caa58513defa64b2a90c507a2&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;048fe55caa58513defa64b2a90c507a2&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="pre048fe55caa58513defa64b2a90c507a2">@startuml
+
+start
+:ClickServlet.handleRequest();
+:new page;
+if (Page.onSecurityCheck) then (true)
+  :Page.onInit();
+  if (isForward?) then (no)
+    :Process controls;
+    if (continue processing?) then (no)
+      stop
+    endif
+
+    if (isPost?) then (yes)
+      :Page.onPost();
+    else (no)
+      :Page.onGet();
+    endif
+    :Page.onRender();
+  endif
+else (false)
+endif
+
+if (do redirect?) then (yes)
+  :redirect process;
+else
+  if (do forward?) then (yes)
+    :Forward request;
+  else (no)
+    :Render page template;
+  endif
+endif
+
+stop
+
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="433" height="913" class="scale" src="../imgw/img-048fe55caa58513defa64b2a90c507a2.png"/></div></div></td></tr></tbody></table></p><p><a style="position:relative;top:-38px;" name="d6bf58f32e2a3e02"></a></p><div style="clear:both;height:50px;"></div><h2 class="chap"><img onclick="window.scrollTo(0,0);" title="Back to top" src="../backtop1.svg" width="20" height="20" class="backtop"/><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/doc/dokuwiki/en/activity-diagram-beta#23"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/doc/asciidoc/en/activity-diagram-beta#23"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/doc/markdown/en/activity-diagram-beta#23"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>Condition Style </h2><p></p><h3>Inside style (by default)</h3><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msg94994d8b0eb41646954b2643b3da9660" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="img94994d8b0eb41646954b2643b3da9660" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;94994d8b0eb41646954b2643b3da9660&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;94994d8b0eb41646954b2643b3da9660&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;94994d8b0eb41646954b2643b3da9660&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="pre94994d8b0eb41646954b2643b3da9660">@startuml
+skinparam conditionStyle inside
+start
+repeat
+  :act1;
+  :act2;
+repeatwhile (&lt;b&gt;end)
+:act3;
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="105" height="300" class="scale" src="../imgw/img-94994d8b0eb41646954b2643b3da9660.png"/></div></div></td></tr></tbody></table></p><p></p><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msg35531dfbdd86bbee082747b086d593d6" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="img35531dfbdd86bbee082747b086d593d6" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;35531dfbdd86bbee082747b086d593d6&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;35531dfbdd86bbee082747b086d593d6&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;35531dfbdd86bbee082747b086d593d6&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="pre35531dfbdd86bbee082747b086d593d6">@startuml
+start
+repeat
+  :act1;
+  :act2;
+repeatwhile (&lt;b&gt;end)
+:act3;
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="105" height="300" class="scale" src="../imgw/img-35531dfbdd86bbee082747b086d593d6.png"/></div></div></td></tr></tbody></table></p><p></p><p></p><h3>Diamond style </h3><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msg9acbfa7f02d0166950369c76def5f485" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="img9acbfa7f02d0166950369c76def5f485" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;9acbfa7f02d0166950369c76def5f485&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;9acbfa7f02d0166950369c76def5f485&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;9acbfa7f02d0166950369c76def5f485&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="pre9acbfa7f02d0166950369c76def5f485">@startuml
+skinparam conditionStyle diamond
+start
+repeat
+  :act1;
+  :act2;
+repeatwhile (&lt;b&gt;end)
+:act3;
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="93" height="300" class="scale" src="../imgw/img-9acbfa7f02d0166950369c76def5f485.png"/></div></div></td></tr></tbody></table></p><p></p><p></p><p></p><p></p><h3>InsideDiamond (or <em>Foo1</em>) style </h3><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msg26e762122fc097958583dd85bfadbe95" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="img26e762122fc097958583dd85bfadbe95" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;26e762122fc097958583dd85bfadbe95&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;26e762122fc097958583dd85bfadbe95&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;26e762122fc097958583dd85bfadbe95&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="pre26e762122fc097958583dd85bfadbe95">@startuml
+skinparam conditionStyle InsideDiamond
+start
+repeat
+  :act1;
+  :act2;
+repeatwhile (&lt;b&gt;end)
+:act3;
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="102" height="311" class="scale" src="../imgw/img-26e762122fc097958583dd85bfadbe95.png"/></div></div></td></tr></tbody></table></p><p></p><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msg2da65f21d24489ec1c7db497a0b273d7" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="img2da65f21d24489ec1c7db497a0b273d7" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;2da65f21d24489ec1c7db497a0b273d7&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;2da65f21d24489ec1c7db497a0b273d7&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;2da65f21d24489ec1c7db497a0b273d7&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="pre2da65f21d24489ec1c7db497a0b273d7">@startuml
+skinparam conditionStyle foo1
+start
+repeat
+  :act1;
+  :act2;
+repeatwhile (&lt;b&gt;end)
+:act3;
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="102" height="311" class="scale" src="../imgw/img-2da65f21d24489ec1c7db497a0b273d7.png"/></div></div></td></tr></tbody></table></p><p></p><p></p><p></p><em>[Ref. <a href="https://forum.plantuml.net/1290/plantuml-condition-rendering">QA-1290</a> and <a href="https://github.com/plantuml/plantuml/issues/400#issuecomment-721287124">#400</a>]</em><a style="position:relative;top:-38px;" name="27fee13230d4c6de"></a><div style="clear:both;min-height:110px;margin-top:10px;"><div class="pezoic"><span id="ezoic-pub-ad-placeholder-194"></span><!-- ezoic_pub_ad_placeholder-194-incontent_11-234x60-194-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-194-incontent_11-468x60-194-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-194-incontent_11-728x90-194-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-194-incontent_11-970x90-194-nonexxxnonexxxxxxezmaxscaleval100 --></div></div><h2 class="chap"><img onclick="window.scrollTo(0,0);" title="Back to top" src="../backtop1.svg" width="20" height="20" class="backtop"/><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/doc/dokuwiki/en/activity-diagram-beta#24"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/doc/asciidoc/en/activity-diagram-beta#24"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/doc/markdown/en/activity-diagram-beta#24"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>Condition End Style </h2><p></p><h3>Diamond style (by default)</h3><p></p><ul><li>With one branch</li></ul><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msg7783c2dd05f35cece761663e31c22024" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="img7783c2dd05f35cece761663e31c22024" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;7783c2dd05f35cece761663e31c22024&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;7783c2dd05f35cece761663e31c22024&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;7783c2dd05f35cece761663e31c22024&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="pre7783c2dd05f35cece761663e31c22024">@startuml
+skinparam ConditionEndStyle diamond
+:A;
+if (decision) then (yes)
+    :B1;
+else (no)
+endif
+:C;
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="121" height="259" class="scale" src="../imgw/img-7783c2dd05f35cece761663e31c22024.png"/></div></div></td></tr></tbody></table></p><p></p><p></p><ul><li>With two branches (<code class="cod">B1</code>, <code class="cod">B2</code>)</li></ul><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msge963ec7566fa471132b483aa1b17c64e" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="imge963ec7566fa471132b483aa1b17c64e" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;e963ec7566fa471132b483aa1b17c64e&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;e963ec7566fa471132b483aa1b17c64e&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;e963ec7566fa471132b483aa1b17c64e&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="pree963ec7566fa471132b483aa1b17c64e">@startuml
+skinparam ConditionEndStyle diamond
+:A;
+if (decision) then (yes)
+    :B1;
+else (no)
+    :B2;
+endif
+:C;
+@enduml
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="140" height="230" class="scale" src="../imgw/img-e963ec7566fa471132b483aa1b17c64e.png"/></div></div></td></tr></tbody></table></p><p></p><p></p><h3>Horizontal line (hline) style </h3><ul><li>With one branch</li></ul><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msge75c082dabdf191ff14a597c3fce6b68" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="imge75c082dabdf191ff14a597c3fce6b68" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;e75c082dabdf191ff14a597c3fce6b68&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;e75c082dabdf191ff14a597c3fce6b68&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;e75c082dabdf191ff14a597c3fce6b68&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="pree75c082dabdf191ff14a597c3fce6b68">@startuml
+skinparam ConditionEndStyle hline
+:A;
+if (decision) then (yes)
+    :B1;
+else (no)
+endif
+:C;
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="121" height="237" class="scale" src="../imgw/img-e75c082dabdf191ff14a597c3fce6b68.png"/></div></div></td></tr></tbody></table></p><p></p><p></p><ul><li>With two branches (<code class="cod">B1</code>, <code class="cod">B2</code>)</li></ul><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msg941c8ada4c8aaa8be4ba44b9169e1cfc" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="img941c8ada4c8aaa8be4ba44b9169e1cfc" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;941c8ada4c8aaa8be4ba44b9169e1cfc&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;941c8ada4c8aaa8be4ba44b9169e1cfc&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;941c8ada4c8aaa8be4ba44b9169e1cfc&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="pre941c8ada4c8aaa8be4ba44b9169e1cfc">@startuml
+skinparam ConditionEndStyle hline
+:A;
+if (decision) then (yes)
+    :B1;
+else (no)
+    :B2;
+endif
+:C;
+@enduml
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="140" height="218" class="scale" src="../imgw/img-941c8ada4c8aaa8be4ba44b9169e1cfc.png"/></div></div></td></tr></tbody></table></p><p></p><p></p><p></p><em>[Ref. <a href="https://forum.plantuml.net/4015/its-possible-to-draw-if-else-endif-without-merge-symbol">QA-4015</a>]</em><a style="position:relative;top:-38px;" name="bb2ede32ce6accb8"></a><div style="clear:both;height:50px;"></div><h2 class="chap"><img onclick="window.scrollTo(0,0);" title="Back to top" src="../backtop1.svg" width="20" height="20" class="backtop"/><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/doc/dokuwiki/en/activity-diagram-beta#25"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/doc/asciidoc/en/activity-diagram-beta#25"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/doc/markdown/en/activity-diagram-beta#25"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>Using (global) style</h2><p></p><h3>Without style <em>(by default)</em></h3><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msg56e670b1dae2f318a2f64e6bfcf48c86" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="img56e670b1dae2f318a2f64e6bfcf48c86" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;56e670b1dae2f318a2f64e6bfcf48c86&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;56e670b1dae2f318a2f64e6bfcf48c86&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;56e670b1dae2f318a2f64e6bfcf48c86&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="pre56e670b1dae2f318a2f64e6bfcf48c86">@startuml
+start
+:init;
+-&gt; test of color;
+if (color?) is (&lt;color:red&gt;red) then
+:print red;
+else 
+:print not red;
+note right: no color
+endif
+partition End {
+:end;
+}
+-&gt; this is the end;
+end
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="279" height="391" class="scale" src="../imgw/img-56e670b1dae2f318a2f64e6bfcf48c86.png"/></div></div></td></tr></tbody></table></p><p></p><p></p><p></p><h3>With style</h3><p></p> You can use <a href="https://plantuml.com/en/style-evolution">style</a> to change rendering of elements. <p></p><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msg5482632635c690b9342f6327d8622d99" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="img5482632635c690b9342f6327d8622d99" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;5482632635c690b9342f6327d8622d99&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;5482632635c690b9342f6327d8622d99&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;5482632635c690b9342f6327d8622d99&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="pre5482632635c690b9342f6327d8622d99">@startuml
+&lt;style&gt;
+activityDiagram {
+  BackgroundColor #33668E
+  BorderColor #33668E
+  FontColor #888
+  FontName arial
+
+  diamond {
+    BackgroundColor #ccf
+    LineColor #00FF00
+    FontColor green
+    FontName arial
+    FontSize 15
+  }
+  arrow {
+    FontColor gold
+    FontName arial
+    FontSize 15
+  }
+  partition {
+    LineColor red
+    FontColor green
+    RoundCorner 10
+    BackgroundColor PeachPuff
+  }
+  note {
+    FontColor Blue
+    LineColor Navy
+    BackgroundColor #ccf
+  }
+}
+document {
+   BackgroundColor transparent
+}
+&lt;/style&gt;
+start
+:init;
+-&gt; test of color;
+if (color?) is (&lt;color:red&gt;red) then
+:print red;
+else 
+:print not red;
+note right: no color
+endif
+partition End {
+:end;
+}
+-&gt; this is the end;
+end
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="279" height="392" class="scale" src="../imgw/img-5482632635c690b9342f6327d8622d99.png"/></div></div></td></tr></tbody></table></p><p></p></td><td id="toctd" valign="top" style="max-width:240px;min-width:240px;"><div id="toc"><ul><li><a href="activity-diagram-beta.html#301241875e1def42">Simple action</a></li><li><a href="activity-diagram-beta.html#45e7ad1c1b3c39e2">Start/Stop/End</a></li><li><a href="activity-diagram-beta.html#9d3afea73e90192d">Conditional</a></li><li><a href="activity-diagram-beta.html#537b5a761669087b">Switch and case [switch, case, endswitch]</a></li><li><a href="activity-diagram-beta.html#d7b1027a512b4d7b">Conditional with stop on an action [kill, detach]</a></li><li><a href="activity-diagram-beta.html#219cebcef334f265">Repeat loop</a></li><li><a href="activity-diagram-beta.html#76b6256d62540b9f">Break on a repeat loop [break]</a></li><li><a href="activity-diagram-beta.html#2f8a92e645aba14f">Goto and Label Processing [label, goto]</a></li><li><a href="activity-diagram-beta.html#04a96ae1910f3c8a">While loop</a></li><li><a href="activity-diagram-beta.html#7452578bfebedd2d">Parallel processing [fork, fork again, end fork, end merge]</a></li><li><a href="activity-diagram-beta.html#39d488a91ed5c8d2">Split processing</a></li><li><a href="activity-diagram-beta.html#f4c6f851b00d5518">Notes</a></li><li><a href="activity-diagram-beta.html#5d50889672f6f860">Colors</a></li><li><a href="activity-diagram-beta.html#6299b1bc9965f62f">Lines without arrows</a></li><li><a href="activity-diagram-beta.html#4e05974b02cc4aa9">Arrows</a></li><li><a href="activity-diagram-beta.html#edf21d7ecb364e82">Connector</a></li><li><a href="activity-diagram-beta.html#2f8c97b04c4fc1f5">Color on connector</a></li><li><a href="activity-diagram-beta.html#772273da3919bcd1">Grouping or partition</a></li><li><a href="activity-diagram-beta.html#dadd115c61036c7a">Swimlanes</a></li><li><a href="activity-diagram-beta.html#d02f7ddcfafa91da">Detach or kill [detach, kill]</a></li><li><a href="activity-diagram-beta.html#7420c7766a064a28">SDL (Specification and Description Language)</a></li><li><a href="activity-diagram-beta.html#d23dee2d0707a741">Complete example</a></li><li><a href="activity-diagram-beta.html#d6bf58f32e2a3e02">Condition Style</a></li><li><a href="activity-diagram-beta.html#27fee13230d4c6de">Condition End Style</a></li><li><a href="activity-diagram-beta.html#bb2ede32ce6accb8">Using (global) style</a></li></ul></div></td></tr></tbody></table></p><p></p><span id="ezoic-pub-ad-placeholder-104"></span><!-- ezoic_pub_ad_placeholder-104-bottom_of_page-234x60-104-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-104-bottom_of_page-468x60-104-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-104-bottom_of_page-728x90-104-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-104-bottom_of_page-970x250-104-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-104-bottom_of_page-300x250x3-104-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-104-bottom_of_page-970x90-104-nonexxxnonexxxxxxezmaxscaleval100 --></div><style>.btm{text-align:center}.btm a{text-decoration:none;color:#637282}.btm a:hover{color:#0366d6}</style><div class="btm"><hr/><a href="https://g.ezoic.net/privacy/plantuml.com"><small>Privacy Policy</small></a>      <a href="../direct-sales.html"><small>Advertise</small></a><p></p></div><script>var sc_project=11133780;var sc_invisible=1;var sc_security="3da8bfdb";</script><script async="" src="https://www.statcounter.com/counter/counter.js"></script><!--[selectrongo:done]--><script type="text/javascript">
+				var __inScopeForCCPA = false;
+		function __uspapi(command, version, callback) {
+			var response = null;
+			var successs = false;
+			if (command === "getUSPData" && version === 1) {
+				var uspString = "1"; // Version
+				if (__inScopeForCCPA) {
+					uspString += "N"; // Has Explicit Notice for Opt Out been provided (ex footer or minor consent modal)
+					var result;
+					var consentCookie = (result = new RegExp('(?:^|; )ezoccpaconsent=([^;]*)').exec(document.cookie)) ? (result[1]) : null;
+					if (consentCookie === "nonconsent") {
+						uspString += "Y";
+					}
+					else {
+						uspString += "N";
+					}
+					uspString += "N" // Is pub a signatory to the IAB Limited Service Provider Agreement (http://www.iabprivacy.com/)
+				}
+				else {
+					uspString += "---";
+				}
+				response = {
+					uspString: uspString,
+					version: 1
+				};
+				success = true;
+			}
+			return callback(response, success);
+		};
+		function __receiveUspapiMessage(event) {
+			if (event.data.hasOwnProperty('__uspapiCall')) {
+				__uspapi('getUSPData', 1, function(uspData, success) {
+					event.source.postMessage({
+						__uspapiReturn: {
+							returnValue: uspData,
+							success: success,
+							callId: event.data.__uspapiCall.callId
+						}
+					},
+					event.origin);
+				});
+			}
+			return null;
+		};
+		window.addEventListener("message", __receiveUspapiMessage, false);
+</script>
+<script>__ez.queue.addFile('/tardisrocinante/vitals.js', '/tardisrocinante/vitals.js?gcb=2&cb=3', false, ['/parsonsmaize/mulvane.js'], true, false, true, false);</script>
+<script>var _audins_dom="plantuml_com",_audins_did=173770;__ez.queue.addDelayFunc("audins.js","__ez.script.add", "//go.ezodn.com/detroitchicago/audins.js?cb=195-2");</script><noscript><div style="display:none;"><img src="https://pixel.quantserve.com/pixel/p-31iz6hfFutd16.gif?labels=Domain.plantuml_com,DomainId.173770" border="0" height="1" width="1" alt="Quantcast"/></div></noscript>
+<script>__ez.queue.addFile('/beardeddragon/drake.js', '/beardeddragon/drake.js?gcb=2&cb=4', false, [], true, false, true, false);</script>
+<script type="text/javascript" style='display:none;'>var __ez_dims = (function() {
+		var setCookie = function( name, content, expiry ) {
+			return document.cookie = name+'='+content+((expiry)?';expires='+(new Date(Math.floor(new Date().getTime()+expiry*1000)).toUTCString()):'')+';path=/';
+		};
+		var ffid = 1;
+		var oh = window.screen.height;
+		var ow = window.screen.width;
+		var h = ffid === 1 ? oh : (oh > ow) ? oh : ow;
+		var w = ffid === 1 ? ow : (oh > ow) ? ow : oh;
+		var uh = window.innerHeight || document.documentElement.clientHeight || document.getElementsByTagName('body')[0].clientHeight;
+		var uw = window.innerWidth || document.documentElement.clientWidth || document.getElementsByTagName('body')[0].clientWidth;
+		setCookie('ezds', encodeURIComponent('ffid='+ffid+',w='+w+',h='+h), (31536e3*7));
+		setCookie('ezohw', encodeURIComponent('w='+uw+',h='+uh), (31536e3*7));
+	})();</script>
+<script type='text/javascript' style='display:none;' async>__ez.queue.addFile('/parsonsmaize/chanute.js', '/parsonsmaize/chanute.js?a=a&cb=7&dcb=195-2&shcb=34', true, ['/parsonsmaize/mulvane.js'], true, false, false, false);</script>
+<script type='text/javascript' style='display:none;' async>__ez.queue.addFile('/porpoiseant/jellyfish.js', '/porpoiseant/jellyfish.js?a=a&cb=10&dcb=195-2&shcb=34', false, [], true, false, false, false);</script></body></html>

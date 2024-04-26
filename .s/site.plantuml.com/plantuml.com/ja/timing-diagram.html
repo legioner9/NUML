@@ -1,0 +1,756 @@
+<html lang="ja"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<script data-ezscrex='false' data-cfasync='false' data-pagespeed-no-defer>var __ez=__ez||{};__ez.stms=Date.now();__ez.evt={};__ez.script={};__ez.ck=__ez.ck||{};__ez.template={};__ez.template.isOrig=false;__ez.queue=function(){var e=0,i=0,t=[],n=!1,o=[],r=[],s=!0,a=function(e,i,n,o,r,s,a){var l=arguments.length>7&&void 0!==arguments[7]?arguments[7]:window,d=this;this.name=e,this.funcName=i,this.parameters=null===n?null:p(n)?n:[n],this.isBlock=o,this.blockedBy=r,this.deleteWhenComplete=s,this.isError=!1,this.isComplete=!1,this.isInitialized=!1,this.proceedIfError=a,this.fWindow=l,this.isTimeDelay=!1,this.process=function(){f("... func = "+e),d.isInitialized=!0,d.isComplete=!0,f("... func.apply: "+e);var i=d.funcName.split("."),n=null,o=this.fWindow||window;i.length>3||(n=3===i.length?o[i[0]][i[1]][i[2]]:2===i.length?o[i[0]][i[1]]:o[d.funcName]),null!=n&&n.apply(null,this.parameters),!0===d.deleteWhenComplete&&delete t[e],!0===d.isBlock&&(f("----- F'D: "+d.name),u())}},l=function(e,i,t,n,o,r,s){var a=arguments.length>7&&void 0!==arguments[7]?arguments[7]:window,l=this;this.name=e,this.path=i,this.async=o,this.defer=r,this.isBlock=t,this.blockedBy=n,this.isInitialized=!1,this.isError=!1,this.isComplete=!1,this.proceedIfError=s,this.fWindow=a,this.isTimeDelay=!1,this.isPath=function(e){return"/"===e[0]&&"/"!==e[1]},this.getSrc=function(e){return void 0!==window.__ezScriptHost&&this.isPath(e)&&"banger.js"!==this.name?window.__ezScriptHost+e:e},this.process=function(){l.isInitialized=!0,f("... file = "+e);var i=this.fWindow?this.fWindow.document:document,t=i.createElement("script");t.src=this.getSrc(this.path),!0===o?t.async=!0:!0===r&&(t.defer=!0),t.onerror=function(){var e={url:window.location.href,name:l.name,path:l.path,user_agent:window.navigator.userAgent};"undefined"!=typeof _ezaq&&(e.pageview_id=_ezaq.page_view_id);var i=encodeURIComponent(JSON.stringify(e)),t=new XMLHttpRequest;t.open("GET","//g.ezoic.net/ezqlog?d="+i,!0),t.send(),f("----- ERR'D: "+l.name),l.isError=!0,!0===l.isBlock&&u()},t.onreadystatechange=t.onload=function(){var e=t.readyState;f("----- F'D: "+l.name),e&&!/loaded|complete/.test(e)||(l.isComplete=!0,!0===l.isBlock&&u())},i.getElementsByTagName("head")[0].appendChild(t)}},d=function(e,i){this.name=e,this.path="",this.async=!1,this.defer=!1,this.isBlock=!1,this.blockedBy=[],this.isInitialized=!0,this.isError=!1,this.isComplete=i,this.proceedIfError=!1,this.isTimeDelay=!1,this.process=function(){}};function c(e){!0!==h(e)&&0!=s&&e.process()}function h(e){if(!0===e.isTimeDelay&&!1===n)return f(e.name+" blocked = TIME DELAY!"),!0;if(p(e.blockedBy))for(var i=0;i<e.blockedBy.length;i++){var o=e.blockedBy[i];if(!1===t.hasOwnProperty(o))return f(e.name+" blocked = "+o),!0;if(!0===e.proceedIfError&&!0===t[o].isError)return!1;if(!1===t[o].isComplete)return f(e.name+" blocked = "+o),!0}return!1}function f(e){var i=window.location.href,t=new RegExp("[?&]ezq=([^&#]*)","i").exec(i);"1"===(t?t[1]:null)&&console.debug(e)}function u(){++e>200||(f("let's go"),m(o),m(r))}function m(e){for(var i in e)if(!1!==e.hasOwnProperty(i)){var t=e[i];!0===t.isComplete||h(t)||!0===t.isInitialized||!0===t.isError?!0===t.isError?f(t.name+": error"):!0===t.isComplete?f(t.name+": complete already"):!0===t.isInitialized&&f(t.name+": initialized already"):t.process()}}function p(e){return"[object Array]"==Object.prototype.toString.call(e)}return window.addEventListener("load",(function(){setTimeout((function(){n=!0,f("TDELAY -----"),u()}),5e3)}),!1),{addFile:function(e,i,n,s,a,d,h,f,u){var m=new l(e,i,n,s,a,d,h,u);!0===f?o[e]=m:r[e]=m,t[e]=m,c(m)},addDelayFile:function(e,i){var n=new l(e,i,!1,[],!1,!1,!0);n.isTimeDelay=!0,f(e+" ...  FILE! TDELAY"),r[e]=n,t[e]=n,c(n)},addFunc:function(e,n,s,l,d,h,f,u,m,p){!0===h&&(e=e+"_"+i++);var w=new a(e,n,s,l,d,f,u,p);!0===m?o[e]=w:r[e]=w,t[e]=w,c(w)},addDelayFunc:function(e,i,n){var o=new a(e,i,n,!1,[],!0,!0);o.isTimeDelay=!0,f(e+" ...  FUNCTION! TDELAY"),r[e]=o,t[e]=o,c(o)},items:t,processAll:u,setallowLoad:function(e){s=e},markLoaded:function(e){if(e&&0!==e.length){if(e in t){var i=t[e];!0===i.isComplete?f(i.name+" "+e+": error loaded duplicate"):(i.isComplete=!0,i.isInitialized=!0)}else t[e]=new d(e,!0);f("markLoaded dummyfile: "+t[e].name)}},logWhatsBlocked:function(){for(var e in t)!1!==t.hasOwnProperty(e)&&h(t[e])}}}();__ez.evt.add=function(e,t,n){e.addEventListener?e.addEventListener(t,n,!1):e.attachEvent?e.attachEvent("on"+t,n):e["on"+t]=n()},__ez.evt.remove=function(e,t,n){e.removeEventListener?e.removeEventListener(t,n,!1):e.detachEvent?e.detachEvent("on"+t,n):delete e["on"+t]};__ez.script.add=function(e){var t=document.createElement("script");t.src=e,t.async=!0,t.type="text/javascript",document.getElementsByTagName("head")[0].appendChild(t)};__ez.dot={};__ez.queue.addFile('/detroitchicago/boise.js', '/detroitchicago/boise.js?gcb=195-2&cb=2', true, [], true, false, true, false);__ez.queue.addFile('/parsonsmaize/abilene.js', '/parsonsmaize/abilene.js?gcb=195-2&cb=28', true, [], true, false, true, false);</script>
+<script data-ezscrex="false" type="text/javascript" data-cfasync="false">window._ezaq = Object.assign({}, typeof window._ezaq !== "undefined" ? window._ezaq : {}, {"ad_cache_level":1,"domain_id":173770,"ezcache_level":2,"ezcache_skip_code":0,"has_bad_image":0,"has_bad_words":0,"is_sitespeed":0,"lt_cache_level":0,"page_view_id":"45027317-753e-45c4-48e8-5b868fe73f3e","response_size_orig":82072,"response_time_orig":3,"template_id":134,"url":"https://plantuml.com/ja/timing-diagram","word_count":1949,"worst_bad_word_level":0});__ez.queue.markLoaded('ezaqBaseReady');</script>
+<script type="text/javascript">(function(){function storageAvailable(type){var storage;try{storage=window[type];var x='__storage_test__';storage.setItem(x,x);storage.removeItem(x);return true;}
+catch(e){return e instanceof DOMException&&(e.code===22||e.code===1014||e.name==='QuotaExceededError'||e.name==='NS_ERROR_DOM_QUOTA_REACHED')&&(storage&&storage.length!==0);}}
+function remove_ama_config(){if(storageAvailable('localStorage')){localStorage.removeItem("google_ama_config");}}
+remove_ama_config()})()</script>
+<script type="text/javascript">var ezoicTestActive = true</script>
+<script data-ezscrex="false" type="text/javascript" data-cfasync="false">window._ezaq = Object.assign({}, typeof window._ezaq !== "undefined" ? window._ezaq : {}, {"ab_test_id":"mod174-c","ad_cache_level":1,"ad_count_adjustment":0,"ad_lazyload_version":0,"ad_load_version":1,"ad_location_ids":"","adx_ad_count":0,"ai_placeholder_cache_level":1,"ai_placeholder_placement_cnt":-1,"bidder_method":1,"bidder_version":3,"city":"Krasnoyarsk","country":"RU","days_since_last_visit":-1,"display_ad_count":0,"domain_id":173770,"domain_test_group":20230802,"ds_adsize_opt_id":-1,"engaged_time_visit":0,"ezcache_level":2,"ezcache_skip_code":0,"form_factor_id":1,"framework_id":1,"has_bad_image":0,"has_bad_words":0,"iab_category":"","iab_category_0":"596","is_embed":false,"is_from_recommended_pages":false,"is_return_visitor":false,"is_sitespeed":0,"last_page_load":"","last_pageview_id":"","lt_cache_level":0,"max_ads":0,"metro_code":0,"optimization_version":1,"page_ad_positions":"","page_view_count":199,"page_view_id":"45027317-753e-45c4-48e8-5b868fe73f3e","position_selection_id":0,"postal_code":"660000","pv_event_count":0,"response_size_orig":82072,"response_time_orig":3,"serverid":"i-02586fed39afcfc4d","state":"KYA","sub_page_ad_positions":"","t_epoch":1697690895,"template_id":134,"time_on_site_visit":0,"url":"https://plantuml.com/ja/timing-diagram","word_count":1949,"worst_bad_word_level":0});__ez.queue.markLoaded('ezaqReady');</script>
+<script data-ezscrex='false' data-cfasync='false' data-pagespeed-no-defer>__ez.queue.addFile('/parsonsmaize/mulvane.js', '/parsonsmaize/mulvane.js?gcb=195-2&cb=5', true, ['/parsonsmaize/abilene.js'], true, false, true, false);__ez.queue.addFile('/parsonsmaize/olathe.js', '/parsonsmaize/olathe.js?gcb=195-2&cb=20', false, ['/parsonsmaize/abilene.js','/parsonsmaize/mulvane.js'], true, false, true, false);__ez.queue.addFile('/porpoiseant/et.js', '/porpoiseant/et.js?gcb=195-2&cb=2', false, [], true, false, true, false);!function(){var e;__ez.vep=(e=[],{Add:function(i,t){__ez.dot.isDefined(i)&&__ez.dot.isValid(t)&&e.push({type:"video",video_impression_id:i,domain_id:__ez.dot.getDID(),t_epoch:__ez.dot.getEpoch(0),data:__ez.dot.dataToStr(t)})},Fire:function(){if(void 0===document.visibilityState||"prerender"!==document.visibilityState){if(__ez.dot.isDefined(e)&&e.length>0)for(;e.length>0;){var i=5;i>e.length&&(i=e.length);var t=e.splice(0,i),o=__ez.dot.getURL("/detroitchicago/grapefruit.gif")+"?orig="+(!0===__ez.template.isOrig?1:0)+"&v="+btoa(JSON.stringify(t));__ez.dot.Fire(o)}e=[]}}})}();</script><script data-ezscrex='false' data-cfasync='false' data-pagespeed-no-defer>!function(){function e(i){return e="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e},e(i)}__ez.pel=function(){var i=[];function t(t,o,d,_,n,r,a,s){if(__ez.dot.isDefined(t)&&0!=__ez.dot.isAnyDefined(t.getSlotElementId,t.ElementId)){void 0===s&&(s=!1);var p=parseInt(__ez.dot.getTargeting(t,"ap")),f=__ez.dot.getSlotIID(t),u=__ez.dot.getAdUnit(t,s),z=parseInt(__ez.dot.getTargeting(t,"compid")),g=0,c=0,l=function(i){if("undefined"==typeof _ezim_d)return!1;var t=__ez.dot.getAdUnitPath(i).split("/").pop();if("object"===("undefined"==typeof _ezim_d?"undefined":e(_ezim_d))&&_ezim_d.hasOwnProperty(t))return _ezim_d[t];for(var o in _ezim_d)if(o.split("/").pop()===t)return _ezim_d[o];return!1}(t);"object"==e(l)&&(void 0!==l.creative_id&&(c=l.creative_id),void 0!==l.line_item_id&&(g=l.line_item_id)),__ez.dot.isDefined(f,u)&&__ez.dot.isValid(o)&&("0"===f&&!0!==s||""===u||i.push({type:"impression",impression_id:f,domain_id:__ez.dot.getDID(),unit:u,t_epoch:__ez.dot.getEpoch(0),revenue:d,est_revenue:_,ad_position:p,ad_size:"",bid_floor_filled:n,bid_floor_prev:r,stat_source_id:a,country_code:__ez.dot.getCC(),pageview_id:__ez.dot.getPageviewId(),comp_id:z,line_item_id:g,creative_id:c,data:__ez.dot.dataToStr(o),is_orig:s||__ez.template.isOrig}))}}function o(){void 0!==document.visibilityState&&"prerender"===document.visibilityState||(__ez.dot.isDefined(i)&&i.length>0&&[i.filter((function(e){return e.is_orig})),i.filter((function(e){return!e.is_orig}))].forEach((function(e){for(;e.length>0;){var i=e[0].is_orig||!1,t=5;t>e.length&&(t=e.length);var o=e.splice(0,t),d=__ez.dot.getURL("/porpoiseant/army.gif")+"?orig="+(!0===i?1:0)+"&sts="+btoa(JSON.stringify(o));(void 0!==window.isAmp&&isAmp||void 0!==window.ezWp&&ezWp)&&void 0!==window._ezaq&&_ezaq.hasOwnProperty("domain_id")&&(d+="&visit_uuid="+_ezaq.visit_uuid),__ez.dot.Fire(d)}})),i=[])}return{Add:t,AddAndFire:function(e,i){t(e,i,0,0,0,0,0),o()},AddAndFireOrig:function(e,i){t(e,i,0,0,0,0,0,!0),o()},AddById:function(e,t,o,d){var _=e.split("/");if(__ez.dot.isDefined(e)&&3===_.length&&__ez.dot.isValid(t)){var n=_[0],r={type:"impression",impression_id:_[2],domain_id:__ez.dot.getDID(),unit:n,t_epoch:__ez.dot.getEpoch(0),pageview_id:__ez.dot.getPageviewId(),data:__ez.dot.dataToStr(t),is_orig:o||__ez.template.isOrig};void 0!==d&&(r.revenue=d),i.push(r)}},Fire:o,GetPixels:function(){return i}}}()}();__ez.queue.addFile('/detroitchicago/raleigh.js', '/detroitchicago/raleigh.js?gcb=195-2&cb=6', false, ['/parsonsmaize/abilene.js'], true, false, true, false);__ez.queue.addFile('/detroitchicago/vista.js', '/detroitchicago/vista.js?gcb=195-2&cb=5', false, ['/parsonsmaize/abilene.js'], true, false, true, false);__ez.queue.addFile('/detroitchicago/tampa.js', '/detroitchicago/tampa.js?gcb=195-2&cb=5', false, ['/parsonsmaize/abilene.js'], true, false, true, false);</script><base href=""/><meta name="flattr:id" content="1ew3x0"/><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "url": "https://plantuml.com",
+  "name": "PlantUML",
+  "sameAs" : ["https://twitter.com/plantuml","https://en.wikipedia.org/wiki/PlantUML","https://www.wikidata.org/wiki/Q18346546"],
+  "logo": "https://cdn-0.plantuml.com/logo3.png",
+  "contactPoint": [{
+    "@type": "ContactPoint",
+    "email": "plantuml@gmail.com",
+    "url": "https://plantuml.com",
+    "contactType": "customer service"
+  }]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+    "@type": "ListItem",
+    "position": 1,
+    "item": {
+      "@id": "https://plantuml.com",
+      "name": "Home"
+    }
+  },{
+    "@type": "ListItem",
+    "position": 2,
+    "item": {
+      "@id": "https://plantuml.com/sitemap-language-specification",
+      "name": "Language specification"
+    }
+  },{
+    "@type": "ListItem",
+    "position": 3,
+    "item": {
+      "@id": "https://plantuml.com/timing-diagram",
+      "name": "Timing Diagram"
+  }
+  }]
+}
+</script><link rel="canonical" href="timing-diagram.html"/><link rel="alternate" hreflang="x-default" href="../timing-diagram.html"/><link rel="alternate" hreflang="de" href="../de/timing-diagram.html"/><link rel="alternate" hreflang="en" href="../timing-diagram.html"/><link rel="alternate" hreflang="es" href="../es/timing-diagram.html"/><link rel="alternate" hreflang="fr" href="../fr/timing-diagram.html"/><link rel="alternate" hreflang="ja" href="timing-diagram.html"/><link rel="alternate" hreflang="ru" href="../ru/timing-diagram.html"/><link rel="alternate" hreflang="ko" href="../ko/timing-diagram.html"/><link rel="alternate" hreflang="zh" href="../zh/timing-diagram.html"/><link rel="shortcut icon" href="../favicon.ico"/><link rel="preload" as="image" href="../svgrepo-house.svg"/><link rel="preload" as="image" href="../svgrepo-text-news.svg"/><link rel="preload" as="image" href="../svgrepo-rocket-3-start.svg"/><link rel="preload" as="image" href="../svgrepo-server.svg"/><link rel="preload" as="image" href="../svgrepo-play.svg"/><link rel="preload" as="image" href="../svgrepo-forum.svg"/><link rel="preload" as="image" href="../svgrepo-add-to-online-cart.svg"/><link rel="preload" as="image" href="../svgrepo-forum-message.svg"/><link rel="preload" as="image" href="../svgrepo-palette-fill.svg"/><link rel="preload" as="image" href="../svgrepo-cpu.svg"/><link rel="preload" as="image" href="../svgrepo-books-library.svg"/><link rel="preload" as="image" href="../svgrepo-signpost-fill.svg"/><link rel="preload" as="image" href="../svgrepo-library.svg"/><link rel="preload" as="image" href="../flags21.png"/><link rel="preload" as="image" href="../svgrepo-uxwing-light-mode-toggle.svg"/><title>タイミング図の構文</title><meta name="description" content="PlantUML タイミング図の文法：タイミング図はまだ完全にサポートされていません。提案段階（draft version）です。構文が変更される可能性があります。"/><meta property="og:type" content="article"/><meta property="og:title" content="タイミング図の構文"/><meta property="og:description" content="PlantUML タイミング図の文法：タイミング図はまだ完全にサポートされていません。提案段階（draft version）です。構文が変更される可能性があります。"/><meta property="og:url" content="https://plantuml.com/ja/timing-diagram"/><meta property="og:site_name" content="PlantUML.com"/><meta name="twitter:image" content="https://plantuml.com/og-timing-diagram"/><meta property="og:locale" content="ja"/><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="タイミング図の構文"/><meta name="twitter:description" content="PlantUML タイミング図の文法：タイミング図はまだ完全にサポートされていません。提案段階（draft version）です。構文が変更される可能性があります。"/><meta name="twitter:site" content="@PlantUML"/><meta name="twitter:creator" content="@PlantUML"/><style>li{margin:2px}#external li{margin:13px}.pezoic{max-width:970px}@media screen and (max-width:1600px){.pezoic{max-width:768px}}.coptable{max-width:90%}.mytab{display:inline-block;border-radius:3px;border:1px solid #e1e4e8}.mytab:hover{border:1px dashed #0366d6;cursor:pointer;color:#0366d6;background:#f6f8fa}.cop{margin:25px 10px 0 10px}.cop:hover{cursor:pointer;filter:invert(30%) sepia(75%) saturate(4001%) hue-rotate(201deg) brightness(88%) contrast(98%)}.cop2{margin:25px 10px 0 10px}.cop2:hover{cursor:pointer}.msg{position:absolute;color:#396;background-color:#FFF;margin-top:55px;display:none;border-radius:3px;border:1px solid #4dff00}.mycell0{float:left;vertical-align:top;padding:10px}.mycell0 code:hover{cursor:default;color:#000}.mycell{float:right;vertical-align:top;padding:10px;max-width:55vw;overflow-x:auto}.mycell0 pre{max-width:55vw;overflow-x:auto}.cod{background:#edeff3;padding:2px 5px;border-radius:3px}.colo{display:inline-block;background:#edeff3;padding:7px 12px;border-radius:3px}.tag,.tagg,.tago,.tagr{text-rendering:optimizeLegibility;display:inline-block;padding:3px 5px 2px 4px;text-decoration:none;white-space:nowrap;border:1px solid #999;text-transform:uppercase;text-align:center;border-radius:3px;font-size:11px;font-weight:bold;line-height:90%}.tag{background-color:#eee}.tagg{background-color:#98fb98}.tago{background-color:#fafa00}.tagr{background-color:#ff4500}a{text-decoration:none;color:#0366d6}a:hover{text-decoration:underline}.menu1{border:0;font-family:Helvetica,sans-serif;font-size:14px;padding:0;margin:0;white-space:nowrap;overflow:hidden;vertical-align:middle;line-height:30px}.menu1 a{text-align:center;padding:10px 7px 10px 7px;text-decoration:none;color:#637282}.menu1 a:hover{color:#0366d6}#menu0{top:0;z-index:4;margin:0 0 0 10px;padding:0}@media screen and (max-width:1500px){#menu0{visibility:hidden}}.mhov img{margin:0 5px 0 0;padding:0}.mhov:hover{filter:invert(25%) sepia(97%) saturate(2026%) hue-rotate(201deg) brightness(91%) contrast(98%)}#menuside2{border:0;font-family:Helvetica,sans-serif;font-size:14px;padding:20px 0 4px 0;margin:0}#menuside2 span{vertical-align:top}#menuside2 li{list-style:none;position:relative;padding:0;margin:10px 20px 10px 10px;border:0}#menuside2 li a{display:inline-block;text-decoration:none;color:#637282;width:100%}#BC{z-index:0;padding-top:5px;top:35px}.breadcrumb{z-index:1;font-family:Helvetica,sans-serif;font-size:14px;text-align:center;display:inline-block;overflow:hidden;border-radius:5px}.breadcrumb a{text-decoration:none;outline:0;display:block;float:left;font-size:12px;line-height:24px;color:#373f49;padding:0 10px 0 35px;background:#f0f1f1;background:linear-gradient(#f0f1f1,#c6d2d2);position:relative}.breadcrumb a:first-child{padding-left:21px;border-radius:5px 0 0 5px}.breadcrumb a:first-child:before{left:14px}.breadcrumb a:last-child{visibility:hidden}.breadcrumb a.active,.breadcrumb a:hover{color:#0366d6;background:#c6d2d2;background:linear-gradient(#e3e4e4,#b8c7c7)}.breadcrumb a.active:after,.breadcrumb a:hover:after{background:#c6d2d2;background:linear-gradient(135deg,#e3e4e4,#b8c7c7)}.breadcrumb a:after{content:'';position:absolute;top:0;right:-12px;width:24px;height:24px;transform:scale(0.707) rotate(45deg);z-index:1;background:#f0f1f1;background:linear-gradient(135deg,#f0f1f1,#c6d2d2);box-shadow:2px -2px 0 2px rgba(0,0,0,0.1),3px -3px 0 2px rgba(255,255,255,0.1);border-radius:0 5px 0 50px}.breadcrumb a:last-child:after{content:none;visibility:hidden}.lga,.lga a,.lgi,.lgi a{font-family:Helvetica,sans-serif;font-size:13px;text-align:center;color:#fff;padding:0 5px;margin:0}.lga,.lga a{background-color:#008}.lgi,.lgi a{background-color:#888}.lga:hover,.lga:hover a{text-decoration:none;color:#BBB}.lgi:hover,.lgi:hover a{text-decoration:none;color:#CCC}</style><style>.backtop{margin:0 10px}.backtop:hover{cursor:pointer;filter:invert(30%) sepia(75%) saturate(4001%) hue-rotate(201deg) brightness(88%) contrast(98%)}</style><style>.dropbtn{padding:0;border:0;background:0}.dropdown{position:relative;display:inline-block;margin:0 10px}.dropdown-content{display:none;position:absolute;background-color:#f1f1f1;min-width:160px;box-shadow:0 8px 16px 0 rgba(0,0,0,0.2);z-index:1}.dropdown-content img{vertical-align:middle;margin:0 8px 0 1px}.dropdown-content a{font-size:small;font-weight:normal;color:black;padding:5px 10px;text-decoration:none;display:block}.dropdown-content a:hover{background-color:#ddd;color:#0366d6}.dropdown:hover .dropdown-content{display:block}.dropdown:hover .dropbtn{background-color:#3e8e41}</style><style>#flex1{margin:0;padding:0;display:flex;flex-direction:row;width:378px;height:100%}#lll{flex-grow:1;flex-shrink:1;max-width:162px;overflow:hidden}#mmm{flex-grow:0;flex-shrink:0;background:#edeff3;width:210px;min-width:210px;max-width:210px;flex-grow:0;flex-shrink:0;border-left:1px solid #d4d8de}#qqq{flex-grow:0;flex-shrink:0;width:4px;min-width:4px;max-width:4px;flex-grow:0;flex-shrink:0}#rrr{flex-grow:1;flex-shrink:1;max-width:162px;overflow:hidden}.cde{display:flex;flex-direction:column;justify-content:space-between;height:100%}.cd{display:flex;flex-direction:column;justify-content:space-start;height:100%}.aaa{height:30px;min-height:30px;max-height:30px;flex-grow:0;flex-shrink:0;background:#edeff3;border-bottom:1px solid #d4d8de}.bbb,.bbborder{flex-grow:1;flex-shrink:0}.bbborder{border-left:1px solid #d4d8de}#header{z-index:10;position:fixed;left:378px;right:0;height:30px;top:0;background:#edeff3;border-bottom:1px solid #d4d8de}#header2{z-index:7;position:fixed;left:378px;right:0;height:10px;top:30px;background:#fefefe}#left0{top:0;position:fixed;left:0;margin:0;bottom:0;width:378px;padding:0;z-index:2}#root{padding:0;margin:40px 0 0 388px;background:#fefefe}body{margin:auto;overflow-x:hidden;background:#fefefe}@media screen and (max-width:1190px){#flex1,#left0{width:215px}#root{margin:40px 0 0 224px}#header,#header2{left:215px}#left0{left:0}#lll,#rrr{width:0;visibility:hidden;flex-grow:0;flex-shrink:0}}@media screen and (max-width:1010px){#root{margin:0 0 0 216px}#header,#header2{display:none}#lll,#qqq{width:0;visibility:hidden;flex-grow:0;flex-shrink:0}#mmm{border-right:1px solid #d4d8de}}@media screen and (min-width:1700px){#header,#header2{left:518px}#left0,#flex1{width:518px}#root{margin-left:528px}#lll,#rrr{max-width:302px}}</style><script>window.pushMST_config={vapidPK:"BBodn2vLFoDO5AdCfmOOzNmcUsn52kTA6JNZNYVFymzEdWHonz_bkUcsaTkPXHvNGRkRUSAxMbup-H0l2sb1h_Q",enableOverlay:true,swPath:"/sw.js",i18n:{}};var pushmasterTag=document.createElement("script");pushmasterTag.src="https://cdn.pushmaster-cdn.xyz/scripts/publishers/629f5e297baecc00098a271b/SDK.js";pushmasterTag.setAttribute("defer","");var firstScriptTag=document.getElementsByTagName("script")[0];firstScriptTag.parentNode.insertBefore(pushmasterTag,firstScriptTag);</script><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-TKZNNQT9CZ"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date());gtag("config","G-TKZNNQT9CZ");</script><script>var llg="ja";var az=0;var amdark=0;function ljs(b){if(az){return false}var a=document.createElement("script");a.type="text/javascript";a.src="/btn-"+b+".js";document.body.innerHTML="<i style='position:absolute;top:30%;width:100%;'><center>Loading in progress...";document.body.appendChild(a)}function ctc(c){document.getElementById("img"+c).classList.remove("cop");document.getElementById("img"+c).classList.add("cop2");document.getElementById("pre"+c).style.backgroundColor="#4dff00";document.getElementById("msg"+c).style.display="inline";setTimeout(function(){document.getElementById("img"+c).classList.remove("cop2");document.getElementById("img"+c).classList.add("cop");document.getElementById("pre"+c).style.backgroundColor="";document.getElementById("msg"+c).style.display="none"},800);text=document.getElementById("pre"+c).innerText;if(window.clipboardData&&window.clipboardData.setData){return window.clipboardData.setData("Text",text)}else{if(document.queryCommandSupported&&document.queryCommandSupported("copy")){var a=document.createElement("textarea");a.textContent=text;a.style.position="fixed";document.body.appendChild(a);a.select();try{return document.execCommand("copy")}catch(b){return false}finally{document.body.removeChild(a)}}}};</script><script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><script type='text/javascript'>
+var ezoTemplate = 'pub_site';
+var ezouid = '1';
+var ezoFormfactor = '1';
+</script><script data-ezscrex="false" type='text/javascript'>
+var soc_app_id = '0';
+var did = 173770;
+var ezdomain = 'plantuml.com';
+var ezoicSearchable = 1;
+</script>
+<script data-ezscrex='false' data-pagespeed-no-defer data-cfasync='false'>
+function create_ezolpl() {
+	var d = new Date();
+	d.setTime(d.getTime() + (365*24*60*60*1000));
+	var expires = "expires="+d.toUTCString();
+	__ez.ck.setByCat("ezux_lpl_173770=" + new Date().getTime() + "|" + _ezaq.page_view_id + "|" + _ezaq.is_return_visitor + "; " + expires, 3);
+}
+function attach_ezolpl() {
+	if (document.readyState === "complete") {
+		create_ezolpl();
+		return;
+	}
+	window.addEventListener("load", create_ezolpl);
+}
+
+__ez.queue.addFunc("attach_ezolpl", "attach_ezolpl", null, false, ['/detroitchicago/boise.js'], true, false, false, false);
+</script></head><body><div id="left0"><div id="flex1"><div id="lll"><div class="cde"><div></div><div><span id="ezoic-pub-ad-placeholder-131"></span><!-- ezoic_pub_ad_placeholder-131-sidebar-120x600-131-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-131-sidebar-160x600-131-nonexxxnonexxxxxxezmaxscaleval100 --></div><div></div></div></div><div id="mmm"><div class="cde"><div><div><span id="ezoic-pub-ad-placeholder-105"></span><!-- ezoic_pub_ad_placeholder-105-sidebar_middle-120x240-105-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-105-sidebar_middle-125x125-105-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-105-sidebar_middle-180x150-105-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-105-sidebar_middle-200x200-105-nonexxxnonexxxxxxezmaxscaleval100 --></div><ul id="menuside2"><li><a href="index.html" class="mhov"><img src="../svgrepo-house.svg" width="16" height="16"/><span>ホーム</span></a></li><li><a href="news.html" class="mhov"><img src="../svgrepo-text-news.svg" width="16" height="16"/><span>新着情報</span></a></li><li><a href="starting.html" class="mhov"><img src="../svgrepo-rocket-3-start.svg" width="16" height="16"/><span>入門</span></a></li><li><a href="https://www.plantuml.com/plantuml/uml/SyfFKj2rKt3CoKnELR1Io4ZDoSa70000" class="mhov"><img src="../svgrepo-server.svg" width="16" height="16"/><span>Online Server</span></a></li><li><a href="running.html" class="mhov"><img src="../svgrepo-play.svg" width="16" height="16"/><span>実行方法</span></a></li><li><a href="faq.html" class="mhov"><img src="../svgrepo-forum.svg" width="16" height="16"/><span>F.A.Q.</span></a></li><li><a href="download.html" class="mhov"><img src="../svgrepo-add-to-online-cart.svg" width="16" height="16"/><span>ダウンロード</span></a></li><li><a href="../qa.html" class="mhov"><img src="../svgrepo-forum-message.svg" width="16" height="16"/><span>フォーラム(英語)</span></a></li><li><a href="theme.html" class="mhov"><img src="../svgrepo-palette-fill.svg" width="16" height="16"/><span>Theme</span></a></li><li><a href="preprocessing.html" class="mhov"><img src="../svgrepo-cpu.svg" width="16" height="16"/><span>前処理</span></a></li><li><a href="stdlib.html" class="mhov"><img src="../svgrepo-books-library.svg" width="16" height="16"/><span>標準ライブラリ</span></a></li><li><a href="https://crashedmind.github.io/PlantUMLHitchhikersGuide" class="mhov"><img src="../svgrepo-signpost-fill.svg" width="16" height="16"/><span>Hitchhiker&#39;s Guide</span></a></li><li><a href="guide.html" class="mhov"><img src="../svgrepo-library.svg" width="16" height="16"/><span>PDFガイド</span></a></li></ul><div><span id="ezoic-pub-ad-placeholder-108"></span><!-- ezoic_pub_ad_placeholder-108-sidebar_middle-120x240-108-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-108-sidebar_middle-125x125-108-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-108-sidebar_middle-180x150-108-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-108-sidebar_middle-200x200-108-nonexxxnonexxxxxxezmaxscaleval100 --></div></div><div></div><div style="margin-bottom:35px;"><span id="ezoic-pub-ad-placeholder-186"></span><!-- ezoic_pub_ad_placeholder-186-sidebar_middle-120x240-186-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-186-sidebar_middle-125x125-186-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-186-sidebar_middle-180x150-186-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-186-sidebar_middle-200x200-186-nonexxxnonexxxxxxezmaxscaleval100 --></div></div></div><div id="qqq"><div class="cd"><div class="aaa"></div><div class="bbborder"></div></div></div><div id="rrr"><div class="cd"><div class="aaa"></div><div style="height:5px;"></div><div class="bbb"><div class="cde"><div></div><div><span id="ezoic-pub-ad-placeholder-175"></span><!-- ezoic_pub_ad_placeholder-175-sidebar-120x600-175-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-175-sidebar-160x600-175-nonexxxnonexxxxxxezmaxscaleval100 --></div><div></div></div></div></div></div></div></div><style>#contmenu{display:flex;height:30px;width:100%;margin:0;padding:0}#contmenua{height:30px;padding-right:25px}#contmenub{z-index:15;display:inline-block;flex-grow:1;flex-shrink:1;height:30px;background-color:#edeff3}#magic{white-space:nowrap;overflow:hidden;z-index:14;position:fixed;top:0;right:50px;height:30px;width:30px}#magic2{white-space:nowrap;overflow:hidden;z-index:16;position:fixed;top:0;right:0;height:30px;width:50px;background-color:#edeff3}#magic2 img{margin:5px 0 0 5px;filter:invert(44%) sepia(27%) saturate(310%) hue-rotate(170deg) brightness(92%) contrast(83%)}#magic2:hover img{filter:invert(25%) sepia(97%) saturate(2026%) hue-rotate(201deg) brightness(91%) contrast(98%)}#magic:hover #svgrepoleft{filter:invert(22%) sepia(53%) saturate(4563%) hue-rotate(202deg) brightness(95%) contrast(98%)}#magic:hover{width:100%;height:31px}#aze{height:30px;display:flex;flex-direction:row-reverse}#aze1{height:30px;background-color:#edeff3}#aze2{height:30px;background-color:#edeff3;padding-left:10px;border-left:1px solid #d4d8de;border-bottom:1px solid #d4d8de}#aze1 img{filter:invert(46%) sepia(6%) saturate(1254%) hue-rotate(171deg) brightness(94%) contrast(92%)}#aze3{width:3px;height:30px;background-color:#edeff3}</style><div id="header"><div id="contmenu"><div id="contmenua"><div class="menu1"><a href="sequence-diagram.html">シーケンス図</a><a href="use-case-diagram.html">ユースケース図</a><a href="class-diagram.html">クラス図</a><a href="activity-diagram-beta.html">アクティビティ図</a><a href="component-diagram.html">コンポーネント図</a><a href="state-diagram.html">状態図</a><a href="object-diagram.html">オブジェクト図</a><a href="deployment-diagram.html">配置図</a><a href="timing-diagram.html">タイミング図</a><a href="nwdiag.html">Network</a><a href="salt.html">Wireframe</a><a href="archimate-diagram.html">Archimate</a><a href="gantt-diagram.html">Gantt</a><a href="mindmap-diagram.html">MindMap</a><a href="wbs-diagram.html">WBS</a><a href="json.html">JSON</a><a href="yaml.html">YAML</a></div></div><div id="contmenub"></div></div><div id="magic"><div id="aze"><div id="aze1"><img id="svgrepoleft" width="30" height="30" src="../svgrepo-left.svg"/></div><div id="aze2"><div class="menu1"><a href="sequence-diagram.html">シーケンス図</a><a href="use-case-diagram.html">ユースケース図</a><a href="class-diagram.html">クラス図</a><a href="activity-diagram-beta.html">アクティビティ図</a><a href="component-diagram.html">コンポーネント図</a><a href="state-diagram.html">状態図</a><a href="object-diagram.html">オブジェクト図</a><a href="deployment-diagram.html">配置図</a><a href="timing-diagram.html">タイミング図</a><a href="nwdiag.html">Network</a><a href="salt.html">Wireframe</a><a href="archimate-diagram.html">Archimate</a><a href="gantt-diagram.html">Gantt</a><a href="mindmap-diagram.html">MindMap</a><a href="wbs-diagram.html">WBS</a><a href="json.html">JSON</a><a href="yaml.html">YAML</a></div></div><div id="aze3"></div></div></div><div id="magic2"><a href="../ja-dark/timing-diagram.html"><img src="../svgrepo-uxwing-light-mode-toggle.svg" height="20"/></a></div></div><div id="header2"></div><div id="root"><style>#haut1{margin:50px 0 20px;padding:0;min-height:80px}#donate{padding-top:5px;min-height:30px}</style><div id="haut1"><div style="float:left;"><div class="breadcrumb"><a href="sitemap.html">PlantUML</a><a href="sitemap-language-specification.html">Language specification</a><a href="timing-diagram.html">Timing Diagram</a><a href="timing-diagram.html#"></a></div><div id="donate">   <a href="https://discord.gg/sXhzexAQGh" style="text-decoration: none;"><img src="https://img.shields.io/discord/1083727021328306236?color=5865F2&amp;logo=discord&amp;logoColor=white" alt="Discord server"/></a>   <a href="https://github.com/sponsors/plantuml/" style="text-decoration: none;"><img src="https://img.shields.io/github/sponsors/plantuml?logo=github"/></a>   <a href="https://www.patreon.com/bePatron?patAmt=1&amp;u=527450&amp;rid=152970" style="text-decoration: none;"><img src="https://img.shields.io/badge/patreon-122-chocolate?logo=patreon"/></a>   <a href="../lp.html" style="text-decoration: none;"><img src="https://img.shields.io/liberapay/patrons/plantuml?color=gold&amp;logo=liberapay&amp;label=liberapay"/></a>   <a href="../en/paypal.html" style="text-decoration: none;"><img src="https://img.shields.io/badge/paypal-296-skyblue?logo=paypal&amp;logoColor=red"/></a></div></div><div style="float:right; margin:3px 0;"><style>#langlist{display:flex;justify-content:space-between;width:317px;height:16px;margin:3px 10px 3px 0}.sel2{border:2px solid #fefefe}.nosel2{border:2px solid #fefefe;filter:grayscale(100%) opacity(75%)}.sel2:hover,.nosel2:hover{cursor:pointer;border:2px solid #0366d6;border-spacing:0;filter:grayscale(0);filter:contrast(200%);filter:brightness(150%)}#flag1,#flag2,#flag3,#flag4,#flag5,#flag6,#flag7,#flag8{background:url(../flags21.png);background-repeat:no-repeat;background-clip:content-box;width:22px;height:16px}#flag2{background-position:-22px 0}#flag3{background-position:-44px 0}#flag4{background-position:-66px 0}#flag5{background-position:-88px 0}#flag6{background-position:-110px 0}#flag7{background-position:-132px 0}#flag8{background-position:-154px 0}</style><div id="langlist"><div id="flag1" onclick="location.href=&#39;/en/timing-diagram&#39;" class="nosel2"></div><div id="flag2" onclick="location.href=&#39;/de/timing-diagram&#39;" class="nosel2"></div><div id="flag3" onclick="location.href=&#39;/es/timing-diagram&#39;" class="nosel2"></div><div id="flag4" onclick="location.href=&#39;/fr/timing-diagram&#39;" class="nosel2"></div><div id="flag5" onclick="location.href=&#39;/ja/timing-diagram&#39;" class="sel2"></div><div id="flag6" onclick="location.href=&#39;/ko/timing-diagram&#39;" class="nosel2"></div><div id="flag7" onclick="location.href=&#39;/ru/timing-diagram&#39;" class="nosel2"></div><div id="flag8" onclick="location.href=&#39;/zh/timing-diagram&#39;" class="nosel2"></div></div></div></div><p><style>#topsticky{z-index:2;margin:0 240px 0 0}@media screen and (min-height:800px){#topsticky{position:sticky;top:40px}}@media screen and (max-width:1500px){#topsticky{margin:0}}</style></p><div id="topsticky"><span id="ezoic-pub-ad-placeholder-647"></span><!-- ezoic_pub_ad_placeholder-647-under_page_title-320x100-647-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-647-under_page_title-300x50v2-647-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-647-under_page_title-320x50-647-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-647-under_page_title-468x60-647-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-647-under_page_title-728x90-647-nonexxxnonexxxxxxezmaxscaleval100 --></div><p><a style="position:relative;top:-38px;" name="92e56312a0a931e3"></a><style>#toc{z-index:2;position:sticky;top:40px;list-style-type:none;margin:0;padding:0 10px}.chap{clear:both}#toc ul{list-style-type:none;max-height:87vh;overflow-y:auto;background:#f6f8fa;border-width:2px;border-style:groove;border-radius:3px;border-color:#e1e4e8;margin:0;padding:0}@media screen and (min-height:450px){#toc ul{max-height:89.5vh}}@media screen and (min-height:550px){#toc ul{max-height:91.5vh}}@media screen and (min-height:700px){#toc ul{max-height:93.5vh}}@media screen and (min-height:900px){#toc ul{max-height:94.5vh}}#toc li{margin:5px 5px 5px 10px;padding:0}@media screen and (max-width:1500px){#toctd{display:none}#toc{display:none}}</style><table border="0" cellspacing="0" cellpadding="0" width="100%"><tbody><tr valign="top" width="100%"><td valign="top"><h1 class="chap"><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/cmp/dokuwiki/ja/timing-diagram#0"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/cmp/asciidoc/ja/timing-diagram#0"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/cmp/markdown/ja/timing-diagram#0"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>タイミング図</h1><p></p> UMLの<a href="https://en.wikipedia.org/wiki/Timing_diagram_%28Unified_Modeling_Language%29">タイミング</a>図は、システムの<strong>タイミング制約を</strong>視覚化する、特定のタイプの<strong>相互作用図</strong>です。この図では、<strong>イベントの時系列的な順序に</strong>注目し、さまざまなオブジェクトが時間の経過とともにどのように相互作用するかを示しま す。<strong>タイミング</strong>図は、<strong>リアルタイム</strong>・システムや<strong>組込みシステムにおいて</strong>、ある期間を通してのオブジェクトの振る舞いを理解する ために特に役立ちます。 <a style="position:relative;top:-38px;" name="bf7a556a85b0b957"></a><div style="clear:both;height:50px;"></div><h2 class="chap"><img onclick="window.scrollTo(0,0);" title="Back to top" src="../backtop1.svg" width="20" height="20" class="backtop"/><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/cmp/dokuwiki/ja/timing-diagram#1"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/cmp/asciidoc/ja/timing-diagram#1"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/cmp/markdown/ja/timing-diagram#1"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>要素、ライフラインの定義</h2><p></p> 以下のキーワードを使用してライフラインを定義します。表示方法に応じてキーワードを選択します。 <p></p><table border="1" cellspacing="0" cellpadding="5"><tbody><tr><td><b> キーワード </b></td><td><b> 説明 </b></td></tr><tr><td><code class="cod">concise</code></td><td> データの動きを表すための単純化された信号（メッセージに最適です） </td></tr><tr><td><code class="cod">robust</code></td><td> 状態の遷移を表すための複雑な線（複数の状態を作れます） </td></tr><tr><td><code class="cod">clock</code></td><td><code class="cod">period</code>の時間間隔でhighとlowの状態を繰り返し遷移するクロック信号（<code class="cod">pulse</code>, <code class="cod">offset</code>を指定することもできます） </td></tr><tr><td><code class="cod">binary</code></td><td> 2状態（バイナリ）に制限された信号 </td></tr></tbody></table><p></p><code class="cod">@</code> と <code class="cod">is</code> を用いて、状態の変化を記述できます。 <p></p><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msg2bf89b5b6b673a2a0d49e8c670044274" class="msg"> 🎉 Copied! </div><img width="16" height="16" id="img2bf89b5b6b673a2a0d49e8c670044274" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;2bf89b5b6b673a2a0d49e8c670044274&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;2bf89b5b6b673a2a0d49e8c670044274&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;2bf89b5b6b673a2a0d49e8c670044274&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="pre2bf89b5b6b673a2a0d49e8c670044274">@startuml
+robust &#34;ウェブブラウザ&#34; as WB
+concise &#34;ユーザ&#34; as WU
+
+@0
+WU is アイドル
+WB is アイドル
+
+@100
+WU is 待機
+WB is 処理中
+
+@300
+WB is 待機
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="284" height="173" class="scale" src="../imgw/img-2bf89b5b6b673a2a0d49e8c670044274.png"/></div></div></td></tr></tbody></table></p><p></p><p></p><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msgd39b797fc54ab92ce5d83aae2c1d7672" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="imgd39b797fc54ab92ce5d83aae2c1d7672" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;d39b797fc54ab92ce5d83aae2c1d7672&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;d39b797fc54ab92ce5d83aae2c1d7672&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;d39b797fc54ab92ce5d83aae2c1d7672&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="pred39b797fc54ab92ce5d83aae2c1d7672">@startuml
+clock   &#34;Clock_0&#34;   as C0 with period 50
+clock   &#34;Clock_1&#34;   as C1 with period 50 pulse 15 offset 10
+binary  &#34;Binary&#34;  as B
+concise &#34;Concise&#34; as C
+robust  &#34;Robust&#34;  as R
+
+
+@0
+C is Idle
+R is Idle
+
+@100
+B is high
+C is Waiting
+R is Processing
+
+@300
+R is Waiting
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="449" height="298" class="scale" src="../imgw/img-d39b797fc54ab92ce5d83aae2c1d7672.png"/></div></div></td></tr></tbody></table></p><p></p><p></p><em>[Ref. <a href="https://forum.plantuml.net/14631">QA-14631</a> and <a href="https://forum.plantuml.net/14647">QA-14647</a>]</em><p></p><p></p><em>[Ref. <a href="https://forum.plantuml.net/14631">QA-14631</a>, <a href="https://forum.plantuml.net/14647">QA-14647</a> and <a href="https://forum.plantuml.net/11288/mixed-signal-timing-diagram">QA-11288</a>]</em><center><div class="tago">WARNING</div> <b>This translation need to be updated.</b> <div class="tago">WARNING</div></center><a style="position:relative;top:-38px;" name="7e2cce1005e19316"></a><div style="clear:both;min-height:110px;margin-top:10px;"><div class="pezoic"><span id="ezoic-pub-ad-placeholder-179"></span><!-- ezoic_pub_ad_placeholder-179-under_second_paragraph-234x60-179-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-179-under_second_paragraph-468x60-179-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-179-under_second_paragraph-728x90-179-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-179-under_second_paragraph-970x90-179-nonexxxnonexxxxxxezmaxscaleval100 --></div></div><h2 class="chap"><img onclick="window.scrollTo(0,0);" title="Back to top" src="../backtop1.svg" width="20" height="20" class="backtop"/><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/cmp/dokuwiki/ja/timing-diagram#2"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/cmp/asciidoc/ja/timing-diagram#2"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/cmp/markdown/ja/timing-diagram#2"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>バイナリとクロック</h2> 次のキーワードでバイナリ信号とクロック信号を定義することができます: <p></p><ul><li><code class="cod">binary</code></li><li><code class="cod">clock</code></li></ul><p></p><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msgc247d87f46194e77074cfb04ed1f6479" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="imgc247d87f46194e77074cfb04ed1f6479" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;c247d87f46194e77074cfb04ed1f6479&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;c247d87f46194e77074cfb04ed1f6479&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;c247d87f46194e77074cfb04ed1f6479&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="prec247d87f46194e77074cfb04ed1f6479">@startuml
+clock clk with period 1
+binary &#34;Enable&#34; as EN
+
+@0
+EN is low
+
+@5
+EN is high
+
+@10
+EN is low
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="634" height="99" class="scale" src="../imgw/img-c247d87f46194e77074cfb04ed1f6479.png"/></div></div></td></tr></tbody></table></p><p><a style="position:relative;top:-38px;" name="dad25c3a390c6194"></a></p><div style="clear:both;height:50px;"></div><h2 class="chap"><img onclick="window.scrollTo(0,0);" title="Back to top" src="../backtop1.svg" width="20" height="20" class="backtop"/><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/cmp/dokuwiki/ja/timing-diagram#3"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/cmp/asciidoc/ja/timing-diagram#3"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/cmp/markdown/ja/timing-diagram#3"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>メッセージ（相互作用）</h2><p></p> メッセージは、矢印構文を使います。 <p></p><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msge4dba0936d07cf71c5e7f5ebcc262f11" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="imge4dba0936d07cf71c5e7f5ebcc262f11" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;e4dba0936d07cf71c5e7f5ebcc262f11&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;e4dba0936d07cf71c5e7f5ebcc262f11&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;e4dba0936d07cf71c5e7f5ebcc262f11&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="pree4dba0936d07cf71c5e7f5ebcc262f11">@startuml
+robust &#34;ウェブブラウザ&#34; as WB
+concise &#34;ユーザ&#34; as WU
+
+@0
+WU is アイドル
+WB is アイドル
+
+@100
+WU -&gt; WB : URL
+WU is 待機
+WB is 処理中
+
+@300
+WB is 待機
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="284" height="173" class="scale" src="../imgw/img-e4dba0936d07cf71c5e7f5ebcc262f11.png"/></div></div></td></tr></tbody></table></p><p></p><p></p><a style="position:relative;top:-38px;" name="41aa48e58e346c22"></a><div style="clear:both;min-height:110px;margin-top:10px;"><div class="pezoic"><span id="ezoic-pub-ad-placeholder-114"></span><!-- ezoic_pub_ad_placeholder-114-mid_content-234x60-114-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-114-mid_content-468x60-114-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-114-mid_content-728x90-114-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-114-mid_content-970x90-114-nonexxxnonexxxxxxezmaxscaleval100 --></div></div><h2 class="chap"><img onclick="window.scrollTo(0,0);" title="Back to top" src="../backtop1.svg" width="20" height="20" class="backtop"/><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/cmp/dokuwiki/ja/timing-diagram#4"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/cmp/asciidoc/ja/timing-diagram#4"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/cmp/markdown/ja/timing-diagram#4"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>相対時間での指定</h2><p></p><code class="cod">@</code> で時間を指定するとき、相対的な時間の指定の仕方ができます。 <p></p><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msg5b59d599ef741b93210a3745fe6ad3c6" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="img5b59d599ef741b93210a3745fe6ad3c6" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;5b59d599ef741b93210a3745fe6ad3c6&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;5b59d599ef741b93210a3745fe6ad3c6&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;5b59d599ef741b93210a3745fe6ad3c6&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="pre5b59d599ef741b93210a3745fe6ad3c6">@startuml
+robust &#34;DNS Resolver&#34; as DNS
+robust &#34;ウェブブラウザ&#34; as WB
+concise &#34;ユーザ&#34; as WU
+
+@0
+WU is アイドル
+WB is アイドル
+DNS is アイドル
+
+@+100
+WU -&gt; WB : URL
+WU is 待機
+WB is 処理中
+
+@+200
+WB is 待機
+WB -&gt; DNS@+50 : URL から IPアドレス を解決
+
+@+100
+DNS is 処理中
+
+@+300
+DNS is アイドル
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="484" height="228" class="scale" src="../imgw/img-5b59d599ef741b93210a3745fe6ad3c6.png"/></div></div></td></tr></tbody></table></p><p></p><p></p><a style="position:relative;top:-38px;" name="0e0d73b649261198"></a><div style="clear:both;height:50px;"></div><h2 class="chap"><img onclick="window.scrollTo(0,0);" title="Back to top" src="../backtop1.svg" width="20" height="20" class="backtop"/><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/cmp/dokuwiki/ja/timing-diagram#5"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/cmp/asciidoc/ja/timing-diagram#5"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/cmp/markdown/ja/timing-diagram#5"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>アンカーポイント</h2><p></p> 絶対時間、相対時間を使用する代わりに、<code class="cod">as</code>キーワードと<code class="cod">:</code>で開始する名前を使用してアンカーポイントを定義することができます。 <p></p><p><code></code></p><pre class="colo"><code>@XX as :&lt;anchor point name&gt;
+</code></pre><p></p><p></p><p></p><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msg6ac02ed25d003807b1606a22f5c186eb" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="img6ac02ed25d003807b1606a22f5c186eb" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;6ac02ed25d003807b1606a22f5c186eb&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;6ac02ed25d003807b1606a22f5c186eb&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;6ac02ed25d003807b1606a22f5c186eb&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="pre6ac02ed25d003807b1606a22f5c186eb">@startuml
+clock clk with period 1
+binary &#34;enable&#34; as EN
+concise &#34;dataBus&#34; as db
+
+@0 as :start
+@5 as :en_high 
+@10 as :en_low
+@:en_high-2 as :en_highMinus2
+
+@:start
+EN is low
+db is &#34;0x0000&#34;
+
+@:en_high
+EN is high
+
+@:en_low
+EN is low
+
+@:en_highMinus2
+db is &#34;0xf23a&#34;
+
+@:en_high+6
+db is &#34;0x0000&#34;
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="689" height="157" class="scale" src="../imgw/img-6ac02ed25d003807b1606a22f5c186eb.png"/></div></div></td></tr></tbody></table></p><p><a style="position:relative;top:-38px;" name="6449f3c11a883c41"></a></p><div style="clear:both;min-height:110px;margin-top:10px;"><div class="pezoic"><span id="ezoic-pub-ad-placeholder-115"></span><!-- ezoic_pub_ad_placeholder-115-long_content-234x60-115-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-115-long_content-468x60-115-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-115-long_content-728x90-115-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-115-long_content-970x90-115-nonexxxnonexxxxxxezmaxscaleval100 --></div></div><h2 class="chap"><img onclick="window.scrollTo(0,0);" title="Back to top" src="../backtop1.svg" width="20" height="20" class="backtop"/><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/cmp/dokuwiki/ja/timing-diagram#6"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/cmp/asciidoc/ja/timing-diagram#6"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/cmp/markdown/ja/timing-diagram#6"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>インスタンス指向</h2> 時系列順での定義ではなく、インスタンス毎（≒ライフライン毎）に定義できます。 <p></p><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msg8b373b45f9157e5d236e5940adc55e58" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="img8b373b45f9157e5d236e5940adc55e58" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;8b373b45f9157e5d236e5940adc55e58&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;8b373b45f9157e5d236e5940adc55e58&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;8b373b45f9157e5d236e5940adc55e58&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="pre8b373b45f9157e5d236e5940adc55e58">@startuml
+robust &#34;ウェブブラウザ&#34; as WB
+concise &#34;ユーザ&#34; as WU
+
+@WB
+0 is アイドル
++200 is 処理中
++100 is 待機
+
+@WU
+0 is 待機
++500 is ok
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="384" height="173" class="scale" src="../imgw/img-8b373b45f9157e5d236e5940adc55e58.png"/></div></div></td></tr></tbody></table></p><p></p><p></p><a style="position:relative;top:-38px;" name="5335b971d6ed3cc8"></a><div style="clear:both;height:50px;"></div><h2 class="chap"><img onclick="window.scrollTo(0,0);" title="Back to top" src="../backtop1.svg" width="20" height="20" class="backtop"/><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/cmp/dokuwiki/ja/timing-diagram#7"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/cmp/asciidoc/ja/timing-diagram#7"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/cmp/markdown/ja/timing-diagram#7"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>スケールの設定</h2> スケール（目盛りの数値の表示）を指定できます。 以下の例では、「目盛りを 100ずつ 表示、1目盛りの幅を 50px にする」設定になります。 <p></p><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msg1e81c9d9513d889a498d8e551c9afd85" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="img1e81c9d9513d889a498d8e551c9afd85" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;1e81c9d9513d889a498d8e551c9afd85&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;1e81c9d9513d889a498d8e551c9afd85&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;1e81c9d9513d889a498d8e551c9afd85&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="pre1e81c9d9513d889a498d8e551c9afd85">@startuml
+concise &#34;ユーザ&#34; as WU
+scale 100 as 50 pixels
+
+@WU
+0 is 待機
++500 is ok
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="336" height="97" class="scale" src="../imgw/img-1e81c9d9513d889a498d8e551c9afd85.png"/></div></div></td></tr></tbody></table></p><p></p><p></p><center><div class="tago">WARNING</div> <b>This translation need to be updated.</b> <div class="tago">WARNING</div></center><a style="position:relative;top:-38px;" name="27e9db240004b050"></a><div style="clear:both;min-height:110px;margin-top:10px;"><div class="pezoic"><span id="ezoic-pub-ad-placeholder-116"></span><!-- ezoic_pub_ad_placeholder-116-longer_content-234x60-116-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-116-longer_content-468x60-116-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-116-longer_content-728x90-116-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-116-longer_content-970x90-116-nonexxxnonexxxxxxezmaxscaleval100 --></div></div><h2 class="chap"><img onclick="window.scrollTo(0,0);" title="Back to top" src="../backtop1.svg" width="20" height="20" class="backtop"/><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/cmp/dokuwiki/ja/timing-diagram#8"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/cmp/asciidoc/ja/timing-diagram#8"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/cmp/markdown/ja/timing-diagram#8"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>初期状態</h2> 「初期状態」を設定できます。 <p></p><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msg2fa3e2d031efee347eb0a7b88e1b4177" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="img2fa3e2d031efee347eb0a7b88e1b4177" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;2fa3e2d031efee347eb0a7b88e1b4177&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;2fa3e2d031efee347eb0a7b88e1b4177&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;2fa3e2d031efee347eb0a7b88e1b4177&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="pre2fa3e2d031efee347eb0a7b88e1b4177">@startuml
+robust &#34;ウェブブラウザ&#34; as WB
+concise &#34;ユーザ&#34; as WU
+
+WB is 初期化中
+WU is 不在
+
+@WB
+0 is アイドル
++200 is 処理中
++100 is 待機
+
+@WU
+0 is 待機
++500 is ok
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="424" height="193" class="scale" src="../imgw/img-2fa3e2d031efee347eb0a7b88e1b4177.png"/></div></div></td></tr></tbody></table></p><p></p><p></p><p></p><p></p><a style="position:relative;top:-38px;" name="894961695270bf0f"></a><div style="clear:both;height:50px;"></div><h2 class="chap"><img onclick="window.scrollTo(0,0);" title="Back to top" src="../backtop1.svg" width="20" height="20" class="backtop"/><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/cmp/dokuwiki/ja/timing-diagram#9"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/cmp/asciidoc/ja/timing-diagram#9"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/cmp/markdown/ja/timing-diagram#9"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>複雑な状態</h2><p></p> 信号をいくつかの不定状態とすることができます。 <p></p><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msgabc3ae2f68ff4b7da12d578f0c3311eb" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="imgabc3ae2f68ff4b7da12d578f0c3311eb" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;abc3ae2f68ff4b7da12d578f0c3311eb&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;abc3ae2f68ff4b7da12d578f0c3311eb&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;abc3ae2f68ff4b7da12d578f0c3311eb&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="preabc3ae2f68ff4b7da12d578f0c3311eb">@startuml
+robust &#34;Signal1&#34; as S1
+robust &#34;Signal2&#34; as S2
+S1 has 0,1,2,hello
+S2 has 0,1,2
+@0
+S1 is 0
+S2 is 0
+@100
+S1 is {0,1} #SlateGrey
+S2 is {0,1}
+@200
+S1 is 1
+S2 is 0
+@300
+S1 is hello
+S2 is {0,2}
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="258" height="211" class="scale" src="../imgw/img-abc3ae2f68ff4b7da12d578f0c3311eb.png"/></div></div></td></tr></tbody></table></p><p></p><p></p><p></p><p></p> *[Ref. [QA-11936](https:<em>forum.plantuml.net/11936) and [QA-15933](https:</em>forum.plantuml.net/15933)]* <center><div class="tago">WARNING</div> <b>This translation need to be updated.</b> <div class="tago">WARNING</div></center><a style="position:relative;top:-38px;" name="ad9ec59494e6759b"></a><div style="clear:both;min-height:110px;margin-top:10px;"><div class="pezoic"><span id="ezoic-pub-ad-placeholder-117"></span><!-- ezoic_pub_ad_placeholder-117-longest_content-234x60-117-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-117-longest_content-468x60-117-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-117-longest_content-728x90-117-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-117-longest_content-970x90-117-nonexxxnonexxxxxxezmaxscaleval100 --></div></div><h2 class="chap"><img onclick="window.scrollTo(0,0);" title="Back to top" src="../backtop1.svg" width="20" height="20" class="backtop"/><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/cmp/dokuwiki/ja/timing-diagram#10"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/cmp/asciidoc/ja/timing-diagram#10"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/cmp/markdown/ja/timing-diagram#10"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>状態の非表示</h2><p></p> いくつかの状態を非表示にすることもできます。 <p></p><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msg4428c1f6c81694a9b46ff37448e7ad16" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="img4428c1f6c81694a9b46ff37448e7ad16" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;4428c1f6c81694a9b46ff37448e7ad16&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;4428c1f6c81694a9b46ff37448e7ad16&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;4428c1f6c81694a9b46ff37448e7ad16&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="pre4428c1f6c81694a9b46ff37448e7ad16">@startuml
+concise &#34;Web User&#34; as WU
+
+@0
+WU is {-}
+
+@100
+WU is A1
+
+@200
+WU is {-}
+
+@300
+WU is {hidden}
+
+@400
+WU is A3
+
+@500
+WU is {-}
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="331" height="97" class="scale" src="../imgw/img-4428c1f6c81694a9b46ff37448e7ad16.png"/></div></div></td></tr></tbody></table></p><p></p><p></p><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msg2ef212083f18932f1e4df65b5b1a26c2" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="img2ef212083f18932f1e4df65b5b1a26c2" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;2ef212083f18932f1e4df65b5b1a26c2&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;2ef212083f18932f1e4df65b5b1a26c2&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;2ef212083f18932f1e4df65b5b1a26c2&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="pre2ef212083f18932f1e4df65b5b1a26c2">@startuml
+scale 1 as 50 pixels
+
+concise state0
+concise substate1
+robust bit2
+
+bit2 has HIGH,LOW
+
+@state0
+0 is 18_start
+6 is s_dPause
+8 is 10_data
+14 is {hidden}
+
+@substate1
+0 is sSeq
+4 is sPause
+6 is {hidden}
+8 is dSeq
+12 is dPause
+14 is {hidden}
+
+@bit2
+0 is HIGH
+2 is LOW
+4 is {hidden}
+8 is HIGH
+10 is LOW
+12 is {hidden}
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="812" height="210" class="scale" src="../imgw/img-2ef212083f18932f1e4df65b5b1a26c2.png"/></div></div></td></tr></tbody></table></p><p><em>[Ref. <a href="https://forum.plantuml.net/12222">QA-12222</a>]</em><a style="position:relative;top:-38px;" name="e2a8e525ad8f3b28"></a></p><div style="clear:both;height:50px;"></div><h2 class="chap"><img onclick="window.scrollTo(0,0);" title="Back to top" src="../backtop1.svg" width="20" height="20" class="backtop"/><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/cmp/dokuwiki/ja/timing-diagram#11"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/cmp/asciidoc/ja/timing-diagram#11"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/cmp/markdown/ja/timing-diagram#11"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>時間軸を非表示にする</h2><p></p> 時間軸を非表示にすることができます。 <p></p><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msg1fd902c5e3ef74fe89d1a90b57c49ad9" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="img1fd902c5e3ef74fe89d1a90b57c49ad9" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;1fd902c5e3ef74fe89d1a90b57c49ad9&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;1fd902c5e3ef74fe89d1a90b57c49ad9&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;1fd902c5e3ef74fe89d1a90b57c49ad9&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="pre1fd902c5e3ef74fe89d1a90b57c49ad9">@startuml
+hide time-axis
+concise &#34;ユーザ&#34; as WU
+
+WU is 不在
+
+@WU
+0 is 待機
++500 is ok
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="184" height="78" class="scale" src="../imgw/img-1fd902c5e3ef74fe89d1a90b57c49ad9.png"/></div></div></td></tr></tbody></table></p><p><a style="position:relative;top:-38px;" name="a71a99ab9f38a6a7"></a></p><div style="clear:both;min-height:110px;margin-top:10px;"><div class="pezoic"><span id="ezoic-pub-ad-placeholder-118"></span><!-- ezoic_pub_ad_placeholder-118-incontent_5-234x60-118-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-118-incontent_5-468x60-118-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-118-incontent_5-728x90-118-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-118-incontent_5-970x90-118-nonexxxnonexxxxxxezmaxscaleval100 --></div></div><h2 class="chap"><img onclick="window.scrollTo(0,0);" title="Back to top" src="../backtop1.svg" width="20" height="20" class="backtop"/><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/cmp/dokuwiki/ja/timing-diagram#12"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/cmp/asciidoc/ja/timing-diagram#12"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/cmp/markdown/ja/timing-diagram#12"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>時刻と日付の使用</h2><p></p> 時刻または日付を使用することができます。 <p></p><p></p><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msg54f959a240532948a995e1bdc711255b" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="img54f959a240532948a995e1bdc711255b" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;54f959a240532948a995e1bdc711255b&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;54f959a240532948a995e1bdc711255b&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;54f959a240532948a995e1bdc711255b&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="pre54f959a240532948a995e1bdc711255b">@startuml
+robust &#34;ウェブブラウザ&#34; as WB
+concise &#34;ユーザ&#34; as WU
+
+@2019/07/02
+WU is アイドル
+WB is アイドル
+
+@2019/07/04
+WU is 待機 : some note
+WB is 処理中 : some other note
+
+@2019/07/05
+WB is 待機
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="284" height="188" class="scale" src="../imgw/img-54f959a240532948a995e1bdc711255b.png"/></div></div></td></tr></tbody></table></p><p></p><p></p><p></p><p></p><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msg79a46748a0b16d4f438debec76bf273c" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="img79a46748a0b16d4f438debec76bf273c" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;79a46748a0b16d4f438debec76bf273c&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;79a46748a0b16d4f438debec76bf273c&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;79a46748a0b16d4f438debec76bf273c&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="pre79a46748a0b16d4f438debec76bf273c">@startuml
+robust &#34;ウェブブラウザ&#34; as WB
+concise &#34;ユーザ&#34; as WU
+
+@1:15:00
+WU is アイドル
+WB is アイドル
+
+@1:16:30
+WU is 待機 : some note
+WB is 処理中 : some other note
+
+@1:17:30
+WB is 待機
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="384" height="188" class="scale" src="../imgw/img-79a46748a0b16d4f438debec76bf273c.png"/></div></div></td></tr></tbody></table></p><p><a style="position:relative;top:-38px;" name="083412d02d1ebde3"></a></p><div style="clear:both;height:50px;"></div><h2 class="chap"><img onclick="window.scrollTo(0,0);" title="Back to top" src="../backtop1.svg" width="20" height="20" class="backtop"/><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/cmp/dokuwiki/ja/timing-diagram#13"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/cmp/asciidoc/ja/timing-diagram#13"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/cmp/markdown/ja/timing-diagram#13"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>時間定規（time constraint）の追加</h2> タイムラインの目盛りとは別に、時間の尺度を示す矢印を表示することができます。 <p></p><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msgbd3a80ce3ed3f276f8232a498bebedab" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="imgbd3a80ce3ed3f276f8232a498bebedab" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;bd3a80ce3ed3f276f8232a498bebedab&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;bd3a80ce3ed3f276f8232a498bebedab&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;bd3a80ce3ed3f276f8232a498bebedab&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="prebd3a80ce3ed3f276f8232a498bebedab">@startuml
+robust &#34;ウェブブラウザ&#34; as WB
+concise &#34;ユーザ&#34; as WU
+
+WB is 初期化中
+WU is 不在
+
+@WB
+0 is アイドル
++200 is 処理中
++100 is 待機
+WB@0 &lt;-&gt; @50 : {50 ms lag}
+
+@WU
+0 is 待機
++500 is ok
+@200 &lt;-&gt; @+150 : {150 ms}
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="424" height="233" class="scale" src="../imgw/img-bd3a80ce3ed3f276f8232a498bebedab.png"/></div></div></td></tr></tbody></table></p><p><a style="position:relative;top:-38px;" name="f6f5631321f0c11a"></a></p><div style="clear:both;min-height:110px;margin-top:10px;"><div class="pezoic"><span id="ezoic-pub-ad-placeholder-119"></span><!-- ezoic_pub_ad_placeholder-119-incontent_6-234x60-119-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-119-incontent_6-468x60-119-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-119-incontent_6-728x90-119-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-119-incontent_6-970x90-119-nonexxxnonexxxxxxezmaxscaleval100 --></div></div><h2 class="chap"><img onclick="window.scrollTo(0,0);" title="Back to top" src="../backtop1.svg" width="20" height="20" class="backtop"/><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/cmp/dokuwiki/ja/timing-diagram#14"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/cmp/asciidoc/ja/timing-diagram#14"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/cmp/markdown/ja/timing-diagram#14"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>期間のハイライト</h2> 図の一部をハイライトすることができます。 <p></p><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msg6f4dee1f373392ea8983c1d2b0bcfa33" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="img6f4dee1f373392ea8983c1d2b0bcfa33" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;6f4dee1f373392ea8983c1d2b0bcfa33&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;6f4dee1f373392ea8983c1d2b0bcfa33&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;6f4dee1f373392ea8983c1d2b0bcfa33&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="pre6f4dee1f373392ea8983c1d2b0bcfa33">@startuml
+robust &#34;ウェブブラウザ&#34; as WB
+concise &#34;ユーザ&#34; as WU
+
+@0
+WU is アイドル
+WB is アイドル
+
+@100
+WU -&gt; WB : URL
+WU is 待機 #LightCyan;line:Aqua
+
+@200
+WB is 処理中
+
+@300
+WU -&gt; WB@350 : URL2
+WB is 待機
+
+@+200
+WU is ok
+
+@+200
+WB is アイドル
+
+highlight 200 to 450 #Gold;line:DimGrey : This is my caption
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="484" height="188" class="scale" src="../imgw/img-6f4dee1f373392ea8983c1d2b0bcfa33.png"/></div></div></td></tr></tbody></table></p><p></p><p></p><p></p><em>[Ref. <a href="https://forum.plantuml.net/10868/highlighted-periods-in-timing-diagrams">QA-10868</a>]</em><center><div class="tago">WARNING</div> <b>This translation need to be updated.</b> <div class="tago">WARNING</div></center><a style="position:relative;top:-38px;" name="d50d8f9219a41435"></a><div style="clear:both;height:50px;"></div><h2 class="chap"><img onclick="window.scrollTo(0,0);" title="Back to top" src="../backtop1.svg" width="20" height="20" class="backtop"/><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/cmp/dokuwiki/ja/timing-diagram#15"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/cmp/asciidoc/ja/timing-diagram#15"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/cmp/markdown/ja/timing-diagram#15"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>ノートの使用</h2><p></p><code class="cod">note top of</code> および<code class="cod">note bottom of</code> キーワードを使用して、1つのオブジェクトまたは参加者に関連するノートを定義できます<em>（</em><code class="cod">concise</code><em> オブジェクト</em><em>でのみ使用可能</em>）。 <p></p><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msg227043662884b500a3192b3c1669a203" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="img227043662884b500a3192b3c1669a203" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;227043662884b500a3192b3c1669a203&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;227043662884b500a3192b3c1669a203&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;227043662884b500a3192b3c1669a203&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="pre227043662884b500a3192b3c1669a203">@startuml
+robust &#34;Web Browser&#34; as WB
+concise &#34;Web User&#34; as WU
+
+@0
+WU is Idle
+WB is Idle
+
+@100
+WU is Waiting
+WB is Processing
+note top of WU : first note\non several\nlines
+note bottom of WU : second note\non several\nlines
+
+@300
+WB is Waiting
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="299" height="311" class="scale" src="../imgw/img-227043662884b500a3192b3c1669a203.png"/></div></div></td></tr></tbody></table></p><p></p><p></p><em>[Ref.<a href="https://forum.plantuml.net/6877">QA-6877</a>]</em><p></p><p></p><strong>[Ref. [QA-6877](https://forum.plantuml.net/6877), [GH-1465](https://github.com/plantuml/plantuml/issues/1465)]</strong><center><div class="tago">WARNING</div> <b>This translation need to be updated.</b> <div class="tago">WARNING</div></center><a style="position:relative;top:-38px;" name="058e0ddbcdf260a9"></a><div style="clear:both;min-height:110px;margin-top:10px;"><div class="pezoic"><span id="ezoic-pub-ad-placeholder-120"></span><!-- ezoic_pub_ad_placeholder-120-incontent_7-234x60-120-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-120-incontent_7-468x60-120-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-120-incontent_7-728x90-120-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-120-incontent_7-970x90-120-nonexxxnonexxxxxxezmaxscaleval100 --></div></div><h2 class="chap"><img onclick="window.scrollTo(0,0);" title="Back to top" src="../backtop1.svg" width="20" height="20" class="backtop"/><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/cmp/dokuwiki/ja/timing-diagram#16"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/cmp/asciidoc/ja/timing-diagram#16"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/cmp/markdown/ja/timing-diagram#16"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>タイトルなどを追加する</h2> （他の UML ダイアグラムと同様に）タイトル、ヘッダー／フッター、説明文、キャプション を書くことができます。 <p></p><p></p><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msg97a2dfebb3d305e19f45dbef437d3bb5" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="img97a2dfebb3d305e19f45dbef437d3bb5" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;97a2dfebb3d305e19f45dbef437d3bb5&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;97a2dfebb3d305e19f45dbef437d3bb5&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;97a2dfebb3d305e19f45dbef437d3bb5&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="pre97a2dfebb3d305e19f45dbef437d3bb5">@startuml
+Title これはタイトル
+header: ここにヘッダーを書く
+footer: ここにフッターを書く
+legend
+図の説明は、ここに書きます。
+複数行かけますよ。
+end legend
+caption 一行の説明は、caption に書きましょう。
+
+robust &#34;Web ブラウザ&#34; as WB
+concise &#34;ユーザ&#34; as WU
+
+@0
+WU is アイドル
+WB is アイドル
+
+@100
+WU is 待機
+WB is 処理中
+
+@300
+WB is 待機
+@enduml
+
+</pre></code></div><div class="mycell"><img loading="lazy" width="286" height="324" class="scale" src="../imgw/img-97a2dfebb3d305e19f45dbef437d3bb5.png"/></div></div></td></tr></tbody></table></p><p><a style="position:relative;top:-38px;" name="d23dee2d0707a741"></a></p><div style="clear:both;height:50px;"></div><h2 class="chap"><img onclick="window.scrollTo(0,0);" title="Back to top" src="../backtop1.svg" width="20" height="20" class="backtop"/><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/cmp/dokuwiki/ja/timing-diagram#17"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/cmp/asciidoc/ja/timing-diagram#17"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/cmp/markdown/ja/timing-diagram#17"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>複雑な例</h2><p></p><a href="https://twitter.com/arosien">Adam Rosien</a>による例: <p></p><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msga3e6a94d8d73ac01cc22501461b97814" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="imga3e6a94d8d73ac01cc22501461b97814" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;a3e6a94d8d73ac01cc22501461b97814&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;a3e6a94d8d73ac01cc22501461b97814&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;a3e6a94d8d73ac01cc22501461b97814&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="prea3e6a94d8d73ac01cc22501461b97814">@startuml
+concise &#34;Client&#34; as Client
+concise &#34;Server&#34; as Server
+concise &#34;Response freshness&#34; as Cache
+
+Server is idle
+Client is idle
+
+@Client
+0 is send
+Client -&gt; Server@+25 : GET
++25 is await
++75 is recv
++25 is idle
++25 is send
+Client -&gt; Server@+25 : GET\nIf-Modified-Since: 150
++25 is await
++50 is recv
++25 is idle
+@100 &lt;-&gt; @275 : no need to re-request from server
+
+@Server
+25 is recv
++25 is work
++25 is send
+Server -&gt; Client@+25 : 200 OK\nExpires: 275
++25 is idle
++75 is recv
++25 is send
+Server -&gt; Client@+25 : 304 Not Modified
++25 is idle
+
+@Cache
+75 is fresh
++200 is stale
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="680" height="232" class="scale" src="../imgw/img-a3e6a94d8d73ac01cc22501461b97814.png"/></div></div></td></tr></tbody></table></p><p><a style="position:relative;top:-38px;" name="cf029fa4f9910441"></a></p><div style="clear:both;min-height:110px;margin-top:10px;"><div class="pezoic"><span id="ezoic-pub-ad-placeholder-121"></span><!-- ezoic_pub_ad_placeholder-121-incontent_8-234x60-121-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-121-incontent_8-468x60-121-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-121-incontent_8-728x90-121-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-121-incontent_8-970x90-121-nonexxxnonexxxxxxezmaxscaleval100 --></div></div><h2 class="chap"><img onclick="window.scrollTo(0,0);" title="Back to top" src="../backtop1.svg" width="20" height="20" class="backtop"/><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/cmp/dokuwiki/ja/timing-diagram#18"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/cmp/asciidoc/ja/timing-diagram#18"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/cmp/markdown/ja/timing-diagram#18"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>デジタル信号の例</h2><p></p><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msg545c0cffb5de3adebe09e182a36dbc19" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="img545c0cffb5de3adebe09e182a36dbc19" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;545c0cffb5de3adebe09e182a36dbc19&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;545c0cffb5de3adebe09e182a36dbc19&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;545c0cffb5de3adebe09e182a36dbc19&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="pre545c0cffb5de3adebe09e182a36dbc19">@startuml
+scale 5 as 150 pixels
+
+clock clk with period 1
+binary &#34;enable&#34; as en
+binary &#34;R/W&#34; as rw
+binary &#34;data Valid&#34; as dv
+concise &#34;dataBus&#34; as db
+concise &#34;address bus&#34; as addr
+
+@6 as :write_beg
+@10 as :write_end
+
+@15 as :read_beg
+@19 as :read_end
+
+
+@0
+en is low
+db is &#34;0x0&#34;
+addr is &#34;0x03f&#34;
+rw is low
+dv is 0
+
+@:write_beg-3
+ en is high
+@:write_beg-2
+ db is &#34;0xDEADBEEF&#34;
+@:write_beg-1
+dv is 1
+@:write_beg
+rw is high
+
+
+@:write_end
+rw is low
+dv is low
+@:write_end+1
+rw is low
+db is &#34;0x0&#34;
+addr is &#34;0x23&#34;
+
+@12
+dv is high
+@13 
+db is &#34;0xFFFF&#34;
+
+@20
+en is low
+dv is low
+@21 
+db is &#34;0x0&#34;
+
+highlight :write_beg to :write_end #Gold:Write
+highlight :read_beg to :read_end #lightBlue:Read
+
+db@:write_beg-1 &lt;-&gt; @:write_end : setup time
+db@:write_beg-1 -&gt; addr@:write_end+1 : hold
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="889" height="310" class="scale" src="../imgw/img-545c0cffb5de3adebe09e182a36dbc19.png"/></div></div></td></tr></tbody></table></p><p><a style="position:relative;top:-38px;" name="08fc1b928526644f"></a></p><div style="clear:both;height:50px;"></div><h2 class="chap"><img onclick="window.scrollTo(0,0);" title="Back to top" src="../backtop1.svg" width="20" height="20" class="backtop"/><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/cmp/dokuwiki/ja/timing-diagram#19"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/cmp/asciidoc/ja/timing-diagram#19"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/cmp/markdown/ja/timing-diagram#19"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>色の追加</h2><p></p><a href="color.html">色</a>を追加できます。 <p></p><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msg523772373fd77736cab7726c3e6fc750" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="img523772373fd77736cab7726c3e6fc750" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;523772373fd77736cab7726c3e6fc750&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;523772373fd77736cab7726c3e6fc750&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;523772373fd77736cab7726c3e6fc750&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="pre523772373fd77736cab7726c3e6fc750">@startuml
+concise &#34;LR&#34; as LR
+concise &#34;ST&#34; as ST
+
+LR is AtPlace #palegreen
+ST is AtLoad #gray
+
+@LR
+0 is Lowering
+100 is Lowered #pink
+350 is Releasing
+ 
+@ST
+200 is Moving
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="512" height="155" class="scale" src="../imgw/img-523772373fd77736cab7726c3e6fc750.png"/></div></div></td></tr></tbody></table></p><p></p><p></p><em>[Ref. <a href="https://forum.plantuml.net/5776">QA-5776</a>]</em><a style="position:relative;top:-38px;" name="bb2ede32ce6accb8"></a><div style="clear:both;min-height:110px;margin-top:10px;"><div class="pezoic"><span id="ezoic-pub-ad-placeholder-122"></span><!-- ezoic_pub_ad_placeholder-122-incontent_9-234x60-122-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-122-incontent_9-468x60-122-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-122-incontent_9-728x90-122-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-122-incontent_9-970x90-122-nonexxxnonexxxxxxezmaxscaleval100 --></div></div><h2 class="chap"><img onclick="window.scrollTo(0,0);" title="Back to top" src="../backtop1.svg" width="20" height="20" class="backtop"/><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/cmp/dokuwiki/ja/timing-diagram#20"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/cmp/asciidoc/ja/timing-diagram#20"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/cmp/markdown/ja/timing-diagram#20"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>グローバルスタイルの使用</h2><p></p><h3>スタイル無し（デフォルト）</h3><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msgbd3a80ce3ed3f276f8232a498bebedab" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="imgbd3a80ce3ed3f276f8232a498bebedab" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;bd3a80ce3ed3f276f8232a498bebedab&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;bd3a80ce3ed3f276f8232a498bebedab&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;bd3a80ce3ed3f276f8232a498bebedab&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="prebd3a80ce3ed3f276f8232a498bebedab">@startuml
+robust &#34;ウェブブラウザ&#34; as WB
+concise &#34;ユーザ&#34; as WU
+
+WB is 初期化中
+WU is 不在
+
+@WB
+0 is アイドル
++200 is 処理中
++100 is 待機
+WB@0 &lt;-&gt; @50 : {50 ms lag}
+
+@WU
+0 is 待機
++500 is ok
+@200 &lt;-&gt; @+150 : {150 ms}
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="424" height="233" class="scale" src="../imgw/img-bd3a80ce3ed3f276f8232a498bebedab.png"/></div></div></td></tr></tbody></table></p><p></p><p></p><p></p><h3>スタイル有り</h3><p></p><a href="style-evolution.html">スタイル</a>を使用して要素の表示方法を変更することができます。 <p></p><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msgb0819db40dca31086cce0680d0029093" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="imgb0819db40dca31086cce0680d0029093" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;b0819db40dca31086cce0680d0029093&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;b0819db40dca31086cce0680d0029093&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;b0819db40dca31086cce0680d0029093&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="preb0819db40dca31086cce0680d0029093">@startuml
+&lt;style&gt;
+timingDiagram {
+  document {
+    BackGroundColor SandyBrown
+  }
+ constraintArrow {
+  LineStyle 2-1
+  LineThickness 3
+  LineColor Blue
+ }
+}
+&lt;/style&gt;
+robust &#34;ウェブブラウザ&#34; as WB
+concise &#34;ユーザ&#34; as WU
+
+WB is 初期化中
+WU is 不在
+
+@WB
+0 is アイドル
++200 is 処理中
++100 is 待機
+WB@0 &lt;-&gt; @50 : {50 ms lag}
+
+@WU
+0 is 待機
++500 is ok
+@200 &lt;-&gt; @+150 : {150 ms}
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="424" height="233" class="scale" src="../imgw/img-b0819db40dca31086cce0680d0029093.png"/></div></div></td></tr></tbody></table></p><p></p><p></p><em>[Ref. <a href="https://forum.plantuml.net/14340/color-of-arrow-in-timing-diagram">QA-14340</a>]</em><a style="position:relative;top:-38px;" name="b7e3b7dcc36df887"></a><div style="clear:both;height:50px;"></div><h2 class="chap"><img onclick="window.scrollTo(0,0);" title="Back to top" src="../backtop1.svg" width="20" height="20" class="backtop"/><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/cmp/dokuwiki/ja/timing-diagram#21"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/cmp/asciidoc/ja/timing-diagram#21"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/cmp/markdown/ja/timing-diagram#21"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>Applying Colors to specific lines</h2><p></p> You can use the <code class="cod">&lt;style&gt;</code> tags and sterotyping to give a name to line attributes. <p></p><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msg29ca999d7f9a204a8f95d001af8f7d60" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="img29ca999d7f9a204a8f95d001af8f7d60" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;29ca999d7f9a204a8f95d001af8f7d60&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;29ca999d7f9a204a8f95d001af8f7d60&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;29ca999d7f9a204a8f95d001af8f7d60&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="pre29ca999d7f9a204a8f95d001af8f7d60">@startuml
+&lt;style&gt;
+timingDiagram {
+  .red {
+    LineColor red
+  }
+  .blue {
+    LineColor blue
+    LineThickness 5
+  }
+}
+&lt;/style&gt;
+
+clock clk with period 1
+binary &#34;Input Signal 1&#34;  as IS1
+binary &#34;Input Signal 2&#34;  as IS2 &lt;&lt;blue&gt;&gt;
+binary &#34;Output Signal 1&#34; as OS1 &lt;&lt;red&gt;&gt;
+
+@0
+IS1 is low
+IS2 is high
+OS1 is low
+@2
+OS1 is high
+@4
+OS1 is low
+@5
+IS1 is high
+OS1 is high
+@6
+IS2 is low
+@10
+IS1 is low
+OS1 is low
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="693" height="159" class="scale" src="../imgw/img-29ca999d7f9a204a8f95d001af8f7d60.png"/></div></div></td></tr></tbody></table></p><p></p><p></p><em>[<a href="https://forum.plantuml.net/15870/timing-diagram-assign-different-colors-single-participants?show=15870#q15870">Ref. QA-15870</a>]</em><a style="position:relative;top:-38px;" name="76d284610027d49d"></a><div style="clear:both;min-height:110px;margin-top:10px;"><div class="pezoic"><span id="ezoic-pub-ad-placeholder-123"></span><!-- ezoic_pub_ad_placeholder-123-incontent_10-234x60-123-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-123-incontent_10-468x60-123-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-123-incontent_10-728x90-123-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-123-incontent_10-970x90-123-nonexxxnonexxxxxxezmaxscaleval100 --></div></div><h2 class="chap"><img onclick="window.scrollTo(0,0);" title="Back to top" src="../backtop1.svg" width="20" height="20" class="backtop"/><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/cmp/dokuwiki/ja/timing-diagram#22"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/cmp/asciidoc/ja/timing-diagram#22"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/cmp/markdown/ja/timing-diagram#22"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>Compact mode</h2><p></p> You can use <code class="cod">compact</code> command to compact the timing layout. <p></p><h3>By default</h3><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msg4d3c5fbe331ceecd1d59343cd75e1ca1" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="img4d3c5fbe331ceecd1d59343cd75e1ca1" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;4d3c5fbe331ceecd1d59343cd75e1ca1&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;4d3c5fbe331ceecd1d59343cd75e1ca1&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;4d3c5fbe331ceecd1d59343cd75e1ca1&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="pre4d3c5fbe331ceecd1d59343cd75e1ca1">@startuml
+robust &#34;Web Browser&#34; as WB
+concise &#34;Web User&#34; as WU
+robust &#34;Web Browser2&#34; as WB2
+
+@0
+WU is Waiting
+WB is Idle
+WB2 is Idle
+
+@200
+WB is Proc.
+
+@300
+WB is Waiting
+WB2 is Waiting
+
+@500
+WU is ok
+
+@700
+WB is Idle
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="477" height="228" class="scale" src="../imgw/img-4d3c5fbe331ceecd1d59343cd75e1ca1.png"/></div></div></td></tr></tbody></table></p><p></p><p></p><h4>Global mode with <code class="cod">mode compact</code></h4><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msgccedd13e55a015da0ee618f11d429383" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="imgccedd13e55a015da0ee618f11d429383" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;ccedd13e55a015da0ee618f11d429383&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;ccedd13e55a015da0ee618f11d429383&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;ccedd13e55a015da0ee618f11d429383&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="preccedd13e55a015da0ee618f11d429383">@startuml
+mode compact
+robust &#34;Web Browser&#34; as WB
+concise &#34;Web User&#34; as WU
+robust &#34;Web Browser2&#34; as WB2
+
+@0
+WU is Waiting
+WB is Idle
+WB2 is Idle
+
+@200
+WB is Proc.
+
+@300
+WB is Waiting
+WB2 is Waiting
+
+@500
+WU is ok
+
+@700
+WB is Idle
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="594" height="175" class="scale" src="../imgw/img-ccedd13e55a015da0ee618f11d429383.png"/></div></div></td></tr></tbody></table></p><p></p><p></p><h3>Local mode with only <code class="cod">compact</code> on element</h3><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msg13d11f60f831fbfe2610f09331b803c1" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="img13d11f60f831fbfe2610f09331b803c1" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;13d11f60f831fbfe2610f09331b803c1&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;13d11f60f831fbfe2610f09331b803c1&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;13d11f60f831fbfe2610f09331b803c1&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="pre13d11f60f831fbfe2610f09331b803c1">@startuml
+compact robust &#34;Web Browser&#34; as WB
+compact concise &#34;Web User&#34; as WU
+robust &#34;Web Browser2&#34; as WB2
+
+@0
+WU is Waiting
+WB is Idle
+WB2 is Idle
+
+@200
+WB is Proc.
+
+@300
+WB is Waiting
+WB2 is Waiting
+
+@500
+WU is ok
+
+@700
+WB is Idle
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="586" height="193" class="scale" src="../imgw/img-13d11f60f831fbfe2610f09331b803c1.png"/></div></div></td></tr></tbody></table></p><p></p><p></p><em>[Ref. <a href="https://forum.plantuml.net/11130/is-there-a-compact-timing-diagram">QA-11130</a>]</em></td><td id="toctd" valign="top" style="max-width:240px;min-width:240px;"><div id="toc"><ul><li><a href="timing-diagram.html#bf7a556a85b0b957">要素、ライフラインの定義</a></li><li><a href="timing-diagram.html#7e2cce1005e19316">バイナリとクロック</a></li><li><a href="timing-diagram.html#dad25c3a390c6194">メッセージ（相互作用）</a></li><li><a href="timing-diagram.html#41aa48e58e346c22">相対時間での指定</a></li><li><a href="timing-diagram.html#0e0d73b649261198">アンカーポイント</a></li><li><a href="timing-diagram.html#6449f3c11a883c41">インスタンス指向</a></li><li><a href="timing-diagram.html#5335b971d6ed3cc8">スケールの設定</a></li><li><a href="timing-diagram.html#27e9db240004b050">初期状態</a></li><li><a href="timing-diagram.html#894961695270bf0f">複雑な状態</a></li><li><a href="timing-diagram.html#ad9ec59494e6759b">状態の非表示</a></li><li><a href="timing-diagram.html#e2a8e525ad8f3b28">時間軸を非表示にする</a></li><li><a href="timing-diagram.html#a71a99ab9f38a6a7">時刻と日付の使用</a></li><li><a href="timing-diagram.html#083412d02d1ebde3">時間定規（time constraint）の追加</a></li><li><a href="timing-diagram.html#f6f5631321f0c11a">期間のハイライト</a></li><li><a href="timing-diagram.html#d50d8f9219a41435">ノートの使用</a></li><li><a href="timing-diagram.html#058e0ddbcdf260a9">タイトルなどを追加する</a></li><li><a href="timing-diagram.html#d23dee2d0707a741">複雑な例</a></li><li><a href="timing-diagram.html#cf029fa4f9910441">デジタル信号の例</a></li><li><a href="timing-diagram.html#08fc1b928526644f">色の追加</a></li><li><a href="timing-diagram.html#bb2ede32ce6accb8">グローバルスタイルの使用</a></li><li><a href="timing-diagram.html#b7e3b7dcc36df887">Applying Colors to specific lines</a></li><li><a href="timing-diagram.html#76d284610027d49d">Compact mode</a></li></ul></div></td></tr></tbody></table></p><p></p><span id="ezoic-pub-ad-placeholder-104"></span><!-- ezoic_pub_ad_placeholder-104-bottom_of_page-234x60-104-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-104-bottom_of_page-468x60-104-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-104-bottom_of_page-728x90-104-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-104-bottom_of_page-970x250-104-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-104-bottom_of_page-300x250x3-104-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-104-bottom_of_page-970x90-104-nonexxxnonexxxxxxezmaxscaleval100 --></div><style>.btm{text-align:center}.btm a{text-decoration:none;color:#637282}.btm a:hover{color:#0366d6}</style><div class="btm"><hr/><a href="https://g.ezoic.net/privacy/plantuml.com"><small>Privacy Policy</small></a>      <a href="../direct-sales.html"><small>Advertise</small></a><p></p></div><script>var sc_project=11129480;var sc_invisible=1;var sc_security="2adf54aa";</script><script async="" src="https://www.statcounter.com/counter/counter.js"></script><!--[selectrongo:done]--><script type="text/javascript">
+				var __inScopeForCCPA = false;
+		function __uspapi(command, version, callback) {
+			var response = null;
+			var successs = false;
+			if (command === "getUSPData" && version === 1) {
+				var uspString = "1"; // Version
+				if (__inScopeForCCPA) {
+					uspString += "N"; // Has Explicit Notice for Opt Out been provided (ex footer or minor consent modal)
+					var result;
+					var consentCookie = (result = new RegExp('(?:^|; )ezoccpaconsent=([^;]*)').exec(document.cookie)) ? (result[1]) : null;
+					if (consentCookie === "nonconsent") {
+						uspString += "Y";
+					}
+					else {
+						uspString += "N";
+					}
+					uspString += "N" // Is pub a signatory to the IAB Limited Service Provider Agreement (http://www.iabprivacy.com/)
+				}
+				else {
+					uspString += "---";
+				}
+				response = {
+					uspString: uspString,
+					version: 1
+				};
+				success = true;
+			}
+			return callback(response, success);
+		};
+		function __receiveUspapiMessage(event) {
+			if (event.data.hasOwnProperty('__uspapiCall')) {
+				__uspapi('getUSPData', 1, function(uspData, success) {
+					event.source.postMessage({
+						__uspapiReturn: {
+							returnValue: uspData,
+							success: success,
+							callId: event.data.__uspapiCall.callId
+						}
+					},
+					event.origin);
+				});
+			}
+			return null;
+		};
+		window.addEventListener("message", __receiveUspapiMessage, false);
+</script>
+<script>__ez.queue.addFile('/tardisrocinante/vitals.js', '/tardisrocinante/vitals.js?gcb=2&cb=3', false, ['/parsonsmaize/mulvane.js'], true, false, true, false);</script>
+<script>var _audins_dom="plantuml_com",_audins_did=173770;__ez.queue.addDelayFunc("audins.js","__ez.script.add", "//go.ezodn.com/detroitchicago/audins.js?cb=195-2");</script><noscript><div style="display:none;"><img src="https://pixel.quantserve.com/pixel/p-31iz6hfFutd16.gif?labels=Domain.plantuml_com,DomainId.173770" border="0" height="1" width="1" alt="Quantcast"/></div></noscript>
+<script>__ez.queue.addFile('/beardeddragon/drake.js', '/beardeddragon/drake.js?gcb=2&cb=4', false, [], true, false, true, false);</script>
+<script type="text/javascript" style='display:none;'>var __ez_dims = (function() {
+		var setCookie = function( name, content, expiry ) {
+			return document.cookie = name+'='+content+((expiry)?';expires='+(new Date(Math.floor(new Date().getTime()+expiry*1000)).toUTCString()):'')+';path=/';
+		};
+		var ffid = 1;
+		var oh = window.screen.height;
+		var ow = window.screen.width;
+		var h = ffid === 1 ? oh : (oh > ow) ? oh : ow;
+		var w = ffid === 1 ? ow : (oh > ow) ? ow : oh;
+		var uh = window.innerHeight || document.documentElement.clientHeight || document.getElementsByTagName('body')[0].clientHeight;
+		var uw = window.innerWidth || document.documentElement.clientWidth || document.getElementsByTagName('body')[0].clientWidth;
+		setCookie('ezds', encodeURIComponent('ffid='+ffid+',w='+w+',h='+h), (31536e3*7));
+		setCookie('ezohw', encodeURIComponent('w='+uw+',h='+uh), (31536e3*7));
+	})();</script>
+<script type='text/javascript' style='display:none;' async>__ez.queue.addFile('/parsonsmaize/chanute.js', '/parsonsmaize/chanute.js?a=a&cb=7&dcb=195-2&shcb=34', true, ['/parsonsmaize/mulvane.js'], true, false, false, false);</script>
+<script type='text/javascript' style='display:none;' async>__ez.queue.addFile('/porpoiseant/jellyfish.js', '/porpoiseant/jellyfish.js?a=a&cb=10&dcb=195-2&shcb=34', false, [], true, false, false, false);</script></body></html>

@@ -1,0 +1,1492 @@
+<html lang="es"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<script data-ezscrex='false' data-cfasync='false' data-pagespeed-no-defer>var __ez=__ez||{};__ez.stms=Date.now();__ez.evt={};__ez.script={};__ez.ck=__ez.ck||{};__ez.template={};__ez.template.isOrig=false;__ez.queue=function(){var e=0,i=0,t=[],n=!1,o=[],r=[],s=!0,a=function(e,i,n,o,r,s,a){var l=arguments.length>7&&void 0!==arguments[7]?arguments[7]:window,d=this;this.name=e,this.funcName=i,this.parameters=null===n?null:p(n)?n:[n],this.isBlock=o,this.blockedBy=r,this.deleteWhenComplete=s,this.isError=!1,this.isComplete=!1,this.isInitialized=!1,this.proceedIfError=a,this.fWindow=l,this.isTimeDelay=!1,this.process=function(){f("... func = "+e),d.isInitialized=!0,d.isComplete=!0,f("... func.apply: "+e);var i=d.funcName.split("."),n=null,o=this.fWindow||window;i.length>3||(n=3===i.length?o[i[0]][i[1]][i[2]]:2===i.length?o[i[0]][i[1]]:o[d.funcName]),null!=n&&n.apply(null,this.parameters),!0===d.deleteWhenComplete&&delete t[e],!0===d.isBlock&&(f("----- F'D: "+d.name),u())}},l=function(e,i,t,n,o,r,s){var a=arguments.length>7&&void 0!==arguments[7]?arguments[7]:window,l=this;this.name=e,this.path=i,this.async=o,this.defer=r,this.isBlock=t,this.blockedBy=n,this.isInitialized=!1,this.isError=!1,this.isComplete=!1,this.proceedIfError=s,this.fWindow=a,this.isTimeDelay=!1,this.isPath=function(e){return"/"===e[0]&&"/"!==e[1]},this.getSrc=function(e){return void 0!==window.__ezScriptHost&&this.isPath(e)&&"banger.js"!==this.name?window.__ezScriptHost+e:e},this.process=function(){l.isInitialized=!0,f("... file = "+e);var i=this.fWindow?this.fWindow.document:document,t=i.createElement("script");t.src=this.getSrc(this.path),!0===o?t.async=!0:!0===r&&(t.defer=!0),t.onerror=function(){var e={url:window.location.href,name:l.name,path:l.path,user_agent:window.navigator.userAgent};"undefined"!=typeof _ezaq&&(e.pageview_id=_ezaq.page_view_id);var i=encodeURIComponent(JSON.stringify(e)),t=new XMLHttpRequest;t.open("GET","//g.ezoic.net/ezqlog?d="+i,!0),t.send(),f("----- ERR'D: "+l.name),l.isError=!0,!0===l.isBlock&&u()},t.onreadystatechange=t.onload=function(){var e=t.readyState;f("----- F'D: "+l.name),e&&!/loaded|complete/.test(e)||(l.isComplete=!0,!0===l.isBlock&&u())},i.getElementsByTagName("head")[0].appendChild(t)}},d=function(e,i){this.name=e,this.path="",this.async=!1,this.defer=!1,this.isBlock=!1,this.blockedBy=[],this.isInitialized=!0,this.isError=!1,this.isComplete=i,this.proceedIfError=!1,this.isTimeDelay=!1,this.process=function(){}};function c(e){!0!==h(e)&&0!=s&&e.process()}function h(e){if(!0===e.isTimeDelay&&!1===n)return f(e.name+" blocked = TIME DELAY!"),!0;if(p(e.blockedBy))for(var i=0;i<e.blockedBy.length;i++){var o=e.blockedBy[i];if(!1===t.hasOwnProperty(o))return f(e.name+" blocked = "+o),!0;if(!0===e.proceedIfError&&!0===t[o].isError)return!1;if(!1===t[o].isComplete)return f(e.name+" blocked = "+o),!0}return!1}function f(e){var i=window.location.href,t=new RegExp("[?&]ezq=([^&#]*)","i").exec(i);"1"===(t?t[1]:null)&&console.debug(e)}function u(){++e>200||(f("let's go"),m(o),m(r))}function m(e){for(var i in e)if(!1!==e.hasOwnProperty(i)){var t=e[i];!0===t.isComplete||h(t)||!0===t.isInitialized||!0===t.isError?!0===t.isError?f(t.name+": error"):!0===t.isComplete?f(t.name+": complete already"):!0===t.isInitialized&&f(t.name+": initialized already"):t.process()}}function p(e){return"[object Array]"==Object.prototype.toString.call(e)}return window.addEventListener("load",(function(){setTimeout((function(){n=!0,f("TDELAY -----"),u()}),5e3)}),!1),{addFile:function(e,i,n,s,a,d,h,f,u){var m=new l(e,i,n,s,a,d,h,u);!0===f?o[e]=m:r[e]=m,t[e]=m,c(m)},addDelayFile:function(e,i){var n=new l(e,i,!1,[],!1,!1,!0);n.isTimeDelay=!0,f(e+" ...  FILE! TDELAY"),r[e]=n,t[e]=n,c(n)},addFunc:function(e,n,s,l,d,h,f,u,m,p){!0===h&&(e=e+"_"+i++);var w=new a(e,n,s,l,d,f,u,p);!0===m?o[e]=w:r[e]=w,t[e]=w,c(w)},addDelayFunc:function(e,i,n){var o=new a(e,i,n,!1,[],!0,!0);o.isTimeDelay=!0,f(e+" ...  FUNCTION! TDELAY"),r[e]=o,t[e]=o,c(o)},items:t,processAll:u,setallowLoad:function(e){s=e},markLoaded:function(e){if(e&&0!==e.length){if(e in t){var i=t[e];!0===i.isComplete?f(i.name+" "+e+": error loaded duplicate"):(i.isComplete=!0,i.isInitialized=!0)}else t[e]=new d(e,!0);f("markLoaded dummyfile: "+t[e].name)}},logWhatsBlocked:function(){for(var e in t)!1!==t.hasOwnProperty(e)&&h(t[e])}}}();__ez.evt.add=function(e,t,n){e.addEventListener?e.addEventListener(t,n,!1):e.attachEvent?e.attachEvent("on"+t,n):e["on"+t]=n()},__ez.evt.remove=function(e,t,n){e.removeEventListener?e.removeEventListener(t,n,!1):e.detachEvent?e.detachEvent("on"+t,n):delete e["on"+t]};__ez.script.add=function(e){var t=document.createElement("script");t.src=e,t.async=!0,t.type="text/javascript",document.getElementsByTagName("head")[0].appendChild(t)};__ez.dot={};__ez.queue.addFile('/detroitchicago/boise.js', '/detroitchicago/boise.js?gcb=195-2&cb=2', true, [], true, false, true, false);__ez.queue.addFile('/parsonsmaize/abilene.js', '/parsonsmaize/abilene.js?gcb=195-2&cb=28', true, [], true, false, true, false);</script>
+<script data-ezscrex="false" type="text/javascript" data-cfasync="false">window._ezaq = Object.assign({}, typeof window._ezaq !== "undefined" ? window._ezaq : {}, {"ad_cache_level":1,"domain_id":173770,"ezcache_level":2,"ezcache_skip_code":0,"has_bad_image":0,"has_bad_words":0,"is_sitespeed":0,"lt_cache_level":0,"page_view_id":"c3f32c23-6568-4b89-6463-549f4f3563ab","response_size_orig":112090,"response_time_orig":5,"template_id":134,"url":"https://plantuml.com/es/commons","word_count":3488,"worst_bad_word_level":0});__ez.queue.markLoaded('ezaqBaseReady');</script>
+<script type="text/javascript">(function(){function storageAvailable(type){var storage;try{storage=window[type];var x='__storage_test__';storage.setItem(x,x);storage.removeItem(x);return true;}
+catch(e){return e instanceof DOMException&&(e.code===22||e.code===1014||e.name==='QuotaExceededError'||e.name==='NS_ERROR_DOM_QUOTA_REACHED')&&(storage&&storage.length!==0);}}
+function remove_ama_config(){if(storageAvailable('localStorage')){localStorage.removeItem("google_ama_config");}}
+remove_ama_config()})()</script>
+<script type="text/javascript">var ezoicTestActive = true</script>
+<script data-ezscrex="false" type="text/javascript" data-cfasync="false">window._ezaq = Object.assign({}, typeof window._ezaq !== "undefined" ? window._ezaq : {}, {"ab_test_id":"mod174-c","ad_cache_level":1,"ad_count_adjustment":0,"ad_lazyload_version":0,"ad_load_version":1,"ad_location_ids":"","adx_ad_count":0,"ai_placeholder_cache_level":1,"ai_placeholder_placement_cnt":-1,"bidder_method":1,"bidder_version":3,"city":"Krasnoyarsk","country":"RU","days_since_last_visit":-1,"display_ad_count":0,"domain_id":173770,"domain_test_group":20230802,"ds_adsize_opt_id":-1,"engaged_time_visit":0,"ezcache_level":2,"ezcache_skip_code":0,"form_factor_id":1,"framework_id":1,"has_bad_image":0,"has_bad_words":0,"iab_category":"","iab_category_0":"596","is_embed":false,"is_from_recommended_pages":false,"is_return_visitor":false,"is_sitespeed":0,"last_page_load":"","last_pageview_id":"","lt_cache_level":0,"max_ads":0,"metro_code":0,"optimization_version":1,"page_ad_positions":"","page_view_count":606,"page_view_id":"c3f32c23-6568-4b89-6463-549f4f3563ab","position_selection_id":0,"postal_code":"660000","pv_event_count":0,"response_size_orig":112090,"response_time_orig":5,"serverid":"i-05fdd56bb1103d86d","state":"KYA","sub_page_ad_positions":"","t_epoch":1697691073,"template_id":134,"time_on_site_visit":0,"url":"https://plantuml.com/es/commons","word_count":3488,"worst_bad_word_level":0});__ez.queue.markLoaded('ezaqReady');</script>
+<script data-ezscrex='false' data-cfasync='false' data-pagespeed-no-defer>__ez.queue.addFile('/parsonsmaize/mulvane.js', '/parsonsmaize/mulvane.js?gcb=195-2&cb=5', true, ['/parsonsmaize/abilene.js'], true, false, true, false);__ez.queue.addFile('/parsonsmaize/olathe.js', '/parsonsmaize/olathe.js?gcb=195-2&cb=20', false, ['/parsonsmaize/abilene.js','/parsonsmaize/mulvane.js'], true, false, true, false);__ez.queue.addFile('/porpoiseant/et.js', '/porpoiseant/et.js?gcb=195-2&cb=2', false, [], true, false, true, false);!function(){var e;__ez.vep=(e=[],{Add:function(i,t){__ez.dot.isDefined(i)&&__ez.dot.isValid(t)&&e.push({type:"video",video_impression_id:i,domain_id:__ez.dot.getDID(),t_epoch:__ez.dot.getEpoch(0),data:__ez.dot.dataToStr(t)})},Fire:function(){if(void 0===document.visibilityState||"prerender"!==document.visibilityState){if(__ez.dot.isDefined(e)&&e.length>0)for(;e.length>0;){var i=5;i>e.length&&(i=e.length);var t=e.splice(0,i),o=__ez.dot.getURL("/detroitchicago/grapefruit.gif")+"?orig="+(!0===__ez.template.isOrig?1:0)+"&v="+btoa(JSON.stringify(t));__ez.dot.Fire(o)}e=[]}}})}();</script><script data-ezscrex='false' data-cfasync='false' data-pagespeed-no-defer>!function(){function e(i){return e="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e},e(i)}__ez.pel=function(){var i=[];function t(t,o,d,_,n,r,a,s){if(__ez.dot.isDefined(t)&&0!=__ez.dot.isAnyDefined(t.getSlotElementId,t.ElementId)){void 0===s&&(s=!1);var p=parseInt(__ez.dot.getTargeting(t,"ap")),f=__ez.dot.getSlotIID(t),u=__ez.dot.getAdUnit(t,s),z=parseInt(__ez.dot.getTargeting(t,"compid")),g=0,c=0,l=function(i){if("undefined"==typeof _ezim_d)return!1;var t=__ez.dot.getAdUnitPath(i).split("/").pop();if("object"===("undefined"==typeof _ezim_d?"undefined":e(_ezim_d))&&_ezim_d.hasOwnProperty(t))return _ezim_d[t];for(var o in _ezim_d)if(o.split("/").pop()===t)return _ezim_d[o];return!1}(t);"object"==e(l)&&(void 0!==l.creative_id&&(c=l.creative_id),void 0!==l.line_item_id&&(g=l.line_item_id)),__ez.dot.isDefined(f,u)&&__ez.dot.isValid(o)&&("0"===f&&!0!==s||""===u||i.push({type:"impression",impression_id:f,domain_id:__ez.dot.getDID(),unit:u,t_epoch:__ez.dot.getEpoch(0),revenue:d,est_revenue:_,ad_position:p,ad_size:"",bid_floor_filled:n,bid_floor_prev:r,stat_source_id:a,country_code:__ez.dot.getCC(),pageview_id:__ez.dot.getPageviewId(),comp_id:z,line_item_id:g,creative_id:c,data:__ez.dot.dataToStr(o),is_orig:s||__ez.template.isOrig}))}}function o(){void 0!==document.visibilityState&&"prerender"===document.visibilityState||(__ez.dot.isDefined(i)&&i.length>0&&[i.filter((function(e){return e.is_orig})),i.filter((function(e){return!e.is_orig}))].forEach((function(e){for(;e.length>0;){var i=e[0].is_orig||!1,t=5;t>e.length&&(t=e.length);var o=e.splice(0,t),d=__ez.dot.getURL("/porpoiseant/army.gif")+"?orig="+(!0===i?1:0)+"&sts="+btoa(JSON.stringify(o));(void 0!==window.isAmp&&isAmp||void 0!==window.ezWp&&ezWp)&&void 0!==window._ezaq&&_ezaq.hasOwnProperty("domain_id")&&(d+="&visit_uuid="+_ezaq.visit_uuid),__ez.dot.Fire(d)}})),i=[])}return{Add:t,AddAndFire:function(e,i){t(e,i,0,0,0,0,0),o()},AddAndFireOrig:function(e,i){t(e,i,0,0,0,0,0,!0),o()},AddById:function(e,t,o,d){var _=e.split("/");if(__ez.dot.isDefined(e)&&3===_.length&&__ez.dot.isValid(t)){var n=_[0],r={type:"impression",impression_id:_[2],domain_id:__ez.dot.getDID(),unit:n,t_epoch:__ez.dot.getEpoch(0),pageview_id:__ez.dot.getPageviewId(),data:__ez.dot.dataToStr(t),is_orig:o||__ez.template.isOrig};void 0!==d&&(r.revenue=d),i.push(r)}},Fire:o,GetPixels:function(){return i}}}()}();__ez.queue.addFile('/detroitchicago/raleigh.js', '/detroitchicago/raleigh.js?gcb=195-2&cb=6', false, ['/parsonsmaize/abilene.js'], true, false, true, false);__ez.queue.addFile('/detroitchicago/vista.js', '/detroitchicago/vista.js?gcb=195-2&cb=5', false, ['/parsonsmaize/abilene.js'], true, false, true, false);__ez.queue.addFile('/detroitchicago/tampa.js', '/detroitchicago/tampa.js?gcb=195-2&cb=5', false, ['/parsonsmaize/abilene.js'], true, false, true, false);</script><base href=""/><meta name="flattr:id" content="1ew3x0"/><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "url": "https://plantuml.com",
+  "name": "PlantUML",
+  "sameAs" : ["https://twitter.com/plantuml","https://en.wikipedia.org/wiki/PlantUML","https://www.wikidata.org/wiki/Q18346546"],
+  "logo": "https://cdn-0.plantuml.com/logo3.png",
+  "contactPoint": [{
+    "@type": "ContactPoint",
+    "email": "plantuml@gmail.com",
+    "url": "https://plantuml.com",
+    "contactType": "customer service"
+  }]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+    "@type": "ListItem",
+    "position": 1,
+    "item": {
+      "@id": "https://plantuml.com",
+      "name": "Home"
+    }
+  },{
+    "@type": "ListItem",
+    "position": 2,
+    "item": {
+      "@id": "https://plantuml.com/sitemap-language-specification",
+      "name": "Language specification"
+    }
+  },{
+    "@type": "ListItem",
+    "position": 3,
+    "item": {
+      "@id": "https://plantuml.com/commons",
+      "name": "Common commands"
+  }
+  }]
+}
+</script><link rel="canonical" href="commons.html"/><link rel="alternate" hreflang="x-default" href="../commons.html"/><link rel="alternate" hreflang="de" href="../de/commons.html"/><link rel="alternate" hreflang="en" href="../commons.html"/><link rel="alternate" hreflang="es" href="commons.html"/><link rel="alternate" hreflang="fr" href="../fr/commons.html"/><link rel="alternate" hreflang="ja" href="../ja/commons.html"/><link rel="alternate" hreflang="ru" href="../ru/commons.html"/><link rel="alternate" hreflang="ko" href="../ko/commons.html"/><link rel="alternate" hreflang="zh" href="../zh/commons.html"/><link rel="shortcut icon" href="../favicon.ico"/><link rel="preload" as="image" href="../svgrepo-house.svg"/><link rel="preload" as="image" href="../svgrepo-text-news.svg"/><link rel="preload" as="image" href="../svgrepo-rocket-3-start.svg"/><link rel="preload" as="image" href="../svgrepo-server.svg"/><link rel="preload" as="image" href="../svgrepo-play.svg"/><link rel="preload" as="image" href="../svgrepo-forum.svg"/><link rel="preload" as="image" href="../svgrepo-add-to-online-cart.svg"/><link rel="preload" as="image" href="../svgrepo-forum-message.svg"/><link rel="preload" as="image" href="../svgrepo-palette-fill.svg"/><link rel="preload" as="image" href="../svgrepo-cpu.svg"/><link rel="preload" as="image" href="../svgrepo-books-library.svg"/><link rel="preload" as="image" href="../svgrepo-signpost-fill.svg"/><link rel="preload" as="image" href="../svgrepo-library.svg"/><link rel="preload" as="image" href="../flags21.png"/><link rel="preload" as="image" href="../svgrepo-uxwing-light-mode-toggle.svg"/><title>General and common command to handle graphic layout in diagrams.</title><meta name="description" content="It is possible to add footer and header to your UML diagrams, with many layout options. You can also define zoom level to generate thumbnail for your diagrams."/><meta property="og:type" content="article"/><meta property="og:title" content="General and common command to handle graphic layout in diagrams."/><meta property="og:description" content="It is possible to add footer and header to your UML diagrams, with many layout options. You can also define zoom level to generate thumbnail for your diagrams."/><meta property="og:url" content="https://plantuml.com/es/commons"/><meta property="og:site_name" content="PlantUML.com"/><meta name="twitter:image" content="https://plantuml.com/og-commons"/><meta property="og:locale" content="es"/><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="General and common command to handle graphic layout in diagrams."/><meta name="twitter:description" content="It is possible to add footer and header to your UML diagrams, with many layout options. You can also define zoom level to generate thumbnail for your diagrams."/><meta name="twitter:site" content="@PlantUML"/><meta name="twitter:creator" content="@PlantUML"/><style>li{margin:2px}#external li{margin:13px}.pezoic{max-width:970px}@media screen and (max-width:1600px){.pezoic{max-width:768px}}.coptable{max-width:90%}.mytab{display:inline-block;border-radius:3px;border:1px solid #e1e4e8}.mytab:hover{border:1px dashed #0366d6;cursor:pointer;color:#0366d6;background:#f6f8fa}.cop{margin:25px 10px 0 10px}.cop:hover{cursor:pointer;filter:invert(30%) sepia(75%) saturate(4001%) hue-rotate(201deg) brightness(88%) contrast(98%)}.cop2{margin:25px 10px 0 10px}.cop2:hover{cursor:pointer}.msg{position:absolute;color:#396;background-color:#FFF;margin-top:55px;display:none;border-radius:3px;border:1px solid #4dff00}.mycell0{float:left;vertical-align:top;padding:10px}.mycell0 code:hover{cursor:default;color:#000}.mycell{float:right;vertical-align:top;padding:10px;max-width:55vw;overflow-x:auto}.mycell0 pre{max-width:55vw;overflow-x:auto}.cod{background:#edeff3;padding:2px 5px;border-radius:3px}.colo{display:inline-block;background:#edeff3;padding:7px 12px;border-radius:3px}.tag,.tagg,.tago,.tagr{text-rendering:optimizeLegibility;display:inline-block;padding:3px 5px 2px 4px;text-decoration:none;white-space:nowrap;border:1px solid #999;text-transform:uppercase;text-align:center;border-radius:3px;font-size:11px;font-weight:bold;line-height:90%}.tag{background-color:#eee}.tagg{background-color:#98fb98}.tago{background-color:#fafa00}.tagr{background-color:#ff4500}a{text-decoration:none;color:#0366d6}a:hover{text-decoration:underline}.menu1{border:0;font-family:Helvetica,sans-serif;font-size:14px;padding:0;margin:0;white-space:nowrap;overflow:hidden;vertical-align:middle;line-height:30px}.menu1 a{text-align:center;padding:10px 7px 10px 7px;text-decoration:none;color:#637282}.menu1 a:hover{color:#0366d6}#menu0{top:0;z-index:4;margin:0 0 0 10px;padding:0}@media screen and (max-width:1200px){#menu0{visibility:hidden}}.mhov img{margin:0 5px 0 0;padding:0}.mhov:hover{filter:invert(25%) sepia(97%) saturate(2026%) hue-rotate(201deg) brightness(91%) contrast(98%)}#menuside2{border:0;font-family:Helvetica,sans-serif;font-size:14px;padding:20px 0 4px 0;margin:0}#menuside2 span{vertical-align:top}#menuside2 li{list-style:none;position:relative;padding:0;margin:10px 20px 10px 10px;border:0}#menuside2 li a{display:inline-block;text-decoration:none;color:#637282;width:100%}#BC{z-index:0;padding-top:5px;top:35px}.breadcrumb{z-index:1;font-family:Helvetica,sans-serif;font-size:14px;text-align:center;display:inline-block;overflow:hidden;border-radius:5px}.breadcrumb a{text-decoration:none;outline:0;display:block;float:left;font-size:12px;line-height:24px;color:#373f49;padding:0 10px 0 35px;background:#f0f1f1;background:linear-gradient(#f0f1f1,#c6d2d2);position:relative}.breadcrumb a:first-child{padding-left:21px;border-radius:5px 0 0 5px}.breadcrumb a:first-child:before{left:14px}.breadcrumb a:last-child{visibility:hidden}.breadcrumb a.active,.breadcrumb a:hover{color:#0366d6;background:#c6d2d2;background:linear-gradient(#e3e4e4,#b8c7c7)}.breadcrumb a.active:after,.breadcrumb a:hover:after{background:#c6d2d2;background:linear-gradient(135deg,#e3e4e4,#b8c7c7)}.breadcrumb a:after{content:'';position:absolute;top:0;right:-12px;width:24px;height:24px;transform:scale(0.707) rotate(45deg);z-index:1;background:#f0f1f1;background:linear-gradient(135deg,#f0f1f1,#c6d2d2);box-shadow:2px -2px 0 2px rgba(0,0,0,0.1),3px -3px 0 2px rgba(255,255,255,0.1);border-radius:0 5px 0 50px}.breadcrumb a:last-child:after{content:none;visibility:hidden}.lga,.lga a,.lgi,.lgi a{font-family:Helvetica,sans-serif;font-size:13px;text-align:center;color:#fff;padding:0 5px;margin:0}.lga,.lga a{background-color:#008}.lgi,.lgi a{background-color:#888}.lga:hover,.lga:hover a{text-decoration:none;color:#BBB}.lgi:hover,.lgi:hover a{text-decoration:none;color:#CCC}</style><style>.backtop{margin:0 10px}.backtop:hover{cursor:pointer;filter:invert(30%) sepia(75%) saturate(4001%) hue-rotate(201deg) brightness(88%) contrast(98%)}</style><style>.dropbtn{padding:0;border:0;background:0}.dropdown{position:relative;display:inline-block;margin:0 10px}.dropdown-content{display:none;position:absolute;background-color:#f1f1f1;min-width:160px;box-shadow:0 8px 16px 0 rgba(0,0,0,0.2);z-index:1}.dropdown-content img{vertical-align:middle;margin:0 8px 0 1px}.dropdown-content a{font-size:small;font-weight:normal;color:black;padding:5px 10px;text-decoration:none;display:block}.dropdown-content a:hover{background-color:#ddd;color:#0366d6}.dropdown:hover .dropdown-content{display:block}.dropdown:hover .dropbtn{background-color:#3e8e41}</style><style>#flex1{margin:0;padding:0;display:flex;flex-direction:row;width:378px;height:100%}#lll{flex-grow:1;flex-shrink:1;max-width:162px;overflow:hidden}#mmm{flex-grow:0;flex-shrink:0;background:#edeff3;width:210px;min-width:210px;max-width:210px;flex-grow:0;flex-shrink:0;border-left:1px solid #d4d8de}#qqq{flex-grow:0;flex-shrink:0;width:4px;min-width:4px;max-width:4px;flex-grow:0;flex-shrink:0}#rrr{flex-grow:1;flex-shrink:1;max-width:162px;overflow:hidden}.cde{display:flex;flex-direction:column;justify-content:space-between;height:100%}.cd{display:flex;flex-direction:column;justify-content:space-start;height:100%}.aaa{height:30px;min-height:30px;max-height:30px;flex-grow:0;flex-shrink:0;background:#edeff3;border-bottom:1px solid #d4d8de}.bbb,.bbborder{flex-grow:1;flex-shrink:0}.bbborder{border-left:1px solid #d4d8de}#header{z-index:10;position:fixed;left:378px;right:0;height:30px;top:0;background:#edeff3;border-bottom:1px solid #d4d8de}#header2{z-index:7;position:fixed;left:378px;right:0;height:10px;top:30px;background:#fefefe}#left0{top:0;position:fixed;left:0;margin:0;bottom:0;width:378px;padding:0;z-index:2}#root{padding:0;margin:40px 0 0 388px;background:#fefefe}body{margin:auto;overflow-x:hidden;background:#fefefe}@media screen and (max-width:1190px){#flex1,#left0{width:215px}#root{margin:40px 0 0 224px}#header,#header2{left:215px}#left0{left:0}#lll,#rrr{width:0;visibility:hidden;flex-grow:0;flex-shrink:0}}@media screen and (max-width:1010px){#root{margin:0 0 0 216px}#header,#header2{display:none}#lll,#qqq{width:0;visibility:hidden;flex-grow:0;flex-shrink:0}#mmm{border-right:1px solid #d4d8de}}@media screen and (min-width:1700px){#header,#header2{left:518px}#left0,#flex1{width:518px}#root{margin-left:528px}#lll,#rrr{max-width:302px}}</style><script>window.pushMST_config={vapidPK:"BBodn2vLFoDO5AdCfmOOzNmcUsn52kTA6JNZNYVFymzEdWHonz_bkUcsaTkPXHvNGRkRUSAxMbup-H0l2sb1h_Q",enableOverlay:true,swPath:"/sw.js",i18n:{}};var pushmasterTag=document.createElement("script");pushmasterTag.src="https://cdn.pushmaster-cdn.xyz/scripts/publishers/629f5e297baecc00098a271b/SDK.js";pushmasterTag.setAttribute("defer","");var firstScriptTag=document.getElementsByTagName("script")[0];firstScriptTag.parentNode.insertBefore(pushmasterTag,firstScriptTag);</script><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-TKZNNQT9CZ"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date());gtag("config","G-TKZNNQT9CZ");</script><script>var llg="es";var az=0;var amdark=0;function ljs(b){if(az){return false}var a=document.createElement("script");a.type="text/javascript";a.src="/btn-"+b+".js";document.body.innerHTML="<i style='position:absolute;top:30%;width:100%;'><center>Loading in progress...";document.body.appendChild(a)}function ctc(c){document.getElementById("img"+c).classList.remove("cop");document.getElementById("img"+c).classList.add("cop2");document.getElementById("pre"+c).style.backgroundColor="#4dff00";document.getElementById("msg"+c).style.display="inline";setTimeout(function(){document.getElementById("img"+c).classList.remove("cop2");document.getElementById("img"+c).classList.add("cop");document.getElementById("pre"+c).style.backgroundColor="";document.getElementById("msg"+c).style.display="none"},800);text=document.getElementById("pre"+c).innerText;if(window.clipboardData&&window.clipboardData.setData){return window.clipboardData.setData("Text",text)}else{if(document.queryCommandSupported&&document.queryCommandSupported("copy")){var a=document.createElement("textarea");a.textContent=text;a.style.position="fixed";document.body.appendChild(a);a.select();try{return document.execCommand("copy")}catch(b){return false}finally{document.body.removeChild(a)}}}};</script><script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><script type='text/javascript'>
+var ezoTemplate = 'pub_site';
+var ezouid = '1';
+var ezoFormfactor = '1';
+</script><script data-ezscrex="false" type='text/javascript'>
+var soc_app_id = '0';
+var did = 173770;
+var ezdomain = 'plantuml.com';
+var ezoicSearchable = 1;
+</script>
+<script data-ezscrex='false' data-pagespeed-no-defer data-cfasync='false'>
+function create_ezolpl() {
+	var d = new Date();
+	d.setTime(d.getTime() + (365*24*60*60*1000));
+	var expires = "expires="+d.toUTCString();
+	__ez.ck.setByCat("ezux_lpl_173770=" + new Date().getTime() + "|" + _ezaq.page_view_id + "|" + _ezaq.is_return_visitor + "; " + expires, 3);
+}
+function attach_ezolpl() {
+	if (document.readyState === "complete") {
+		create_ezolpl();
+		return;
+	}
+	window.addEventListener("load", create_ezolpl);
+}
+
+__ez.queue.addFunc("attach_ezolpl", "attach_ezolpl", null, false, ['/detroitchicago/boise.js'], true, false, false, false);
+</script></head><body><div id="left0"><div id="flex1"><div id="lll"><div class="cde"><div></div><div><span id="ezoic-pub-ad-placeholder-131"></span><!-- ezoic_pub_ad_placeholder-131-sidebar-120x600-131-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-131-sidebar-160x600-131-nonexxxnonexxxxxxezmaxscaleval100 --></div><div></div></div></div><div id="mmm"><div class="cde"><div><div><span id="ezoic-pub-ad-placeholder-105"></span><!-- ezoic_pub_ad_placeholder-105-sidebar_middle-120x240-105-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-105-sidebar_middle-125x125-105-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-105-sidebar_middle-180x150-105-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-105-sidebar_middle-200x200-105-nonexxxnonexxxxxxezmaxscaleval100 --></div><ul id="menuside2"><li><a href="index.html" class="mhov"><img src="../svgrepo-house.svg" width="16" height="16"/><span>Home</span></a></li><li><a href="news.html" class="mhov"><img src="../svgrepo-text-news.svg" width="16" height="16"/><span>What&#39;s New ?</span></a></li><li><a href="starting.html" class="mhov"><img src="../svgrepo-rocket-3-start.svg" width="16" height="16"/><span>Getting Started</span></a></li><li><a href="https://www.plantuml.com/plantuml/uml/SyfFKj2rKt3CoKnELR1Io4ZDoSa70000" class="mhov"><img src="../svgrepo-server.svg" width="16" height="16"/><span>Online Server</span></a></li><li><a href="running.html" class="mhov"><img src="../svgrepo-play.svg" width="16" height="16"/><span>Running</span></a></li><li><a href="faq.html" class="mhov"><img src="../svgrepo-forum.svg" width="16" height="16"/><span>F.A.Q.</span></a></li><li><a href="download.html" class="mhov"><img src="../svgrepo-add-to-online-cart.svg" width="16" height="16"/><span>Download</span></a></li><li><a href="../qa.html" class="mhov"><img src="../svgrepo-forum-message.svg" width="16" height="16"/><span>Forum</span></a></li><li><a href="theme.html" class="mhov"><img src="../svgrepo-palette-fill.svg" width="16" height="16"/><span>Theme</span></a></li><li><a href="preprocessing.html" class="mhov"><img src="../svgrepo-cpu.svg" width="16" height="16"/><span>Preprocessing</span></a></li><li><a href="stdlib.html" class="mhov"><img src="../svgrepo-books-library.svg" width="16" height="16"/><span>Standard Library</span></a></li><li><a href="https://crashedmind.github.io/PlantUMLHitchhikersGuide" class="mhov"><img src="../svgrepo-signpost-fill.svg" width="16" height="16"/><span>Hitchhiker&#39;s Guide</span></a></li><li><a href="guide.html" class="mhov"><img src="../svgrepo-library.svg" width="16" height="16"/><span>PDF Guide</span></a></li></ul><div><span id="ezoic-pub-ad-placeholder-108"></span><!-- ezoic_pub_ad_placeholder-108-sidebar_middle-120x240-108-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-108-sidebar_middle-125x125-108-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-108-sidebar_middle-180x150-108-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-108-sidebar_middle-200x200-108-nonexxxnonexxxxxxezmaxscaleval100 --></div></div><div></div><div style="margin-bottom:35px;"><span id="ezoic-pub-ad-placeholder-186"></span><!-- ezoic_pub_ad_placeholder-186-sidebar_middle-120x240-186-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-186-sidebar_middle-125x125-186-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-186-sidebar_middle-180x150-186-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-186-sidebar_middle-200x200-186-nonexxxnonexxxxxxezmaxscaleval100 --></div></div></div><div id="qqq"><div class="cd"><div class="aaa"></div><div class="bbborder"></div></div></div><div id="rrr"><div class="cd"><div class="aaa"></div><div style="height:5px;"></div><div class="bbb"><div class="cde"><div></div><div><span id="ezoic-pub-ad-placeholder-175"></span><!-- ezoic_pub_ad_placeholder-175-sidebar-120x600-175-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-175-sidebar-160x600-175-nonexxxnonexxxxxxezmaxscaleval100 --></div><div></div></div></div></div></div></div></div><style>#contmenu{display:flex;height:30px;width:100%;margin:0;padding:0}#contmenua{height:30px;padding-right:25px}#contmenub{z-index:15;display:inline-block;flex-grow:1;flex-shrink:1;height:30px;background-color:#edeff3}#magic{white-space:nowrap;overflow:hidden;z-index:14;position:fixed;top:0;right:50px;height:30px;width:30px}#magic2{white-space:nowrap;overflow:hidden;z-index:16;position:fixed;top:0;right:0;height:30px;width:50px;background-color:#edeff3}#magic2 img{margin:5px 0 0 5px;filter:invert(44%) sepia(27%) saturate(310%) hue-rotate(170deg) brightness(92%) contrast(83%)}#magic2:hover img{filter:invert(25%) sepia(97%) saturate(2026%) hue-rotate(201deg) brightness(91%) contrast(98%)}#magic:hover #svgrepoleft{filter:invert(22%) sepia(53%) saturate(4563%) hue-rotate(202deg) brightness(95%) contrast(98%)}#magic:hover{width:100%;height:31px}#aze{height:30px;display:flex;flex-direction:row-reverse}#aze1{height:30px;background-color:#edeff3}#aze2{height:30px;background-color:#edeff3;padding-left:10px;border-left:1px solid #d4d8de;border-bottom:1px solid #d4d8de}#aze1 img{filter:invert(46%) sepia(6%) saturate(1254%) hue-rotate(171deg) brightness(94%) contrast(92%)}#aze3{width:3px;height:30px;background-color:#edeff3}</style><div id="header"><div id="contmenu"><div id="contmenua"><div class="menu1"><a href="sequence-diagram.html">Secuencia</a><a href="use-case-diagram.html">Usecase</a><a href="class-diagram.html">Clase</a><a href="activity-diagram-beta.html">Actividad</a><a href="component-diagram.html">Component</a><a href="state-diagram.html">Estado</a><a href="object-diagram.html">Objeto</a><a href="deployment-diagram.html">Despliegue</a><a href="timing-diagram.html">Timing</a><a href="nwdiag.html">Network</a><a href="salt.html">Wireframe</a><a href="archimate-diagram.html">Archimate</a><a href="gantt-diagram.html">Gantt</a><a href="mindmap-diagram.html">MindMap</a><a href="wbs-diagram.html">WBS</a><a href="json.html">JSON</a><a href="yaml.html">YAML</a></div></div><div id="contmenub"></div></div><div id="magic"><div id="aze"><div id="aze1"><img id="svgrepoleft" width="30" height="30" src="../svgrepo-left.svg"/></div><div id="aze2"><div class="menu1"><a href="sequence-diagram.html">Secuencia</a><a href="use-case-diagram.html">Usecase</a><a href="class-diagram.html">Clase</a><a href="activity-diagram-beta.html">Actividad</a><a href="component-diagram.html">Component</a><a href="state-diagram.html">Estado</a><a href="object-diagram.html">Objeto</a><a href="deployment-diagram.html">Despliegue</a><a href="timing-diagram.html">Timing</a><a href="nwdiag.html">Network</a><a href="salt.html">Wireframe</a><a href="archimate-diagram.html">Archimate</a><a href="gantt-diagram.html">Gantt</a><a href="mindmap-diagram.html">MindMap</a><a href="wbs-diagram.html">WBS</a><a href="json.html">JSON</a><a href="yaml.html">YAML</a></div></div><div id="aze3"></div></div></div><div id="magic2"><a href="https://plantuml.com/es-dark/commons"><img src="../svgrepo-uxwing-light-mode-toggle.svg" height="20"/></a></div></div><div id="header2"></div><div id="root"><style>#haut1{margin:50px 0 20px;padding:0;min-height:80px}#donate{padding-top:5px;min-height:30px}</style><div id="haut1"><div style="float:left;"><div class="breadcrumb"><a href="sitemap.html">PlantUML</a><a href="sitemap-language-specification.html">Language specification</a><a href="commons.html">Common commands</a><a href="commons.html#"></a></div><div id="donate">   <a href="https://discord.gg/sXhzexAQGh" style="text-decoration: none;"><img src="https://img.shields.io/discord/1083727021328306236?color=5865F2&amp;logo=discord&amp;logoColor=white" alt="Discord server"/></a>   <a href="https://github.com/sponsors/plantuml/" style="text-decoration: none;"><img src="https://img.shields.io/github/sponsors/plantuml?logo=github"/></a>   <a href="https://www.patreon.com/bePatron?patAmt=1&amp;u=527450&amp;rid=152970" style="text-decoration: none;"><img src="https://img.shields.io/badge/patreon-122-chocolate?logo=patreon"/></a>   <a href="../lp.html" style="text-decoration: none;"><img src="https://img.shields.io/liberapay/patrons/plantuml?color=gold&amp;logo=liberapay&amp;label=liberapay"/></a>   <a href="../en/paypal.html" style="text-decoration: none;"><img src="https://img.shields.io/badge/paypal-296-skyblue?logo=paypal&amp;logoColor=red"/></a></div></div><div style="float:right; margin:3px 0;"><style>#langlist{display:flex;justify-content:space-between;width:317px;height:16px;margin:3px 10px 3px 0}.sel2{border:2px solid #fefefe}.nosel2{border:2px solid #fefefe;filter:grayscale(100%) opacity(75%)}.sel2:hover,.nosel2:hover{cursor:pointer;border:2px solid #0366d6;border-spacing:0;filter:grayscale(0);filter:contrast(200%);filter:brightness(150%)}#flag1,#flag2,#flag3,#flag4,#flag5,#flag6,#flag7,#flag8{background:url(../flags21.png);background-repeat:no-repeat;background-clip:content-box;width:22px;height:16px}#flag2{background-position:-22px 0}#flag3{background-position:-44px 0}#flag4{background-position:-66px 0}#flag5{background-position:-88px 0}#flag6{background-position:-110px 0}#flag7{background-position:-132px 0}#flag8{background-position:-154px 0}</style><div id="langlist"><div id="flag1" onclick="location.href=&#39;/en/commons&#39;" class="nosel2"></div><div id="flag2" onclick="location.href=&#39;/de/commons&#39;" class="nosel2"></div><div id="flag3" onclick="location.href=&#39;/es/commons&#39;" class="sel2"></div><div id="flag4" onclick="location.href=&#39;/fr/commons&#39;" class="nosel2"></div><div id="flag5" onclick="location.href=&#39;/ja/commons&#39;" class="nosel2"></div><div id="flag6" onclick="location.href=&#39;/ko/commons&#39;" class="nosel2"></div><div id="flag7" onclick="location.href=&#39;/ru/commons&#39;" class="nosel2"></div><div id="flag8" onclick="location.href=&#39;/zh/commons&#39;" class="nosel2"></div></div></div></div><p><style>#topsticky{z-index:2;margin:0 240px 0 0}@media screen and (min-height:800px){#topsticky{position:sticky;top:40px}}@media screen and (max-width:1500px){#topsticky{margin:0}}</style></p><div id="topsticky"><span id="ezoic-pub-ad-placeholder-647"></span><!-- ezoic_pub_ad_placeholder-647-under_page_title-320x100-647-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-647-under_page_title-300x50v2-647-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-647-under_page_title-320x50-647-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-647-under_page_title-468x60-647-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-647-under_page_title-728x90-647-nonexxxnonexxxxxxezmaxscaleval100 --></div><p><a style="position:relative;top:-38px;" name="6a2809ebab3bf607"></a><style>#toc{z-index:2;position:sticky;top:40px;list-style-type:none;margin:0;padding:0 10px}.chap{clear:both}#toc ul{list-style-type:none;max-height:87vh;overflow-y:auto;background:#f6f8fa;border-width:2px;border-style:groove;border-radius:3px;border-color:#e1e4e8;margin:0;padding:0}@media screen and (min-height:450px){#toc ul{max-height:89.5vh}}@media screen and (min-height:550px){#toc ul{max-height:91.5vh}}@media screen and (min-height:700px){#toc ul{max-height:93.5vh}}@media screen and (min-height:900px){#toc ul{max-height:94.5vh}}#toc li{margin:5px 5px 5px 10px;padding:0}@media screen and (max-width:1500px){#toctd{display:none}#toc{display:none}}</style><table border="0" cellspacing="0" cellpadding="0" width="100%"><tbody><tr valign="top" width="100%"><td valign="top"><h1 class="chap"><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/cmp/dokuwiki/es/commons#0"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/cmp/asciidoc/es/commons#0"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/cmp/markdown/es/commons#0"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>Comandos comunes en PlantUML</h1><p></p> Descubra los comandos fundamentales universalmente aplicables a todos los tipos de diagramas en PlantUML. Estos comandos le permiten inyectar versatilidad y detalles personalizados en sus diagramas. A continuación, desglosamos estos comandos comunes en tres categorías principales: <p></p><h3>Elementos globales</h3><ul><li><strong>Comentarios:</strong> Añada comentarios o notas explicativas en el guión de su diagrama para transmitir información adicional o para dejar recordatorios para futuras modificaciones.</li><li><strong>Notas:</strong> Incorpore información suplementaria directamente en su diagrama para ayudar a la comprensión o para resaltar aspectos importantes.</li><li><strong>Control de Tamaño:</strong> Ajuste las dimensiones de los distintos elementos según sus preferencias, garantizando un diagrama equilibrado y bien proporcionado.</li><li><strong>Título y leyendas:</strong> Defina un título adecuado y añada subtítulos para aclarar el contexto o para anotar partes específicas de su diagrama.</li></ul><p></p><h3>Descripción de la <a href="creole.html">sintaxis criolla</a></h3> Aproveche <a href="creole.html">el poder de la sintaxis criolla</a> para dar más formato al contenido de cualquier elemento dentro de su diagrama. Este estilo de marcado wiki permite: <p></p><ul><li><strong>Formato de Texto:</strong> Personalice la apariencia de su texto con varios estilos y alineaciones.</li><li><strong>Listas:</strong> Cree listas ordenadas o desordenadas para presentar la información de forma ordenada.</li><li><strong>Enlaces:</strong> Integre hipervínculos para facilitar la navegación rápida a recursos relevantes.</li></ul><p></p><h3>Comando de Control de Estilo</h3> Obtenga un control completo sobre el <a href="style-evolution.html">estilo de presentación de sus elementos de diagrama</a> utilizando el comando <code class="cod">style</code>. Utilícelo para: <ul><li><strong>Definir Estilos:</strong> Establecer estilos uniformes para los elementos para mantener un tema visual cohesivo.</li><li><strong>Personalizar Colores:</strong> Elija colores específicos para varios elementos para mejorar el atractivo visual y crear clasificaciones distintas.</li></ul><p></p> Explore estos comandos para crear diagramas que sean tanto funcionales como estéticamente agradables, adaptando cada elemento a sus especificaciones exactas. <a style="position:relative;top:-38px;" name="8413c683b4b27cc3"></a><div style="clear:both;height:50px;"></div><h2 class="chap"><img onclick="window.scrollTo(0,0);" title="Back to top" src="../backtop1.svg" width="20" height="20" class="backtop"/><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/cmp/dokuwiki/es/commons#1"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/cmp/asciidoc/es/commons#1"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/cmp/markdown/es/commons#1"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>Comments</h2><p></p><h3>Simple comment</h3> Everything that starts with <code class="cod">simple quote &#39;</code> is a comment. <p></p><p><code></code></p><pre class="colo"><code>@startuml
+&#39;Line comments use a single apostrophe
+@enduml
+</code></pre><p></p><p></p><h3>Block comment</h3> Block comment use C-style comments except that instead of <code class="cod">*</code> you use an apostrophe <code class="cod">&#39;</code>, then you can also put comments on several lines using <code class="cod">/&#39;</code> to start and <code class="cod">&#39;/</code> to end. <p></p><p></p><p><code></code></p><pre class="colo"><code>@startuml
+/&#39;
+many lines comments
+here
+&#39;/
+@enduml
+</code></pre><p></p><p></p><em>[Ref. <a href="https://forum.plantuml.net/1353/is-it-possible-to-comment-out-lines-of-diagram-syntax?show=11808#a11808">QA-1353</a>]</em><p></p> Then you can also put block comment on the same line, as: <p></p><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msg6bcadd69924780c906252bdb07d2477a" class="msg"> 🎉 Copied! </div><img width="16" height="16" id="img6bcadd69924780c906252bdb07d2477a" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;6bcadd69924780c906252bdb07d2477a&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;6bcadd69924780c906252bdb07d2477a&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;6bcadd69924780c906252bdb07d2477a&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="pre6bcadd69924780c906252bdb07d2477a">@startuml
+/&#39; case 1 &#39;/   A -&gt; B : AB-First step 
+               B -&gt; C : BC-Second step
+/&#39; case 2 &#39;/   D -&gt; E : DE-Third step
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="390" height="184" class="scale" src="../imgw/img-6bcadd69924780c906252bdb07d2477a.png"/></div></div></td></tr></tbody></table></p><p></p><p></p><em>[Ref. <a href="https://forum.plantuml.net/3906/can-a-block-quote-begin-and-end-on-the-same-line">QA-3906</a> and <a href="https://forum.plantuml.net/3910">QA-3910</a>]</em><p></p><h3>Full example</h3><p></p><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msgc18193dfb72378ad2cad5c99ea3d43db" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="imgc18193dfb72378ad2cad5c99ea3d43db" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;c18193dfb72378ad2cad5c99ea3d43db&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;c18193dfb72378ad2cad5c99ea3d43db&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;c18193dfb72378ad2cad5c99ea3d43db&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="prec18193dfb72378ad2cad5c99ea3d43db">@startuml
+skinparam activity {
+    &#39; this is a comment
+    BackgroundColor White
+    BorderColor Black /&#39; this is a comment &#39;/
+    BorderColor Red  &#39; this is not a comment and this line is ignored
+}
+
+start
+:foo1;
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="65" height="95" class="scale" src="../imgw/img-c18193dfb72378ad2cad5c99ea3d43db.png"/></div></div></td></tr></tbody></table></p><p><em>[Ref. <a href="https://github.com/plantuml/plantuml/issues/214">GH-214</a>]</em><a style="position:relative;top:-38px;" name="4252b72e6ebcd4d4"></a></p><div style="clear:both;min-height:110px;margin-top:10px;"><div class="pezoic"><span id="ezoic-pub-ad-placeholder-179"></span><!-- ezoic_pub_ad_placeholder-179-under_second_paragraph-234x60-179-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-179-under_second_paragraph-468x60-179-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-179-under_second_paragraph-728x90-179-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-179-under_second_paragraph-970x90-179-nonexxxnonexxxxxxezmaxscaleval100 --></div></div><h2 class="chap"><img onclick="window.scrollTo(0,0);" title="Back to top" src="../backtop1.svg" width="20" height="20" class="backtop"/><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/cmp/dokuwiki/es/commons#2"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/cmp/asciidoc/es/commons#2"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/cmp/markdown/es/commons#2"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>Zoom</h2><p></p> You can use the <code class="cod">scale</code> command to zoom the generated image. <p></p> You can use either <em>a number</em> or <em>a fraction</em> to define the scale factor. You can also specify either <code class="cod">width</code> or <code class="cod">height</code> (<em>in pixel</em>). And you can also give both <code class="cod">width</code> and <code class="cod">height</code>: the image is scaled to fit inside the specified dimension. <p></p><ul><li><code class="cod">scale 1.5</code></li><li><code class="cod">scale 2/3</code></li><li><code class="cod">scale 200 width</code></li><li><code class="cod">scale 200 height</code></li><li><code class="cod">scale 200*100</code></li><li><code class="cod">scale max 300*200</code></li><li><code class="cod">scale max 1024 width</code></li><li><code class="cod">scale max 800 height</code></li></ul><p></p><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msgb01f4e3e62eb495270d86549f82dbd66" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="imgb01f4e3e62eb495270d86549f82dbd66" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;b01f4e3e62eb495270d86549f82dbd66&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;b01f4e3e62eb495270d86549f82dbd66&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;b01f4e3e62eb495270d86549f82dbd66&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="preb01f4e3e62eb495270d86549f82dbd66">@startuml
+scale 180*90
+Bob-&gt;Alice : hello
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="75" height="90" class="scale" src="../imgw/img-b01f4e3e62eb495270d86549f82dbd66.png"/></div></div></td></tr></tbody></table></p><p><a style="position:relative;top:-38px;" name="b78a322350389672"></a></p><div style="clear:both;height:50px;"></div><h2 class="chap"><img onclick="window.scrollTo(0,0);" title="Back to top" src="../backtop1.svg" width="20" height="20" class="backtop"/><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/cmp/dokuwiki/es/commons#3"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/cmp/asciidoc/es/commons#3"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/cmp/markdown/es/commons#3"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>Title</h2> The <code class="cod">title</code> keywords is used to put a title. You can add newline using <code class="cod">\n</code> in the title description. <p></p> Some skinparam settings are available to put borders on the title. <p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msg941ac54d0c5ed6a2d0c3722f3f02342b" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="img941ac54d0c5ed6a2d0c3722f3f02342b" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;941ac54d0c5ed6a2d0c3722f3f02342b&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;941ac54d0c5ed6a2d0c3722f3f02342b&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;941ac54d0c5ed6a2d0c3722f3f02342b&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="pre941ac54d0c5ed6a2d0c3722f3f02342b">@startuml
+skinparam titleBorderRoundCorner 15
+skinparam titleBorderThickness 2
+skinparam titleBorderColor red
+skinparam titleBackgroundColor Aqua-CadetBlue
+
+title Simple communication\nexample
+
+Alice -&gt; Bob: Authentication Request
+Bob --&gt; Alice: Authentication Response
+
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="220" height="210" class="scale" src="../imgw/img-941ac54d0c5ed6a2d0c3722f3f02342b.png"/></div></div></td></tr></tbody></table></p><p></p><p></p> You can use <a href="creole.html">creole formatting</a> in the title. <p></p> You can also define title on several lines using <code class="cod">title</code> and <code class="cod">end title</code> keywords. <p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msgefe3a345dc6d375944ac1c3d8eade826" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="imgefe3a345dc6d375944ac1c3d8eade826" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;efe3a345dc6d375944ac1c3d8eade826&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;efe3a345dc6d375944ac1c3d8eade826&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;efe3a345dc6d375944ac1c3d8eade826&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="preefe3a345dc6d375944ac1c3d8eade826">@startuml
+
+title
+ &lt;u&gt;Simple&lt;/u&gt; communication example
+ on &lt;i&gt;several&lt;/i&gt; lines and using &lt;back:cadetblue&gt;creole tags&lt;/back&gt;
+end title
+
+Alice -&gt; Bob: Authentication Request
+Bob -&gt; Alice: Authentication Response
+
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="292" height="210" class="scale" src="../imgw/img-efe3a345dc6d375944ac1c3d8eade826.png"/></div></div></td></tr></tbody></table></p><p></p><p></p><a style="position:relative;top:-38px;" name="272ba7d164aa8369"></a><div style="clear:both;min-height:110px;margin-top:10px;"><div class="pezoic"><span id="ezoic-pub-ad-placeholder-114"></span><!-- ezoic_pub_ad_placeholder-114-mid_content-234x60-114-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-114-mid_content-468x60-114-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-114-mid_content-728x90-114-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-114-mid_content-970x90-114-nonexxxnonexxxxxxezmaxscaleval100 --></div></div><h2 class="chap"><img onclick="window.scrollTo(0,0);" title="Back to top" src="../backtop1.svg" width="20" height="20" class="backtop"/><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/cmp/dokuwiki/es/commons#4"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/cmp/asciidoc/es/commons#4"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/cmp/markdown/es/commons#4"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>Caption</h2> There is also a <code class="cod">caption</code> keyword to put a caption under the diagram. <p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msg0c3c0944d929e81c4df43f5cd81bd142" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="img0c3c0944d929e81c4df43f5cd81bd142" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;0c3c0944d929e81c4df43f5cd81bd142&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;0c3c0944d929e81c4df43f5cd81bd142&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;0c3c0944d929e81c4df43f5cd81bd142&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="pre0c3c0944d929e81c4df43f5cd81bd142">@startuml
+
+caption figure 1
+Alice -&gt; Bob: Hello
+
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="104" height="147" class="scale" src="../imgw/img-0c3c0944d929e81c4df43f5cd81bd142.png"/></div></div></td></tr></tbody></table></p><p></p><p></p><a style="position:relative;top:-38px;" name="f443cae2041edc16"></a><div style="clear:both;height:50px;"></div><h2 class="chap"><img onclick="window.scrollTo(0,0);" title="Back to top" src="../backtop1.svg" width="20" height="20" class="backtop"/><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/cmp/dokuwiki/es/commons#5"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/cmp/asciidoc/es/commons#5"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/cmp/markdown/es/commons#5"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>Footer and header</h2> You can use the commands <code class="cod">header</code> or <code class="cod">footer</code> to add a footer or a header on any generated diagram. <p></p> You can optionally specify if you want a <code class="cod">center</code>, <code class="cod">left</code> or <code class="cod">right</code> footer/header, by adding a keyword. <p></p> As with title, it is possible to define a header or a footer on several lines. <p></p> It is also possible to put some HTML into the header or footer. <p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msg360a7dab623001330efc9410bcc2b447" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="img360a7dab623001330efc9410bcc2b447" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;360a7dab623001330efc9410bcc2b447&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;360a7dab623001330efc9410bcc2b447&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;360a7dab623001330efc9410bcc2b447&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="pre360a7dab623001330efc9410bcc2b447">@startuml
+Alice -&gt; Bob: Authentication Request
+
+header
+&lt;font color=red&gt;Warning:&lt;/font&gt;
+Do not use in production.
+endheader
+
+center footer Generated for demonstration
+
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="216" height="166" class="scale" src="../imgw/img-360a7dab623001330efc9410bcc2b447.png"/></div></div></td></tr></tbody></table></p><p><a style="position:relative;top:-38px;" name="3b05da228ffe6d52"></a></p><div style="clear:both;min-height:110px;margin-top:10px;"><div class="pezoic"><span id="ezoic-pub-ad-placeholder-115"></span><!-- ezoic_pub_ad_placeholder-115-long_content-234x60-115-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-115-long_content-468x60-115-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-115-long_content-728x90-115-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-115-long_content-970x90-115-nonexxxnonexxxxxxezmaxscaleval100 --></div></div><h2 class="chap"><img onclick="window.scrollTo(0,0);" title="Back to top" src="../backtop1.svg" width="20" height="20" class="backtop"/><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/cmp/dokuwiki/es/commons#6"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/cmp/asciidoc/es/commons#6"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/cmp/markdown/es/commons#6"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>Legend the diagram</h2><p></p> The <code class="cod">legend</code> and <code class="cod">end legend</code> are keywords is used to put a legend. <p></p> You can optionally specify to have <code class="cod">left</code>, <code class="cod">right</code>, <code class="cod">top</code>, <code class="cod">bottom</code> or <code class="cod">center</code> alignment for the legend. <p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msgfce9f4e2d3029857f369047229c2c9bb" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="imgfce9f4e2d3029857f369047229c2c9bb" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;fce9f4e2d3029857f369047229c2c9bb&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;fce9f4e2d3029857f369047229c2c9bb&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;fce9f4e2d3029857f369047229c2c9bb&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="prefce9f4e2d3029857f369047229c2c9bb">@startuml
+Alice -&gt; Bob : Hello
+legend right
+  Short
+  legend
+endlegend
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="110" height="196" class="scale" src="../imgw/img-fce9f4e2d3029857f369047229c2c9bb.png"/></div></div></td></tr></tbody></table></p><p></p><p></p><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msg5d10d66056970d31e6888ee08c35c56b" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="img5d10d66056970d31e6888ee08c35c56b" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;5d10d66056970d31e6888ee08c35c56b&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;5d10d66056970d31e6888ee08c35c56b&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;5d10d66056970d31e6888ee08c35c56b&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="pre5d10d66056970d31e6888ee08c35c56b">@startuml
+Alice -&gt; Bob : Hello
+legend top left
+  Short
+  legend
+endlegend
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="104" height="193" class="scale" src="../imgw/img-5d10d66056970d31e6888ee08c35c56b.png"/></div></div></td></tr></tbody></table></p><p></p><p></p><p></p><p></p><a style="position:relative;top:-38px;" name="6dd346f9babe70c8"></a><div style="clear:both;height:50px;"></div><h2 class="chap"><img onclick="window.scrollTo(0,0);" title="Back to top" src="../backtop1.svg" width="20" height="20" class="backtop"/><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/cmp/dokuwiki/es/commons#7"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/cmp/asciidoc/es/commons#7"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/cmp/markdown/es/commons#7"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>Appendix: Examples on all diagram</h2><p></p><p></p><h3>Activity</h3><p></p><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msgeb2e1a5dc7b9de7b7481e61e10208e59" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="imgeb2e1a5dc7b9de7b7481e61e10208e59" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;eb2e1a5dc7b9de7b7481e61e10208e59&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;eb2e1a5dc7b9de7b7481e61e10208e59&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;eb2e1a5dc7b9de7b7481e61e10208e59&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="preeb2e1a5dc7b9de7b7481e61e10208e59">@startuml
+header some header
+
+footer some footer
+
+title My title
+
+caption This is caption
+
+legend
+The legend
+end legend
+
+start
+:Hello world;
+:This is defined on
+several **lines**;
+stop
+
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="139" height="346" class="scale" src="../imgw/img-eb2e1a5dc7b9de7b7481e61e10208e59.png"/></div></div></td></tr></tbody></table></p><p></p><p></p><h3>Archimate</h3><p></p><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msg109266948805605f6df7f942f9c936fb" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="img109266948805605f6df7f942f9c936fb" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;109266948805605f6df7f942f9c936fb&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;109266948805605f6df7f942f9c936fb&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;109266948805605f6df7f942f9c936fb&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="pre109266948805605f6df7f942f9c936fb">@startuml
+header some header
+
+footer some footer
+
+title My title
+
+caption This is caption
+
+legend
+The legend
+end legend
+
+archimate #Technology &#34;VPN Server&#34; as vpnServerA &lt;&lt;technology-device&gt;&gt;
+
+rectangle GO #lightgreen
+rectangle STOP #red
+rectangle WAIT #orange
+
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="182" height="307" class="scale" src="../imgw/img-109266948805605f6df7f942f9c936fb.png"/></div></div></td></tr></tbody></table></p><p></p><p></p><h3>Class</h3><p></p><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msgfb2118dbbff5a81c09bd532c58de99f6" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="imgfb2118dbbff5a81c09bd532c58de99f6" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;fb2118dbbff5a81c09bd532c58de99f6&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;fb2118dbbff5a81c09bd532c58de99f6&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;fb2118dbbff5a81c09bd532c58de99f6&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="prefb2118dbbff5a81c09bd532c58de99f6">@startuml
+header some header
+
+footer some footer
+
+title My title
+
+caption This is caption
+
+legend
+The legend
+end legend
+
+a -- b 
+
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="113" height="313" class="scale" src="../imgw/img-fb2118dbbff5a81c09bd532c58de99f6.png"/></div></div></td></tr></tbody></table></p><p></p><p></p><h3>Component, Deployment, Use-Case</h3><p></p><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msga984e6ae9b9631111e7a96bc6928d9e2" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="imga984e6ae9b9631111e7a96bc6928d9e2" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;a984e6ae9b9631111e7a96bc6928d9e2&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;a984e6ae9b9631111e7a96bc6928d9e2&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;a984e6ae9b9631111e7a96bc6928d9e2&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="prea984e6ae9b9631111e7a96bc6928d9e2">@startuml
+header some header
+
+footer some footer
+
+title My title
+
+caption This is caption
+
+legend
+The legend
+end legend
+
+node n
+(u) -&gt; [c]
+
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="224" height="215" class="scale" src="../imgw/img-a984e6ae9b9631111e7a96bc6928d9e2.png"/></div></div></td></tr></tbody></table></p><p></p><p></p><h3>Gantt project planning</h3><p></p><p></p><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msg0bae0e0d4c54bd002147d3bf734db06e" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="img0bae0e0d4c54bd002147d3bf734db06e" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;0bae0e0d4c54bd002147d3bf734db06e&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;0bae0e0d4c54bd002147d3bf734db06e&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;0bae0e0d4c54bd002147d3bf734db06e&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="pre0bae0e0d4c54bd002147d3bf734db06e">@startgantt
+header some header
+
+footer some footer
+
+title My title
+
+caption This is caption
+
+legend
+The legend
+end legend
+
+
+[t] lasts 5 days
+
+@endgantt
+</pre></code></div><div class="mycell"><img loading="lazy" width="108" height="189" class="scale" src="../imgw/img-0bae0e0d4c54bd002147d3bf734db06e.png"/></div></div></td></tr></tbody></table></p><p></p><p></p><div class="tag" style="background:#98FB98;">DONE</div><em>[(Header, footer) corrected on <a href="../changes.html">V1.2020.18</a>]</em><p></p><h3>Object</h3><p></p><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msg61687e7bb97c004be00c5274f282dadc" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="img61687e7bb97c004be00c5274f282dadc" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;61687e7bb97c004be00c5274f282dadc&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;61687e7bb97c004be00c5274f282dadc&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;61687e7bb97c004be00c5274f282dadc&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="pre61687e7bb97c004be00c5274f282dadc">@startuml
+header some header
+
+footer some footer
+
+title My title
+
+caption This is caption
+
+legend
+The legend
+end legend
+
+object user {
+  name = &#34;Dummy&#34;
+  id = 123
+}
+
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="140" height="223" class="scale" src="../imgw/img-61687e7bb97c004be00c5274f282dadc.png"/></div></div></td></tr></tbody></table></p><p></p><p></p><h3>MindMap</h3><p></p><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msgcef2cd89195712a9c2e70829bb4064de" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="imgcef2cd89195712a9c2e70829bb4064de" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;cef2cd89195712a9c2e70829bb4064de&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;cef2cd89195712a9c2e70829bb4064de&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;cef2cd89195712a9c2e70829bb4064de&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="precef2cd89195712a9c2e70829bb4064de">@startmindmap
+header some header
+
+footer some footer
+
+title My title
+
+caption This is caption
+
+legend
+The legend
+end legend
+
+* r
+** d1
+** d2
+
+@endmindmap
+</pre></code></div><div class="mycell"><img loading="lazy" width="132" height="275" class="scale" src="../imgw/img-cef2cd89195712a9c2e70829bb4064de.png"/></div></div></td></tr></tbody></table></p><p></p><p></p><h3>Network (nwdiag)</h3><p></p><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msg07f9a846e8c92cd9f0bf31220ef875a4" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="img07f9a846e8c92cd9f0bf31220ef875a4" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;07f9a846e8c92cd9f0bf31220ef875a4&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;07f9a846e8c92cd9f0bf31220ef875a4&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;07f9a846e8c92cd9f0bf31220ef875a4&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="pre07f9a846e8c92cd9f0bf31220ef875a4">@startuml
+header some header
+
+footer some footer
+
+title My title
+
+caption This is caption
+
+legend
+The legend
+end legend
+
+nwdiag {
+  network inet {
+      web01 [shape = cloud]
+  }
+}
+
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="134" height="271" class="scale" src="../imgw/img-07f9a846e8c92cd9f0bf31220ef875a4.png"/></div></div></td></tr></tbody></table></p><p></p><p></p><h3>Sequence</h3><p></p><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msg320d36111c512a64cc17f08e536b8918" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="img320d36111c512a64cc17f08e536b8918" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;320d36111c512a64cc17f08e536b8918&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;320d36111c512a64cc17f08e536b8918&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;320d36111c512a64cc17f08e536b8918&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="pre320d36111c512a64cc17f08e536b8918">@startuml
+header some header
+
+footer some footer
+
+title My title
+
+caption This is caption
+
+legend
+The legend
+end legend
+
+a-&gt;b
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="113" height="249" class="scale" src="../imgw/img-320d36111c512a64cc17f08e536b8918.png"/></div></div></td></tr></tbody></table></p><p></p><p></p><h3>State</h3><p></p><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msg8622004eb2a00649a9dbb3af546fe211" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="img8622004eb2a00649a9dbb3af546fe211" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;8622004eb2a00649a9dbb3af546fe211&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;8622004eb2a00649a9dbb3af546fe211&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;8622004eb2a00649a9dbb3af546fe211&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="pre8622004eb2a00649a9dbb3af546fe211">@startuml
+header some header
+
+footer some footer
+
+title My title
+
+caption This is caption
+
+legend
+The legend
+end legend
+
+[*] --&gt; State1
+State1 -&gt; State2
+
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="170" height="285" class="scale" src="../imgw/img-8622004eb2a00649a9dbb3af546fe211.png"/></div></div></td></tr></tbody></table></p><p></p><p></p><h3>Timing</h3><p></p><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msg6ba1c0ad5095217a8bc57507ccf601c6" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="img6ba1c0ad5095217a8bc57507ccf601c6" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;6ba1c0ad5095217a8bc57507ccf601c6&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;6ba1c0ad5095217a8bc57507ccf601c6&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;6ba1c0ad5095217a8bc57507ccf601c6&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="pre6ba1c0ad5095217a8bc57507ccf601c6">@startuml
+header some header
+
+footer some footer
+
+title My title
+
+caption This is caption
+
+legend
+The legend
+end legend
+
+robust &#34;Web Browser&#34; as WB
+concise &#34;Web User&#34; as WU
+
+@0
+WU is Idle
+WB is Idle
+
+@100
+WU is Waiting
+WB is Processing
+
+@300
+WB is Waiting
+
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="299" height="307" class="scale" src="../imgw/img-6ba1c0ad5095217a8bc57507ccf601c6.png"/></div></div></td></tr></tbody></table></p><p></p><p></p><h3>Work Breakdown Structure (WBS)</h3><p></p><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msg5d5d88bcfc1ba816cb04557499a3281c" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="img5d5d88bcfc1ba816cb04557499a3281c" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;5d5d88bcfc1ba816cb04557499a3281c&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;5d5d88bcfc1ba816cb04557499a3281c&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;5d5d88bcfc1ba816cb04557499a3281c&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="pre5d5d88bcfc1ba816cb04557499a3281c">@startwbs
+header some header
+
+footer some footer
+
+title My title
+
+caption This is caption
+
+legend
+The legend
+end legend
+
+* r
+** d1
+** d2
+
+@endwbs
+</pre></code></div><div class="mycell"><img loading="lazy" width="134" height="283" class="scale" src="../imgw/img-5d5d88bcfc1ba816cb04557499a3281c.png"/></div></div></td></tr></tbody></table></p><p></p><p></p><div class="tag" style="background:#98FB98;">DONE</div><em>[Corrected on <a href="../changes.html">V1.2020.17</a>]</em><p></p><h3>Wireframe (SALT)</h3><p></p><p></p><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msge784b8d5dbc8f2b71a4e6a9928301574" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="imge784b8d5dbc8f2b71a4e6a9928301574" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;e784b8d5dbc8f2b71a4e6a9928301574&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;e784b8d5dbc8f2b71a4e6a9928301574&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;e784b8d5dbc8f2b71a4e6a9928301574&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="pree784b8d5dbc8f2b71a4e6a9928301574">@startsalt
+header some header
+
+footer some footer
+
+title My title
+
+caption This is caption
+
+legend
+The legend
+end legend
+
+{+
+  Login    | &#34;MyName   &#34;
+  Password | &#34;****     &#34;
+  [Cancel] | [  OK   ]
+}
+@endsalt
+</pre></code></div><div class="mycell"><img loading="lazy" width="150" height="214" class="scale" src="../imgw/img-e784b8d5dbc8f2b71a4e6a9928301574.png"/></div></div></td></tr></tbody></table></p><p></p><p></p><div class="tag" style="background:#98FB98;">DONE</div><em>[Corrected on <a href="../changes.html">V1.2020.18</a>]</em><a style="position:relative;top:-38px;" name="c32ea2e4e4eb541a"></a><div style="clear:both;min-height:110px;margin-top:10px;"><div class="pezoic"><span id="ezoic-pub-ad-placeholder-116"></span><!-- ezoic_pub_ad_placeholder-116-longer_content-234x60-116-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-116-longer_content-468x60-116-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-116-longer_content-728x90-116-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-116-longer_content-970x90-116-nonexxxnonexxxxxxezmaxscaleval100 --></div></div><h2 class="chap"><img onclick="window.scrollTo(0,0);" title="Back to top" src="../backtop1.svg" width="20" height="20" class="backtop"/><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/cmp/dokuwiki/es/commons#8"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/cmp/asciidoc/es/commons#8"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/cmp/markdown/es/commons#8"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>Appendix: Examples on all diagram with style</h2><p></p><div class="tag" style="background:#00CA00;">DONE</div><p></p> FYI: <ul><li>all is only good for <strong><code class="cod">Sequence diagram</code></strong></li><li><code class="cod">title</code>, <code class="cod">caption</code> and <code class="cod">legend</code> are good for all diagrams except for <strong><code class="cod">salt diagram</code></strong></li></ul><div class="tag" style="background:#FFD700;">FIXME</div> 🚩 <ul><li>Now <em>(test on 1.2020.18-19)</em><code class="cod">header</code>, <code class="cod">footer</code> are not good for <strong>all other diagrams</strong> except only for <strong><code class="cod">Sequence diagram</code></strong>.</li></ul> To be fix; Thanks <p></p><div class="tag" style="background:#FFD700;">FIXME</div><p></p><p></p> Here are tests of <code class="cod">title</code>, <code class="cod">header</code>, <code class="cod">footer</code>, <code class="cod">caption</code> or <code class="cod">legend</code> on all the diagram with the debug style: <p></p><p><code></code></p><pre class="colo"><code>&lt;style&gt;
+title {
+  HorizontalAlignment right
+  FontSize 24
+  FontColor blue
+}
+
+header {
+  HorizontalAlignment center
+  FontSize 26
+  FontColor purple
+}
+
+footer {
+  HorizontalAlignment left
+  FontSize 28
+  FontColor red
+}
+
+legend {
+  FontSize 30
+  BackGroundColor yellow
+  Margin 30
+  Padding 50
+}
+
+caption {
+  FontSize 32
+}
+&lt;/style&gt;
+</code></pre><p></p><p></p><h3>Activity</h3><p></p><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msg295da540192757aa74afc7194ebe3d6b" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="img295da540192757aa74afc7194ebe3d6b" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;295da540192757aa74afc7194ebe3d6b&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;295da540192757aa74afc7194ebe3d6b&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;295da540192757aa74afc7194ebe3d6b&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="pre295da540192757aa74afc7194ebe3d6b">@startuml
+&lt;style&gt;
+title {
+  HorizontalAlignment right
+  FontSize 24
+  FontColor blue
+}
+
+header {
+  HorizontalAlignment center
+  FontSize 26
+  FontColor purple
+}
+
+footer {
+  HorizontalAlignment left
+  FontSize 28
+  FontColor red
+}
+
+legend {
+  FontSize 30
+  BackGroundColor yellow
+  Margin 30
+  Padding 50
+}
+
+caption {
+  FontSize 32
+}
+&lt;/style&gt;
+header some header
+
+footer some footer
+
+title My title
+
+caption This is caption
+
+legend
+The legend
+end legend
+
+start
+:Hello world;
+:This is defined on
+several **lines**;
+stop
+
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="332" height="570" class="scale" src="../imgw/img-295da540192757aa74afc7194ebe3d6b.png"/></div></div></td></tr></tbody></table></p><p></p><p></p><h3>Archimate</h3><p></p><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msg80b9f2dee5f4f442f88a12616d6a5e54" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="img80b9f2dee5f4f442f88a12616d6a5e54" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;80b9f2dee5f4f442f88a12616d6a5e54&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;80b9f2dee5f4f442f88a12616d6a5e54&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;80b9f2dee5f4f442f88a12616d6a5e54&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="pre80b9f2dee5f4f442f88a12616d6a5e54">@startuml
+&lt;style&gt;
+title {
+  HorizontalAlignment right
+  FontSize 24
+  FontColor blue
+}
+
+header {
+  HorizontalAlignment center
+  FontSize 26
+  FontColor purple
+}
+
+footer {
+  HorizontalAlignment left
+  FontSize 28
+  FontColor red
+}
+
+legend {
+  FontSize 30
+  BackGroundColor yellow
+  Margin 30
+  Padding 50
+}
+
+caption {
+  FontSize 32
+}
+&lt;/style&gt;
+header some header
+
+footer some footer
+
+title My title
+
+caption This is caption
+
+legend
+The legend
+end legend
+
+archimate #Technology &#34;VPN Server&#34; as vpnServerA &lt;&lt;technology-device&gt;&gt;
+
+rectangle GO #lightgreen
+rectangle STOP #red
+rectangle WAIT #orange
+
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="317" height="544" class="scale" src="../imgw/img-80b9f2dee5f4f442f88a12616d6a5e54.png"/></div></div></td></tr></tbody></table></p><p></p><p></p><h3>Class</h3><p></p><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msgeca716814ec5734a34aca75be49f1aea" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="imgeca716814ec5734a34aca75be49f1aea" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;eca716814ec5734a34aca75be49f1aea&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;eca716814ec5734a34aca75be49f1aea&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;eca716814ec5734a34aca75be49f1aea&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="preeca716814ec5734a34aca75be49f1aea">@startuml
+&lt;style&gt;
+title {
+  HorizontalAlignment right
+  FontSize 24
+  FontColor blue
+}
+
+header {
+  HorizontalAlignment center
+  FontSize 26
+  FontColor purple
+}
+
+footer {
+  HorizontalAlignment left
+  FontSize 28
+  FontColor red
+}
+
+legend {
+  FontSize 30
+  BackGroundColor yellow
+  Margin 30
+  Padding 50
+}
+
+caption {
+  FontSize 32
+}
+&lt;/style&gt;
+header some header
+
+footer some footer
+
+title My title
+
+caption This is caption
+
+legend
+The legend
+end legend
+
+a -- b 
+
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="317" height="559" class="scale" src="../imgw/img-eca716814ec5734a34aca75be49f1aea.png"/></div></div></td></tr></tbody></table></p><p></p><p></p><h3>Component, Deployment, Use-Case</h3><p></p><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msg94f92591a94c0ec3cf740ba3182e4291" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="img94f92591a94c0ec3cf740ba3182e4291" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;94f92591a94c0ec3cf740ba3182e4291&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;94f92591a94c0ec3cf740ba3182e4291&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;94f92591a94c0ec3cf740ba3182e4291&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="pre94f92591a94c0ec3cf740ba3182e4291">@startuml
+&lt;style&gt;
+title {
+  HorizontalAlignment right
+  FontSize 24
+  FontColor blue
+}
+
+header {
+  HorizontalAlignment center
+  FontSize 26
+  FontColor purple
+}
+
+footer {
+  HorizontalAlignment left
+  FontSize 28
+  FontColor red
+}
+
+legend {
+  FontSize 30
+  BackGroundColor yellow
+  Margin 30
+  Padding 50
+}
+
+caption {
+  FontSize 32
+}
+&lt;/style&gt;
+header some header
+
+footer some footer
+
+title My title
+
+caption This is caption
+
+legend
+The legend
+end legend
+
+node n
+(u) -&gt; [c]
+
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="317" height="452" class="scale" src="../imgw/img-94f92591a94c0ec3cf740ba3182e4291.png"/></div></div></td></tr></tbody></table></p><p></p><p></p><h3>Gantt project planning</h3><p></p><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msg05ad8e10cdfbe3a97423484e39452021" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="img05ad8e10cdfbe3a97423484e39452021" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;05ad8e10cdfbe3a97423484e39452021&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;05ad8e10cdfbe3a97423484e39452021&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;05ad8e10cdfbe3a97423484e39452021&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="pre05ad8e10cdfbe3a97423484e39452021">@startgantt
+&lt;style&gt;
+title {
+  HorizontalAlignment right
+  FontSize 24
+  FontColor blue
+}
+
+header {
+  HorizontalAlignment center
+  FontSize 26
+  FontColor purple
+}
+
+footer {
+  HorizontalAlignment left
+  FontSize 28
+  FontColor red
+}
+
+legend {
+  FontSize 30
+  BackGroundColor yellow
+  Margin 30
+  Padding 50
+}
+
+caption {
+  FontSize 32
+}
+&lt;/style&gt;
+header some header
+
+footer some footer
+
+title My title
+
+caption This is caption
+
+legend
+The legend
+end legend
+
+
+[t] lasts 5 days
+
+@endgantt
+</pre></code></div><div class="mycell"><img loading="lazy" width="312" height="413" class="scale" src="../imgw/img-05ad8e10cdfbe3a97423484e39452021.png"/></div></div></td></tr></tbody></table></p><p></p><p></p><p></p><h3>Object</h3><p></p><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msg70d36d7dec6be7d463e4bc067b22da9f" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="img70d36d7dec6be7d463e4bc067b22da9f" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;70d36d7dec6be7d463e4bc067b22da9f&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;70d36d7dec6be7d463e4bc067b22da9f&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;70d36d7dec6be7d463e4bc067b22da9f&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="pre70d36d7dec6be7d463e4bc067b22da9f">@startuml
+&lt;style&gt;
+title {
+  HorizontalAlignment right
+  FontSize 24
+  FontColor blue
+}
+
+header {
+  HorizontalAlignment center
+  FontSize 26
+  FontColor purple
+}
+
+footer {
+  HorizontalAlignment left
+  FontSize 28
+  FontColor red
+}
+
+legend {
+  FontSize 30
+  BackGroundColor yellow
+  Margin 30
+  Padding 50
+}
+
+caption {
+  FontSize 32
+}
+&lt;/style&gt;
+header some header
+
+footer some footer
+
+title My title
+
+caption This is caption
+
+legend
+The legend
+end legend
+
+object user {
+  name = &#34;Dummy&#34;
+  id = 123
+}
+
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="317" height="463" class="scale" src="../imgw/img-70d36d7dec6be7d463e4bc067b22da9f.png"/></div></div></td></tr></tbody></table></p><p></p><p></p><h3>MindMap</h3><p></p><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msgb3090243b0b8b57bee746bf4b23dce1e" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="imgb3090243b0b8b57bee746bf4b23dce1e" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;b3090243b0b8b57bee746bf4b23dce1e&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;b3090243b0b8b57bee746bf4b23dce1e&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;b3090243b0b8b57bee746bf4b23dce1e&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="preb3090243b0b8b57bee746bf4b23dce1e">@startmindmap
+&lt;style&gt;
+title {
+  HorizontalAlignment right
+  FontSize 24
+  FontColor blue
+}
+
+header {
+  HorizontalAlignment center
+  FontSize 26
+  FontColor purple
+}
+
+footer {
+  HorizontalAlignment left
+  FontSize 28
+  FontColor red
+}
+
+legend {
+  FontSize 30
+  BackGroundColor yellow
+  Margin 30
+  Padding 50
+}
+
+caption {
+  FontSize 32
+}
+&lt;/style&gt;
+header some header
+
+footer some footer
+
+title My title
+
+caption This is caption
+
+legend
+The legend
+end legend
+
+* r
+** d1
+** d2
+
+@endmindmap
+</pre></code></div><div class="mycell"><img loading="lazy" width="332" height="499" class="scale" src="../imgw/img-b3090243b0b8b57bee746bf4b23dce1e.png"/></div></div></td></tr></tbody></table></p><p></p><p></p><h3>Network (nwdiag)</h3><p></p><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msg39be6279ddc0fcc31475d8c8426e5335" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="img39be6279ddc0fcc31475d8c8426e5335" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;39be6279ddc0fcc31475d8c8426e5335&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;39be6279ddc0fcc31475d8c8426e5335&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;39be6279ddc0fcc31475d8c8426e5335&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="pre39be6279ddc0fcc31475d8c8426e5335">@startuml
+&lt;style&gt;
+title {
+  HorizontalAlignment right
+  FontSize 24
+  FontColor blue
+}
+
+header {
+  HorizontalAlignment center
+  FontSize 26
+  FontColor purple
+}
+
+footer {
+  HorizontalAlignment left
+  FontSize 28
+  FontColor red
+}
+
+legend {
+  FontSize 30
+  BackGroundColor yellow
+  Margin 30
+  Padding 50
+}
+
+caption {
+  FontSize 32
+}
+&lt;/style&gt;
+header some header
+
+footer some footer
+
+title My title
+
+caption This is caption
+
+legend
+The legend
+end legend
+
+nwdiag {
+  network inet {
+      web01 [shape = cloud]
+  }
+}
+
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="312" height="495" class="scale" src="../imgw/img-39be6279ddc0fcc31475d8c8426e5335.png"/></div></div></td></tr></tbody></table></p><p></p><p></p><h3>Sequence</h3><p></p><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msg1c35c6a8bd58e67c295f367f6700ef6b" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="img1c35c6a8bd58e67c295f367f6700ef6b" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;1c35c6a8bd58e67c295f367f6700ef6b&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;1c35c6a8bd58e67c295f367f6700ef6b&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;1c35c6a8bd58e67c295f367f6700ef6b&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="pre1c35c6a8bd58e67c295f367f6700ef6b">@startuml
+&lt;style&gt;
+title {
+  HorizontalAlignment right
+  FontSize 24
+  FontColor blue
+}
+
+header {
+  HorizontalAlignment center
+  FontSize 26
+  FontColor purple
+}
+
+footer {
+  HorizontalAlignment left
+  FontSize 28
+  FontColor red
+}
+
+legend {
+  FontSize 30
+  BackGroundColor yellow
+  Margin 30
+  Padding 50
+}
+
+caption {
+  FontSize 32
+}
+&lt;/style&gt;
+header some header
+
+footer some footer
+
+title My title
+
+caption This is caption
+
+legend
+The legend
+end legend
+
+a-&gt;b
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="317" height="473" class="scale" src="../imgw/img-1c35c6a8bd58e67c295f367f6700ef6b.png"/></div></div></td></tr></tbody></table></p><p></p><p></p><h3>State</h3><p></p><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msgc7c4cf1c4a539a5a1c6eb093265fe056" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="imgc7c4cf1c4a539a5a1c6eb093265fe056" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;c7c4cf1c4a539a5a1c6eb093265fe056&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;c7c4cf1c4a539a5a1c6eb093265fe056&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;c7c4cf1c4a539a5a1c6eb093265fe056&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="prec7c4cf1c4a539a5a1c6eb093265fe056">@startuml
+&lt;style&gt;
+title {
+  HorizontalAlignment right
+  FontSize 24
+  FontColor blue
+}
+
+header {
+  HorizontalAlignment center
+  FontSize 26
+  FontColor purple
+}
+
+footer {
+  HorizontalAlignment left
+  FontSize 28
+  FontColor red
+}
+
+legend {
+  FontSize 30
+  BackGroundColor yellow
+  Margin 30
+  Padding 50
+}
+
+caption {
+  FontSize 32
+}
+&lt;/style&gt;
+header some header
+
+footer some footer
+
+title My title
+
+caption This is caption
+
+legend
+The legend
+end legend
+
+[*] --&gt; State1
+State1 -&gt; State2
+
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="317" height="510" class="scale" src="../imgw/img-c7c4cf1c4a539a5a1c6eb093265fe056.png"/></div></div></td></tr></tbody></table></p><p></p><p></p><h3>Timing</h3><p></p><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msga50cfa118a1a07dcea5887340b7fab41" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="imga50cfa118a1a07dcea5887340b7fab41" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;a50cfa118a1a07dcea5887340b7fab41&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;a50cfa118a1a07dcea5887340b7fab41&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;a50cfa118a1a07dcea5887340b7fab41&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="prea50cfa118a1a07dcea5887340b7fab41">@startuml
+&lt;style&gt;
+title {
+  HorizontalAlignment right
+  FontSize 24
+  FontColor blue
+}
+
+header {
+  HorizontalAlignment center
+  FontSize 26
+  FontColor purple
+}
+
+footer {
+  HorizontalAlignment left
+  FontSize 28
+  FontColor red
+}
+
+legend {
+  FontSize 30
+  BackGroundColor yellow
+  Margin 30
+  Padding 50
+}
+
+caption {
+  FontSize 32
+}
+&lt;/style&gt;
+header some header
+
+footer some footer
+
+title My title
+
+caption This is caption
+
+legend
+The legend
+end legend
+
+robust &#34;Web Browser&#34; as WB
+concise &#34;Web User&#34; as WU
+
+@0
+WU is Idle
+WB is Idle
+
+@100
+WU is Waiting
+WB is Processing
+
+@300
+WB is Waiting
+
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="339" height="531" class="scale" src="../imgw/img-a50cfa118a1a07dcea5887340b7fab41.png"/></div></div></td></tr></tbody></table></p><p></p><p></p><h3>Work Breakdown Structure (WBS)</h3><p></p><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msg9dbe711b3212481a57ea9dc69a108b4c" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="img9dbe711b3212481a57ea9dc69a108b4c" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;9dbe711b3212481a57ea9dc69a108b4c&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;9dbe711b3212481a57ea9dc69a108b4c&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;9dbe711b3212481a57ea9dc69a108b4c&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="pre9dbe711b3212481a57ea9dc69a108b4c">@startwbs
+&lt;style&gt;
+title {
+  HorizontalAlignment right
+  FontSize 24
+  FontColor blue
+}
+
+header {
+  HorizontalAlignment center
+  FontSize 26
+  FontColor purple
+}
+
+footer {
+  HorizontalAlignment left
+  FontSize 28
+  FontColor red
+}
+
+legend {
+  FontSize 30
+  BackGroundColor yellow
+  Margin 30
+  Padding 50
+}
+
+caption {
+  FontSize 32
+}
+&lt;/style&gt;
+header some header
+
+footer some footer
+
+title My title
+
+caption This is caption
+
+legend
+The legend
+end legend
+
+* r
+** d1
+** d2
+
+@endwbs
+</pre></code></div><div class="mycell"><img loading="lazy" width="332" height="494" class="scale" src="../imgw/img-9dbe711b3212481a57ea9dc69a108b4c.png"/></div></div></td></tr></tbody></table></p><p></p><p></p><p></p><h3>Wireframe (SALT)</h3><p></p><div class="tag" style="background:#FFD700;">FIXME</div> Fix all <strong>(<code class="cod">title</code>, <code class="cod">caption</code>, <code class="cod">legend</code>, <code class="cod">header</code>, <code class="cod">footer</code>)</strong> for salt. <div class="tag" style="background:#FFD700;">FIXME</div><p></p><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msg6b6a5efe9368437975e2091281802e45" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="img6b6a5efe9368437975e2091281802e45" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;6b6a5efe9368437975e2091281802e45&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;6b6a5efe9368437975e2091281802e45&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;6b6a5efe9368437975e2091281802e45&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="pre6b6a5efe9368437975e2091281802e45">@startsalt
+&lt;style&gt;
+title {
+  HorizontalAlignment right
+  FontSize 24
+  FontColor blue
+}
+
+header {
+  HorizontalAlignment center
+  FontSize 26
+  FontColor purple
+}
+
+footer {
+  HorizontalAlignment left
+  FontSize 28
+  FontColor red
+}
+
+legend {
+  FontSize 30
+  BackGroundColor yellow
+  Margin 30
+  Padding 50
+}
+
+caption {
+  FontSize 32
+}
+&lt;/style&gt;
+@startsalt
+header some header
+
+footer some footer
+
+title My title
+
+caption This is caption
+
+legend
+The legend
+end legend
+
+{+
+  Login    | &#34;MyName   &#34;
+  Password | &#34;****     &#34;
+  [Cancel] | [  OK   ]
+}
+@endsalt
+</pre></code></div><div class="mycell"><img loading="lazy" width="150" height="214" class="scale" src="../imgw/img-6b6a5efe9368437975e2091281802e45.png"/></div></div></td></tr></tbody></table></p><p><a style="position:relative;top:-38px;" name="5640ee4b2a998e5e"></a></p><div style="clear:both;height:50px;"></div><h2 class="chap"><img onclick="window.scrollTo(0,0);" title="Back to top" src="../backtop1.svg" width="20" height="20" class="backtop"/><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/cmp/dokuwiki/es/commons#9"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/cmp/asciidoc/es/commons#9"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/cmp/markdown/es/commons#9"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>Mainframe</h2><p></p><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msgc4ec03a18fcfc68bcd353059debc12e2" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="imgc4ec03a18fcfc68bcd353059debc12e2" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;c4ec03a18fcfc68bcd353059debc12e2&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;c4ec03a18fcfc68bcd353059debc12e2&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;c4ec03a18fcfc68bcd353059debc12e2&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="prec4ec03a18fcfc68bcd353059debc12e2">@startuml
+mainframe This is a **mainframe**
+Alice-&gt;Bob : Hello
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="160" height="180" class="scale" src="../imgw/img-c4ec03a18fcfc68bcd353059debc12e2.png"/></div></div></td></tr></tbody></table></p><p></p><p></p><em>[Ref. <a href="https://forum.plantuml.net/4019">QA-4019</a> and <a href="https://github.com/plantuml/plantuml/issues/148">Issue#148</a>]</em><a style="position:relative;top:-38px;" name="20754e54bda3b28b"></a><div style="clear:both;min-height:110px;margin-top:10px;"><div class="pezoic"><span id="ezoic-pub-ad-placeholder-117"></span><!-- ezoic_pub_ad_placeholder-117-longest_content-234x60-117-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-117-longest_content-468x60-117-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-117-longest_content-728x90-117-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-117-longest_content-970x90-117-nonexxxnonexxxxxxezmaxscaleval100 --></div></div><h2 class="chap"><img onclick="window.scrollTo(0,0);" title="Back to top" src="../backtop1.svg" width="20" height="20" class="backtop"/><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/cmp/dokuwiki/es/commons#10"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/cmp/asciidoc/es/commons#10"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/cmp/markdown/es/commons#10"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>Appendix: Examples of Mainframe on all diagram</h2><h3>Activity</h3><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msg4157b1241fe5d70823cd53e1fc67c34c" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="img4157b1241fe5d70823cd53e1fc67c34c" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;4157b1241fe5d70823cd53e1fc67c34c&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;4157b1241fe5d70823cd53e1fc67c34c&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;4157b1241fe5d70823cd53e1fc67c34c&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="pre4157b1241fe5d70823cd53e1fc67c34c">@startuml
+mainframe This is a **mainframe**
+
+start
+:Hello world;
+:This is defined on
+several **lines**;
+stop
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="175" height="263" class="scale" src="../imgw/img-4157b1241fe5d70823cd53e1fc67c34c.png"/></div></div></td></tr></tbody></table></p><p></p><p></p><h3>Archimate</h3><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msgfc49b7722ff201a52dc08429329ef340" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="imgfc49b7722ff201a52dc08429329ef340" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;fc49b7722ff201a52dc08429329ef340&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;fc49b7722ff201a52dc08429329ef340&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;fc49b7722ff201a52dc08429329ef340&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="prefc49b7722ff201a52dc08429329ef340">@startuml
+mainframe This is a **mainframe**
+
+archimate #Technology &#34;VPN Server&#34; as vpnServerA &lt;&lt;technology-device&gt;&gt;
+rectangle GO #lightgreen
+rectangle STOP #red
+rectangle WAIT #orange
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="202" height="219" class="scale" src="../imgw/img-fc49b7722ff201a52dc08429329ef340.png"/></div></div></td></tr></tbody></table></p><p></p><p></p><div class="tag" style="background:#FFD700;">FIXME</div> 🚩 Cropped on the top and on the left <div class="tag" style="background:#FFD700;">FIXME</div><p></p><h3>Class</h3><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msg76f8ed7258ba79e97859c4b284fff754" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="img76f8ed7258ba79e97859c4b284fff754" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;76f8ed7258ba79e97859c4b284fff754&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;76f8ed7258ba79e97859c4b284fff754&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;76f8ed7258ba79e97859c4b284fff754&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="pre76f8ed7258ba79e97859c4b284fff754">@startuml
+mainframe This is a **mainframe**
+
+a -- b 
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="160" height="226" class="scale" src="../imgw/img-76f8ed7258ba79e97859c4b284fff754.png"/></div></div></td></tr></tbody></table></p><p></p><p></p><div class="tag" style="background:#FFD700;">FIXME</div> 🚩 Cropped on the top and on the left <div class="tag" style="background:#FFD700;">FIXME</div><p></p><h3>Component, Deployment, Use-Case</h3><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msg01e5b0c8e305ebb15d58430df9e976c5" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="img01e5b0c8e305ebb15d58430df9e976c5" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;01e5b0c8e305ebb15d58430df9e976c5&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;01e5b0c8e305ebb15d58430df9e976c5&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;01e5b0c8e305ebb15d58430df9e976c5&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="pre01e5b0c8e305ebb15d58430df9e976c5">@startuml
+mainframe This is a **mainframe**
+
+node n
+(u) -&gt; [c]
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="244" height="127" class="scale" src="../imgw/img-01e5b0c8e305ebb15d58430df9e976c5.png"/></div></div></td></tr></tbody></table></p><p></p><p></p><div class="tag" style="background:#FFD700;">FIXME</div> 🚩 Cropped on the top and on the left <div class="tag" style="background:#FFD700;">FIXME</div><p></p><h3>Gantt project planning</h3><p></p><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msgb73364dcd575241caf43088015f36825" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="imgb73364dcd575241caf43088015f36825" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;b73364dcd575241caf43088015f36825&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;b73364dcd575241caf43088015f36825&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;b73364dcd575241caf43088015f36825&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="preb73364dcd575241caf43088015f36825">@startgantt
+mainframe This is a **mainframe**
+
+[t] lasts 5 days
+@endgantt
+</pre></code></div><div class="mycell"><img loading="lazy" width="155" height="107" class="scale" src="../imgw/img-b73364dcd575241caf43088015f36825.png"/></div></div></td></tr></tbody></table></p><p></p><p></p><div class="tag" style="background:#FFD700;">FIXME</div> 🚩 Cropped on the top and on the left <div class="tag" style="background:#FFD700;">FIXME</div><p></p><h3>Object</h3><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msgd5a4ef8e198f23acc9f02515bb8f0cec" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="imgd5a4ef8e198f23acc9f02515bb8f0cec" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;d5a4ef8e198f23acc9f02515bb8f0cec&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;d5a4ef8e198f23acc9f02515bb8f0cec&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;d5a4ef8e198f23acc9f02515bb8f0cec&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="pred5a4ef8e198f23acc9f02515bb8f0cec">@startuml
+mainframe This is a **mainframe**
+
+object user {
+  name = &#34;Dummy&#34;
+  id = 123
+}
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="166" height="141" class="scale" src="../imgw/img-d5a4ef8e198f23acc9f02515bb8f0cec.png"/></div></div></td></tr></tbody></table></p><p></p><p></p><div class="tag" style="background:#FFD700;">FIXME</div> 🚩 Cropped on the top! <div class="tag" style="background:#FFD700;">FIXME</div><p></p><h3>MindMap</h3><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msgf96d340eb641f8b6f414e6fbc52ca7b1" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="imgf96d340eb641f8b6f414e6fbc52ca7b1" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;f96d340eb641f8b6f414e6fbc52ca7b1&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;f96d340eb641f8b6f414e6fbc52ca7b1&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;f96d340eb641f8b6f414e6fbc52ca7b1&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="pref96d340eb641f8b6f414e6fbc52ca7b1">@startmindmap
+mainframe This is a **mainframe**
+
+* r
+** d1
+** d2
+@endmindmap
+</pre></code></div><div class="mycell"><img loading="lazy" width="175" height="192" class="scale" src="../imgw/img-f96d340eb641f8b6f414e6fbc52ca7b1.png"/></div></div></td></tr></tbody></table></p><p></p><p></p><h3>Network (nwdiag)</h3><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msgaed3d2ca9c6d71e8b995760441094ff7" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="imgaed3d2ca9c6d71e8b995760441094ff7" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;aed3d2ca9c6d71e8b995760441094ff7&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;aed3d2ca9c6d71e8b995760441094ff7&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;aed3d2ca9c6d71e8b995760441094ff7&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="preaed3d2ca9c6d71e8b995760441094ff7">@startuml
+mainframe This is a **mainframe**
+
+nwdiag {
+  network inet {
+      web01 [shape = cloud]
+  }
+}
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="160" height="188" class="scale" src="../imgw/img-aed3d2ca9c6d71e8b995760441094ff7.png"/></div></div></td></tr></tbody></table></p><p></p><p></p><div class="tag" style="background:#FFD700;">FIXME</div> 🚩 Cropped on the top! <div class="tag" style="background:#FFD700;">FIXME</div><p></p><h3>Sequence</h3><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msgda40a4db3e809efe4654a2818235f1cb" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="imgda40a4db3e809efe4654a2818235f1cb" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;da40a4db3e809efe4654a2818235f1cb&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;da40a4db3e809efe4654a2818235f1cb&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;da40a4db3e809efe4654a2818235f1cb&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="preda40a4db3e809efe4654a2818235f1cb">@startuml
+mainframe This is a **mainframe**
+
+a-&gt;b
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="160" height="164" class="scale" src="../imgw/img-da40a4db3e809efe4654a2818235f1cb.png"/></div></div></td></tr></tbody></table></p><p></p><p></p><h3>State</h3><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msg591c46f472fa96462e728fdaf81111dc" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="img591c46f472fa96462e728fdaf81111dc" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;591c46f472fa96462e728fdaf81111dc&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;591c46f472fa96462e728fdaf81111dc&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;591c46f472fa96462e728fdaf81111dc&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="pre591c46f472fa96462e728fdaf81111dc">@startuml
+mainframe This is a **mainframe**
+
+[*] --&gt; State1
+State1 -&gt; State2
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="190" height="199" class="scale" src="../imgw/img-591c46f472fa96462e728fdaf81111dc.png"/></div></div></td></tr></tbody></table></p><p></p><p></p><div class="tag" style="background:#FFD700;">FIXME</div> 🚩 Cropped on the top and on the left <div class="tag" style="background:#FFD700;">FIXME</div><p></p><h3>Timing</h3><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msg4b6cbcef05153c2a4a22913d816ba8e9" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="img4b6cbcef05153c2a4a22913d816ba8e9" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;4b6cbcef05153c2a4a22913d816ba8e9&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;4b6cbcef05153c2a4a22913d816ba8e9&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;4b6cbcef05153c2a4a22913d816ba8e9&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="pre4b6cbcef05153c2a4a22913d816ba8e9">@startuml
+mainframe This is a **mainframe**
+
+robust &#34;Web Browser&#34; as WB
+concise &#34;Web User&#34; as WU
+@0
+WU is Idle
+WB is Idle
+@100
+WU is Waiting
+WB is Processing
+@300
+WB is Waiting
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="325" height="230" class="scale" src="../imgw/img-4b6cbcef05153c2a4a22913d816ba8e9.png"/></div></div></td></tr></tbody></table></p><p></p><p></p><h3>Work Breakdown Structure (WBS)</h3><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msg3a71f3a5d6e827d5bc0ce966cc6f9f75" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="img3a71f3a5d6e827d5bc0ce966cc6f9f75" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;3a71f3a5d6e827d5bc0ce966cc6f9f75&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;3a71f3a5d6e827d5bc0ce966cc6f9f75&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;3a71f3a5d6e827d5bc0ce966cc6f9f75&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="pre3a71f3a5d6e827d5bc0ce966cc6f9f75">@startwbs
+mainframe This is a **mainframe**
+* r
+** d1
+** d2
+@endwbs
+</pre></code></div><div class="mycell"><img loading="lazy" width="175" height="187" class="scale" src="../imgw/img-3a71f3a5d6e827d5bc0ce966cc6f9f75.png"/></div></div></td></tr></tbody></table></p><p></p><p></p><h3>Wireframe (SALT)</h3><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msg3d9e6f8be909970d4591ca78f9c2c52e" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="img3d9e6f8be909970d4591ca78f9c2c52e" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;3d9e6f8be909970d4591ca78f9c2c52e&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;3d9e6f8be909970d4591ca78f9c2c52e&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;3d9e6f8be909970d4591ca78f9c2c52e&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="pre3d9e6f8be909970d4591ca78f9c2c52e">@startsalt
+mainframe This is a **mainframe**
+{+
+  Login    | &#34;MyName   &#34;
+  Password | &#34;****     &#34;
+  [Cancel] | [  OK   ]
+}
+@endsalt
+</pre></code></div><div class="mycell"><img loading="lazy" width="176" height="131" class="scale" src="../imgw/img-3d9e6f8be909970d4591ca78f9c2c52e.png"/></div></div></td></tr></tbody></table></p><p><a style="position:relative;top:-38px;" name="31c7989cdfaf186a"></a></p><div style="clear:both;height:50px;"></div><h2 class="chap"><img onclick="window.scrollTo(0,0);" title="Back to top" src="../backtop1.svg" width="20" height="20" class="backtop"/><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/cmp/dokuwiki/es/commons#11"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/cmp/asciidoc/es/commons#11"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/cmp/markdown/es/commons#11"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>Appendix: Examples of title, header, footer, caption, legend and mainframe on all diagram</h2><p></p><h3>Activity</h3><p></p><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msg0a84f59cf95e991efe1ba81f10865e74" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="img0a84f59cf95e991efe1ba81f10865e74" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;0a84f59cf95e991efe1ba81f10865e74&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;0a84f59cf95e991efe1ba81f10865e74&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;0a84f59cf95e991efe1ba81f10865e74&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="pre0a84f59cf95e991efe1ba81f10865e74">@startuml
+mainframe This is a **mainframe**
+header some header
+
+footer some footer
+
+title My title
+
+caption This is caption
+
+legend
+The legend
+end legend
+
+start
+:Hello world;
+:This is defined on
+several **lines**;
+stop
+
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="175" height="395" class="scale" src="../imgw/img-0a84f59cf95e991efe1ba81f10865e74.png"/></div></div></td></tr></tbody></table></p><p></p><p></p><h3>Archimate</h3><p></p><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msg1bc5bc21c0e812085543b02d950402ce" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="img1bc5bc21c0e812085543b02d950402ce" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;1bc5bc21c0e812085543b02d950402ce&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;1bc5bc21c0e812085543b02d950402ce&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;1bc5bc21c0e812085543b02d950402ce&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="pre1bc5bc21c0e812085543b02d950402ce">@startuml
+mainframe This is a **mainframe**
+header some header
+
+footer some footer
+
+title My title
+
+caption This is caption
+
+legend
+The legend
+end legend
+
+archimate #Technology &#34;VPN Server&#34; as vpnServerA &lt;&lt;technology-device&gt;&gt;
+
+rectangle GO #lightgreen
+rectangle STOP #red
+rectangle WAIT #orange
+
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="202" height="357" class="scale" src="../imgw/img-1bc5bc21c0e812085543b02d950402ce.png"/></div></div></td></tr></tbody></table></p><p></p><p></p><h3>Class</h3><p></p><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msg303ec70bcfc9d21804cd260f3f7b6dfa" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="img303ec70bcfc9d21804cd260f3f7b6dfa" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;303ec70bcfc9d21804cd260f3f7b6dfa&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;303ec70bcfc9d21804cd260f3f7b6dfa&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;303ec70bcfc9d21804cd260f3f7b6dfa&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="pre303ec70bcfc9d21804cd260f3f7b6dfa">@startuml
+mainframe This is a **mainframe**
+header some header
+
+footer some footer
+
+title My title
+
+caption This is caption
+
+legend
+The legend
+end legend
+
+a -- b 
+
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="183" height="363" class="scale" src="../imgw/img-303ec70bcfc9d21804cd260f3f7b6dfa.png"/></div></div></td></tr></tbody></table></p><p></p><p></p><h3>Component, Deployment, Use-Case</h3><p></p><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msgb4a11f83fd445f1b60a09f8d5e2864fb" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="imgb4a11f83fd445f1b60a09f8d5e2864fb" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;b4a11f83fd445f1b60a09f8d5e2864fb&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;b4a11f83fd445f1b60a09f8d5e2864fb&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;b4a11f83fd445f1b60a09f8d5e2864fb&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="preb4a11f83fd445f1b60a09f8d5e2864fb">@startuml
+mainframe This is a **mainframe**
+header some header
+
+footer some footer
+
+title My title
+
+caption This is caption
+
+legend
+The legend
+end legend
+
+node n
+(u) -&gt; [c]
+
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="244" height="265" class="scale" src="../imgw/img-b4a11f83fd445f1b60a09f8d5e2864fb.png"/></div></div></td></tr></tbody></table></p><p></p><p></p><h3>Gantt project planning</h3><p></p><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msg824ddd6385e7ab29d736dc792712401f" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="img824ddd6385e7ab29d736dc792712401f" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;824ddd6385e7ab29d736dc792712401f&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;824ddd6385e7ab29d736dc792712401f&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;824ddd6385e7ab29d736dc792712401f&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="pre824ddd6385e7ab29d736dc792712401f">@startgantt
+mainframe This is a **mainframe**
+header some header
+
+footer some footer
+
+title My title
+
+caption This is caption
+
+legend
+The legend
+end legend
+
+
+[t] lasts 5 days
+
+@endgantt
+</pre></code></div><div class="mycell"><img loading="lazy" width="158" height="239" class="scale" src="../imgw/img-824ddd6385e7ab29d736dc792712401f.png"/></div></div></td></tr></tbody></table></p><p></p><p></p><h3>Object</h3><p></p><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msg08d44e8996cf88265e589a0c2d67c706" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="img08d44e8996cf88265e589a0c2d67c706" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;08d44e8996cf88265e589a0c2d67c706&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;08d44e8996cf88265e589a0c2d67c706&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;08d44e8996cf88265e589a0c2d67c706&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="pre08d44e8996cf88265e589a0c2d67c706">@startuml
+mainframe This is a **mainframe**
+header some header
+
+footer some footer
+
+title My title
+
+caption This is caption
+
+legend
+The legend
+end legend
+
+object user {
+  name = &#34;Dummy&#34;
+  id = 123
+}
+
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="166" height="273" class="scale" src="../imgw/img-08d44e8996cf88265e589a0c2d67c706.png"/></div></div></td></tr></tbody></table></p><p></p><p></p><h3>MindMap</h3><p></p><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msg707ea656e3bb4eb6e5f5709befb4d750" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="img707ea656e3bb4eb6e5f5709befb4d750" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;707ea656e3bb4eb6e5f5709befb4d750&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;707ea656e3bb4eb6e5f5709befb4d750&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;707ea656e3bb4eb6e5f5709befb4d750&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="pre707ea656e3bb4eb6e5f5709befb4d750">@startmindmap
+mainframe This is a **mainframe**
+header some header
+
+footer some footer
+
+title My title
+
+caption This is caption
+
+legend
+The legend
+end legend
+
+* r
+** d1
+** d2
+
+@endmindmap
+</pre></code></div><div class="mycell"><img loading="lazy" width="175" height="324" class="scale" src="../imgw/img-707ea656e3bb4eb6e5f5709befb4d750.png"/></div></div></td></tr></tbody></table></p><p></p><p></p><h3>Network (nwdiag)</h3><p></p><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msgb31589503a014f1366231231cab39909" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="imgb31589503a014f1366231231cab39909" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;b31589503a014f1366231231cab39909&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;b31589503a014f1366231231cab39909&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;b31589503a014f1366231231cab39909&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="preb31589503a014f1366231231cab39909">@startuml
+mainframe This is a **mainframe**
+header some header
+
+footer some footer
+
+title My title
+
+caption This is caption
+
+legend
+The legend
+end legend
+
+nwdiag {
+  network inet {
+      web01 [shape = cloud]
+  }
+}
+
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="160" height="320" class="scale" src="../imgw/img-b31589503a014f1366231231cab39909.png"/></div></div></td></tr></tbody></table></p><p></p><p></p><h3>Sequence</h3><p></p><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msg6cbbe917ec483dc9c21b92a9204c511c" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="img6cbbe917ec483dc9c21b92a9204c511c" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;6cbbe917ec483dc9c21b92a9204c511c&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;6cbbe917ec483dc9c21b92a9204c511c&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;6cbbe917ec483dc9c21b92a9204c511c&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="pre6cbbe917ec483dc9c21b92a9204c511c">@startuml
+mainframe This is a **mainframe**
+header some header
+
+footer some footer
+
+title My title
+
+caption This is caption
+
+legend
+The legend
+end legend
+
+a-&gt;b
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="181" height="308" class="scale" src="../imgw/img-6cbbe917ec483dc9c21b92a9204c511c.png"/></div></div></td></tr></tbody></table></p><p></p><p></p><h3>State</h3><p></p><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msg8fa18df25612b474e1683ef76841cb13" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="img8fa18df25612b474e1683ef76841cb13" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;8fa18df25612b474e1683ef76841cb13&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;8fa18df25612b474e1683ef76841cb13&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;8fa18df25612b474e1683ef76841cb13&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="pre8fa18df25612b474e1683ef76841cb13">@startuml
+mainframe This is a **mainframe**
+header some header
+
+footer some footer
+
+title My title
+
+caption This is caption
+
+legend
+The legend
+end legend
+
+[*] --&gt; State1
+State1 -&gt; State2
+
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="190" height="335" class="scale" src="../imgw/img-8fa18df25612b474e1683ef76841cb13.png"/></div></div></td></tr></tbody></table></p><p></p><p></p><h3>Timing</h3><p></p><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msg14fb2d74149ffea36986c4edf1757133" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="img14fb2d74149ffea36986c4edf1757133" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;14fb2d74149ffea36986c4edf1757133&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;14fb2d74149ffea36986c4edf1757133&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;14fb2d74149ffea36986c4edf1757133&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="pre14fb2d74149ffea36986c4edf1757133">@startuml
+mainframe This is a **mainframe**
+header some header
+
+footer some footer
+
+title My title
+
+caption This is caption
+
+legend
+The legend
+end legend
+
+robust &#34;Web Browser&#34; as WB
+concise &#34;Web User&#34; as WU
+
+@0
+WU is Idle
+WB is Idle
+
+@100
+WU is Waiting
+WB is Processing
+
+@300
+WB is Waiting
+
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="325" height="356" class="scale" src="../imgw/img-14fb2d74149ffea36986c4edf1757133.png"/></div></div></td></tr></tbody></table></p><p></p><p></p><h3>Work Breakdown Structure (WBS)</h3><p></p><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msg65464d3a2cb623772938f753fdfed33b" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="img65464d3a2cb623772938f753fdfed33b" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;65464d3a2cb623772938f753fdfed33b&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;65464d3a2cb623772938f753fdfed33b&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;65464d3a2cb623772938f753fdfed33b&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="pre65464d3a2cb623772938f753fdfed33b">@startwbs
+mainframe This is a **mainframe**
+header some header
+
+footer some footer
+
+title My title
+
+caption This is caption
+
+legend
+The legend
+end legend
+
+* r
+** d1
+** d2
+
+@endwbs
+</pre></code></div><div class="mycell"><img loading="lazy" width="187" height="333" class="scale" src="../imgw/img-65464d3a2cb623772938f753fdfed33b.png"/></div></div></td></tr></tbody></table></p><p></p><p></p><p></p><h3>Wireframe (SALT)</h3><p></p><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msgca157bea6dc121686ce5a7d42ba309b0" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="imgca157bea6dc121686ce5a7d42ba309b0" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;ca157bea6dc121686ce5a7d42ba309b0&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;ca157bea6dc121686ce5a7d42ba309b0&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;ca157bea6dc121686ce5a7d42ba309b0&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="preca157bea6dc121686ce5a7d42ba309b0">@startsalt
+mainframe This is a **mainframe**
+header some header
+
+footer some footer
+
+title My title
+
+caption This is caption
+
+legend
+The legend
+end legend
+
+{+
+  Login    | &#34;MyName   &#34;
+  Password | &#34;****     &#34;
+  [Cancel] | [  OK   ]
+}
+@endsalt
+</pre></code></div><div class="mycell"><img loading="lazy" width="176" height="263" class="scale" src="../imgw/img-ca157bea6dc121686ce5a7d42ba309b0.png"/></div></div></td></tr></tbody></table></p><p></p></td><td id="toctd" valign="top" style="max-width:240px;min-width:240px;"><div id="toc"><ul><li><a href="commons.html#8413c683b4b27cc3">Comments</a></li><li><a href="commons.html#4252b72e6ebcd4d4">Zoom</a></li><li><a href="commons.html#b78a322350389672">Title</a></li><li><a href="commons.html#272ba7d164aa8369">Caption</a></li><li><a href="commons.html#f443cae2041edc16">Footer and header</a></li><li><a href="commons.html#3b05da228ffe6d52">Legend the diagram</a></li><li><a href="commons.html#6dd346f9babe70c8">Appendix: Examples on all diagram</a></li><li><a href="commons.html#c32ea2e4e4eb541a">Appendix: Examples on all diagram with style</a></li><li><a href="commons.html#5640ee4b2a998e5e">Mainframe</a></li><li><a href="commons.html#20754e54bda3b28b">Appendix: Examples of Mainframe on all diagram</a></li><li><a href="commons.html#31c7989cdfaf186a">Appendix: Examples of title, header, footer, caption, legend and mainframe on all diagram</a></li></ul></div></td></tr></tbody></table></p><p></p><span id="ezoic-pub-ad-placeholder-104"></span><!-- ezoic_pub_ad_placeholder-104-bottom_of_page-234x60-104-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-104-bottom_of_page-468x60-104-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-104-bottom_of_page-728x90-104-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-104-bottom_of_page-970x250-104-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-104-bottom_of_page-300x250x3-104-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-104-bottom_of_page-970x90-104-nonexxxnonexxxxxxezmaxscaleval100 --></div><style>.btm{text-align:center}.btm a{text-decoration:none;color:#637282}.btm a:hover{color:#0366d6}</style><div class="btm"><hr/><a href="https://g.ezoic.net/privacy/plantuml.com"><small>Privacy Policy</small></a>      <a href="../direct-sales.html"><small>Advertise</small></a><p></p></div><script>var sc_project=11129475;var sc_invisible=1;var sc_security="b9fcaf41";</script><script async="" src="https://www.statcounter.com/counter/counter.js"></script><!--[selectrongo:done]--><script type="text/javascript">
+				var __inScopeForCCPA = false;
+		function __uspapi(command, version, callback) {
+			var response = null;
+			var successs = false;
+			if (command === "getUSPData" && version === 1) {
+				var uspString = "1"; // Version
+				if (__inScopeForCCPA) {
+					uspString += "N"; // Has Explicit Notice for Opt Out been provided (ex footer or minor consent modal)
+					var result;
+					var consentCookie = (result = new RegExp('(?:^|; )ezoccpaconsent=([^;]*)').exec(document.cookie)) ? (result[1]) : null;
+					if (consentCookie === "nonconsent") {
+						uspString += "Y";
+					}
+					else {
+						uspString += "N";
+					}
+					uspString += "N" // Is pub a signatory to the IAB Limited Service Provider Agreement (http://www.iabprivacy.com/)
+				}
+				else {
+					uspString += "---";
+				}
+				response = {
+					uspString: uspString,
+					version: 1
+				};
+				success = true;
+			}
+			return callback(response, success);
+		};
+		function __receiveUspapiMessage(event) {
+			if (event.data.hasOwnProperty('__uspapiCall')) {
+				__uspapi('getUSPData', 1, function(uspData, success) {
+					event.source.postMessage({
+						__uspapiReturn: {
+							returnValue: uspData,
+							success: success,
+							callId: event.data.__uspapiCall.callId
+						}
+					},
+					event.origin);
+				});
+			}
+			return null;
+		};
+		window.addEventListener("message", __receiveUspapiMessage, false);
+</script>
+<script>__ez.queue.addFile('/tardisrocinante/vitals.js', '/tardisrocinante/vitals.js?gcb=2&cb=3', false, ['/parsonsmaize/mulvane.js'], true, false, true, false);</script>
+<script>var _audins_dom="plantuml_com",_audins_did=173770;__ez.queue.addDelayFunc("audins.js","__ez.script.add", "//go.ezodn.com/detroitchicago/audins.js?cb=195-2");</script><noscript><div style="display:none;"><img src="https://pixel.quantserve.com/pixel/p-31iz6hfFutd16.gif?labels=Domain.plantuml_com,DomainId.173770" border="0" height="1" width="1" alt="Quantcast"/></div></noscript>
+<script>__ez.queue.addFile('/beardeddragon/drake.js', '/beardeddragon/drake.js?gcb=2&cb=4', false, [], true, false, true, false);</script>
+<script type="text/javascript" style='display:none;'>var __ez_dims = (function() {
+		var setCookie = function( name, content, expiry ) {
+			return document.cookie = name+'='+content+((expiry)?';expires='+(new Date(Math.floor(new Date().getTime()+expiry*1000)).toUTCString()):'')+';path=/';
+		};
+		var ffid = 1;
+		var oh = window.screen.height;
+		var ow = window.screen.width;
+		var h = ffid === 1 ? oh : (oh > ow) ? oh : ow;
+		var w = ffid === 1 ? ow : (oh > ow) ? ow : oh;
+		var uh = window.innerHeight || document.documentElement.clientHeight || document.getElementsByTagName('body')[0].clientHeight;
+		var uw = window.innerWidth || document.documentElement.clientWidth || document.getElementsByTagName('body')[0].clientWidth;
+		setCookie('ezds', encodeURIComponent('ffid='+ffid+',w='+w+',h='+h), (31536e3*7));
+		setCookie('ezohw', encodeURIComponent('w='+uw+',h='+uh), (31536e3*7));
+	})();</script>
+<script type='text/javascript' style='display:none;' async>__ez.queue.addFile('/parsonsmaize/chanute.js', '/parsonsmaize/chanute.js?a=a&cb=7&dcb=195-2&shcb=34', true, ['/parsonsmaize/mulvane.js'], true, false, false, false);</script>
+<script type='text/javascript' style='display:none;' async>__ez.queue.addFile('/porpoiseant/jellyfish.js', '/porpoiseant/jellyfish.js?a=a&cb=10&dcb=195-2&shcb=34', false, [], true, false, false, false);</script></body></html>

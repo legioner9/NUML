@@ -1,0 +1,2092 @@
+<html lang="zh"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<script data-ezscrex='false' data-cfasync='false' data-pagespeed-no-defer>var __ez=__ez||{};__ez.stms=Date.now();__ez.evt={};__ez.script={};__ez.ck=__ez.ck||{};__ez.template={};__ez.template.isOrig=false;__ez.queue=function(){var e=0,i=0,t=[],n=!1,o=[],r=[],s=!0,a=function(e,i,n,o,r,s,a){var l=arguments.length>7&&void 0!==arguments[7]?arguments[7]:window,d=this;this.name=e,this.funcName=i,this.parameters=null===n?null:p(n)?n:[n],this.isBlock=o,this.blockedBy=r,this.deleteWhenComplete=s,this.isError=!1,this.isComplete=!1,this.isInitialized=!1,this.proceedIfError=a,this.fWindow=l,this.isTimeDelay=!1,this.process=function(){f("... func = "+e),d.isInitialized=!0,d.isComplete=!0,f("... func.apply: "+e);var i=d.funcName.split("."),n=null,o=this.fWindow||window;i.length>3||(n=3===i.length?o[i[0]][i[1]][i[2]]:2===i.length?o[i[0]][i[1]]:o[d.funcName]),null!=n&&n.apply(null,this.parameters),!0===d.deleteWhenComplete&&delete t[e],!0===d.isBlock&&(f("----- F'D: "+d.name),u())}},l=function(e,i,t,n,o,r,s){var a=arguments.length>7&&void 0!==arguments[7]?arguments[7]:window,l=this;this.name=e,this.path=i,this.async=o,this.defer=r,this.isBlock=t,this.blockedBy=n,this.isInitialized=!1,this.isError=!1,this.isComplete=!1,this.proceedIfError=s,this.fWindow=a,this.isTimeDelay=!1,this.isPath=function(e){return"/"===e[0]&&"/"!==e[1]},this.getSrc=function(e){return void 0!==window.__ezScriptHost&&this.isPath(e)&&"banger.js"!==this.name?window.__ezScriptHost+e:e},this.process=function(){l.isInitialized=!0,f("... file = "+e);var i=this.fWindow?this.fWindow.document:document,t=i.createElement("script");t.src=this.getSrc(this.path),!0===o?t.async=!0:!0===r&&(t.defer=!0),t.onerror=function(){var e={url:window.location.href,name:l.name,path:l.path,user_agent:window.navigator.userAgent};"undefined"!=typeof _ezaq&&(e.pageview_id=_ezaq.page_view_id);var i=encodeURIComponent(JSON.stringify(e)),t=new XMLHttpRequest;t.open("GET","//g.ezoic.net/ezqlog?d="+i,!0),t.send(),f("----- ERR'D: "+l.name),l.isError=!0,!0===l.isBlock&&u()},t.onreadystatechange=t.onload=function(){var e=t.readyState;f("----- F'D: "+l.name),e&&!/loaded|complete/.test(e)||(l.isComplete=!0,!0===l.isBlock&&u())},i.getElementsByTagName("head")[0].appendChild(t)}},d=function(e,i){this.name=e,this.path="",this.async=!1,this.defer=!1,this.isBlock=!1,this.blockedBy=[],this.isInitialized=!0,this.isError=!1,this.isComplete=i,this.proceedIfError=!1,this.isTimeDelay=!1,this.process=function(){}};function c(e){!0!==h(e)&&0!=s&&e.process()}function h(e){if(!0===e.isTimeDelay&&!1===n)return f(e.name+" blocked = TIME DELAY!"),!0;if(p(e.blockedBy))for(var i=0;i<e.blockedBy.length;i++){var o=e.blockedBy[i];if(!1===t.hasOwnProperty(o))return f(e.name+" blocked = "+o),!0;if(!0===e.proceedIfError&&!0===t[o].isError)return!1;if(!1===t[o].isComplete)return f(e.name+" blocked = "+o),!0}return!1}function f(e){var i=window.location.href,t=new RegExp("[?&]ezq=([^&#]*)","i").exec(i);"1"===(t?t[1]:null)&&console.debug(e)}function u(){++e>200||(f("let's go"),m(o),m(r))}function m(e){for(var i in e)if(!1!==e.hasOwnProperty(i)){var t=e[i];!0===t.isComplete||h(t)||!0===t.isInitialized||!0===t.isError?!0===t.isError?f(t.name+": error"):!0===t.isComplete?f(t.name+": complete already"):!0===t.isInitialized&&f(t.name+": initialized already"):t.process()}}function p(e){return"[object Array]"==Object.prototype.toString.call(e)}return window.addEventListener("load",(function(){setTimeout((function(){n=!0,f("TDELAY -----"),u()}),5e3)}),!1),{addFile:function(e,i,n,s,a,d,h,f,u){var m=new l(e,i,n,s,a,d,h,u);!0===f?o[e]=m:r[e]=m,t[e]=m,c(m)},addDelayFile:function(e,i){var n=new l(e,i,!1,[],!1,!1,!0);n.isTimeDelay=!0,f(e+" ...  FILE! TDELAY"),r[e]=n,t[e]=n,c(n)},addFunc:function(e,n,s,l,d,h,f,u,m,p){!0===h&&(e=e+"_"+i++);var w=new a(e,n,s,l,d,f,u,p);!0===m?o[e]=w:r[e]=w,t[e]=w,c(w)},addDelayFunc:function(e,i,n){var o=new a(e,i,n,!1,[],!0,!0);o.isTimeDelay=!0,f(e+" ...  FUNCTION! TDELAY"),r[e]=o,t[e]=o,c(o)},items:t,processAll:u,setallowLoad:function(e){s=e},markLoaded:function(e){if(e&&0!==e.length){if(e in t){var i=t[e];!0===i.isComplete?f(i.name+" "+e+": error loaded duplicate"):(i.isComplete=!0,i.isInitialized=!0)}else t[e]=new d(e,!0);f("markLoaded dummyfile: "+t[e].name)}},logWhatsBlocked:function(){for(var e in t)!1!==t.hasOwnProperty(e)&&h(t[e])}}}();__ez.evt.add=function(e,t,n){e.addEventListener?e.addEventListener(t,n,!1):e.attachEvent?e.attachEvent("on"+t,n):e["on"+t]=n()},__ez.evt.remove=function(e,t,n){e.removeEventListener?e.removeEventListener(t,n,!1):e.detachEvent?e.detachEvent("on"+t,n):delete e["on"+t]};__ez.script.add=function(e){var t=document.createElement("script");t.src=e,t.async=!0,t.type="text/javascript",document.getElementsByTagName("head")[0].appendChild(t)};__ez.dot={};__ez.queue.addFile('/detroitchicago/boise.js', '/detroitchicago/boise.js?gcb=195-2&cb=2', true, [], true, false, true, false);__ez.queue.addFile('/parsonsmaize/abilene.js', '/parsonsmaize/abilene.js?gcb=195-2&cb=28', true, [], true, false, true, false);</script>
+<script data-ezscrex="false" type="text/javascript" data-cfasync="false">window._ezaq = Object.assign({}, typeof window._ezaq !== "undefined" ? window._ezaq : {}, {"ad_cache_level":1,"domain_id":173770,"ezcache_level":2,"ezcache_skip_code":0,"has_bad_image":0,"has_bad_words":0,"is_sitespeed":0,"lt_cache_level":0,"page_view_id":"7631b2bd-e93d-4b94-6598-56b99edec424","response_size_orig":76622,"response_time_orig":5,"template_id":134,"url":"https://plantuml.com/zh-dark/faq","word_count":1333,"worst_bad_word_level":0});__ez.queue.markLoaded('ezaqBaseReady');</script>
+<script type="text/javascript">(function(){function storageAvailable(type){var storage;try{storage=window[type];var x='__storage_test__';storage.setItem(x,x);storage.removeItem(x);return true;}
+catch(e){return e instanceof DOMException&&(e.code===22||e.code===1014||e.name==='QuotaExceededError'||e.name==='NS_ERROR_DOM_QUOTA_REACHED')&&(storage&&storage.length!==0);}}
+function remove_ama_config(){if(storageAvailable('localStorage')){localStorage.removeItem("google_ama_config");}}
+remove_ama_config()})()</script>
+<script type="text/javascript">var ezoicTestActive = true</script>
+<script data-ezscrex="false" type="text/javascript" data-cfasync="false">window._ezaq = Object.assign({}, typeof window._ezaq !== "undefined" ? window._ezaq : {}, {"ab_test_id":"mod174-c","ad_cache_level":1,"ad_count_adjustment":0,"ad_lazyload_version":0,"ad_load_version":1,"ad_location_ids":"","adx_ad_count":0,"ai_placeholder_cache_level":1,"ai_placeholder_placement_cnt":-1,"bidder_method":1,"bidder_version":3,"city":"Krasnoyarsk","country":"RU","days_since_last_visit":-1,"display_ad_count":0,"domain_id":173770,"domain_test_group":20230802,"ds_adsize_opt_id":-1,"engaged_time_visit":0,"ezcache_level":2,"ezcache_skip_code":0,"form_factor_id":1,"framework_id":1,"has_bad_image":0,"has_bad_words":0,"iab_category":"","iab_category_0":"596","is_embed":false,"is_from_recommended_pages":false,"is_return_visitor":false,"is_sitespeed":0,"last_page_load":"","last_pageview_id":"","lt_cache_level":0,"max_ads":0,"metro_code":0,"optimization_version":1,"page_ad_positions":"","page_view_count":1116,"page_view_id":"7631b2bd-e93d-4b94-6598-56b99edec424","position_selection_id":0,"postal_code":"660000","pv_event_count":0,"response_size_orig":76622,"response_time_orig":5,"serverid":"i-038315b63151634b6","state":"KYA","sub_page_ad_positions":"","t_epoch":1697691213,"template_id":134,"time_on_site_visit":0,"url":"https://plantuml.com/zh-dark/faq","word_count":1333,"worst_bad_word_level":0});__ez.queue.markLoaded('ezaqReady');</script>
+<script data-ezscrex='false' data-cfasync='false' data-pagespeed-no-defer>__ez.queue.addFile('/parsonsmaize/mulvane.js', '/parsonsmaize/mulvane.js?gcb=195-2&cb=5', true, ['/parsonsmaize/abilene.js'], true, false, true, false);__ez.queue.addFile('/parsonsmaize/olathe.js', '/parsonsmaize/olathe.js?gcb=195-2&cb=20', false, ['/parsonsmaize/abilene.js','/parsonsmaize/mulvane.js'], true, false, true, false);__ez.queue.addFile('/porpoiseant/et.js', '/porpoiseant/et.js?gcb=195-2&cb=2', false, [], true, false, true, false);!function(){var e;__ez.vep=(e=[],{Add:function(i,t){__ez.dot.isDefined(i)&&__ez.dot.isValid(t)&&e.push({type:"video",video_impression_id:i,domain_id:__ez.dot.getDID(),t_epoch:__ez.dot.getEpoch(0),data:__ez.dot.dataToStr(t)})},Fire:function(){if(void 0===document.visibilityState||"prerender"!==document.visibilityState){if(__ez.dot.isDefined(e)&&e.length>0)for(;e.length>0;){var i=5;i>e.length&&(i=e.length);var t=e.splice(0,i),o=__ez.dot.getURL("/detroitchicago/grapefruit.gif")+"?orig="+(!0===__ez.template.isOrig?1:0)+"&v="+btoa(JSON.stringify(t));__ez.dot.Fire(o)}e=[]}}})}();</script><script data-ezscrex='false' data-cfasync='false' data-pagespeed-no-defer>!function(){function e(i){return e="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e},e(i)}__ez.pel=function(){var i=[];function t(t,o,d,_,n,r,a,s){if(__ez.dot.isDefined(t)&&0!=__ez.dot.isAnyDefined(t.getSlotElementId,t.ElementId)){void 0===s&&(s=!1);var p=parseInt(__ez.dot.getTargeting(t,"ap")),f=__ez.dot.getSlotIID(t),u=__ez.dot.getAdUnit(t,s),z=parseInt(__ez.dot.getTargeting(t,"compid")),g=0,c=0,l=function(i){if("undefined"==typeof _ezim_d)return!1;var t=__ez.dot.getAdUnitPath(i).split("/").pop();if("object"===("undefined"==typeof _ezim_d?"undefined":e(_ezim_d))&&_ezim_d.hasOwnProperty(t))return _ezim_d[t];for(var o in _ezim_d)if(o.split("/").pop()===t)return _ezim_d[o];return!1}(t);"object"==e(l)&&(void 0!==l.creative_id&&(c=l.creative_id),void 0!==l.line_item_id&&(g=l.line_item_id)),__ez.dot.isDefined(f,u)&&__ez.dot.isValid(o)&&("0"===f&&!0!==s||""===u||i.push({type:"impression",impression_id:f,domain_id:__ez.dot.getDID(),unit:u,t_epoch:__ez.dot.getEpoch(0),revenue:d,est_revenue:_,ad_position:p,ad_size:"",bid_floor_filled:n,bid_floor_prev:r,stat_source_id:a,country_code:__ez.dot.getCC(),pageview_id:__ez.dot.getPageviewId(),comp_id:z,line_item_id:g,creative_id:c,data:__ez.dot.dataToStr(o),is_orig:s||__ez.template.isOrig}))}}function o(){void 0!==document.visibilityState&&"prerender"===document.visibilityState||(__ez.dot.isDefined(i)&&i.length>0&&[i.filter((function(e){return e.is_orig})),i.filter((function(e){return!e.is_orig}))].forEach((function(e){for(;e.length>0;){var i=e[0].is_orig||!1,t=5;t>e.length&&(t=e.length);var o=e.splice(0,t),d=__ez.dot.getURL("/porpoiseant/army.gif")+"?orig="+(!0===i?1:0)+"&sts="+btoa(JSON.stringify(o));(void 0!==window.isAmp&&isAmp||void 0!==window.ezWp&&ezWp)&&void 0!==window._ezaq&&_ezaq.hasOwnProperty("domain_id")&&(d+="&visit_uuid="+_ezaq.visit_uuid),__ez.dot.Fire(d)}})),i=[])}return{Add:t,AddAndFire:function(e,i){t(e,i,0,0,0,0,0),o()},AddAndFireOrig:function(e,i){t(e,i,0,0,0,0,0,!0),o()},AddById:function(e,t,o,d){var _=e.split("/");if(__ez.dot.isDefined(e)&&3===_.length&&__ez.dot.isValid(t)){var n=_[0],r={type:"impression",impression_id:_[2],domain_id:__ez.dot.getDID(),unit:n,t_epoch:__ez.dot.getEpoch(0),pageview_id:__ez.dot.getPageviewId(),data:__ez.dot.dataToStr(t),is_orig:o||__ez.template.isOrig};void 0!==d&&(r.revenue=d),i.push(r)}},Fire:o,GetPixels:function(){return i}}}()}();__ez.queue.addFile('/detroitchicago/raleigh.js', '/detroitchicago/raleigh.js?gcb=195-2&cb=6', false, ['/parsonsmaize/abilene.js'], true, false, true, false);__ez.queue.addFile('/detroitchicago/vista.js', '/detroitchicago/vista.js?gcb=195-2&cb=5', false, ['/parsonsmaize/abilene.js'], true, false, true, false);__ez.queue.addFile('/detroitchicago/tampa.js', '/detroitchicago/tampa.js?gcb=195-2&cb=5', false, ['/parsonsmaize/abilene.js'], true, false, true, false);</script><base href=""/>
+<meta name="flattr:id" content="1ew3x0"/>
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "url": "https://plantuml.com",
+  "name": "PlantUML",
+  "sameAs" : ["https://twitter.com/plantuml","https://en.wikipedia.org/wiki/PlantUML","https://www.wikidata.org/wiki/Q18346546"],
+  "logo": "https://cdn-0.plantuml.com/logo3.png",
+  "contactPoint": [{
+    "@type": "ContactPoint",
+    "email": "plantuml@gmail.com",
+    "url": "https://plantuml.com",
+    "contactType": "customer service"
+  }]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+    "@type": "ListItem",
+    "position": 1,
+    "item": {
+      "@id": "https://plantuml.com",
+      "name": "Home"
+    }
+  },{
+    "@type": "ListItem",
+    "position": 2,
+    "item": {
+      "@id": "https://plantuml.com/sitemap-news-and-information",
+      "name": "News and information"
+    }
+  },{
+    "@type": "ListItem",
+    "position": 3,
+    "item": {
+      "@id": "https://plantuml.com/faq",
+      "name": "F.A.Q."
+  }
+  }]
+}
+</script>
+<link rel="canonical" href="../zh/faq.html"/>
+<link rel="alternate" hreflang="x-default" href="../faq.html"/>
+<link rel="alternate" hreflang="de" href="../de/faq.html"/>
+<link rel="alternate" hreflang="en" href="../faq.html"/>
+<link rel="alternate" hreflang="es" href="../es/faq.html"/>
+<link rel="alternate" hreflang="fr" href="../fr/faq.html"/>
+<link rel="alternate" hreflang="ja" href="../ja/faq.html"/>
+<link rel="alternate" hreflang="ru" href="../ru/faq.html"/>
+<link rel="alternate" hreflang="ko" href="../ko/faq.html"/>
+<link rel="alternate" hreflang="zh" href="../zh/faq.html"/>
+
+<link rel="shortcut icon" href="../favicon.ico"/>
+
+<link rel="preload" as="image" href="../svgrepo-house.svg"/>
+<link rel="preload" as="image" href="../svgrepo-text-news.svg"/>
+<link rel="preload" as="image" href="../svgrepo-rocket-3-start.svg"/>
+<link rel="preload" as="image" href="../svgrepo-server.svg"/>
+<link rel="preload" as="image" href="../svgrepo-play.svg"/>
+<link rel="preload" as="image" href="../svgrepo-forum.svg"/>
+<link rel="preload" as="image" href="../svgrepo-add-to-online-cart.svg"/>
+<link rel="preload" as="image" href="../svgrepo-forum-message.svg"/>
+<link rel="preload" as="image" href="../svgrepo-palette-fill.svg"/>
+<link rel="preload" as="image" href="../svgrepo-cpu.svg"/>
+<link rel="preload" as="image" href="../svgrepo-books-library.svg"/>
+<link rel="preload" as="image" href="../svgrepo-signpost-fill.svg"/>
+<link rel="preload" as="image" href="../svgrepo-library.svg"/>
+
+<link rel="preload" as="image" href="../flags21.png"/>
+
+<link rel="preload" as="image" href="../svgrepo-uxwing-dark-mode-toggle.svg"/>
+
+
+<!-- link rel="preload" as="image" href="https://img.shields.io/liberapay/patrons/plantuml.svg?logo=liberapay" -->
+
+
+<title>常见问题</title>
+<meta name="description" content="此页面列出了有关PlantUML的一些非常常见的问题。给我们发送邮件或在论坛上提问之前,请先阅读它。"/>
+
+<meta property="og:type" content="article"/>
+<meta property="og:title" content="常见问题"/>
+<meta property="og:description" content="此页面列出了有关PlantUML的一些非常常见的问题。给我们发送邮件或在论坛上提问之前,请先阅读它。"/>
+
+<meta property="og:url" content="https://plantuml.com/zh/faq"/>
+<meta property="og:site_name" content="PlantUML.com"/>
+
+<!-- meta property="og:image" content="https://plantuml.com/og-faq" -->
+<meta name="twitter:image" content="https://plantuml.com/og-faq"/>
+<meta property="og:locale" content="zh"/>
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="常见问题"/>
+<meta name="twitter:description" content="此页面列出了有关PlantUML的一些非常常见的问题。给我们发送邮件或在论坛上提问之前,请先阅读它。"/>
+<meta name="twitter:site" content="@PlantUML"/>
+<meta name="twitter:creator" content="@PlantUML"/>
+
+
+
+
+
+<!-- https://www.w3schools.com/colors/colors_picker.asp -->
+<!-- filter css https://codepen.io/sosuke/pen/Pjoqqp -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<style>
+.scale {
+}
+
+li {
+	margin: 2px;
+}
+#external li {
+	margin: 13px;
+}
+
+.pezoic {
+  max-width:970px;
+}
+
+@media screen and (max-width: 1600px) {
+	.pezoic {
+	  max-width:768px;
+	}
+}
+
+.coptable {
+	max-width: 90%;
+}
+
+.mytab {
+	display:inline-block;
+	border-radius: 3px;
+	border: 1px solid #e1e4e8;
+}
+
+.mytab:hover {
+	border: 1px dashed #8CB4FF;
+	cursor: pointer;
+	color: #8CB4FF;
+	background: #111111;
+}
+
+.cop {
+	margin: 25px 10px 0 10px;
+	filter: invert(100%);
+}
+.cop:hover {
+	cursor: pointer; 
+filter: invert(59%) sepia(81%) saturate(1778%) hue-rotate(164deg) brightness(105%) contrast(103%);
+}
+.cop2 {
+	margin: 25px 10px 0 10px;
+}
+.cop2:hover {
+	cursor: pointer; 
+}
+.msg {
+	position: absolute;
+	color:#339966;
+	background-color: #FFF;
+	margin-top: 55px;
+	display:none;
+	border-radius: 3px;
+	border: 1px solid #4dff00;
+}
+
+.mycell0 {
+	float: left;
+	vertical-align : top;
+	padding:10px;
+}
+.mycell0 code:hover {
+	cursor: default; 
+	color: #fff;
+}
+
+.mycell {
+	float: right;
+	vertical-align : top;
+	padding:10px;
+	max-width: 55vw;
+	overflow-x: auto;
+}
+
+.mycell0 pre {
+	max-width: 55vw;
+	overflow-x: auto;
+}
+
+.cod {
+	background: #222222;
+	padding: 2px 5px;
+	border-radius: 3px;
+}
+.colo {
+	display: inline-block;
+	background: #222222;
+	padding: 7px 12px;
+	border-radius: 3px;
+}
+.tag,.tagg,.tago,.tagr {
+	text-rendering: optimizeLegibility;
+	display: inline-block;
+	padding: 3px 5px 2px 4px;
+	text-decoration: none;
+	white-space: nowrap;
+	border: 1px solid #999;
+	text-transform: uppercase;
+	text-align: center;
+	border-radius: 3px;
+	font-size: 11px;
+	font-weight: bold;
+	line-height: 90%;
+}
+.tag {
+	background-color: #EEEEEE;
+}
+.tagg {
+	background-color: #98FB98;
+}
+.tago {
+	background-color: #fafa00;
+}
+.tagr {
+	background-color: #FF4500;
+}
+
+
+a {
+    text-decoration:none;
+    color:#8CB4FF;
+}
+a:hover {
+    text-decoration:underline;
+}
+
+.menu1 {
+    border: 0;
+    font-family: Helvetica,sans-serif;
+    font-size: 14px;
+    padding: 0;
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+	vertical-align: middle;
+	line-height: 30px;
+}
+.menu1 a{
+    /*background: #FF0;*/
+    text-align:center;
+	padding:10px 7px 10px 7px;
+    text-decoration:none;
+    color:#b0c0d0;
+}
+.menu1 a:hover{
+    color:#8CB4FF;
+}
+#menu0 {
+    top:0;
+    z-index: 4;
+    margin:0 0 0 10px;
+    padding:0;
+}
+
+@media screen and (max-width: 1200px) {
+	#menu0 {
+	visibility: hidden;
+	}	
+}
+
+.mhov img {
+	margin: 0 5px 0 0;
+	padding: 0;
+}
+.mhov:hover {
+filter: invert(59%) sepia(81%) saturate(1778%) hue-rotate(164deg) brightness(105%) contrast(103%);
+}
+
+#menuside2 {
+    border:0;
+    font-family:Helvetica,sans-serif;
+    font-size:14px;
+    padding:20px 0 4px 0;
+    margin:0
+}
+#menuside2 span {
+    vertical-align: top;
+}
+#menuside2 li{
+    list-style:none;
+    position:relative;
+    padding:0;
+	margin:10px 20px 10px 10px;
+    border:0;
+}
+#menuside2 li a{
+	display: inline-block;
+    text-decoration:none;
+    color:#b0c0d0;
+    width:100%;
+}
+#menuside2 img {
+filter: invert(46%) sepia(13%) saturate(620%) hue-rotate(170deg) brightness(91%) contrast(85%);
+}
+
+#BC {
+    z-index: 0;
+    padding-top: 5px;
+    top: 35px;
+}
+
+.breadcrumb {
+z-index:1;
+	font-family:Helvetica,sans-serif;
+	font-size:14px;
+	text-align: center;
+	display: inline-block;
+	overflow: hidden;
+	border-radius: 5px;
+}
+
+
+.breadcrumb a {
+	text-decoration: none;
+	outline: none;
+	display: block;
+	float: left;
+	font-size: 12px;
+	line-height: 24px;
+	color: #373f49;
+	padding: 0 10px 0 35px;
+	background: #f0f1f1;
+	background: linear-gradient(#f0f1f1, #c6d2d2);
+	position: relative;
+}
+.breadcrumb a:first-child {
+	padding-left: 21px;
+	border-radius: 5px 0 0 5px; /*to match with the parent's radius*/
+}
+.breadcrumb a:first-child:before {
+	left: 14px;
+}
+.breadcrumb a:last-child {
+	visibility: hidden;
+}
+
+.breadcrumb a.active, .breadcrumb a:hover{
+	color: #0366d6;
+	background: #c6d2d2;
+	background: linear-gradient(#e3e4e4, #b8c7c7);
+}
+.breadcrumb a.active:after, .breadcrumb a:hover:after {
+	background: #c6d2d2;
+	background: linear-gradient(135deg, #e3e4e4, #b8c7c7);
+}
+
+.breadcrumb a:after {
+	content: '';
+	position: absolute;
+	top: 0; 
+	right: -12px; /*half of square's length*/
+	/*same dimension as the line-height of .breadcrumb a */
+	width: 24px; 
+	height: 24px;
+	transform: scale(0.707) rotate(45deg);
+	/*we need to prevent the arrows from getting buried under the next link*/
+	z-index: 1;
+	/*background same as links but the gradient will be rotated to compensate with the transform applied*/
+	background: #f0f1f1;
+	background: linear-gradient(135deg, #f0f1f1, #c6d2d2);
+	/*stylish arrow design using box shadow*/
+	box-shadow: 
+		2px -2px 0 2px rgba(0,0,0,0.1), 
+		3px -3px 0 2px rgba(255,255,255,0.1);
+	/*
+		5px - for rounded arrows and 
+		50px - to prevent hover glitches on the border created using shadows*/
+	border-radius: 0 5px 0 50px;
+}
+
+/*we dont need an arrow after the last link*/
+.breadcrumb a:last-child:after {
+	content: none;
+	visibility: hidden;
+}
+
+
+.lga,.lga a,.lgi,.lgi a {
+	font-family:Helvetica,sans-serif;
+	font-size:13px;
+	text-align: center;
+    color: #fff;
+    padding: 0 5px;
+    margin: 0;
+}
+.lga,.lga a {
+    background-color: #008;
+}
+.lgi,.lgi a {
+    background-color: #888;
+}
+.lga:hover,.lga:hover a {
+    text-decoration: none;
+    color: #BBB;
+}
+.lgi:hover,.lgi:hover a {
+    text-decoration: none;
+    color: #CCC;
+}
+
+</style>
+
+<style>
+.backtop {
+	margin:0px 10px;
+	filter: invert(100%);
+}
+.backtop:hover {
+	cursor: pointer;
+filter: invert(59%) sepia(81%) saturate(1778%) hue-rotate(164deg) brightness(105%) contrast(103%);
+}
+</style>
+
+
+
+
+<style>
+/* Dropdown Button */
+.dropbtn {
+  padding: 0px;
+  border: none;
+  background: none;
+  filter: invert(100%);
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+  margin: 0 10px;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content img {
+vertical-align:middle;
+margin: 0 8px 0 1px;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  font-size: small;
+  font-weight: normal;
+  color: black;
+  padding: 5px 10px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #ddd;
+  color: #8CB4FF;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {display: block;}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {background-color: #3e8e41;}
+</style>
+<style>
+#flex1 {
+	margin: 0;
+	padding: 0;
+	display: flex;
+	flex-direction: row;
+	width: 378px;
+	height: 100%;
+}
+
+#lll {
+	flex-grow: 1;
+	flex-shrink: 1;
+	max-width:162px;
+	overflow:hidden;
+}
+
+#mmm {
+	flex-grow: 0;
+	flex-shrink: 0;
+	background: #222222;
+	width: 210px;
+	min-width: 210px;
+	max-width: 210px;
+	flex-grow: 0;
+	flex-shrink: 0;
+    border-left: 1px solid #333333;
+}
+
+#qqq {
+	flex-grow: 0;
+	flex-shrink: 0;
+	width: 4px;
+	min-width: 4px;
+	max-width: 4px;
+	flex-grow: 0;
+	flex-shrink: 0;
+}
+
+#rrr {
+	flex-grow: 1;
+	flex-shrink: 1;
+	max-width:162px;
+	overflow:hidden;
+}
+
+.cde {
+	display: flex;
+	flex-direction: column;
+    justify-content:space-between;
+    height: 100%;
+}
+.cd {
+	display: flex;
+	flex-direction: column;
+    justify-content: space-start;
+    height: 100%;
+}
+
+.aaa {
+	height: 30px;
+	min-height: 30px;
+	max-height: 30px;
+	flex-grow: 0;
+	flex-shrink: 0;
+	background: #222222;
+    border-bottom: 1px solid #333333;
+}
+
+.bbb, .bbborder {
+	flex-grow: 1;
+	flex-shrink: 0;
+}
+
+.bbborder {
+    border-left: 1px solid #333333;
+}
+
+
+#header {
+    z-index: 10;
+    position: fixed;
+	left: 378px;
+	right: 0;
+    height: 30px;
+    top: 0;
+    background: #222222;
+    border-bottom: 1px solid #333333;
+    
+}
+#header2 {
+    z-index: 7;
+    position: fixed;
+	left: 378px;
+	right: 0;
+    height: 10px;
+    top: 30px;
+    background: #1B1B1B;
+}
+
+
+#left0 {
+	top:0;
+    position: fixed;
+    left: 0;
+    margin:0 ;
+    bottom: 0;
+    width: 378px;
+    padding: 0;
+    z-index: 2;
+    /*background: #F7F;*/
+}
+
+
+#root {
+    padding:0;
+	margin: 40px 0 0 388px;
+    background: #1B1B1B;
+}
+
+
+body {
+	margin: auto;
+	overflow-x: hidden;
+    background: #1B1B1B;
+    color: #FFF;
+}
+
+
+@media screen and (max-width: 1190px) {
+	#flex1, #left0 {
+		width: 215px;
+	}
+	#root {
+		margin: 40px 0 0 224px;
+	}
+	#header, #header2 {
+		left: 215px;
+	}
+	#left0 {
+		left: 0;
+	}
+	#lll, #rrr {
+  		width:0;
+		visibility: hidden;
+  		flex-grow: 0;
+  		flex-shrink: 0;
+	}
+	
+}
+@media screen and (max-width: 1010px) {
+	#root {
+		margin: 0 0 0 216px;
+	}
+	#header, #header2 {
+		display: none;
+	}
+	#lll, #qqq {
+  		width:0;
+		visibility: hidden;
+  		flex-grow: 0;
+  		flex-shrink: 0;
+	}
+	#mmm {
+		    border-right: 1px solid #333333;
+	}
+	
+}
+
+@media screen and (min-width:1700px){
+	#header, #header2 {
+		left:518px;
+	}
+	#left0, #flex1{
+		width:518px;
+	}
+	#root{
+		margin-left:528px;
+	}
+	#lll, #rrr {
+		max-width:302px;
+	}
+}
+
+
+</style>
+
+
+
+
+<script>window.pushMST_config={"vapidPK":"BBodn2vLFoDO5AdCfmOOzNmcUsn52kTA6JNZNYVFymzEdWHonz_bkUcsaTkPXHvNGRkRUSAxMbup-H0l2sb1h_Q","enableOverlay":true,"swPath":"/sw.js","i18n":{}};
+  var pushmasterTag = document.createElement('script');
+  pushmasterTag.src = "https://cdn.pushmaster-cdn.xyz/scripts/publishers/629f5e297baecc00098a271b/SDK.js";
+  pushmasterTag.setAttribute('defer','');
+
+  var firstScriptTag = document.getElementsByTagName('script')[0];
+  firstScriptTag.parentNode.insertBefore(pushmasterTag, firstScriptTag);
+</script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-TKZNNQT9CZ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-TKZNNQT9CZ');
+</script>
+
+
+
+<script>
+var llg = "zh";
+var az=0;
+var amdark=1;
+function ljs(n) {
+	if (az) return false;
+    var sc = document.createElement("script");
+    sc.type = "text/javascript";
+    sc.src = "/btn-"+n+".js";
+	document.body.innerHTML = "<i style='position:absolute;top:30%;width:100%;'><center>Loading in progress...";
+    document.body.appendChild(sc);
+}
+function ctc(id) {
+document.getElementById('img'+id).classList.remove('cop'); document.getElementById('img'+id).classList.add('cop2');
+document.getElementById('pre'+id).style.backgroundColor = '#4dff00';
+document.getElementById('msg'+id).style.display = 'inline';
+
+setTimeout(function() { document.getElementById('img'+id).classList.remove('cop2'); document.getElementById('img'+id).classList.add('cop'); document.getElementById('pre'+id).style.backgroundColor = ''; document.getElementById('msg'+id).style.display = 'none';}, 800);      
+
+
+	text = document.getElementById('pre'+id).innerText;
+    if (window.clipboardData && window.clipboardData.setData)
+        return window.clipboardData.setData("Text", text);
+    else if (document.queryCommandSupported && document.queryCommandSupported("copy")) {
+        var ta = document.createElement("textarea");
+        ta.textContent = text;
+        ta.style.position = "fixed";
+        document.body.appendChild(ta);
+        ta.select();
+        try {
+            return document.execCommand("copy");
+        }
+        catch (ex) {
+            return false;
+        }
+        finally {
+            document.body.removeChild(ta);
+        }
+    }
+}
+</script>
+
+
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script type='text/javascript'>
+var ezoTemplate = 'pub_site';
+var ezouid = '1';
+var ezoFormfactor = '1';
+</script><script data-ezscrex="false" type='text/javascript'>
+var soc_app_id = '0';
+var did = 173770;
+var ezdomain = 'plantuml.com';
+var ezoicSearchable = 1;
+</script>
+<script data-ezscrex='false' data-pagespeed-no-defer data-cfasync='false'>
+function create_ezolpl() {
+	var d = new Date();
+	d.setTime(d.getTime() + (365*24*60*60*1000));
+	var expires = "expires="+d.toUTCString();
+	__ez.ck.setByCat("ezux_lpl_173770=" + new Date().getTime() + "|" + _ezaq.page_view_id + "|" + _ezaq.is_return_visitor + "; " + expires, 3);
+}
+function attach_ezolpl() {
+	if (document.readyState === "complete") {
+		create_ezolpl();
+		return;
+	}
+	window.addEventListener("load", create_ezolpl);
+}
+
+__ez.queue.addFunc("attach_ezolpl", "attach_ezolpl", null, false, ['/detroitchicago/boise.js'], true, false, false, false);
+</script></head>
+<body>
+
+<div id="left0">
+
+<div id="flex1">
+
+
+<div id="lll">
+
+<div class="cde">
+
+<!-- c --><div>
+</div>
+
+<!-- d --><div>
+<!-- Ezoic - Left0 - sidebar -->
+<span id="ezoic-pub-ad-placeholder-131"></span><!-- ezoic_pub_ad_placeholder-131-sidebar-120x600-131-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-131-sidebar-160x600-131-nonexxxnonexxxxxxezmaxscaleval100 -->
+<!-- End Ezoic - Left0 - sidebar -->
+</div>
+
+
+<!-- e --><div>
+</div>
+
+</div><!-- cde -->
+
+
+</div><!-- lll -->
+
+<div id="mmm">
+
+
+<div class="cde">
+
+<!-- c --><div>
+
+<!--menu 10-->
+<div>
+
+
+
+<!-- Ezoic - Menu2L - sidebar -->
+<span id="ezoic-pub-ad-placeholder-105"></span><!-- ezoic_pub_ad_placeholder-105-sidebar_middle-120x240-105-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-105-sidebar_middle-125x125-105-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-105-sidebar_middle-180x150-105-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-105-sidebar_middle-200x200-105-nonexxxnonexxxxxxezmaxscaleval100 -->
+<!-- End Ezoic - Menu2L - sidebar -->
+
+</div>
+
+<!-- https://stackoverflow.com/questions/22252472/how-to-change-the-color-of-an-svg-element -->
+<!-- https://codepen.io/sosuke/pen/Pjoqqp -->
+
+
+<ul id="menuside2">
+<li><a href="index.html" class="mhov"><img src="../svgrepo-house.svg" width="16" height="16"/><span>主页</span></a></li>
+<li><a href="news.html" class="mhov"><img src="../svgrepo-text-news.svg" width="16" height="16"/><span>新鲜</span></a></li>
+<li><a href="starting.html" class="mhov"><img src="../svgrepo-rocket-3-start.svg" width="16" height="16"/><span>入门指南</span></a></li>
+<li><a href="https://www.plantuml.com/plantuml/duml/SyfFKj2rKt3CoKnELR1Io4ZDoSa70000" class="mhov"><img src="../svgrepo-server.svg" width="16" height="16"/><span>Online Server</span></a></li>
+<li><a href="running.html" class="mhov"><img src="../svgrepo-play.svg" width="16" height="16"/><span>使用</span></a></li>
+<li><a href="faq.html" class="mhov"><img src="../svgrepo-forum.svg" width="16" height="16"/><span>常见问题</span></a></li>
+<li><a href="download.html" class="mhov"><img src="../svgrepo-add-to-online-cart.svg" width="16" height="16"/><span>下载</span></a></li>
+<li><a href="../qa.html" class="mhov"><img src="../svgrepo-forum-message.svg" width="16" height="16"/><span>论坛 </span></a></li>
+<li><a href="theme.html" class="mhov"><img src="../svgrepo-palette-fill.svg" width="16" height="16"/><span>Theme</span></a></li>
+<li><a href="preprocessing.html" class="mhov"><img src="../svgrepo-cpu.svg" width="16" height="16"/><span>预处理</span></a></li>
+<li><a href="stdlib.html" class="mhov"><img src="../svgrepo-books-library.svg" width="16" height="16"/><span>标准库</span></a></li>
+<li><a href="https://crashedmind.github.io/PlantUMLHitchhikersGuide" class="mhov"><img src="../svgrepo-signpost-fill.svg" width="16" height="16"/><span>Hitchhiker&#39;s Guide</span></a></li>
+<li><a href="guide.html" class="mhov"><img src="../svgrepo-library.svg" width="16" height="16"/><span>用户指南(PDF)</span></a></li>
+</ul>
+
+<!-- menu 20-->
+<div>
+
+<!-- Ezoic - Zmenubottom - sidebar_bottom -->
+<span id="ezoic-pub-ad-placeholder-108"></span><!-- ezoic_pub_ad_placeholder-108-sidebar_middle-120x240-108-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-108-sidebar_middle-125x125-108-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-108-sidebar_middle-180x150-108-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-108-sidebar_middle-200x200-108-nonexxxnonexxxxxxezmaxscaleval100 -->
+<!-- End Ezoic - Zmenubottom - sidebar_bottom -->
+
+</div>
+</div>
+
+<!-- d menu 30 --><div>
+</div>
+
+
+<!-- e menu 40 --><div style="margin-bottom:35px;">
+
+<!-- Ezoic - menu40 - sidebar -->
+<span id="ezoic-pub-ad-placeholder-186"></span><!-- ezoic_pub_ad_placeholder-186-sidebar_middle-120x240-186-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-186-sidebar_middle-125x125-186-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-186-sidebar_middle-180x150-186-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-186-sidebar_middle-200x200-186-nonexxxnonexxxxxxezmaxscaleval100 -->
+<!-- End Ezoic - menu40 - sidebar -->
+
+</div>
+
+</div><!-- cde -->
+
+
+
+
+</div><!-- mmm -->
+
+<div id="qqq">
+
+<div class="cd">
+<div class="aaa"></div>
+<div class="bbborder"></div>
+</div><!-- cd -->
+
+</div><!-- qqq -->
+
+<div id="rrr">
+
+<div class="cd">
+<div class="aaa"></div>
+
+<div style="height:5px;"></div>
+
+<div class="bbb">
+
+<div class="cde">
+
+<!-- c --><div>
+</div>
+
+<!-- d --><div>
+<!-- Ezoic - Left2 - sidebar -->
+<span id="ezoic-pub-ad-placeholder-175"></span><!-- ezoic_pub_ad_placeholder-175-sidebar-120x600-175-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-175-sidebar-160x600-175-nonexxxnonexxxxxxezmaxscaleval100 -->
+<!-- End Ezoic - Left2 - sidebar -->
+</div>
+
+<!-- e --><div>
+</div>
+
+</div><!-- cde -->
+
+</div><!-- bbb -->
+
+</div><!-- cd -->
+
+
+</div><!-- rrr -->
+
+
+
+</div><!-- flex1 -->
+
+
+</div><!-- left0 -->
+
+<style>
+#contmenu {
+display: flex;
+height: 30px;
+width: 100%;
+margin: 0;
+padding: 0;
+}
+
+#contmenua {
+height: 30px;
+padding-right: 25px;
+}
+
+#contmenub {
+z-index:15;
+display: inline-block;
+flex-grow:1;
+flex-shrink:1;
+height: 30px;
+background-color: #222222;
+}
+
+#magic {
+white-space: nowrap;
+overflow: hidden;
+z-index: 14;
+position: fixed;
+top: 0;
+right: 50px;
+height: 30px;
+width: 30px;
+}
+
+#magic2 {
+white-space: nowrap;
+overflow: hidden;
+z-index: 16;
+position: fixed;
+top: 0;
+right: 0;
+height: 30px;
+width: 50px;
+background-color: #222222;
+}
+#magic2 img {
+margin: 5px 0 0 5px;
+filter: invert(86%) sepia(23%) saturate(200%) hue-rotate(170deg) brightness(86%) contrast(88%);
+}
+#magic2:hover img {
+filter: invert(59%) sepia(81%) saturate(1778%) hue-rotate(164deg) brightness(105%) contrast(103%);
+}
+
+
+#magic:hover #svgrepoleft {
+filter: invert(59%) sepia(81%) saturate(1778%) hue-rotate(164deg) brightness(105%) contrast(103%);
+}
+
+
+#magic:hover {
+width: 100%;
+height: 31px;
+}
+
+#aze {
+	height: 30px;
+	display:flex;
+	flex-direction: row-reverse;
+}
+#aze1 {
+	height: 30px;
+	background-color: #222222;
+}
+#aze2 {
+	height: 30px;
+	background-color: #222222;
+	padding-left: 10px;
+	border-left: 1px solid #333333;
+	border-bottom: 1px solid #333333;
+}
+#aze1 img {
+    filter: invert(72%) sepia(4%) saturate(1039%) hue-rotate(169deg) brightness(108%) contrast(84%);
+}
+#aze3 {
+	width: 3px;
+	height: 30px;
+	background-color: #222222;
+}
+
+
+
+</style>
+
+<div id="header">
+<div id="contmenu">
+<div id="contmenua">
+<div class="menu1">
+<a href="sequence-diagram.html">时序图</a>
+<a href="use-case-diagram.html">用例图</a>
+<a href="class-diagram.html">类图</a>
+<a href="activity-diagram-beta.html">活动图</a>
+<a href="component-diagram.html">组件图</a>
+<a href="state-diagram.html">状态图</a>
+<a href="object-diagram.html">对象图</a>
+<a href="deployment-diagram.html">部署图</a>
+<a href="timing-diagram.html">定时图</a>
+
+<a href="nwdiag.html">Network</a>
+<a href="salt.html">Wireframe</a>
+<a href="archimate-diagram.html">Archimate</a>
+<a href="gantt-diagram.html">Gantt</a>
+<a href="mindmap-diagram.html">MindMap</a>
+<a href="wbs-diagram.html">WBS</a>
+<a href="json.html">JSON</a>
+<a href="yaml.html">YAML</a>
+
+</div>
+</div>
+<div id="contmenub"></div>
+</div><!--contmenu-->
+<!-- https://developer.mozilla.org/fr/docs/Web/CSS/position -->
+<div id="magic">
+
+	<div id="aze">
+		<div id="aze1"><img id="svgrepoleft" width="30" height="30" src="../svgrepo-left.svg"/> </div><!-- aze1 -->
+		<div id="aze2">
+
+<div class="menu1">
+<a href="sequence-diagram.html">时序图</a>
+<a href="use-case-diagram.html">用例图</a>
+<a href="class-diagram.html">类图</a>
+<a href="activity-diagram-beta.html">活动图</a>
+<a href="component-diagram.html">组件图</a>
+<a href="state-diagram.html">状态图</a>
+<a href="object-diagram.html">对象图</a>
+<a href="deployment-diagram.html">部署图</a>
+<a href="timing-diagram.html">定时图</a>
+
+<a href="nwdiag.html">Network</a>
+<a href="salt.html">Wireframe</a>
+<a href="archimate-diagram.html">Archimate</a>
+<a href="gantt-diagram.html">Gantt</a>
+<a href="mindmap-diagram.html">MindMap</a>
+<a href="wbs-diagram.html">WBS</a>
+<a href="json.html">JSON</a>
+<a href="yaml.html">YAML</a>
+
+</div>
+			
+
+		</div><!-- aze2 -->
+		<div id="aze3"></div><!-- aze3 https://codepen.io/sosuke/pen/Pjoqqp -->
+	</div><!-- aze -->
+
+
+</div><!--magic-->
+
+<div id="magic2">
+
+<a href="../zh/faq.html">
+<img src="../svgrepo-uxwing-dark-mode-toggle.svg" height="20"/>
+</a>
+
+
+</div><!--magic2-->
+
+</div><!-- header -->
+<div id="header2"></div>
+
+
+
+
+
+<div id="root">
+
+<!-- https://css-tricks.com/snippets/css/a-guide-to-flexbox/ -->
+
+<style>
+
+#haut1 {
+	margin:50px 0 20px;
+	padding:0;
+	min-height:80px;
+}
+
+#donate {
+	padding-top: 5px;
+	min-height:30px;
+}
+
+</style>
+
+<div id="haut1">
+
+<!-- c --><div style="float:left;">	
+<!-- a simple div with some links -->
+<div class="breadcrumb">
+<a href="sitemap.html">PlantUML</a>
+<a href="sitemap-news-and-information.html">News and information</a>
+<a href="faq.html">F.A.Q.</a>
+<a href="faq.html#"></a>
+</div>
+
+
+<div id="donate">
+
+ 
+
+<a href="https://discord.gg/sXhzexAQGh" style="text-decoration: none;">
+<img src="https://img.shields.io/discord/1083727021328306236?color=5865F2&amp;logo=discord&amp;logoColor=white" alt="Discord server"/>
+</a>
+
+ 
+
+<a href="https://github.com/sponsors/plantuml/" style="text-decoration: none;">
+<img src="https://img.shields.io/github/sponsors/plantuml?logo=github"/>
+</a>
+
+ 
+
+<a href="https://www.patreon.com/bePatron?patAmt=1&amp;u=527450&amp;rid=152970" style="text-decoration: none;">
+<img src="https://img.shields.io/badge/patreon-122-chocolate?logo=patreon"/>
+</a>
+
+ 
+
+<a href="../lp.html" style="text-decoration: none;">
+<img src="https://img.shields.io/liberapay/patrons/plantuml?color=gold&amp;logo=liberapay&amp;label=liberapay"/>
+</a>
+
+ 
+
+<a href="../en/paypal.html" style="text-decoration: none;">
+<img src="https://img.shields.io/badge/paypal-296-skyblue?logo=paypal&amp;logoColor=red"/>
+</a>
+
+<!--
+ 
+
+<a href="https://github.com/sponsors/plantuml" style="text-decoration: none;">
+<img src="https://img.shields.io/github/sponsors/plantuml?label=github">
+</a>
+
+-->
+</div> <!-- donate -->
+</div><!-- c -->
+
+
+<!-- e --><div style="float:right; margin:3px 0;">
+
+<!-- https://github.com/joielechong/iso-country-flags-svg-collection -->
+
+<!-- https://www.flaticon.com/packs/international-flags -->
+<!-- https://flagicons.lipis.dev/?continent=Europe -->
+<!-- https://flagpedia.net/download/icons -->
+
+<!-- https://www.countryflags.io/ -->
+
+<style>
+#langlist {
+display: flex;
+justify-content: space-between;
+width: 317px;
+height: 16px;
+margin: 3px 10px 3px 0;
+}
+
+.sel2 {
+  border: 2px solid #1B1B1B;
+}
+.nosel2 {
+  border: 2px solid #1B1B1B;
+  filter: grayscale(100%) opacity(75%);
+}
+.sel2:hover, .nosel2:hover {
+  cursor: pointer;
+  border: 2px solid #8CB4FF;
+  border-spacing: 0;
+  filter: grayscale(0%);
+  filter: contrast(200%);
+  filter: brightness(150%);
+}
+#flag1,#flag2,#flag3,#flag4,#flag5,#flag6,#flag7,#flag8 {
+background: url(../flags21.png);
+background-repeat: no-repeat;
+background-clip: content-box;
+width: 22px;
+height: 16px;
+}
+#flag2 {
+background-position: -22px 0px;
+}
+#flag3 {
+background-position: -44px 0px;
+}
+#flag4 {
+background-position: -66px 0px;
+}
+#flag5 {
+background-position: -88px 0px;
+}
+#flag6 {
+background-position: -110px 0px;
+}
+#flag7 {
+background-position: -132px 0px;
+}
+#flag8 {
+background-position: -154px 0px;
+}
+</style>
+
+<div id="langlist">
+
+
+<div id="flag1" onclick="location.href=&#39;/en-dark/faq&#39;" class="nosel2"></div>
+
+<div id="flag2" onclick="location.href=&#39;/de-dark/faq&#39;" class="nosel2"></div>
+
+
+<div id="flag3" onclick="location.href=&#39;/es-dark/faq&#39;" class="nosel2"></div>
+
+
+<div id="flag4" onclick="location.href=&#39;/fr-dark/faq&#39;" class="nosel2"></div>
+
+
+<div id="flag5" onclick="location.href=&#39;/ja-dark/faq&#39;" class="nosel2"></div>
+
+
+<div id="flag6" onclick="location.href=&#39;/ko-dark/faq&#39;" class="nosel2"></div>
+
+
+<div id="flag7" onclick="location.href=&#39;/ru-dark/faq&#39;" class="nosel2"></div>
+
+
+<div id="flag8" onclick="location.href=&#39;/zh-dark/faq&#39;" class="sel2"></div>
+
+
+
+
+
+
+</div><!-- langlist -->
+</div><!-- e -->
+
+</div><!-- haut1 -->
+
+
+<p>
+
+
+<style>
+#topsticky {
+	z-index:2;
+	margin: 0 240px 0 0;
+}
+
+@media screen and (min-height: 800px) {
+#topsticky {
+  position:sticky; top: 40px;
+}
+}
+
+@media screen and (max-width: 1500px) {
+#topsticky {
+	margin: 0;
+}
+}
+
+</style>
+
+</p><div id="topsticky">
+<!-- Ezoic - under page title -->
+<span id="ezoic-pub-ad-placeholder-647"></span><!-- ezoic_pub_ad_placeholder-647-under_page_title-320x100-647-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-647-under_page_title-300x50v2-647-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-647-under_page_title-320x50-647-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-647-under_page_title-468x60-647-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-647-under_page_title-728x90-647-nonexxxnonexxxxxxezmaxscaleval100 -->
+<!-- End Ezoic - under page title -->
+</div>
+
+
+<p>
+
+
+<a style="position:relative;top:-38px;" name="066f54cf6e43025a"></a>
+<style>
+
+
+#toc {
+z-index: 2;
+position:sticky; top: 40px;
+list-style-type: none;
+margin: 0;
+padding: 0 10px;
+}
+.chap {
+clear:both;
+}
+#toc ul {
+list-style-type: none;
+max-height:87vh;
+overflow-y: auto;
+background: #000000;
+border-width: 2px;
+border-style: groove;
+border-radius: 3px;
+border-color: #e1e4e8;
+margin: 0;
+padding: 0;
+}
+@media screen and (min-height: 450px) {
+#toc ul {max-height:89.5vh;
+}
+}
+@media screen and (min-height: 550px) {
+#toc ul {max-height:91.5vh;
+}
+}
+@media screen and (min-height: 700px) {
+#toc ul {max-height:93.5vh;
+}
+}
+@media screen and (min-height: 900px) {
+#toc ul {max-height:94.5vh;
+}
+}
+#toc li {
+margin: 5px 5px 5px 10px;
+padding: 0;
+}
+@media screen and (max-width: 1500px) {
+	#toctd {
+	display: none;
+	}	
+	#toc {
+	display: none;
+	}	
+}
+</style>
+
+<table border="0" cellspacing="0" cellpadding="0" width="100%">
+<tbody><tr valign="top" width="100%">
+<td valign="top">
+<!--heading--><h1 class="chap"><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/cmp/dokuwiki/zh/faq#0"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/cmp/asciidoc/zh/faq#0"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/cmp/markdown/zh/faq#0"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>常见问题</h1>
+<center><div class="tago">WARNING</div> <b>This translation need to be updated.</b> <div class="tago">WARNING</div></center>
+<a style="position:relative;top:-38px;" name="9be1c2970f548bf5"></a>
+<div style="clear:both;height:50px;">
+</div>
+<!--heading--><h2 class="chap"><img onclick="window.scrollTo(0,0);" title="Back to top" src="../backtop1.svg" width="20" height="20" class="backtop"/><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/cmp/dokuwiki/zh/faq#1"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/cmp/asciidoc/zh/faq#1"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/cmp/markdown/zh/faq#1"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>PlantUML的目标是什么?</h2>
+<p></p>
+<strong> PlantUML </strong>用于<em>绘制</em>UML图,使用简单易读的文本描述。
+请注意,因为这不会阻止您绘制不一致的图(例如,使两个类彼此继承)。
+因此,它比&#34;建模&#34;工具更像是&#34;绘图&#34;工具。
+<p></p>
+<p></p>
+Overall, PlantUML is a powerful and versatile tool for creating professional-looking diagrams quickly and easily. It is particularly well-suited for users who prefer a simple, text-based approach to creating diagrams, and who want a tool that can automatically handle the layout and appearance of their diagrams.
+<p></p>
+<p></p>
+In essence, PlantUML emerges as a potent and adaptable tool, facilitating the swift and effortless creation of professional diagrams. It caters especially to individuals who favor a text-based methodology for diagram creation, offering automated assistance in managing the layout and visualization of the diagrams.
+<center><div class="tago">WARNING</div> <b>This translation need to be updated.</b> <div class="tago">WARNING</div></center>
+<a style="position:relative;top:-38px;" name="6bf8e8c6d419e153"></a>
+<div style="clear:both;min-height:110px;margin-top:10px;">
+
+<div class="pezoic">
+<!-- Ezoic - Fish0 - under_second_paragraph -->
+<span id="ezoic-pub-ad-placeholder-179"></span><!-- ezoic_pub_ad_placeholder-179-under_second_paragraph-234x60-179-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-179-under_second_paragraph-468x60-179-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-179-under_second_paragraph-728x90-179-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-179-under_second_paragraph-970x90-179-nonexxxnonexxxxxxezmaxscaleval100 -->
+<!-- End Ezoic - Fish0 - under_second_paragraph -->
+</div>
+
+</div>
+<!--heading--><h2 class="chap"><img onclick="window.scrollTo(0,0);" title="Back to top" src="../backtop1.svg" width="20" height="20" class="backtop"/><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/cmp/dokuwiki/zh/faq#2"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/cmp/asciidoc/zh/faq#2"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/cmp/markdown/zh/faq#2"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>我不喜欢PlantUML生成图表的样子。</h2>
+<p></p>
+<ul>
+<li>您可以在PlantUML中使用主题</li>
+</ul>
+<p></p>
+您可以使用PlantUML的<a href="theme.html">主题</a>来定制图表的外观。 PlantUML提供了几个内置主题供您使用， 你也可以定义<a href="https://plantuml.com/zh-dark/style-evolution">您自己的颜色和样式</a>来创建自己的自定义主题。
+<p></p>
+<p></p>
+<ul>
+<li>PlantUML does a lot of layout work for you</li>
+</ul>
+<p></p>
+PlantUML takes care of a lot of the layout work for you, so you can focus on expressing the relationships and structure of your diagram. It uses intelligent layout algorithms to arrange the elements of your diagram in a clear and easy-to-understand way, saving you the time and effort of manually positioning and aligning individual elements. This makes it a great tool for quickly creating professional-looking diagrams without a lot of manual effort.
+<p></p>
+<ul>
+<li>PlantUML is a generator, not a position elements tool</li>
+</ul>
+<p></p>
+PlantUML is a generator, which means that it automatically creates diagrams based on the text you provide. This is different from some other diagramming tools, which allow you to manually position and arrange individual elements in your diagram.
+<p></p>
+The main advantage of this approach is that it allows you to create diagrams quickly and easily, without having to worry about the specific placement of individual elements. It also makes it easier to update your diagrams, since you can simply modify the text that represents your diagram, and PlantUML will automatically update the diagram to reflect your changes.
+<p></p>
+One potential disadvantage of using a generator like PlantUML is that you may not have as much control over the exact layout of your diagram as you would with a tool that allows you to position elements manually. However, for many users, the time and effort saved by using a generator more than makes up for this limitation.
+<p></p>
+Additionally, the <a href="../qa.html">PlantUML community forum</a> is a great resource for finding solutions to common layout problems and sharing tips and tricks for customizing the appearance of your diagrams.
+<p></p>
+<p></p>
+For those seeking advice or solutions to common layout issues, the <a href="../qa.html">PlantUML community forum</a> stands as a vibrant platform to exchange tips and procure answers to your dilemmas, enhancing your mastery over customizing your diagrams.
+<center><div class="tago">WARNING</div> <b>This translation need to be updated.</b> <div class="tago">WARNING</div></center>
+<a style="position:relative;top:-38px;" name="0bb4912b52689d3d"></a>
+<div style="clear:both;height:50px;">
+</div>
+<!--heading--><h2 class="chap"><img onclick="window.scrollTo(0,0);" title="Back to top" src="../backtop1.svg" width="20" height="20" class="backtop"/><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/cmp/dokuwiki/zh/faq#3"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/cmp/asciidoc/zh/faq#3"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/cmp/markdown/zh/faq#3"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>PlantUML Server生成的图像可以保存多长时间?</h2>
+<p></p>
+由<a href="http://www.plantuml.com/plantuml">PlantUML服务器</a>生成的png或svg的链接永远有效(只要服务器启动即可)。<br/>
+但是,我们不会在服务器上存储任何图表。
+<p></p>
+这听起来可能是矛盾的。事实并非如此:整个图是<a href="https://plantuml.com/zh-dark/text-encoding">压缩到URL本身</a>。服务器接收到URL后,会对URL进行解压缩以检索图文本并生成图像。无需存储任何内容。即使服务器已关闭,您也可以使用带有[[command-line |command line]]的标志<code class="cod">-decodeurl</code>来检索该图。此外,图表数据存储在PNG元数据中,因此您甚至可以从下载的图像中获取它。
+<p></p>
+有时,我们可能会在服务器上激活HTTP跟踪。这主要是为了解决性能问题(如果有的话),以了解我们获得的流量。解决问题后,我们将关闭HTTP跟踪,并删除日志。
+<p></p>
+请注意,我们还计算了生成的图的数量(打印在主页上)以衡量常规服务器负载。
+<p></p>
+关于敏感内容:即使我们不存储生成的图表,也请注意所有流量都通过HTTP进行,因此很容易捕获。
+<p></p>
+因此,如果计划生成包含敏感信息的图表,则可能应该在自己的网络上安装<a href="https://plantuml.com/zh-dark/server">本地服务器</a>。
+<center><div class="tago">WARNING</div> <b>This translation need to be updated.</b> <div class="tago">WARNING</div></center>
+<a style="position:relative;top:-38px;" name="b86e17649b665cee"></a>
+<div style="clear:both;min-height:110px;margin-top:10px;">
+
+
+<div class="pezoic">
+<!-- Ezoic - Fish1 - mid_content -->
+<span id="ezoic-pub-ad-placeholder-114"></span><!-- ezoic_pub_ad_placeholder-114-mid_content-234x60-114-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-114-mid_content-468x60-114-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-114-mid_content-728x90-114-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-114-mid_content-970x90-114-nonexxxnonexxxxxxezmaxscaleval100 -->
+<!-- End Ezoic - Fish1 - mid_content -->
+</div>
+
+</div>
+<!--heading--><h2 class="chap"><img onclick="window.scrollTo(0,0);" title="Back to top" src="../backtop1.svg" width="20" height="20" class="backtop"/><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/cmp/dokuwiki/zh/faq#4"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/cmp/asciidoc/zh/faq#4"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/cmp/markdown/zh/faq#4"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>它不适用于我的配置!</h2>
+<p></p>
+<strong> PlantUML </strong>已安装在各种系统上,并且一些用户在安装它时报告了较小的问题。<br/>
+您可以看看[[faq-install |在此页面上]],如果出现问题,它会给出建议。
+<a style="position:relative;top:-38px;" name="8e05a6bcd8f17180"></a>
+<div style="clear:both;height:50px;">
+</div>
+<!--heading--><h2 class="chap"><img onclick="window.scrollTo(0,0);" title="Back to top" src="../backtop1.svg" width="20" height="20" class="backtop"/><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/cmp/dokuwiki/zh/faq#5"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/cmp/asciidoc/zh/faq#5"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/cmp/markdown/zh/faq#5"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>我应该使用哪个版本的Graphviz?</h2>
+<p></p>
+您具有有关Graphviz [[graphviz-dot |此处]]的详细信息,以及进行[[graphviz-dot#test |此处]]的快速测试。
+<p></p>
+以下版本已经过测试,可以正常使用:
+<p></p>
+<ul>
+<li>2.26.3</li>
+<li>2.28</li>
+<li>2.30.1</li>
+<li>2.34</li>
+<li>2.36</li>
+<li>2.38</li>
+<li>2.44</li>
+</ul>
+<p></p>
+请注意,版本2.39和2.42 <a href="http://plantuml.sourceforge.net/qa/?qa=4531/possible-bug-with-relation-in-rectangle-screenshot">在PlantUML中无法很好地工作</a>。
+<p></p>
+With version 2.44, under Windows, you may have to run <code class="cod">dot -c</code> in a command line to finalize the installation, like in the following example:
+<p></p>
+<img src="../img/dotc.png"/>
+<p></p>
+You may have to run <code class="cod">dot -c</code> with <a href="https://www.howtogeek.com/194041/how-to-open-the-command-prompt-as-administrator-in-windows-8.1/">Administrator Right</a>.
+<p></p>
+Another option is to install <a href="https://www2.graphviz.org/Packages/stable/windows/10/msbuild/Release/Win32">Win32 version of GraphViz 2.44</a> which does not require this post-install process.
+<p></p>
+如果您自己编译Graphviz,则必须使用<em>libexpat</em>构建它,以便使用PlantUML。
+<center><div class="tago">WARNING</div> <b>This translation need to be updated.</b> <div class="tago">WARNING</div></center>
+<a style="position:relative;top:-38px;" name="cfea81a6dd16994c"></a>
+<div style="clear:both;min-height:110px;margin-top:10px;">
+
+<div class="pezoic">
+<!-- Ezoic - Fish2 - long_content -->
+<span id="ezoic-pub-ad-placeholder-115"></span><!-- ezoic_pub_ad_placeholder-115-long_content-234x60-115-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-115-long_content-468x60-115-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-115-long_content-728x90-115-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-115-long_content-970x90-115-nonexxxnonexxxxxxezmaxscaleval100 -->
+<!-- End Ezoic - Fish2 - long_content -->
+</div>
+
+</div>
+<!--heading--><h2 class="chap"><img onclick="window.scrollTo(0,0);" title="Back to top" src="../backtop1.svg" width="20" height="20" class="backtop"/><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/cmp/dokuwiki/zh/faq#6"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/cmp/asciidoc/zh/faq#6"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/cmp/markdown/zh/faq#6"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>这个成熟了吗?我没有看到任何新版本吗?</h2>
+<p></p>
+<a href="https://www.google.com/trends/explore#q=plantuml">Google趋势</a>有点积极。并且有[[https://www.google.com/search?tbm=bks&amp;q=plantuml |几本提到PlantUML的书]]。是的,它很成熟。
+<p></p>
+请注意,<strong> PlantUML </strong>是在考虑[[http://en.wikipedia.org/wiki/Continuous_integration |连续集成]]的情况下开发的。这意味着有很多新版本具有(希望!)向后兼容。因此文件<strong> PlantUML.jar </strong>可能会随着时间的推移而更改,同时保持相同的名称。
+<p></p>
+如果您想知道所使用的确切版本,可以在命令行中输入:
+<p></p>
+<p>
+<code></code></p><pre class="colo"><code>java -jar plantuml.jar -version
+</code></pre>
+<p>
+</p><p></p>
+<p></p>
+或使用以下小型特殊图表说明:
+<p></p>
+<p>
+<code></code></p><pre class="colo"><code>@startuml
+version
+@enduml
+</code></pre>
+<p>
+<a style="position:relative;top:-38px;" name="5d6defd5a6d71a6f"></a>
+</p><div style="clear:both;height:50px;">
+</div>
+<!--heading--><h2 class="chap"><img onclick="window.scrollTo(0,0);" title="Back to top" src="../backtop1.svg" width="20" height="20" class="backtop"/><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/cmp/dokuwiki/zh/faq#7"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/cmp/asciidoc/zh/faq#7"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/cmp/markdown/zh/faq#7"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>如何知道是否有新版本?</h2>
+<p></p>
+要检查是否有较新的版本可供下载,您可以转到<a href="download.html">下载页面</a>。
+<p></p>
+您还可以订阅以下rss流:
+<p></p>
+<ul>
+<li>[<a href="http://forum.plantuml.net/feed/activity.rss">问答网站上的近期活动</a></li>
+<li><a href="http://forum.plantuml.net/feed/qa.rss">问题与解答论坛上的最新问题和解答</a></li>
+</ul>
+<p></p>
+或者您可以使用命令行:
+<p></p>
+<p>
+<code></code></p><pre class="colo"><code>java -jar plantuml.jar -version
+</code></pre>
+<p>
+</p><p></p>
+<p></p>
+或使用以下小特殊图描述:
+<p></p>
+<p>
+<code></code></p><pre class="colo"><code>@startuml
+version
+@enduml
+</code></pre>
+<p>
+<a style="position:relative;top:-38px;" name="e689668a91b8d065"></a>
+</p><div style="clear:both;min-height:110px;margin-top:10px;">
+
+<div class="pezoic">
+<!-- Ezoic - Fish3 - longer_content -->
+<span id="ezoic-pub-ad-placeholder-116"></span><!-- ezoic_pub_ad_placeholder-116-longer_content-234x60-116-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-116-longer_content-468x60-116-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-116-longer_content-728x90-116-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-116-longer_content-970x90-116-nonexxxnonexxxxxxezmaxscaleval100 -->
+<!-- End Ezoic - Fish3 - longer_content -->
+</div>
+
+</div>
+<!--heading--><h2 class="chap"><img onclick="window.scrollTo(0,0);" title="Back to top" src="../backtop1.svg" width="20" height="20" class="backtop"/><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/cmp/dokuwiki/zh/faq#8"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/cmp/asciidoc/zh/faq#8"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/cmp/markdown/zh/faq#8"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>我想生成巨大的图表!</h2>
+<p></p>
+PlantUML将图像的宽度和高度限制为4096。您可以设置一个环境变量来覆盖此限制:<code class="cod">PLANTUML_LIMIT_SIZE</code>。您必须在启动PlantUML之前定义此变量,例如:
+<p></p>
+<p>
+<code></code></p><pre class="colo"><code>set PLANTUML_LIMIT_SIZE = 8192
+</code></pre>
+<p>
+</p><p></p>
+要么
+<p></p>
+<p>
+<code></code></p><pre class="colo"><code>setenv PLANTUML_LIMIT_SIZE 8192
+</code></pre>
+<p>
+</p><p></p>
+另一种方法是命令行中的选项:
+<p></p>
+<p>
+<code></code></p><pre class="colo"><code>java -DPLANTUML_LIMIT_SIZE = 8192 -jar /path/to/plantuml.jar ...
+</code></pre>
+<p>
+</p><p></p>
+请注意,如果生成<strong>非常大</strong>的图表(例如,类似20000 x 10000像素的东西),则可能会遇到一些内存问题。解决方案是将此参数添加到java vm中:<a href="http://javahowto.blogspot.com/2006/06/6-common-errors-in-setting-java-heap.html">-Xmx1024m</a>。
+<center><div class="tago">WARNING</div> <b>This translation need to be updated.</b> <div class="tago">WARNING</div></center>
+<a style="position:relative;top:-38px;" name="fb512f3bcb2c5b7d"></a>
+<div style="clear:both;height:50px;">
+</div>
+<!--heading--><h2 class="chap"><img onclick="window.scrollTo(0,0);" title="Back to top" src="../backtop1.svg" width="20" height="20" class="backtop"/><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/cmp/dokuwiki/zh/faq#9"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/cmp/asciidoc/zh/faq#9"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/cmp/markdown/zh/faq#9"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>我在重音字符方面遇到问题。</h2>
+<p></p>
+字符编码是一件微妙的事情……默认情况下,PlantUML使用平台的默认字符集,该字符集可以为UTF-8,也可以不是。如果您想知道使用的是哪个字符集,可以键入以下命令:
+<p></p>
+<p>
+<code></code></p><pre class="colo"><code>java -jar plantuml.jar -help
+</code></pre>
+<p>
+</p><p></p>
+<p>
+<code></code></p><pre class="colo"><code>...
+-charset XYZ要使用特定的字符集(默认为Windows-1252)
+...
+</code></pre>
+<p>
+</p><p></p>
+如果要使用其他字符集,例如UTF-8,则可以使用<code class="cod">-charset</code>标志:
+<p></p>
+<p>
+<code></code></p><pre class="colo"><code>java -jar plantuml.jar -charset UTF-8 ...
+</code></pre>
+<p>
+</p><p></p>
+<p></p>
+您还可以找到<a href="https://plantuml.com/zh-dark/unicode">此处有关unicode的信息</a>。请注意,即使Java <a href="http://bugs.sun.com/bugdatabase/view_bug.do?bug_id=4508058">不支持B.O.M. (以UTF-8格式文件的字节顺序标记)</a>,在PlantUML中已经添加了解决方法,因此这不应该成为问题。
+<a style="position:relative;top:-38px;" name="d28267f6da3b7069"></a>
+<div style="clear:both;min-height:110px;margin-top:10px;">
+
+<div class="pezoic">
+<!-- Ezoic - Fish4 - longest_content -->
+<span id="ezoic-pub-ad-placeholder-117"></span><!-- ezoic_pub_ad_placeholder-117-longest_content-234x60-117-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-117-longest_content-468x60-117-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-117-longest_content-728x90-117-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-117-longest_content-970x90-117-nonexxxnonexxxxxxezmaxscaleval100 -->
+<!-- End Ezoic - Fish4 - longest_content -->
+</div>
+
+</div>
+<!--heading--><h2 class="chap"><img onclick="window.scrollTo(0,0);" title="Back to top" src="../backtop1.svg" width="20" height="20" class="backtop"/><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/cmp/dokuwiki/zh/faq#10"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/cmp/asciidoc/zh/faq#10"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/cmp/markdown/zh/faq#10"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>我遇到亚洲字符问题。</h2>
+<p></p>
+一些日本用户报告说,在启动PlantUML之前,必须在其shell中将<code class="cod">LANG</code>变量设置为<code class="cod">ja_JP.UTF-8</code>。
+<p></p>
+<p>
+<code></code></p><pre class="colo"><code>export LANG = ja_JP.UTF-8
+</code></pre>
+<p>
+</p><p></p>
+由于<a href="https://plantuml.com/zh-dark/svek">新架构</a>,它应该简单地起作用,因为Java知道如何绘制东亚字符。
+<a style="position:relative;top:-38px;" name="a6da1c9169e3c782"></a>
+<div style="clear:both;height:50px;">
+</div>
+<!--heading--><h2 class="chap"><img onclick="window.scrollTo(0,0);" title="Back to top" src="../backtop1.svg" width="20" height="20" class="backtop"/><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/cmp/dokuwiki/zh/faq#11"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/cmp/asciidoc/zh/faq#11"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/cmp/markdown/zh/faq#11"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>如何生成EPS?</h2>
+<p></p>
+您可以在命令行中使用<code class="cod">-eps</code>标志,也可以在<a href="https://plantuml.com/zh-dark/ant">ANT任务</a>中使用<code class="cod">format=&#34;eps&#34;</code>。
+<p></p>
+<p></p>
+You can use the ``-teps`` flag in the command line, or ``format=&#34;eps&#34;`` in [the ANT task](ant).
+<center><div class="tago">WARNING</div> <b>This translation need to be updated.</b> <div class="tago">WARNING</div></center>
+<a style="position:relative;top:-38px;" name="518a220e46e7849c"></a>
+<div style="clear:both;min-height:110px;margin-top:10px;">
+
+<div class="pezoic">
+<!-- Ezoic - Fish5 - incontent_5 -->
+<span id="ezoic-pub-ad-placeholder-118"></span><!-- ezoic_pub_ad_placeholder-118-incontent_5-234x60-118-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-118-incontent_5-468x60-118-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-118-incontent_5-728x90-118-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-118-incontent_5-970x90-118-nonexxxnonexxxxxxezmaxscaleval100 -->
+<!-- End Ezoic - Fish5 - incontent_5 -->
+</div>
+
+</div>
+<!--heading--><h2 class="chap"><img onclick="window.scrollTo(0,0);" title="Back to top" src="../backtop1.svg" width="20" height="20" class="backtop"/><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/cmp/dokuwiki/zh/faq#12"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/cmp/asciidoc/zh/faq#12"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/cmp/markdown/zh/faq#12"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>XMI呢?</h2>
+<p></p>
+工作是<a href="https://plantuml.com/zh-dark/xmi">进行中</a>。
+<a style="position:relative;top:-38px;" name="ef810064611fabdc"></a>
+<div style="clear:both;height:50px;">
+</div>
+<!--heading--><h2 class="chap"><img onclick="window.scrollTo(0,0);" title="Back to top" src="../backtop1.svg" width="20" height="20" class="backtop"/><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/cmp/dokuwiki/zh/faq#13"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/cmp/asciidoc/zh/faq#13"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/cmp/markdown/zh/faq#13"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>是否需要在-pipe标志中使用@startuml?</h2>
+<p></p>
+<u>简单来说</u>:启动图时,您必须使用@startuml(或@startditaa/@startjcckit ...)。
+<p></p>
+<u>具体来说</u>:
+<p></p>
+@startuml/@startditaa/@startjcckit可用于确定图的类型(uml,ditaa,jcckit ...),因为您可以选择将文件名放在@startXYZ之后。这也允许在同一文件中包含多个图表。
+<p></p>
+早期版本的PlantUML不支持ditaa或jcckit。当使用<a href="https://plantuml.com/zh-dark/command-line#pipe">-pipe</a>标志时,由于该图是生成到标准输出的,因此标准输入中可能只有一个图。并且无需指定文件名。由于所有这些原因,当时使用<a href="https://plantuml.com/zh-dark/command-line#pipe">-pipe</a>标志时,不需要@startuml。
+<p></p>
+后来,已经决定对此进行标准化,并在所有位置加上@startXYZ,即使使用<a href="https://plantuml.com/zh-dark/command-line#pipe">-pipe</a>标志,因为这会使用户感到困惑。不幸的是,由于某些现有脚本已经使用了<a href="https://plantuml.com/zh-dark/command-line#pipe">-pipe</a>标志中不需要@startuml的事实,因此决定将其保留为<em>deprecated</em>选项,只是为了允许运行较旧的脚本。我们确实的确注意了兼容性的提升。
+<p></p>
+对于较新的脚本,您不应依赖于此,而应将@startXYZ/@endXYZ与<a href="https://plantuml.com/zh-dark/command-line#pipe">-pipe</a>标志一起使用。
+<center><div class="tago">WARNING</div> <b>This translation need to be updated.</b> <div class="tago">WARNING</div></center>
+<a style="position:relative;top:-38px;" name="b1a5d65fedb84153"></a>
+<div style="clear:both;min-height:110px;margin-top:10px;">
+
+<div class="pezoic">
+<!-- Ezoic - Fish6 - incontent_6 -->
+<span id="ezoic-pub-ad-placeholder-119"></span><!-- ezoic_pub_ad_placeholder-119-incontent_6-234x60-119-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-119-incontent_6-468x60-119-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-119-incontent_6-728x90-119-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-119-incontent_6-970x90-119-nonexxxnonexxxxxxezmaxscaleval100 -->
+<!-- End Ezoic - Fish6 - incontent_6 -->
+</div>
+
+</div>
+<!--heading--><h2 class="chap"><img onclick="window.scrollTo(0,0);" title="Back to top" src="../backtop1.svg" width="20" height="20" class="backtop"/><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/cmp/dokuwiki/zh/faq#14"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/cmp/asciidoc/zh/faq#14"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/cmp/markdown/zh/faq#14"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>PlantUML分配给哪个许可证?</h2>
+<p></p>
+PlantUML是根据<a href="http://www.gnu.org/copyleft/gpl.html">GPL许可</a>分发的。<br/>
+您可以使用命令行选项来打印许可证:
+<p></p>
+<p>
+<code></code></p><pre class="colo"><code>java -jar plantuml.jar -license
+</code></pre>
+<p>
+</p><p></p>
+或者,您可以使用特殊图表:
+<p></p>
+<p>
+<code></code></p><pre class="colo"><code>@startuml
+license
+@enduml
+</code></pre>
+<p>
+<a style="position:relative;top:-38px;" name="ddbc9d04378ee462"></a>
+</p><div style="clear:both;height:50px;">
+</div>
+<!--heading--><h2 class="chap"><img onclick="window.scrollTo(0,0);" title="Back to top" src="../backtop1.svg" width="20" height="20" class="backtop"/><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/cmp/dokuwiki/zh/faq#15"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/cmp/asciidoc/zh/faq#15"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/cmp/markdown/zh/faq#15"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>我不喜欢GPL!</h2>
+<p></p>
+您还可以使用:
+<p></p>
+<ul>
+<li><a href="download.html#lgpl">LGPL许可证</a></li>
+<li><a href="download.html#asl">Apache许可证</a></li>
+<li><a href="download.html#epl">Eclipse公共许可证</a></li>
+<li><a href="download.html#mit">MIT许可证</a></li>
+</ul>
+<p></p>
+这些版本缺少一些功能(例如<a href="ditaa.html">DITAA</a>),但是100％能够生成UML图。
+<p></p>
+您可以使用命令行选项打印这些版本的许可证:
+<p></p>
+<p>
+<code></code></p><pre class="colo"><code>java -jar plantuml.jar -license
+</code></pre>
+<p>
+</p><p></p>
+或者,您可以使用特殊图表:
+<p></p>
+<p>
+<code></code></p><pre class="colo"><code>@startuml
+license
+@enduml
+</code></pre>
+<p>
+<a style="position:relative;top:-38px;" name="479a824c6c37f0b6"></a>
+</p><div style="clear:both;min-height:110px;margin-top:10px;">
+
+<div class="pezoic">
+<!-- Ezoic - Fish7 - incontent_7 -->
+<span id="ezoic-pub-ad-placeholder-120"></span><!-- ezoic_pub_ad_placeholder-120-incontent_7-234x60-120-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-120-incontent_7-468x60-120-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-120-incontent_7-728x90-120-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-120-incontent_7-970x90-120-nonexxxnonexxxxxxezmaxscaleval100 -->
+<!-- End Ezoic - Fish7 - incontent_7 -->
+</div>
+
+</div>
+<!--heading--><h2 class="chap"><img onclick="window.scrollTo(0,0);" title="Back to top" src="../backtop1.svg" width="20" height="20" class="backtop"/><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/cmp/dokuwiki/zh/faq#16"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/cmp/asciidoc/zh/faq#16"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/cmp/markdown/zh/faq#16"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>PlantUML生成的图像是否受GPL/LGPL/ASL/EPL/MIT许可保护?</h2>
+<p></p>
+不。
+<p></p>
+由PlantUML的&#34;执行&#34;生成的图像(无论其格式为:PNG,SVG ...)均归其相应源代码(即,以PlantUML语言编写的文字描述)的作者所有。
+<p></p>
+PlantUML的<strong>执行</strong>生成的图像<strong>不</strong>被视为<em>被覆盖的作品</em>。您可以与他们一起做任何您想做的事。
+<p></p>
+然后可以在不参考GPL/LGPL/ASL/EPL/MIT许可的情况下使用生成的图像。甚至没有必要规定它们是由PlantUML生成的,尽管PlantUML团队将不胜感激。
+<p></p>
+有一个例外:如果某些许可证(例如GPL/LGPL/ASL/EPL/MIT)也涵盖了PlantUML语言的文本描述,则从逻辑上讲,此许可证涵盖了生成的图像。
+<center><div class="tago">WARNING</div> <b>This translation need to be updated.</b> <div class="tago">WARNING</div></center>
+<a style="position:relative;top:-38px;" name="c9e3705e82bcbe12"></a>
+<div style="clear:both;height:50px;">
+</div>
+<!--heading--><h2 class="chap"><img onclick="window.scrollTo(0,0);" title="Back to top" src="../backtop1.svg" width="20" height="20" class="backtop"/><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/cmp/dokuwiki/zh/faq#17"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/cmp/asciidoc/zh/faq#17"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/cmp/markdown/zh/faq#17"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>我可以重新分发LGPL二进制文件PlantUML.jar,是否存在任何约束?</h2>
+<p></p>
+只要不修改Java源代码和jar文件,就可以将PlantUML.jar集成到您自己的封闭源代码软件中。
+<p></p>
+唯一的限制是您必须在自己的许可证或文档中的某处提到您正在使用PlantUML,并且PlantUML是根据LGPL发行的。
+<p></p>
+然后,您甚至可以无限制地出售您的软件并赚钱(尽管在这种情况下<a href="https://plantuml.com/zh-dark/donors">捐赠者将不胜感激</a><code class="cod">:-)</code>
+<a style="position:relative;top:-38px;" name="ee2efd4dfd7c7032"></a>
+<div style="clear:both;min-height:110px;margin-top:10px;">
+
+<div class="pezoic">
+<!-- Ezoic - Fish8 - incontent_8 -->
+<span id="ezoic-pub-ad-placeholder-121"></span><!-- ezoic_pub_ad_placeholder-121-incontent_8-234x60-121-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-121-incontent_8-468x60-121-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-121-incontent_8-728x90-121-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-121-incontent_8-970x90-121-nonexxxnonexxxxxxezmaxscaleval100 -->
+<!-- End Ezoic - Fish8 - incontent_8 -->
+</div>
+
+</div>
+<!--heading--><h2 class="chap"><img onclick="window.scrollTo(0,0);" title="Back to top" src="../backtop1.svg" width="20" height="20" class="backtop"/><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/cmp/dokuwiki/zh/faq#18"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/cmp/asciidoc/zh/faq#18"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/cmp/markdown/zh/faq#18"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>PlantUML语法的许可是什么?</h2>
+<p></p>
+PlantUML语法本身没有许可证:这意味着每个人都可以使用它。
+<p></p>
+因此,您可以在自己的代码中使用PlantUML注释:<strong>这些注释是您自己拥有的</strong>,不被视为<em>涵盖的工作</em>,并且不受GPL/LGPL/APL/EPL/MIT许可的约束。
+<p></p>
+GPL,LGPL,ASL,EPL或MIT仅许可当前的实现(即PlantUML程序)。另一方面,在PlantUML网站上发布的文档(示例,声明,...)受版权保护。但是您仍然可以编写自己的文档。
+<a style="position:relative;top:-38px;" name="46a1c7e6cc4ed2ba"></a>
+<div style="clear:both;height:50px;">
+</div>
+<!--heading--><h2 class="chap"><img onclick="window.scrollTo(0,0);" title="Back to top" src="../backtop1.svg" width="20" height="20" class="backtop"/><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/cmp/dokuwiki/zh/faq#19"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/cmp/asciidoc/zh/faq#19"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/cmp/markdown/zh/faq#19"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>EmptySvgException是什么意思?</h2>
+<p></p>
+PlantUML正在使用<a href="https://plantuml.com/zh-dark/graphviz-dot">Graphviz</a>生成一些图。因此PlantUML正在启动<em>dot</em>程序,并检索<em>dot</em>生成的信息作为SVG流。
+<p></p>
+此消息表示PlantUML正在<em>点</em>执行中获得空流,因此无法生成UML图。发生这种情况可能有几个原因:
+<p></p>
+  *您的Graphviz安装存在问题。尝试一个非常简单的图表,例如仅一个类。
+  *您的Graphviz版本太旧,并且因PlantUML提供的信息而崩溃。使用<code class="cod">testdot</code>检查您的版本
+  *您的图太复杂了。
+<ul>
+<li>PlantUML和/或<em>dot</em>中存在错误。</li>
+</ul>
+<a style="position:relative;top:-38px;" name="06143f6fe74ed705"></a>
+<div style="clear:both;min-height:110px;margin-top:10px;">
+
+<div class="pezoic">
+<!-- Ezoic - Fish9 - incontent_9 -->
+<span id="ezoic-pub-ad-placeholder-122"></span><!-- ezoic_pub_ad_placeholder-122-incontent_9-234x60-122-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-122-incontent_9-468x60-122-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-122-incontent_9-728x90-122-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-122-incontent_9-970x90-122-nonexxxnonexxxxxxezmaxscaleval100 -->
+<!-- End Ezoic - Fish9 - incontent_9 -->
+</div>
+
+</div>
+<!--heading--><h2 class="chap"><img onclick="window.scrollTo(0,0);" title="Back to top" src="../backtop1.svg" width="20" height="20" class="backtop"/><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/cmp/dokuwiki/zh/faq#20"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/cmp/asciidoc/zh/faq#20"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/cmp/markdown/zh/faq#20"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>Could not initialize class net.sourceforge.plantuml.ugraphic.UFont</h2>
+<p></p>
+如果你有错误信息<code class="cod">java.lang.NoClassDefFoundError: Could not initialize class net.sourceforge.plantuml.ugraphic.UFont</code> ，这可能意味着你的服务器上没有安装字体。
+<p></p>
+你可以通过在你的系统上添加<code class="cod">fontconfig</code> 来解决。
+<p></p>
+<p>
+<code></code></p><pre class="colo"><code>sudo yum install fontconfig
+
+or
+
+sudo apt-get install fontconfig
+</code></pre>
+<p>
+</p><p></p>
+<center><div class="tago">WARNING</div> <b>This translation need to be updated.</b> <div class="tago">WARNING</div></center>
+<a style="position:relative;top:-38px;" name="239d64f675c3e515"></a>
+<div style="clear:both;height:50px;">
+</div>
+<!--heading--><h2 class="chap"><img onclick="window.scrollTo(0,0);" title="Back to top" src="../backtop1.svg" width="20" height="20" class="backtop"/><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/cmp/dokuwiki/zh/faq#21"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/cmp/asciidoc/zh/faq#21"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/cmp/markdown/zh/faq#21"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>我有一条错误信息来自X11或无头!</h2>
+<p></p>
+如果您在没有图形功能的Linux服务器上运行PlantUML,则可能会有一些错误消息:
+<p></p>
+<ul>
+<li>无法连接到X11窗口</li>
+<li>X11连接由于身份验证错误而被拒绝。</li>
+<li>HeadlessException</li>
+</ul>
+<p></p>
+<p></p>
+基本上,这是因为PlantUML需要访问某些图形资源(更多<a href="http://www.oracle.com/technetwork/articles/javase/headless-136834.html">此处的信息</a>)。
+您可以使用标志<code class="cod">-Djava.awt.headless = true</code>将PlantUML设置为无头模式。
+例如:
+<p>
+<code></code></p><pre class="colo"><code>/usr/bin/java -Djava.awt.headless = true -jar /data/PlantUml/plantuml.jar ...
+</code></pre>
+<p>
+</p><p></p>
+If you see a similar message on MacOS Ventura after running `plantuml` with no arguments, this is a [known issue](https://github.com/plantuml/plantuml/issues/275) but does not appear to indicate a problem since sub-commands (like `-gui`) do work.
+<center><div class="tago">WARNING</div> <b>This translation need to be updated.</b> <div class="tago">WARNING</div></center>
+<a style="position:relative;top:-38px;" name="d9d8ccf1a58fcf92"></a>
+<div style="clear:both;min-height:110px;margin-top:10px;">
+
+<div class="pezoic">
+<!-- Ezoic - Fish10 - incontent_10 -->
+<span id="ezoic-pub-ad-placeholder-123"></span><!-- ezoic_pub_ad_placeholder-123-incontent_10-234x60-123-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-123-incontent_10-468x60-123-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-123-incontent_10-728x90-123-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-123-incontent_10-970x90-123-nonexxxnonexxxxxxezmaxscaleval100 -->
+<!-- End Ezoic - Fish10 - incontent_10 -->
+</div>
+
+</div>
+<!--heading--><h2 class="chap"><img onclick="window.scrollTo(0,0);" title="Back to top" src="../backtop1.svg" width="20" height="20" class="backtop"/><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/cmp/dokuwiki/zh/faq#22"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/cmp/asciidoc/zh/faq#22"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/cmp/markdown/zh/faq#22"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>我在Mac OS X下有一个UnsatisfiedLinkError!</h2>
+<p></p>
+在Mac OS X下,如果出现以下错误消息:
+<p>
+<code></code></p><pre class="colo"><code>Error java.lang.UnsatisfiedLinkError / liblwawt.dylib /libosxapp.dylib
+</code></pre>
+<p>
+</p><p></p>
+您需要按照<a href="http://stackoverflow.com/questions/25914757/osx-yosemite-jvm-shared-library-does-not-contain-the-jni-createjavavm-symbol">http://stackoverflow .com/questions/25914757/osx-yosemite-jvm-shared-library-does-not-contain-the-jni-createjavavm-symbol</a>:
+<p></p>
+  -下载并安装软件包:JavaForOSX。
+  -找到文件<code class="cod">AptanaStidio3.ini</code>,该文件默认位于以下目录下:<code class="cod">/Applications/Aptana Studio 3/AptanaStudio3.app/Contents/MacOS</code>
+  -添加<code class="cod">-vm</code>参数以指定将用于午餐Aptana Studio的Java:<code class="cod">-vm /Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home/bin/java</code>
+<p></p>
+这似乎仅在Java 6下有效,因此您可以定义以下别名以在脚本中使用。
+<p>
+<code></code></p><pre class="colo"><code>alias java6=&#34;export JAVA_HOME=$(/usr/libexec/java_home -v 1.6.0)&#34;
+</code></pre>
+<p>
+<a style="position:relative;top:-38px;" name="bb154393caf979ba"></a>
+</p><div style="clear:both;height:50px;">
+</div>
+<!--heading--><h2 class="chap"><img onclick="window.scrollTo(0,0);" title="Back to top" src="../backtop1.svg" width="20" height="20" class="backtop"/><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/cmp/dokuwiki/zh/faq#23"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/cmp/asciidoc/zh/faq#23"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/cmp/markdown/zh/faq#23"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>PlantUML脚本正在抢占键盘/窗口焦点!</h2>
+<p></p>
+根据您的配置,您可以尝试使用标志<code class="cod">-Djava.awt.headless = true</code>。
+例如:
+<p>
+<code></code></p><pre class="colo"><code>/usr/bin/java -Djava.awt.headless = true -jar /path/to/plantuml.jar ...
+</code></pre>
+<p>
+<a style="position:relative;top:-38px;" name="76ee48737d9f7a1a"></a>
+</p><div style="clear:both;min-height:110px;margin-top:10px;">
+
+<div class="pezoic">
+<!-- Ezoic - Fish11 - incontent_11 -->
+<span id="ezoic-pub-ad-placeholder-194"></span><!-- ezoic_pub_ad_placeholder-194-incontent_11-234x60-194-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-194-incontent_11-468x60-194-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-194-incontent_11-728x90-194-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-194-incontent_11-970x90-194-nonexxxnonexxxxxxezmaxscaleval100 -->
+<!-- End Ezoic - Fish11 - incontent_11 -->
+</div>
+
+</div>
+<!--heading--><h2 class="chap"><img onclick="window.scrollTo(0,0);" title="Back to top" src="../backtop1.svg" width="20" height="20" class="backtop"/><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/cmp/dokuwiki/zh/faq#24"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/cmp/asciidoc/zh/faq#24"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/cmp/markdown/zh/faq#24"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>我发现了一个问题,但是由于我的图表包含机密数据,所以我无法提供显示该问题的图表</h2>
+<p></p>
+命令行中有一个<code class="cod">-cypher</code>选项,它生成一个<code class="cod">.preproc</code>文件而不是常规图像文件。
+<p></p>
+生成的<code class="cod">.preproc</code>文件看起来像输入图,期望所有单词(PlantUML语言关键字除外)均已被随机字母集代替。
+<p></p>
+您可以通过多次运行<code class="cod">-cypher</code>选项来再次检查(每次都会得到不同的文本)。
+您还可以查看用于执行此转换的<a href="https://github.com/plantuml/plantuml/blob/master/src/net/sourceforge/plantuml/utils/Cypher.java">Cypher.java类</a>请确保那里没有后门可用于找回原始图。
+<p></p>
+如果原始图中存在问题,则经过加密的图中也可能发生相同的问题。
+由于密文实际上是毫无意义的,因此您可以安全地与我们分享该文本:我们无法猜测您的实际工作。
+<p></p>
+但是我们将能够重现此问题并解决它,以便您可以使用原始(机密)图表。
+<p></p>
+<center><div class="tago">WARNING</div> <b>This translation need to be updated.</b> <div class="tago">WARNING</div></center>
+<a style="position:relative;top:-38px;" name="2724cf7361cb7765"></a>
+<div style="clear:both;height:50px;">
+</div>
+<!--heading--><h2 class="chap"><img onclick="window.scrollTo(0,0);" title="Back to top" src="../backtop1.svg" width="20" height="20" class="backtop"/><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/cmp/dokuwiki/zh/faq#25"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/cmp/asciidoc/zh/faq#25"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/cmp/markdown/zh/faq#25"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>我在Eclipse插件中收到一条错误消息。</h2>
+<p></p>
+如果您有以下错误消息:
+<p></p>
+当前显示的页面包含无效值
+<p></p>
+显示Windows/Preferences/PlantUML时,应尝试退出<a href="https://plantuml.com/zh-dark/eclipse">Eclipse</a>并在命令行上使用<code class="cod">-clean</code>标志:
+<p></p>
+<p>
+<code></code></p><pre class="colo"><code>eclipse -clean
+</code></pre>
+<p>
+<a style="position:relative;top:-38px;" name="0ba5eae220ff22b9"></a>
+</p><div style="clear:both;min-height:110px;margin-top:10px;">
+
+<div class="pezoic">
+<!-- Ezoic - Fish12 - incontent_12 -->
+<span id="ezoic-pub-ad-placeholder-195"></span><!-- ezoic_pub_ad_placeholder-195-incontent_12-234x60-195-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-195-incontent_12-468x60-195-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-195-incontent_12-728x90-195-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-195-incontent_12-970x90-195-nonexxxnonexxxxxxezmaxscaleval100 -->
+<!-- End Ezoic - Fish12 - incontent_12 -->
+</div>
+
+</div>
+<!--heading--><h2 class="chap"><img onclick="window.scrollTo(0,0);" title="Back to top" src="../backtop1.svg" width="20" height="20" class="backtop"/><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/cmp/dokuwiki/zh/faq#26"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/cmp/asciidoc/zh/faq#26"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/cmp/markdown/zh/faq#26"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>我有一个不在这里的问题!</h2>
+<p></p>
+您可以使用<a href="http://forum.plantuml.net">论坛</a>。
+<p></p>
+有人会在那里尝试回答您的问题。
+</td>
+<td id="toctd" valign="top" style="max-width:240px;min-width:240px;">
+<!--toc-->
+<div id="toc">
+<ul>
+<li><a href="faq.html#9be1c2970f548bf5">PlantUML的目标是什么?</a>
+</li><li><a href="faq.html#6bf8e8c6d419e153">我不喜欢PlantUML生成图表的样子。</a>
+</li><li><a href="faq.html#0bb4912b52689d3d">PlantUML Server生成的图像可以保存多长时间?</a>
+</li><li><a href="faq.html#b86e17649b665cee">它不适用于我的配置!</a>
+</li><li><a href="faq.html#8e05a6bcd8f17180">我应该使用哪个版本的Graphviz?</a>
+</li><li><a href="faq.html#cfea81a6dd16994c">这个成熟了吗?我没有看到任何新版本吗?</a>
+</li><li><a href="faq.html#5d6defd5a6d71a6f">如何知道是否有新版本?</a>
+</li><li><a href="faq.html#e689668a91b8d065">我想生成巨大的图表!</a>
+</li><li><a href="faq.html#fb512f3bcb2c5b7d">我在重音字符方面遇到问题。</a>
+</li><li><a href="faq.html#d28267f6da3b7069">我遇到亚洲字符问题。</a>
+</li><li><a href="faq.html#a6da1c9169e3c782">如何生成EPS?</a>
+</li><li><a href="faq.html#518a220e46e7849c">XMI呢?</a>
+</li><li><a href="faq.html#ef810064611fabdc">是否需要在-pipe标志中使用@startuml?</a>
+</li><li><a href="faq.html#b1a5d65fedb84153">PlantUML分配给哪个许可证?</a>
+</li><li><a href="faq.html#ddbc9d04378ee462">我不喜欢GPL!</a>
+</li><li><a href="faq.html#479a824c6c37f0b6">PlantUML生成的图像是否受GPL/LGPL/ASL/EPL/MIT许可保护?</a>
+</li><li><a href="faq.html#c9e3705e82bcbe12">我可以重新分发LGPL二进制文件PlantUML.jar,是否存在任何约束?</a>
+</li><li><a href="faq.html#ee2efd4dfd7c7032">PlantUML语法的许可是什么?</a>
+</li><li><a href="faq.html#46a1c7e6cc4ed2ba">EmptySvgException是什么意思?</a>
+</li><li><a href="faq.html#06143f6fe74ed705">Could not initialize class net.sourceforge.plantuml.ugraphic.UFont</a>
+</li><li><a href="faq.html#239d64f675c3e515">我有一条错误信息来自X11或无头!</a>
+</li><li><a href="faq.html#d9d8ccf1a58fcf92">我在Mac OS X下有一个UnsatisfiedLinkError!</a>
+</li><li><a href="faq.html#bb154393caf979ba">PlantUML脚本正在抢占键盘/窗口焦点!</a>
+</li><li><a href="faq.html#76ee48737d9f7a1a">我发现了一个问题,但是由于我的图表包含机密数据,所以我无法提供显示该问题的图表</a>
+</li><li><a href="faq.html#2724cf7361cb7765">我在Eclipse插件中收到一条错误消息。</a>
+</li><li><a href="faq.html#0ba5eae220ff22b9">我有一个不在这里的问题!</a>
+</li></ul>
+</div>
+</td>
+</tr>
+</tbody></table>
+
+
+</p><p>
+
+<!-- Ezoic - Natif02L - bottom_of_page -->
+</p><span id="ezoic-pub-ad-placeholder-104"></span><!-- ezoic_pub_ad_placeholder-104-bottom_of_page-234x60-104-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-104-bottom_of_page-468x60-104-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-104-bottom_of_page-728x90-104-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-104-bottom_of_page-970x250-104-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-104-bottom_of_page-300x250x3-104-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-104-bottom_of_page-970x90-104-nonexxxnonexxxxxxezmaxscaleval100 -->
+<!-- End Ezoic - Natif02L - bottom_of_page -->
+</div>
+<!-- https://css-tricks.com/almanac/properties/f/float/ -->
+<!-- https://css-tricks.com/snippets/css/a-guide-to-flexbox/ -->
+
+
+<style>
+.btm {
+text-align:center;
+}
+.btm a{
+    text-decoration:none;
+    color:#b0c0d0;
+}
+.btm a:hover{
+    color:#8CB4FF;
+}
+</style>
+
+<div class="btm">
+<hr/>
+<a href="https://g.ezoic.net/privacy/plantuml.com"><small>Privacy Policy</small></a>
+    
+<a href="../direct-sales.html"><small>Advertise</small></a>
+<p>
+</p></div><!--btm-->
+
+
+<!--root-->
+
+<!-- Start of StatCounter Code --><script type="text/javascript">
+var sc_project=11129481; var sc_invisible=1; var sc_security="bd89fcfd";
+</script>
+<script async="" type="text/javascript" src="https://www.statcounter.com/counter/counter.js"></script> <!-- End of StatCounter Code -->
+
+
+<!--[selectrongo:done]--><script type="text/javascript">
+				var __inScopeForCCPA = false;
+		function __uspapi(command, version, callback) {
+			var response = null;
+			var successs = false;
+			if (command === "getUSPData" && version === 1) {
+				var uspString = "1"; // Version
+				if (__inScopeForCCPA) {
+					uspString += "N"; // Has Explicit Notice for Opt Out been provided (ex footer or minor consent modal)
+					var result;
+					var consentCookie = (result = new RegExp('(?:^|; )ezoccpaconsent=([^;]*)').exec(document.cookie)) ? (result[1]) : null;
+					if (consentCookie === "nonconsent") {
+						uspString += "Y";
+					}
+					else {
+						uspString += "N";
+					}
+					uspString += "N" // Is pub a signatory to the IAB Limited Service Provider Agreement (http://www.iabprivacy.com/)
+				}
+				else {
+					uspString += "---";
+				}
+				response = {
+					uspString: uspString,
+					version: 1
+				};
+				success = true;
+			}
+			return callback(response, success);
+		};
+		function __receiveUspapiMessage(event) {
+			if (event.data.hasOwnProperty('__uspapiCall')) {
+				__uspapi('getUSPData', 1, function(uspData, success) {
+					event.source.postMessage({
+						__uspapiReturn: {
+							returnValue: uspData,
+							success: success,
+							callId: event.data.__uspapiCall.callId
+						}
+					},
+					event.origin);
+				});
+			}
+			return null;
+		};
+		window.addEventListener("message", __receiveUspapiMessage, false);
+</script>
+<script>__ez.queue.addFile('/tardisrocinante/vitals.js', '/tardisrocinante/vitals.js?gcb=2&cb=3', false, ['/parsonsmaize/mulvane.js'], true, false, true, false);</script>
+<script>var _audins_dom="plantuml_com",_audins_did=173770;__ez.queue.addDelayFunc("audins.js","__ez.script.add", "//go.ezodn.com/detroitchicago/audins.js?cb=195-2");</script><noscript><div style="display:none;"><img src="https://pixel.quantserve.com/pixel/p-31iz6hfFutd16.gif?labels=Domain.plantuml_com,DomainId.173770" border="0" height="1" width="1" alt="Quantcast"/></div></noscript>
+<script>__ez.queue.addFile('/beardeddragon/drake.js', '/beardeddragon/drake.js?gcb=2&cb=4', false, [], true, false, true, false);</script>
+<script type="text/javascript" style='display:none;'>var __ez_dims = (function() {
+		var setCookie = function( name, content, expiry ) {
+			return document.cookie = name+'='+content+((expiry)?';expires='+(new Date(Math.floor(new Date().getTime()+expiry*1000)).toUTCString()):'')+';path=/';
+		};
+		var ffid = 1;
+		var oh = window.screen.height;
+		var ow = window.screen.width;
+		var h = ffid === 1 ? oh : (oh > ow) ? oh : ow;
+		var w = ffid === 1 ? ow : (oh > ow) ? ow : oh;
+		var uh = window.innerHeight || document.documentElement.clientHeight || document.getElementsByTagName('body')[0].clientHeight;
+		var uw = window.innerWidth || document.documentElement.clientWidth || document.getElementsByTagName('body')[0].clientWidth;
+		setCookie('ezds', encodeURIComponent('ffid='+ffid+',w='+w+',h='+h), (31536e3*7));
+		setCookie('ezohw', encodeURIComponent('w='+uw+',h='+uh), (31536e3*7));
+	})();</script>
+<script type='text/javascript' style='display:none;' async>__ez.queue.addFile('/parsonsmaize/chanute.js', '/parsonsmaize/chanute.js?a=a&cb=7&dcb=195-2&shcb=34', true, ['/parsonsmaize/mulvane.js'], true, false, false, false);</script>
+<script type='text/javascript' style='display:none;' async>__ez.queue.addFile('/porpoiseant/jellyfish.js', '/porpoiseant/jellyfish.js?a=a&cb=10&dcb=195-2&shcb=34', false, [], true, false, false, false);</script></body></html>

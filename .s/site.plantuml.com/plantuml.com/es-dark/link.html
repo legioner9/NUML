@@ -1,0 +1,2627 @@
+<html lang="es"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<script data-ezscrex='false' data-cfasync='false' data-pagespeed-no-defer>var __ez=__ez||{};__ez.stms=Date.now();__ez.evt={};__ez.script={};__ez.ck=__ez.ck||{};__ez.template={};__ez.template.isOrig=false;__ez.queue=function(){var e=0,i=0,t=[],n=!1,o=[],r=[],s=!0,a=function(e,i,n,o,r,s,a){var l=arguments.length>7&&void 0!==arguments[7]?arguments[7]:window,d=this;this.name=e,this.funcName=i,this.parameters=null===n?null:p(n)?n:[n],this.isBlock=o,this.blockedBy=r,this.deleteWhenComplete=s,this.isError=!1,this.isComplete=!1,this.isInitialized=!1,this.proceedIfError=a,this.fWindow=l,this.isTimeDelay=!1,this.process=function(){f("... func = "+e),d.isInitialized=!0,d.isComplete=!0,f("... func.apply: "+e);var i=d.funcName.split("."),n=null,o=this.fWindow||window;i.length>3||(n=3===i.length?o[i[0]][i[1]][i[2]]:2===i.length?o[i[0]][i[1]]:o[d.funcName]),null!=n&&n.apply(null,this.parameters),!0===d.deleteWhenComplete&&delete t[e],!0===d.isBlock&&(f("----- F'D: "+d.name),u())}},l=function(e,i,t,n,o,r,s){var a=arguments.length>7&&void 0!==arguments[7]?arguments[7]:window,l=this;this.name=e,this.path=i,this.async=o,this.defer=r,this.isBlock=t,this.blockedBy=n,this.isInitialized=!1,this.isError=!1,this.isComplete=!1,this.proceedIfError=s,this.fWindow=a,this.isTimeDelay=!1,this.isPath=function(e){return"/"===e[0]&&"/"!==e[1]},this.getSrc=function(e){return void 0!==window.__ezScriptHost&&this.isPath(e)&&"banger.js"!==this.name?window.__ezScriptHost+e:e},this.process=function(){l.isInitialized=!0,f("... file = "+e);var i=this.fWindow?this.fWindow.document:document,t=i.createElement("script");t.src=this.getSrc(this.path),!0===o?t.async=!0:!0===r&&(t.defer=!0),t.onerror=function(){var e={url:window.location.href,name:l.name,path:l.path,user_agent:window.navigator.userAgent};"undefined"!=typeof _ezaq&&(e.pageview_id=_ezaq.page_view_id);var i=encodeURIComponent(JSON.stringify(e)),t=new XMLHttpRequest;t.open("GET","//g.ezoic.net/ezqlog?d="+i,!0),t.send(),f("----- ERR'D: "+l.name),l.isError=!0,!0===l.isBlock&&u()},t.onreadystatechange=t.onload=function(){var e=t.readyState;f("----- F'D: "+l.name),e&&!/loaded|complete/.test(e)||(l.isComplete=!0,!0===l.isBlock&&u())},i.getElementsByTagName("head")[0].appendChild(t)}},d=function(e,i){this.name=e,this.path="",this.async=!1,this.defer=!1,this.isBlock=!1,this.blockedBy=[],this.isInitialized=!0,this.isError=!1,this.isComplete=i,this.proceedIfError=!1,this.isTimeDelay=!1,this.process=function(){}};function c(e){!0!==h(e)&&0!=s&&e.process()}function h(e){if(!0===e.isTimeDelay&&!1===n)return f(e.name+" blocked = TIME DELAY!"),!0;if(p(e.blockedBy))for(var i=0;i<e.blockedBy.length;i++){var o=e.blockedBy[i];if(!1===t.hasOwnProperty(o))return f(e.name+" blocked = "+o),!0;if(!0===e.proceedIfError&&!0===t[o].isError)return!1;if(!1===t[o].isComplete)return f(e.name+" blocked = "+o),!0}return!1}function f(e){var i=window.location.href,t=new RegExp("[?&]ezq=([^&#]*)","i").exec(i);"1"===(t?t[1]:null)&&console.debug(e)}function u(){++e>200||(f("let's go"),m(o),m(r))}function m(e){for(var i in e)if(!1!==e.hasOwnProperty(i)){var t=e[i];!0===t.isComplete||h(t)||!0===t.isInitialized||!0===t.isError?!0===t.isError?f(t.name+": error"):!0===t.isComplete?f(t.name+": complete already"):!0===t.isInitialized&&f(t.name+": initialized already"):t.process()}}function p(e){return"[object Array]"==Object.prototype.toString.call(e)}return window.addEventListener("load",(function(){setTimeout((function(){n=!0,f("TDELAY -----"),u()}),5e3)}),!1),{addFile:function(e,i,n,s,a,d,h,f,u){var m=new l(e,i,n,s,a,d,h,u);!0===f?o[e]=m:r[e]=m,t[e]=m,c(m)},addDelayFile:function(e,i){var n=new l(e,i,!1,[],!1,!1,!0);n.isTimeDelay=!0,f(e+" ...  FILE! TDELAY"),r[e]=n,t[e]=n,c(n)},addFunc:function(e,n,s,l,d,h,f,u,m,p){!0===h&&(e=e+"_"+i++);var w=new a(e,n,s,l,d,f,u,p);!0===m?o[e]=w:r[e]=w,t[e]=w,c(w)},addDelayFunc:function(e,i,n){var o=new a(e,i,n,!1,[],!0,!0);o.isTimeDelay=!0,f(e+" ...  FUNCTION! TDELAY"),r[e]=o,t[e]=o,c(o)},items:t,processAll:u,setallowLoad:function(e){s=e},markLoaded:function(e){if(e&&0!==e.length){if(e in t){var i=t[e];!0===i.isComplete?f(i.name+" "+e+": error loaded duplicate"):(i.isComplete=!0,i.isInitialized=!0)}else t[e]=new d(e,!0);f("markLoaded dummyfile: "+t[e].name)}},logWhatsBlocked:function(){for(var e in t)!1!==t.hasOwnProperty(e)&&h(t[e])}}}();__ez.evt.add=function(e,t,n){e.addEventListener?e.addEventListener(t,n,!1):e.attachEvent?e.attachEvent("on"+t,n):e["on"+t]=n()},__ez.evt.remove=function(e,t,n){e.removeEventListener?e.removeEventListener(t,n,!1):e.detachEvent?e.detachEvent("on"+t,n):delete e["on"+t]};__ez.script.add=function(e){var t=document.createElement("script");t.src=e,t.async=!0,t.type="text/javascript",document.getElementsByTagName("head")[0].appendChild(t)};__ez.dot={};__ez.queue.addFile('/detroitchicago/boise.js', '/detroitchicago/boise.js?gcb=195-2&cb=2', true, [], true, false, true, false);__ez.queue.addFile('/parsonsmaize/abilene.js', '/parsonsmaize/abilene.js?gcb=195-2&cb=28', true, [], true, false, true, false);</script>
+<script data-ezscrex="false" type="text/javascript" data-cfasync="false">window._ezaq = Object.assign({}, typeof window._ezaq !== "undefined" ? window._ezaq : {}, {"ad_cache_level":1,"domain_id":173770,"ezcache_level":2,"ezcache_skip_code":0,"has_bad_image":0,"has_bad_words":0,"is_sitespeed":0,"lt_cache_level":0,"page_view_id":"17cac8f1-8d62-4e97-6da3-02be11fc2db4","response_size_orig":77687,"response_time_orig":6,"template_id":134,"url":"https://plantuml.com/es-dark/link","word_count":1369,"worst_bad_word_level":0});__ez.queue.markLoaded('ezaqBaseReady');</script>
+<script type="text/javascript">(function(){function storageAvailable(type){var storage;try{storage=window[type];var x='__storage_test__';storage.setItem(x,x);storage.removeItem(x);return true;}
+catch(e){return e instanceof DOMException&&(e.code===22||e.code===1014||e.name==='QuotaExceededError'||e.name==='NS_ERROR_DOM_QUOTA_REACHED')&&(storage&&storage.length!==0);}}
+function remove_ama_config(){if(storageAvailable('localStorage')){localStorage.removeItem("google_ama_config");}}
+remove_ama_config()})()</script>
+<script type="text/javascript">var ezoicTestActive = true</script>
+<script data-ezscrex="false" type="text/javascript" data-cfasync="false">window._ezaq = Object.assign({}, typeof window._ezaq !== "undefined" ? window._ezaq : {}, {"ab_test_id":"mod174-c","ad_cache_level":1,"ad_count_adjustment":0,"ad_lazyload_version":0,"ad_load_version":1,"ad_location_ids":"","adx_ad_count":0,"ai_placeholder_cache_level":1,"ai_placeholder_placement_cnt":-1,"bidder_method":1,"bidder_version":3,"city":"Krasnoyarsk","country":"RU","days_since_last_visit":-1,"display_ad_count":0,"domain_id":173770,"domain_test_group":20230802,"ds_adsize_opt_id":-1,"engaged_time_visit":0,"ezcache_level":2,"ezcache_skip_code":0,"form_factor_id":1,"framework_id":1,"has_bad_image":0,"has_bad_words":0,"iab_category":"","iab_category_0":"596","is_embed":false,"is_from_recommended_pages":false,"is_return_visitor":false,"is_sitespeed":0,"last_page_load":"","last_pageview_id":"","lt_cache_level":0,"max_ads":0,"metro_code":0,"optimization_version":1,"page_ad_positions":"","page_view_count":635,"page_view_id":"17cac8f1-8d62-4e97-6da3-02be11fc2db4","position_selection_id":0,"postal_code":"660000","pv_event_count":0,"response_size_orig":77687,"response_time_orig":6,"serverid":"i-019bf300998704967","state":"KYA","sub_page_ad_positions":"","t_epoch":1697691079,"template_id":134,"time_on_site_visit":0,"url":"https://plantuml.com/es-dark/link","word_count":1369,"worst_bad_word_level":0});__ez.queue.markLoaded('ezaqReady');</script>
+<script data-ezscrex='false' data-cfasync='false' data-pagespeed-no-defer>__ez.queue.addFile('/parsonsmaize/mulvane.js', '/parsonsmaize/mulvane.js?gcb=195-2&cb=5', true, ['/parsonsmaize/abilene.js'], true, false, true, false);__ez.queue.addFile('/parsonsmaize/olathe.js', '/parsonsmaize/olathe.js?gcb=195-2&cb=20', false, ['/parsonsmaize/abilene.js','/parsonsmaize/mulvane.js'], true, false, true, false);__ez.queue.addFile('/porpoiseant/et.js', '/porpoiseant/et.js?gcb=195-2&cb=2', false, [], true, false, true, false);!function(){var e;__ez.vep=(e=[],{Add:function(i,t){__ez.dot.isDefined(i)&&__ez.dot.isValid(t)&&e.push({type:"video",video_impression_id:i,domain_id:__ez.dot.getDID(),t_epoch:__ez.dot.getEpoch(0),data:__ez.dot.dataToStr(t)})},Fire:function(){if(void 0===document.visibilityState||"prerender"!==document.visibilityState){if(__ez.dot.isDefined(e)&&e.length>0)for(;e.length>0;){var i=5;i>e.length&&(i=e.length);var t=e.splice(0,i),o=__ez.dot.getURL("/detroitchicago/grapefruit.gif")+"?orig="+(!0===__ez.template.isOrig?1:0)+"&v="+btoa(JSON.stringify(t));__ez.dot.Fire(o)}e=[]}}})}();</script><script data-ezscrex='false' data-cfasync='false' data-pagespeed-no-defer>!function(){function e(i){return e="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e},e(i)}__ez.pel=function(){var i=[];function t(t,o,d,_,n,r,a,s){if(__ez.dot.isDefined(t)&&0!=__ez.dot.isAnyDefined(t.getSlotElementId,t.ElementId)){void 0===s&&(s=!1);var p=parseInt(__ez.dot.getTargeting(t,"ap")),f=__ez.dot.getSlotIID(t),u=__ez.dot.getAdUnit(t,s),z=parseInt(__ez.dot.getTargeting(t,"compid")),g=0,c=0,l=function(i){if("undefined"==typeof _ezim_d)return!1;var t=__ez.dot.getAdUnitPath(i).split("/").pop();if("object"===("undefined"==typeof _ezim_d?"undefined":e(_ezim_d))&&_ezim_d.hasOwnProperty(t))return _ezim_d[t];for(var o in _ezim_d)if(o.split("/").pop()===t)return _ezim_d[o];return!1}(t);"object"==e(l)&&(void 0!==l.creative_id&&(c=l.creative_id),void 0!==l.line_item_id&&(g=l.line_item_id)),__ez.dot.isDefined(f,u)&&__ez.dot.isValid(o)&&("0"===f&&!0!==s||""===u||i.push({type:"impression",impression_id:f,domain_id:__ez.dot.getDID(),unit:u,t_epoch:__ez.dot.getEpoch(0),revenue:d,est_revenue:_,ad_position:p,ad_size:"",bid_floor_filled:n,bid_floor_prev:r,stat_source_id:a,country_code:__ez.dot.getCC(),pageview_id:__ez.dot.getPageviewId(),comp_id:z,line_item_id:g,creative_id:c,data:__ez.dot.dataToStr(o),is_orig:s||__ez.template.isOrig}))}}function o(){void 0!==document.visibilityState&&"prerender"===document.visibilityState||(__ez.dot.isDefined(i)&&i.length>0&&[i.filter((function(e){return e.is_orig})),i.filter((function(e){return!e.is_orig}))].forEach((function(e){for(;e.length>0;){var i=e[0].is_orig||!1,t=5;t>e.length&&(t=e.length);var o=e.splice(0,t),d=__ez.dot.getURL("/porpoiseant/army.gif")+"?orig="+(!0===i?1:0)+"&sts="+btoa(JSON.stringify(o));(void 0!==window.isAmp&&isAmp||void 0!==window.ezWp&&ezWp)&&void 0!==window._ezaq&&_ezaq.hasOwnProperty("domain_id")&&(d+="&visit_uuid="+_ezaq.visit_uuid),__ez.dot.Fire(d)}})),i=[])}return{Add:t,AddAndFire:function(e,i){t(e,i,0,0,0,0,0),o()},AddAndFireOrig:function(e,i){t(e,i,0,0,0,0,0,!0),o()},AddById:function(e,t,o,d){var _=e.split("/");if(__ez.dot.isDefined(e)&&3===_.length&&__ez.dot.isValid(t)){var n=_[0],r={type:"impression",impression_id:_[2],domain_id:__ez.dot.getDID(),unit:n,t_epoch:__ez.dot.getEpoch(0),pageview_id:__ez.dot.getPageviewId(),data:__ez.dot.dataToStr(t),is_orig:o||__ez.template.isOrig};void 0!==d&&(r.revenue=d),i.push(r)}},Fire:o,GetPixels:function(){return i}}}()}();__ez.queue.addFile('/detroitchicago/raleigh.js', '/detroitchicago/raleigh.js?gcb=195-2&cb=6', false, ['/parsonsmaize/abilene.js'], true, false, true, false);__ez.queue.addFile('/detroitchicago/vista.js', '/detroitchicago/vista.js?gcb=195-2&cb=5', false, ['/parsonsmaize/abilene.js'], true, false, true, false);__ez.queue.addFile('/detroitchicago/tampa.js', '/detroitchicago/tampa.js?gcb=195-2&cb=5', false, ['/parsonsmaize/abilene.js'], true, false, true, false);</script><base href=""/>
+<meta name="flattr:id" content="1ew3x0"/>
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "url": "https://plantuml.com",
+  "name": "PlantUML",
+  "sameAs" : ["https://twitter.com/plantuml","https://en.wikipedia.org/wiki/PlantUML","https://www.wikidata.org/wiki/Q18346546"],
+  "logo": "https://cdn-0.plantuml.com/logo3.png",
+  "contactPoint": [{
+    "@type": "ContactPoint",
+    "email": "plantuml@gmail.com",
+    "url": "https://plantuml.com",
+    "contactType": "customer service"
+  }]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+    "@type": "ListItem",
+    "position": 1,
+    "item": {
+      "@id": "https://plantuml.com",
+      "name": "Home"
+    }
+  },{
+    "@type": "ListItem",
+    "position": 2,
+    "item": {
+      "@id": "https://plantuml.com/sitemap-advanced-usage",
+      "name": "Advanced usage"
+    }
+  },{
+    "@type": "ListItem",
+    "position": 3,
+    "item": {
+      "@id": "https://plantuml.com/link",
+      "name": "Hyperlink"
+  }
+  }]
+}
+</script>
+<link rel="canonical" href="../es/link.html"/>
+<link rel="alternate" hreflang="x-default" href="../link.html"/>
+<link rel="alternate" hreflang="de" href="../de/link.html"/>
+<link rel="alternate" hreflang="en" href="../link.html"/>
+<link rel="alternate" hreflang="es" href="../es/link.html"/>
+<link rel="alternate" hreflang="fr" href="../fr/link.html"/>
+<link rel="alternate" hreflang="ja" href="../ja/link.html"/>
+<link rel="alternate" hreflang="ru" href="../ru/link.html"/>
+<link rel="alternate" hreflang="ko" href="../ko/link.html"/>
+<link rel="alternate" hreflang="zh" href="../zh/link.html"/>
+
+<link rel="shortcut icon" href="../favicon.ico"/>
+
+<link rel="preload" as="image" href="../svgrepo-house.svg"/>
+<link rel="preload" as="image" href="../svgrepo-text-news.svg"/>
+<link rel="preload" as="image" href="../svgrepo-rocket-3-start.svg"/>
+<link rel="preload" as="image" href="../svgrepo-server.svg"/>
+<link rel="preload" as="image" href="../svgrepo-play.svg"/>
+<link rel="preload" as="image" href="../svgrepo-forum.svg"/>
+<link rel="preload" as="image" href="../svgrepo-add-to-online-cart.svg"/>
+<link rel="preload" as="image" href="../svgrepo-forum-message.svg"/>
+<link rel="preload" as="image" href="../svgrepo-palette-fill.svg"/>
+<link rel="preload" as="image" href="../svgrepo-cpu.svg"/>
+<link rel="preload" as="image" href="../svgrepo-books-library.svg"/>
+<link rel="preload" as="image" href="../svgrepo-signpost-fill.svg"/>
+<link rel="preload" as="image" href="../svgrepo-library.svg"/>
+
+<link rel="preload" as="image" href="../flags21.png"/>
+
+<link rel="preload" as="image" href="../svgrepo-uxwing-dark-mode-toggle.svg"/>
+
+
+<!-- link rel="preload" as="image" href="https://img.shields.io/liberapay/patrons/plantuml.svg?logo=liberapay" -->
+
+
+<title>Using Hyperlinks</title>
+<meta name="description" content="It&#39;s possible to put some links and URL in diagrams so that users can click or have tooltips displayed."/>
+
+<meta property="og:type" content="article"/>
+<meta property="og:title" content="Using Hyperlinks"/>
+<meta property="og:description" content="It&#39;s possible to put some links and URL in diagrams so that users can click or have tooltips displayed."/>
+
+<meta property="og:url" content="https://plantuml.com/es/link"/>
+<meta property="og:site_name" content="PlantUML.com"/>
+
+<!-- meta property="og:image" content="https://plantuml.com/og-link" -->
+<meta name="twitter:image" content="https://plantuml.com/og-link"/>
+<meta property="og:locale" content="es"/>
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Using Hyperlinks"/>
+<meta name="twitter:description" content="It&#39;s possible to put some links and URL in diagrams so that users can click or have tooltips displayed."/>
+<meta name="twitter:site" content="@PlantUML"/>
+<meta name="twitter:creator" content="@PlantUML"/>
+
+
+
+
+
+<!-- https://www.w3schools.com/colors/colors_picker.asp -->
+<!-- filter css https://codepen.io/sosuke/pen/Pjoqqp -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<style>
+.scale {
+}
+
+li {
+	margin: 2px;
+}
+#external li {
+	margin: 13px;
+}
+
+.pezoic {
+  max-width:970px;
+}
+
+@media screen and (max-width: 1600px) {
+	.pezoic {
+	  max-width:768px;
+	}
+}
+
+.coptable {
+	max-width: 90%;
+}
+
+.mytab {
+	display:inline-block;
+	border-radius: 3px;
+	border: 1px solid #e1e4e8;
+}
+
+.mytab:hover {
+	border: 1px dashed #8CB4FF;
+	cursor: pointer;
+	color: #8CB4FF;
+	background: #111111;
+}
+
+.cop {
+	margin: 25px 10px 0 10px;
+	filter: invert(100%);
+}
+.cop:hover {
+	cursor: pointer; 
+filter: invert(59%) sepia(81%) saturate(1778%) hue-rotate(164deg) brightness(105%) contrast(103%);
+}
+.cop2 {
+	margin: 25px 10px 0 10px;
+}
+.cop2:hover {
+	cursor: pointer; 
+}
+.msg {
+	position: absolute;
+	color:#339966;
+	background-color: #FFF;
+	margin-top: 55px;
+	display:none;
+	border-radius: 3px;
+	border: 1px solid #4dff00;
+}
+
+.mycell0 {
+	float: left;
+	vertical-align : top;
+	padding:10px;
+}
+.mycell0 code:hover {
+	cursor: default; 
+	color: #fff;
+}
+
+.mycell {
+	float: right;
+	vertical-align : top;
+	padding:10px;
+	max-width: 55vw;
+	overflow-x: auto;
+}
+
+.mycell0 pre {
+	max-width: 55vw;
+	overflow-x: auto;
+}
+
+.cod {
+	background: #222222;
+	padding: 2px 5px;
+	border-radius: 3px;
+}
+.colo {
+	display: inline-block;
+	background: #222222;
+	padding: 7px 12px;
+	border-radius: 3px;
+}
+.tag,.tagg,.tago,.tagr {
+	text-rendering: optimizeLegibility;
+	display: inline-block;
+	padding: 3px 5px 2px 4px;
+	text-decoration: none;
+	white-space: nowrap;
+	border: 1px solid #999;
+	text-transform: uppercase;
+	text-align: center;
+	border-radius: 3px;
+	font-size: 11px;
+	font-weight: bold;
+	line-height: 90%;
+}
+.tag {
+	background-color: #EEEEEE;
+}
+.tagg {
+	background-color: #98FB98;
+}
+.tago {
+	background-color: #fafa00;
+}
+.tagr {
+	background-color: #FF4500;
+}
+
+
+a {
+    text-decoration:none;
+    color:#8CB4FF;
+}
+a:hover {
+    text-decoration:underline;
+}
+
+.menu1 {
+    border: 0;
+    font-family: Helvetica,sans-serif;
+    font-size: 14px;
+    padding: 0;
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+	vertical-align: middle;
+	line-height: 30px;
+}
+.menu1 a{
+    /*background: #FF0;*/
+    text-align:center;
+	padding:10px 7px 10px 7px;
+    text-decoration:none;
+    color:#b0c0d0;
+}
+.menu1 a:hover{
+    color:#8CB4FF;
+}
+#menu0 {
+    top:0;
+    z-index: 4;
+    margin:0 0 0 10px;
+    padding:0;
+}
+
+@media screen and (max-width: 1200px) {
+	#menu0 {
+	visibility: hidden;
+	}	
+}
+
+.mhov img {
+	margin: 0 5px 0 0;
+	padding: 0;
+}
+.mhov:hover {
+filter: invert(59%) sepia(81%) saturate(1778%) hue-rotate(164deg) brightness(105%) contrast(103%);
+}
+
+#menuside2 {
+    border:0;
+    font-family:Helvetica,sans-serif;
+    font-size:14px;
+    padding:20px 0 4px 0;
+    margin:0
+}
+#menuside2 span {
+    vertical-align: top;
+}
+#menuside2 li{
+    list-style:none;
+    position:relative;
+    padding:0;
+	margin:10px 20px 10px 10px;
+    border:0;
+}
+#menuside2 li a{
+	display: inline-block;
+    text-decoration:none;
+    color:#b0c0d0;
+    width:100%;
+}
+#menuside2 img {
+filter: invert(46%) sepia(13%) saturate(620%) hue-rotate(170deg) brightness(91%) contrast(85%);
+}
+
+#BC {
+    z-index: 0;
+    padding-top: 5px;
+    top: 35px;
+}
+
+.breadcrumb {
+z-index:1;
+	font-family:Helvetica,sans-serif;
+	font-size:14px;
+	text-align: center;
+	display: inline-block;
+	overflow: hidden;
+	border-radius: 5px;
+}
+
+
+.breadcrumb a {
+	text-decoration: none;
+	outline: none;
+	display: block;
+	float: left;
+	font-size: 12px;
+	line-height: 24px;
+	color: #373f49;
+	padding: 0 10px 0 35px;
+	background: #f0f1f1;
+	background: linear-gradient(#f0f1f1, #c6d2d2);
+	position: relative;
+}
+.breadcrumb a:first-child {
+	padding-left: 21px;
+	border-radius: 5px 0 0 5px; /*to match with the parent's radius*/
+}
+.breadcrumb a:first-child:before {
+	left: 14px;
+}
+.breadcrumb a:last-child {
+	visibility: hidden;
+}
+
+.breadcrumb a.active, .breadcrumb a:hover{
+	color: #0366d6;
+	background: #c6d2d2;
+	background: linear-gradient(#e3e4e4, #b8c7c7);
+}
+.breadcrumb a.active:after, .breadcrumb a:hover:after {
+	background: #c6d2d2;
+	background: linear-gradient(135deg, #e3e4e4, #b8c7c7);
+}
+
+.breadcrumb a:after {
+	content: '';
+	position: absolute;
+	top: 0; 
+	right: -12px; /*half of square's length*/
+	/*same dimension as the line-height of .breadcrumb a */
+	width: 24px; 
+	height: 24px;
+	transform: scale(0.707) rotate(45deg);
+	/*we need to prevent the arrows from getting buried under the next link*/
+	z-index: 1;
+	/*background same as links but the gradient will be rotated to compensate with the transform applied*/
+	background: #f0f1f1;
+	background: linear-gradient(135deg, #f0f1f1, #c6d2d2);
+	/*stylish arrow design using box shadow*/
+	box-shadow: 
+		2px -2px 0 2px rgba(0,0,0,0.1), 
+		3px -3px 0 2px rgba(255,255,255,0.1);
+	/*
+		5px - for rounded arrows and 
+		50px - to prevent hover glitches on the border created using shadows*/
+	border-radius: 0 5px 0 50px;
+}
+
+/*we dont need an arrow after the last link*/
+.breadcrumb a:last-child:after {
+	content: none;
+	visibility: hidden;
+}
+
+
+.lga,.lga a,.lgi,.lgi a {
+	font-family:Helvetica,sans-serif;
+	font-size:13px;
+	text-align: center;
+    color: #fff;
+    padding: 0 5px;
+    margin: 0;
+}
+.lga,.lga a {
+    background-color: #008;
+}
+.lgi,.lgi a {
+    background-color: #888;
+}
+.lga:hover,.lga:hover a {
+    text-decoration: none;
+    color: #BBB;
+}
+.lgi:hover,.lgi:hover a {
+    text-decoration: none;
+    color: #CCC;
+}
+
+</style>
+
+<style>
+.backtop {
+	margin:0px 10px;
+	filter: invert(100%);
+}
+.backtop:hover {
+	cursor: pointer;
+filter: invert(59%) sepia(81%) saturate(1778%) hue-rotate(164deg) brightness(105%) contrast(103%);
+}
+</style>
+
+
+
+
+<style>
+/* Dropdown Button */
+.dropbtn {
+  padding: 0px;
+  border: none;
+  background: none;
+  filter: invert(100%);
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+  margin: 0 10px;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content img {
+vertical-align:middle;
+margin: 0 8px 0 1px;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  font-size: small;
+  font-weight: normal;
+  color: black;
+  padding: 5px 10px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #ddd;
+  color: #8CB4FF;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {display: block;}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {background-color: #3e8e41;}
+</style>
+<style>
+#flex1 {
+	margin: 0;
+	padding: 0;
+	display: flex;
+	flex-direction: row;
+	width: 378px;
+	height: 100%;
+}
+
+#lll {
+	flex-grow: 1;
+	flex-shrink: 1;
+	max-width:162px;
+	overflow:hidden;
+}
+
+#mmm {
+	flex-grow: 0;
+	flex-shrink: 0;
+	background: #222222;
+	width: 210px;
+	min-width: 210px;
+	max-width: 210px;
+	flex-grow: 0;
+	flex-shrink: 0;
+    border-left: 1px solid #333333;
+}
+
+#qqq {
+	flex-grow: 0;
+	flex-shrink: 0;
+	width: 4px;
+	min-width: 4px;
+	max-width: 4px;
+	flex-grow: 0;
+	flex-shrink: 0;
+}
+
+#rrr {
+	flex-grow: 1;
+	flex-shrink: 1;
+	max-width:162px;
+	overflow:hidden;
+}
+
+.cde {
+	display: flex;
+	flex-direction: column;
+    justify-content:space-between;
+    height: 100%;
+}
+.cd {
+	display: flex;
+	flex-direction: column;
+    justify-content: space-start;
+    height: 100%;
+}
+
+.aaa {
+	height: 30px;
+	min-height: 30px;
+	max-height: 30px;
+	flex-grow: 0;
+	flex-shrink: 0;
+	background: #222222;
+    border-bottom: 1px solid #333333;
+}
+
+.bbb, .bbborder {
+	flex-grow: 1;
+	flex-shrink: 0;
+}
+
+.bbborder {
+    border-left: 1px solid #333333;
+}
+
+
+#header {
+    z-index: 10;
+    position: fixed;
+	left: 378px;
+	right: 0;
+    height: 30px;
+    top: 0;
+    background: #222222;
+    border-bottom: 1px solid #333333;
+    
+}
+#header2 {
+    z-index: 7;
+    position: fixed;
+	left: 378px;
+	right: 0;
+    height: 10px;
+    top: 30px;
+    background: #1B1B1B;
+}
+
+
+#left0 {
+	top:0;
+    position: fixed;
+    left: 0;
+    margin:0 ;
+    bottom: 0;
+    width: 378px;
+    padding: 0;
+    z-index: 2;
+    /*background: #F7F;*/
+}
+
+
+#root {
+    padding:0;
+	margin: 40px 0 0 388px;
+    background: #1B1B1B;
+}
+
+
+body {
+	margin: auto;
+	overflow-x: hidden;
+    background: #1B1B1B;
+    color: #FFF;
+}
+
+
+@media screen and (max-width: 1190px) {
+	#flex1, #left0 {
+		width: 215px;
+	}
+	#root {
+		margin: 40px 0 0 224px;
+	}
+	#header, #header2 {
+		left: 215px;
+	}
+	#left0 {
+		left: 0;
+	}
+	#lll, #rrr {
+  		width:0;
+		visibility: hidden;
+  		flex-grow: 0;
+  		flex-shrink: 0;
+	}
+	
+}
+@media screen and (max-width: 1010px) {
+	#root {
+		margin: 0 0 0 216px;
+	}
+	#header, #header2 {
+		display: none;
+	}
+	#lll, #qqq {
+  		width:0;
+		visibility: hidden;
+  		flex-grow: 0;
+  		flex-shrink: 0;
+	}
+	#mmm {
+		    border-right: 1px solid #333333;
+	}
+	
+}
+
+@media screen and (min-width:1700px){
+	#header, #header2 {
+		left:518px;
+	}
+	#left0, #flex1{
+		width:518px;
+	}
+	#root{
+		margin-left:528px;
+	}
+	#lll, #rrr {
+		max-width:302px;
+	}
+}
+
+
+</style>
+
+
+
+
+<script>window.pushMST_config={"vapidPK":"BBodn2vLFoDO5AdCfmOOzNmcUsn52kTA6JNZNYVFymzEdWHonz_bkUcsaTkPXHvNGRkRUSAxMbup-H0l2sb1h_Q","enableOverlay":true,"swPath":"/sw.js","i18n":{}};
+  var pushmasterTag = document.createElement('script');
+  pushmasterTag.src = "https://cdn.pushmaster-cdn.xyz/scripts/publishers/629f5e297baecc00098a271b/SDK.js";
+  pushmasterTag.setAttribute('defer','');
+
+  var firstScriptTag = document.getElementsByTagName('script')[0];
+  firstScriptTag.parentNode.insertBefore(pushmasterTag, firstScriptTag);
+</script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-TKZNNQT9CZ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-TKZNNQT9CZ');
+</script>
+
+
+
+<script>
+var llg = "es";
+var az=0;
+var amdark=1;
+function ljs(n) {
+	if (az) return false;
+    var sc = document.createElement("script");
+    sc.type = "text/javascript";
+    sc.src = "/btn-"+n+".js";
+	document.body.innerHTML = "<i style='position:absolute;top:30%;width:100%;'><center>Loading in progress...";
+    document.body.appendChild(sc);
+}
+function ctc(id) {
+document.getElementById('img'+id).classList.remove('cop'); document.getElementById('img'+id).classList.add('cop2');
+document.getElementById('pre'+id).style.backgroundColor = '#4dff00';
+document.getElementById('msg'+id).style.display = 'inline';
+
+setTimeout(function() { document.getElementById('img'+id).classList.remove('cop2'); document.getElementById('img'+id).classList.add('cop'); document.getElementById('pre'+id).style.backgroundColor = ''; document.getElementById('msg'+id).style.display = 'none';}, 800);      
+
+
+	text = document.getElementById('pre'+id).innerText;
+    if (window.clipboardData && window.clipboardData.setData)
+        return window.clipboardData.setData("Text", text);
+    else if (document.queryCommandSupported && document.queryCommandSupported("copy")) {
+        var ta = document.createElement("textarea");
+        ta.textContent = text;
+        ta.style.position = "fixed";
+        document.body.appendChild(ta);
+        ta.select();
+        try {
+            return document.execCommand("copy");
+        }
+        catch (ex) {
+            return false;
+        }
+        finally {
+            document.body.removeChild(ta);
+        }
+    }
+}
+</script>
+
+
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script type='text/javascript'>
+var ezoTemplate = 'pub_site';
+var ezouid = '1';
+var ezoFormfactor = '1';
+</script><script data-ezscrex="false" type='text/javascript'>
+var soc_app_id = '0';
+var did = 173770;
+var ezdomain = 'plantuml.com';
+var ezoicSearchable = 1;
+</script>
+<script data-ezscrex='false' data-pagespeed-no-defer data-cfasync='false'>
+function create_ezolpl() {
+	var d = new Date();
+	d.setTime(d.getTime() + (365*24*60*60*1000));
+	var expires = "expires="+d.toUTCString();
+	__ez.ck.setByCat("ezux_lpl_173770=" + new Date().getTime() + "|" + _ezaq.page_view_id + "|" + _ezaq.is_return_visitor + "; " + expires, 3);
+}
+function attach_ezolpl() {
+	if (document.readyState === "complete") {
+		create_ezolpl();
+		return;
+	}
+	window.addEventListener("load", create_ezolpl);
+}
+
+__ez.queue.addFunc("attach_ezolpl", "attach_ezolpl", null, false, ['/detroitchicago/boise.js'], true, false, false, false);
+</script></head>
+<body>
+
+<div id="left0">
+
+<div id="flex1">
+
+
+<div id="lll">
+
+<div class="cde">
+
+<!-- c --><div>
+</div>
+
+<!-- d --><div>
+<!-- Ezoic - Left0 - sidebar -->
+<span id="ezoic-pub-ad-placeholder-131"></span><!-- ezoic_pub_ad_placeholder-131-sidebar-120x600-131-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-131-sidebar-160x600-131-nonexxxnonexxxxxxezmaxscaleval100 -->
+<!-- End Ezoic - Left0 - sidebar -->
+</div>
+
+
+<!-- e --><div>
+</div>
+
+</div><!-- cde -->
+
+
+</div><!-- lll -->
+
+<div id="mmm">
+
+
+<div class="cde">
+
+<!-- c --><div>
+
+<!--menu 10-->
+<div>
+
+
+
+<!-- Ezoic - Menu2L - sidebar -->
+<span id="ezoic-pub-ad-placeholder-105"></span><!-- ezoic_pub_ad_placeholder-105-sidebar_middle-120x240-105-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-105-sidebar_middle-125x125-105-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-105-sidebar_middle-180x150-105-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-105-sidebar_middle-200x200-105-nonexxxnonexxxxxxezmaxscaleval100 -->
+<!-- End Ezoic - Menu2L - sidebar -->
+
+</div>
+
+<!-- https://stackoverflow.com/questions/22252472/how-to-change-the-color-of-an-svg-element -->
+<!-- https://codepen.io/sosuke/pen/Pjoqqp -->
+
+
+<ul id="menuside2">
+<li><a href="index.html" class="mhov"><img src="../svgrepo-house.svg" width="16" height="16"/><span>Home</span></a></li>
+<li><a href="news.html" class="mhov"><img src="../svgrepo-text-news.svg" width="16" height="16"/><span>What&#39;s New ?</span></a></li>
+<li><a href="starting.html" class="mhov"><img src="../svgrepo-rocket-3-start.svg" width="16" height="16"/><span>Getting Started</span></a></li>
+<li><a href="https://www.plantuml.com/plantuml/duml/SyfFKj2rKt3CoKnELR1Io4ZDoSa70000" class="mhov"><img src="../svgrepo-server.svg" width="16" height="16"/><span>Online Server</span></a></li>
+<li><a href="running.html" class="mhov"><img src="../svgrepo-play.svg" width="16" height="16"/><span>Running</span></a></li>
+<li><a href="faq.html" class="mhov"><img src="../svgrepo-forum.svg" width="16" height="16"/><span>F.A.Q.</span></a></li>
+<li><a href="download.html" class="mhov"><img src="../svgrepo-add-to-online-cart.svg" width="16" height="16"/><span>Download</span></a></li>
+<li><a href="../qa.html" class="mhov"><img src="../svgrepo-forum-message.svg" width="16" height="16"/><span>Forum</span></a></li>
+<li><a href="theme.html" class="mhov"><img src="../svgrepo-palette-fill.svg" width="16" height="16"/><span>Theme</span></a></li>
+<li><a href="preprocessing.html" class="mhov"><img src="../svgrepo-cpu.svg" width="16" height="16"/><span>Preprocessing</span></a></li>
+<li><a href="stdlib.html" class="mhov"><img src="../svgrepo-books-library.svg" width="16" height="16"/><span>Standard Library</span></a></li>
+<li><a href="https://crashedmind.github.io/PlantUMLHitchhikersGuide" class="mhov"><img src="../svgrepo-signpost-fill.svg" width="16" height="16"/><span>Hitchhiker&#39;s Guide</span></a></li>
+<li><a href="guide.html" class="mhov"><img src="../svgrepo-library.svg" width="16" height="16"/><span>PDF Guide</span></a></li>
+</ul>
+
+<!-- menu 20-->
+<div>
+
+<!-- Ezoic - Zmenubottom - sidebar_bottom -->
+<span id="ezoic-pub-ad-placeholder-108"></span><!-- ezoic_pub_ad_placeholder-108-sidebar_middle-120x240-108-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-108-sidebar_middle-125x125-108-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-108-sidebar_middle-180x150-108-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-108-sidebar_middle-200x200-108-nonexxxnonexxxxxxezmaxscaleval100 -->
+<!-- End Ezoic - Zmenubottom - sidebar_bottom -->
+
+</div>
+</div>
+
+<!-- d menu 30 --><div>
+</div>
+
+
+<!-- e menu 40 --><div style="margin-bottom:35px;">
+
+<!-- Ezoic - menu40 - sidebar -->
+<span id="ezoic-pub-ad-placeholder-186"></span><!-- ezoic_pub_ad_placeholder-186-sidebar_middle-120x240-186-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-186-sidebar_middle-125x125-186-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-186-sidebar_middle-180x150-186-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-186-sidebar_middle-200x200-186-nonexxxnonexxxxxxezmaxscaleval100 -->
+<!-- End Ezoic - menu40 - sidebar -->
+
+</div>
+
+</div><!-- cde -->
+
+
+
+
+</div><!-- mmm -->
+
+<div id="qqq">
+
+<div class="cd">
+<div class="aaa"></div>
+<div class="bbborder"></div>
+</div><!-- cd -->
+
+</div><!-- qqq -->
+
+<div id="rrr">
+
+<div class="cd">
+<div class="aaa"></div>
+
+<div style="height:5px;"></div>
+
+<div class="bbb">
+
+<div class="cde">
+
+<!-- c --><div>
+</div>
+
+<!-- d --><div>
+<!-- Ezoic - Left2 - sidebar -->
+<span id="ezoic-pub-ad-placeholder-175"></span><!-- ezoic_pub_ad_placeholder-175-sidebar-120x600-175-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-175-sidebar-160x600-175-nonexxxnonexxxxxxezmaxscaleval100 -->
+<!-- End Ezoic - Left2 - sidebar -->
+</div>
+
+<!-- e --><div>
+</div>
+
+</div><!-- cde -->
+
+</div><!-- bbb -->
+
+</div><!-- cd -->
+
+
+</div><!-- rrr -->
+
+
+
+</div><!-- flex1 -->
+
+
+</div><!-- left0 -->
+
+<style>
+#contmenu {
+display: flex;
+height: 30px;
+width: 100%;
+margin: 0;
+padding: 0;
+}
+
+#contmenua {
+height: 30px;
+padding-right: 25px;
+}
+
+#contmenub {
+z-index:15;
+display: inline-block;
+flex-grow:1;
+flex-shrink:1;
+height: 30px;
+background-color: #222222;
+}
+
+#magic {
+white-space: nowrap;
+overflow: hidden;
+z-index: 14;
+position: fixed;
+top: 0;
+right: 50px;
+height: 30px;
+width: 30px;
+}
+
+#magic2 {
+white-space: nowrap;
+overflow: hidden;
+z-index: 16;
+position: fixed;
+top: 0;
+right: 0;
+height: 30px;
+width: 50px;
+background-color: #222222;
+}
+#magic2 img {
+margin: 5px 0 0 5px;
+filter: invert(86%) sepia(23%) saturate(200%) hue-rotate(170deg) brightness(86%) contrast(88%);
+}
+#magic2:hover img {
+filter: invert(59%) sepia(81%) saturate(1778%) hue-rotate(164deg) brightness(105%) contrast(103%);
+}
+
+
+#magic:hover #svgrepoleft {
+filter: invert(59%) sepia(81%) saturate(1778%) hue-rotate(164deg) brightness(105%) contrast(103%);
+}
+
+
+#magic:hover {
+width: 100%;
+height: 31px;
+}
+
+#aze {
+	height: 30px;
+	display:flex;
+	flex-direction: row-reverse;
+}
+#aze1 {
+	height: 30px;
+	background-color: #222222;
+}
+#aze2 {
+	height: 30px;
+	background-color: #222222;
+	padding-left: 10px;
+	border-left: 1px solid #333333;
+	border-bottom: 1px solid #333333;
+}
+#aze1 img {
+    filter: invert(72%) sepia(4%) saturate(1039%) hue-rotate(169deg) brightness(108%) contrast(84%);
+}
+#aze3 {
+	width: 3px;
+	height: 30px;
+	background-color: #222222;
+}
+
+
+
+</style>
+
+<div id="header">
+<div id="contmenu">
+<div id="contmenua">
+<div class="menu1">
+<a href="sequence-diagram.html">Secuencia</a>
+<a href="use-case-diagram.html">Usecase</a>
+<a href="class-diagram.html">Clase</a>
+<a href="activity-diagram-beta.html">Actividad</a>
+<a href="component-diagram.html">Component</a>
+<a href="state-diagram.html">Estado</a>
+<a href="object-diagram.html">Objeto</a>
+<a href="deployment-diagram.html">Despliegue</a>
+<a href="timing-diagram.html">Timing</a>
+
+<a href="nwdiag.html">Network</a>
+<a href="salt.html">Wireframe</a>
+<a href="archimate-diagram.html">Archimate</a>
+<a href="gantt-diagram.html">Gantt</a>
+<a href="mindmap-diagram.html">MindMap</a>
+<a href="wbs-diagram.html">WBS</a>
+<a href="json.html">JSON</a>
+<a href="yaml.html">YAML</a>
+
+</div>
+</div>
+<div id="contmenub"></div>
+</div><!--contmenu-->
+<!-- https://developer.mozilla.org/fr/docs/Web/CSS/position -->
+<div id="magic">
+
+	<div id="aze">
+		<div id="aze1"><img id="svgrepoleft" width="30" height="30" src="../svgrepo-left.svg"/> </div><!-- aze1 -->
+		<div id="aze2">
+
+<div class="menu1">
+<a href="sequence-diagram.html">Secuencia</a>
+<a href="use-case-diagram.html">Usecase</a>
+<a href="class-diagram.html">Clase</a>
+<a href="activity-diagram-beta.html">Actividad</a>
+<a href="component-diagram.html">Component</a>
+<a href="state-diagram.html">Estado</a>
+<a href="object-diagram.html">Objeto</a>
+<a href="deployment-diagram.html">Despliegue</a>
+<a href="timing-diagram.html">Timing</a>
+
+<a href="nwdiag.html">Network</a>
+<a href="salt.html">Wireframe</a>
+<a href="archimate-diagram.html">Archimate</a>
+<a href="gantt-diagram.html">Gantt</a>
+<a href="mindmap-diagram.html">MindMap</a>
+<a href="wbs-diagram.html">WBS</a>
+<a href="json.html">JSON</a>
+<a href="yaml.html">YAML</a>
+
+</div>
+			
+
+		</div><!-- aze2 -->
+		<div id="aze3"></div><!-- aze3 https://codepen.io/sosuke/pen/Pjoqqp -->
+	</div><!-- aze -->
+
+
+</div><!--magic-->
+
+<div id="magic2">
+
+<a href="../es/link.html">
+<img src="../svgrepo-uxwing-dark-mode-toggle.svg" height="20"/>
+</a>
+
+
+</div><!--magic2-->
+
+</div><!-- header -->
+<div id="header2"></div>
+
+
+
+
+
+<div id="root">
+
+<!-- https://css-tricks.com/snippets/css/a-guide-to-flexbox/ -->
+
+<style>
+
+#haut1 {
+	margin:50px 0 20px;
+	padding:0;
+	min-height:80px;
+}
+
+#donate {
+	padding-top: 5px;
+	min-height:30px;
+}
+
+</style>
+
+<div id="haut1">
+
+<!-- c --><div style="float:left;">	
+<!-- a simple div with some links -->
+<div class="breadcrumb">
+<a href="sitemap.html">PlantUML</a>
+<a href="https://plantuml.com/es-dark/sitemap-language-specification">Language specification</a>
+<a href="link.html">Hyperlink</a>
+<a href="link.html#"></a>
+</div>
+
+
+<div id="donate">
+
+ 
+
+<a href="https://discord.gg/sXhzexAQGh" style="text-decoration: none;">
+<img src="https://img.shields.io/discord/1083727021328306236?color=5865F2&amp;logo=discord&amp;logoColor=white" alt="Discord server"/>
+</a>
+
+ 
+
+<a href="https://github.com/sponsors/plantuml/" style="text-decoration: none;">
+<img src="https://img.shields.io/github/sponsors/plantuml?logo=github"/>
+</a>
+
+ 
+
+<a href="https://www.patreon.com/bePatron?patAmt=1&amp;u=527450&amp;rid=152970" style="text-decoration: none;">
+<img src="https://img.shields.io/badge/patreon-122-chocolate?logo=patreon"/>
+</a>
+
+ 
+
+<a href="../lp.html" style="text-decoration: none;">
+<img src="https://img.shields.io/liberapay/patrons/plantuml?color=gold&amp;logo=liberapay&amp;label=liberapay"/>
+</a>
+
+ 
+
+<a href="../en/paypal.html" style="text-decoration: none;">
+<img src="https://img.shields.io/badge/paypal-296-skyblue?logo=paypal&amp;logoColor=red"/>
+</a>
+
+<!--
+ 
+
+<a href="https://github.com/sponsors/plantuml" style="text-decoration: none;">
+<img src="https://img.shields.io/github/sponsors/plantuml?label=github">
+</a>
+
+-->
+</div> <!-- donate -->
+</div><!-- c -->
+
+
+<!-- e --><div style="float:right; margin:3px 0;">
+
+<!-- https://github.com/joielechong/iso-country-flags-svg-collection -->
+
+<!-- https://www.flaticon.com/packs/international-flags -->
+<!-- https://flagicons.lipis.dev/?continent=Europe -->
+<!-- https://flagpedia.net/download/icons -->
+
+<!-- https://www.countryflags.io/ -->
+
+<style>
+#langlist {
+display: flex;
+justify-content: space-between;
+width: 317px;
+height: 16px;
+margin: 3px 10px 3px 0;
+}
+
+.sel2 {
+  border: 2px solid #1B1B1B;
+}
+.nosel2 {
+  border: 2px solid #1B1B1B;
+  filter: grayscale(100%) opacity(75%);
+}
+.sel2:hover, .nosel2:hover {
+  cursor: pointer;
+  border: 2px solid #8CB4FF;
+  border-spacing: 0;
+  filter: grayscale(0%);
+  filter: contrast(200%);
+  filter: brightness(150%);
+}
+#flag1,#flag2,#flag3,#flag4,#flag5,#flag6,#flag7,#flag8 {
+background: url(../flags21.png);
+background-repeat: no-repeat;
+background-clip: content-box;
+width: 22px;
+height: 16px;
+}
+#flag2 {
+background-position: -22px 0px;
+}
+#flag3 {
+background-position: -44px 0px;
+}
+#flag4 {
+background-position: -66px 0px;
+}
+#flag5 {
+background-position: -88px 0px;
+}
+#flag6 {
+background-position: -110px 0px;
+}
+#flag7 {
+background-position: -132px 0px;
+}
+#flag8 {
+background-position: -154px 0px;
+}
+</style>
+
+<div id="langlist">
+
+
+<div id="flag1" onclick="location.href=&#39;/en-dark/link&#39;" class="nosel2"></div>
+
+<div id="flag2" onclick="location.href=&#39;/de-dark/link&#39;" class="nosel2"></div>
+
+
+<div id="flag3" onclick="location.href=&#39;/es-dark/link&#39;" class="sel2"></div>
+
+
+<div id="flag4" onclick="location.href=&#39;/fr-dark/link&#39;" class="nosel2"></div>
+
+
+<div id="flag5" onclick="location.href=&#39;/ja-dark/link&#39;" class="nosel2"></div>
+
+
+<div id="flag6" onclick="location.href=&#39;/ko-dark/link&#39;" class="nosel2"></div>
+
+
+<div id="flag7" onclick="location.href=&#39;/ru-dark/link&#39;" class="nosel2"></div>
+
+
+<div id="flag8" onclick="location.href=&#39;/zh-dark/link&#39;" class="nosel2"></div>
+
+
+
+
+
+
+</div><!-- langlist -->
+</div><!-- e -->
+
+</div><!-- haut1 -->
+
+
+<p>
+
+
+<style>
+#topsticky {
+	z-index:2;
+	margin: 0 240px 0 0;
+}
+
+@media screen and (min-height: 800px) {
+#topsticky {
+  position:sticky; top: 40px;
+}
+}
+
+@media screen and (max-width: 1500px) {
+#topsticky {
+	margin: 0;
+}
+}
+
+</style>
+
+</p><div id="topsticky">
+<!-- Ezoic - under page title -->
+<span id="ezoic-pub-ad-placeholder-647"></span><!-- ezoic_pub_ad_placeholder-647-under_page_title-320x100-647-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-647-under_page_title-300x50v2-647-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-647-under_page_title-320x50-647-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-647-under_page_title-468x60-647-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-647-under_page_title-728x90-647-nonexxxnonexxxxxxezmaxscaleval100 -->
+<!-- End Ezoic - under page title -->
+</div>
+
+
+<p>
+
+
+<a style="position:relative;top:-38px;" name="c757abab19571cf1"></a>
+<style>
+
+
+#toc {
+z-index: 2;
+position:sticky; top: 40px;
+list-style-type: none;
+margin: 0;
+padding: 0 10px;
+}
+.chap {
+clear:both;
+}
+#toc ul {
+list-style-type: none;
+max-height:87vh;
+overflow-y: auto;
+background: #000000;
+border-width: 2px;
+border-style: groove;
+border-radius: 3px;
+border-color: #e1e4e8;
+margin: 0;
+padding: 0;
+}
+@media screen and (min-height: 450px) {
+#toc ul {max-height:89.5vh;
+}
+}
+@media screen and (min-height: 550px) {
+#toc ul {max-height:91.5vh;
+}
+}
+@media screen and (min-height: 700px) {
+#toc ul {max-height:93.5vh;
+}
+}
+@media screen and (min-height: 900px) {
+#toc ul {max-height:94.5vh;
+}
+}
+#toc li {
+margin: 5px 5px 5px 10px;
+padding: 0;
+}
+@media screen and (max-width: 1500px) {
+	#toctd {
+	display: none;
+	}	
+	#toc {
+	display: none;
+	}	
+}
+</style>
+
+<table border="0" cellspacing="0" cellpadding="0" width="100%">
+<tbody><tr valign="top" width="100%">
+<td valign="top">
+<!--heading--><h1 class="chap"><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/cmp/dokuwiki/es/link#0"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/cmp/asciidoc/es/link#0"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/cmp/markdown/es/link#0"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>Format definition</h1>
+<p></p>
+<p>
+</p><div class="plantumlimg">
+<img src="http://cdn-0.plantuml.com/plantuml/png/TPB1IiD048RlynJ3zXmHeGXIQeyUAeZGKyXXaywcYzDDs9qWMleEleDlvfEucwYDX9ncXyptpvTbDq6qb-x842hDXDTNjqjWCeBIeBVrGN1lFLLY6mV6woEXUcXUqGRK-CJQoUvnYuUtbZnRztAlSA7PLbHoHtW2IAXsTKps9UQm2lQTxcwMwrMvLYhFbO82VdERDctHh507D1qkscXKUo8NauQPBcNOHE-Ujn4zpy3o7xvOoDJYr4iCCVANh-C5D2osZTz6E4tmSu_FYF2SHvZaV7ryZaIOHoQiI-9-oIK0pLIbA7vSubrd6NRGfI8bIDyBI5y8ucza620kYRsXOIv0I8LvQCqmrXysvFRfZNm3"/>
+</div>
+<p>
+</p><p></p>
+<p></p>
+<h4>Simple link</h4>
+<p></p>
+Simple links are define using two square brackets (or three square brackets for field or method on class diagram).
+<p></p>
+<u>Example</u>:
+<ul>
+<li><code class="cod">[[http://plantuml.com]]</code></li>
+<li><code class="cod">[[]]</code> <em>(empty link)</em></li>
+</ul>
+<p></p>
+<h4>Link with optional label</h4>
+<p></p>
+It is possible to give an optional label that will be printed instead of the link itself.
+A space is used as separator after the URL itself.
+<p></p>
+<u>Example</u>:
+<code class="cod">[[http://plantuml.com This label is printed]]</code>
+<p></p>
+<h4>Link with optional tooltip</h4>
+<p></p>
+Finally you can also have an optional tooltip using round brackets, just after the URL and before the optional label.
+<p></p>
+<u>Example</u>:
+<code class="cod">[[http://plantuml.com{Optional tooltip} This label is printed]]</code>
+<p></p>
+<h4>Only tooltip</h4>
+You can also have only a tooltip using round brackets.
+<p></p>
+<u>Example</u>:
+<code class="cod">[[{A tooltip}]]</code>
+<p></p>
+<h4>Only tooltip and label</h4>
+You can also have only a tooltip using round brackets, and a label.
+<p></p>
+<u>Example</u>:
+<code class="cod">[[{A tooltip} This label is printed]]</code>
+<p></p>
+<h4>URL authentication</h4>
+<p></p>
+With <a href="https://plantuml.com/es-dark/url-authentication">URL authentication</a> it is possible to provide an authentication method, credentials, and a proxy config to URL endpoints.
+<a style="position:relative;top:-38px;" name="c730ba05956380d7"></a>
+<div style="clear:both;height:50px;">
+</div>
+<!--heading--><h2 class="chap"><img onclick="window.scrollTo(0,0);" title="Back to top" src="../backtop1.svg" width="20" height="20" class="backtop"/><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/cmp/dokuwiki/es/link#1"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/cmp/asciidoc/es/link#1"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/cmp/markdown/es/link#1"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>Links contained curly bracket</h2>
+<p></p>
+A link can contain some curly brackets.
+<p></p>
+<p>
+<table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0">
+<tbody><tr>
+<td valign="top">
+<div id="msg8cedeea0edcf15290e431bdd3d8c1e0a" class="msg">
+🎉 Copied!
+</div>
+<img loading="lazy" width="16" height="16" id="img8cedeea0edcf15290e431bdd3d8c1e0a" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;8cedeea0edcf15290e431bdd3d8c1e0a&#39;)"/>
+<br/>
+<img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;8cedeea0edcf15290e431bdd3d8c1e0a&#39;)"/>
+</td>
+<td>
+<div class="mytab" onclick="javascript:ljs(&#39;8cedeea0edcf15290e431bdd3d8c1e0a&#39;)">
+<div class="mycell0">
+<code onmouseover="az=1" onmouseout="az=0"><pre id="pre8cedeea0edcf15290e431bdd3d8c1e0a">@startuml
+[[link{with_bracket}&amp;id=10]]:Some activity\n(with link with brackets)\n&#34;&#34;link{with_bracket}&amp;id=10&#34;&#34;;
+[[&#34;link{with_bracket}&#34;{}]]:Some activity\n(with link with brackets and empy tooltip)\n&#34;&#34;&#34;link{with_bracket}&#34;{}&#34;&#34;;
+[[&#34;link{with_bracket}&#34;{with tooltip}]]:Some activity\n(with link finished by brackets and tooltip)\n&#34;&#34;&#34;link{with_bracket}&#34;{with tooltip}&#34;&#34;;
+[[&#34;link{with_bracket}&amp;id=10&#34;{with tooltip}]]:Some activity\n(with link with brackets and tooltip)\n&#34;&#34;&#34;link{with_bracket}&amp;id=10&#34;{with tooltip}&#34;&#34;;
+@enduml
+</pre></code>
+</div>
+<div class="mycell">
+<img loading="lazy" width="321" height="344" class="scale" src="../imgw/dark-8cedeea0edcf15290e431bdd3d8c1e0a.png"/>
+</div>
+</div>
+</td>
+</tr>
+</tbody></table>
+</p><p>
+</p><p></p>
+<p></p>
+<em>[Ref. <a href="https://forum.plantuml.net/13489/">QA-13489</a>]</em>
+<a style="position:relative;top:-38px;" name="6e6075c2a714c1fe"></a>
+<div style="clear:both;min-height:110px;margin-top:10px;">
+
+<div class="pezoic">
+<!-- Ezoic - Fish0 - under_second_paragraph -->
+<span id="ezoic-pub-ad-placeholder-179"></span><!-- ezoic_pub_ad_placeholder-179-under_second_paragraph-234x60-179-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-179-under_second_paragraph-468x60-179-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-179-under_second_paragraph-728x90-179-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-179-under_second_paragraph-970x90-179-nonexxxnonexxxxxxezmaxscaleval100 -->
+<!-- End Ezoic - Fish0 - under_second_paragraph -->
+</div>
+
+</div>
+<!--heading--><h2 class="chap"><img onclick="window.scrollTo(0,0);" title="Back to top" src="../backtop1.svg" width="20" height="20" class="backtop"/><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/cmp/dokuwiki/es/link#2"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/cmp/asciidoc/es/link#2"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/cmp/markdown/es/link#2"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>Links in sequence diagram</h2>
+<p></p>
+The following example lists some links features:
+<p></p>
+<p></p>
+<p>
+<table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0">
+<tbody><tr>
+<td valign="top">
+<div id="msg2b67321019152a26d4a6a7916ea6adc8" class="msg">
+🎉 Copied!
+</div>
+<img loading="lazy" width="16" height="16" id="img2b67321019152a26d4a6a7916ea6adc8" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;2b67321019152a26d4a6a7916ea6adc8&#39;)"/>
+<br/>
+<img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;2b67321019152a26d4a6a7916ea6adc8&#39;)"/>
+</td>
+<td>
+<div class="mytab" onclick="javascript:ljs(&#39;2b67321019152a26d4a6a7916ea6adc8&#39;)">
+<div class="mycell0">
+<code onmouseover="az=1" onmouseout="az=0"><pre id="pre2b67321019152a26d4a6a7916ea6adc8">@startuml
+actor Bob [[http://plantuml.com/sequence]]
+actor &#34;This is [[http://plantuml.com/sequence Alice]] actor&#34; as Alice
+Bob -&gt; Alice [[http://plantuml.com/start]] : hello
+note left [[http://plantuml.com/start]]
+  a note with a link
+end note
+Alice -&gt; Bob : hello with [[http://plantuml.com/start{Tooltip for message} some link]]
+note right [[http://plantuml.com/start]] : another note
+note left of Bob
+You can use [[http://plantuml.com/start links in notes]] also.
+end note
+@enduml
+</pre></code>
+</div>
+<div class="mycell">
+<img loading="lazy" width="458" height="292" class="scale" src="../imgw/dark-2b67321019152a26d4a6a7916ea6adc8.png"/>
+</div>
+</div>
+</td>
+</tr>
+</tbody></table>
+</p><p>
+</p><p></p>
+<a style="position:relative;top:-38px;" name="a4ca794b54985ba2"></a>
+<div style="clear:both;height:50px;">
+</div>
+<!--heading--><h2 class="chap"><img onclick="window.scrollTo(0,0);" title="Back to top" src="../backtop1.svg" width="20" height="20" class="backtop"/><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/cmp/dokuwiki/es/link#3"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/cmp/asciidoc/es/link#3"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/cmp/markdown/es/link#3"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>Links in class diagram</h2>
+<p>
+<table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0">
+<tbody><tr>
+<td valign="top">
+<div id="msg96694f7797a927a7110dafc998c95c6a" class="msg">
+🎉 Copied!
+</div>
+<img loading="lazy" width="16" height="16" id="img96694f7797a927a7110dafc998c95c6a" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;96694f7797a927a7110dafc998c95c6a&#39;)"/>
+<br/>
+<img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;96694f7797a927a7110dafc998c95c6a&#39;)"/>
+</td>
+<td>
+<div class="mytab" onclick="javascript:ljs(&#39;96694f7797a927a7110dafc998c95c6a&#39;)">
+<div class="mycell0">
+<code onmouseover="az=1" onmouseout="az=0"><pre id="pre96694f7797a927a7110dafc998c95c6a">@startuml
+class Car [[http://plantuml.com/link]]
+class Wheel [[http://plantuml.com/sequence]]
+note left [[http://plantuml.com]]
+foo
+end note
+Car *-- Wheel [[http://plantuml.com/class]] : has some
+@enduml
+</pre></code>
+</div>
+<div class="mycell">
+<img loading="lazy" width="180" height="187" class="scale" src="../imgw/dark-96694f7797a927a7110dafc998c95c6a.png"/>
+</div>
+</div>
+</td>
+</tr>
+</tbody></table>
+</p><p>
+</p><p></p>
+There is a special syntax with 3 square brackets in class definition when you want to define
+a link on field or method.
+For example:
+<p></p>
+<p>
+<table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0">
+<tbody><tr>
+<td valign="top">
+<div id="msg23abbcfe0f6f9d77adbf28218710850a" class="msg">
+🎉 Copied!
+</div>
+<img loading="lazy" width="16" height="16" id="img23abbcfe0f6f9d77adbf28218710850a" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;23abbcfe0f6f9d77adbf28218710850a&#39;)"/>
+<br/>
+<img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;23abbcfe0f6f9d77adbf28218710850a&#39;)"/>
+</td>
+<td>
+<div class="mytab" onclick="javascript:ljs(&#39;23abbcfe0f6f9d77adbf28218710850a&#39;)">
+<div class="mycell0">
+<code onmouseover="az=1" onmouseout="az=0"><pre id="pre23abbcfe0f6f9d77adbf28218710850a">@startuml
+class Car {
+  - Some field [[[http://plantuml.com]]]
+  Some method() [[[http://plantuml.com/link]]]
+}
+@enduml
+</pre></code>
+</div>
+<div class="mycell">
+<img loading="lazy" width="129" height="103" class="scale" src="../imgw/dark-23abbcfe0f6f9d77adbf28218710850a.png"/>
+</div>
+</div>
+</td>
+</tr>
+</tbody></table>
+</p><p>
+</p><p></p>
+<p>
+<table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0">
+<tbody><tr>
+<td valign="top">
+<div id="msgdf36b8aeda38fca21dee8ee5ea18d2a2" class="msg">
+🎉 Copied!
+</div>
+<img loading="lazy" width="16" height="16" id="imgdf36b8aeda38fca21dee8ee5ea18d2a2" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;df36b8aeda38fca21dee8ee5ea18d2a2&#39;)"/>
+<br/>
+<img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;df36b8aeda38fca21dee8ee5ea18d2a2&#39;)"/>
+</td>
+<td>
+<div class="mytab" onclick="javascript:ljs(&#39;df36b8aeda38fca21dee8ee5ea18d2a2&#39;)">
+<div class="mycell0">
+<code onmouseover="az=1" onmouseout="az=0"><pre id="predf36b8aeda38fca21dee8ee5ea18d2a2">@startuml
+Object &lt;|-- Foo
+
+class Foo {
+  + Object[]   [[[http://www.google.com]]]
+  + methods1() [[[http://www.yahoo.com/A1{Some explainations about this method}]]]
+  + methods2() [[[http://www.yahoo.com/A2]]]
+}
+  
+class Foo2 {
+  + methods1() [[[http://www.yahoo.com/B1]]]
+  + methods2() [[[http://www.yahoo.com/B2]]]
+}
+  
+class Object [[http://www.yahoo.com]]
+@enduml
+</pre></code>
+</div>
+<div class="mycell">
+<img loading="lazy" width="232" height="256" class="scale" src="../imgw/dark-df36b8aeda38fca21dee8ee5ea18d2a2.png"/>
+</div>
+</div>
+</td>
+</tr>
+</tbody></table>
+</p><p>
+<a style="position:relative;top:-38px;" name="27ffe93cac507589"></a>
+</p><div style="clear:both;min-height:110px;margin-top:10px;">
+
+
+<div class="pezoic">
+<!-- Ezoic - Fish1 - mid_content -->
+<span id="ezoic-pub-ad-placeholder-114"></span><!-- ezoic_pub_ad_placeholder-114-mid_content-234x60-114-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-114-mid_content-468x60-114-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-114-mid_content-728x90-114-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-114-mid_content-970x90-114-nonexxxnonexxxxxxezmaxscaleval100 -->
+<!-- End Ezoic - Fish1 - mid_content -->
+</div>
+
+</div>
+<!--heading--><h2 class="chap"><img onclick="window.scrollTo(0,0);" title="Back to top" src="../backtop1.svg" width="20" height="20" class="backtop"/><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/cmp/dokuwiki/es/link#4"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/cmp/asciidoc/es/link#4"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/cmp/markdown/es/link#4"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>Links in activity diagram</h2>
+<p></p>
+<h3>On activity label</h3>
+<p>
+<table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0">
+<tbody><tr>
+<td valign="top">
+<div id="msgb1efb5737a315228576d1ce488e78318" class="msg">
+🎉 Copied!
+</div>
+<img loading="lazy" width="16" height="16" id="imgb1efb5737a315228576d1ce488e78318" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;b1efb5737a315228576d1ce488e78318&#39;)"/>
+<br/>
+<img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;b1efb5737a315228576d1ce488e78318&#39;)"/>
+</td>
+<td>
+<div class="mytab" onclick="javascript:ljs(&#39;b1efb5737a315228576d1ce488e78318&#39;)">
+<div class="mycell0">
+<code onmouseover="az=1" onmouseout="az=0"><pre id="preb1efb5737a315228576d1ce488e78318">@startuml
+start
+[[http://plantuml.com]]:Some activity;
+:Some [[http://plantuml.com link]];
+end
+@enduml
+</pre></code>
+</div>
+<div class="mycell">
+<img loading="lazy" width="112" height="190" class="scale" src="../imgw/dark-b1efb5737a315228576d1ce488e78318.png"/>
+</div>
+</div>
+</td>
+</tr>
+</tbody></table>
+</p><p>
+</p><p></p>
+<h3>On partition</h3>
+<p>
+<table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0">
+<tbody><tr>
+<td valign="top">
+<div id="msg46b8ce76af69ea4345cb36b53ea91aa5" class="msg">
+🎉 Copied!
+</div>
+<img loading="lazy" width="16" height="16" id="img46b8ce76af69ea4345cb36b53ea91aa5" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;46b8ce76af69ea4345cb36b53ea91aa5&#39;)"/>
+<br/>
+<img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;46b8ce76af69ea4345cb36b53ea91aa5&#39;)"/>
+</td>
+<td>
+<div class="mytab" onclick="javascript:ljs(&#39;46b8ce76af69ea4345cb36b53ea91aa5&#39;)">
+<div class="mycell0">
+<code onmouseover="az=1" onmouseout="az=0"><pre id="pre46b8ce76af69ea4345cb36b53ea91aa5">@startuml
+start
+partition &#34;[[http://plantuml.com partition_name]]&#34; {
+    :read doc. on [[http://plantuml.com plantuml_website]];
+    :test diagram;
+}
+end
+@enduml
+</pre></code>
+</div>
+<div class="mycell">
+<img loading="lazy" width="230" height="229" class="scale" src="../imgw/dark-46b8ce76af69ea4345cb36b53ea91aa5.png"/>
+</div>
+</div>
+</td>
+</tr>
+</tbody></table>
+</p><p>
+<em>[Ref. <a href="https://forum.plantuml.net/542/ability-to-define-hyperlink-on-diagram-elements?show=14003#c14003">QA-542</a>]</em>
+<a style="position:relative;top:-38px;" name="8cddd36d10e36e13"></a>
+</p><div style="clear:both;height:50px;">
+</div>
+<!--heading--><h2 class="chap"><img onclick="window.scrollTo(0,0);" title="Back to top" src="../backtop1.svg" width="20" height="20" class="backtop"/><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/cmp/dokuwiki/es/link#5"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/cmp/asciidoc/es/link#5"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/cmp/markdown/es/link#5"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>Links in Network diagram (nwdiag)</h2>
+<p></p>
+<p>
+<table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0">
+<tbody><tr>
+<td valign="top">
+<div id="msg9286a14e2f70182148d03ce1437ac6a9" class="msg">
+🎉 Copied!
+</div>
+<img loading="lazy" width="16" height="16" id="img9286a14e2f70182148d03ce1437ac6a9" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;9286a14e2f70182148d03ce1437ac6a9&#39;)"/>
+<br/>
+<img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;9286a14e2f70182148d03ce1437ac6a9&#39;)"/>
+</td>
+<td>
+<div class="mytab" onclick="javascript:ljs(&#39;9286a14e2f70182148d03ce1437ac6a9&#39;)">
+<div class="mycell0">
+<code onmouseover="az=1" onmouseout="az=0"><pre id="pre9286a14e2f70182148d03ce1437ac6a9">@startuml
+nwdiag {
+  network Network {
+      Server [description=&#34;A [[http://plantuml.com link]] on nwdiag&#34;];
+  }
+}
+@enduml
+</pre></code>
+</div>
+<div class="mycell">
+<img loading="lazy" width="201" height="122" class="scale" src="../imgw/dark-9286a14e2f70182148d03ce1437ac6a9.png"/>
+</div>
+</div>
+</td>
+</tr>
+</tbody></table>
+</p><p>
+<a style="position:relative;top:-38px;" name="c467ace853cf76a9"></a>
+</p><div style="clear:both;min-height:110px;margin-top:10px;">
+
+<div class="pezoic">
+<!-- Ezoic - Fish2 - long_content -->
+<span id="ezoic-pub-ad-placeholder-115"></span><!-- ezoic_pub_ad_placeholder-115-long_content-234x60-115-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-115-long_content-468x60-115-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-115-long_content-728x90-115-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-115-long_content-970x90-115-nonexxxnonexxxxxxezmaxscaleval100 -->
+<!-- End Ezoic - Fish2 - long_content -->
+</div>
+
+</div>
+<!--heading--><h2 class="chap"><img onclick="window.scrollTo(0,0);" title="Back to top" src="../backtop1.svg" width="20" height="20" class="backtop"/><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/cmp/dokuwiki/es/link#6"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/cmp/asciidoc/es/link#6"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/cmp/markdown/es/link#6"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>Links in JSON/YAML diagram </h2>
+<p></p>
+<h3>JSON</h3>
+<p>
+<table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0">
+<tbody><tr>
+<td valign="top">
+<div id="msga04dbd2277e7fd6c80798930fd815e5e" class="msg">
+🎉 Copied!
+</div>
+<img loading="lazy" width="16" height="16" id="imga04dbd2277e7fd6c80798930fd815e5e" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;a04dbd2277e7fd6c80798930fd815e5e&#39;)"/>
+<br/>
+<img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;a04dbd2277e7fd6c80798930fd815e5e&#39;)"/>
+</td>
+<td>
+<div class="mytab" onclick="javascript:ljs(&#39;a04dbd2277e7fd6c80798930fd815e5e&#39;)">
+<div class="mycell0">
+<code onmouseover="az=1" onmouseout="az=0"><pre id="prea04dbd2277e7fd6c80798930fd815e5e">@startjson
+{
+&#34;@fruit&#34;: &#34;Apple&#34;,
+&#34;$size&#34;: &#34;Large&#34;,
+&#34;Appli.&#34;: &#34;A [[http://plantuml.com link]] on JSON&#34;
+}
+@endjson
+</pre></code>
+</div>
+<div class="mycell">
+<img loading="lazy" width="177" height="85" class="scale" src="../imgw/dark-a04dbd2277e7fd6c80798930fd815e5e.png"/>
+</div>
+</div>
+</td>
+</tr>
+</tbody></table>
+</p><p>
+</p><p></p>
+<h3>YAML</h3>
+<p>
+<table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0">
+<tbody><tr>
+<td valign="top">
+<div id="msg2fd8cbdcbcc17d5c5c11afea66bcced1" class="msg">
+🎉 Copied!
+</div>
+<img loading="lazy" width="16" height="16" id="img2fd8cbdcbcc17d5c5c11afea66bcced1" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;2fd8cbdcbcc17d5c5c11afea66bcced1&#39;)"/>
+<br/>
+<img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;2fd8cbdcbcc17d5c5c11afea66bcced1&#39;)"/>
+</td>
+<td>
+<div class="mytab" onclick="javascript:ljs(&#39;2fd8cbdcbcc17d5c5c11afea66bcced1&#39;)">
+<div class="mycell0">
+<code onmouseover="az=1" onmouseout="az=0"><pre id="pre2fd8cbdcbcc17d5c5c11afea66bcced1">@startyaml
+@fruit: Apple
+$size: Large
+Appli.: A [[http://plantuml.com link]] on YAML
+@endyaml
+</pre></code>
+</div>
+<div class="mycell">
+<img loading="lazy" width="179" height="85" class="scale" src="../imgw/dark-2fd8cbdcbcc17d5c5c11afea66bcced1.png"/>
+</div>
+</div>
+</td>
+</tr>
+</tbody></table>
+</p><p>
+<a style="position:relative;top:-38px;" name="cdf6810106410c47"></a>
+</p><div style="clear:both;height:50px;">
+</div>
+<!--heading--><h2 class="chap"><img onclick="window.scrollTo(0,0);" title="Back to top" src="../backtop1.svg" width="20" height="20" class="backtop"/><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/cmp/dokuwiki/es/link#7"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/cmp/asciidoc/es/link#7"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/cmp/markdown/es/link#7"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>Links in notes</h2>
+<p></p>
+It is also possible to specify a link at the beginning of a note (the link applies to the full note), or inside a note (for a portion of the note). 
+<p>
+<table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0">
+<tbody><tr>
+<td valign="top">
+<div id="msga7f15b137fb42ff5da6ab120a9bc46bd" class="msg">
+🎉 Copied!
+</div>
+<img loading="lazy" width="16" height="16" id="imga7f15b137fb42ff5da6ab120a9bc46bd" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;a7f15b137fb42ff5da6ab120a9bc46bd&#39;)"/>
+<br/>
+<img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;a7f15b137fb42ff5da6ab120a9bc46bd&#39;)"/>
+</td>
+<td>
+<div class="mytab" onclick="javascript:ljs(&#39;a7f15b137fb42ff5da6ab120a9bc46bd&#39;)">
+<div class="mycell0">
+<code onmouseover="az=1" onmouseout="az=0"><pre id="prea7f15b137fb42ff5da6ab120a9bc46bd">@startuml
+:Foo:
+note left of Foo [[http://www.google.com]]
+This is a note
+end note
+
+note right of Foo
+Yet another link to [[http://www.google.com]] as demo.
+You can also [[http://www.yahoo.fr specify a text]] for the link.
+And even [[http://www.yahoo.fr{This is a tooltip} add a tooltip]] to the link.
+end note
+@enduml
+</pre></code>
+</div>
+<div class="mycell">
+<img loading="lazy" width="529" height="87" class="scale" src="../imgw/dark-a7f15b137fb42ff5da6ab120a9bc46bd.png"/>
+</div>
+</div>
+</td>
+</tr>
+</tbody></table>
+</p><p>
+</p><p></p>
+<em>[Ref. <a href="http://wiki.plantuml.net/site/incubation#url_in_diagrams">Incubation: URL in diagrams</a>]</em>
+<a style="position:relative;top:-38px;" name="72f0effc1ce1d3a0"></a>
+<div style="clear:both;min-height:110px;margin-top:10px;">
+
+<div class="pezoic">
+<!-- Ezoic - Fish3 - longer_content -->
+<span id="ezoic-pub-ad-placeholder-116"></span><!-- ezoic_pub_ad_placeholder-116-longer_content-234x60-116-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-116-longer_content-468x60-116-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-116-longer_content-728x90-116-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-116-longer_content-970x90-116-nonexxxnonexxxxxxezmaxscaleval100 -->
+<!-- End Ezoic - Fish3 - longer_content -->
+</div>
+
+</div>
+<!--heading--><h2 class="chap"><img onclick="window.scrollTo(0,0);" title="Back to top" src="../backtop1.svg" width="20" height="20" class="backtop"/><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/cmp/dokuwiki/es/link#8"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/cmp/asciidoc/es/link#8"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/cmp/markdown/es/link#8"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>Links with explicit URL directive</h2>
+<p></p>
+You can use the <code class="cod">url of XXX is [[yyy]]</code> syntax:
+<p></p>
+<h3>On sequence diagram</h3>
+<p>
+<table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0">
+<tbody><tr>
+<td valign="top">
+<div id="msg2dd16992fb73867a402a15e8939fa71f" class="msg">
+🎉 Copied!
+</div>
+<img loading="lazy" width="16" height="16" id="img2dd16992fb73867a402a15e8939fa71f" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;2dd16992fb73867a402a15e8939fa71f&#39;)"/>
+<br/>
+<img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;2dd16992fb73867a402a15e8939fa71f&#39;)"/>
+</td>
+<td>
+<div class="mytab" onclick="javascript:ljs(&#39;2dd16992fb73867a402a15e8939fa71f&#39;)">
+<div class="mycell0">
+<code onmouseover="az=1" onmouseout="az=0"><pre id="pre2dd16992fb73867a402a15e8939fa71f">@startuml
+Bob -&gt; Alice : ok
+url of Bob is [[http://www.google.com]]
+@enduml
+</pre></code>
+</div>
+<div class="mycell">
+<img loading="lazy" width="103" height="123" class="scale" src="../imgw/dark-2dd16992fb73867a402a15e8939fa71f.png"/>
+</div>
+</div>
+</td>
+</tr>
+</tbody></table>
+</p><p>
+</p><p></p>
+<h3>On class diagram</h3>
+<p>
+<table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0">
+<tbody><tr>
+<td valign="top">
+<div id="msgeb1badc3b6a6690c262cc46c9a388884" class="msg">
+🎉 Copied!
+</div>
+<img loading="lazy" width="16" height="16" id="imgeb1badc3b6a6690c262cc46c9a388884" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;eb1badc3b6a6690c262cc46c9a388884&#39;)"/>
+<br/>
+<img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;eb1badc3b6a6690c262cc46c9a388884&#39;)"/>
+</td>
+<td>
+<div class="mytab" onclick="javascript:ljs(&#39;eb1badc3b6a6690c262cc46c9a388884&#39;)">
+<div class="mycell0">
+<code onmouseover="az=1" onmouseout="az=0"><pre id="preeb1badc3b6a6690c262cc46c9a388884">@startuml
+skinparam topurl http://www.google.com
+Dog --|&gt; Mammal
+url of Mammal is [[/search]]
+url of Dog is [[http://www.yahoo.com{This is Dog}]]
+Dog o-- Cat
+Cat --|&gt; Mammal
+@enduml
+</pre></code>
+</div>
+<div class="mycell">
+<img loading="lazy" width="122" height="277" class="scale" src="../imgw/dark-eb1badc3b6a6690c262cc46c9a388884.png"/>
+</div>
+</div>
+</td>
+</tr>
+</tbody></table>
+</p><p>
+</p><p></p>
+<p></p>
+<h3>On usecase diagram</h3>
+<p>
+<table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0">
+<tbody><tr>
+<td valign="top">
+<div id="msg83460fe836bb19700c35b9eee87597dc" class="msg">
+🎉 Copied!
+</div>
+<img loading="lazy" width="16" height="16" id="img83460fe836bb19700c35b9eee87597dc" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;83460fe836bb19700c35b9eee87597dc&#39;)"/>
+<br/>
+<img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;83460fe836bb19700c35b9eee87597dc&#39;)"/>
+</td>
+<td>
+<div class="mytab" onclick="javascript:ljs(&#39;83460fe836bb19700c35b9eee87597dc&#39;)">
+<div class="mycell0">
+<code onmouseover="az=1" onmouseout="az=0"><pre id="pre83460fe836bb19700c35b9eee87597dc">@startuml
+actor Mamal
+usecase Dog
+
+url of Mamal is [[http://www.google.com]]
+url of Dog is [[http://www.yahoo.com{This is Dog}]]
+@enduml
+</pre></code>
+</div>
+<div class="mycell">
+<img loading="lazy" width="147" height="87" class="scale" src="../imgw/dark-83460fe836bb19700c35b9eee87597dc.png"/>
+</div>
+</div>
+</td>
+</tr>
+</tbody></table>
+</p><p>
+</p><p></p>
+<h3>On component or deployment diagram</h3>
+<p>
+<table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0">
+<tbody><tr>
+<td valign="top">
+<div id="msgac5fadd8e875e8d122e6de8587e98785" class="msg">
+🎉 Copied!
+</div>
+<img loading="lazy" width="16" height="16" id="imgac5fadd8e875e8d122e6de8587e98785" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;ac5fadd8e875e8d122e6de8587e98785&#39;)"/>
+<br/>
+<img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;ac5fadd8e875e8d122e6de8587e98785&#39;)"/>
+</td>
+<td>
+<div class="mytab" onclick="javascript:ljs(&#39;ac5fadd8e875e8d122e6de8587e98785&#39;)">
+<div class="mycell0">
+<code onmouseover="az=1" onmouseout="az=0"><pre id="preac5fadd8e875e8d122e6de8587e98785">@startuml
+node Mamal
+component Dog
+
+url of Mamal is [[http://www.google.com]]
+url of Dog is [[http://www.yahoo.com{This is Dog}]]
+@enduml
+</pre></code>
+</div>
+<div class="mycell">
+<img loading="lazy" width="203" height="70" class="scale" src="../imgw/dark-ac5fadd8e875e8d122e6de8587e98785.png"/>
+</div>
+</div>
+</td>
+</tr>
+</tbody></table>
+</p><p>
+</p><p></p>
+<em>[Ref. <a href="http://wiki.plantuml.net/site/incubation#url_in_diagrams">Incubation: URL in diagrams</a>]</em>
+<a style="position:relative;top:-38px;" name="3259a2b9a0c6ed27"></a>
+<div style="clear:both;height:50px;">
+</div>
+<!--heading--><h2 class="chap"><img onclick="window.scrollTo(0,0);" title="Back to top" src="../backtop1.svg" width="20" height="20" class="backtop"/><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/cmp/dokuwiki/es/link#9"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/cmp/asciidoc/es/link#9"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/cmp/markdown/es/link#9"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>Links in arrow (or Hyperlinks in link or connection)</h2>
+<p></p>
+<h3>Class diagram</h3>
+<p></p>
+You can use the same syntax as above in the arrow name.
+It makes an underlined link:
+<p></p>
+<p>
+<table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0">
+<tbody><tr>
+<td valign="top">
+<div id="msgf2aeacec8b257ce0a09bf7051d7a79f7" class="msg">
+🎉 Copied!
+</div>
+<img loading="lazy" width="16" height="16" id="imgf2aeacec8b257ce0a09bf7051d7a79f7" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;f2aeacec8b257ce0a09bf7051d7a79f7&#39;)"/>
+<br/>
+<img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;f2aeacec8b257ce0a09bf7051d7a79f7&#39;)"/>
+</td>
+<td>
+<div class="mytab" onclick="javascript:ljs(&#39;f2aeacec8b257ce0a09bf7051d7a79f7&#39;)">
+<div class="mycell0">
+<code onmouseover="az=1" onmouseout="az=0"><pre id="pref2aeacec8b257ce0a09bf7051d7a79f7">@startuml
+class Car 
+Car &#34;1&#34; *-- &#34;*&#34; Wheel : [[http://plantuml.com/class-diagram has some]]
+@enduml
+</pre></code>
+</div>
+<div class="mycell">
+<img loading="lazy" width="108" height="187" class="scale" src="../imgw/dark-f2aeacec8b257ce0a09bf7051d7a79f7.png"/>
+</div>
+</div>
+</td>
+</tr>
+</tbody></table>
+</p><p>
+</p><p></p>
+Or you can use this syntax. It doesn&#39;t underline the link, though it&#39;s still clickable:
+<p></p>
+<p>
+<table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0">
+<tbody><tr>
+<td valign="top">
+<div id="msg93a9eb3c61e3156f1898921ab3387d06" class="msg">
+🎉 Copied!
+</div>
+<img loading="lazy" width="16" height="16" id="img93a9eb3c61e3156f1898921ab3387d06" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;93a9eb3c61e3156f1898921ab3387d06&#39;)"/>
+<br/>
+<img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;93a9eb3c61e3156f1898921ab3387d06&#39;)"/>
+</td>
+<td>
+<div class="mytab" onclick="javascript:ljs(&#39;93a9eb3c61e3156f1898921ab3387d06&#39;)">
+<div class="mycell0">
+<code onmouseover="az=1" onmouseout="az=0"><pre id="pre93a9eb3c61e3156f1898921ab3387d06">@startuml
+class Car 
+Car &#34;1&#34; *-- &#34;*&#34; Wheel [[http://plantuml.com/class-diagram]] : has some
+@enduml
+</pre></code>
+</div>
+<div class="mycell">
+<img loading="lazy" width="108" height="187" class="scale" src="../imgw/dark-93a9eb3c61e3156f1898921ab3387d06.png"/>
+</div>
+</div>
+</td>
+</tr>
+</tbody></table>
+</p><p>
+</p><p></p>
+<h3>Component or Deployment diagram</h3>
+<p></p>
+<div class="tag" style="background:#FFD700;">FIXME</div> 🚩
+See Wanted features <a href="https://forum.plantuml.net/6397">QA-6397</a>
+<div class="tag" style="background:#FFD700;">FIXME</div>
+<p>
+<table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0">
+<tbody><tr>
+<td valign="top">
+<div id="msgdeed97b1a20b6e4549a1bd90123e33af" class="msg">
+🎉 Copied!
+</div>
+<img loading="lazy" width="16" height="16" id="imgdeed97b1a20b6e4549a1bd90123e33af" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;deed97b1a20b6e4549a1bd90123e33af&#39;)"/>
+<br/>
+<img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;deed97b1a20b6e4549a1bd90123e33af&#39;)"/>
+</td>
+<td>
+<div class="mytab" onclick="javascript:ljs(&#39;deed97b1a20b6e4549a1bd90123e33af&#39;)">
+<div class="mycell0">
+<code onmouseover="az=1" onmouseout="az=0"><pre id="predeed97b1a20b6e4549a1bd90123e33af">@startuml
+node Car 
+Car *-- Wheel [[http://plantuml.com/deployment-diagram]] : has some
+@enduml
+</pre></code>
+</div>
+<div class="mycell">
+<img loading="lazy" width="540" height="367" class="scale" src="../imgw/dark-deed97b1a20b6e4549a1bd90123e33af.png"/>
+</div>
+</div>
+</td>
+</tr>
+</tbody></table>
+</p><p>
+</p><p></p>
+<p></p>
+<em>[Ref. <a href="https://forum.plantuml.net/6397">QA-6397</a>]</em>
+<p></p>
+<p></p>
+<h3>State diagram</h3>
+<p></p>
+<div class="tag" style="background:#FFD700;">FIXME</div> 🚩
+Same Issue 
+<div class="tag" style="background:#FFD700;">FIXME</div>
+<p>
+<table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0">
+<tbody><tr>
+<td valign="top">
+<div id="msg5b7c181bc5afc59d960149a9ccb50138" class="msg">
+🎉 Copied!
+</div>
+<img loading="lazy" width="16" height="16" id="img5b7c181bc5afc59d960149a9ccb50138" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;5b7c181bc5afc59d960149a9ccb50138&#39;)"/>
+<br/>
+<img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;5b7c181bc5afc59d960149a9ccb50138&#39;)"/>
+</td>
+<td>
+<div class="mytab" onclick="javascript:ljs(&#39;5b7c181bc5afc59d960149a9ccb50138&#39;)">
+<div class="mycell0">
+<code onmouseover="az=1" onmouseout="az=0"><pre id="pre5b7c181bc5afc59d960149a9ccb50138">@startuml
+state Car
+state CarWithWheel
+Car -&gt; CarWithWheel [[http://plantuml.com/state-diagram]] : Add wheel to car
+@enduml
+</pre></code>
+</div>
+<div class="mycell">
+<img loading="lazy" width="541" height="162" class="scale" src="../imgw/dark-5b7c181bc5afc59d960149a9ccb50138.png"/>
+</div>
+</div>
+</td>
+</tr>
+</tbody></table>
+</p><p>
+<a style="position:relative;top:-38px;" name="950c6270a3078b08"></a>
+</p><div style="clear:both;min-height:110px;margin-top:10px;">
+
+<div class="pezoic">
+<!-- Ezoic - Fish4 - longest_content -->
+<span id="ezoic-pub-ad-placeholder-117"></span><!-- ezoic_pub_ad_placeholder-117-longest_content-234x60-117-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-117-longest_content-468x60-117-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-117-longest_content-728x90-117-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-117-longest_content-970x90-117-nonexxxnonexxxxxxezmaxscaleval100 -->
+<!-- End Ezoic - Fish4 - longest_content -->
+</div>
+
+</div>
+<!--heading--><h2 class="chap"><img onclick="window.scrollTo(0,0);" title="Back to top" src="../backtop1.svg" width="20" height="20" class="backtop"/><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/cmp/dokuwiki/es/link#10"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/cmp/asciidoc/es/link#10"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/cmp/markdown/es/link#10"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>Specific SkinParameter for Link</h2>
+<p></p>
+<h3>hyperlinkColor </h3>
+<p></p>
+You can change the <code class="cod">color</code> value of the links with the <code class="cod">hyperlinkColor</code> setting.
+<p></p>
+<p>
+<table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0">
+<tbody><tr>
+<td valign="top">
+<div id="msgef839b27f68e3d21d902f04c57d213ba" class="msg">
+🎉 Copied!
+</div>
+<img loading="lazy" width="16" height="16" id="imgef839b27f68e3d21d902f04c57d213ba" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;ef839b27f68e3d21d902f04c57d213ba&#39;)"/>
+<br/>
+<img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;ef839b27f68e3d21d902f04c57d213ba&#39;)"/>
+</td>
+<td>
+<div class="mytab" onclick="javascript:ljs(&#39;ef839b27f68e3d21d902f04c57d213ba&#39;)">
+<div class="mycell0">
+<code onmouseover="az=1" onmouseout="az=0"><pre id="preef839b27f68e3d21d902f04c57d213ba">@startuml
+:hyperlinkColor setting, by default;
+:[[http://plantuml.com]];
+@enduml
+</pre></code>
+</div>
+<div class="mycell">
+<img loading="lazy" width="218" height="111" class="scale" src="../imgw/dark-ef839b27f68e3d21d902f04c57d213ba.png"/>
+</div>
+</div>
+</td>
+</tr>
+</tbody></table>
+</p><p>
+</p><p></p>
+<p>
+<table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0">
+<tbody><tr>
+<td valign="top">
+<div id="msgb721e873a90de6c2aa31f2fcd57007d3" class="msg">
+🎉 Copied!
+</div>
+<img loading="lazy" width="16" height="16" id="imgb721e873a90de6c2aa31f2fcd57007d3" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;b721e873a90de6c2aa31f2fcd57007d3&#39;)"/>
+<br/>
+<img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;b721e873a90de6c2aa31f2fcd57007d3&#39;)"/>
+</td>
+<td>
+<div class="mytab" onclick="javascript:ljs(&#39;b721e873a90de6c2aa31f2fcd57007d3&#39;)">
+<div class="mycell0">
+<code onmouseover="az=1" onmouseout="az=0"><pre id="preb721e873a90de6c2aa31f2fcd57007d3">@startuml
+skinparam hyperlinkColor red
+:hyperlinkColor setting;
+:[[http://plantuml.com]];
+@enduml
+</pre></code>
+</div>
+<div class="mycell">
+<img loading="lazy" width="160" height="111" class="scale" src="../imgw/dark-b721e873a90de6c2aa31f2fcd57007d3.png"/>
+</div>
+</div>
+</td>
+</tr>
+</tbody></table>
+</p><p>
+</p><p></p>
+<em>[Ref. <a href="https://forum.plantuml.net/2322/increasing-visibility-of-links">QA-2322</a>]</em>
+<p></p>
+<h3>hyperlinkUnderline </h3>
+<p></p>
+You can underline or not the links with the <code class="cod">hyperlinkUnderline</code> setting.
+<p></p>
+<p>
+<table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0">
+<tbody><tr>
+<td valign="top">
+<div id="msga2d69808b1193fa905390511b9a818ef" class="msg">
+🎉 Copied!
+</div>
+<img loading="lazy" width="16" height="16" id="imga2d69808b1193fa905390511b9a818ef" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;a2d69808b1193fa905390511b9a818ef&#39;)"/>
+<br/>
+<img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;a2d69808b1193fa905390511b9a818ef&#39;)"/>
+</td>
+<td>
+<div class="mytab" onclick="javascript:ljs(&#39;a2d69808b1193fa905390511b9a818ef&#39;)">
+<div class="mycell0">
+<code onmouseover="az=1" onmouseout="az=0"><pre id="prea2d69808b1193fa905390511b9a818ef">@startuml
+skinparam hyperlinkUnderline true
+:hyperlinkColor setting;
+:[[http://plantuml.com]];
+@enduml
+</pre></code>
+</div>
+<div class="mycell">
+<img loading="lazy" width="826" height="1442" class="scale" src="../imgw/dark-a2d69808b1193fa905390511b9a818ef.png"/>
+</div>
+</div>
+</td>
+</tr>
+</tbody></table>
+</p><p>
+</p><p>
+<table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0">
+<tbody><tr>
+<td valign="top">
+<div id="msg097695571fc9f5e32486ef082ddbebbf" class="msg">
+🎉 Copied!
+</div>
+<img loading="lazy" width="16" height="16" id="img097695571fc9f5e32486ef082ddbebbf" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;097695571fc9f5e32486ef082ddbebbf&#39;)"/>
+<br/>
+<img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;097695571fc9f5e32486ef082ddbebbf&#39;)"/>
+</td>
+<td>
+<div class="mytab" onclick="javascript:ljs(&#39;097695571fc9f5e32486ef082ddbebbf&#39;)">
+<div class="mycell0">
+<code onmouseover="az=1" onmouseout="az=0"><pre id="pre097695571fc9f5e32486ef082ddbebbf">@startuml
+skinparam hyperlinkUnderline false
+:hyperlinkColor setting;
+:[[http://plantuml.com]];
+@enduml
+</pre></code>
+</div>
+<div class="mycell">
+<img loading="lazy" width="160" height="111" class="scale" src="../imgw/dark-097695571fc9f5e32486ef082ddbebbf.png"/>
+</div>
+</div>
+</td>
+</tr>
+</tbody></table>
+</p><p>
+</p><p></p>
+🚩<em>&#39;hyperlinkUnderline false&#39; seems broken...</em> 🏁
+<p></p>
+<em>[Ref. <a href="https://forum.plantuml.net/2866/decreasing-visibility-of-links">QA-2866</a>, <a href="https://forum.plantuml.net/15114">QA-15114</a>]</em>
+<p></p>
+<p></p>
+<h3>topurl </h3>
+<p></p>
+You can use <code class="cod">topurl</code> setting, in order to define the prefix for all the links on a PlantUML diagram, as:
+<p></p>
+<p>
+<table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0">
+<tbody><tr>
+<td valign="top">
+<div id="msg519f0cd46222ac74b864c31b39e1ea2d" class="msg">
+🎉 Copied!
+</div>
+<img loading="lazy" width="16" height="16" id="img519f0cd46222ac74b864c31b39e1ea2d" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;519f0cd46222ac74b864c31b39e1ea2d&#39;)"/>
+<br/>
+<img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;519f0cd46222ac74b864c31b39e1ea2d&#39;)"/>
+</td>
+<td>
+<div class="mytab" onclick="javascript:ljs(&#39;519f0cd46222ac74b864c31b39e1ea2d&#39;)">
+<div class="mycell0">
+<code onmouseover="az=1" onmouseout="az=0"><pre id="pre519f0cd46222ac74b864c31b39e1ea2d">@startmindmap
+
+skinparam topurl https://plantuml.com/
+
+* [[index PlantUML website]]
+** [[sequence-diagram Sequence]]
+** [[mindmap-diagram MindMap]]
+** [[wbs-diagram WBS]]
+** ...
+@endmindmap
+</pre></code>
+</div>
+<div class="mycell">
+<img loading="lazy" width="286" height="251" class="scale" src="../imgw/dark-519f0cd46222ac74b864c31b39e1ea2d.png"/>
+</div>
+</div>
+</td>
+</tr>
+</tbody></table>
+</p><p>
+</p><p></p>
+<em>[Ref. <a href="https://forum.plantuml.net/9016/dashed-vs-solid-lines-in-sequence-diagrams?show=9023#c9023">QA-9016</a>, <a href="https://forum.plantuml.net/13179/how-the-skinparam-topurl-works-url-links">QA-13179</a> ]</em>
+<p></p>
+<h2>Other SkinParameter for Link</h2>
+<p></p>
+You can see also on:
+<ul>
+<li><a href="svg.html#34q86jw7xgn8k362kjon">Specific SkinParameter for SVG</a></li>
+</ul>
+<a style="position:relative;top:-38px;" name="bb2ede32ce6accb8"></a>
+<div style="clear:both;height:50px;">
+</div>
+<!--heading--><h2 class="chap"><img onclick="window.scrollTo(0,0);" title="Back to top" src="../backtop1.svg" width="20" height="20" class="backtop"/><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/cmp/dokuwiki/es/link#11"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/cmp/asciidoc/es/link#11"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/cmp/markdown/es/link#11"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>Using (global) style</h2>
+<p></p>
+<h3>Without style <em>(by default)</em></h3>
+<p>
+<table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0">
+<tbody><tr>
+<td valign="top">
+<div id="msg28268eb9ac6ccb2d21ef7acf53a672fa" class="msg">
+🎉 Copied!
+</div>
+<img loading="lazy" width="16" height="16" id="img28268eb9ac6ccb2d21ef7acf53a672fa" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;28268eb9ac6ccb2d21ef7acf53a672fa&#39;)"/>
+<br/>
+<img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;28268eb9ac6ccb2d21ef7acf53a672fa&#39;)"/>
+</td>
+<td>
+<div class="mytab" onclick="javascript:ljs(&#39;28268eb9ac6ccb2d21ef7acf53a672fa&#39;)">
+<div class="mycell0">
+<code onmouseover="az=1" onmouseout="az=0"><pre id="pre28268eb9ac6ccb2d21ef7acf53a672fa">@startuml
+title test on HyperlinkColor [[test link]]
+
+ class test &lt;&lt;normal&gt;&gt; {
+  * aaa
+  + [[normal model]]
+  - bb
+ }
+ 
+  class test_with_stereo AS &#34;[[http://www.plantuml.com test]]&#34; &lt;&lt;red&gt;&gt; {
+  * aaa
+  + [[red model]]
+  - bb
+ }
+@enduml
+</pre></code>
+</div>
+<div class="mycell">
+<img loading="lazy" width="213" height="163" class="scale" src="../imgw/dark-28268eb9ac6ccb2d21ef7acf53a672fa.png"/>
+</div>
+</div>
+</td>
+</tr>
+</tbody></table>
+</p><p>
+</p><p></p>
+<p></p>
+<h3>With style</h3>
+<p></p>
+You can use <a href="https://plantuml.com/es-dark/style-evolution">style</a> to change rendering of elements.
+<p></p>
+<p>
+<table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0">
+<tbody><tr>
+<td valign="top">
+<div id="msg1698d9c006d27461843dfaf6e64a85de" class="msg">
+🎉 Copied!
+</div>
+<img loading="lazy" width="16" height="16" id="img1698d9c006d27461843dfaf6e64a85de" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;1698d9c006d27461843dfaf6e64a85de&#39;)"/>
+<br/>
+<img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;1698d9c006d27461843dfaf6e64a85de&#39;)"/>
+</td>
+<td>
+<div class="mytab" onclick="javascript:ljs(&#39;1698d9c006d27461843dfaf6e64a85de&#39;)">
+<div class="mycell0">
+<code onmouseover="az=1" onmouseout="az=0"><pre id="pre1698d9c006d27461843dfaf6e64a85de">@startuml
+&lt;style&gt;
+.red {
+  HyperlinkColor #FF0000
+}
+&lt;/style&gt;
+
+title test on HyperlinkColor [[test link]]
+
+ class test &lt;&lt;normal&gt;&gt; {
+  * aaa
+  + [[normal model]]
+  - bb
+ }
+ 
+  class test_with_stereo AS &#34;[[http://www.plantuml.com test]]&#34; &lt;&lt;red&gt;&gt; {
+  * aaa
+  + [[red model]]
+  - bb
+ }
+@enduml
+</pre></code>
+</div>
+<div class="mycell">
+<img loading="lazy" width="213" height="163" class="scale" src="../imgw/dark-1698d9c006d27461843dfaf6e64a85de.png"/>
+</div>
+</div>
+</td>
+</tr>
+</tbody></table>
+</p><p>
+</p><p></p>
+<em>[Ref. <a href="https://forum.plantuml.net/8071/">QA-8071</a>]</em>
+<a style="position:relative;top:-38px;" name="faa5830afb2104fb"></a>
+<div style="clear:both;min-height:110px;margin-top:10px;">
+
+<div class="pezoic">
+<!-- Ezoic - Fish5 - incontent_5 -->
+<span id="ezoic-pub-ad-placeholder-118"></span><!-- ezoic_pub_ad_placeholder-118-incontent_5-234x60-118-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-118-incontent_5-468x60-118-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-118-incontent_5-728x90-118-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-118-incontent_5-970x90-118-nonexxxnonexxxxxxezmaxscaleval100 -->
+<!-- End Ezoic - Fish5 - incontent_5 -->
+</div>
+
+</div>
+<!--heading--><h2 class="chap"><img onclick="window.scrollTo(0,0);" title="Back to top" src="../backtop1.svg" width="20" height="20" class="backtop"/><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/cmp/dokuwiki/es/link#12"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/cmp/asciidoc/es/link#12"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/cmp/markdown/es/link#12"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>Link in State diagram</h2>
+<p></p>
+You can add link on State diagram:
+<ul>
+<li>local link on a word </li>
+<li>or link on the entire state shape</li>
+</ul>
+<p></p>
+<p>
+<table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0">
+<tbody><tr>
+<td valign="top">
+<div id="msge4f14bf681ab03f1f63a6ecd1c96efea" class="msg">
+🎉 Copied!
+</div>
+<img loading="lazy" width="16" height="16" id="imge4f14bf681ab03f1f63a6ecd1c96efea" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;e4f14bf681ab03f1f63a6ecd1c96efea&#39;)"/>
+<br/>
+<img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;e4f14bf681ab03f1f63a6ecd1c96efea&#39;)"/>
+</td>
+<td>
+<div class="mytab" onclick="javascript:ljs(&#39;e4f14bf681ab03f1f63a6ecd1c96efea&#39;)">
+<div class="mycell0">
+<code onmouseover="az=1" onmouseout="az=0"><pre id="pree4f14bf681ab03f1f63a6ecd1c96efea">@startuml
+state state1 [[http://plantuml.com/link]]
+state state2 [[http://plantuml.com/state{this is a tooltip\nand a link to &#34;plantuml/state&#34;}]]
+state2 : a global link\nand a tooltip
+note left [[http://plantuml.com]]
+a note
+and a link
+to &#34;&#34;plantuml.com&#34;&#34;
+end note
+state3 : a local link to [[http://plantuml.com plantuml]]
+
+state1 --&gt; state2
+state2 --&gt; state3
+@enduml
+
+</pre></code>
+</div>
+<div class="mycell">
+<img loading="lazy" width="294" height="302" class="scale" src="https://plantuml.com/imgw/dark-e4f14bf681ab03f1f63a6ecd1c96efea.png"/>
+</div>
+</div>
+</td>
+</tr>
+</tbody></table>
+</p><p>
+</p></td>
+<td id="toctd" valign="top" style="max-width:240px;min-width:240px;">
+<!--toc-->
+<div id="toc">
+<ul>
+<li><a href="link.html#c730ba05956380d7">Links contained curly bracket</a>
+</li><li><a href="link.html#6e6075c2a714c1fe">Links in sequence diagram</a>
+</li><li><a href="link.html#a4ca794b54985ba2">Links in class diagram</a>
+</li><li><a href="link.html#27ffe93cac507589">Links in activity diagram</a>
+</li><li><a href="link.html#8cddd36d10e36e13">Links in Network diagram (nwdiag)</a>
+</li><li><a href="link.html#c467ace853cf76a9">Links in JSON/YAML diagram</a>
+</li><li><a href="link.html#cdf6810106410c47">Links in notes</a>
+</li><li><a href="link.html#72f0effc1ce1d3a0">Links with explicit URL directive</a>
+</li><li><a href="link.html#3259a2b9a0c6ed27">Links in arrow (or Hyperlinks in link or connection)</a>
+</li><li><a href="link.html#950c6270a3078b08">Specific SkinParameter for Link</a>
+</li><li><a href="link.html#bb2ede32ce6accb8">Using (global) style</a>
+</li><li><a href="link.html#faa5830afb2104fb">Link in State diagram</a>
+</li></ul>
+</div>
+</td>
+</tr>
+</tbody></table>
+
+
+</p><p>
+
+<!-- Ezoic - Natif02L - bottom_of_page -->
+</p><span id="ezoic-pub-ad-placeholder-104"></span><!-- ezoic_pub_ad_placeholder-104-bottom_of_page-234x60-104-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-104-bottom_of_page-468x60-104-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-104-bottom_of_page-728x90-104-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-104-bottom_of_page-970x250-104-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-104-bottom_of_page-300x250x3-104-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-104-bottom_of_page-970x90-104-nonexxxnonexxxxxxezmaxscaleval100 -->
+<!-- End Ezoic - Natif02L - bottom_of_page -->
+</div>
+<!-- https://css-tricks.com/almanac/properties/f/float/ -->
+<!-- https://css-tricks.com/snippets/css/a-guide-to-flexbox/ -->
+
+
+<style>
+.btm {
+text-align:center;
+}
+.btm a{
+    text-decoration:none;
+    color:#b0c0d0;
+}
+.btm a:hover{
+    color:#8CB4FF;
+}
+</style>
+
+<div class="btm">
+<hr/>
+<a href="https://g.ezoic.net/privacy/plantuml.com"><small>Privacy Policy</small></a>
+    
+<a href="../direct-sales.html"><small>Advertise</small></a>
+<p>
+</p></div><!--btm-->
+
+
+<!--root-->
+
+<!-- Start of StatCounter Code --><script type="text/javascript">
+var sc_project=11129475; var sc_invisible=1; var sc_security="b9fcaf41";
+</script>
+<script async="" type="text/javascript" src="https://www.statcounter.com/counter/counter.js"></script> <!-- End of StatCounter Code -->
+
+
+<!--[selectrongo:done]--><script type="text/javascript">
+				var __inScopeForCCPA = false;
+		function __uspapi(command, version, callback) {
+			var response = null;
+			var successs = false;
+			if (command === "getUSPData" && version === 1) {
+				var uspString = "1"; // Version
+				if (__inScopeForCCPA) {
+					uspString += "N"; // Has Explicit Notice for Opt Out been provided (ex footer or minor consent modal)
+					var result;
+					var consentCookie = (result = new RegExp('(?:^|; )ezoccpaconsent=([^;]*)').exec(document.cookie)) ? (result[1]) : null;
+					if (consentCookie === "nonconsent") {
+						uspString += "Y";
+					}
+					else {
+						uspString += "N";
+					}
+					uspString += "N" // Is pub a signatory to the IAB Limited Service Provider Agreement (http://www.iabprivacy.com/)
+				}
+				else {
+					uspString += "---";
+				}
+				response = {
+					uspString: uspString,
+					version: 1
+				};
+				success = true;
+			}
+			return callback(response, success);
+		};
+		function __receiveUspapiMessage(event) {
+			if (event.data.hasOwnProperty('__uspapiCall')) {
+				__uspapi('getUSPData', 1, function(uspData, success) {
+					event.source.postMessage({
+						__uspapiReturn: {
+							returnValue: uspData,
+							success: success,
+							callId: event.data.__uspapiCall.callId
+						}
+					},
+					event.origin);
+				});
+			}
+			return null;
+		};
+		window.addEventListener("message", __receiveUspapiMessage, false);
+</script>
+<script>__ez.queue.addFile('/tardisrocinante/vitals.js', '/tardisrocinante/vitals.js?gcb=2&cb=3', false, ['/parsonsmaize/mulvane.js'], true, false, true, false);</script>
+<script>var _audins_dom="plantuml_com",_audins_did=173770;__ez.queue.addDelayFunc("audins.js","__ez.script.add", "//go.ezodn.com/detroitchicago/audins.js?cb=195-2");</script><noscript><div style="display:none;"><img src="https://pixel.quantserve.com/pixel/p-31iz6hfFutd16.gif?labels=Domain.plantuml_com,DomainId.173770" border="0" height="1" width="1" alt="Quantcast"/></div></noscript>
+<script>__ez.queue.addFile('/beardeddragon/drake.js', '/beardeddragon/drake.js?gcb=2&cb=4', false, [], true, false, true, false);</script>
+<script type="text/javascript" style='display:none;'>var __ez_dims = (function() {
+		var setCookie = function( name, content, expiry ) {
+			return document.cookie = name+'='+content+((expiry)?';expires='+(new Date(Math.floor(new Date().getTime()+expiry*1000)).toUTCString()):'')+';path=/';
+		};
+		var ffid = 1;
+		var oh = window.screen.height;
+		var ow = window.screen.width;
+		var h = ffid === 1 ? oh : (oh > ow) ? oh : ow;
+		var w = ffid === 1 ? ow : (oh > ow) ? ow : oh;
+		var uh = window.innerHeight || document.documentElement.clientHeight || document.getElementsByTagName('body')[0].clientHeight;
+		var uw = window.innerWidth || document.documentElement.clientWidth || document.getElementsByTagName('body')[0].clientWidth;
+		setCookie('ezds', encodeURIComponent('ffid='+ffid+',w='+w+',h='+h), (31536e3*7));
+		setCookie('ezohw', encodeURIComponent('w='+uw+',h='+uh), (31536e3*7));
+	})();</script>
+<script type='text/javascript' style='display:none;' async>__ez.queue.addFile('/parsonsmaize/chanute.js', '/parsonsmaize/chanute.js?a=a&cb=7&dcb=195-2&shcb=34', true, ['/parsonsmaize/mulvane.js'], true, false, false, false);</script>
+<script type='text/javascript' style='display:none;' async>__ez.queue.addFile('/porpoiseant/jellyfish.js', '/porpoiseant/jellyfish.js?a=a&cb=10&dcb=195-2&shcb=34', false, [], true, false, false, false);</script></body></html>

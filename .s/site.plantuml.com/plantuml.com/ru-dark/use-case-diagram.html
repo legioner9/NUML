@@ -1,0 +1,2683 @@
+<html lang="ru"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<script data-ezscrex='false' data-cfasync='false' data-pagespeed-no-defer>var __ez=__ez||{};__ez.stms=Date.now();__ez.evt={};__ez.script={};__ez.ck=__ez.ck||{};__ez.template={};__ez.template.isOrig=false;__ez.queue=function(){var e=0,i=0,t=[],n=!1,o=[],r=[],s=!0,a=function(e,i,n,o,r,s,a){var l=arguments.length>7&&void 0!==arguments[7]?arguments[7]:window,d=this;this.name=e,this.funcName=i,this.parameters=null===n?null:p(n)?n:[n],this.isBlock=o,this.blockedBy=r,this.deleteWhenComplete=s,this.isError=!1,this.isComplete=!1,this.isInitialized=!1,this.proceedIfError=a,this.fWindow=l,this.isTimeDelay=!1,this.process=function(){f("... func = "+e),d.isInitialized=!0,d.isComplete=!0,f("... func.apply: "+e);var i=d.funcName.split("."),n=null,o=this.fWindow||window;i.length>3||(n=3===i.length?o[i[0]][i[1]][i[2]]:2===i.length?o[i[0]][i[1]]:o[d.funcName]),null!=n&&n.apply(null,this.parameters),!0===d.deleteWhenComplete&&delete t[e],!0===d.isBlock&&(f("----- F'D: "+d.name),u())}},l=function(e,i,t,n,o,r,s){var a=arguments.length>7&&void 0!==arguments[7]?arguments[7]:window,l=this;this.name=e,this.path=i,this.async=o,this.defer=r,this.isBlock=t,this.blockedBy=n,this.isInitialized=!1,this.isError=!1,this.isComplete=!1,this.proceedIfError=s,this.fWindow=a,this.isTimeDelay=!1,this.isPath=function(e){return"/"===e[0]&&"/"!==e[1]},this.getSrc=function(e){return void 0!==window.__ezScriptHost&&this.isPath(e)&&"banger.js"!==this.name?window.__ezScriptHost+e:e},this.process=function(){l.isInitialized=!0,f("... file = "+e);var i=this.fWindow?this.fWindow.document:document,t=i.createElement("script");t.src=this.getSrc(this.path),!0===o?t.async=!0:!0===r&&(t.defer=!0),t.onerror=function(){var e={url:window.location.href,name:l.name,path:l.path,user_agent:window.navigator.userAgent};"undefined"!=typeof _ezaq&&(e.pageview_id=_ezaq.page_view_id);var i=encodeURIComponent(JSON.stringify(e)),t=new XMLHttpRequest;t.open("GET","//g.ezoic.net/ezqlog?d="+i,!0),t.send(),f("----- ERR'D: "+l.name),l.isError=!0,!0===l.isBlock&&u()},t.onreadystatechange=t.onload=function(){var e=t.readyState;f("----- F'D: "+l.name),e&&!/loaded|complete/.test(e)||(l.isComplete=!0,!0===l.isBlock&&u())},i.getElementsByTagName("head")[0].appendChild(t)}},d=function(e,i){this.name=e,this.path="",this.async=!1,this.defer=!1,this.isBlock=!1,this.blockedBy=[],this.isInitialized=!0,this.isError=!1,this.isComplete=i,this.proceedIfError=!1,this.isTimeDelay=!1,this.process=function(){}};function c(e){!0!==h(e)&&0!=s&&e.process()}function h(e){if(!0===e.isTimeDelay&&!1===n)return f(e.name+" blocked = TIME DELAY!"),!0;if(p(e.blockedBy))for(var i=0;i<e.blockedBy.length;i++){var o=e.blockedBy[i];if(!1===t.hasOwnProperty(o))return f(e.name+" blocked = "+o),!0;if(!0===e.proceedIfError&&!0===t[o].isError)return!1;if(!1===t[o].isComplete)return f(e.name+" blocked = "+o),!0}return!1}function f(e){var i=window.location.href,t=new RegExp("[?&]ezq=([^&#]*)","i").exec(i);"1"===(t?t[1]:null)&&console.debug(e)}function u(){++e>200||(f("let's go"),m(o),m(r))}function m(e){for(var i in e)if(!1!==e.hasOwnProperty(i)){var t=e[i];!0===t.isComplete||h(t)||!0===t.isInitialized||!0===t.isError?!0===t.isError?f(t.name+": error"):!0===t.isComplete?f(t.name+": complete already"):!0===t.isInitialized&&f(t.name+": initialized already"):t.process()}}function p(e){return"[object Array]"==Object.prototype.toString.call(e)}return window.addEventListener("load",(function(){setTimeout((function(){n=!0,f("TDELAY -----"),u()}),5e3)}),!1),{addFile:function(e,i,n,s,a,d,h,f,u){var m=new l(e,i,n,s,a,d,h,u);!0===f?o[e]=m:r[e]=m,t[e]=m,c(m)},addDelayFile:function(e,i){var n=new l(e,i,!1,[],!1,!1,!0);n.isTimeDelay=!0,f(e+" ...  FILE! TDELAY"),r[e]=n,t[e]=n,c(n)},addFunc:function(e,n,s,l,d,h,f,u,m,p){!0===h&&(e=e+"_"+i++);var w=new a(e,n,s,l,d,f,u,p);!0===m?o[e]=w:r[e]=w,t[e]=w,c(w)},addDelayFunc:function(e,i,n){var o=new a(e,i,n,!1,[],!0,!0);o.isTimeDelay=!0,f(e+" ...  FUNCTION! TDELAY"),r[e]=o,t[e]=o,c(o)},items:t,processAll:u,setallowLoad:function(e){s=e},markLoaded:function(e){if(e&&0!==e.length){if(e in t){var i=t[e];!0===i.isComplete?f(i.name+" "+e+": error loaded duplicate"):(i.isComplete=!0,i.isInitialized=!0)}else t[e]=new d(e,!0);f("markLoaded dummyfile: "+t[e].name)}},logWhatsBlocked:function(){for(var e in t)!1!==t.hasOwnProperty(e)&&h(t[e])}}}();__ez.evt.add=function(e,t,n){e.addEventListener?e.addEventListener(t,n,!1):e.attachEvent?e.attachEvent("on"+t,n):e["on"+t]=n()},__ez.evt.remove=function(e,t,n){e.removeEventListener?e.removeEventListener(t,n,!1):e.detachEvent?e.detachEvent("on"+t,n):delete e["on"+t]};__ez.script.add=function(e){var t=document.createElement("script");t.src=e,t.async=!0,t.type="text/javascript",document.getElementsByTagName("head")[0].appendChild(t)};__ez.dot={};__ez.queue.addFile('/detroitchicago/boise.js', '/detroitchicago/boise.js?gcb=195-2&cb=2', true, [], true, false, true, false);__ez.queue.addFile('/parsonsmaize/abilene.js', '/parsonsmaize/abilene.js?gcb=195-2&cb=28', true, [], true, false, true, false);</script>
+<script data-ezscrex="false" type="text/javascript" data-cfasync="false">window._ezaq = Object.assign({}, typeof window._ezaq !== "undefined" ? window._ezaq : {}, {"ad_cache_level":1,"domain_id":173770,"ezcache_level":2,"ezcache_skip_code":0,"has_bad_image":0,"has_bad_words":0,"is_sitespeed":0,"lt_cache_level":0,"page_view_id":"000809c1-c410-4882-6ddc-c9add4636e13","response_size_orig":97707,"response_time_orig":7,"template_id":134,"url":"https://plantuml.com/ru-dark/use-case-diagram","word_count":1997,"worst_bad_word_level":0});__ez.queue.markLoaded('ezaqBaseReady');</script>
+<script type="text/javascript">(function(){function storageAvailable(type){var storage;try{storage=window[type];var x='__storage_test__';storage.setItem(x,x);storage.removeItem(x);return true;}
+catch(e){return e instanceof DOMException&&(e.code===22||e.code===1014||e.name==='QuotaExceededError'||e.name==='NS_ERROR_DOM_QUOTA_REACHED')&&(storage&&storage.length!==0);}}
+function remove_ama_config(){if(storageAvailable('localStorage')){localStorage.removeItem("google_ama_config");}}
+remove_ama_config()})()</script>
+<script type="text/javascript">var ezoicTestActive = true</script>
+<script data-ezscrex="false" type="text/javascript" data-cfasync="false">window._ezaq = Object.assign({}, typeof window._ezaq !== "undefined" ? window._ezaq : {}, {"ab_test_id":"mod174-c","ad_cache_level":1,"ad_count_adjustment":0,"ad_lazyload_version":0,"ad_load_version":1,"ad_location_ids":"","adx_ad_count":0,"ai_placeholder_cache_level":1,"ai_placeholder_placement_cnt":-1,"bidder_method":1,"bidder_version":3,"city":"Krasnoyarsk","country":"RU","days_since_last_visit":-1,"display_ad_count":0,"domain_id":173770,"domain_test_group":20230802,"ds_adsize_opt_id":-1,"engaged_time_visit":0,"ezcache_level":2,"ezcache_skip_code":0,"form_factor_id":1,"framework_id":1,"has_bad_image":0,"has_bad_words":0,"iab_category":"","iab_category_0":"596","is_embed":false,"is_from_recommended_pages":false,"is_return_visitor":false,"is_sitespeed":0,"last_page_load":"","last_pageview_id":"","lt_cache_level":0,"max_ads":0,"metro_code":0,"optimization_version":1,"page_ad_positions":"","page_view_count":926,"page_view_id":"000809c1-c410-4882-6ddc-c9add4636e13","position_selection_id":0,"postal_code":"660000","pv_event_count":0,"response_size_orig":97707,"response_time_orig":7,"serverid":"i-0898fec445dee9868","state":"KYA","sub_page_ad_positions":"","t_epoch":1697691158,"template_id":134,"time_on_site_visit":0,"url":"https://plantuml.com/ru-dark/use-case-diagram","word_count":1997,"worst_bad_word_level":0});__ez.queue.markLoaded('ezaqReady');</script>
+<script data-ezscrex='false' data-cfasync='false' data-pagespeed-no-defer>__ez.queue.addFile('/parsonsmaize/mulvane.js', '/parsonsmaize/mulvane.js?gcb=195-2&cb=5', true, ['/parsonsmaize/abilene.js'], true, false, true, false);__ez.queue.addFile('/parsonsmaize/olathe.js', '/parsonsmaize/olathe.js?gcb=195-2&cb=20', false, ['/parsonsmaize/abilene.js','/parsonsmaize/mulvane.js'], true, false, true, false);__ez.queue.addFile('/porpoiseant/et.js', '/porpoiseant/et.js?gcb=195-2&cb=2', false, [], true, false, true, false);!function(){var e;__ez.vep=(e=[],{Add:function(i,t){__ez.dot.isDefined(i)&&__ez.dot.isValid(t)&&e.push({type:"video",video_impression_id:i,domain_id:__ez.dot.getDID(),t_epoch:__ez.dot.getEpoch(0),data:__ez.dot.dataToStr(t)})},Fire:function(){if(void 0===document.visibilityState||"prerender"!==document.visibilityState){if(__ez.dot.isDefined(e)&&e.length>0)for(;e.length>0;){var i=5;i>e.length&&(i=e.length);var t=e.splice(0,i),o=__ez.dot.getURL("/detroitchicago/grapefruit.gif")+"?orig="+(!0===__ez.template.isOrig?1:0)+"&v="+btoa(JSON.stringify(t));__ez.dot.Fire(o)}e=[]}}})}();</script><script data-ezscrex='false' data-cfasync='false' data-pagespeed-no-defer>!function(){function e(i){return e="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e},e(i)}__ez.pel=function(){var i=[];function t(t,o,d,_,n,r,a,s){if(__ez.dot.isDefined(t)&&0!=__ez.dot.isAnyDefined(t.getSlotElementId,t.ElementId)){void 0===s&&(s=!1);var p=parseInt(__ez.dot.getTargeting(t,"ap")),f=__ez.dot.getSlotIID(t),u=__ez.dot.getAdUnit(t,s),z=parseInt(__ez.dot.getTargeting(t,"compid")),g=0,c=0,l=function(i){if("undefined"==typeof _ezim_d)return!1;var t=__ez.dot.getAdUnitPath(i).split("/").pop();if("object"===("undefined"==typeof _ezim_d?"undefined":e(_ezim_d))&&_ezim_d.hasOwnProperty(t))return _ezim_d[t];for(var o in _ezim_d)if(o.split("/").pop()===t)return _ezim_d[o];return!1}(t);"object"==e(l)&&(void 0!==l.creative_id&&(c=l.creative_id),void 0!==l.line_item_id&&(g=l.line_item_id)),__ez.dot.isDefined(f,u)&&__ez.dot.isValid(o)&&("0"===f&&!0!==s||""===u||i.push({type:"impression",impression_id:f,domain_id:__ez.dot.getDID(),unit:u,t_epoch:__ez.dot.getEpoch(0),revenue:d,est_revenue:_,ad_position:p,ad_size:"",bid_floor_filled:n,bid_floor_prev:r,stat_source_id:a,country_code:__ez.dot.getCC(),pageview_id:__ez.dot.getPageviewId(),comp_id:z,line_item_id:g,creative_id:c,data:__ez.dot.dataToStr(o),is_orig:s||__ez.template.isOrig}))}}function o(){void 0!==document.visibilityState&&"prerender"===document.visibilityState||(__ez.dot.isDefined(i)&&i.length>0&&[i.filter((function(e){return e.is_orig})),i.filter((function(e){return!e.is_orig}))].forEach((function(e){for(;e.length>0;){var i=e[0].is_orig||!1,t=5;t>e.length&&(t=e.length);var o=e.splice(0,t),d=__ez.dot.getURL("/porpoiseant/army.gif")+"?orig="+(!0===i?1:0)+"&sts="+btoa(JSON.stringify(o));(void 0!==window.isAmp&&isAmp||void 0!==window.ezWp&&ezWp)&&void 0!==window._ezaq&&_ezaq.hasOwnProperty("domain_id")&&(d+="&visit_uuid="+_ezaq.visit_uuid),__ez.dot.Fire(d)}})),i=[])}return{Add:t,AddAndFire:function(e,i){t(e,i,0,0,0,0,0),o()},AddAndFireOrig:function(e,i){t(e,i,0,0,0,0,0,!0),o()},AddById:function(e,t,o,d){var _=e.split("/");if(__ez.dot.isDefined(e)&&3===_.length&&__ez.dot.isValid(t)){var n=_[0],r={type:"impression",impression_id:_[2],domain_id:__ez.dot.getDID(),unit:n,t_epoch:__ez.dot.getEpoch(0),pageview_id:__ez.dot.getPageviewId(),data:__ez.dot.dataToStr(t),is_orig:o||__ez.template.isOrig};void 0!==d&&(r.revenue=d),i.push(r)}},Fire:o,GetPixels:function(){return i}}}()}();__ez.queue.addFile('/detroitchicago/raleigh.js', '/detroitchicago/raleigh.js?gcb=195-2&cb=6', false, ['/parsonsmaize/abilene.js'], true, false, true, false);__ez.queue.addFile('/detroitchicago/vista.js', '/detroitchicago/vista.js?gcb=195-2&cb=5', false, ['/parsonsmaize/abilene.js'], true, false, true, false);__ez.queue.addFile('/detroitchicago/tampa.js', '/detroitchicago/tampa.js?gcb=195-2&cb=5', false, ['/parsonsmaize/abilene.js'], true, false, true, false);</script><base href=""/>
+<meta name="flattr:id" content="1ew3x0"/>
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "url": "https://plantuml.com",
+  "name": "PlantUML",
+  "sameAs" : ["https://twitter.com/plantuml","https://en.wikipedia.org/wiki/PlantUML","https://www.wikidata.org/wiki/Q18346546"],
+  "logo": "https://cdn-0.plantuml.com/logo3.png",
+  "contactPoint": [{
+    "@type": "ContactPoint",
+    "email": "plantuml@gmail.com",
+    "url": "https://plantuml.com",
+    "contactType": "customer service"
+  }]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+    "@type": "ListItem",
+    "position": 1,
+    "item": {
+      "@id": "https://plantuml.com",
+      "name": "Home"
+    }
+  },{
+    "@type": "ListItem",
+    "position": 2,
+    "item": {
+      "@id": "https://plantuml.com/sitemap-language-specification",
+      "name": "Language specification"
+    }
+  },{
+    "@type": "ListItem",
+    "position": 3,
+    "item": {
+      "@id": "https://plantuml.com/use-case-diagram",
+      "name": "Use Case Diagram"
+  }
+  }]
+}
+</script>
+<link rel="canonical" href="../ru/use-case-diagram.html"/>
+<link rel="alternate" hreflang="x-default" href="../use-case-diagram.html"/>
+<link rel="alternate" hreflang="de" href="../de/use-case-diagram.html"/>
+<link rel="alternate" hreflang="en" href="../use-case-diagram.html"/>
+<link rel="alternate" hreflang="es" href="../es/use-case-diagram.html"/>
+<link rel="alternate" hreflang="fr" href="../fr/use-case-diagram.html"/>
+<link rel="alternate" hreflang="ja" href="../ja/use-case-diagram.html"/>
+<link rel="alternate" hreflang="ru" href="../ru/use-case-diagram.html"/>
+<link rel="alternate" hreflang="ko" href="../ko/use-case-diagram.html"/>
+<link rel="alternate" hreflang="zh" href="../zh/use-case-diagram.html"/>
+
+<link rel="shortcut icon" href="../favicon.ico"/>
+
+<link rel="preload" as="image" href="../svgrepo-house.svg"/>
+<link rel="preload" as="image" href="../svgrepo-text-news.svg"/>
+<link rel="preload" as="image" href="../svgrepo-rocket-3-start.svg"/>
+<link rel="preload" as="image" href="../svgrepo-server.svg"/>
+<link rel="preload" as="image" href="../svgrepo-play.svg"/>
+<link rel="preload" as="image" href="../svgrepo-forum.svg"/>
+<link rel="preload" as="image" href="../svgrepo-add-to-online-cart.svg"/>
+<link rel="preload" as="image" href="../svgrepo-forum-message.svg"/>
+<link rel="preload" as="image" href="../svgrepo-palette-fill.svg"/>
+<link rel="preload" as="image" href="../svgrepo-cpu.svg"/>
+<link rel="preload" as="image" href="../svgrepo-books-library.svg"/>
+<link rel="preload" as="image" href="../svgrepo-signpost-fill.svg"/>
+<link rel="preload" as="image" href="../svgrepo-library.svg"/>
+
+<link rel="preload" as="image" href="../flags21.png"/>
+
+<link rel="preload" as="image" href="../svgrepo-uxwing-dark-mode-toggle.svg"/>
+
+
+<!-- link rel="preload" as="image" href="https://img.shields.io/liberapay/patrons/plantuml.svg?logo=liberapay" -->
+
+
+<title>Синтаксис и особенности диаграммы.</title>
+<meta name="description" content="В PlantUML для диаграммы прецендентов можно использовать следующие элементы: cases (прецеденты), actors (действующие лица), extensions (обобщение), notes (заметки), stereotypes (шаблоны), arrows (стрелки), а также некоторые другие. Также можно устанавливать различные шрифты и цвета для этих элементов."/>
+
+<meta property="og:type" content="article"/>
+<meta property="og:title" content="Используйте диаграммы прецедентов синтаксис и особенности"/>
+<meta property="og:description" content="PlantUML использовать случай синтаксиса диаграмм: Вы можете иметь прецеденты, актеры, расширения, заметки, стереотипы, стрелки ... Изменение шрифтов и цветов также возможно."/>
+
+<meta property="og:url" content="https://plantuml.com/ru/use-case-diagram"/>
+<meta property="og:site_name" content="PlantUML.com"/>
+
+<!-- meta property="og:image" content="https://plantuml.com/og-use-case-diagram" -->
+<meta name="twitter:image" content="https://plantuml.com/og-use-case-diagram"/>
+<meta property="og:locale" content="ru"/>
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Используйте диаграммы прецедентов синтаксис и особенности"/>
+<meta name="twitter:description" content="PlantUML использовать случай синтаксиса диаграмм: Вы можете иметь прецеденты, актеры, расширения, заметки, стереотипы, стрелки ... Изменение шрифтов и цветов также возможно."/>
+<meta name="twitter:site" content="@PlantUML"/>
+<meta name="twitter:creator" content="@PlantUML"/>
+
+
+
+
+
+<!-- https://www.w3schools.com/colors/colors_picker.asp -->
+<!-- filter css https://codepen.io/sosuke/pen/Pjoqqp -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<style>
+.scale {
+}
+
+li {
+	margin: 2px;
+}
+#external li {
+	margin: 13px;
+}
+
+.pezoic {
+  max-width:970px;
+}
+
+@media screen and (max-width: 1600px) {
+	.pezoic {
+	  max-width:768px;
+	}
+}
+
+.coptable {
+	max-width: 90%;
+}
+
+.mytab {
+	display:inline-block;
+	border-radius: 3px;
+	border: 1px solid #e1e4e8;
+}
+
+.mytab:hover {
+	border: 1px dashed #8CB4FF;
+	cursor: pointer;
+	color: #8CB4FF;
+	background: #111111;
+}
+
+.cop {
+	margin: 25px 10px 0 10px;
+	filter: invert(100%);
+}
+.cop:hover {
+	cursor: pointer; 
+filter: invert(59%) sepia(81%) saturate(1778%) hue-rotate(164deg) brightness(105%) contrast(103%);
+}
+.cop2 {
+	margin: 25px 10px 0 10px;
+}
+.cop2:hover {
+	cursor: pointer; 
+}
+.msg {
+	position: absolute;
+	color:#339966;
+	background-color: #FFF;
+	margin-top: 55px;
+	display:none;
+	border-radius: 3px;
+	border: 1px solid #4dff00;
+}
+
+.mycell0 {
+	float: left;
+	vertical-align : top;
+	padding:10px;
+}
+.mycell0 code:hover {
+	cursor: default; 
+	color: #fff;
+}
+
+.mycell {
+	float: right;
+	vertical-align : top;
+	padding:10px;
+	max-width: 55vw;
+	overflow-x: auto;
+}
+
+.mycell0 pre {
+	max-width: 55vw;
+	overflow-x: auto;
+}
+
+.cod {
+	background: #222222;
+	padding: 2px 5px;
+	border-radius: 3px;
+}
+.colo {
+	display: inline-block;
+	background: #222222;
+	padding: 7px 12px;
+	border-radius: 3px;
+}
+.tag,.tagg,.tago,.tagr {
+	text-rendering: optimizeLegibility;
+	display: inline-block;
+	padding: 3px 5px 2px 4px;
+	text-decoration: none;
+	white-space: nowrap;
+	border: 1px solid #999;
+	text-transform: uppercase;
+	text-align: center;
+	border-radius: 3px;
+	font-size: 11px;
+	font-weight: bold;
+	line-height: 90%;
+}
+.tag {
+	background-color: #EEEEEE;
+}
+.tagg {
+	background-color: #98FB98;
+}
+.tago {
+	background-color: #fafa00;
+}
+.tagr {
+	background-color: #FF4500;
+}
+
+
+a {
+    text-decoration:none;
+    color:#8CB4FF;
+}
+a:hover {
+    text-decoration:underline;
+}
+
+.menu1 {
+    border: 0;
+    font-family: Helvetica,sans-serif;
+    font-size: 14px;
+    padding: 0;
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+	vertical-align: middle;
+	line-height: 30px;
+}
+.menu1 a{
+    /*background: #FF0;*/
+    text-align:center;
+	padding:10px 7px 10px 7px;
+    text-decoration:none;
+    color:#b0c0d0;
+}
+.menu1 a:hover{
+    color:#8CB4FF;
+}
+#menu0 {
+    top:0;
+    z-index: 4;
+    margin:0 0 0 10px;
+    padding:0;
+}
+
+@media screen and (max-width: 1300px) {
+	#menu0 {
+	visibility: hidden;
+	}	
+}
+
+.mhov img {
+	margin: 0 5px 0 0;
+	padding: 0;
+}
+.mhov:hover {
+filter: invert(59%) sepia(81%) saturate(1778%) hue-rotate(164deg) brightness(105%) contrast(103%);
+}
+
+#menuside2 {
+    border:0;
+    font-family:Helvetica,sans-serif;
+    font-size:14px;
+    padding:20px 0 4px 0;
+    margin:0
+}
+#menuside2 span {
+    vertical-align: top;
+}
+#menuside2 li{
+    list-style:none;
+    position:relative;
+    padding:0;
+	margin:10px 20px 10px 10px;
+    border:0;
+}
+#menuside2 li a{
+	display: inline-block;
+    text-decoration:none;
+    color:#b0c0d0;
+    width:100%;
+}
+#menuside2 img {
+filter: invert(46%) sepia(13%) saturate(620%) hue-rotate(170deg) brightness(91%) contrast(85%);
+}
+
+#BC {
+    z-index: 0;
+    padding-top: 5px;
+    top: 35px;
+}
+
+.breadcrumb {
+z-index:1;
+	font-family:Helvetica,sans-serif;
+	font-size:14px;
+	text-align: center;
+	display: inline-block;
+	overflow: hidden;
+	border-radius: 5px;
+}
+
+
+.breadcrumb a {
+	text-decoration: none;
+	outline: none;
+	display: block;
+	float: left;
+	font-size: 12px;
+	line-height: 24px;
+	color: #373f49;
+	padding: 0 10px 0 35px;
+	background: #f0f1f1;
+	background: linear-gradient(#f0f1f1, #c6d2d2);
+	position: relative;
+}
+.breadcrumb a:first-child {
+	padding-left: 21px;
+	border-radius: 5px 0 0 5px; /*to match with the parent's radius*/
+}
+.breadcrumb a:first-child:before {
+	left: 14px;
+}
+.breadcrumb a:last-child {
+	visibility: hidden;
+}
+
+.breadcrumb a.active, .breadcrumb a:hover{
+	color: #0366d6;
+	background: #c6d2d2;
+	background: linear-gradient(#e3e4e4, #b8c7c7);
+}
+.breadcrumb a.active:after, .breadcrumb a:hover:after {
+	background: #c6d2d2;
+	background: linear-gradient(135deg, #e3e4e4, #b8c7c7);
+}
+
+.breadcrumb a:after {
+	content: '';
+	position: absolute;
+	top: 0; 
+	right: -12px; /*half of square's length*/
+	/*same dimension as the line-height of .breadcrumb a */
+	width: 24px; 
+	height: 24px;
+	transform: scale(0.707) rotate(45deg);
+	/*we need to prevent the arrows from getting buried under the next link*/
+	z-index: 1;
+	/*background same as links but the gradient will be rotated to compensate with the transform applied*/
+	background: #f0f1f1;
+	background: linear-gradient(135deg, #f0f1f1, #c6d2d2);
+	/*stylish arrow design using box shadow*/
+	box-shadow: 
+		2px -2px 0 2px rgba(0,0,0,0.1), 
+		3px -3px 0 2px rgba(255,255,255,0.1);
+	/*
+		5px - for rounded arrows and 
+		50px - to prevent hover glitches on the border created using shadows*/
+	border-radius: 0 5px 0 50px;
+}
+
+/*we dont need an arrow after the last link*/
+.breadcrumb a:last-child:after {
+	content: none;
+	visibility: hidden;
+}
+
+
+.lga,.lga a,.lgi,.lgi a {
+	font-family:Helvetica,sans-serif;
+	font-size:13px;
+	text-align: center;
+    color: #fff;
+    padding: 0 5px;
+    margin: 0;
+}
+.lga,.lga a {
+    background-color: #008;
+}
+.lgi,.lgi a {
+    background-color: #888;
+}
+.lga:hover,.lga:hover a {
+    text-decoration: none;
+    color: #BBB;
+}
+.lgi:hover,.lgi:hover a {
+    text-decoration: none;
+    color: #CCC;
+}
+
+</style>
+
+<style>
+.backtop {
+	margin:0px 10px;
+	filter: invert(100%);
+}
+.backtop:hover {
+	cursor: pointer;
+filter: invert(59%) sepia(81%) saturate(1778%) hue-rotate(164deg) brightness(105%) contrast(103%);
+}
+</style>
+
+
+
+
+<style>
+/* Dropdown Button */
+.dropbtn {
+  padding: 0px;
+  border: none;
+  background: none;
+  filter: invert(100%);
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+  margin: 0 10px;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content img {
+vertical-align:middle;
+margin: 0 8px 0 1px;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  font-size: small;
+  font-weight: normal;
+  color: black;
+  padding: 5px 10px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #ddd;
+  color: #8CB4FF;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {display: block;}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {background-color: #3e8e41;}
+</style>
+<style>
+#flex1 {
+	margin: 0;
+	padding: 0;
+	display: flex;
+	flex-direction: row;
+	width: 378px;
+	height: 100%;
+}
+
+#lll {
+	flex-grow: 1;
+	flex-shrink: 1;
+	max-width:162px;
+	overflow:hidden;
+}
+
+#mmm {
+	flex-grow: 0;
+	flex-shrink: 0;
+	background: #222222;
+	width: 210px;
+	min-width: 210px;
+	max-width: 210px;
+	flex-grow: 0;
+	flex-shrink: 0;
+    border-left: 1px solid #333333;
+}
+
+#qqq {
+	flex-grow: 0;
+	flex-shrink: 0;
+	width: 4px;
+	min-width: 4px;
+	max-width: 4px;
+	flex-grow: 0;
+	flex-shrink: 0;
+}
+
+#rrr {
+	flex-grow: 1;
+	flex-shrink: 1;
+	max-width:162px;
+	overflow:hidden;
+}
+
+.cde {
+	display: flex;
+	flex-direction: column;
+    justify-content:space-between;
+    height: 100%;
+}
+.cd {
+	display: flex;
+	flex-direction: column;
+    justify-content: space-start;
+    height: 100%;
+}
+
+.aaa {
+	height: 30px;
+	min-height: 30px;
+	max-height: 30px;
+	flex-grow: 0;
+	flex-shrink: 0;
+	background: #222222;
+    border-bottom: 1px solid #333333;
+}
+
+.bbb, .bbborder {
+	flex-grow: 1;
+	flex-shrink: 0;
+}
+
+.bbborder {
+    border-left: 1px solid #333333;
+}
+
+
+#header {
+    z-index: 10;
+    position: fixed;
+	left: 378px;
+	right: 0;
+    height: 30px;
+    top: 0;
+    background: #222222;
+    border-bottom: 1px solid #333333;
+    
+}
+#header2 {
+    z-index: 7;
+    position: fixed;
+	left: 378px;
+	right: 0;
+    height: 10px;
+    top: 30px;
+    background: #1B1B1B;
+}
+
+
+#left0 {
+	top:0;
+    position: fixed;
+    left: 0;
+    margin:0 ;
+    bottom: 0;
+    width: 378px;
+    padding: 0;
+    z-index: 2;
+    /*background: #F7F;*/
+}
+
+
+#root {
+    padding:0;
+	margin: 40px 0 0 388px;
+    background: #1B1B1B;
+}
+
+
+body {
+	margin: auto;
+	overflow-x: hidden;
+    background: #1B1B1B;
+    color: #FFF;
+}
+
+
+@media screen and (max-width: 1190px) {
+	#flex1, #left0 {
+		width: 215px;
+	}
+	#root {
+		margin: 40px 0 0 224px;
+	}
+	#header, #header2 {
+		left: 215px;
+	}
+	#left0 {
+		left: 0;
+	}
+	#lll, #rrr {
+  		width:0;
+		visibility: hidden;
+  		flex-grow: 0;
+  		flex-shrink: 0;
+	}
+	
+}
+@media screen and (max-width: 1010px) {
+	#root {
+		margin: 0 0 0 216px;
+	}
+	#header, #header2 {
+		display: none;
+	}
+	#lll, #qqq {
+  		width:0;
+		visibility: hidden;
+  		flex-grow: 0;
+  		flex-shrink: 0;
+	}
+	#mmm {
+		    border-right: 1px solid #333333;
+	}
+	
+}
+
+@media screen and (min-width:1700px){
+	#header, #header2 {
+		left:518px;
+	}
+	#left0, #flex1{
+		width:518px;
+	}
+	#root{
+		margin-left:528px;
+	}
+	#lll, #rrr {
+		max-width:302px;
+	}
+}
+
+
+</style>
+
+
+
+
+<script>window.pushMST_config={"vapidPK":"BBodn2vLFoDO5AdCfmOOzNmcUsn52kTA6JNZNYVFymzEdWHonz_bkUcsaTkPXHvNGRkRUSAxMbup-H0l2sb1h_Q","enableOverlay":true,"swPath":"/sw.js","i18n":{}};
+  var pushmasterTag = document.createElement('script');
+  pushmasterTag.src = "https://cdn.pushmaster-cdn.xyz/scripts/publishers/629f5e297baecc00098a271b/SDK.js";
+  pushmasterTag.setAttribute('defer','');
+
+  var firstScriptTag = document.getElementsByTagName('script')[0];
+  firstScriptTag.parentNode.insertBefore(pushmasterTag, firstScriptTag);
+</script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-TKZNNQT9CZ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-TKZNNQT9CZ');
+</script>
+
+
+
+<script>
+var llg = "ru";
+var az=0;
+var amdark=1;
+function ljs(n) {
+	if (az) return false;
+    var sc = document.createElement("script");
+    sc.type = "text/javascript";
+    sc.src = "/btn-"+n+".js";
+	document.body.innerHTML = "<i style='position:absolute;top:30%;width:100%;'><center>Loading in progress...";
+    document.body.appendChild(sc);
+}
+function ctc(id) {
+document.getElementById('img'+id).classList.remove('cop'); document.getElementById('img'+id).classList.add('cop2');
+document.getElementById('pre'+id).style.backgroundColor = '#4dff00';
+document.getElementById('msg'+id).style.display = 'inline';
+
+setTimeout(function() { document.getElementById('img'+id).classList.remove('cop2'); document.getElementById('img'+id).classList.add('cop'); document.getElementById('pre'+id).style.backgroundColor = ''; document.getElementById('msg'+id).style.display = 'none';}, 800);      
+
+
+	text = document.getElementById('pre'+id).innerText;
+    if (window.clipboardData && window.clipboardData.setData)
+        return window.clipboardData.setData("Text", text);
+    else if (document.queryCommandSupported && document.queryCommandSupported("copy")) {
+        var ta = document.createElement("textarea");
+        ta.textContent = text;
+        ta.style.position = "fixed";
+        document.body.appendChild(ta);
+        ta.select();
+        try {
+            return document.execCommand("copy");
+        }
+        catch (ex) {
+            return false;
+        }
+        finally {
+            document.body.removeChild(ta);
+        }
+    }
+}
+</script>
+
+
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script type='text/javascript'>
+var ezoTemplate = 'pub_site';
+var ezouid = '1';
+var ezoFormfactor = '1';
+</script><script data-ezscrex="false" type='text/javascript'>
+var soc_app_id = '0';
+var did = 173770;
+var ezdomain = 'plantuml.com';
+var ezoicSearchable = 1;
+</script>
+<script data-ezscrex='false' data-pagespeed-no-defer data-cfasync='false'>
+function create_ezolpl() {
+	var d = new Date();
+	d.setTime(d.getTime() + (365*24*60*60*1000));
+	var expires = "expires="+d.toUTCString();
+	__ez.ck.setByCat("ezux_lpl_173770=" + new Date().getTime() + "|" + _ezaq.page_view_id + "|" + _ezaq.is_return_visitor + "; " + expires, 3);
+}
+function attach_ezolpl() {
+	if (document.readyState === "complete") {
+		create_ezolpl();
+		return;
+	}
+	window.addEventListener("load", create_ezolpl);
+}
+
+__ez.queue.addFunc("attach_ezolpl", "attach_ezolpl", null, false, ['/detroitchicago/boise.js'], true, false, false, false);
+</script></head>
+<body>
+
+<div id="left0">
+
+<div id="flex1">
+
+
+<div id="lll">
+
+<div class="cde">
+
+<!-- c --><div>
+</div>
+
+<!-- d --><div>
+<!-- Ezoic - Left0 - sidebar -->
+<span id="ezoic-pub-ad-placeholder-131"></span><!-- ezoic_pub_ad_placeholder-131-sidebar-120x600-131-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-131-sidebar-160x600-131-nonexxxnonexxxxxxezmaxscaleval100 -->
+<!-- End Ezoic - Left0 - sidebar -->
+</div>
+
+
+<!-- e --><div>
+</div>
+
+</div><!-- cde -->
+
+
+</div><!-- lll -->
+
+<div id="mmm">
+
+
+<div class="cde">
+
+<!-- c --><div>
+
+<!--menu 10-->
+<div>
+
+
+
+<!-- Ezoic - Menu2L - sidebar -->
+<span id="ezoic-pub-ad-placeholder-105"></span><!-- ezoic_pub_ad_placeholder-105-sidebar_middle-120x240-105-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-105-sidebar_middle-125x125-105-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-105-sidebar_middle-180x150-105-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-105-sidebar_middle-200x200-105-nonexxxnonexxxxxxezmaxscaleval100 -->
+<!-- End Ezoic - Menu2L - sidebar -->
+
+</div>
+
+<!-- https://stackoverflow.com/questions/22252472/how-to-change-the-color-of-an-svg-element -->
+<!-- https://codepen.io/sosuke/pen/Pjoqqp -->
+
+
+<ul id="menuside2">
+<li><a href="index.html" class="mhov"><img src="../svgrepo-house.svg" width="16" height="16"/><span>В начало</span></a></li>
+<li><a href="news.html" class="mhov"><img src="../svgrepo-text-news.svg" width="16" height="16"/><span>Что нового ?</span></a></li>
+<li><a href="starting.html" class="mhov"><img src="../svgrepo-rocket-3-start.svg" width="16" height="16"/><span>Быстрый старт</span></a></li>
+<li><a href="https://www.plantuml.com/plantuml/duml/SyfFKj2rKt3CoKnELR1Io4ZDoSa70000" class="mhov"><img src="../svgrepo-server.svg" width="16" height="16"/><span>Online Server</span></a></li>
+<li><a href="running.html" class="mhov"><img src="../svgrepo-play.svg" width="16" height="16"/><span>Запуск</span></a></li>
+<li><a href="faq.html" class="mhov"><img src="../svgrepo-forum.svg" width="16" height="16"/><span>F.A.Q.</span></a></li>
+<li><a href="download.html" class="mhov"><img src="../svgrepo-add-to-online-cart.svg" width="16" height="16"/><span>Скачать</span></a></li>
+<li><a href="../qa.html" class="mhov"><img src="../svgrepo-forum-message.svg" width="16" height="16"/><span>Форум</span></a></li>
+<li><a href="theme.html" class="mhov"><img src="../svgrepo-palette-fill.svg" width="16" height="16"/><span>Theme</span></a></li>
+<li><a href="preprocessing.html" class="mhov"><img src="../svgrepo-cpu.svg" width="16" height="16"/><span>Препроцессинг</span></a></li>
+<li><a href="stdlib.html" class="mhov"><img src="../svgrepo-books-library.svg" width="16" height="16"/><span>Стандартная библиотека</span></a></li>
+<li><a href="https://crashedmind.github.io/PlantUMLHitchhikersGuide" class="mhov"><img src="../svgrepo-signpost-fill.svg" width="16" height="16"/><span>Hitchhiker&#39;s Guide</span></a></li>
+<li><a href="guide.html" class="mhov"><img src="../svgrepo-library.svg" width="16" height="16"/><span>PDF Guide</span></a></li>
+</ul>
+
+<!-- menu 20-->
+<div>
+
+<!-- Ezoic - Zmenubottom - sidebar_bottom -->
+<span id="ezoic-pub-ad-placeholder-108"></span><!-- ezoic_pub_ad_placeholder-108-sidebar_middle-120x240-108-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-108-sidebar_middle-125x125-108-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-108-sidebar_middle-180x150-108-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-108-sidebar_middle-200x200-108-nonexxxnonexxxxxxezmaxscaleval100 -->
+<!-- End Ezoic - Zmenubottom - sidebar_bottom -->
+
+</div>
+</div>
+
+<!-- d menu 30 --><div>
+</div>
+
+
+<!-- e menu 40 --><div style="margin-bottom:35px;">
+
+<!-- Ezoic - menu40 - sidebar -->
+<span id="ezoic-pub-ad-placeholder-186"></span><!-- ezoic_pub_ad_placeholder-186-sidebar_middle-120x240-186-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-186-sidebar_middle-125x125-186-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-186-sidebar_middle-180x150-186-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-186-sidebar_middle-200x200-186-nonexxxnonexxxxxxezmaxscaleval100 -->
+<!-- End Ezoic - menu40 - sidebar -->
+
+</div>
+
+</div><!-- cde -->
+
+
+
+
+</div><!-- mmm -->
+
+<div id="qqq">
+
+<div class="cd">
+<div class="aaa"></div>
+<div class="bbborder"></div>
+</div><!-- cd -->
+
+</div><!-- qqq -->
+
+<div id="rrr">
+
+<div class="cd">
+<div class="aaa"></div>
+
+<div style="height:5px;"></div>
+
+<div class="bbb">
+
+<div class="cde">
+
+<!-- c --><div>
+</div>
+
+<!-- d --><div>
+<!-- Ezoic - Left2 - sidebar -->
+<span id="ezoic-pub-ad-placeholder-175"></span><!-- ezoic_pub_ad_placeholder-175-sidebar-120x600-175-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-175-sidebar-160x600-175-nonexxxnonexxxxxxezmaxscaleval100 -->
+<!-- End Ezoic - Left2 - sidebar -->
+</div>
+
+<!-- e --><div>
+</div>
+
+</div><!-- cde -->
+
+</div><!-- bbb -->
+
+</div><!-- cd -->
+
+
+</div><!-- rrr -->
+
+
+
+</div><!-- flex1 -->
+
+
+</div><!-- left0 -->
+
+<style>
+#contmenu {
+display: flex;
+height: 30px;
+width: 100%;
+margin: 0;
+padding: 0;
+}
+
+#contmenua {
+height: 30px;
+padding-right: 25px;
+}
+
+#contmenub {
+z-index:15;
+display: inline-block;
+flex-grow:1;
+flex-shrink:1;
+height: 30px;
+background-color: #222222;
+}
+
+#magic {
+white-space: nowrap;
+overflow: hidden;
+z-index: 14;
+position: fixed;
+top: 0;
+right: 50px;
+height: 30px;
+width: 30px;
+}
+
+#magic2 {
+white-space: nowrap;
+overflow: hidden;
+z-index: 16;
+position: fixed;
+top: 0;
+right: 0;
+height: 30px;
+width: 50px;
+background-color: #222222;
+}
+#magic2 img {
+margin: 5px 0 0 5px;
+filter: invert(86%) sepia(23%) saturate(200%) hue-rotate(170deg) brightness(86%) contrast(88%);
+}
+#magic2:hover img {
+filter: invert(59%) sepia(81%) saturate(1778%) hue-rotate(164deg) brightness(105%) contrast(103%);
+}
+
+
+#magic:hover #svgrepoleft {
+filter: invert(59%) sepia(81%) saturate(1778%) hue-rotate(164deg) brightness(105%) contrast(103%);
+}
+
+
+#magic:hover {
+width: 100%;
+height: 31px;
+}
+
+#aze {
+	height: 30px;
+	display:flex;
+	flex-direction: row-reverse;
+}
+#aze1 {
+	height: 30px;
+	background-color: #222222;
+}
+#aze2 {
+	height: 30px;
+	background-color: #222222;
+	padding-left: 10px;
+	border-left: 1px solid #333333;
+	border-bottom: 1px solid #333333;
+}
+#aze1 img {
+    filter: invert(72%) sepia(4%) saturate(1039%) hue-rotate(169deg) brightness(108%) contrast(84%);
+}
+#aze3 {
+	width: 3px;
+	height: 30px;
+	background-color: #222222;
+}
+
+
+
+</style>
+
+<div id="header">
+<div id="contmenu">
+<div id="contmenua">
+<div class="menu1">
+<a href="sequence-diagram.html">последовательност</a>
+<a href="use-case-diagram.html">прецедентов</a>
+<a href="class-diagram.html">классов</a>
+<a href="activity-diagram-beta.html">активности</a>
+<a href="component-diagram.html">компонент</a>
+<a href="state-diagram.html">состояний</a>
+<a href="object-diagram.html">объект</a>
+<a href="deployment-diagram.html">развёртывания</a>
+<a href="timing-diagram.html">синхронизации</a>
+
+<a href="nwdiag.html">Network</a>
+<a href="salt.html">Wireframe</a>
+<a href="archimate-diagram.html">Archimate</a>
+<a href="gantt-diagram.html">Gantt</a>
+<a href="mindmap-diagram.html">MindMap</a>
+<a href="wbs-diagram.html">WBS</a>
+<a href="json.html">JSON</a>
+<a href="yaml.html">YAML</a>
+
+</div>
+</div>
+<div id="contmenub"></div>
+</div><!--contmenu-->
+<!-- https://developer.mozilla.org/fr/docs/Web/CSS/position -->
+<div id="magic">
+
+	<div id="aze">
+		<div id="aze1"><img id="svgrepoleft" width="30" height="30" src="../svgrepo-left.svg"/> </div><!-- aze1 -->
+		<div id="aze2">
+
+<div class="menu1">
+<a href="sequence-diagram.html">последовательност</a>
+<a href="use-case-diagram.html">прецедентов</a>
+<a href="class-diagram.html">классов</a>
+<a href="activity-diagram-beta.html">активности</a>
+<a href="component-diagram.html">компонент</a>
+<a href="state-diagram.html">состояний</a>
+<a href="object-diagram.html">объект</a>
+<a href="deployment-diagram.html">развёртывания</a>
+<a href="timing-diagram.html">синхронизации</a>
+
+<a href="nwdiag.html">Network</a>
+<a href="salt.html">Wireframe</a>
+<a href="archimate-diagram.html">Archimate</a>
+<a href="gantt-diagram.html">Gantt</a>
+<a href="mindmap-diagram.html">MindMap</a>
+<a href="wbs-diagram.html">WBS</a>
+<a href="json.html">JSON</a>
+<a href="yaml.html">YAML</a>
+
+</div>
+			
+
+		</div><!-- aze2 -->
+		<div id="aze3"></div><!-- aze3 https://codepen.io/sosuke/pen/Pjoqqp -->
+	</div><!-- aze -->
+
+
+</div><!--magic-->
+
+<div id="magic2">
+
+<a href="../ru/use-case-diagram.html">
+<img src="../svgrepo-uxwing-dark-mode-toggle.svg" height="20"/>
+</a>
+
+
+</div><!--magic2-->
+
+</div><!-- header -->
+<div id="header2"></div>
+
+
+
+
+
+<div id="root">
+
+<!-- https://css-tricks.com/snippets/css/a-guide-to-flexbox/ -->
+
+<style>
+
+#haut1 {
+	margin:50px 0 20px;
+	padding:0;
+	min-height:80px;
+}
+
+#donate {
+	padding-top: 5px;
+	min-height:30px;
+}
+
+</style>
+
+<div id="haut1">
+
+<!-- c --><div style="float:left;">	
+<!-- a simple div with some links -->
+<div class="breadcrumb">
+<a href="sitemap.html">PlantUML</a>
+<a href="https://plantuml.com/ru-dark/sitemap-language-specification">Language specification</a>
+<a href="use-case-diagram.html">Use Case Diagram</a>
+<a href="use-case-diagram.html#"></a>
+</div>
+
+
+<div id="donate">
+
+ 
+
+<a href="https://discord.gg/sXhzexAQGh" style="text-decoration: none;">
+<img src="https://img.shields.io/discord/1083727021328306236?color=5865F2&amp;logo=discord&amp;logoColor=white" alt="Discord server"/>
+</a>
+
+ 
+
+<a href="https://github.com/sponsors/plantuml/" style="text-decoration: none;">
+<img src="https://img.shields.io/github/sponsors/plantuml?logo=github"/>
+</a>
+
+ 
+
+<a href="https://www.patreon.com/bePatron?patAmt=1&amp;u=527450&amp;rid=152970" style="text-decoration: none;">
+<img src="https://img.shields.io/badge/patreon-122-chocolate?logo=patreon"/>
+</a>
+
+ 
+
+<a href="../lp.html" style="text-decoration: none;">
+<img src="https://img.shields.io/liberapay/patrons/plantuml?color=gold&amp;logo=liberapay&amp;label=liberapay"/>
+</a>
+
+ 
+
+<a href="../en/paypal.html" style="text-decoration: none;">
+<img src="https://img.shields.io/badge/paypal-296-skyblue?logo=paypal&amp;logoColor=red"/>
+</a>
+
+<!--
+ 
+
+<a href="https://github.com/sponsors/plantuml" style="text-decoration: none;">
+<img src="https://img.shields.io/github/sponsors/plantuml?label=github">
+</a>
+
+-->
+</div> <!-- donate -->
+</div><!-- c -->
+
+
+<!-- e --><div style="float:right; margin:3px 0;">
+
+<!-- https://github.com/joielechong/iso-country-flags-svg-collection -->
+
+<!-- https://www.flaticon.com/packs/international-flags -->
+<!-- https://flagicons.lipis.dev/?continent=Europe -->
+<!-- https://flagpedia.net/download/icons -->
+
+<!-- https://www.countryflags.io/ -->
+
+<style>
+#langlist {
+display: flex;
+justify-content: space-between;
+width: 317px;
+height: 16px;
+margin: 3px 10px 3px 0;
+}
+
+.sel2 {
+  border: 2px solid #1B1B1B;
+}
+.nosel2 {
+  border: 2px solid #1B1B1B;
+  filter: grayscale(100%) opacity(75%);
+}
+.sel2:hover, .nosel2:hover {
+  cursor: pointer;
+  border: 2px solid #8CB4FF;
+  border-spacing: 0;
+  filter: grayscale(0%);
+  filter: contrast(200%);
+  filter: brightness(150%);
+}
+#flag1,#flag2,#flag3,#flag4,#flag5,#flag6,#flag7,#flag8 {
+background: url(../flags21.png);
+background-repeat: no-repeat;
+background-clip: content-box;
+width: 22px;
+height: 16px;
+}
+#flag2 {
+background-position: -22px 0px;
+}
+#flag3 {
+background-position: -44px 0px;
+}
+#flag4 {
+background-position: -66px 0px;
+}
+#flag5 {
+background-position: -88px 0px;
+}
+#flag6 {
+background-position: -110px 0px;
+}
+#flag7 {
+background-position: -132px 0px;
+}
+#flag8 {
+background-position: -154px 0px;
+}
+</style>
+
+<div id="langlist">
+
+
+<div id="flag1" onclick="location.href=&#39;/en-dark/use-case-diagram&#39;" class="nosel2"></div>
+
+<div id="flag2" onclick="location.href=&#39;/de-dark/use-case-diagram&#39;" class="nosel2"></div>
+
+
+<div id="flag3" onclick="location.href=&#39;/es-dark/use-case-diagram&#39;" class="nosel2"></div>
+
+
+<div id="flag4" onclick="location.href=&#39;/fr-dark/use-case-diagram&#39;" class="nosel2"></div>
+
+
+<div id="flag5" onclick="location.href=&#39;/ja-dark/use-case-diagram&#39;" class="nosel2"></div>
+
+
+<div id="flag6" onclick="location.href=&#39;/ko-dark/use-case-diagram&#39;" class="nosel2"></div>
+
+
+<div id="flag7" onclick="location.href=&#39;/ru-dark/use-case-diagram&#39;" class="sel2"></div>
+
+
+<div id="flag8" onclick="location.href=&#39;/zh-dark/use-case-diagram&#39;" class="nosel2"></div>
+
+
+
+
+
+
+</div><!-- langlist -->
+</div><!-- e -->
+
+</div><!-- haut1 -->
+
+
+<p>
+
+
+<style>
+#topsticky {
+	z-index:2;
+	margin: 0 240px 0 0;
+}
+
+@media screen and (min-height: 800px) {
+#topsticky {
+  position:sticky; top: 40px;
+}
+}
+
+@media screen and (max-width: 1500px) {
+#topsticky {
+	margin: 0;
+}
+}
+
+</style>
+
+</p><div id="topsticky">
+<!-- Ezoic - under page title -->
+<span id="ezoic-pub-ad-placeholder-647"></span><!-- ezoic_pub_ad_placeholder-647-under_page_title-320x100-647-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-647-under_page_title-300x50v2-647-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-647-under_page_title-320x50-647-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-647-under_page_title-468x60-647-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-647-under_page_title-728x90-647-nonexxxnonexxxxxxezmaxscaleval100 -->
+<!-- End Ezoic - under page title -->
+</div>
+
+
+<p>
+
+
+<a style="position:relative;top:-38px;" name="6f90e6007b38429e"></a>
+<style>
+
+
+#toc {
+z-index: 2;
+position:sticky; top: 40px;
+list-style-type: none;
+margin: 0;
+padding: 0 10px;
+}
+.chap {
+clear:both;
+}
+#toc ul {
+list-style-type: none;
+max-height:87vh;
+overflow-y: auto;
+background: #000000;
+border-width: 2px;
+border-style: groove;
+border-radius: 3px;
+border-color: #e1e4e8;
+margin: 0;
+padding: 0;
+}
+@media screen and (min-height: 450px) {
+#toc ul {max-height:89.5vh;
+}
+}
+@media screen and (min-height: 550px) {
+#toc ul {max-height:91.5vh;
+}
+}
+@media screen and (min-height: 700px) {
+#toc ul {max-height:93.5vh;
+}
+}
+@media screen and (min-height: 900px) {
+#toc ul {max-height:94.5vh;
+}
+}
+#toc li {
+margin: 5px 5px 5px 10px;
+padding: 0;
+}
+@media screen and (max-width: 1500px) {
+	#toctd {
+	display: none;
+	}	
+	#toc {
+	display: none;
+	}	
+}
+</style>
+
+<table border="0" cellspacing="0" cellpadding="0" width="100%">
+<tbody><tr valign="top" width="100%">
+<td valign="top">
+<!--heading--><h1 class="chap"><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/cmp/dokuwiki/ru/use-case-diagram#0"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/cmp/asciidoc/ru/use-case-diagram#0"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/cmp/markdown/ru/use-case-diagram#0"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>Диаграмма вариантов использования</h1>
+<p></p>
+<strong>Д иаграмма вариантов использования</strong> - это визуальное представление, используемое в программной инженерии для отображения взаимодействий между <strong>участниками системы</strong> и <strong>самой системой</strong>. Она отражает динамическое поведение системы, иллюстрируя ее <strong>сценарии использования</strong> и роли, которые с ними взаимодействуют. Эти диаграммы необходимы для уточнения <strong>функциональных требований к</strong> системе и понимания того, как пользователи будут взаимодействовать с системой. Предоставляя высокоуровневое представление, диаграммы вариантов использования помогают заинтересованным сторонам понять функциональность системы и ее потенциальную ценность.
+<p></p>
+<strong>PlantUML</strong> предлагает уникальный подход к созданию диаграмм вариантов использования за счет использования текстового языка. Одним из основных преимуществ использования PlantUML является его <strong>простота и эффективность</strong>. Вместо того чтобы вручную рисовать фигуры и связи, пользователи могут определять свои диаграммы с помощью интуитивно понятных и лаконичных текстовых описаний. Это не только ускоряет процесс создания диаграмм, но и обеспечивает <strong>последовательность и точность</strong>. Возможность интеграции с различными платформами документирования и широкий спектр поддерживаемых выходных форматов делают PlantUML универсальным инструментом как для разработчиков, так и для тех, кто не занимается разработкой. Наконец, благодаря <strong>открытому исходному коду</strong> PlantUML имеет <a href="../qa.html">сильное сообщество</a>, которое постоянно вносит свой вклад в его совершенствование и предлагает множество ресурсов для пользователей всех уровней.
+<a style="position:relative;top:-38px;" name="5cb617d22da857ea"></a>
+<div style="clear:both;height:50px;">
+</div>
+<!--heading--><h2 class="chap"><img onclick="window.scrollTo(0,0);" title="Back to top" src="../backtop1.svg" width="20" height="20" class="backtop"/><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/cmp/dokuwiki/ru/use-case-diagram#1"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/cmp/asciidoc/ru/use-case-diagram#1"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/cmp/markdown/ru/use-case-diagram#1"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>Прецеденты</h2>
+Прецеденты заключаются в две скобки (потому что две скобки выглядят как овал).
+<p></p>
+Вы можете использовать <code class="cod">usecase</code> для создания прецедента.
+<p></p>
+Также, Вы можете создать псевдоним, используя ключевое слово <code class="cod">as</code>. Этот псевдоним позже можно будет использовать для определения связей между элементами.
+<p>
+<table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0">
+<tbody><tr>
+<td valign="top">
+<div id="msg241c03ba461f2c87148b3035fd8bc348" class="msg">
+🎉 Copied!
+</div>
+<img width="16" height="16" id="img241c03ba461f2c87148b3035fd8bc348" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;241c03ba461f2c87148b3035fd8bc348&#39;)"/>
+<br/>
+<img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;241c03ba461f2c87148b3035fd8bc348&#39;)"/>
+</td>
+<td>
+<div class="mytab" onclick="javascript:ljs(&#39;241c03ba461f2c87148b3035fd8bc348&#39;)">
+<div class="mycell0">
+<code onmouseover="az=1" onmouseout="az=0"><pre id="pre241c03ba461f2c87148b3035fd8bc348">@startuml
+
+(Один прецедент)
+(Другой прецедент) as (UC2)
+usecase Прецедент3
+usecase (Последний\nпрецедент) as UC4
+
+@enduml
+</pre></code>
+</div>
+<div class="mycell">
+<img loading="lazy" width="369" height="164" class="scale" src="../imgw/dark-241c03ba461f2c87148b3035fd8bc348.png"/>
+</div>
+</div>
+</td>
+</tr>
+</tbody></table>
+</p><p>
+<a style="position:relative;top:-38px;" name="d9b36998c97be687"></a>
+</p><div style="clear:both;min-height:110px;margin-top:10px;">
+
+<div class="pezoic">
+<!-- Ezoic - Fish0 - under_second_paragraph -->
+<span id="ezoic-pub-ad-placeholder-179"></span><!-- ezoic_pub_ad_placeholder-179-under_second_paragraph-234x60-179-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-179-under_second_paragraph-468x60-179-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-179-under_second_paragraph-728x90-179-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-179-under_second_paragraph-970x90-179-nonexxxnonexxxxxxezmaxscaleval100 -->
+<!-- End Ezoic - Fish0 - under_second_paragraph -->
+</div>
+
+</div>
+<!--heading--><h2 class="chap"><img onclick="window.scrollTo(0,0);" title="Back to top" src="../backtop1.svg" width="20" height="20" class="backtop"/><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/cmp/dokuwiki/ru/use-case-diagram#2"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/cmp/asciidoc/ru/use-case-diagram#2"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/cmp/markdown/ru/use-case-diagram#2"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>Акторы (Роли, Участники)</h2>
+<p></p>
+<strong>Примечание переводчика:</strong>
+<em>я не нашел одного устоявшегося варианта перевода для этого термина. Встречаются варианты: <code class="cod">Актор</code>, <code class="cod">Роль</code> или <code class="cod">Участник</code>. Далее по тексту буду использовать слово <code class="cod">Актор</code>.</em>
+<p></p>
+Определить актора можно просто указав его название между двумя вертикальными двоеточиями.
+<p></p>
+Другой вариант определения актора - это использование ключевого слова <code class="cod">actor</code>.
+<p></p>
+Также, при определении актора можно указать для него короткий псевдоним, который затем можно будет использовать при определении связей между элементами. Это делается при помощи ключевого слова <code class="cod">as</code>.
+<p></p>
+Пример ниже показывает разные варианты определения акторов.
+<p></p>
+<p>
+<table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0">
+<tbody><tr>
+<td valign="top">
+<div id="msg83769d134fe0168a13c82d07859d53f2" class="msg">
+🎉 Copied!
+</div>
+<img loading="lazy" width="16" height="16" id="img83769d134fe0168a13c82d07859d53f2" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;83769d134fe0168a13c82d07859d53f2&#39;)"/>
+<br/>
+<img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;83769d134fe0168a13c82d07859d53f2&#39;)"/>
+</td>
+<td>
+<div class="mytab" onclick="javascript:ljs(&#39;83769d134fe0168a13c82d07859d53f2&#39;)">
+<div class="mycell0">
+<code onmouseover="az=1" onmouseout="az=0"><pre id="pre83769d134fe0168a13c82d07859d53f2">@startuml
+
+:Первый Actor:
+:Второй\nactor: as Участник2
+actor Участник3
+actor :Последний actor: as Участник4
+
+@enduml
+</pre></code>
+</div>
+<div class="mycell">
+<img loading="lazy" width="232" height="242" class="scale" src="../imgw/dark-83769d134fe0168a13c82d07859d53f2.png"/>
+</div>
+</div>
+</td>
+</tr>
+</tbody></table>
+</p><p>
+<a style="position:relative;top:-38px;" name="1cc1efff0435a503"></a>
+</p><div style="clear:both;height:50px;">
+</div>
+<!--heading--><h2 class="chap"><img onclick="window.scrollTo(0,0);" title="Back to top" src="../backtop1.svg" width="20" height="20" class="backtop"/><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/cmp/dokuwiki/ru/use-case-diagram#3"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/cmp/asciidoc/ru/use-case-diagram#3"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/cmp/markdown/ru/use-case-diagram#3"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>Изменение стиля отображения актора</h2>
+<p></p>
+Вы можете изменить стиль стиль отображения актора. Доступны следующие варианты:
+<ul>
+<li>Человечек из палочек <em>(по умолчанию)</em>;</li>
+<li>В виде бюста, команда <code class="cod">skinparam actorStyle awesome</code>;</li>
+<li>Контур человечка, команда <code class="cod">skinparam actorStyle hollow </code>.</li>
+</ul>
+<p></p>
+<h3>Человечек из палочек <em>(по умолчанию</em>)</h3>
+<p>
+<table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0">
+<tbody><tr>
+<td valign="top">
+<div id="msgafa11c1361cac2c1fb60d9022c661f51" class="msg">
+🎉 Copied!
+</div>
+<img loading="lazy" width="16" height="16" id="imgafa11c1361cac2c1fb60d9022c661f51" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;afa11c1361cac2c1fb60d9022c661f51&#39;)"/>
+<br/>
+<img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;afa11c1361cac2c1fb60d9022c661f51&#39;)"/>
+</td>
+<td>
+<div class="mytab" onclick="javascript:ljs(&#39;afa11c1361cac2c1fb60d9022c661f51&#39;)">
+<div class="mycell0">
+<code onmouseover="az=1" onmouseout="az=0"><pre id="preafa11c1361cac2c1fb60d9022c661f51">@startuml
+:Пользователь: --&gt; (Use)
+&#34;Главный админ&#34; as Admin
+&#34;Использование приложения&#34; as (Use)
+Admin --&gt; (Управление приложением)
+@enduml
+</pre></code>
+</div>
+<div class="mycell">
+<img loading="lazy" width="483" height="198" class="scale" src="../imgw/dark-afa11c1361cac2c1fb60d9022c661f51.png"/>
+</div>
+</div>
+</td>
+</tr>
+</tbody></table>
+</p><p>
+</p><p></p>
+<h3>В виде бюста</h3>
+<p>
+<table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0">
+<tbody><tr>
+<td valign="top">
+<div id="msgd89b2086738957ef1ed3cfebf03884b5" class="msg">
+🎉 Copied!
+</div>
+<img loading="lazy" width="16" height="16" id="imgd89b2086738957ef1ed3cfebf03884b5" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;d89b2086738957ef1ed3cfebf03884b5&#39;)"/>
+<br/>
+<img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;d89b2086738957ef1ed3cfebf03884b5&#39;)"/>
+</td>
+<td>
+<div class="mytab" onclick="javascript:ljs(&#39;d89b2086738957ef1ed3cfebf03884b5&#39;)">
+<div class="mycell0">
+<code onmouseover="az=1" onmouseout="az=0"><pre id="pred89b2086738957ef1ed3cfebf03884b5">@startuml
+skinparam actorStyle awesome
+:Пользователь: --&gt; (Use)
+&#34;Главный админ&#34; as Admin
+&#34;Использование приложения&#34; as (Use)
+Admin --&gt; (Управление приложением)
+@enduml
+</pre></code>
+</div>
+<div class="mycell">
+<img loading="lazy" width="483" height="200" class="scale" src="../imgw/dark-d89b2086738957ef1ed3cfebf03884b5.png"/>
+</div>
+</div>
+</td>
+</tr>
+</tbody></table>
+</p><p>
+</p><p></p>
+<em>[Ссылка на <a href="https://forum.plantuml.net/10493/how-can-i-customize-the-actor-icon-in-svg-output?show=10513#c10513">QA-10493</a>]</em>
+<p></p>
+<h3>Контур человечка</h3>
+<p>
+<table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0">
+<tbody><tr>
+<td valign="top">
+<div id="msg3c0d8deb8866ce5b4f061f1400ef2c0a" class="msg">
+🎉 Copied!
+</div>
+<img loading="lazy" width="16" height="16" id="img3c0d8deb8866ce5b4f061f1400ef2c0a" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;3c0d8deb8866ce5b4f061f1400ef2c0a&#39;)"/>
+<br/>
+<img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;3c0d8deb8866ce5b4f061f1400ef2c0a&#39;)"/>
+</td>
+<td>
+<div class="mytab" onclick="javascript:ljs(&#39;3c0d8deb8866ce5b4f061f1400ef2c0a&#39;)">
+<div class="mycell0">
+<code onmouseover="az=1" onmouseout="az=0"><pre id="pre3c0d8deb8866ce5b4f061f1400ef2c0a">@startuml
+skinparam actorStyle Hollow 
+:Пользователь: --&gt; (Use)
+&#34;Главный админ&#34; as Admin
+&#34;Использование приложения&#34; as (Use)
+Admin --&gt; (Управление приложением)
+@enduml
+</pre></code>
+</div>
+<div class="mycell">
+<img loading="lazy" width="483" height="171" class="scale" src="../imgw/dark-3c0d8deb8866ce5b4f061f1400ef2c0a.png"/>
+</div>
+</div>
+</td>
+</tr>
+</tbody></table>
+</p><p>
+</p><p></p>
+<em>[ссылка на <a href="https://github.com/plantuml/plantuml/pull/396">PR#396</a>]</em>
+<a style="position:relative;top:-38px;" name="72f2908d8be5b528"></a>
+<div style="clear:both;min-height:110px;margin-top:10px;">
+
+
+<div class="pezoic">
+<!-- Ezoic - Fish1 - mid_content -->
+<span id="ezoic-pub-ad-placeholder-114"></span><!-- ezoic_pub_ad_placeholder-114-mid_content-234x60-114-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-114-mid_content-468x60-114-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-114-mid_content-728x90-114-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-114-mid_content-970x90-114-nonexxxnonexxxxxxezmaxscaleval100 -->
+<!-- End Ezoic - Fish1 - mid_content -->
+</div>
+
+</div>
+<!--heading--><h2 class="chap"><img onclick="window.scrollTo(0,0);" title="Back to top" src="../backtop1.svg" width="20" height="20" class="backtop"/><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/cmp/dokuwiki/ru/use-case-diagram#4"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/cmp/asciidoc/ru/use-case-diagram#4"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/cmp/markdown/ru/use-case-diagram#4"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>Описание прецедентов</h2>
+<p></p>
+<p></p>
+Если Вам нужно расположить описание в несколько строк, Вы можете использовать кавычки.
+<p></p>
+Также Вы можете использовать следующие разделители: <code class="cod">--</code>, <code class="cod">..</code>, <code class="cod">==</code> и <code class="cod">__</code>. Внутрь этих разделителей можно вставлять заголовки.
+<p></p>
+<p>
+<table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0">
+<tbody><tr>
+<td valign="top">
+<div id="msg6de6e9748d791167acec9a1429bf1014" class="msg">
+🎉 Copied!
+</div>
+<img loading="lazy" width="16" height="16" id="img6de6e9748d791167acec9a1429bf1014" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;6de6e9748d791167acec9a1429bf1014&#39;)"/>
+<br/>
+<img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;6de6e9748d791167acec9a1429bf1014&#39;)"/>
+</td>
+<td>
+<div class="mytab" onclick="javascript:ljs(&#39;6de6e9748d791167acec9a1429bf1014&#39;)">
+<div class="mycell0">
+<code onmouseover="az=1" onmouseout="az=0"><pre id="pre6de6e9748d791167acec9a1429bf1014">@startuml
+
+usecase UC1 as &#34;Вы можете использовать
+несколько строчек для описания вашего прецедента.
+Также, Вы можете использовать разделители:
+--
+Можно использовть несколько разных разделителей одновременно.
+==
+И еще Вы можете добавлять в разделители заголовки:
+..ЗАКЛЮЧЕНИЕ..
+Это позволяет делать очень большие и
+развернутые описания.&#34;
+
+@enduml
+</pre></code>
+</div>
+<div class="mycell">
+<img loading="lazy" width="592" height="221" class="scale" src="../imgw/dark-6de6e9748d791167acec9a1429bf1014.png"/>
+</div>
+</div>
+</td>
+</tr>
+</tbody></table>
+</p><p>
+<a style="position:relative;top:-38px;" name="9b9f78e65119262a"></a>
+</p><div style="clear:both;height:50px;">
+</div>
+<!--heading--><h2 class="chap"><img onclick="window.scrollTo(0,0);" title="Back to top" src="../backtop1.svg" width="20" height="20" class="backtop"/><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/cmp/dokuwiki/ru/use-case-diagram#5"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/cmp/asciidoc/ru/use-case-diagram#5"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/cmp/markdown/ru/use-case-diagram#5"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>Использование пакетов</h2>
+<p></p>
+Чтобы сгруппировать акторов или прецеденты, можно использовать пакеты.
+<p></p>
+<p>
+<table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0">
+<tbody><tr>
+<td valign="top">
+<div id="msg8a2d8426c8acf6bb37b8647014cb8ae7" class="msg">
+🎉 Copied!
+</div>
+<img loading="lazy" width="16" height="16" id="img8a2d8426c8acf6bb37b8647014cb8ae7" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;8a2d8426c8acf6bb37b8647014cb8ae7&#39;)"/>
+<br/>
+<img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;8a2d8426c8acf6bb37b8647014cb8ae7&#39;)"/>
+</td>
+<td>
+<div class="mytab" onclick="javascript:ljs(&#39;8a2d8426c8acf6bb37b8647014cb8ae7&#39;)">
+<div class="mycell0">
+<code onmouseover="az=1" onmouseout="az=0"><pre id="pre8a2d8426c8acf6bb37b8647014cb8ae7">@startuml
+actor Гость as g
+package Специалисты {
+  actor &#34;Шеф повар&#34; as c
+  actor &#34;Ресторанный критик&#34; as fc
+}
+package Ресторан {
+  usecase &#34;Есть&#34; as UC1
+  usecase &#34;Платить&#34; as UC2
+  usecase &#34;Пить&#34; as UC3
+  usecase &#34;Составлять отзыв&#34; as UC4
+}
+fc --&gt; UC1
+fc --&gt; UC2
+fc --&gt; UC3
+fc --&gt; UC4
+g --&gt; UC1
+g --&gt; UC2
+g --&gt; UC3
+@enduml
+</pre></code>
+</div>
+<div class="mycell">
+<img loading="lazy" width="551" height="256" class="scale" src="../imgw/dark-8a2d8426c8acf6bb37b8647014cb8ae7.png"/>
+</div>
+</div>
+</td>
+</tr>
+</tbody></table>
+</p><p>
+</p><p></p>
+<p></p>
+Для изменения венешнего вида пакета можно воспользоваться ключевым словом <code class="cod">rectangle</code> используя ег овместо ключевого слова <code class="cod">package</code>.
+<p></p>
+<p>
+<table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0">
+<tbody><tr>
+<td valign="top">
+<div id="msg6f09a1a852b0a674c6a788ae0297315c" class="msg">
+🎉 Copied!
+</div>
+<img loading="lazy" width="16" height="16" id="img6f09a1a852b0a674c6a788ae0297315c" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;6f09a1a852b0a674c6a788ae0297315c&#39;)"/>
+<br/>
+<img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;6f09a1a852b0a674c6a788ae0297315c&#39;)"/>
+</td>
+<td>
+<div class="mytab" onclick="javascript:ljs(&#39;6f09a1a852b0a674c6a788ae0297315c&#39;)">
+<div class="mycell0">
+<code onmouseover="az=1" onmouseout="az=0"><pre id="pre6f09a1a852b0a674c6a788ae0297315c">@startuml
+left to right direction
+actor &#34;Ресторанный критик&#34; as fc
+rectangle Ресторан {
+  usecase &#34;Есть&#34; as UC1
+  usecase &#34;Платить&#34; as UC2
+  usecase &#34;Пить&#34; as UC3
+  usecase &#34;Составлять отзыв&#34; as UC4
+}
+fc --&gt; UC1
+fc --&gt; UC2
+fc --&gt; UC3
+fc --&gt; UC4
+@enduml
+</pre></code>
+</div>
+<div class="mycell">
+<img loading="lazy" width="388" height="301" class="scale" src="../imgw/dark-6f09a1a852b0a674c6a788ae0297315c.png"/>
+</div>
+</div>
+</td>
+</tr>
+</tbody></table>
+</p><p>
+<a style="position:relative;top:-38px;" name="c96ad883675e26af"></a>
+</p><div style="clear:both;min-height:110px;margin-top:10px;">
+
+<div class="pezoic">
+<!-- Ezoic - Fish2 - long_content -->
+<span id="ezoic-pub-ad-placeholder-115"></span><!-- ezoic_pub_ad_placeholder-115-long_content-234x60-115-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-115-long_content-468x60-115-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-115-long_content-728x90-115-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-115-long_content-970x90-115-nonexxxnonexxxxxxezmaxscaleval100 -->
+<!-- End Ezoic - Fish2 - long_content -->
+</div>
+
+</div>
+<!--heading--><h2 class="chap"><img onclick="window.scrollTo(0,0);" title="Back to top" src="../backtop1.svg" width="20" height="20" class="backtop"/><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/cmp/dokuwiki/ru/use-case-diagram#6"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/cmp/asciidoc/ru/use-case-diagram#6"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/cmp/markdown/ru/use-case-diagram#6"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>Простой пример</h2>
+<p></p>
+<p></p>
+Для создания связей между акторами и прецедентами используется стрелка <code class="cod">--&gt;</code>.
+<p></p>
+Чем больше знаков тире <code class="cod">-</code> в стрелке, тем она длиннее.
+Вы можете добавить заметку на стрелку используя символ <code class="cod">:</code> после определения стрелки.
+<p></p>
+В этом примере можно заметить, что <em>Пользователь</em> не определён заранее и по умолчанию определяется как актор.
+<p>
+<table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0">
+<tbody><tr>
+<td valign="top">
+<div id="msg86d1936a2ed03b53ddbe86e25a1d1793" class="msg">
+🎉 Copied!
+</div>
+<img loading="lazy" width="16" height="16" id="img86d1936a2ed03b53ddbe86e25a1d1793" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;86d1936a2ed03b53ddbe86e25a1d1793&#39;)"/>
+<br/>
+<img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;86d1936a2ed03b53ddbe86e25a1d1793&#39;)"/>
+</td>
+<td>
+<div class="mytab" onclick="javascript:ljs(&#39;86d1936a2ed03b53ddbe86e25a1d1793&#39;)">
+<div class="mycell0">
+<code onmouseover="az=1" onmouseout="az=0"><pre id="pre86d1936a2ed03b53ddbe86e25a1d1793">@startuml
+
+Пользователь -&gt; (Старт)
+Пользователь --&gt; (Использование приложения) : Небольшая заметка
+
+:Главный админ: ---&gt; (Использование приложения) : Еще одна\nнебольшая\nзаметка
+
+@enduml
+</pre></code>
+</div>
+<div class="mycell">
+<img loading="lazy" width="361" height="355" class="scale" src="../imgw/dark-86d1936a2ed03b53ddbe86e25a1d1793.png"/>
+</div>
+</div>
+</td>
+</tr>
+</tbody></table>
+</p><p>
+<a style="position:relative;top:-38px;" name="63e4e92bb7d207ca"></a>
+</p><div style="clear:both;height:50px;">
+</div>
+<!--heading--><h2 class="chap"><img onclick="window.scrollTo(0,0);" title="Back to top" src="../backtop1.svg" width="20" height="20" class="backtop"/><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/cmp/dokuwiki/ru/use-case-diagram#7"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/cmp/asciidoc/ru/use-case-diagram#7"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/cmp/markdown/ru/use-case-diagram#7"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>Обобщение (наследование)</h2>
+<p></p>
+Если актор или прецедент являются обобщением других актора или прецедента, Вы можете использовать символ <code class="cod">&lt;|--</code>.
+<p></p>
+<p>
+<table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0">
+<tbody><tr>
+<td valign="top">
+<div id="msg938910fc4fce8d8b7b8651da527412ca" class="msg">
+🎉 Copied!
+</div>
+<img loading="lazy" width="16" height="16" id="img938910fc4fce8d8b7b8651da527412ca" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;938910fc4fce8d8b7b8651da527412ca&#39;)"/>
+<br/>
+<img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;938910fc4fce8d8b7b8651da527412ca&#39;)"/>
+</td>
+<td>
+<div class="mytab" onclick="javascript:ljs(&#39;938910fc4fce8d8b7b8651da527412ca&#39;)">
+<div class="mycell0">
+<code onmouseover="az=1" onmouseout="az=0"><pre id="pre938910fc4fce8d8b7b8651da527412ca">@startuml
+:Галавный админ: as Admin
+(Работа с приложением) as (Use)
+
+Пользователь &lt;|-- Admin
+(Работа) &lt;|-- (Use)
+
+@enduml
+</pre></code>
+</div>
+<div class="mycell">
+<img loading="lazy" width="351" height="225" class="scale" src="../imgw/dark-938910fc4fce8d8b7b8651da527412ca.png"/>
+</div>
+</div>
+</td>
+</tr>
+</tbody></table>
+</p><p>
+<a style="position:relative;top:-38px;" name="d50d8f9219a41435"></a>
+</p><div style="clear:both;min-height:110px;margin-top:10px;">
+
+<div class="pezoic">
+<!-- Ezoic - Fish3 - longer_content -->
+<span id="ezoic-pub-ad-placeholder-116"></span><!-- ezoic_pub_ad_placeholder-116-longer_content-234x60-116-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-116-longer_content-468x60-116-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-116-longer_content-728x90-116-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-116-longer_content-970x90-116-nonexxxnonexxxxxxezmaxscaleval100 -->
+<!-- End Ezoic - Fish3 - longer_content -->
+</div>
+
+</div>
+<!--heading--><h2 class="chap"><img onclick="window.scrollTo(0,0);" title="Back to top" src="../backtop1.svg" width="20" height="20" class="backtop"/><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/cmp/dokuwiki/ru/use-case-diagram#8"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/cmp/asciidoc/ru/use-case-diagram#8"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/cmp/markdown/ru/use-case-diagram#8"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>Использование заметок</h2>
+<p></p>
+Вы можете использовать ключевые слова <code class="cod">note left of</code> , <code class="cod">note right of</code> ,
+<code class="cod">note top of</code> , <code class="cod">note bottom of</code> чтобы создать и расположить заметку относительно какого-либо элемента.
+<p></p>
+Заметка так же может быть создана с помощью ключевого слова <code class="cod">note</code>, а затем прикреплена к какому-либо элементу при помощи символа <code class="cod">..</code>.
+<p></p>
+<p>
+<table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0">
+<tbody><tr>
+<td valign="top">
+<div id="msg544fb067720023442ae30ab26b78cef9" class="msg">
+🎉 Copied!
+</div>
+<img loading="lazy" width="16" height="16" id="img544fb067720023442ae30ab26b78cef9" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;544fb067720023442ae30ab26b78cef9&#39;)"/>
+<br/>
+<img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;544fb067720023442ae30ab26b78cef9&#39;)"/>
+</td>
+<td>
+<div class="mytab" onclick="javascript:ljs(&#39;544fb067720023442ae30ab26b78cef9&#39;)">
+<div class="mycell0">
+<code onmouseover="az=1" onmouseout="az=0"><pre id="pre544fb067720023442ae30ab26b78cef9">@startuml
+:Главный админ: as Admin
+(Работа с приложением) as (Use)
+
+Пользователь -&gt; (Работа)
+Пользователь --&gt; (Use)
+
+Admin ---&gt; (Use)
+
+note right of Admin : Это пример заметки.
+
+note right of (Use)
+  Заметки могут занимать
+  несколько строчек
+end note
+
+note &#34;Эта заметка будет указывать\nсразу на несколько элементов.&#34; as N2
+(Работа) .. N2
+N2 .. (Use)
+@enduml
+</pre></code>
+</div>
+<div class="mycell">
+<img loading="lazy" width="598" height="295" class="scale" src="../imgw/dark-544fb067720023442ae30ab26b78cef9.png"/>
+</div>
+</div>
+</td>
+</tr>
+</tbody></table>
+</p><p>
+<a style="position:relative;top:-38px;" name="c2f000e210baa94d"></a>
+</p><div style="clear:both;height:50px;">
+</div>
+<!--heading--><h2 class="chap"><img onclick="window.scrollTo(0,0);" title="Back to top" src="../backtop1.svg" width="20" height="20" class="backtop"/><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/cmp/dokuwiki/ru/use-case-diagram#9"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/cmp/asciidoc/ru/use-case-diagram#9"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/cmp/markdown/ru/use-case-diagram#9"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>Шаблоны</h2>
+<p></p>
+Вы можете добавить названия шаблонов когда определяете акторов или прецеденты используя символы <code class="cod">&lt;&lt;</code> и <code class="cod">&gt;&gt;</code>.
+<p></p>
+<p>
+<table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0">
+<tbody><tr>
+<td valign="top">
+<div id="msgb5ae80166cbf8519403d3cc58e491f93" class="msg">
+🎉 Copied!
+</div>
+<img loading="lazy" width="16" height="16" id="imgb5ae80166cbf8519403d3cc58e491f93" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;b5ae80166cbf8519403d3cc58e491f93&#39;)"/>
+<br/>
+<img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;b5ae80166cbf8519403d3cc58e491f93&#39;)"/>
+</td>
+<td>
+<div class="mytab" onclick="javascript:ljs(&#39;b5ae80166cbf8519403d3cc58e491f93&#39;)">
+<div class="mycell0">
+<code onmouseover="az=1" onmouseout="az=0"><pre id="preb5ae80166cbf8519403d3cc58e491f93">@startuml
+Пользователь &lt;&lt; Человек &gt;&gt;
+:Основная база данных: as MySql &lt;&lt; Приложение &gt;&gt;
+(Start) &lt;&lt; One Shot &gt;&gt;
+(Работа с приложением) as (Use) &lt;&lt; Основное действие &gt;&gt;
+
+Пользователь -&gt; (Start)
+Пользователь --&gt; (Use)
+
+MySql --&gt; (Use)
+
+@enduml
+</pre></code>
+</div>
+<div class="mycell">
+<img loading="lazy" width="433" height="223" class="scale" src="../imgw/dark-b5ae80166cbf8519403d3cc58e491f93.png"/>
+</div>
+</div>
+</td>
+</tr>
+</tbody></table>
+</p><p>
+<a style="position:relative;top:-38px;" name="9a49d5ae2dd333a4"></a>
+</p><div style="clear:both;min-height:110px;margin-top:10px;">
+
+<div class="pezoic">
+<!-- Ezoic - Fish4 - longest_content -->
+<span id="ezoic-pub-ad-placeholder-117"></span><!-- ezoic_pub_ad_placeholder-117-longest_content-234x60-117-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-117-longest_content-468x60-117-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-117-longest_content-728x90-117-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-117-longest_content-970x90-117-nonexxxnonexxxxxxezmaxscaleval100 -->
+<!-- End Ezoic - Fish4 - longest_content -->
+</div>
+
+</div>
+<!--heading--><h2 class="chap"><img onclick="window.scrollTo(0,0);" title="Back to top" src="../backtop1.svg" width="20" height="20" class="backtop"/><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/cmp/dokuwiki/ru/use-case-diagram#10"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/cmp/asciidoc/ru/use-case-diagram#10"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/cmp/markdown/ru/use-case-diagram#10"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>Смена направления стрелок</h2>
+<p></p>
+По умолчанию, связи между элементами задаются при помощи двух тире <code class="cod">--</code> для сплошных линий или при помощи двух точек <code class="cod">..</code> для пунктирных линий и ориентированны вертикально. Можно указать, что связь необходимо изобразить горизонтально, для этого необходимо использовать одиночное тире <code class="cod">-</code> для сплошной линии или одну точку <code class="cod">.</code> для штриховой линии.
+<p></p>
+<p>
+<table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0">
+<tbody><tr>
+<td valign="top">
+<div id="msgee7f8032da3bf2f6a0cad7e931fa1eef" class="msg">
+🎉 Copied!
+</div>
+<img loading="lazy" width="16" height="16" id="imgee7f8032da3bf2f6a0cad7e931fa1eef" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;ee7f8032da3bf2f6a0cad7e931fa1eef&#39;)"/>
+<br/>
+<img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;ee7f8032da3bf2f6a0cad7e931fa1eef&#39;)"/>
+</td>
+<td>
+<div class="mytab" onclick="javascript:ljs(&#39;ee7f8032da3bf2f6a0cad7e931fa1eef&#39;)">
+<div class="mycell0">
+<code onmouseover="az=1" onmouseout="az=0"><pre id="preee7f8032da3bf2f6a0cad7e931fa1eef">@startuml
+:Пользователь: --&gt; (Прецедент 1)
+:Пользователь: -&gt; (Прецедент 2)
+@enduml
+</pre></code>
+</div>
+<div class="mycell">
+<img loading="lazy" width="300" height="180" class="scale" src="../imgw/dark-ee7f8032da3bf2f6a0cad7e931fa1eef.png"/>
+</div>
+</div>
+</td>
+</tr>
+</tbody></table>
+</p><p>
+</p><p></p>
+Также можно изменить направление связи, переместив символ окончания стрелки на другую сторону:
+<p></p>
+<p>
+<table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0">
+<tbody><tr>
+<td valign="top">
+<div id="msg6216ea313b257e94fd94173954b0f498" class="msg">
+🎉 Copied!
+</div>
+<img loading="lazy" width="16" height="16" id="img6216ea313b257e94fd94173954b0f498" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;6216ea313b257e94fd94173954b0f498&#39;)"/>
+<br/>
+<img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;6216ea313b257e94fd94173954b0f498&#39;)"/>
+</td>
+<td>
+<div class="mytab" onclick="javascript:ljs(&#39;6216ea313b257e94fd94173954b0f498&#39;)">
+<div class="mycell0">
+<code onmouseover="az=1" onmouseout="az=0"><pre id="pre6216ea313b257e94fd94173954b0f498">@startuml
+(Прецедент 1) &lt;.. :Пользователь:
+(Прецедент 2) &lt;. :Пользователь:
+@enduml
+</pre></code>
+</div>
+<div class="mycell">
+<img loading="lazy" width="300" height="180" class="scale" src="../imgw/dark-6216ea313b257e94fd94173954b0f498.png"/>
+</div>
+</div>
+</td>
+</tr>
+</tbody></table>
+</p><p>
+</p><p></p>
+Можно управлять направлением связи добавляя ключевые слова <code class="cod">left</code>, <code class="cod">right</code>, <code class="cod">up</code>
+или <code class="cod">down</code> внутрь стрелки:
+<p></p>
+<p>
+<table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0">
+<tbody><tr>
+<td valign="top">
+<div id="msgc95810bc55cc8a9c450ddf437f6b6e44" class="msg">
+🎉 Copied!
+</div>
+<img loading="lazy" width="16" height="16" id="imgc95810bc55cc8a9c450ddf437f6b6e44" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;c95810bc55cc8a9c450ddf437f6b6e44&#39;)"/>
+<br/>
+<img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;c95810bc55cc8a9c450ddf437f6b6e44&#39;)"/>
+</td>
+<td>
+<div class="mytab" onclick="javascript:ljs(&#39;c95810bc55cc8a9c450ddf437f6b6e44&#39;)">
+<div class="mycell0">
+<code onmouseover="az=1" onmouseout="az=0"><pre id="prec95810bc55cc8a9c450ddf437f6b6e44">@startuml
+:Пользователь: -left-&gt; (Лево)
+:Пользователь: -right-&gt; (Право)
+:Пользователь: -up-&gt; (Верх)
+:Пользователь: -down-&gt; (Низ)
+@enduml
+</pre></code>
+</div>
+<div class="mycell">
+<img loading="lazy" width="322" height="270" class="scale" src="../imgw/dark-c95810bc55cc8a9c450ddf437f6b6e44.png"/>
+</div>
+</div>
+</td>
+</tr>
+</tbody></table>
+</p><p>
+</p><p></p>
+Можно использовать более короткий синтаксис используя только первый символ указанных выше ключевых слов, например <code class="cod">-d-</code> или <code class="cod">-do-</code> вместо полного слова <code class="cod">-down-</code>.
+<p></p>
+Правда злоупотреблять такой короткой записью не стоит, так как <em>GraphViz</em> обычно дает более хороший результат, когда такая короткая запись НЕ используется.
+<p></p>
+И наконец, можно поменять все направления местами используя ключевое слово <a href="use-case-diagram.html#d551e48d272b2b07"><code class="cod">left to right direction</code></a>. Для этого можно сравнить предыдущую диаграмму с диаграммой, представленной ниже: 
+<p>
+<table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0">
+<tbody><tr>
+<td valign="top">
+<div id="msg5787b1176c9fa6f9f439641686a99968" class="msg">
+🎉 Copied!
+</div>
+<img loading="lazy" width="16" height="16" id="img5787b1176c9fa6f9f439641686a99968" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;5787b1176c9fa6f9f439641686a99968&#39;)"/>
+<br/>
+<img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;5787b1176c9fa6f9f439641686a99968&#39;)"/>
+</td>
+<td>
+<div class="mytab" onclick="javascript:ljs(&#39;5787b1176c9fa6f9f439641686a99968&#39;)">
+<div class="mycell0">
+<code onmouseover="az=1" onmouseout="az=0"><pre id="pre5787b1176c9fa6f9f439641686a99968">@startuml
+left to right direction
+:Пользователь: -left-&gt; (Лево)
+:Пользователь: -right-&gt; (Право)
+:Пользователь: -up-&gt; (Верх)
+:Пользователь: -down-&gt; (Низ)
+@enduml
+</pre></code>
+</div>
+<div class="mycell">
+<img loading="lazy" width="346" height="221" class="scale" src="../imgw/dark-5787b1176c9fa6f9f439641686a99968.png"/>
+</div>
+</div>
+</td>
+</tr>
+</tbody></table>
+</p><p>
+<a style="position:relative;top:-38px;" name="45d7d5b32d17a0f9"></a>
+</p><div style="clear:both;height:50px;">
+</div>
+<!--heading--><h2 class="chap"><img onclick="window.scrollTo(0,0);" title="Back to top" src="../backtop1.svg" width="20" height="20" class="backtop"/><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/cmp/dokuwiki/ru/use-case-diagram#11"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/cmp/asciidoc/ru/use-case-diagram#11"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/cmp/markdown/ru/use-case-diagram#11"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>Разделение диаграмм</h2>
+<p></p>
+Ключевое слово <code class="cod">newpage</code> используется для разделения диаграмм на несколько страниц или изображений.
+<p>
+<table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0">
+<tbody><tr>
+<td valign="top">
+<div id="msg50d97044fea1dab48e1615ae5a07de2a" class="msg">
+🎉 Copied!
+</div>
+<img loading="lazy" width="16" height="16" id="img50d97044fea1dab48e1615ae5a07de2a" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;50d97044fea1dab48e1615ae5a07de2a&#39;)"/>
+<br/>
+<img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;50d97044fea1dab48e1615ae5a07de2a&#39;)"/>
+</td>
+<td>
+<div class="mytab" onclick="javascript:ljs(&#39;50d97044fea1dab48e1615ae5a07de2a&#39;)">
+<div class="mycell0">
+<code onmouseover="az=1" onmouseout="az=0"><pre id="pre50d97044fea1dab48e1615ae5a07de2a">@startuml
+:Актор1: --&gt; (Прецедент1)
+newpage
+:Актор2: --&gt; (Прецедент2)
+@enduml
+</pre></code>
+</div>
+<div class="mycell">
+<img loading="lazy" width="146" height="180" class="scale" src="../imgw/dark-50d97044fea1dab48e1615ae5a07de2a.png"/>
+</div>
+</div>
+</td>
+</tr>
+</tbody></table>
+</p><p>
+<a style="position:relative;top:-38px;" name="d551e48d272b2b07"></a>
+</p><div style="clear:both;min-height:110px;margin-top:10px;">
+
+<div class="pezoic">
+<!-- Ezoic - Fish5 - incontent_5 -->
+<span id="ezoic-pub-ad-placeholder-118"></span><!-- ezoic_pub_ad_placeholder-118-incontent_5-234x60-118-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-118-incontent_5-468x60-118-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-118-incontent_5-728x90-118-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-118-incontent_5-970x90-118-nonexxxnonexxxxxxezmaxscaleval100 -->
+<!-- End Ezoic - Fish5 - incontent_5 -->
+</div>
+
+</div>
+<!--heading--><h2 class="chap"><img onclick="window.scrollTo(0,0);" title="Back to top" src="../backtop1.svg" width="20" height="20" class="backtop"/><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/cmp/dokuwiki/ru/use-case-diagram#12"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/cmp/asciidoc/ru/use-case-diagram#12"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/cmp/markdown/ru/use-case-diagram#12"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>Направление слева направо</h2>
+<p></p>
+Общее поведение по умолчанию - построение диаграмм <strong>сверху вниз</strong>.
+<p>
+<table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0">
+<tbody><tr>
+<td valign="top">
+<div id="msg0dfceca7dd05927270a2ca3a7636f43f" class="msg">
+🎉 Copied!
+</div>
+<img loading="lazy" width="16" height="16" id="img0dfceca7dd05927270a2ca3a7636f43f" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;0dfceca7dd05927270a2ca3a7636f43f&#39;)"/>
+<br/>
+<img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;0dfceca7dd05927270a2ca3a7636f43f&#39;)"/>
+</td>
+<td>
+<div class="mytab" onclick="javascript:ljs(&#39;0dfceca7dd05927270a2ca3a7636f43f&#39;)">
+<div class="mycell0">
+<code onmouseover="az=1" onmouseout="az=0"><pre id="pre0dfceca7dd05927270a2ca3a7636f43f">@startuml
+&#39;default
+top to bottom direction
+Актор1--&gt; (Прецедент 1)
+Актор2--&gt; (Прецедент 2)
+@enduml
+</pre></code>
+</div>
+<div class="mycell">
+<img loading="lazy" width="322" height="180" class="scale" src="../imgw/dark-0dfceca7dd05927270a2ca3a7636f43f.png"/>
+</div>
+</div>
+</td>
+</tr>
+</tbody></table>
+</p><p>
+</p><p></p>
+Вы можете изменить направление на <strong>слева направо</strong> используя команду <code class="cod">left to right direction</code>. Часто результат с таким направлением выглядит лучше.
+<p></p>
+<p>
+<table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0">
+<tbody><tr>
+<td valign="top">
+<div id="msg961de54e3993e15c451d5b2c7f2db717" class="msg">
+🎉 Copied!
+</div>
+<img loading="lazy" width="16" height="16" id="img961de54e3993e15c451d5b2c7f2db717" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;961de54e3993e15c451d5b2c7f2db717&#39;)"/>
+<br/>
+<img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;961de54e3993e15c451d5b2c7f2db717&#39;)"/>
+</td>
+<td>
+<div class="mytab" onclick="javascript:ljs(&#39;961de54e3993e15c451d5b2c7f2db717&#39;)">
+<div class="mycell0">
+<code onmouseover="az=1" onmouseout="az=0"><pre id="pre961de54e3993e15c451d5b2c7f2db717">@startuml
+
+left to right direction
+Актор1--&gt; (Прецедент 1)
+Актор2--&gt; (Прецедент 2)
+
+@enduml
+</pre></code>
+</div>
+<div class="mycell">
+<img loading="lazy" width="255" height="200" class="scale" src="../imgw/dark-961de54e3993e15c451d5b2c7f2db717.png"/>
+</div>
+</div>
+</td>
+</tr>
+</tbody></table>
+</p><p>
+<a style="position:relative;top:-38px;" name="7aa53dbdfc2137bf"></a>
+</p><div style="clear:both;height:50px;">
+</div>
+<!--heading--><h2 class="chap"><img onclick="window.scrollTo(0,0);" title="Back to top" src="../backtop1.svg" width="20" height="20" class="backtop"/><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/cmp/dokuwiki/ru/use-case-diagram#13"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/cmp/asciidoc/ru/use-case-diagram#13"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/cmp/markdown/ru/use-case-diagram#13"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>Параметры отображения</h2>
+<p></p>
+<p></p>
+Вы можете использовать команду <a href="https://plantuml.com/ru-dark/skinparam"><code class="cod">skinparam</code></a> для изменения шрифтов и цветов диаграммы.
+<p></p>
+Вы можете использовать данную команду :
+<ul>
+<li>При определении диаграммы, как любую другую команду,</li>
+<li>При <a href="preprocessing.html">подключении файла</a>,</li>
+<li>В конфигурационном файле, указанном в <a href="https://plantuml.com/ru-dark/command-line">командной строке</a> или в <a href="https://plantuml.com/ru-dark/ant-task">задании ANT</a>.</li>
+</ul>
+<p></p>
+Вы можете задать цвет или шрифт для шаблонов, в которые объединены акторы или прецеденты.
+<p></p>
+<p>
+<table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0">
+<tbody><tr>
+<td valign="top">
+<div id="msgeacc8fb5d865800e8896b6e3a74a53ea" class="msg">
+🎉 Copied!
+</div>
+<img loading="lazy" width="16" height="16" id="imgeacc8fb5d865800e8896b6e3a74a53ea" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;eacc8fb5d865800e8896b6e3a74a53ea&#39;)"/>
+<br/>
+<img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;eacc8fb5d865800e8896b6e3a74a53ea&#39;)"/>
+</td>
+<td>
+<div class="mytab" onclick="javascript:ljs(&#39;eacc8fb5d865800e8896b6e3a74a53ea&#39;)">
+<div class="mycell0">
+<code onmouseover="az=1" onmouseout="az=0"><pre id="preeacc8fb5d865800e8896b6e3a74a53ea">@startuml
+skinparam handwritten true
+
+skinparam usecase {
+BackgroundColor DarkSeaGreen
+BorderColor DarkSlateGray
+
+BackgroundColor&lt;&lt; Работа &gt;&gt; YellowGreen
+BorderColor&lt;&lt; Работа &gt;&gt; YellowGreen
+
+ArrowColor Olive
+ActorBorderColor black
+ActorFontName Courier
+
+ActorBackgroundColor&lt;&lt; Человек &gt;&gt; Gold
+}
+
+Пользователь &lt;&lt; Человек &gt;&gt;
+:Основная база данных: as MySql &lt;&lt; Приложение &gt;&gt;
+(Start) &lt;&lt; One Shot &gt;&gt;
+(Работа с приложением) as (Use) &lt;&lt; Работа &gt;&gt;
+
+Пользователь -&gt; (Start)
+Пользователь --&gt; (Use)
+
+MySql --&gt; (Use)
+
+@enduml
+</pre></code>
+</div>
+<div class="mycell">
+<img loading="lazy" width="433" height="218" class="scale" src="../imgw/dark-eacc8fb5d865800e8896b6e3a74a53ea.png"/>
+</div>
+</div>
+</td>
+</tr>
+</tbody></table>
+</p><p>
+<a style="position:relative;top:-38px;" name="d23dee2d0707a741"></a>
+</p><div style="clear:both;min-height:110px;margin-top:10px;">
+
+<div class="pezoic">
+<!-- Ezoic - Fish6 - incontent_6 -->
+<span id="ezoic-pub-ad-placeholder-119"></span><!-- ezoic_pub_ad_placeholder-119-incontent_6-234x60-119-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-119-incontent_6-468x60-119-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-119-incontent_6-728x90-119-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-119-incontent_6-970x90-119-nonexxxnonexxxxxxezmaxscaleval100 -->
+<!-- End Ezoic - Fish6 - incontent_6 -->
+</div>
+
+</div>
+<!--heading--><h2 class="chap"><img onclick="window.scrollTo(0,0);" title="Back to top" src="../backtop1.svg" width="20" height="20" class="backtop"/><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/cmp/dokuwiki/ru/use-case-diagram#14"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/cmp/asciidoc/ru/use-case-diagram#14"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/cmp/markdown/ru/use-case-diagram#14"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>Полноценный пример</h2>
+<p></p>
+<p></p>
+<p>
+<table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0">
+<tbody><tr>
+<td valign="top">
+<div id="msga492cabc5122a1fe2ae7093576ea9cc3" class="msg">
+🎉 Copied!
+</div>
+<img loading="lazy" width="16" height="16" id="imga492cabc5122a1fe2ae7093576ea9cc3" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;a492cabc5122a1fe2ae7093576ea9cc3&#39;)"/>
+<br/>
+<img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;a492cabc5122a1fe2ae7093576ea9cc3&#39;)"/>
+</td>
+<td>
+<div class="mytab" onclick="javascript:ljs(&#39;a492cabc5122a1fe2ae7093576ea9cc3&#39;)">
+<div class="mycell0">
+<code onmouseover="az=1" onmouseout="az=0"><pre id="prea492cabc5122a1fe2ae7093576ea9cc3">@startuml
+left to right direction
+skinparam packageStyle rectangle
+actor Заказчик
+actor Менеджер
+rectangle Заказ {
+  Заказчик -- (заказ)
+  (заказ) .&gt; (оплата) : включает
+  (консультация) .&gt; (заказ) : дополняет
+  (заказ) -- Менеджер
+}
+@enduml
+</pre></code>
+</div>
+<div class="mycell">
+<img loading="lazy" width="406" height="266" class="scale" src="../imgw/dark-a492cabc5122a1fe2ae7093576ea9cc3.png"/>
+</div>
+</div>
+</td>
+</tr>
+</tbody></table>
+</p><p>
+<a style="position:relative;top:-38px;" name="8acdcaa15380c78d"></a>
+</p><div style="clear:both;height:50px;">
+</div>
+<!--heading--><h2 class="chap"><img onclick="window.scrollTo(0,0);" title="Back to top" src="../backtop1.svg" width="20" height="20" class="backtop"/><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/cmp/dokuwiki/ru/use-case-diagram#15"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/cmp/asciidoc/ru/use-case-diagram#15"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/cmp/markdown/ru/use-case-diagram#15"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>Бизнес прецеденты и акторы</h2>
+<p></p>
+Вы можете добавить символ <code class="cod">/</code> для того, чтобы создать Бизнес прецеденты или акторов.
+<p></p>
+<h3>Бизнес прецедент</h3>
+<p>
+<table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0">
+<tbody><tr>
+<td valign="top">
+<div id="msg4ba56e94d422bd2fa7fa1a269a40c4c4" class="msg">
+🎉 Copied!
+</div>
+<img loading="lazy" width="16" height="16" id="img4ba56e94d422bd2fa7fa1a269a40c4c4" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;4ba56e94d422bd2fa7fa1a269a40c4c4&#39;)"/>
+<br/>
+<img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;4ba56e94d422bd2fa7fa1a269a40c4c4&#39;)"/>
+</td>
+<td>
+<div class="mytab" onclick="javascript:ljs(&#39;4ba56e94d422bd2fa7fa1a269a40c4c4&#39;)">
+<div class="mycell0">
+<code onmouseover="az=1" onmouseout="az=0"><pre id="pre4ba56e94d422bd2fa7fa1a269a40c4c4">@startuml
+
+(Один прецедент)/
+(Другой прецедент)/ as (UC2)
+usecase/ Пр3
+usecase/ (Последний\nпрецедент) as UC4
+
+@enduml
+</pre></code>
+</div>
+<div class="mycell">
+<img loading="lazy" width="369" height="164" class="scale" src="../imgw/dark-4ba56e94d422bd2fa7fa1a269a40c4c4.png"/>
+</div>
+</div>
+</td>
+</tr>
+</tbody></table>
+</p><p>
+</p><p></p>
+<h3>Бизнес актор</h3>
+<p>
+<table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0">
+<tbody><tr>
+<td valign="top">
+<div id="msg80ec96626bd5d4c9f9c710ed4b355ab1" class="msg">
+🎉 Copied!
+</div>
+<img loading="lazy" width="16" height="16" id="img80ec96626bd5d4c9f9c710ed4b355ab1" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;80ec96626bd5d4c9f9c710ed4b355ab1&#39;)"/>
+<br/>
+<img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;80ec96626bd5d4c9f9c710ed4b355ab1&#39;)"/>
+</td>
+<td>
+<div class="mytab" onclick="javascript:ljs(&#39;80ec96626bd5d4c9f9c710ed4b355ab1&#39;)">
+<div class="mycell0">
+<code onmouseover="az=1" onmouseout="az=0"><pre id="pre80ec96626bd5d4c9f9c710ed4b355ab1">@startuml
+
+:Один Участник:/
+:Другой\nучастник:/ as Man2
+actor/ Участник
+actor/ :Последний участник: as Person1
+
+@enduml
+</pre></code>
+</div>
+<div class="mycell">
+<img loading="lazy" width="260" height="242" class="scale" src="../imgw/dark-80ec96626bd5d4c9f9c710ed4b355ab1.png"/>
+</div>
+</div>
+</td>
+</tr>
+</tbody></table>
+</p><p>
+</p><p></p>
+<p></p>
+<em>[Ref. <a href="https://forum.plantuml.net/12179/">QA-12179</a>]</em>
+<a style="position:relative;top:-38px;" name="39a64d49d97a1ea0"></a>
+<div style="clear:both;min-height:110px;margin-top:10px;">
+
+<div class="pezoic">
+<!-- Ezoic - Fish7 - incontent_7 -->
+<span id="ezoic-pub-ad-placeholder-120"></span><!-- ezoic_pub_ad_placeholder-120-incontent_7-234x60-120-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-120-incontent_7-468x60-120-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-120-incontent_7-728x90-120-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-120-incontent_7-970x90-120-nonexxxnonexxxxxxezmaxscaleval100 -->
+<!-- End Ezoic - Fish7 - incontent_7 -->
+</div>
+
+</div>
+<!--heading--><h2 class="chap"><img onclick="window.scrollTo(0,0);" title="Back to top" src="../backtop1.svg" width="20" height="20" class="backtop"/><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/cmp/dokuwiki/ru/use-case-diagram#16"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/cmp/asciidoc/ru/use-case-diagram#16"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/cmp/markdown/ru/use-case-diagram#16"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>Изменение цвета и стиля стрелок (встраиваемый синтаксис)</h2>
+<p></p>
+Вы можете изменить <a href="https://plantuml.com/ru-dark/color">цвет</a> или стиль индивидуально для каждой стрелочки используя следующий встраиваемый синтаксис:
+<p></p>
+  <code class="cod">#color;line.[bold|dashed|dotted];text:color</code>
+<p></p>
+где:
+<p></p>
+<ul>
+<li><code class="cod">#</code> - начало режима конфигурирования,</li>
+<li><code class="cod">color</code> - <a href="https://plantuml.com/ru-dark/color">цвет</a> стрелки,</li>
+<li><code class="cod">;</code> - разделитель между конфигурационными параметрами,</li>
+<li><code class="cod">line.type</code> - тип линии. <code class="cod">type</code> может принимать значения: <code class="cod">bold</code> - жирная, <code class="cod">dashed</code> - штриховая, <code class="cod">dotted</code> - пунктирная,</li>
+<li><code class="cod">text:color</code> - <a href="https://plantuml.com/ru-dark/color">цвет</a> текста заметки на линии.</li>
+</ul>
+<p></p>
+<p>
+<table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0">
+<tbody><tr>
+<td valign="top">
+<div id="msge1a3e5ab4018ac4fb511d21d104fb7d4" class="msg">
+🎉 Copied!
+</div>
+<img loading="lazy" width="16" height="16" id="imge1a3e5ab4018ac4fb511d21d104fb7d4" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;e1a3e5ab4018ac4fb511d21d104fb7d4&#39;)"/>
+<br/>
+<img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;e1a3e5ab4018ac4fb511d21d104fb7d4&#39;)"/>
+</td>
+<td>
+<div class="mytab" onclick="javascript:ljs(&#39;e1a3e5ab4018ac4fb511d21d104fb7d4&#39;)">
+<div class="mycell0">
+<code onmouseover="az=1" onmouseout="az=0"><pre id="pree1a3e5ab4018ac4fb511d21d104fb7d4">@startuml
+actor foo
+foo --&gt; (bar) : обычная
+foo --&gt; (bar1) #line:red;line.bold;text:red  : красная, жирный
+foo --&gt; (bar2) #green;line.dashed;text:green : зеленая, штриховой
+foo --&gt; (bar3) #blue;line.dotted;text:blue   : синяя, пунктирный
+@enduml
+</pre></code>
+</div>
+<div class="mycell">
+<img loading="lazy" width="517" height="197" class="scale" src="../imgw/dark-e1a3e5ab4018ac4fb511d21d104fb7d4.png"/>
+</div>
+</div>
+</td>
+</tr>
+</tbody></table>
+</p><p>
+</p><p></p>
+<em>[Ref. <a href="https://forum.plantuml.net/3770">QA-3770</a> and <a href="https://forum.plantuml.net/3816">QA-3816</a>]</em>
+<em>[See similar feature on <a href="deployment-diagram.html#qjxu5xkj874qkedanfcf">deployment-diagram</a> or <a href="class-diagram.html#b5b0e4228f2e5022">class diagram</a>]</em>
+<a style="position:relative;top:-38px;" name="ded8ac71cf351121"></a>
+<div style="clear:both;height:50px;">
+</div>
+<!--heading--><h2 class="chap"><img onclick="window.scrollTo(0,0);" title="Back to top" src="../backtop1.svg" width="20" height="20" class="backtop"/><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/cmp/dokuwiki/ru/use-case-diagram#17"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/cmp/asciidoc/ru/use-case-diagram#17"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/cmp/markdown/ru/use-case-diagram#17"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>Изменение цвета и стиля элементов (встраиваемый синтаксис)</h2>
+<p></p>
+Вы можете изменить <a href="https://plantuml.com/ru-dark/color">цвет</a> или стиль индивидуально для каждого элемента используя следующий встраиваемый синтаксис:
+<p></p>
+  <code class="cod">#[color|back:color];line:color;line.[bold|dashed|dotted];text:color</code>
+<p></p>
+где:
+<p></p>
+<ul>
+<li><code class="cod">#</code> - начало режима конфигурирования,</li>
+<li><code class="cod">color</code> или <code class="cod">back:color</code> - <a href="https://plantuml.com/ru-dark/color">цвет</a> фона элемента,</li>
+<li><code class="cod">;</code> - разделитель между конфигурационными параметрами,</li>
+<li><code class="cod">line.color</code> - <a href="https://plantuml.com/ru-dark/color">цвет</a> контура элемента,</li>
+<li><code class="cod">line.type</code> - тип линии. <code class="cod">type</code> может принимать значения: <code class="cod">bold</code> - жирная, <code class="cod">dashed</code> - штрихоавя, <code class="cod">dotted</code> - пунктирная,</li>
+<li><code class="cod">text:color</code> - <a href="https://plantuml.com/ru-dark/color">цвет</a> текста элемента.</li>
+</ul>
+<p></p>
+<p>
+<table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0">
+<tbody><tr>
+<td valign="top">
+<div id="msg00bccb4be14b379d84178a21508185fd" class="msg">
+🎉 Copied!
+</div>
+<img loading="lazy" width="16" height="16" id="img00bccb4be14b379d84178a21508185fd" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;00bccb4be14b379d84178a21508185fd&#39;)"/>
+<br/>
+<img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;00bccb4be14b379d84178a21508185fd&#39;)"/>
+</td>
+<td>
+<div class="mytab" onclick="javascript:ljs(&#39;00bccb4be14b379d84178a21508185fd&#39;)">
+<div class="mycell0">
+<code onmouseover="az=1" onmouseout="az=0"><pre id="pre00bccb4be14b379d84178a21508185fd">@startuml
+actor a
+actor b #pink;line:red;line.bold;text:red
+usecase c #palegreen;line:green;line.dashed;text:green
+usecase d #aliceblue;line:blue;line.dotted;text:blue
+@enduml
+</pre></code>
+</div>
+<div class="mycell">
+<img loading="lazy" width="117" height="179" class="scale" src="../imgw/dark-00bccb4be14b379d84178a21508185fd.png"/>
+</div>
+</div>
+</td>
+</tr>
+</tbody></table>
+</p><p>
+</p><p></p>
+<em>[Ref. <a href="https://forum.plantuml.net/5340">QA-5340</a> and adapted from <a href="https://forum.plantuml.net/6852">QA-6852</a>]</em> 
+<a style="position:relative;top:-38px;" name="dfe9a2d0af3ac592"></a>
+<div style="clear:both;min-height:110px;margin-top:10px;">
+
+<div class="pezoic">
+<!-- Ezoic - Fish8 - incontent_8 -->
+<span id="ezoic-pub-ad-placeholder-121"></span><!-- ezoic_pub_ad_placeholder-121-incontent_8-234x60-121-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-121-incontent_8-468x60-121-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-121-incontent_8-728x90-121-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-121-incontent_8-970x90-121-nonexxxnonexxxxxxezmaxscaleval100 -->
+<!-- End Ezoic - Fish8 - incontent_8 -->
+</div>
+
+</div>
+<!--heading--><h2 class="chap"><img onclick="window.scrollTo(0,0);" title="Back to top" src="../backtop1.svg" width="20" height="20" class="backtop"/><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/cmp/dokuwiki/ru/use-case-diagram#18"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/cmp/asciidoc/ru/use-case-diagram#18"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/cmp/markdown/ru/use-case-diagram#18"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>Display JSON Data on Usecase diagram</h2>
+<p></p>
+<h3>Simple example</h3>
+<p>
+<table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0">
+<tbody><tr>
+<td valign="top">
+<div id="msgffb6f91dad1dd0cff4a8ddef64e67c62" class="msg">
+🎉 Copied!
+</div>
+<img loading="lazy" width="16" height="16" id="imgffb6f91dad1dd0cff4a8ddef64e67c62" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;ffb6f91dad1dd0cff4a8ddef64e67c62&#39;)"/>
+<br/>
+<img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;ffb6f91dad1dd0cff4a8ddef64e67c62&#39;)"/>
+</td>
+<td>
+<div class="mytab" onclick="javascript:ljs(&#39;ffb6f91dad1dd0cff4a8ddef64e67c62&#39;)">
+<div class="mycell0">
+<code onmouseover="az=1" onmouseout="az=0"><pre id="preffb6f91dad1dd0cff4a8ddef64e67c62">@startuml
+allowmixing
+
+actor     Actor
+usecase   Usecase
+
+json JSON {
+   &#34;fruit&#34;:&#34;Apple&#34;,
+   &#34;size&#34;:&#34;Large&#34;,
+   &#34;color&#34;: [&#34;Red&#34;, &#34;Green&#34;]
+}
+@enduml
+</pre></code>
+</div>
+<div class="mycell">
+<img loading="lazy" width="209" height="261" class="scale" src="../imgw/dark-ffb6f91dad1dd0cff4a8ddef64e67c62.png"/>
+</div>
+</div>
+</td>
+</tr>
+</tbody></table>
+</p><p>
+</p><p></p>
+<em>[Ref. <a href="https://forum.plantuml.net/15481/possible-link-elements-from-two-jsons-with-both-jsons-embeded?show=15567#c15567">QA-15481</a>]</em>
+<p></p>
+For another example, see on <a href="json.html#2fyxla9p9ob6l3t3tjre">JSON page</a>.
+</td>
+<td id="toctd" valign="top" style="max-width:240px;min-width:240px;">
+<!--toc-->
+<div id="toc">
+<ul>
+<li><a href="use-case-diagram.html#5cb617d22da857ea">Прецеденты</a>
+</li><li><a href="use-case-diagram.html#d9b36998c97be687">Акторы (Роли, Участники)</a>
+</li><li><a href="use-case-diagram.html#1cc1efff0435a503">Изменение стиля отображения актора</a>
+</li><li><a href="use-case-diagram.html#72f2908d8be5b528">Описание прецедентов</a>
+</li><li><a href="use-case-diagram.html#9b9f78e65119262a">Использование пакетов</a>
+</li><li><a href="use-case-diagram.html#c96ad883675e26af">Простой пример</a>
+</li><li><a href="use-case-diagram.html#63e4e92bb7d207ca">Обобщение (наследование)</a>
+</li><li><a href="use-case-diagram.html#d50d8f9219a41435">Использование заметок</a>
+</li><li><a href="use-case-diagram.html#c2f000e210baa94d">Шаблоны</a>
+</li><li><a href="use-case-diagram.html#9a49d5ae2dd333a4">Смена направления стрелок</a>
+</li><li><a href="use-case-diagram.html#45d7d5b32d17a0f9">Разделение диаграмм</a>
+</li><li><a href="use-case-diagram.html#d551e48d272b2b07">Направление слева направо</a>
+</li><li><a href="use-case-diagram.html#7aa53dbdfc2137bf">Параметры отображения</a>
+</li><li><a href="use-case-diagram.html#d23dee2d0707a741">Полноценный пример</a>
+</li><li><a href="use-case-diagram.html#8acdcaa15380c78d">Бизнес прецеденты и акторы</a>
+</li><li><a href="use-case-diagram.html#39a64d49d97a1ea0">Изменение цвета и стиля стрелок (встраиваемый синтаксис)</a>
+</li><li><a href="use-case-diagram.html#ded8ac71cf351121">Изменение цвета и стиля элементов (встраиваемый синтаксис)</a>
+</li><li><a href="use-case-diagram.html#dfe9a2d0af3ac592">Display JSON Data on Usecase diagram</a>
+</li></ul>
+</div>
+</td>
+</tr>
+</tbody></table>
+
+
+</p><p>
+
+<!-- Ezoic - Natif02L - bottom_of_page -->
+</p><span id="ezoic-pub-ad-placeholder-104"></span><!-- ezoic_pub_ad_placeholder-104-bottom_of_page-234x60-104-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-104-bottom_of_page-468x60-104-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-104-bottom_of_page-728x90-104-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-104-bottom_of_page-970x250-104-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-104-bottom_of_page-300x250x3-104-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-104-bottom_of_page-970x90-104-nonexxxnonexxxxxxezmaxscaleval100 -->
+<!-- End Ezoic - Natif02L - bottom_of_page -->
+</div>
+<!-- https://css-tricks.com/almanac/properties/f/float/ -->
+<!-- https://css-tricks.com/snippets/css/a-guide-to-flexbox/ -->
+
+
+<style>
+.btm {
+text-align:center;
+}
+.btm a{
+    text-decoration:none;
+    color:#b0c0d0;
+}
+.btm a:hover{
+    color:#8CB4FF;
+}
+</style>
+
+<div class="btm">
+<hr/>
+<a href="https://g.ezoic.net/privacy/plantuml.com"><small>Privacy Policy</small></a>
+    
+<a href="../direct-sales.html"><small>Advertise</small></a>
+<p>
+</p></div><!--btm-->
+
+
+<!--root-->
+
+<!-- Start of StatCounter Code --><script type="text/javascript">
+var sc_project=11129479; var sc_invisible=1; var sc_security="66ff16f1";
+</script>
+<script async="" type="text/javascript" src="https://www.statcounter.com/counter/counter.js"></script> <!-- End of StatCounter Code -->
+
+
+<!--[selectrongo:done]--><script type="text/javascript">
+				var __inScopeForCCPA = false;
+		function __uspapi(command, version, callback) {
+			var response = null;
+			var successs = false;
+			if (command === "getUSPData" && version === 1) {
+				var uspString = "1"; // Version
+				if (__inScopeForCCPA) {
+					uspString += "N"; // Has Explicit Notice for Opt Out been provided (ex footer or minor consent modal)
+					var result;
+					var consentCookie = (result = new RegExp('(?:^|; )ezoccpaconsent=([^;]*)').exec(document.cookie)) ? (result[1]) : null;
+					if (consentCookie === "nonconsent") {
+						uspString += "Y";
+					}
+					else {
+						uspString += "N";
+					}
+					uspString += "N" // Is pub a signatory to the IAB Limited Service Provider Agreement (http://www.iabprivacy.com/)
+				}
+				else {
+					uspString += "---";
+				}
+				response = {
+					uspString: uspString,
+					version: 1
+				};
+				success = true;
+			}
+			return callback(response, success);
+		};
+		function __receiveUspapiMessage(event) {
+			if (event.data.hasOwnProperty('__uspapiCall')) {
+				__uspapi('getUSPData', 1, function(uspData, success) {
+					event.source.postMessage({
+						__uspapiReturn: {
+							returnValue: uspData,
+							success: success,
+							callId: event.data.__uspapiCall.callId
+						}
+					},
+					event.origin);
+				});
+			}
+			return null;
+		};
+		window.addEventListener("message", __receiveUspapiMessage, false);
+</script>
+<script>__ez.queue.addFile('/tardisrocinante/vitals.js', '/tardisrocinante/vitals.js?gcb=2&cb=3', false, ['/parsonsmaize/mulvane.js'], true, false, true, false);</script>
+<script>var _audins_dom="plantuml_com",_audins_did=173770;__ez.queue.addDelayFunc("audins.js","__ez.script.add", "//go.ezodn.com/detroitchicago/audins.js?cb=195-2");</script><noscript><div style="display:none;"><img src="https://pixel.quantserve.com/pixel/p-31iz6hfFutd16.gif?labels=Domain.plantuml_com,DomainId.173770" border="0" height="1" width="1" alt="Quantcast"/></div></noscript>
+<script>__ez.queue.addFile('/beardeddragon/drake.js', '/beardeddragon/drake.js?gcb=2&cb=4', false, [], true, false, true, false);</script>
+<script type="text/javascript" style='display:none;'>var __ez_dims = (function() {
+		var setCookie = function( name, content, expiry ) {
+			return document.cookie = name+'='+content+((expiry)?';expires='+(new Date(Math.floor(new Date().getTime()+expiry*1000)).toUTCString()):'')+';path=/';
+		};
+		var ffid = 1;
+		var oh = window.screen.height;
+		var ow = window.screen.width;
+		var h = ffid === 1 ? oh : (oh > ow) ? oh : ow;
+		var w = ffid === 1 ? ow : (oh > ow) ? ow : oh;
+		var uh = window.innerHeight || document.documentElement.clientHeight || document.getElementsByTagName('body')[0].clientHeight;
+		var uw = window.innerWidth || document.documentElement.clientWidth || document.getElementsByTagName('body')[0].clientWidth;
+		setCookie('ezds', encodeURIComponent('ffid='+ffid+',w='+w+',h='+h), (31536e3*7));
+		setCookie('ezohw', encodeURIComponent('w='+uw+',h='+uh), (31536e3*7));
+	})();</script>
+<script type='text/javascript' style='display:none;' async>__ez.queue.addFile('/parsonsmaize/chanute.js', '/parsonsmaize/chanute.js?a=a&cb=7&dcb=195-2&shcb=34', true, ['/parsonsmaize/mulvane.js'], true, false, false, false);</script>
+<script type='text/javascript' style='display:none;' async>__ez.queue.addFile('/porpoiseant/jellyfish.js', '/porpoiseant/jellyfish.js?a=a&cb=10&dcb=195-2&shcb=34', false, [], true, false, false, false);</script></body></html>

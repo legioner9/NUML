@@ -1,0 +1,1181 @@
+<html lang="ru"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<script data-ezscrex='false' data-cfasync='false' data-pagespeed-no-defer>var __ez=__ez||{};__ez.stms=Date.now();__ez.evt={};__ez.script={};__ez.ck=__ez.ck||{};__ez.template={};__ez.template.isOrig=false;__ez.queue=function(){var e=0,i=0,t=[],n=!1,o=[],r=[],s=!0,a=function(e,i,n,o,r,s,a){var l=arguments.length>7&&void 0!==arguments[7]?arguments[7]:window,d=this;this.name=e,this.funcName=i,this.parameters=null===n?null:p(n)?n:[n],this.isBlock=o,this.blockedBy=r,this.deleteWhenComplete=s,this.isError=!1,this.isComplete=!1,this.isInitialized=!1,this.proceedIfError=a,this.fWindow=l,this.isTimeDelay=!1,this.process=function(){f("... func = "+e),d.isInitialized=!0,d.isComplete=!0,f("... func.apply: "+e);var i=d.funcName.split("."),n=null,o=this.fWindow||window;i.length>3||(n=3===i.length?o[i[0]][i[1]][i[2]]:2===i.length?o[i[0]][i[1]]:o[d.funcName]),null!=n&&n.apply(null,this.parameters),!0===d.deleteWhenComplete&&delete t[e],!0===d.isBlock&&(f("----- F'D: "+d.name),u())}},l=function(e,i,t,n,o,r,s){var a=arguments.length>7&&void 0!==arguments[7]?arguments[7]:window,l=this;this.name=e,this.path=i,this.async=o,this.defer=r,this.isBlock=t,this.blockedBy=n,this.isInitialized=!1,this.isError=!1,this.isComplete=!1,this.proceedIfError=s,this.fWindow=a,this.isTimeDelay=!1,this.isPath=function(e){return"/"===e[0]&&"/"!==e[1]},this.getSrc=function(e){return void 0!==window.__ezScriptHost&&this.isPath(e)&&"banger.js"!==this.name?window.__ezScriptHost+e:e},this.process=function(){l.isInitialized=!0,f("... file = "+e);var i=this.fWindow?this.fWindow.document:document,t=i.createElement("script");t.src=this.getSrc(this.path),!0===o?t.async=!0:!0===r&&(t.defer=!0),t.onerror=function(){var e={url:window.location.href,name:l.name,path:l.path,user_agent:window.navigator.userAgent};"undefined"!=typeof _ezaq&&(e.pageview_id=_ezaq.page_view_id);var i=encodeURIComponent(JSON.stringify(e)),t=new XMLHttpRequest;t.open("GET","//g.ezoic.net/ezqlog?d="+i,!0),t.send(),f("----- ERR'D: "+l.name),l.isError=!0,!0===l.isBlock&&u()},t.onreadystatechange=t.onload=function(){var e=t.readyState;f("----- F'D: "+l.name),e&&!/loaded|complete/.test(e)||(l.isComplete=!0,!0===l.isBlock&&u())},i.getElementsByTagName("head")[0].appendChild(t)}},d=function(e,i){this.name=e,this.path="",this.async=!1,this.defer=!1,this.isBlock=!1,this.blockedBy=[],this.isInitialized=!0,this.isError=!1,this.isComplete=i,this.proceedIfError=!1,this.isTimeDelay=!1,this.process=function(){}};function c(e){!0!==h(e)&&0!=s&&e.process()}function h(e){if(!0===e.isTimeDelay&&!1===n)return f(e.name+" blocked = TIME DELAY!"),!0;if(p(e.blockedBy))for(var i=0;i<e.blockedBy.length;i++){var o=e.blockedBy[i];if(!1===t.hasOwnProperty(o))return f(e.name+" blocked = "+o),!0;if(!0===e.proceedIfError&&!0===t[o].isError)return!1;if(!1===t[o].isComplete)return f(e.name+" blocked = "+o),!0}return!1}function f(e){var i=window.location.href,t=new RegExp("[?&]ezq=([^&#]*)","i").exec(i);"1"===(t?t[1]:null)&&console.debug(e)}function u(){++e>200||(f("let's go"),m(o),m(r))}function m(e){for(var i in e)if(!1!==e.hasOwnProperty(i)){var t=e[i];!0===t.isComplete||h(t)||!0===t.isInitialized||!0===t.isError?!0===t.isError?f(t.name+": error"):!0===t.isComplete?f(t.name+": complete already"):!0===t.isInitialized&&f(t.name+": initialized already"):t.process()}}function p(e){return"[object Array]"==Object.prototype.toString.call(e)}return window.addEventListener("load",(function(){setTimeout((function(){n=!0,f("TDELAY -----"),u()}),5e3)}),!1),{addFile:function(e,i,n,s,a,d,h,f,u){var m=new l(e,i,n,s,a,d,h,u);!0===f?o[e]=m:r[e]=m,t[e]=m,c(m)},addDelayFile:function(e,i){var n=new l(e,i,!1,[],!1,!1,!0);n.isTimeDelay=!0,f(e+" ...  FILE! TDELAY"),r[e]=n,t[e]=n,c(n)},addFunc:function(e,n,s,l,d,h,f,u,m,p){!0===h&&(e=e+"_"+i++);var w=new a(e,n,s,l,d,f,u,p);!0===m?o[e]=w:r[e]=w,t[e]=w,c(w)},addDelayFunc:function(e,i,n){var o=new a(e,i,n,!1,[],!0,!0);o.isTimeDelay=!0,f(e+" ...  FUNCTION! TDELAY"),r[e]=o,t[e]=o,c(o)},items:t,processAll:u,setallowLoad:function(e){s=e},markLoaded:function(e){if(e&&0!==e.length){if(e in t){var i=t[e];!0===i.isComplete?f(i.name+" "+e+": error loaded duplicate"):(i.isComplete=!0,i.isInitialized=!0)}else t[e]=new d(e,!0);f("markLoaded dummyfile: "+t[e].name)}},logWhatsBlocked:function(){for(var e in t)!1!==t.hasOwnProperty(e)&&h(t[e])}}}();__ez.evt.add=function(e,t,n){e.addEventListener?e.addEventListener(t,n,!1):e.attachEvent?e.attachEvent("on"+t,n):e["on"+t]=n()},__ez.evt.remove=function(e,t,n){e.removeEventListener?e.removeEventListener(t,n,!1):e.detachEvent?e.detachEvent("on"+t,n):delete e["on"+t]};__ez.script.add=function(e){var t=document.createElement("script");t.src=e,t.async=!0,t.type="text/javascript",document.getElementsByTagName("head")[0].appendChild(t)};__ez.dot={};__ez.queue.addFile('/detroitchicago/boise.js', '/detroitchicago/boise.js?gcb=195-2&cb=2', true, [], true, false, true, false);__ez.queue.addFile('/parsonsmaize/abilene.js', '/parsonsmaize/abilene.js?gcb=195-2&cb=28', true, [], true, false, true, false);</script>
+<script data-ezscrex="false" type="text/javascript" data-cfasync="false">window._ezaq = Object.assign({}, typeof window._ezaq !== "undefined" ? window._ezaq : {}, {"ad_cache_level":1,"domain_id":173770,"ezcache_level":2,"ezcache_skip_code":0,"has_bad_image":0,"has_bad_words":0,"is_sitespeed":0,"lt_cache_level":0,"page_view_id":"60093edd-bb27-467f-6afb-620ca4922402","response_size_orig":151195,"response_time_orig":4,"template_id":134,"url":"https://plantuml.com/ru/activity-diagram-beta","word_count":3712,"worst_bad_word_level":0});__ez.queue.markLoaded('ezaqBaseReady');</script>
+<script type="text/javascript">(function(){function storageAvailable(type){var storage;try{storage=window[type];var x='__storage_test__';storage.setItem(x,x);storage.removeItem(x);return true;}
+catch(e){return e instanceof DOMException&&(e.code===22||e.code===1014||e.name==='QuotaExceededError'||e.name==='NS_ERROR_DOM_QUOTA_REACHED')&&(storage&&storage.length!==0);}}
+function remove_ama_config(){if(storageAvailable('localStorage')){localStorage.removeItem("google_ama_config");}}
+remove_ama_config()})()</script>
+<script type="text/javascript">var ezoicTestActive = true</script>
+<script data-ezscrex="false" type="text/javascript" data-cfasync="false">window._ezaq = Object.assign({}, typeof window._ezaq !== "undefined" ? window._ezaq : {}, {"ab_test_id":"mod174-c","ad_cache_level":1,"ad_count_adjustment":0,"ad_lazyload_version":0,"ad_load_version":1,"ad_location_ids":"","adx_ad_count":0,"ai_placeholder_cache_level":1,"ai_placeholder_placement_cnt":-1,"bidder_method":1,"bidder_version":3,"city":"Krasnoyarsk","country":"RU","days_since_last_visit":-1,"display_ad_count":0,"domain_id":173770,"domain_test_group":20230802,"ds_adsize_opt_id":-1,"engaged_time_visit":0,"ezcache_level":2,"ezcache_skip_code":0,"form_factor_id":1,"framework_id":1,"has_bad_image":0,"has_bad_words":0,"iab_category":"","iab_category_0":"596","is_embed":false,"is_from_recommended_pages":false,"is_return_visitor":false,"is_sitespeed":0,"last_page_load":"","last_pageview_id":"","lt_cache_level":0,"max_ads":0,"metro_code":0,"optimization_version":1,"page_ad_positions":"","page_view_count":237,"page_view_id":"60093edd-bb27-467f-6afb-620ca4922402","position_selection_id":0,"postal_code":"660000","pv_event_count":0,"response_size_orig":151195,"response_time_orig":4,"serverid":"i-046252803f9f81749","state":"KYA","sub_page_ad_positions":"","t_epoch":1697690901,"template_id":134,"time_on_site_visit":0,"url":"https://plantuml.com/ru/activity-diagram-beta","word_count":3712,"worst_bad_word_level":0});__ez.queue.markLoaded('ezaqReady');</script>
+<script data-ezscrex='false' data-cfasync='false' data-pagespeed-no-defer>__ez.queue.addFile('/parsonsmaize/mulvane.js', '/parsonsmaize/mulvane.js?gcb=195-2&cb=5', true, ['/parsonsmaize/abilene.js'], true, false, true, false);__ez.queue.addFile('/parsonsmaize/olathe.js', '/parsonsmaize/olathe.js?gcb=195-2&cb=20', false, ['/parsonsmaize/abilene.js','/parsonsmaize/mulvane.js'], true, false, true, false);__ez.queue.addFile('/porpoiseant/et.js', '/porpoiseant/et.js?gcb=195-2&cb=2', false, [], true, false, true, false);!function(){var e;__ez.vep=(e=[],{Add:function(i,t){__ez.dot.isDefined(i)&&__ez.dot.isValid(t)&&e.push({type:"video",video_impression_id:i,domain_id:__ez.dot.getDID(),t_epoch:__ez.dot.getEpoch(0),data:__ez.dot.dataToStr(t)})},Fire:function(){if(void 0===document.visibilityState||"prerender"!==document.visibilityState){if(__ez.dot.isDefined(e)&&e.length>0)for(;e.length>0;){var i=5;i>e.length&&(i=e.length);var t=e.splice(0,i),o=__ez.dot.getURL("/detroitchicago/grapefruit.gif")+"?orig="+(!0===__ez.template.isOrig?1:0)+"&v="+btoa(JSON.stringify(t));__ez.dot.Fire(o)}e=[]}}})}();</script><script data-ezscrex='false' data-cfasync='false' data-pagespeed-no-defer>!function(){function e(i){return e="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e},e(i)}__ez.pel=function(){var i=[];function t(t,o,d,_,n,r,a,s){if(__ez.dot.isDefined(t)&&0!=__ez.dot.isAnyDefined(t.getSlotElementId,t.ElementId)){void 0===s&&(s=!1);var p=parseInt(__ez.dot.getTargeting(t,"ap")),f=__ez.dot.getSlotIID(t),u=__ez.dot.getAdUnit(t,s),z=parseInt(__ez.dot.getTargeting(t,"compid")),g=0,c=0,l=function(i){if("undefined"==typeof _ezim_d)return!1;var t=__ez.dot.getAdUnitPath(i).split("/").pop();if("object"===("undefined"==typeof _ezim_d?"undefined":e(_ezim_d))&&_ezim_d.hasOwnProperty(t))return _ezim_d[t];for(var o in _ezim_d)if(o.split("/").pop()===t)return _ezim_d[o];return!1}(t);"object"==e(l)&&(void 0!==l.creative_id&&(c=l.creative_id),void 0!==l.line_item_id&&(g=l.line_item_id)),__ez.dot.isDefined(f,u)&&__ez.dot.isValid(o)&&("0"===f&&!0!==s||""===u||i.push({type:"impression",impression_id:f,domain_id:__ez.dot.getDID(),unit:u,t_epoch:__ez.dot.getEpoch(0),revenue:d,est_revenue:_,ad_position:p,ad_size:"",bid_floor_filled:n,bid_floor_prev:r,stat_source_id:a,country_code:__ez.dot.getCC(),pageview_id:__ez.dot.getPageviewId(),comp_id:z,line_item_id:g,creative_id:c,data:__ez.dot.dataToStr(o),is_orig:s||__ez.template.isOrig}))}}function o(){void 0!==document.visibilityState&&"prerender"===document.visibilityState||(__ez.dot.isDefined(i)&&i.length>0&&[i.filter((function(e){return e.is_orig})),i.filter((function(e){return!e.is_orig}))].forEach((function(e){for(;e.length>0;){var i=e[0].is_orig||!1,t=5;t>e.length&&(t=e.length);var o=e.splice(0,t),d=__ez.dot.getURL("/porpoiseant/army.gif")+"?orig="+(!0===i?1:0)+"&sts="+btoa(JSON.stringify(o));(void 0!==window.isAmp&&isAmp||void 0!==window.ezWp&&ezWp)&&void 0!==window._ezaq&&_ezaq.hasOwnProperty("domain_id")&&(d+="&visit_uuid="+_ezaq.visit_uuid),__ez.dot.Fire(d)}})),i=[])}return{Add:t,AddAndFire:function(e,i){t(e,i,0,0,0,0,0),o()},AddAndFireOrig:function(e,i){t(e,i,0,0,0,0,0,!0),o()},AddById:function(e,t,o,d){var _=e.split("/");if(__ez.dot.isDefined(e)&&3===_.length&&__ez.dot.isValid(t)){var n=_[0],r={type:"impression",impression_id:_[2],domain_id:__ez.dot.getDID(),unit:n,t_epoch:__ez.dot.getEpoch(0),pageview_id:__ez.dot.getPageviewId(),data:__ez.dot.dataToStr(t),is_orig:o||__ez.template.isOrig};void 0!==d&&(r.revenue=d),i.push(r)}},Fire:o,GetPixels:function(){return i}}}()}();__ez.queue.addFile('/detroitchicago/raleigh.js', '/detroitchicago/raleigh.js?gcb=195-2&cb=6', false, ['/parsonsmaize/abilene.js'], true, false, true, false);__ez.queue.addFile('/detroitchicago/vista.js', '/detroitchicago/vista.js?gcb=195-2&cb=5', false, ['/parsonsmaize/abilene.js'], true, false, true, false);__ez.queue.addFile('/detroitchicago/tampa.js', '/detroitchicago/tampa.js?gcb=195-2&cb=5', false, ['/parsonsmaize/abilene.js'], true, false, true, false);</script><base href=""/><meta name="flattr:id" content="1ew3x0"/><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "url": "https://plantuml.com",
+  "name": "PlantUML",
+  "sameAs" : ["https://twitter.com/plantuml","https://en.wikipedia.org/wiki/PlantUML","https://www.wikidata.org/wiki/Q18346546"],
+  "logo": "https://cdn-0.plantuml.com/logo3.png",
+  "contactPoint": [{
+    "@type": "ContactPoint",
+    "email": "plantuml@gmail.com",
+    "url": "https://plantuml.com",
+    "contactType": "customer service"
+  }]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+    "@type": "ListItem",
+    "position": 1,
+    "item": {
+      "@id": "https://plantuml.com",
+      "name": "Home"
+    }
+  },{
+    "@type": "ListItem",
+    "position": 2,
+    "item": {
+      "@id": "https://plantuml.com/sitemap-language-specification",
+      "name": "Language specification"
+    }
+  },{
+    "@type": "ListItem",
+    "position": 3,
+    "item": {
+      "@id": "https://plantuml.com/activity-diagram-beta",
+      "name": "Activity Diagram (beta)"
+  }
+  }]
+}
+</script><link rel="canonical" href="activity-diagram-beta.html"/><link rel="alternate" hreflang="x-default" href="../activity-diagram-beta.html"/><link rel="alternate" hreflang="de" href="../de/activity-diagram-beta.html"/><link rel="alternate" hreflang="en" href="../activity-diagram-beta.html"/><link rel="alternate" hreflang="es" href="../es/activity-diagram-beta.html"/><link rel="alternate" hreflang="fr" href="../fr/activity-diagram-beta.html"/><link rel="alternate" hreflang="ja" href="../ja/activity-diagram-beta.html"/><link rel="alternate" hreflang="ru" href="activity-diagram-beta.html"/><link rel="alternate" hreflang="ko" href="../ko/activity-diagram-beta.html"/><link rel="alternate" hreflang="zh" href="../zh/activity-diagram-beta.html"/><link rel="shortcut icon" href="../favicon.ico"/><link rel="preload" as="image" href="../svgrepo-house.svg"/><link rel="preload" as="image" href="../svgrepo-text-news.svg"/><link rel="preload" as="image" href="../svgrepo-rocket-3-start.svg"/><link rel="preload" as="image" href="../svgrepo-server.svg"/><link rel="preload" as="image" href="../svgrepo-play.svg"/><link rel="preload" as="image" href="../svgrepo-forum.svg"/><link rel="preload" as="image" href="../svgrepo-add-to-online-cart.svg"/><link rel="preload" as="image" href="../svgrepo-forum-message.svg"/><link rel="preload" as="image" href="../svgrepo-palette-fill.svg"/><link rel="preload" as="image" href="../svgrepo-cpu.svg"/><link rel="preload" as="image" href="../svgrepo-books-library.svg"/><link rel="preload" as="image" href="../svgrepo-signpost-fill.svg"/><link rel="preload" as="image" href="../svgrepo-library.svg"/><link rel="preload" as="image" href="../flags21.png"/><link rel="preload" as="image" href="../svgrepo-uxwing-light-mode-toggle.svg"/><title>Новая активность Диаграмма синтаксиса Beta и особенности</title><meta name="description" content="Новый синтаксис более последовательным. Вы можете запускать, останавливать, этикетки, условия, в то время как петли, повторять петли, заметки, перегородки. Изменение шрифтов и цветов также возможно."/><meta property="og:type" content="article"/><meta property="og:title" content="Новая активность Диаграмма синтаксиса Beta и особенности"/><meta property="og:description" content="Новый синтаксис более последовательным. Вы можете запускать, останавливать, этикетки, условия, в то время как петли, повторять петли, заметки, перегородки. Изменение шрифтов и цветов также возможно."/><meta property="og:url" content="https://plantuml.com/ru/activity-diagram-beta"/><meta property="og:site_name" content="PlantUML.com"/><meta name="twitter:image" content="https://plantuml.com/og-activity-diagram-beta"/><meta property="og:locale" content="ru"/><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Новая активность Диаграмма синтаксиса Beta и особенности"/><meta name="twitter:description" content="Новый синтаксис более последовательным. Вы можете запускать, останавливать, этикетки, условия, в то время как петли, повторять петли, заметки, перегородки. Изменение шрифтов и цветов также возможно."/><meta name="twitter:site" content="@PlantUML"/><meta name="twitter:creator" content="@PlantUML"/><style>li{margin:2px}#external li{margin:13px}.pezoic{max-width:970px}@media screen and (max-width:1600px){.pezoic{max-width:768px}}.coptable{max-width:90%}.mytab{display:inline-block;border-radius:3px;border:1px solid #e1e4e8}.mytab:hover{border:1px dashed #0366d6;cursor:pointer;color:#0366d6;background:#f6f8fa}.cop{margin:25px 10px 0 10px}.cop:hover{cursor:pointer;filter:invert(30%) sepia(75%) saturate(4001%) hue-rotate(201deg) brightness(88%) contrast(98%)}.cop2{margin:25px 10px 0 10px}.cop2:hover{cursor:pointer}.msg{position:absolute;color:#396;background-color:#FFF;margin-top:55px;display:none;border-radius:3px;border:1px solid #4dff00}.mycell0{float:left;vertical-align:top;padding:10px}.mycell0 code:hover{cursor:default;color:#000}.mycell{float:right;vertical-align:top;padding:10px;max-width:55vw;overflow-x:auto}.mycell0 pre{max-width:55vw;overflow-x:auto}.cod{background:#edeff3;padding:2px 5px;border-radius:3px}.colo{display:inline-block;background:#edeff3;padding:7px 12px;border-radius:3px}.tag,.tagg,.tago,.tagr{text-rendering:optimizeLegibility;display:inline-block;padding:3px 5px 2px 4px;text-decoration:none;white-space:nowrap;border:1px solid #999;text-transform:uppercase;text-align:center;border-radius:3px;font-size:11px;font-weight:bold;line-height:90%}.tag{background-color:#eee}.tagg{background-color:#98fb98}.tago{background-color:#fafa00}.tagr{background-color:#ff4500}a{text-decoration:none;color:#0366d6}a:hover{text-decoration:underline}.menu1{border:0;font-family:Helvetica,sans-serif;font-size:14px;padding:0;margin:0;white-space:nowrap;overflow:hidden;vertical-align:middle;line-height:30px}.menu1 a{text-align:center;padding:10px 7px 10px 7px;text-decoration:none;color:#637282}.menu1 a:hover{color:#0366d6}#menu0{top:0;z-index:4;margin:0 0 0 10px;padding:0}@media screen and (max-width:1300px){#menu0{visibility:hidden}}.mhov img{margin:0 5px 0 0;padding:0}.mhov:hover{filter:invert(25%) sepia(97%) saturate(2026%) hue-rotate(201deg) brightness(91%) contrast(98%)}#menuside2{border:0;font-family:Helvetica,sans-serif;font-size:14px;padding:20px 0 4px 0;margin:0}#menuside2 span{vertical-align:top}#menuside2 li{list-style:none;position:relative;padding:0;margin:10px 20px 10px 10px;border:0}#menuside2 li a{display:inline-block;text-decoration:none;color:#637282;width:100%}#BC{z-index:0;padding-top:5px;top:35px}.breadcrumb{z-index:1;font-family:Helvetica,sans-serif;font-size:14px;text-align:center;display:inline-block;overflow:hidden;border-radius:5px}.breadcrumb a{text-decoration:none;outline:0;display:block;float:left;font-size:12px;line-height:24px;color:#373f49;padding:0 10px 0 35px;background:#f0f1f1;background:linear-gradient(#f0f1f1,#c6d2d2);position:relative}.breadcrumb a:first-child{padding-left:21px;border-radius:5px 0 0 5px}.breadcrumb a:first-child:before{left:14px}.breadcrumb a:last-child{visibility:hidden}.breadcrumb a.active,.breadcrumb a:hover{color:#0366d6;background:#c6d2d2;background:linear-gradient(#e3e4e4,#b8c7c7)}.breadcrumb a.active:after,.breadcrumb a:hover:after{background:#c6d2d2;background:linear-gradient(135deg,#e3e4e4,#b8c7c7)}.breadcrumb a:after{content:'';position:absolute;top:0;right:-12px;width:24px;height:24px;transform:scale(0.707) rotate(45deg);z-index:1;background:#f0f1f1;background:linear-gradient(135deg,#f0f1f1,#c6d2d2);box-shadow:2px -2px 0 2px rgba(0,0,0,0.1),3px -3px 0 2px rgba(255,255,255,0.1);border-radius:0 5px 0 50px}.breadcrumb a:last-child:after{content:none;visibility:hidden}.lga,.lga a,.lgi,.lgi a{font-family:Helvetica,sans-serif;font-size:13px;text-align:center;color:#fff;padding:0 5px;margin:0}.lga,.lga a{background-color:#008}.lgi,.lgi a{background-color:#888}.lga:hover,.lga:hover a{text-decoration:none;color:#BBB}.lgi:hover,.lgi:hover a{text-decoration:none;color:#CCC}</style><style>.backtop{margin:0 10px}.backtop:hover{cursor:pointer;filter:invert(30%) sepia(75%) saturate(4001%) hue-rotate(201deg) brightness(88%) contrast(98%)}</style><style>.dropbtn{padding:0;border:0;background:0}.dropdown{position:relative;display:inline-block;margin:0 10px}.dropdown-content{display:none;position:absolute;background-color:#f1f1f1;min-width:160px;box-shadow:0 8px 16px 0 rgba(0,0,0,0.2);z-index:1}.dropdown-content img{vertical-align:middle;margin:0 8px 0 1px}.dropdown-content a{font-size:small;font-weight:normal;color:black;padding:5px 10px;text-decoration:none;display:block}.dropdown-content a:hover{background-color:#ddd;color:#0366d6}.dropdown:hover .dropdown-content{display:block}.dropdown:hover .dropbtn{background-color:#3e8e41}</style><style>#flex1{margin:0;padding:0;display:flex;flex-direction:row;width:378px;height:100%}#lll{flex-grow:1;flex-shrink:1;max-width:162px;overflow:hidden}#mmm{flex-grow:0;flex-shrink:0;background:#edeff3;width:210px;min-width:210px;max-width:210px;flex-grow:0;flex-shrink:0;border-left:1px solid #d4d8de}#qqq{flex-grow:0;flex-shrink:0;width:4px;min-width:4px;max-width:4px;flex-grow:0;flex-shrink:0}#rrr{flex-grow:1;flex-shrink:1;max-width:162px;overflow:hidden}.cde{display:flex;flex-direction:column;justify-content:space-between;height:100%}.cd{display:flex;flex-direction:column;justify-content:space-start;height:100%}.aaa{height:30px;min-height:30px;max-height:30px;flex-grow:0;flex-shrink:0;background:#edeff3;border-bottom:1px solid #d4d8de}.bbb,.bbborder{flex-grow:1;flex-shrink:0}.bbborder{border-left:1px solid #d4d8de}#header{z-index:10;position:fixed;left:378px;right:0;height:30px;top:0;background:#edeff3;border-bottom:1px solid #d4d8de}#header2{z-index:7;position:fixed;left:378px;right:0;height:10px;top:30px;background:#fefefe}#left0{top:0;position:fixed;left:0;margin:0;bottom:0;width:378px;padding:0;z-index:2}#root{padding:0;margin:40px 0 0 388px;background:#fefefe}body{margin:auto;overflow-x:hidden;background:#fefefe}@media screen and (max-width:1190px){#flex1,#left0{width:215px}#root{margin:40px 0 0 224px}#header,#header2{left:215px}#left0{left:0}#lll,#rrr{width:0;visibility:hidden;flex-grow:0;flex-shrink:0}}@media screen and (max-width:1010px){#root{margin:0 0 0 216px}#header,#header2{display:none}#lll,#qqq{width:0;visibility:hidden;flex-grow:0;flex-shrink:0}#mmm{border-right:1px solid #d4d8de}}@media screen and (min-width:1700px){#header,#header2{left:518px}#left0,#flex1{width:518px}#root{margin-left:528px}#lll,#rrr{max-width:302px}}</style><script>window.pushMST_config={vapidPK:"BBodn2vLFoDO5AdCfmOOzNmcUsn52kTA6JNZNYVFymzEdWHonz_bkUcsaTkPXHvNGRkRUSAxMbup-H0l2sb1h_Q",enableOverlay:true,swPath:"/sw.js",i18n:{}};var pushmasterTag=document.createElement("script");pushmasterTag.src="https://cdn.pushmaster-cdn.xyz/scripts/publishers/629f5e297baecc00098a271b/SDK.js";pushmasterTag.setAttribute("defer","");var firstScriptTag=document.getElementsByTagName("script")[0];firstScriptTag.parentNode.insertBefore(pushmasterTag,firstScriptTag);</script><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-TKZNNQT9CZ"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date());gtag("config","G-TKZNNQT9CZ");</script><script>var llg="ru";var az=0;var amdark=0;function ljs(b){if(az){return false}var a=document.createElement("script");a.type="text/javascript";a.src="/btn-"+b+".js";document.body.innerHTML="<i style='position:absolute;top:30%;width:100%;'><center>Loading in progress...";document.body.appendChild(a)}function ctc(c){document.getElementById("img"+c).classList.remove("cop");document.getElementById("img"+c).classList.add("cop2");document.getElementById("pre"+c).style.backgroundColor="#4dff00";document.getElementById("msg"+c).style.display="inline";setTimeout(function(){document.getElementById("img"+c).classList.remove("cop2");document.getElementById("img"+c).classList.add("cop");document.getElementById("pre"+c).style.backgroundColor="";document.getElementById("msg"+c).style.display="none"},800);text=document.getElementById("pre"+c).innerText;if(window.clipboardData&&window.clipboardData.setData){return window.clipboardData.setData("Text",text)}else{if(document.queryCommandSupported&&document.queryCommandSupported("copy")){var a=document.createElement("textarea");a.textContent=text;a.style.position="fixed";document.body.appendChild(a);a.select();try{return document.execCommand("copy")}catch(b){return false}finally{document.body.removeChild(a)}}}};</script><script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><script type='text/javascript'>
+var ezoTemplate = 'pub_site';
+var ezouid = '1';
+var ezoFormfactor = '1';
+</script><script data-ezscrex="false" type='text/javascript'>
+var soc_app_id = '0';
+var did = 173770;
+var ezdomain = 'plantuml.com';
+var ezoicSearchable = 1;
+</script>
+<script data-ezscrex='false' data-pagespeed-no-defer data-cfasync='false'>
+function create_ezolpl() {
+	var d = new Date();
+	d.setTime(d.getTime() + (365*24*60*60*1000));
+	var expires = "expires="+d.toUTCString();
+	__ez.ck.setByCat("ezux_lpl_173770=" + new Date().getTime() + "|" + _ezaq.page_view_id + "|" + _ezaq.is_return_visitor + "; " + expires, 3);
+}
+function attach_ezolpl() {
+	if (document.readyState === "complete") {
+		create_ezolpl();
+		return;
+	}
+	window.addEventListener("load", create_ezolpl);
+}
+
+__ez.queue.addFunc("attach_ezolpl", "attach_ezolpl", null, false, ['/detroitchicago/boise.js'], true, false, false, false);
+</script></head><body><div id="left0"><div id="flex1"><div id="lll"><div class="cde"><div></div><div><span id="ezoic-pub-ad-placeholder-131"></span><!-- ezoic_pub_ad_placeholder-131-sidebar-120x600-131-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-131-sidebar-160x600-131-nonexxxnonexxxxxxezmaxscaleval100 --></div><div></div></div></div><div id="mmm"><div class="cde"><div><div><span id="ezoic-pub-ad-placeholder-105"></span><!-- ezoic_pub_ad_placeholder-105-sidebar_middle-120x240-105-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-105-sidebar_middle-125x125-105-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-105-sidebar_middle-180x150-105-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-105-sidebar_middle-200x200-105-nonexxxnonexxxxxxezmaxscaleval100 --></div><ul id="menuside2"><li><a href="index.html" class="mhov"><img src="../svgrepo-house.svg" width="16" height="16"/><span>В начало</span></a></li><li><a href="news.html" class="mhov"><img src="../svgrepo-text-news.svg" width="16" height="16"/><span>Что нового ?</span></a></li><li><a href="starting.html" class="mhov"><img src="../svgrepo-rocket-3-start.svg" width="16" height="16"/><span>Быстрый старт</span></a></li><li><a href="https://www.plantuml.com/plantuml/uml/SyfFKj2rKt3CoKnELR1Io4ZDoSa70000" class="mhov"><img src="../svgrepo-server.svg" width="16" height="16"/><span>Online Server</span></a></li><li><a href="running.html" class="mhov"><img src="../svgrepo-play.svg" width="16" height="16"/><span>Запуск</span></a></li><li><a href="faq.html" class="mhov"><img src="../svgrepo-forum.svg" width="16" height="16"/><span>F.A.Q.</span></a></li><li><a href="download.html" class="mhov"><img src="../svgrepo-add-to-online-cart.svg" width="16" height="16"/><span>Скачать</span></a></li><li><a href="../qa.html" class="mhov"><img src="../svgrepo-forum-message.svg" width="16" height="16"/><span>Форум</span></a></li><li><a href="theme.html" class="mhov"><img src="../svgrepo-palette-fill.svg" width="16" height="16"/><span>Theme</span></a></li><li><a href="preprocessing.html" class="mhov"><img src="../svgrepo-cpu.svg" width="16" height="16"/><span>Препроцессинг</span></a></li><li><a href="stdlib.html" class="mhov"><img src="../svgrepo-books-library.svg" width="16" height="16"/><span>Стандартная библиотека</span></a></li><li><a href="https://crashedmind.github.io/PlantUMLHitchhikersGuide" class="mhov"><img src="../svgrepo-signpost-fill.svg" width="16" height="16"/><span>Hitchhiker&#39;s Guide</span></a></li><li><a href="guide.html" class="mhov"><img src="../svgrepo-library.svg" width="16" height="16"/><span>PDF Guide</span></a></li></ul><div><span id="ezoic-pub-ad-placeholder-108"></span><!-- ezoic_pub_ad_placeholder-108-sidebar_middle-120x240-108-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-108-sidebar_middle-125x125-108-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-108-sidebar_middle-180x150-108-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-108-sidebar_middle-200x200-108-nonexxxnonexxxxxxezmaxscaleval100 --></div></div><div></div><div style="margin-bottom:35px;"><span id="ezoic-pub-ad-placeholder-186"></span><!-- ezoic_pub_ad_placeholder-186-sidebar_middle-120x240-186-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-186-sidebar_middle-125x125-186-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-186-sidebar_middle-180x150-186-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-186-sidebar_middle-200x200-186-nonexxxnonexxxxxxezmaxscaleval100 --></div></div></div><div id="qqq"><div class="cd"><div class="aaa"></div><div class="bbborder"></div></div></div><div id="rrr"><div class="cd"><div class="aaa"></div><div style="height:5px;"></div><div class="bbb"><div class="cde"><div></div><div><span id="ezoic-pub-ad-placeholder-175"></span><!-- ezoic_pub_ad_placeholder-175-sidebar-120x600-175-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-175-sidebar-160x600-175-nonexxxnonexxxxxxezmaxscaleval100 --></div><div></div></div></div></div></div></div></div><style>#contmenu{display:flex;height:30px;width:100%;margin:0;padding:0}#contmenua{height:30px;padding-right:25px}#contmenub{z-index:15;display:inline-block;flex-grow:1;flex-shrink:1;height:30px;background-color:#edeff3}#magic{white-space:nowrap;overflow:hidden;z-index:14;position:fixed;top:0;right:50px;height:30px;width:30px}#magic2{white-space:nowrap;overflow:hidden;z-index:16;position:fixed;top:0;right:0;height:30px;width:50px;background-color:#edeff3}#magic2 img{margin:5px 0 0 5px;filter:invert(44%) sepia(27%) saturate(310%) hue-rotate(170deg) brightness(92%) contrast(83%)}#magic2:hover img{filter:invert(25%) sepia(97%) saturate(2026%) hue-rotate(201deg) brightness(91%) contrast(98%)}#magic:hover #svgrepoleft{filter:invert(22%) sepia(53%) saturate(4563%) hue-rotate(202deg) brightness(95%) contrast(98%)}#magic:hover{width:100%;height:31px}#aze{height:30px;display:flex;flex-direction:row-reverse}#aze1{height:30px;background-color:#edeff3}#aze2{height:30px;background-color:#edeff3;padding-left:10px;border-left:1px solid #d4d8de;border-bottom:1px solid #d4d8de}#aze1 img{filter:invert(46%) sepia(6%) saturate(1254%) hue-rotate(171deg) brightness(94%) contrast(92%)}#aze3{width:3px;height:30px;background-color:#edeff3}</style><div id="header"><div id="contmenu"><div id="contmenua"><div class="menu1"><a href="sequence-diagram.html">последовательност</a><a href="use-case-diagram.html">прецедентов</a><a href="class-diagram.html">классов</a><a href="activity-diagram-beta.html">активности</a><a href="component-diagram.html">компонент</a><a href="state-diagram.html">состояний</a><a href="object-diagram.html">объект</a><a href="deployment-diagram.html">развёртывания</a><a href="timing-diagram.html">синхронизации</a><a href="nwdiag.html">Network</a><a href="salt.html">Wireframe</a><a href="archimate-diagram.html">Archimate</a><a href="gantt-diagram.html">Gantt</a><a href="mindmap-diagram.html">MindMap</a><a href="wbs-diagram.html">WBS</a><a href="json.html">JSON</a><a href="yaml.html">YAML</a></div></div><div id="contmenub"></div></div><div id="magic"><div id="aze"><div id="aze1"><img id="svgrepoleft" width="30" height="30" src="../svgrepo-left.svg"/></div><div id="aze2"><div class="menu1"><a href="sequence-diagram.html">последовательност</a><a href="use-case-diagram.html">прецедентов</a><a href="class-diagram.html">классов</a><a href="activity-diagram-beta.html">активности</a><a href="component-diagram.html">компонент</a><a href="state-diagram.html">состояний</a><a href="object-diagram.html">объект</a><a href="deployment-diagram.html">развёртывания</a><a href="timing-diagram.html">синхронизации</a><a href="nwdiag.html">Network</a><a href="salt.html">Wireframe</a><a href="archimate-diagram.html">Archimate</a><a href="gantt-diagram.html">Gantt</a><a href="mindmap-diagram.html">MindMap</a><a href="wbs-diagram.html">WBS</a><a href="json.html">JSON</a><a href="yaml.html">YAML</a></div></div><div id="aze3"></div></div></div><div id="magic2"><a href="../ru-dark/activity-diagram-beta.html"><img src="../svgrepo-uxwing-light-mode-toggle.svg" height="20"/></a></div></div><div id="header2"></div><div id="root"><style>#haut1{margin:50px 0 20px;padding:0;min-height:80px}#donate{padding-top:5px;min-height:30px}</style><div id="haut1"><div style="float:left;"><div class="breadcrumb"><a href="sitemap.html">PlantUML</a><a href="sitemap-language-specification.html">Language specification</a><a href="activity-diagram-beta.html">Activity Diagram (beta)</a><a href="activity-diagram-beta.html#"></a></div><div id="donate">   <a href="https://discord.gg/sXhzexAQGh" style="text-decoration: none;"><img src="https://img.shields.io/discord/1083727021328306236?color=5865F2&amp;logo=discord&amp;logoColor=white" alt="Discord server"/></a>   <a href="https://github.com/sponsors/plantuml/" style="text-decoration: none;"><img src="https://img.shields.io/github/sponsors/plantuml?logo=github"/></a>   <a href="https://www.patreon.com/bePatron?patAmt=1&amp;u=527450&amp;rid=152970" style="text-decoration: none;"><img src="https://img.shields.io/badge/patreon-122-chocolate?logo=patreon"/></a>   <a href="../lp.html" style="text-decoration: none;"><img src="https://img.shields.io/liberapay/patrons/plantuml?color=gold&amp;logo=liberapay&amp;label=liberapay"/></a>   <a href="../en/paypal.html" style="text-decoration: none;"><img src="https://img.shields.io/badge/paypal-296-skyblue?logo=paypal&amp;logoColor=red"/></a></div></div><div style="float:right; margin:3px 0;"><style>#langlist{display:flex;justify-content:space-between;width:317px;height:16px;margin:3px 10px 3px 0}.sel2{border:2px solid #fefefe}.nosel2{border:2px solid #fefefe;filter:grayscale(100%) opacity(75%)}.sel2:hover,.nosel2:hover{cursor:pointer;border:2px solid #0366d6;border-spacing:0;filter:grayscale(0);filter:contrast(200%);filter:brightness(150%)}#flag1,#flag2,#flag3,#flag4,#flag5,#flag6,#flag7,#flag8{background:url(../flags21.png);background-repeat:no-repeat;background-clip:content-box;width:22px;height:16px}#flag2{background-position:-22px 0}#flag3{background-position:-44px 0}#flag4{background-position:-66px 0}#flag5{background-position:-88px 0}#flag6{background-position:-110px 0}#flag7{background-position:-132px 0}#flag8{background-position:-154px 0}</style><div id="langlist"><div id="flag1" onclick="location.href=&#39;/en/activity-diagram-beta&#39;" class="nosel2"></div><div id="flag2" onclick="location.href=&#39;/de/activity-diagram-beta&#39;" class="nosel2"></div><div id="flag3" onclick="location.href=&#39;/es/activity-diagram-beta&#39;" class="nosel2"></div><div id="flag4" onclick="location.href=&#39;/fr/activity-diagram-beta&#39;" class="nosel2"></div><div id="flag5" onclick="location.href=&#39;/ja/activity-diagram-beta&#39;" class="nosel2"></div><div id="flag6" onclick="location.href=&#39;/ko/activity-diagram-beta&#39;" class="nosel2"></div><div id="flag7" onclick="location.href=&#39;/ru/activity-diagram-beta&#39;" class="sel2"></div><div id="flag8" onclick="location.href=&#39;/zh/activity-diagram-beta&#39;" class="nosel2"></div></div></div></div><p><style>#topsticky{z-index:2;margin:0 240px 0 0}@media screen and (min-height:800px){#topsticky{position:sticky;top:40px}}@media screen and (max-width:1500px){#topsticky{margin:0}}</style></p><div id="topsticky"><span id="ezoic-pub-ad-placeholder-647"></span><!-- ezoic_pub_ad_placeholder-647-under_page_title-320x100-647-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-647-under_page_title-300x50v2-647-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-647-under_page_title-320x50-647-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-647-under_page_title-468x60-647-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-647-under_page_title-728x90-647-nonexxxnonexxxxxxezmaxscaleval100 --></div><p><a style="position:relative;top:-38px;" name="1de2ee66e338a239"></a><style>#toc{z-index:2;position:sticky;top:40px;list-style-type:none;margin:0;padding:0 10px}.chap{clear:both}#toc ul{list-style-type:none;max-height:87vh;overflow-y:auto;background:#f6f8fa;border-width:2px;border-style:groove;border-radius:3px;border-color:#e1e4e8;margin:0;padding:0}@media screen and (min-height:450px){#toc ul{max-height:89.5vh}}@media screen and (min-height:550px){#toc ul{max-height:91.5vh}}@media screen and (min-height:700px){#toc ul{max-height:93.5vh}}@media screen and (min-height:900px){#toc ul{max-height:94.5vh}}#toc li{margin:5px 5px 5px 10px;padding:0}@media screen and (max-width:1500px){#toctd{display:none}#toc{display:none}}</style><table border="0" cellspacing="0" cellpadding="0" width="100%"><tbody><tr valign="top" width="100%"><td valign="top"><h1 class="chap"><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/cmp/dokuwiki/ru/activity-diagram-beta#0"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/cmp/asciidoc/ru/activity-diagram-beta#0"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/cmp/markdown/ru/activity-diagram-beta#0"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>Диаграмма деятельности (новый синтаксис)</h1><p></p><a href="activity-diagram-legacy.html">Прежний синтаксис, использовавшийся для диаграмм деятельности</a>, имел ряд ограничений и проблем с поддержкой. Признавая эти недостатки, мы представили полностью переработанный синтаксис и реализацию, которые не только удобны для пользователя, но и более стабильны. <p></p><h3>Преимущества нового синтаксиса</h3><p></p><ul><li>Отсутствие зависимости от Graphviz: Как и в случае с диаграммами последовательностей, новый синтаксис исключает необходимость установки Graphviz, упрощая тем самым процесс настройки.</li><li>Простота обслуживания: Интуитивный характер нового синтаксиса облегчает управление и сопровождение диаграмм.</li></ul><p></p><h3>Переход на новый синтаксис</h3> Хотя мы будем продолжать поддерживать старый синтаксис для сохранения совместимости, мы настоятельно рекомендуем пользователям перейти на новый синтаксис, чтобы использовать его расширенные возможности и преимущества. <p></p> Сделайте этот переход сегодня и почувствуйте более рациональный и эффективный процесс создания диаграмм с помощью нового синтаксиса диаграмм деятельности. <a style="position:relative;top:-38px;" name="301241875e1def42"></a><div style="clear:both;height:50px;"></div><h2 class="chap"><img onclick="window.scrollTo(0,0);" title="Back to top" src="../backtop1.svg" width="20" height="20" class="backtop"/><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/cmp/dokuwiki/ru/activity-diagram-beta#1"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/cmp/asciidoc/ru/activity-diagram-beta#1"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/cmp/markdown/ru/activity-diagram-beta#1"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>Простая активность</h2> Описания активностей начинаются с <code class="cod">:</code> и заканчиваются <code class="cod">;</code>. Само описание может содержать в себе несколько строчек. <p></p> Как уже упоминалось выше, дополнительно форматировать текст описания активности возможно, используя синтаксис <a href="creole.html">creole</a>. <p></p> Активности автоматически связаются по порядку их определения. <p></p><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msgcbd3ee2903fa4d885064e66406260253" class="msg"> 🎉 Copied! </div><img width="16" height="16" id="imgcbd3ee2903fa4d885064e66406260253" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;cbd3ee2903fa4d885064e66406260253&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;cbd3ee2903fa4d885064e66406260253&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;cbd3ee2903fa4d885064e66406260253&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="precbd3ee2903fa4d885064e66406260253">@startuml
+
+:Привет мир!;
+
+:Эта активность описывается
+несколькими **строчками** текста;
+
+:|= Еще один    |= быстрый пример  |
+| использования | creole разметки  |;
+
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="269" height="250" class="scale" src="../imgw/img-cbd3ee2903fa4d885064e66406260253.png"/></div></div></td></tr></tbody></table></p><p><a style="position:relative;top:-38px;" name="45e7ad1c1b3c39e2"></a></p><div style="clear:both;min-height:110px;margin-top:10px;"><div class="pezoic"><span id="ezoic-pub-ad-placeholder-179"></span><!-- ezoic_pub_ad_placeholder-179-under_second_paragraph-234x60-179-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-179-under_second_paragraph-468x60-179-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-179-under_second_paragraph-728x90-179-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-179-under_second_paragraph-970x90-179-nonexxxnonexxxxxxezmaxscaleval100 --></div></div><h2 class="chap"><img onclick="window.scrollTo(0,0);" title="Back to top" src="../backtop1.svg" width="20" height="20" class="backtop"/><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/cmp/dokuwiki/ru/activity-diagram-beta#2"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/cmp/asciidoc/ru/activity-diagram-beta#2"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/cmp/markdown/ru/activity-diagram-beta#2"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>Старт активности, Стоп активности, Стоп поток, Быстрый стоп</h2><p></p> Следующие ключевые слова используются для: <ul><li><code class="cod">start</code> - для обозначения начального состояния активности,</li><li><code class="cod">stop</code> - для обозначения конечного состояния активности,</li><li><code class="cod">end</code> - для обозначения конечного состояния потока,</li><li><code class="cod">kill</code> или <code class="cod">detach</code> - для быстрого прерывания активности без обозначения каких либо значков.</li></ul><p></p> Использование либого из них не обязательно, диаграммы активности можно строить и без указания начального и/или конечного состояний <code class="cod">start</code>, <code class="cod">stop</code> или <code class="cod">end</code>, как было продемонстрировано на примерах выше. Чтобы прервать какую-либо активность без отображения каких-либо значков, нужно использовать идентичные по своему действию ключевые клова <code class="cod">kill</code> или <code class="cod">detach</code>. <p></p><p></p><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msg3987b9430b1ea77bcc5feb39fb2eccec" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="img3987b9430b1ea77bcc5feb39fb2eccec" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;3987b9430b1ea77bcc5feb39fb2eccec&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;3987b9430b1ea77bcc5feb39fb2eccec&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;3987b9430b1ea77bcc5feb39fb2eccec&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="pre3987b9430b1ea77bcc5feb39fb2eccec">@startuml
+start
+:Привет мир!;
+:Эта активность описывается
+несколькими **строчками** текста;
+stop
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="220" height="207" class="scale" src="../imgw/img-3987b9430b1ea77bcc5feb39fb2eccec.png"/></div></div></td></tr></tbody></table></p><p></p><p></p><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msge65a65849dfbbdd279ddb035c2b9d757" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="imge65a65849dfbbdd279ddb035c2b9d757" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;e65a65849dfbbdd279ddb035c2b9d757&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;e65a65849dfbbdd279ddb035c2b9d757&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;e65a65849dfbbdd279ddb035c2b9d757&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="pree65a65849dfbbdd279ddb035c2b9d757">@startuml
+start
+:Привет мир!;
+:Эта активность описывается
+несколькими **строчками** текста;
+end
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="220" height="205" class="scale" src="../imgw/img-e65a65849dfbbdd279ddb035c2b9d757.png"/></div></div></td></tr></tbody></table></p><p></p><p></p><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msgd439a89be460cda3c8de774f428ca955" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="imgd439a89be460cda3c8de774f428ca955" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;d439a89be460cda3c8de774f428ca955&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;d439a89be460cda3c8de774f428ca955&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;d439a89be460cda3c8de774f428ca955&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="pred439a89be460cda3c8de774f428ca955">@startuml
+if (условие) then
+:Один\nkill;
+kill
+else
+:Два;
+endif
+:Три\nstop;
+stop
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="153" height="216" class="scale" src="../imgw/img-d439a89be460cda3c8de774f428ca955.png"/></div></div></td></tr></tbody></table></p><p><a style="position:relative;top:-38px;" name="9d3afea73e90192d"></a></p><div style="clear:both;height:50px;"></div><h2 class="chap"><img onclick="window.scrollTo(0,0);" title="Back to top" src="../backtop1.svg" width="20" height="20" class="backtop"/><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/cmp/dokuwiki/ru/activity-diagram-beta#3"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/cmp/asciidoc/ru/activity-diagram-beta#3"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/cmp/markdown/ru/activity-diagram-beta#3"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>Условия (оператор if)</h2><p></p> Можно использовать ключевые слова <code class="cod">if</code>, <code class="cod">then</code>, <code class="cod">else</code> и <code class="cod">endif</code>, чтобы добавить добавить проверку условия на диаграмму. <p></p> Доступно 3 равнозначных варианта записи условия (квадратными скобочками отмечены опциональные поля, которые можно указывать, а можно не указывать): <p></p><h4>1 вариант записи:</h4><ul><li><code class="cod">if (текстУсловия) then [(подписьУспешно)]</code></li><li><code class="cod">else [(подписьНеУспешно)]</code></li><li><code class="cod">endif</code></li></ul><p></p><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msg0332a90fff69b0ebfaad4d7d1540d1f5" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="img0332a90fff69b0ebfaad4d7d1540d1f5" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;0332a90fff69b0ebfaad4d7d1540d1f5&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;0332a90fff69b0ebfaad4d7d1540d1f5&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;0332a90fff69b0ebfaad4d7d1540d1f5&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="pre0332a90fff69b0ebfaad4d7d1540d1f5">@startuml
+
+start
+
+if (Graphviz установлен?) then (да)
+
+  :доступны все\nдиаграммы;
+
+else (нет)
+
+  :доступны только диаграммы
+  __последовательностей__ и __активностей__;
+
+endif
+
+stop
+
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="365" height="216" class="scale" src="../imgw/img-0332a90fff69b0ebfaad4d7d1540d1f5.png"/></div></div></td></tr></tbody></table></p><p></p><p></p><h4>2 вариант записи</h4><p></p><ul><li><code class="cod">if (текстУсловия) is (подписьУспешно) then</code></li><li><code class="cod">else [(подписьНеУспешно)]</code></li><li><code class="cod">endif</code></li></ul><p></p><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msg52f1c4f81973575fa4a598901750e62f" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="img52f1c4f81973575fa4a598901750e62f" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;52f1c4f81973575fa4a598901750e62f&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;52f1c4f81973575fa4a598901750e62f&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;52f1c4f81973575fa4a598901750e62f&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="pre52f1c4f81973575fa4a598901750e62f">@startuml
+
+if (цвет?) is (&lt;color:red&gt;красный) then
+  :пачатаем &#34;красный&#34;;
+else
+  :печатаем &#34;НЕ красный&#34;;
+endif
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="331" height="122" class="scale" src="../imgw/img-52f1c4f81973575fa4a598901750e62f.png"/></div></div></td></tr></tbody></table></p><p></p><p></p><h4>3 вариант записи</h4><p></p><ul><li><code class="cod">if (текстУсловия) equals (подписьУспешно) then</code></li><li><code class="cod">else [(подписьНеУспешно)]</code></li><li><code class="cod">endif</code></li></ul><p></p><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msg918442edbb3fe0d76a7c5650f87db4ef" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="img918442edbb3fe0d76a7c5650f87db4ef" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;918442edbb3fe0d76a7c5650f87db4ef&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;918442edbb3fe0d76a7c5650f87db4ef&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;918442edbb3fe0d76a7c5650f87db4ef&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="pre918442edbb3fe0d76a7c5650f87db4ef">@startuml
+
+if (счетчик?) is (5) then
+  :пачатаем &#34;5&#34;;
+else
+  :печатаем &#34;НЕ 5&#34;;
+endif
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="247" height="122" class="scale" src="../imgw/img-918442edbb3fe0d76a7c5650f87db4ef.png"/></div></div></td></tr></tbody></table></p><p></p><p></p><p></p><em>[Ref. <a href="https://forum.plantuml.net/301/activity-diagram-beta?show=302#a302">QA-301</a>]</em><p></p><h3>Ряд последовательных проверок условий (горизонтальное отображение)</h3><p></p> Вы можете использовать ключевое слово <code class="cod">elseif</code>, чтобы создать несколько последовательных проверок условий <em>(по умолчанию используется режим горизонтального отображения)</em>: <p></p><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msg26d48bb1546e33d33b436e2c3494feb5" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="img26d48bb1546e33d33b436e2c3494feb5" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;26d48bb1546e33d33b436e2c3494feb5&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;26d48bb1546e33d33b436e2c3494feb5&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;26d48bb1546e33d33b436e2c3494feb5&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="pre26d48bb1546e33d33b436e2c3494feb5">@startuml
+
+start
+
+if     (условие 1) then (да)
+  :Текст 1;
+elseif (условие 2) then (да)
+  :Срочное\nзавершение;
+  stop
+elseif (условие 3) then (да)
+  :Текст 3;
+elseif (условие 4) then (да)
+  :Текст 4;
+else (ничего не\nподходит)
+  :Текст: ничего\nне подошло;
+endif
+
+:продолжение;
+
+stop
+
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="516" height="347" class="scale" src="../imgw/img-26d48bb1546e33d33b436e2c3494feb5.png"/></div></div></td></tr></tbody></table></p><p></p><p></p><p></p><h3>Ряд последовательных проверок условий (вертикальное отображение)</h3><p></p> Используйте опцию <code class="cod">!pragma useVerticalIf on</code> для отображения нескольких последовательных проверок условий в вертикальном режиме: <p></p><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msg312ad11db1ce021189979f2b4234f608" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="img312ad11db1ce021189979f2b4234f608" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;312ad11db1ce021189979f2b4234f608&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;312ad11db1ce021189979f2b4234f608&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;312ad11db1ce021189979f2b4234f608&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="pre312ad11db1ce021189979f2b4234f608">@startuml
+
+!pragma useVerticalIf on
+start
+
+if     (условие 1) then (да)
+  :Текст 1;
+elseif (условие 2) then (да)
+  :Срочное\nзавершение;
+  stop
+elseif (условие 3) then (да)
+  :Текст 3;
+elseif (условие 4) then (да)
+  :Текст 4;
+else (ничего не\nподходит)
+  :Текст: ничего\nне подошло;
+endif
+
+:продолжение;
+
+stop
+
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="217" height="624" class="scale" src="../imgw/img-312ad11db1ce021189979f2b4234f608.png"/></div></div></td></tr></tbody></table></p><p></p><p></p> Также, можно использовать параметр <code class="cod">-P</code> для установки этой опции для диаграмм по умолчанию из <a href="command-line.html">командной строки</a>: <p></p><p><code></code></p><pre class="colo"><code>java -jar plantuml.jar -PuseVerticalIf=on
+</code></pre><p></p><p></p><em>[Refs. <a href="https://forum.plantuml.net/3931/please-provide-elseif-structure-vertically-activity-diagrams">QA-3931</a>, <a href="https://github.com/plantuml/plantuml/issues/582">issue-582</a>]</em><p></p><center><div class="tago">WARNING</div> <b>This translation need to be updated.</b> <div class="tago">WARNING</div></center><a style="position:relative;top:-38px;" name="537b5a761669087b"></a><div style="clear:both;min-height:110px;margin-top:10px;"><div class="pezoic"><span id="ezoic-pub-ad-placeholder-114"></span><!-- ezoic_pub_ad_placeholder-114-mid_content-234x60-114-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-114-mid_content-468x60-114-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-114-mid_content-728x90-114-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-114-mid_content-970x90-114-nonexxxnonexxxxxxezmaxscaleval100 --></div></div><h2 class="chap"><img onclick="window.scrollTo(0,0);" title="Back to top" src="../backtop1.svg" width="20" height="20" class="backtop"/><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/cmp/dokuwiki/ru/activity-diagram-beta#4"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/cmp/asciidoc/ru/activity-diagram-beta#4"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/cmp/markdown/ru/activity-diagram-beta#4"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>Перебор множества условий для определенного параметра (оператор switch)</h2><p></p> Для добавления в диаграмму перебора множества условий для какого-то одного параметра (конструкция switch-case), нужно использовать следующие ключевые слова: <code class="cod">switch</code>, <code class="cod">case</code>, <code class="cod">endswitch</code>. <p></p> Условно можно изобразить синтаксис этой конструкции следующим образом: <p><code></code></p><pre class="colo"><code>switch ( переметрДляКоторогоПроверяютсяУсловияНиже )
+  case ( условие1 ? )
+    :вариант 1;
+  case ( условие2 ? )
+    :вариант 2;
+  ...
+endswitch
+</code></pre><p></p><p></p><p></p><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msg5f276953e64184d3808d9c9399e8156b" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="img5f276953e64184d3808d9c9399e8156b" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;5f276953e64184d3808d9c9399e8156b&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;5f276953e64184d3808d9c9399e8156b&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;5f276953e64184d3808d9c9399e8156b&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="pre5f276953e64184d3808d9c9399e8156b">@startuml
+
+start
+
+switch ( число потоков )
+case ( равно 1 )
+  :1 поток;
+case ( равно 2 ) 
+  :2 потока;
+case ( равно 3 )
+  :3 потока;
+case ( равно 4 )
+  :4 потока
+  ----
+  срочное
+  завершение
+  kill;
+  kill
+case ( равно 5 )
+  :5 потоков;
+endswitch
+
+stop
+
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="488" height="298" class="scale" src="../imgw/img-5f276953e64184d3808d9c9399e8156b.png"/></div></div></td></tr></tbody></table></p><p><a style="position:relative;top:-38px;" name="d7b1027a512b4d7b"></a></p><div style="clear:both;height:50px;"></div><h2 class="chap"><img onclick="window.scrollTo(0,0);" title="Back to top" src="../backtop1.svg" width="20" height="20" class="backtop"/><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/cmp/dokuwiki/ru/activity-diagram-beta#5"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/cmp/asciidoc/ru/activity-diagram-beta#5"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/cmp/markdown/ru/activity-diagram-beta#5"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>Остановка активности в теле условия</h2><p></p> Как уже было продемонстрировано ранее, можно остановить активность на конкретном действии, используя ключевые слова <code class="cod">stop</code> для отображения остановки деятельности или <code class="cod">end</code> для отображения остановки потока. <p></p><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msg669d70ebdec5eb60800087ce41548cbd" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="img669d70ebdec5eb60800087ce41548cbd" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;669d70ebdec5eb60800087ce41548cbd&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;669d70ebdec5eb60800087ce41548cbd&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;669d70ebdec5eb60800087ce41548cbd&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="pre669d70ebdec5eb60800087ce41548cbd">@startuml
+
+if (условие?) then
+  :ошибка;
+  stop
+
+endif
+
+#palegreen :активность;
+
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="130" height="226" class="scale" src="../imgw/img-669d70ebdec5eb60800087ce41548cbd.png"/></div></div></td></tr></tbody></table></p><p></p><p></p> Если нужно прервать активность на каком-то конкретном действии без отображения каких-либо значков, нужно использовать идентичные по своему действию ключевые слова <code class="cod">kill</code> или <code class="cod">detach</code>: <p></p><ul><li><code class="cod">kill</code></li></ul><p></p><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msg3b6813a980e4488f7ca78ee48ceafcc3" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="img3b6813a980e4488f7ca78ee48ceafcc3" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;3b6813a980e4488f7ca78ee48ceafcc3&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;3b6813a980e4488f7ca78ee48ceafcc3&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;3b6813a980e4488f7ca78ee48ceafcc3&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="pre3b6813a980e4488f7ca78ee48ceafcc3">@startuml
+
+if (условие?) then
+  #pink :ошибка;
+  kill
+
+endif
+
+#palegreen :активность;
+
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="130" height="176" class="scale" src="../imgw/img-3b6813a980e4488f7ca78ee48ceafcc3.png"/></div></div></td></tr></tbody></table></p><p></p><p></p><em>[Ref. <a href="https://forum.plantuml.net/265/new-activity-diagram-syntax-direction-of-links?show=306#a306">QA-265</a>]</em><p></p><ul><li><code class="cod">detach</code></li></ul><p></p><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msgd9939bb071e558fb8f195d8202115b54" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="imgd9939bb071e558fb8f195d8202115b54" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;d9939bb071e558fb8f195d8202115b54&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;d9939bb071e558fb8f195d8202115b54&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;d9939bb071e558fb8f195d8202115b54&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="pred9939bb071e558fb8f195d8202115b54">@startuml
+
+if (условие?) then
+  #pink :ошибка;
+  detach
+
+endif
+
+#palegreen :активность;
+
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="130" height="176" class="scale" src="../imgw/img-d9939bb071e558fb8f195d8202115b54.png"/></div></div></td></tr></tbody></table></p><p><a style="position:relative;top:-38px;" name="219cebcef334f265"></a></p><div style="clear:both;min-height:110px;margin-top:10px;"><div class="pezoic"><span id="ezoic-pub-ad-placeholder-115"></span><!-- ezoic_pub_ad_placeholder-115-long_content-234x60-115-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-115-long_content-468x60-115-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-115-long_content-728x90-115-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-115-long_content-970x90-115-nonexxxnonexxxxxxezmaxscaleval100 --></div></div><h2 class="chap"><img onclick="window.scrollTo(0,0);" title="Back to top" src="../backtop1.svg" width="20" height="20" class="backtop"/><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/cmp/dokuwiki/ru/activity-diagram-beta#6"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/cmp/asciidoc/ru/activity-diagram-beta#6"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/cmp/markdown/ru/activity-diagram-beta#6"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>Повторяющийся цикл (с проверкой условия в конце цикла)</h2><p></p> Для отображения циклов нужно использовать идентичные по своему действию ключевые слова <code class="cod">repeat</code> или <code class="cod">repeatwhile</code>: <p></p><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msgda4083e52571e5fe8db9c1e3c94279c5" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="imgda4083e52571e5fe8db9c1e3c94279c5" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;da4083e52571e5fe8db9c1e3c94279c5&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;da4083e52571e5fe8db9c1e3c94279c5&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;da4083e52571e5fe8db9c1e3c94279c5&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="preda4083e52571e5fe8db9c1e3c94279c5">@startuml
+
+start
+
+repeat
+
+  :чтение данных;
+
+  :построение диаграмм;
+
+repeat while (есть ли еще данные?)
+
+stop
+
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="197" height="287" class="scale" src="../imgw/img-da4083e52571e5fe8db9c1e3c94279c5.png"/></div></div></td></tr></tbody></table></p><p></p><p></p> Чтобы добавить подписи к стрелочкам после проверки условия, нужно использовать следующую конструкцию: <ul><li><code class="cod">repeat while (условие) is (подписьКогдаУспешно) not (подписьКогдаНеУспешно)</code></li></ul><p></p><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msg6e74a07ceded6b89f3b9896d1cea858a" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="img6e74a07ceded6b89f3b9896d1cea858a" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;6e74a07ceded6b89f3b9896d1cea858a&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;6e74a07ceded6b89f3b9896d1cea858a&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;6e74a07ceded6b89f3b9896d1cea858a&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="pre6e74a07ceded6b89f3b9896d1cea858a">@startuml
+
+start
+
+repeat
+
+  :чтение данных;
+
+  :построение диаграмм;
+
+repeat while (есть ли еще данные?) is (да) not (нет)
+
+stop
+
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="197" height="300" class="scale" src="../imgw/img-6e74a07ceded6b89f3b9896d1cea858a.png"/></div></div></td></tr></tbody></table></p><p></p><p></p> Можно превратить начало цикла в полноценное действие, если после ключевого слова <code class="cod">repeat</code> в той же строке указать это действие при помощи конструкции<code class="cod">:действие;</code><p></p><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msg5d9c2a87d57185b3bf41667c2add7602" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="img5d9c2a87d57185b3bf41667c2add7602" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;5d9c2a87d57185b3bf41667c2add7602&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;5d9c2a87d57185b3bf41667c2add7602&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;5d9c2a87d57185b3bf41667c2add7602&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="pre5d9c2a87d57185b3bf41667c2add7602">@startuml
+
+start
+
+repeat :начало цикла;
+
+  :чтение данных;
+
+  :построение диаграмм;
+
+repeat while (есть ли еще данные?)
+
+stop
+
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="197" height="301" class="scale" src="../imgw/img-5d9c2a87d57185b3bf41667c2add7602.png"/></div></div></td></tr></tbody></table></p><p></p><p></p> Чтобы добавить к циклу обратное действие, используйте ключевое слово <code class="cod">backward</code> и сразу в той же строке укажите это действие при помощи конструкции<code class="cod">:действие;</code><p></p><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msg980e27ccac98765dc542afc10f48fdd5" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="img980e27ccac98765dc542afc10f48fdd5" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;980e27ccac98765dc542afc10f48fdd5&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;980e27ccac98765dc542afc10f48fdd5&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;980e27ccac98765dc542afc10f48fdd5&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="pre980e27ccac98765dc542afc10f48fdd5">@startuml
+
+start
+
+repeat :начало цикла;
+  :чтение данных;
+  :построение диаграмм;
+backward :очистка экрана;
+repeat while (есть ли еще данные?)
+
+stop
+
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="287" height="306" class="scale" src="../imgw/img-980e27ccac98765dc542afc10f48fdd5.png"/></div></div></td></tr></tbody></table></p><p></p><p></p><p></p> *[Ref. [QA-5826](https://forum.plantuml.net/5826/please-provide-action-repeat-loop-start-instead-condition?show=5831#a5831)]* <center><div class="tago">WARNING</div> <b>This translation need to be updated.</b> <div class="tago">WARNING</div></center><a style="position:relative;top:-38px;" name="76b6256d62540b9f"></a><div style="clear:both;height:50px;"></div><h2 class="chap"><img onclick="window.scrollTo(0,0);" title="Back to top" src="../backtop1.svg" width="20" height="20" class="backtop"/><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/cmp/dokuwiki/ru/activity-diagram-beta#7"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/cmp/asciidoc/ru/activity-diagram-beta#7"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/cmp/markdown/ru/activity-diagram-beta#7"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>Прерывание цикла repeat при помощи ключевого слова break</h2><p></p> Чтобы прервать цикл после определенного действия, нужно использовать ключевое слово <code class="cod">break</code><p></p><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msg698590484c9c21d8f22cc6ae6b6da59f" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="img698590484c9c21d8f22cc6ae6b6da59f" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;698590484c9c21d8f22cc6ae6b6da59f&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;698590484c9c21d8f22cc6ae6b6da59f&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;698590484c9c21d8f22cc6ae6b6da59f&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="pre698590484c9c21d8f22cc6ae6b6da59f">@startuml
+
+start
+
+repeat
+
+  :Тестирование;
+
+    if (Что-то пошло не так?) then (нет)
+      #palegreen :Тест пройден;
+      break
+    endif
+
+    -&gt;ошибка;
+
+    :Сообщение: &#34;Длинное сообщение об ошибке&#34;;
+
+repeat while (Что-то пошло не так при\nвыводе сообщения об ошибке?) is (да) not (нет)
+
+:Сообщение: &#34;Всё прошло успешно&#34;;
+
+stop
+
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="338" height="552" class="scale" src="../imgw/img-698590484c9c21d8f22cc6ae6b6da59f.png"/></div></div></td></tr></tbody></table></p><p></p><p></p><p></p><em>[Ref. <a href="https://forum.plantuml.net/6105/possible-to-draw-a-line-to-another-box-via-id-or-label?show=6107#a6107">QA-6105</a>]</em><a style="position:relative;top:-38px;" name="2f8a92e645aba14f"></a><div style="clear:both;min-height:110px;margin-top:10px;"><div class="pezoic"><span id="ezoic-pub-ad-placeholder-116"></span><!-- ezoic_pub_ad_placeholder-116-longer_content-234x60-116-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-116-longer_content-468x60-116-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-116-longer_content-728x90-116-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-116-longer_content-970x90-116-nonexxxnonexxxxxxezmaxscaleval100 --></div></div><h2 class="chap"><img onclick="window.scrollTo(0,0);" title="Back to top" src="../backtop1.svg" width="20" height="20" class="backtop"/><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/cmp/dokuwiki/ru/activity-diagram-beta#8"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/cmp/asciidoc/ru/activity-diagram-beta#8"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/cmp/markdown/ru/activity-diagram-beta#8"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>Goto and Label Processing [label, goto]</h2><p></p> ⚠ It is currently only experimental 🚧 <p></p> You can use <code class="cod">label</code> and <code class="cod">goto</code> keywords to denote goto processing, with: <ul><li><code class="cod">label &lt;label_name&gt;</code></li><li><code class="cod">goto &lt;label_name&gt;</code></li></ul><p></p><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msg7f44dc68a28fd6d7107655780c913675" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="img7f44dc68a28fd6d7107655780c913675" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;7f44dc68a28fd6d7107655780c913675&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;7f44dc68a28fd6d7107655780c913675&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;7f44dc68a28fd6d7107655780c913675&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="pre7f44dc68a28fd6d7107655780c913675">@startuml
+title Point two queries to same activity\nwith `goto`
+start
+if (Test Question?) then (yes)
+&#39;space label only for alignment
+label sp_lab0
+label sp_lab1
+&#39;real label
+label lab
+:shared;
+else (no)
+if (Second Test Question?) then (yes)
+label sp_lab2
+goto sp_lab1
+else
+:nonShared;
+endif
+endif
+:merge;
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="322" height="362" class="scale" src="../imgw/img-7f44dc68a28fd6d7107655780c913675.png"/></div></div></td></tr></tbody></table></p><p></p><p></p><em>[Ref. <a href="https://forum.plantuml.net/15026/">QA-15026</a>, <a href="https://forum.plantuml.net/12526/">QA-12526</a> and initially <a href="https://forum.plantuml.net/1626">QA-1626</a>]</em><a style="position:relative;top:-38px;" name="04a96ae1910f3c8a"></a><div style="clear:both;height:50px;"></div><h2 class="chap"><img onclick="window.scrollTo(0,0);" title="Back to top" src="../backtop1.svg" width="20" height="20" class="backtop"/><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/cmp/dokuwiki/ru/activity-diagram-beta#9"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/cmp/asciidoc/ru/activity-diagram-beta#9"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/cmp/markdown/ru/activity-diagram-beta#9"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>Повторяющийся цикл (с проверкой условия в начале цикла)</h2><p></p> Для организации цикла с проверкой условия в начале используйте ключевые слова <code class="cod">while</code> и <code class="cod">end while</code>. <p></p><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msg3173bd8720bffb20b8424f27cdc69d36" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="img3173bd8720bffb20b8424f27cdc69d36" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;3173bd8720bffb20b8424f27cdc69d36&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;3173bd8720bffb20b8424f27cdc69d36&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;3173bd8720bffb20b8424f27cdc69d36&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="pre3173bd8720bffb20b8424f27cdc69d36">@startuml
+
+start
+
+while (данные доступны?)
+  :чтение данных;
+  :построение диаграммы;
+endwhile
+
+stop
+
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="238" height="232" class="scale" src="../imgw/img-3173bd8720bffb20b8424f27cdc69d36.png"/></div></div></td></tr></tbody></table></p><p></p><p></p> Чтобы добавить пояснения на стрелочки после проверки условия, нужно использовать следующую конструкцию: <p><code></code></p><pre class="colo"><code>  while (условие) is ( пояснениеКогдаУспешно )
+    ...
+  endwhile ( пояснениеКогдаНеУспешно )
+</code></pre><p></p><p></p> Пример: <p></p><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msg8dbf495c69851b16818c9f83bbbddf22" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="img8dbf495c69851b16818c9f83bbbddf22" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;8dbf495c69851b16818c9f83bbbddf22&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;8dbf495c69851b16818c9f83bbbddf22&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;8dbf495c69851b16818c9f83bbbddf22&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="pre8dbf495c69851b16818c9f83bbbddf22">@startuml
+
+while (данные доступны?) is (да)
+
+  :чтение данных;
+  :построение диаграммы;
+
+endwhile (нет)
+
+:окончание работы;
+
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="229" height="255" class="scale" src="../imgw/img-8dbf495c69851b16818c9f83bbbddf22.png"/></div></div></td></tr></tbody></table></p><p></p><p></p> Чтобы добавить к циклу обратное действие, используйте ключевое слово <code class="cod">backward</code> и сразу в той же строке укажите это действие при помощи конструкции <code class="cod">:действие</code>; <p></p><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msga0c4ec4a1004568ca6e179960ac6c0ce" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="imga0c4ec4a1004568ca6e179960ac6c0ce" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;a0c4ec4a1004568ca6e179960ac6c0ce&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;a0c4ec4a1004568ca6e179960ac6c0ce&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;a0c4ec4a1004568ca6e179960ac6c0ce&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="prea0c4ec4a1004568ca6e179960ac6c0ce">@startuml
+
+while (данные доступны?) is (да)
+
+  :чтение данных;
+  :построение диаграммы;
+
+  backward :очистка экрана;
+endwhile (нет)
+
+:окончание работы;
+
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="319" height="261" class="scale" src="../imgw/img-a0c4ec4a1004568ca6e179960ac6c0ce.png"/></div></div></td></tr></tbody></table></p><p></p><p></p> Чтобы прервать выполнение цикла, используйте ключевое слово <code class="cod">break</code>: <p></p><p></p><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msg9e9170b84af4bf4e201ca8bb329befe0" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="img9e9170b84af4bf4e201ca8bb329befe0" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;9e9170b84af4bf4e201ca8bb329befe0&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;9e9170b84af4bf4e201ca8bb329befe0&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;9e9170b84af4bf4e201ca8bb329befe0&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="pre9e9170b84af4bf4e201ca8bb329befe0">@startuml
+
+while (данные доступны?) is (да)
+
+  :чтение данных;
+
+  if (данные прочитаны?) then (нет)
+    #pink :Сообщение об ошибке;
+    break
+  endif
+
+  :построение диаграммы;
+
+  backward :очистка экрана;
+endwhile (нет)
+
+-&gt;завершение;
+
+#palegreen :окончание работы;
+
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="337" height="413" class="scale" src="../imgw/img-9e9170b84af4bf4e201ca8bb329befe0.png"/></div></div></td></tr></tbody></table></p><p></p><p></p><p></p><p></p><center><div class="tago">WARNING</div> <b>This translation need to be updated.</b> <div class="tago">WARNING</div></center><a style="position:relative;top:-38px;" name="7452578bfebedd2d"></a><div style="clear:both;min-height:110px;margin-top:10px;"><div class="pezoic"><span id="ezoic-pub-ad-placeholder-117"></span><!-- ezoic_pub_ad_placeholder-117-longest_content-234x60-117-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-117-longest_content-468x60-117-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-117-longest_content-728x90-117-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-117-longest_content-970x90-117-nonexxxnonexxxxxxezmaxscaleval100 --></div></div><h2 class="chap"><img onclick="window.scrollTo(0,0);" title="Back to top" src="../backtop1.svg" width="20" height="20" class="backtop"/><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/cmp/dokuwiki/ru/activity-diagram-beta#10"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/cmp/asciidoc/ru/activity-diagram-beta#10"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/cmp/markdown/ru/activity-diagram-beta#10"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>Распаралелливание активности [ режим многопоточности: fork, fork again, end fork и merge ]</h2><p></p> Для разделения одной активности на несколько паралелльных активностей можно использовать режим многопоточности. Для этого необходимо использовать ключевые слова: <code class="cod">fork</code>, <code class="cod">fork again</code> и <code class="cod">end fork</code> или <code class="cod">end merge</code>. <p></p><em>(Также для этих целей можно использовать режим разделения (split), который будет рассмотрен более подробно ниже).</em><p></p><h3>Простой режим многопоточности</h3><p></p><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msgedbf0ca0e86f2ca40a049f46ba657309" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="imgedbf0ca0e86f2ca40a049f46ba657309" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;edbf0ca0e86f2ca40a049f46ba657309&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;edbf0ca0e86f2ca40a049f46ba657309&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;edbf0ca0e86f2ca40a049f46ba657309&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="preedbf0ca0e86f2ca40a049f46ba657309">@startuml
+start
+fork
+  :Действие 1;
+fork again
+  :Действие 2;
+end fork
+stop
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="239" height="189" class="scale" src="../imgw/img-edbf0ca0e86f2ca40a049f46ba657309.png"/></div></div></td></tr></tbody></table></p><p></p><p></p><p></p><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msge9d19ff3f331c14ca1ec30e115d1d874" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="imge9d19ff3f331c14ca1ec30e115d1d874" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;e9d19ff3f331c14ca1ec30e115d1d874&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;e9d19ff3f331c14ca1ec30e115d1d874&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;e9d19ff3f331c14ca1ec30e115d1d874&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="pree9d19ff3f331c14ca1ec30e115d1d874">@startuml
+start
+fork
+  :Действие 1;
+fork again
+  :Действие 2;
+fork again
+  :Действие 3;
+  end
+fork again
+  :Действие 4;
+end fork
+stop
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="425" height="244" class="scale" src="../imgw/img-e9d19ff3f331c14ca1ec30e115d1d874.png"/></div></div></td></tr></tbody></table></p><p></p><p></p><h3>Режим многопоточности с объединением потоков в конце</h3><p></p><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msg637bf60b369251d6696b14e3b28abd94" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="img637bf60b369251d6696b14e3b28abd94" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;637bf60b369251d6696b14e3b28abd94&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;637bf60b369251d6696b14e3b28abd94&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;637bf60b369251d6696b14e3b28abd94&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="pre637bf60b369251d6696b14e3b28abd94">@startuml
+start
+fork
+  :Действие 1;
+fork again
+  :Действие 2;
+end merge
+stop
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="239" height="197" class="scale" src="../imgw/img-637bf60b369251d6696b14e3b28abd94.png"/></div></div></td></tr></tbody></table></p><p></p><p></p><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msg329b206728b6c10b44976910a944ad16" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="img329b206728b6c10b44976910a944ad16" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;329b206728b6c10b44976910a944ad16&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;329b206728b6c10b44976910a944ad16&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;329b206728b6c10b44976910a944ad16&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="pre329b206728b6c10b44976910a944ad16">@startuml
+start
+fork
+  :Действие 1;
+fork again
+  :Действие 2;
+fork again
+  :Действие 3;
+  end
+fork again
+  :Действие 4;
+end merge
+stop
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="425" height="252" class="scale" src="../imgw/img-329b206728b6c10b44976910a944ad16.png"/></div></div></td></tr></tbody></table></p><p></p><p></p><em>[Ref. <a href="https://forum.plantuml.net/13731">QA-13731</a>]</em><p></p><h3>Размещение комментария при возвращении к однопоточному режиму (реализация синтакиса UML):</h3><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msgeb40ddfe787188dda583997eee9f90ac" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="imgeb40ddfe787188dda583997eee9f90ac" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;eb40ddfe787188dda583997eee9f90ac&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;eb40ddfe787188dda583997eee9f90ac&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;eb40ddfe787188dda583997eee9f90ac&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="preeb40ddfe787188dda583997eee9f90ac">@startuml
+start
+fork
+  :Действие A;
+fork again
+  :Действие B;
+end fork {или}
+stop
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="272" height="189" class="scale" src="../imgw/img-eb40ddfe787188dda583997eee9f90ac.png"/></div></div></td></tr></tbody></table></p><p></p><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msga7958879a1e22a9a9ed9df591b52715e" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="imga7958879a1e22a9a9ed9df591b52715e" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;a7958879a1e22a9a9ed9df591b52715e&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;a7958879a1e22a9a9ed9df591b52715e&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;a7958879a1e22a9a9ed9df591b52715e&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="prea7958879a1e22a9a9ed9df591b52715e">@startuml
+start
+fork
+  :Действие A;
+fork again
+  :Действие B;
+end fork {и}
+stop
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="260" height="189" class="scale" src="../imgw/img-a7958879a1e22a9a9ed9df591b52715e.png"/></div></div></td></tr></tbody></table></p><p></p><p></p><em>[Ref. <a href="https://forum.plantuml.net/5346/please-inplement-joinspec-for-join-nodes?show=5348#a5348">QA-5346</a>]</em><p></p><h3>Еще один пример</h3><p></p><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msg32e4dd4a65dd6c65b1883f5d7998661a" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="img32e4dd4a65dd6c65b1883f5d7998661a" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;32e4dd4a65dd6c65b1883f5d7998661a&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;32e4dd4a65dd6c65b1883f5d7998661a&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;32e4dd4a65dd6c65b1883f5d7998661a&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="pre32e4dd4a65dd6c65b1883f5d7998661a">@startuml
+
+start
+
+if (многопоточность?) then (да)
+  fork
+    :Поток 1;
+  fork again
+    :Поток 2;
+  end fork
+else (всё в одном\nпотоке)
+  :Поток 1;
+  :Поток 2;
+endif
+
+stop
+
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="308" height="277" class="scale" src="../imgw/img-32e4dd4a65dd6c65b1883f5d7998661a.png"/></div></div></td></tr></tbody></table></p><p><a style="position:relative;top:-38px;" name="39d488a91ed5c8d2"></a></p><div style="clear:both;height:50px;"></div><h2 class="chap"><img onclick="window.scrollTo(0,0);" title="Back to top" src="../backtop1.svg" width="20" height="20" class="backtop"/><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/cmp/dokuwiki/ru/activity-diagram-beta#11"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/cmp/asciidoc/ru/activity-diagram-beta#11"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/cmp/markdown/ru/activity-diagram-beta#11"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>Распараллеливание активности [ режим разделения: split, split again и end split ]</h2><p></p><h3>Разделение</h3><p></p> Чтобы распараллелить активность на несколько одновременно идущих активностей, можно также использовать режим разделения. Для этого неоходимо использовать следующие ключевые слова: <code class="cod">split</code>, <code class="cod">split again</code> и <code class="cod">end split</code>. <p></p><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msg1caaf30e23757c1774d0cd9c0e77c132" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="img1caaf30e23757c1774d0cd9c0e77c132" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;1caaf30e23757c1774d0cd9c0e77c132&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;1caaf30e23757c1774d0cd9c0e77c132&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;1caaf30e23757c1774d0cd9c0e77c132&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="pre1caaf30e23757c1774d0cd9c0e77c132">@startuml
+start
+split
+   :Действие 1;
+split again
+   :Действие 2;
+split again
+   :Действие 3;
+split again
+   :Действие 4.1;
+   :Действие 4.2;
+end split
+:окончание работы;
+end
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="411" height="300" class="scale" src="../imgw/img-1caaf30e23757c1774d0cd9c0e77c132.png"/></div></div></td></tr></tbody></table></p><p></p><p></p><h3>Несколько входов</h3><p></p> При помощи режима разделения можно изобразить несколько независимых начальных действий. Для этого необходимо организовать распараллеливание активности на несколько параллельных и при этом скрыть входные стрелочки при помощи добавления конструкции <code class="cod">-[hidden]-&gt;</code> перед каждой активностью: <p></p><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msg10c42852c9d6f7c2176108c924438bc5" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="img10c42852c9d6f7c2176108c924438bc5" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;10c42852c9d6f7c2176108c924438bc5&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;10c42852c9d6f7c2176108c924438bc5&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;10c42852c9d6f7c2176108c924438bc5&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="pre10c42852c9d6f7c2176108c924438bc5">@startuml
+split
+   -[hidden]-&gt;
+   :Действие 1;
+split again
+   -[hidden]-&gt;
+   :Действие 2;
+split again
+   -[hidden]-&gt;
+   :Действие 3;
+end split
+:окончание работы;
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="326" height="151" class="scale" src="../imgw/img-10c42852c9d6f7c2176108c924438bc5.png"/></div></div></td></tr></tbody></table></p><p></p><p></p> Более сложный пример: <p></p><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msg3066b86913eedf86e4f72e255fac0e45" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="img3066b86913eedf86e4f72e255fac0e45" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;3066b86913eedf86e4f72e255fac0e45&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;3066b86913eedf86e4f72e255fac0e45&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;3066b86913eedf86e4f72e255fac0e45&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="pre3066b86913eedf86e4f72e255fac0e45">@startuml
+split
+   -[hidden]-&gt;
+   :Действие 1;
+  -&gt;вар1;
+split again
+   -[hidden]-&gt;
+   :Действие 2.1;
+   :Действие 2.2;
+  -&gt;вар2;
+split again
+   -[hidden]-&gt;
+   (Х)
+  -&gt;вар3;
+end split
+:окончание работы;
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="275" height="235" class="scale" src="../imgw/img-3066b86913eedf86e4f72e255fac0e45.png"/></div></div></td></tr></tbody></table></p><p></p><p></p><em>[Ref. <a href="https://forum.plantuml.net/8662">QA-8662</a>]</em><p></p><h3>Несколько выходов</h3><p></p> Таким же образом можно организовать несколько параллельно завершаемых действий. Для этого после каждого такого действия нужно указать ключевые слова <code class="cod">kill</code> или <code class="cod">detach</code>: <p></p><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msgfc0992b8faf84a0db318c4cdce7272de" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="imgfc0992b8faf84a0db318c4cdce7272de" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;fc0992b8faf84a0db318c4cdce7272de&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;fc0992b8faf84a0db318c4cdce7272de&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;fc0992b8faf84a0db318c4cdce7272de&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="prefc0992b8faf84a0db318c4cdce7272de">@startuml
+start
+split
+   :Действие 1;
+   kill
+split again
+   :Действие 2;
+   detach
+split again
+   :Действие 3;
+   kill
+end split
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="290" height="115" class="scale" src="../imgw/img-fc0992b8faf84a0db318c4cdce7272de.png"/></div></div></td></tr></tbody></table></p><p></p><p></p> Более сложный пример: <p></p><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msge5215a1d8e097f852aa5ef2a0bd4213d" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="imge5215a1d8e097f852aa5ef2a0bd4213d" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;e5215a1d8e097f852aa5ef2a0bd4213d&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;e5215a1d8e097f852aa5ef2a0bd4213d&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;e5215a1d8e097f852aa5ef2a0bd4213d&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="pree5215a1d8e097f852aa5ef2a0bd4213d">@startuml
+start
+split
+  -&gt;вар1;
+   :Действие 1;
+   kill
+split again
+  -&gt;вар2;
+   :Действие 2.1;
+   :Действие 2.2;
+   detach
+split again
+  -&gt;вар3;
+   (Z)
+   detach
+split again
+  -&gt;вар4;
+   end
+split again
+  -&gt;вар5;
+   stop
+end split
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="359" height="199" class="scale" src="../imgw/img-e5215a1d8e097f852aa5ef2a0bd4213d.png"/></div></div></td></tr></tbody></table></p><p><a style="position:relative;top:-38px;" name="f4c6f851b00d5518"></a></p><div style="clear:both;min-height:110px;margin-top:10px;"><div class="pezoic"><span id="ezoic-pub-ad-placeholder-118"></span><!-- ezoic_pub_ad_placeholder-118-incontent_5-234x60-118-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-118-incontent_5-468x60-118-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-118-incontent_5-728x90-118-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-118-incontent_5-970x90-118-nonexxxnonexxxxxxezmaxscaleval100 --></div></div><h2 class="chap"><img onclick="window.scrollTo(0,0);" title="Back to top" src="../backtop1.svg" width="20" height="20" class="backtop"/><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/cmp/dokuwiki/ru/activity-diagram-beta#12"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/cmp/asciidoc/ru/activity-diagram-beta#12"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/cmp/markdown/ru/activity-diagram-beta#12"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>Заметки</h2><p></p> На диаграмму активностей (также, как и на остальные диаграммы) можно добавлять заметки. <p></p> Текст внутри заметок можно дополнительно форматировать используя <a href="creole.html">creole и HTML</a> синтаксис. <p></p> По умолчанию создаются заметки, которые явно указыавют на элемент, которй был объявлен непосредственно перед объявлением заметки. Чтобы создать отсоединенную заметку, нужно использовать ключевое слово <code class="cod">floating</code> (она по прежнему будет находится рядом с элементом, но у неё не будет &#34;хвостика&#34; указателя). <p></p><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msgad9712e6947c555853359455411c7550" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="imgad9712e6947c555853359455411c7550" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;ad9712e6947c555853359455411c7550&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;ad9712e6947c555853359455411c7550&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;ad9712e6947c555853359455411c7550&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="pread9712e6947c555853359455411c7550">@startuml
+
+start
+:Действие1;
+floating note left: Это отсоединенная заметка
+:Действие2;
+note right
+  Эта заметка длиной в
+  //несколько строчек//
+  и может содержать
+  в себе &lt;b&gt;HTML&lt;/b&gt; теги
+  и creole синтаксис
+  ====
+  * Вызов метода &#34;&#34;foo()&#34;&#34; запрещен
+end note
+stop
+
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="544" height="265" class="scale" src="../imgw/img-ad9712e6947c555853359455411c7550.png"/></div></div></td></tr></tbody></table></p><p></p><p></p> Можно добавлять заметки к обратным действиям в циклах: <p></p><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msgffb26be4411b3a3c5485f71d6e88c7f0" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="imgffb26be4411b3a3c5485f71d6e88c7f0" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;ffb26be4411b3a3c5485f71d6e88c7f0&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;ffb26be4411b3a3c5485f71d6e88c7f0&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;ffb26be4411b3a3c5485f71d6e88c7f0&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="preffb26be4411b3a3c5485f71d6e88c7f0">@startuml
+  start
+    repeat :Ввод данных;
+    :Отправка;
+    backward :Предупреждение;
+      note right: Заметка о том\nчто что-то пошло нет так
+    repeat while (Корректно?) is (Нет) not (Да)
+  stop
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="450" height="253" class="scale" src="../imgw/img-ffb26be4411b3a3c5485f71d6e88c7f0.png"/></div></div></td></tr></tbody></table></p><p></p><p></p><em>[Ref. <a href="https://forum.plantuml.net/11788/is-it-possible-to-add-a-note-to-backward-activity?show=11802#a11802">QA-11788</a>]</em><p></p><p></p> Можно добавлять заметки к разделам: <p></p><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msgc7816071fd33dda1eefb534f5d09778b" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="imgc7816071fd33dda1eefb534f5d09778b" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;c7816071fd33dda1eefb534f5d09778b&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;c7816071fd33dda1eefb534f5d09778b&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;c7816071fd33dda1eefb534f5d09778b&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="prec7816071fd33dda1eefb534f5d09778b">@startuml
+start
+partition &#34;**процесс** Привет Мир&#34; {
+    note
+        Тут наша заметка
+        ----
+        //Creole тест//
+    end note
+    :Готовность к отправке;
+    :&#34;Привет Мир&#34; -&gt; получатель Х&gt;
+    :Привет отправлен;
+}
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="386" height="268" class="scale" src="../imgw/img-c7816071fd33dda1eefb534f5d09778b.png"/></div></div></td></tr></tbody></table></p><p><em>[Ref. <a href="https://forum.plantuml.net/2398/is-it-possible-to-add-a-comment-on-top-of-a-activity-partition?show=2403#a2403">QA-2398</a>]</em><a style="position:relative;top:-38px;" name="5d50889672f6f860"></a></p><div style="clear:both;height:50px;"></div><h2 class="chap"><img onclick="window.scrollTo(0,0);" title="Back to top" src="../backtop1.svg" width="20" height="20" class="backtop"/><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/cmp/dokuwiki/ru/activity-diagram-beta#13"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/cmp/asciidoc/ru/activity-diagram-beta#13"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/cmp/markdown/ru/activity-diagram-beta#13"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>Цвета</h2><p></p> Можно задавать <a href="color.html">цвета</a> для активностей <p></p><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msgcb859b3a66c4ad25b52a3f3ccad0a35e" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="imgcb859b3a66c4ad25b52a3f3ccad0a35e" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;cb859b3a66c4ad25b52a3f3ccad0a35e&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;cb859b3a66c4ad25b52a3f3ccad0a35e&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;cb859b3a66c4ad25b52a3f3ccad0a35e&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="precb859b3a66c4ad25b52a3f3ccad0a35e">@startuml
+
+:запуск процесса;
+
+#HotPink:чтение конфигурационных файлов
+----
+На этом этапе указанные файлы
+уже должны быть отредактированы!;
+
+#AAAAAA:остановка процесса;
+
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="250" height="206" class="scale" src="../imgw/img-cb859b3a66c4ad25b52a3f3ccad0a35e.png"/></div></div></td></tr></tbody></table></p><p></p><p></p><p></p> Также можно задавать заливку <a href="color.html">градиентом</a>: <p></p><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msg3f5625283c3d17e9039f2bbf408fffe2" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="img3f5625283c3d17e9039f2bbf408fffe2" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;3f5625283c3d17e9039f2bbf408fffe2&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;3f5625283c3d17e9039f2bbf408fffe2&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;3f5625283c3d17e9039f2bbf408fffe2&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="pre3f5625283c3d17e9039f2bbf408fffe2">@startuml
+start
+
+partition #red/white &#34;тестирование раздела&#34; {
+  #lightblue\palegreen :тестирование активности;
+}
+
+stop
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="205" height="176" class="scale" src="../imgw/img-3f5625283c3d17e9039f2bbf408fffe2.png"/></div></div></td></tr></tbody></table></p><p></p><p></p><em>[Ref. <a href="https://forum.plantuml.net/4906/setting-ad-hoc-gradient-backgrounds-in-activity?show=4917#a4917">QA-4906</a>]</em><a style="position:relative;top:-38px;" name="6299b1bc9965f62f"></a><div style="clear:both;min-height:110px;margin-top:10px;"><div class="pezoic"><span id="ezoic-pub-ad-placeholder-119"></span><!-- ezoic_pub_ad_placeholder-119-incontent_6-234x60-119-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-119-incontent_6-468x60-119-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-119-incontent_6-728x90-119-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-119-incontent_6-970x90-119-nonexxxnonexxxxxxezmaxscaleval100 --></div></div><h2 class="chap"><img onclick="window.scrollTo(0,0);" title="Back to top" src="../backtop1.svg" width="20" height="20" class="backtop"/><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/cmp/dokuwiki/ru/activity-diagram-beta#14"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/cmp/asciidoc/ru/activity-diagram-beta#14"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/cmp/markdown/ru/activity-diagram-beta#14"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>Линии вместо стрелок</h2><p></p> Можно превратить все стрелки на диаграмме в линии, если указать команду <code class="cod">skinparam ArrowHeadColor none</code> в начале диаграммы. <p></p><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msgda262488868ff6df9a3960724878ec01" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="imgda262488868ff6df9a3960724878ec01" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;da262488868ff6df9a3960724878ec01&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;da262488868ff6df9a3960724878ec01&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;da262488868ff6df9a3960724878ec01&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="preda262488868ff6df9a3960724878ec01">@startuml
+  skinparam ArrowHeadColor none
+  start
+    :Привет Мир!;
+    :Какое-то дейстиве в
+     несколько **строчек**;
+  stop
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="155" height="207" class="scale" src="../imgw/img-da262488868ff6df9a3960724878ec01.png"/></div></div></td></tr></tbody></table></p><p></p><p></p><p></p><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msgf5aa02d5600aca7dbcc27636a6a1811f" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="imgf5aa02d5600aca7dbcc27636a6a1811f" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;f5aa02d5600aca7dbcc27636a6a1811f&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;f5aa02d5600aca7dbcc27636a6a1811f&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;f5aa02d5600aca7dbcc27636a6a1811f&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="pref5aa02d5600aca7dbcc27636a6a1811f">@startuml
+  skinparam ArrowHeadColor none
+  start
+    repeat :Ввод данных;
+    :Отправка;
+    backward :Предупреждение;
+    repeat while (Коректно?) is (Нет) not (Да)
+  stop
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="257" height="253" class="scale" src="../imgw/img-f5aa02d5600aca7dbcc27636a6a1811f.png"/></div></div></td></tr></tbody></table></p><p><a style="position:relative;top:-38px;" name="4e05974b02cc4aa9"></a></p><div style="clear:both;height:50px;"></div><h2 class="chap"><img onclick="window.scrollTo(0,0);" title="Back to top" src="../backtop1.svg" width="20" height="20" class="backtop"/><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/cmp/dokuwiki/ru/activity-diagram-beta#15"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/cmp/asciidoc/ru/activity-diagram-beta#15"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/cmp/markdown/ru/activity-diagram-beta#15"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>Изменение цвета и стиля стрелок (синтаксис квадратных скобочек)</h2><p></p> Явно объявляя стрелку и указывая для неё дополнительные параметры, можно управлять отображением стрелок между элементами диаграммы. <p></p><h4>Стиль линий</h4><p></p> Можно задавать различные стили отображения линий при помощи следующей конструкции: <ul><li><code class="cod">-[#типЛинии]-&gt;</code></li></ul> где <code class="cod">типЛинии</code> может принимать значения: <ul><li><code class="cod">bold</code> - жирный,</li><li><code class="cod">dashed</code> - штриховой,</li><li><code class="cod">dotted</code> - пунктирный,</li><li><code class="cod">hidden</code> - скрытый,</li><li><code class="cod">plain</code> - непрерывный.</li></ul><p></p><h4>Заметки на линиях</h4><p></p> Можно добавлять текстовые подписи к линиям, используя следующую конструкцию: <ul><li><code class="cod">--&gt; Текст заметки</code></li></ul><p></p><h4>Цвет линий</h4><p></p> Можно задавать <a href="color.html">цвет</a> линий при помощи следующей конструкции: <ul><li><code class="cod">-[#цветЛинии]-&gt;</code></li></ul> где <code class="cod">цветЛинии</code> может принимать текстовые <a href="color.html">обозначения цветов</a> или их числовое представление. <p></p><h4>Полный синтаксис</h4><p></p> Можно смешивать все указанные выше параметры, следующим образом: <ul><li><code class="cod">-[#цветЛинии,типЛинии]-&gt; Текст заметки</code></li></ul><p></p><h4>Комплексный пример</h4><p></p><p></p><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msg477d9c5e1774cd8451d3b7ef45abf2cc" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="img477d9c5e1774cd8451d3b7ef45abf2cc" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;477d9c5e1774cd8451d3b7ef45abf2cc&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;477d9c5e1774cd8451d3b7ef45abf2cc&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;477d9c5e1774cd8451d3b7ef45abf2cc&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="pre477d9c5e1774cd8451d3b7ef45abf2cc">@startuml
+:Действие1;
+-&gt; Можно добавлять\nтекст на стрелки;
+if (Условие?) then
+  -[#blue]-&gt;
+  :Действие2;
+  -[#green,dashed]-&gt; Текст с //пояснениями//
+  на стрелках может быть
+  **очень** длинным...;
+  :Действие3;
+else
+  -[#black,dotted]-&gt;
+  :Действие4.1;
+  -[hidden]-&gt;
+  :Действие4.2;
+endif
+-[#gray,bold]-&gt;
+:Действие5;
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="303" height="371" class="scale" src="../imgw/img-477d9c5e1774cd8451d3b7ef45abf2cc.png"/></div></div></td></tr></tbody></table></p><p><a style="position:relative;top:-38px;" name="edf21d7ecb364e82"></a></p><div style="clear:both;min-height:110px;margin-top:10px;"><div class="pezoic"><span id="ezoic-pub-ad-placeholder-120"></span><!-- ezoic_pub_ad_placeholder-120-incontent_7-234x60-120-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-120-incontent_7-468x60-120-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-120-incontent_7-728x90-120-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-120-incontent_7-970x90-120-nonexxxnonexxxxxxezmaxscaleval100 --></div></div><h2 class="chap"><img onclick="window.scrollTo(0,0);" title="Back to top" src="../backtop1.svg" width="20" height="20" class="backtop"/><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/cmp/dokuwiki/ru/activity-diagram-beta#16"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/cmp/asciidoc/ru/activity-diagram-beta#16"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/cmp/markdown/ru/activity-diagram-beta#16"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>Коннектор</h2><p></p> Можно добавлять на диаграмму специальный элемент - коннектор. Для этого необходимо использовать круглые скобки. Чтобы убрать связь между двумя коннекторами, нужно использовать ключевое слово <code class="cod">detach</code>. <p></p><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msgf22cc389da1f691f914e23cfa508e9ce" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="imgf22cc389da1f691f914e23cfa508e9ce" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;f22cc389da1f691f914e23cfa508e9ce&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;f22cc389da1f691f914e23cfa508e9ce&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;f22cc389da1f691f914e23cfa508e9ce&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="pref22cc389da1f691f914e23cfa508e9ce">@startuml
+start
+
+:Некоторое действие;
+
+(A)
+
+detach
+
+(A)
+
+:Следующее действие;
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="163" height="220" class="scale" src="../imgw/img-f22cc389da1f691f914e23cfa508e9ce.png"/></div></div></td></tr></tbody></table></p><p><a style="position:relative;top:-38px;" name="2f8c97b04c4fc1f5"></a></p><div style="clear:both;height:50px;"></div><h2 class="chap"><img onclick="window.scrollTo(0,0);" title="Back to top" src="../backtop1.svg" width="20" height="20" class="backtop"/><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/cmp/dokuwiki/ru/activity-diagram-beta#17"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/cmp/asciidoc/ru/activity-diagram-beta#17"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/cmp/markdown/ru/activity-diagram-beta#17"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>Цвет коннектора</h2><p></p> Можно указать <a href="color.html">цвет</a> для коннектора. <p></p><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msg73391830b0b6103ddbd616c0ecc2356d" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="img73391830b0b6103ddbd616c0ecc2356d" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;73391830b0b6103ddbd616c0ecc2356d&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;73391830b0b6103ddbd616c0ecc2356d&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;73391830b0b6103ddbd616c0ecc2356d&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="pre73391830b0b6103ddbd616c0ecc2356d">@startuml
+start
+
+:Коннектор ниже
+хочет стать синим;
+
+#blue:(B)
+
+:А следующий коннектор
+мечтает быть зеленым;
+
+#green:(G)
+
+stop
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="177" height="302" class="scale" src="../imgw/img-73391830b0b6103ddbd616c0ecc2356d.png"/></div></div></td></tr></tbody></table></p><p></p><p></p><em>[Ref. <a href="https://forum.plantuml.net/10077/assigning-color-to-connectors?show=10080#c10080">QA-10077</a>]</em><a style="position:relative;top:-38px;" name="772273da3919bcd1"></a><div style="clear:both;min-height:110px;margin-top:10px;"><div class="pezoic"><span id="ezoic-pub-ad-placeholder-121"></span><!-- ezoic_pub_ad_placeholder-121-incontent_8-234x60-121-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-121-incontent_8-468x60-121-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-121-incontent_8-728x90-121-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-121-incontent_8-970x90-121-nonexxxnonexxxxxxezmaxscaleval100 --></div></div><h2 class="chap"><img onclick="window.scrollTo(0,0);" title="Back to top" src="../backtop1.svg" width="20" height="20" class="backtop"/><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/cmp/dokuwiki/ru/activity-diagram-beta#18"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/cmp/asciidoc/ru/activity-diagram-beta#18"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/cmp/markdown/ru/activity-diagram-beta#18"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>Объединение (группировка) активностей</h2><p></p> Можно объединять (группировать) активности на диаграмме используя: <ul><li><code class="cod">group</code> - группы;</li><li><code class="cod">partition</code> - разделы;</li><li><code class="cod">package</code> - пакеты;</li><li><code class="cod">rectangle</code> - прямоугольники;</li><li><code class="cod">card</code> - карточки.</li></ul> отличаются эти варианты только внешним видом (а для group еще немного другим синтаксисом записи и отсутствием возможности задавать цвет). <p></p><h3>Группы</h3><p></p> Итак, можно объединять активности используя группы: <p><code></code></p><pre class="colo"><code>group НазваниеГруппы
+  .. объединяемые активности ..
+end group
+</code></pre><p></p><p></p><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msg8136247ea48d22487ce5df0c71b33a08" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="img8136247ea48d22487ce5df0c71b33a08" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;8136247ea48d22487ce5df0c71b33a08&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;8136247ea48d22487ce5df0c71b33a08&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;8136247ea48d22487ce5df0c71b33a08&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="pre8136247ea48d22487ce5df0c71b33a08">@startuml
+start
+
+group Инициализация
+    :чтение конфигурационного файла;
+    :инициализация внутренних переменных;
+end group
+group Выполнение
+    :ожидание активности пользователя;
+    :вывод информации;
+end group
+
+stop
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="292" height="381" class="scale" src="../imgw/img-8136247ea48d22487ce5df0c71b33a08.png"/></div></div></td></tr></tbody></table></p><p></p><p></p><h3>Разделы, Пакеты, Прямоугольники и Карточки</h3><p></p> Также, можно объединять активности используя Разделы, Пакеты, Прямоугольники и Карточки. Синтаксис у всех этих вариантов одинаковый, отличие состоит только в форме отображения. <p><code></code></p><pre class="colo"><code>partition/package/rectangle/card [#цвет] Название {
+  .. объединяемые активности ..
+}
+</code></pre><p></p><p></p><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msgb4471e9590439ed0ba114ab4160463cc" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="imgb4471e9590439ed0ba114ab4160463cc" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;b4471e9590439ed0ba114ab4160463cc&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;b4471e9590439ed0ba114ab4160463cc&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;b4471e9590439ed0ba114ab4160463cc&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="preb4471e9590439ed0ba114ab4160463cc">@startuml
+start
+
+group Группа
+  :Действие;
+end group
+floating note: Заметка для группы
+
+partition Раздел {
+  :Действие;
+}
+floating note: Заметка для раздела
+
+package Пакет {
+  :Действие;
+}
+floating note: Заметка для пакета
+
+rectangle Прямоугольник {
+  :Действие;
+}
+floating note: Заметка для прямоугольника
+
+card Карточа {
+  :Действие;
+}
+floating note: Заметка для карточки
+
+end
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="342" height="577" class="scale" src="../imgw/img-b4471e9590439ed0ba114ab4160463cc.png"/></div></div></td></tr></tbody></table></p><p></p><p></p><p></p> Для Разделов, Пакетов, Прямоугольников и Карточек можно задавать <a href="color.html">цвет</a> отображения (для Групп этого сделать нельзя): <p></p><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msg952ceb12ca95e502f317217624729d88" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="img952ceb12ca95e502f317217624729d88" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;952ceb12ca95e502f317217624729d88&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;952ceb12ca95e502f317217624729d88&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;952ceb12ca95e502f317217624729d88&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="pre952ceb12ca95e502f317217624729d88">@startuml
+start
+
+partition #lightGreen Инициализация {
+    :чтение конфигурационного файла;
+    :инициализация внутренних переменных;
+}
+
+partition Выполнение {
+    :ожидание активности пользователя;
+    :вывод информации;
+}
+
+stop
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="292" height="381" class="scale" src="../imgw/img-952ceb12ca95e502f317217624729d88.png"/></div></div></td></tr></tbody></table></p><p></p><p></p><em>[Ref. <a href="https://forum.plantuml.net/2793/activity-beta-partition-name-more-than-one-word-does-not-work?show=2798#a2798">QA-2793</a>]</em><p></p> Также, в названиях можно использовать <a href="link.html">гиперссылки</a>: <p></p><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msg0df917e028cdc96d671324de904fe706" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="img0df917e028cdc96d671324de904fe706" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;0df917e028cdc96d671324de904fe706&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;0df917e028cdc96d671324de904fe706&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;0df917e028cdc96d671324de904fe706&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="pre0df917e028cdc96d671324de904fe706">@startuml
+start
+partition &#34;[[http://plantuml.com имя_раздела]]&#34; {
+    :см документацию на [[http://plantuml.com сайте plantuml]];
+    :тестирование диаграммы;
+}
+end
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="265" height="229" class="scale" src="../imgw/img-0df917e028cdc96d671324de904fe706.png"/></div></div></td></tr></tbody></table></p><p><em>[Ref. <a href="https://forum.plantuml.net/542/ability-to-define-hyperlink-on-diagram-elements?show=14003#c14003">QA-542</a>]</em><a style="position:relative;top:-38px;" name="dadd115c61036c7a"></a></p><div style="clear:both;height:50px;"></div><h2 class="chap"><img onclick="window.scrollTo(0,0);" title="Back to top" src="../backtop1.svg" width="20" height="20" class="backtop"/><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/cmp/dokuwiki/ru/activity-diagram-beta#19"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/cmp/asciidoc/ru/activity-diagram-beta#19"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/cmp/markdown/ru/activity-diagram-beta#19"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>Дорожки</h2><p></p> Можно задать дорожки используя символ <code class="cod">|</code>. Также для задаваемых дорожек можно задавать <a href="color.html">цвета</a>. <p></p><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msg9e6ad56acbf4dbd0b2c090db17180bc2" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="img9e6ad56acbf4dbd0b2c090db17180bc2" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;9e6ad56acbf4dbd0b2c090db17180bc2&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;9e6ad56acbf4dbd0b2c090db17180bc2&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;9e6ad56acbf4dbd0b2c090db17180bc2&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="pre9e6ad56acbf4dbd0b2c090db17180bc2">@startuml
+
+|Дорожка1|
+start
+:Действие1;
+
+|#AntiqueWhite|Дорожка2|
+:Действие2;
+:Действие3;
+
+|Дорожка1|
+:Действие4;
+
+|Дорожка2|
+:Действие5;
+stop
+
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="217" height="388" class="scale" src="../imgw/img-9e6ad56acbf4dbd0b2c090db17180bc2.png"/></div></div></td></tr></tbody></table></p><p></p><p></p> Можно использовать дорожки вместе с Условиями и Циклами. <p></p><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msg140d37868fec00b67f6f20b6e5aa0ac3" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="img140d37868fec00b67f6f20b6e5aa0ac3" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;140d37868fec00b67f6f20b6e5aa0ac3&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;140d37868fec00b67f6f20b6e5aa0ac3&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;140d37868fec00b67f6f20b6e5aa0ac3&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="pre140d37868fec00b67f6f20b6e5aa0ac3">@startuml
+
+|#pink|Актор_для_красного|
+start
+if (цвет?) is (красный) then
+#pink :**красное действие**;
+:Действие1;
+else (НЕ красный)
+
+|#lightblue|Актор_для_синего|
+#lightblue :**синее действие**;
+:Действие2;
+endif
+
+|Следующий актор|
+#lightgray :Действие3;
+:Действие4;
+
+|Финальный актор|
+#palegreen :Действие5;
+stop
+
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="751" height="466" class="scale" src="../imgw/img-140d37868fec00b67f6f20b6e5aa0ac3.png"/></div></div></td></tr></tbody></table></p><p></p><p></p> Также, для того, чтобы каждый раз не писать длинное имя Дорожки, можно задать для дорожки короткое имя и далее использовать везде его. Сделать это можно используя ключевое слово <code class="cod">alias</code> при первом определении Дорожки: <ul><li><code class="cod">|[#&lt;color&gt;|]&lt;короткоеИмя&gt;| &lt;ДлинноеИмя&gt;</code></li></ul><p></p><p></p><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msg64a402db2427c946fa624bb3b3136d04" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="img64a402db2427c946fa624bb3b3136d04" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;64a402db2427c946fa624bb3b3136d04&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;64a402db2427c946fa624bb3b3136d04&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;64a402db2427c946fa624bb3b3136d04&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="pre64a402db2427c946fa624bb3b3136d04">@startuml
+
+|#palegreen|Р| Рыбак
+
+|П| Повар
+
+|#gold|Е| Едок
+
+|Р|
+start
+:ловит рыбу;
+
+|П|
+:жарит рыбу;
+
+|Е|
+:ест рыбу;
+
+stop
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="301" height="278" class="scale" src="../imgw/img-64a402db2427c946fa624bb3b3136d04.png"/></div></div></td></tr></tbody></table></p><p></p><p></p><em>[Ref. <a href="https://forum.plantuml.net/2681/possible-define-alias-swimlane-place-alias-everywhere-else?show=2685#a2685">QA-2681</a>]</em><a style="position:relative;top:-38px;" name="d02f7ddcfafa91da"></a><div style="clear:both;min-height:110px;margin-top:10px;"><div class="pezoic"><span id="ezoic-pub-ad-placeholder-122"></span><!-- ezoic_pub_ad_placeholder-122-incontent_9-234x60-122-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-122-incontent_9-468x60-122-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-122-incontent_9-728x90-122-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-122-incontent_9-970x90-122-nonexxxnonexxxxxxezmaxscaleval100 --></div></div><h2 class="chap"><img onclick="window.scrollTo(0,0);" title="Back to top" src="../backtop1.svg" width="20" height="20" class="backtop"/><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/cmp/dokuwiki/ru/activity-diagram-beta#20"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/cmp/asciidoc/ru/activity-diagram-beta#20"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/cmp/markdown/ru/activity-diagram-beta#20"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>Прерывание активности</h2><p></p> Можно прервать активность (удалить стрелку) используя идентичные по своему действию ключевые слова <code class="cod">detach</code> или <code class="cod">kill</code>: <p></p><ul><li><code class="cod">detach</code></li></ul><p></p><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msgd1bece92dfde10540d093370bb7c4344" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="imgd1bece92dfde10540d093370bb7c4344" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;d1bece92dfde10540d093370bb7c4344&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;d1bece92dfde10540d093370bb7c4344&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;d1bece92dfde10540d093370bb7c4344&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="pred1bece92dfde10540d093370bb7c4344">@startuml
+
+ #palegreen :начало;
+
+ fork
+   :Действие1;
+   :Действие2;
+
+ fork again
+   :Действие3;
+   detach
+ endfork
+
+ if (Условие) then
+   :Действие4;
+   detach
+ endif
+
+ :Действие5;
+ detach
+ :Действие6;
+ stop
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="233" height="496" class="scale" src="../imgw/img-d1bece92dfde10540d093370bb7c4344.png"/></div></div></td></tr></tbody></table></p><p></p><p></p><p></p><ul><li><code class="cod">kill</code></li></ul><p></p><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msg527d91c6c8fa4a2ca9e57e6b85ca090b" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="img527d91c6c8fa4a2ca9e57e6b85ca090b" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;527d91c6c8fa4a2ca9e57e6b85ca090b&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;527d91c6c8fa4a2ca9e57e6b85ca090b&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;527d91c6c8fa4a2ca9e57e6b85ca090b&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="pre527d91c6c8fa4a2ca9e57e6b85ca090b">@startuml
+
+ #palegreen :начало;
+
+ fork
+   :Действие1;
+   :Действие2;
+
+ fork again
+   :Действие3;
+   kill
+ endfork
+
+ if (Условие) then
+   :Действие4;
+   detach
+ endif
+
+ :Действие5;
+ detach
+ :Действие6;
+ stop
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="233" height="496" class="scale" src="../imgw/img-527d91c6c8fa4a2ca9e57e6b85ca090b.png"/></div></div></td></tr></tbody></table></p><p><a style="position:relative;top:-38px;" name="7420c7766a064a28"></a></p><div style="clear:both;height:50px;"></div><h2 class="chap"><img onclick="window.scrollTo(0,0);" title="Back to top" src="../backtop1.svg" width="20" height="20" class="backtop"/><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/cmp/dokuwiki/ru/activity-diagram-beta#21"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/cmp/asciidoc/ru/activity-diagram-beta#21"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/cmp/markdown/ru/activity-diagram-beta#21"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>SDL (язык спецификаций с формальной семантикой)</h2><p></p><em>(еще на русский переводится как &#34;язык спецификаций и описаний&#34;)</em><p></p> Заменяя символ <code class="cod">;</code>, обозначающий конец описания действия, на символы из списка ниже, можно изменять внешний вид действия. Ниже перечислены доступные варианты с указанием обозначаемых ими типов: <ul><li><code class="cod">;</code> - <code class="cod">STATE</code>, <code class="cod">СОСТОЯНИЕ</code></li><li><code class="cod">|</code> - <code class="cod">CALL</code>, <code class="cod">ВЫЗОВ ПРОЦЕДУРЫ</code></li><li><code class="cod">&lt;</code> - <code class="cod">INPUT</code>, <code class="cod">ВВОД</code></li><li><code class="cod">&gt;</code> - <code class="cod">OUTPUT</code>, <code class="cod">ВЫВОД</code></li><li><code class="cod">/</code> - <code class="cod">SAVE</code>, <code class="cod">СОХРАНЕНИЕ</code></li><li><code class="cod">]</code> - <code class="cod">TASK</code>, <code class="cod">ЗАДАЧА</code></li><li><code class="cod">}</code> - <code class="cod">DECISION</code>, <code class="cod">РЕШЕНИЕ</code></li></ul><p></p><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msg298ca29096964e87136c9680c01813d5" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="img298ca29096964e87136c9680c01813d5" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;298ca29096964e87136c9680c01813d5&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;298ca29096964e87136c9680c01813d5&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;298ca29096964e87136c9680c01813d5&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="pre298ca29096964e87136c9680c01813d5">@startuml
+:СОСТОЯНИЕ;
+:ВЫЗОВ ПРОЦЕДУРЫ|
+:ВВОД&lt;
+:ВЫВОД&gt;
+:СОХРАНЕНИЕ/
+:ЗАДАЧА]
+:РЕШЕНИЕ}
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="163" height="387" class="scale" src="../imgw/img-298ca29096964e87136c9680c01813d5.png"/></div></div></td></tr></tbody></table></p><p></p><p></p> Еще один пример: <p></p><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msg62ea120285a50f92a347c9993ba85f6a" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="img62ea120285a50f92a347c9993ba85f6a" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;62ea120285a50f92a347c9993ba85f6a&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;62ea120285a50f92a347c9993ba85f6a&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;62ea120285a50f92a347c9993ba85f6a&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="pre62ea120285a50f92a347c9993ba85f6a">@startuml
+:ГОТОВ;
+:ПОЛУЧИТЬ_СЛЕД(o)|
+:ПОЛУЧЕНИЕ;
+
+split
+ :СПРОСИТЬ(i)&lt;
+ :ВЫВЕСТИ(o)&gt;
+
+split again
+ :СПРОСИТЬ(i)&lt;
+ :ПОЛУЧИТЬ_СЛЕД(o)
+  в несколько строчек|
+ :i := i + 1]
+ :ВЫВЕСТИ(o)&gt;
+
+split again
+ :ОШИБКА(i)&lt;
+ :ВЫВЕСТИ(o)&gt;
+
+split again
+ :СОХРАНЕНИЕ/
+
+split again
+ :i &gt; 5}
+stop
+
+end split
+
+:КОНЕЦ;
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="589" height="511" class="scale" src="../imgw/img-62ea120285a50f92a347c9993ba85f6a.png"/></div></div></td></tr></tbody></table></p><p></p><p></p><center><div class="tago">WARNING</div> <b>This translation need to be updated.</b> <div class="tago">WARNING</div></center><a style="position:relative;top:-38px;" name="d23dee2d0707a741"></a><div style="clear:both;min-height:110px;margin-top:10px;"><div class="pezoic"><span id="ezoic-pub-ad-placeholder-123"></span><!-- ezoic_pub_ad_placeholder-123-incontent_10-234x60-123-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-123-incontent_10-468x60-123-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-123-incontent_10-728x90-123-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-123-incontent_10-970x90-123-nonexxxnonexxxxxxezmaxscaleval100 --></div></div><h2 class="chap"><img onclick="window.scrollTo(0,0);" title="Back to top" src="../backtop1.svg" width="20" height="20" class="backtop"/><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/cmp/dokuwiki/ru/activity-diagram-beta#22"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/cmp/asciidoc/ru/activity-diagram-beta#22"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/cmp/markdown/ru/activity-diagram-beta#22"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>Полноценный пример</h2><p></p><p></p><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msg048fe55caa58513defa64b2a90c507a2" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="img048fe55caa58513defa64b2a90c507a2" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;048fe55caa58513defa64b2a90c507a2&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;048fe55caa58513defa64b2a90c507a2&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;048fe55caa58513defa64b2a90c507a2&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="pre048fe55caa58513defa64b2a90c507a2">@startuml
+
+start
+:ClickServlet.handleRequest();
+:new page;
+if (Page.onSecurityCheck) then (true)
+  :Page.onInit();
+  if (isForward?) then (no)
+    :Process controls;
+    if (continue processing?) then (no)
+      stop
+    endif
+
+    if (isPost?) then (yes)
+      :Page.onPost();
+    else (no)
+      :Page.onGet();
+    endif
+    :Page.onRender();
+  endif
+else (false)
+endif
+
+if (do redirect?) then (yes)
+  :redirect process;
+else
+  if (do forward?) then (yes)
+    :Forward request;
+  else (no)
+    :Render page template;
+  endif
+endif
+
+stop
+
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="433" height="913" class="scale" src="../imgw/img-048fe55caa58513defa64b2a90c507a2.png"/></div></div></td></tr></tbody></table></p><p></p><p></p><p></p><a style="position:relative;top:-38px;" name="d6bf58f32e2a3e02"></a><div style="clear:both;height:50px;"></div><h2 class="chap"><img onclick="window.scrollTo(0,0);" title="Back to top" src="../backtop1.svg" width="20" height="20" class="backtop"/><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/cmp/dokuwiki/ru/activity-diagram-beta#23"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/cmp/asciidoc/ru/activity-diagram-beta#23"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/cmp/markdown/ru/activity-diagram-beta#23"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>Condition Style </h2><p></p><h3>Inside style (by default)</h3><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msg94994d8b0eb41646954b2643b3da9660" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="img94994d8b0eb41646954b2643b3da9660" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;94994d8b0eb41646954b2643b3da9660&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;94994d8b0eb41646954b2643b3da9660&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;94994d8b0eb41646954b2643b3da9660&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="pre94994d8b0eb41646954b2643b3da9660">@startuml
+skinparam conditionStyle inside
+start
+repeat
+  :act1;
+  :act2;
+repeatwhile (&lt;b&gt;end)
+:act3;
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="105" height="300" class="scale" src="../imgw/img-94994d8b0eb41646954b2643b3da9660.png"/></div></div></td></tr></tbody></table></p><p></p><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msg35531dfbdd86bbee082747b086d593d6" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="img35531dfbdd86bbee082747b086d593d6" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;35531dfbdd86bbee082747b086d593d6&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;35531dfbdd86bbee082747b086d593d6&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;35531dfbdd86bbee082747b086d593d6&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="pre35531dfbdd86bbee082747b086d593d6">@startuml
+start
+repeat
+  :act1;
+  :act2;
+repeatwhile (&lt;b&gt;end)
+:act3;
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="105" height="300" class="scale" src="../imgw/img-35531dfbdd86bbee082747b086d593d6.png"/></div></div></td></tr></tbody></table></p><p></p><p></p><h3>Diamond style </h3><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msg9acbfa7f02d0166950369c76def5f485" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="img9acbfa7f02d0166950369c76def5f485" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;9acbfa7f02d0166950369c76def5f485&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;9acbfa7f02d0166950369c76def5f485&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;9acbfa7f02d0166950369c76def5f485&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="pre9acbfa7f02d0166950369c76def5f485">@startuml
+skinparam conditionStyle diamond
+start
+repeat
+  :act1;
+  :act2;
+repeatwhile (&lt;b&gt;end)
+:act3;
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="93" height="300" class="scale" src="../imgw/img-9acbfa7f02d0166950369c76def5f485.png"/></div></div></td></tr></tbody></table></p><p></p><p></p><p></p><p></p><h3>InsideDiamond (or <em>Foo1</em>) style </h3><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msg26e762122fc097958583dd85bfadbe95" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="img26e762122fc097958583dd85bfadbe95" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;26e762122fc097958583dd85bfadbe95&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;26e762122fc097958583dd85bfadbe95&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;26e762122fc097958583dd85bfadbe95&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="pre26e762122fc097958583dd85bfadbe95">@startuml
+skinparam conditionStyle InsideDiamond
+start
+repeat
+  :act1;
+  :act2;
+repeatwhile (&lt;b&gt;end)
+:act3;
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="102" height="311" class="scale" src="../imgw/img-26e762122fc097958583dd85bfadbe95.png"/></div></div></td></tr></tbody></table></p><p></p><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msg2da65f21d24489ec1c7db497a0b273d7" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="img2da65f21d24489ec1c7db497a0b273d7" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;2da65f21d24489ec1c7db497a0b273d7&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;2da65f21d24489ec1c7db497a0b273d7&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;2da65f21d24489ec1c7db497a0b273d7&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="pre2da65f21d24489ec1c7db497a0b273d7">@startuml
+skinparam conditionStyle foo1
+start
+repeat
+  :act1;
+  :act2;
+repeatwhile (&lt;b&gt;end)
+:act3;
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="102" height="311" class="scale" src="../imgw/img-2da65f21d24489ec1c7db497a0b273d7.png"/></div></div></td></tr></tbody></table></p><p></p><p></p><p></p><em>[Ref. <a href="https://forum.plantuml.net/1290/plantuml-condition-rendering">QA-1290</a> and <a href="https://github.com/plantuml/plantuml/issues/400#issuecomment-721287124">#400</a>]</em><a style="position:relative;top:-38px;" name="27fee13230d4c6de"></a><div style="clear:both;min-height:110px;margin-top:10px;"><div class="pezoic"><span id="ezoic-pub-ad-placeholder-194"></span><!-- ezoic_pub_ad_placeholder-194-incontent_11-234x60-194-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-194-incontent_11-468x60-194-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-194-incontent_11-728x90-194-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-194-incontent_11-970x90-194-nonexxxnonexxxxxxezmaxscaleval100 --></div></div><h2 class="chap"><img onclick="window.scrollTo(0,0);" title="Back to top" src="../backtop1.svg" width="20" height="20" class="backtop"/><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/cmp/dokuwiki/ru/activity-diagram-beta#24"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/cmp/asciidoc/ru/activity-diagram-beta#24"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/cmp/markdown/ru/activity-diagram-beta#24"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>Condition End Style </h2><p></p><h3>Diamond style (by default)</h3><p></p><ul><li>With one branch</li></ul><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msg7783c2dd05f35cece761663e31c22024" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="img7783c2dd05f35cece761663e31c22024" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;7783c2dd05f35cece761663e31c22024&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;7783c2dd05f35cece761663e31c22024&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;7783c2dd05f35cece761663e31c22024&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="pre7783c2dd05f35cece761663e31c22024">@startuml
+skinparam ConditionEndStyle diamond
+:A;
+if (decision) then (yes)
+    :B1;
+else (no)
+endif
+:C;
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="121" height="259" class="scale" src="../imgw/img-7783c2dd05f35cece761663e31c22024.png"/></div></div></td></tr></tbody></table></p><p></p><p></p><ul><li>With two branches (<code class="cod">B1</code>, <code class="cod">B2</code>)</li></ul><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msge963ec7566fa471132b483aa1b17c64e" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="imge963ec7566fa471132b483aa1b17c64e" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;e963ec7566fa471132b483aa1b17c64e&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;e963ec7566fa471132b483aa1b17c64e&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;e963ec7566fa471132b483aa1b17c64e&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="pree963ec7566fa471132b483aa1b17c64e">@startuml
+skinparam ConditionEndStyle diamond
+:A;
+if (decision) then (yes)
+    :B1;
+else (no)
+    :B2;
+endif
+:C;
+@enduml
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="140" height="230" class="scale" src="../imgw/img-e963ec7566fa471132b483aa1b17c64e.png"/></div></div></td></tr></tbody></table></p><p></p><p></p><h3>Horizontal line (hline) style </h3><ul><li>With one branch</li></ul><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msge75c082dabdf191ff14a597c3fce6b68" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="imge75c082dabdf191ff14a597c3fce6b68" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;e75c082dabdf191ff14a597c3fce6b68&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;e75c082dabdf191ff14a597c3fce6b68&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;e75c082dabdf191ff14a597c3fce6b68&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="pree75c082dabdf191ff14a597c3fce6b68">@startuml
+skinparam ConditionEndStyle hline
+:A;
+if (decision) then (yes)
+    :B1;
+else (no)
+endif
+:C;
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="121" height="237" class="scale" src="../imgw/img-e75c082dabdf191ff14a597c3fce6b68.png"/></div></div></td></tr></tbody></table></p><p></p><p></p><ul><li>With two branches (<code class="cod">B1</code>, <code class="cod">B2</code>)</li></ul><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msg941c8ada4c8aaa8be4ba44b9169e1cfc" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="img941c8ada4c8aaa8be4ba44b9169e1cfc" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;941c8ada4c8aaa8be4ba44b9169e1cfc&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;941c8ada4c8aaa8be4ba44b9169e1cfc&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;941c8ada4c8aaa8be4ba44b9169e1cfc&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="pre941c8ada4c8aaa8be4ba44b9169e1cfc">@startuml
+skinparam ConditionEndStyle hline
+:A;
+if (decision) then (yes)
+    :B1;
+else (no)
+    :B2;
+endif
+:C;
+@enduml
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="140" height="218" class="scale" src="../imgw/img-941c8ada4c8aaa8be4ba44b9169e1cfc.png"/></div></div></td></tr></tbody></table></p><p></p><p></p><p></p><em>[Ref. <a href="https://forum.plantuml.net/4015/its-possible-to-draw-if-else-endif-without-merge-symbol">QA-4015</a>]</em><a style="position:relative;top:-38px;" name="bb2ede32ce6accb8"></a><div style="clear:both;height:50px;"></div><h2 class="chap"><img onclick="window.scrollTo(0,0);" title="Back to top" src="../backtop1.svg" width="20" height="20" class="backtop"/><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/cmp/dokuwiki/ru/activity-diagram-beta#25"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/cmp/asciidoc/ru/activity-diagram-beta#25"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/cmp/markdown/ru/activity-diagram-beta#25"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>Using (global) style</h2><p></p><h3>Without style <em>(by default)</em></h3><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msg56e670b1dae2f318a2f64e6bfcf48c86" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="img56e670b1dae2f318a2f64e6bfcf48c86" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;56e670b1dae2f318a2f64e6bfcf48c86&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;56e670b1dae2f318a2f64e6bfcf48c86&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;56e670b1dae2f318a2f64e6bfcf48c86&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="pre56e670b1dae2f318a2f64e6bfcf48c86">@startuml
+start
+:init;
+-&gt; test of color;
+if (color?) is (&lt;color:red&gt;red) then
+:print red;
+else 
+:print not red;
+note right: no color
+endif
+partition End {
+:end;
+}
+-&gt; this is the end;
+end
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="279" height="391" class="scale" src="../imgw/img-56e670b1dae2f318a2f64e6bfcf48c86.png"/></div></div></td></tr></tbody></table></p><p></p><p></p><p></p><h3>With style</h3><p></p> You can use <a href="style-evolution.html">style</a> to change rendering of elements. <p></p><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msg5482632635c690b9342f6327d8622d99" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="img5482632635c690b9342f6327d8622d99" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;5482632635c690b9342f6327d8622d99&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;5482632635c690b9342f6327d8622d99&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;5482632635c690b9342f6327d8622d99&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="pre5482632635c690b9342f6327d8622d99">@startuml
+&lt;style&gt;
+activityDiagram {
+  BackgroundColor #33668E
+  BorderColor #33668E
+  FontColor #888
+  FontName arial
+
+  diamond {
+    BackgroundColor #ccf
+    LineColor #00FF00
+    FontColor green
+    FontName arial
+    FontSize 15
+  }
+  arrow {
+    FontColor gold
+    FontName arial
+    FontSize 15
+  }
+  partition {
+    LineColor red
+    FontColor green
+    RoundCorner 10
+    BackgroundColor PeachPuff
+  }
+  note {
+    FontColor Blue
+    LineColor Navy
+    BackgroundColor #ccf
+  }
+}
+document {
+   BackgroundColor transparent
+}
+&lt;/style&gt;
+start
+:init;
+-&gt; test of color;
+if (color?) is (&lt;color:red&gt;red) then
+:print red;
+else 
+:print not red;
+note right: no color
+endif
+partition End {
+:end;
+}
+-&gt; this is the end;
+end
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="279" height="392" class="scale" src="../imgw/img-5482632635c690b9342f6327d8622d99.png"/></div></div></td></tr></tbody></table></p><p></p></td><td id="toctd" valign="top" style="max-width:240px;min-width:240px;"><div id="toc"><ul><li><a href="activity-diagram-beta.html#301241875e1def42">Простая активность</a></li><li><a href="activity-diagram-beta.html#45e7ad1c1b3c39e2">Старт активности, Стоп активности, Стоп поток, Быстрый стоп</a></li><li><a href="activity-diagram-beta.html#9d3afea73e90192d">Условия (оператор if)</a></li><li><a href="activity-diagram-beta.html#537b5a761669087b">Перебор множества условий для определенного параметра (оператор switch)</a></li><li><a href="activity-diagram-beta.html#d7b1027a512b4d7b">Остановка активности в теле условия</a></li><li><a href="activity-diagram-beta.html#219cebcef334f265">Повторяющийся цикл (с проверкой условия в конце цикла)</a></li><li><a href="activity-diagram-beta.html#76b6256d62540b9f">Прерывание цикла repeat при помощи ключевого слова break</a></li><li><a href="activity-diagram-beta.html#2f8a92e645aba14f">Goto and Label Processing [label, goto]</a></li><li><a href="activity-diagram-beta.html#04a96ae1910f3c8a">Повторяющийся цикл (с проверкой условия в начале цикла)</a></li><li><a href="activity-diagram-beta.html#7452578bfebedd2d">Распаралелливание активности [ режим многопоточности: fork, fork again, end fork и merge ]</a></li><li><a href="activity-diagram-beta.html#39d488a91ed5c8d2">Распараллеливание активности [ режим разделения: split, split again и end split ]</a></li><li><a href="activity-diagram-beta.html#f4c6f851b00d5518">Заметки</a></li><li><a href="activity-diagram-beta.html#5d50889672f6f860">Цвета</a></li><li><a href="activity-diagram-beta.html#6299b1bc9965f62f">Линии вместо стрелок</a></li><li><a href="activity-diagram-beta.html#4e05974b02cc4aa9">Изменение цвета и стиля стрелок (синтаксис квадратных скобочек)</a></li><li><a href="activity-diagram-beta.html#edf21d7ecb364e82">Коннектор</a></li><li><a href="activity-diagram-beta.html#2f8c97b04c4fc1f5">Цвет коннектора</a></li><li><a href="activity-diagram-beta.html#772273da3919bcd1">Объединение (группировка) активностей</a></li><li><a href="activity-diagram-beta.html#dadd115c61036c7a">Дорожки</a></li><li><a href="activity-diagram-beta.html#d02f7ddcfafa91da">Прерывание активности</a></li><li><a href="activity-diagram-beta.html#7420c7766a064a28">SDL (язык спецификаций с формальной семантикой)</a></li><li><a href="activity-diagram-beta.html#d23dee2d0707a741">Полноценный пример</a></li><li><a href="activity-diagram-beta.html#d6bf58f32e2a3e02">Condition Style</a></li><li><a href="activity-diagram-beta.html#27fee13230d4c6de">Condition End Style</a></li><li><a href="activity-diagram-beta.html#bb2ede32ce6accb8">Using (global) style</a></li></ul></div></td></tr></tbody></table></p><p></p><span id="ezoic-pub-ad-placeholder-104"></span><!-- ezoic_pub_ad_placeholder-104-bottom_of_page-234x60-104-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-104-bottom_of_page-468x60-104-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-104-bottom_of_page-728x90-104-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-104-bottom_of_page-970x250-104-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-104-bottom_of_page-300x250x3-104-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-104-bottom_of_page-970x90-104-nonexxxnonexxxxxxezmaxscaleval100 --></div><style>.btm{text-align:center}.btm a{text-decoration:none;color:#637282}.btm a:hover{color:#0366d6}</style><div class="btm"><hr/><a href="https://g.ezoic.net/privacy/plantuml.com"><small>Privacy Policy</small></a>      <a href="../direct-sales.html"><small>Advertise</small></a><p></p></div><script>var sc_project=11129479;var sc_invisible=1;var sc_security="66ff16f1";</script><script async="" src="https://www.statcounter.com/counter/counter.js"></script><!--[selectrongo:done]--><script type="text/javascript">
+				var __inScopeForCCPA = false;
+		function __uspapi(command, version, callback) {
+			var response = null;
+			var successs = false;
+			if (command === "getUSPData" && version === 1) {
+				var uspString = "1"; // Version
+				if (__inScopeForCCPA) {
+					uspString += "N"; // Has Explicit Notice for Opt Out been provided (ex footer or minor consent modal)
+					var result;
+					var consentCookie = (result = new RegExp('(?:^|; )ezoccpaconsent=([^;]*)').exec(document.cookie)) ? (result[1]) : null;
+					if (consentCookie === "nonconsent") {
+						uspString += "Y";
+					}
+					else {
+						uspString += "N";
+					}
+					uspString += "N" // Is pub a signatory to the IAB Limited Service Provider Agreement (http://www.iabprivacy.com/)
+				}
+				else {
+					uspString += "---";
+				}
+				response = {
+					uspString: uspString,
+					version: 1
+				};
+				success = true;
+			}
+			return callback(response, success);
+		};
+		function __receiveUspapiMessage(event) {
+			if (event.data.hasOwnProperty('__uspapiCall')) {
+				__uspapi('getUSPData', 1, function(uspData, success) {
+					event.source.postMessage({
+						__uspapiReturn: {
+							returnValue: uspData,
+							success: success,
+							callId: event.data.__uspapiCall.callId
+						}
+					},
+					event.origin);
+				});
+			}
+			return null;
+		};
+		window.addEventListener("message", __receiveUspapiMessage, false);
+</script>
+<script>__ez.queue.addFile('/tardisrocinante/vitals.js', '/tardisrocinante/vitals.js?gcb=2&cb=3', false, ['/parsonsmaize/mulvane.js'], true, false, true, false);</script>
+<script>var _audins_dom="plantuml_com",_audins_did=173770;__ez.queue.addDelayFunc("audins.js","__ez.script.add", "//go.ezodn.com/detroitchicago/audins.js?cb=195-2");</script><noscript><div style="display:none;"><img src="https://pixel.quantserve.com/pixel/p-31iz6hfFutd16.gif?labels=Domain.plantuml_com,DomainId.173770" border="0" height="1" width="1" alt="Quantcast"/></div></noscript>
+<script>__ez.queue.addFile('/beardeddragon/drake.js', '/beardeddragon/drake.js?gcb=2&cb=4', false, [], true, false, true, false);</script>
+<script type="text/javascript" style='display:none;'>var __ez_dims = (function() {
+		var setCookie = function( name, content, expiry ) {
+			return document.cookie = name+'='+content+((expiry)?';expires='+(new Date(Math.floor(new Date().getTime()+expiry*1000)).toUTCString()):'')+';path=/';
+		};
+		var ffid = 1;
+		var oh = window.screen.height;
+		var ow = window.screen.width;
+		var h = ffid === 1 ? oh : (oh > ow) ? oh : ow;
+		var w = ffid === 1 ? ow : (oh > ow) ? ow : oh;
+		var uh = window.innerHeight || document.documentElement.clientHeight || document.getElementsByTagName('body')[0].clientHeight;
+		var uw = window.innerWidth || document.documentElement.clientWidth || document.getElementsByTagName('body')[0].clientWidth;
+		setCookie('ezds', encodeURIComponent('ffid='+ffid+',w='+w+',h='+h), (31536e3*7));
+		setCookie('ezohw', encodeURIComponent('w='+uw+',h='+uh), (31536e3*7));
+	})();</script>
+<script type='text/javascript' style='display:none;' async>__ez.queue.addFile('/parsonsmaize/chanute.js', '/parsonsmaize/chanute.js?a=a&cb=7&dcb=195-2&shcb=34', true, ['/parsonsmaize/mulvane.js'], true, false, false, false);</script>
+<script type='text/javascript' style='display:none;' async>__ez.queue.addFile('/porpoiseant/jellyfish.js', '/porpoiseant/jellyfish.js?a=a&cb=10&dcb=195-2&shcb=34', false, [], true, false, false, false);</script></body></html>

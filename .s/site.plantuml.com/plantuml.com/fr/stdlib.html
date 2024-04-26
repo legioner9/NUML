@@ -1,0 +1,617 @@
+<html lang="fr"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<script data-ezscrex='false' data-cfasync='false' data-pagespeed-no-defer>var __ez=__ez||{};__ez.stms=Date.now();__ez.evt={};__ez.script={};__ez.ck=__ez.ck||{};__ez.template={};__ez.template.isOrig=false;__ez.queue=function(){var e=0,i=0,t=[],n=!1,o=[],r=[],s=!0,a=function(e,i,n,o,r,s,a){var l=arguments.length>7&&void 0!==arguments[7]?arguments[7]:window,d=this;this.name=e,this.funcName=i,this.parameters=null===n?null:p(n)?n:[n],this.isBlock=o,this.blockedBy=r,this.deleteWhenComplete=s,this.isError=!1,this.isComplete=!1,this.isInitialized=!1,this.proceedIfError=a,this.fWindow=l,this.isTimeDelay=!1,this.process=function(){f("... func = "+e),d.isInitialized=!0,d.isComplete=!0,f("... func.apply: "+e);var i=d.funcName.split("."),n=null,o=this.fWindow||window;i.length>3||(n=3===i.length?o[i[0]][i[1]][i[2]]:2===i.length?o[i[0]][i[1]]:o[d.funcName]),null!=n&&n.apply(null,this.parameters),!0===d.deleteWhenComplete&&delete t[e],!0===d.isBlock&&(f("----- F'D: "+d.name),u())}},l=function(e,i,t,n,o,r,s){var a=arguments.length>7&&void 0!==arguments[7]?arguments[7]:window,l=this;this.name=e,this.path=i,this.async=o,this.defer=r,this.isBlock=t,this.blockedBy=n,this.isInitialized=!1,this.isError=!1,this.isComplete=!1,this.proceedIfError=s,this.fWindow=a,this.isTimeDelay=!1,this.isPath=function(e){return"/"===e[0]&&"/"!==e[1]},this.getSrc=function(e){return void 0!==window.__ezScriptHost&&this.isPath(e)&&"banger.js"!==this.name?window.__ezScriptHost+e:e},this.process=function(){l.isInitialized=!0,f("... file = "+e);var i=this.fWindow?this.fWindow.document:document,t=i.createElement("script");t.src=this.getSrc(this.path),!0===o?t.async=!0:!0===r&&(t.defer=!0),t.onerror=function(){var e={url:window.location.href,name:l.name,path:l.path,user_agent:window.navigator.userAgent};"undefined"!=typeof _ezaq&&(e.pageview_id=_ezaq.page_view_id);var i=encodeURIComponent(JSON.stringify(e)),t=new XMLHttpRequest;t.open("GET","//g.ezoic.net/ezqlog?d="+i,!0),t.send(),f("----- ERR'D: "+l.name),l.isError=!0,!0===l.isBlock&&u()},t.onreadystatechange=t.onload=function(){var e=t.readyState;f("----- F'D: "+l.name),e&&!/loaded|complete/.test(e)||(l.isComplete=!0,!0===l.isBlock&&u())},i.getElementsByTagName("head")[0].appendChild(t)}},d=function(e,i){this.name=e,this.path="",this.async=!1,this.defer=!1,this.isBlock=!1,this.blockedBy=[],this.isInitialized=!0,this.isError=!1,this.isComplete=i,this.proceedIfError=!1,this.isTimeDelay=!1,this.process=function(){}};function c(e){!0!==h(e)&&0!=s&&e.process()}function h(e){if(!0===e.isTimeDelay&&!1===n)return f(e.name+" blocked = TIME DELAY!"),!0;if(p(e.blockedBy))for(var i=0;i<e.blockedBy.length;i++){var o=e.blockedBy[i];if(!1===t.hasOwnProperty(o))return f(e.name+" blocked = "+o),!0;if(!0===e.proceedIfError&&!0===t[o].isError)return!1;if(!1===t[o].isComplete)return f(e.name+" blocked = "+o),!0}return!1}function f(e){var i=window.location.href,t=new RegExp("[?&]ezq=([^&#]*)","i").exec(i);"1"===(t?t[1]:null)&&console.debug(e)}function u(){++e>200||(f("let's go"),m(o),m(r))}function m(e){for(var i in e)if(!1!==e.hasOwnProperty(i)){var t=e[i];!0===t.isComplete||h(t)||!0===t.isInitialized||!0===t.isError?!0===t.isError?f(t.name+": error"):!0===t.isComplete?f(t.name+": complete already"):!0===t.isInitialized&&f(t.name+": initialized already"):t.process()}}function p(e){return"[object Array]"==Object.prototype.toString.call(e)}return window.addEventListener("load",(function(){setTimeout((function(){n=!0,f("TDELAY -----"),u()}),5e3)}),!1),{addFile:function(e,i,n,s,a,d,h,f,u){var m=new l(e,i,n,s,a,d,h,u);!0===f?o[e]=m:r[e]=m,t[e]=m,c(m)},addDelayFile:function(e,i){var n=new l(e,i,!1,[],!1,!1,!0);n.isTimeDelay=!0,f(e+" ...  FILE! TDELAY"),r[e]=n,t[e]=n,c(n)},addFunc:function(e,n,s,l,d,h,f,u,m,p){!0===h&&(e=e+"_"+i++);var w=new a(e,n,s,l,d,f,u,p);!0===m?o[e]=w:r[e]=w,t[e]=w,c(w)},addDelayFunc:function(e,i,n){var o=new a(e,i,n,!1,[],!0,!0);o.isTimeDelay=!0,f(e+" ...  FUNCTION! TDELAY"),r[e]=o,t[e]=o,c(o)},items:t,processAll:u,setallowLoad:function(e){s=e},markLoaded:function(e){if(e&&0!==e.length){if(e in t){var i=t[e];!0===i.isComplete?f(i.name+" "+e+": error loaded duplicate"):(i.isComplete=!0,i.isInitialized=!0)}else t[e]=new d(e,!0);f("markLoaded dummyfile: "+t[e].name)}},logWhatsBlocked:function(){for(var e in t)!1!==t.hasOwnProperty(e)&&h(t[e])}}}();__ez.evt.add=function(e,t,n){e.addEventListener?e.addEventListener(t,n,!1):e.attachEvent?e.attachEvent("on"+t,n):e["on"+t]=n()},__ez.evt.remove=function(e,t,n){e.removeEventListener?e.removeEventListener(t,n,!1):e.detachEvent?e.detachEvent("on"+t,n):delete e["on"+t]};__ez.script.add=function(e){var t=document.createElement("script");t.src=e,t.async=!0,t.type="text/javascript",document.getElementsByTagName("head")[0].appendChild(t)};__ez.dot={};__ez.queue.addFile('/detroitchicago/boise.js', '/detroitchicago/boise.js?gcb=195-2&cb=2', true, [], true, false, true, false);__ez.queue.addFile('/parsonsmaize/abilene.js', '/parsonsmaize/abilene.js?gcb=195-2&cb=28', true, [], true, false, true, false);</script>
+<script data-ezscrex="false" type="text/javascript" data-cfasync="false">window._ezaq = Object.assign({}, typeof window._ezaq !== "undefined" ? window._ezaq : {}, {"ad_cache_level":1,"domain_id":173770,"ezcache_level":2,"ezcache_skip_code":0,"has_bad_image":0,"has_bad_words":0,"is_sitespeed":0,"lt_cache_level":0,"page_view_id":"511ddf02-8300-4ebc-7f9b-f74209c341b6","response_size_orig":87482,"response_time_orig":4,"template_id":134,"url":"https://plantuml.com/fr/stdlib","word_count":2564,"worst_bad_word_level":0});__ez.queue.markLoaded('ezaqBaseReady');</script>
+<script type="text/javascript">(function(){function storageAvailable(type){var storage;try{storage=window[type];var x='__storage_test__';storage.setItem(x,x);storage.removeItem(x);return true;}
+catch(e){return e instanceof DOMException&&(e.code===22||e.code===1014||e.name==='QuotaExceededError'||e.name==='NS_ERROR_DOM_QUOTA_REACHED')&&(storage&&storage.length!==0);}}
+function remove_ama_config(){if(storageAvailable('localStorage')){localStorage.removeItem("google_ama_config");}}
+remove_ama_config()})()</script>
+<script type="text/javascript">var ezoicTestActive = true</script>
+<script data-ezscrex="false" type="text/javascript" data-cfasync="false">window._ezaq = Object.assign({}, typeof window._ezaq !== "undefined" ? window._ezaq : {}, {"ab_test_id":"mod174-c","ad_cache_level":1,"ad_count_adjustment":0,"ad_lazyload_version":0,"ad_load_version":1,"ad_location_ids":"","adx_ad_count":0,"ai_placeholder_cache_level":1,"ai_placeholder_placement_cnt":-1,"bidder_method":1,"bidder_version":3,"city":"Krasnoyarsk","country":"RU","days_since_last_visit":-1,"display_ad_count":0,"domain_id":173770,"domain_test_group":20230802,"ds_adsize_opt_id":-1,"engaged_time_visit":0,"ezcache_level":2,"ezcache_skip_code":0,"form_factor_id":1,"framework_id":1,"has_bad_image":0,"has_bad_words":0,"iab_category":"","iab_category_0":"596","is_embed":false,"is_from_recommended_pages":false,"is_return_visitor":false,"is_sitespeed":0,"last_page_load":"","last_pageview_id":"","lt_cache_level":0,"max_ads":0,"metro_code":0,"optimization_version":1,"page_ad_positions":"","page_view_count":146,"page_view_id":"511ddf02-8300-4ebc-7f9b-f74209c341b6","position_selection_id":0,"postal_code":"660000","pv_event_count":0,"response_size_orig":87482,"response_time_orig":4,"serverid":"i-02586fed39afcfc4d","state":"KYA","sub_page_ad_positions":"","t_epoch":1697690884,"template_id":134,"time_on_site_visit":0,"url":"https://plantuml.com/fr/stdlib","word_count":2564,"worst_bad_word_level":0});__ez.queue.markLoaded('ezaqReady');</script>
+<script data-ezscrex='false' data-cfasync='false' data-pagespeed-no-defer>__ez.queue.addFile('/parsonsmaize/mulvane.js', '/parsonsmaize/mulvane.js?gcb=195-2&cb=5', true, ['/parsonsmaize/abilene.js'], true, false, true, false);__ez.queue.addFile('/parsonsmaize/olathe.js', '/parsonsmaize/olathe.js?gcb=195-2&cb=20', false, ['/parsonsmaize/abilene.js','/parsonsmaize/mulvane.js'], true, false, true, false);__ez.queue.addFile('/porpoiseant/et.js', '/porpoiseant/et.js?gcb=195-2&cb=2', false, [], true, false, true, false);!function(){var e;__ez.vep=(e=[],{Add:function(i,t){__ez.dot.isDefined(i)&&__ez.dot.isValid(t)&&e.push({type:"video",video_impression_id:i,domain_id:__ez.dot.getDID(),t_epoch:__ez.dot.getEpoch(0),data:__ez.dot.dataToStr(t)})},Fire:function(){if(void 0===document.visibilityState||"prerender"!==document.visibilityState){if(__ez.dot.isDefined(e)&&e.length>0)for(;e.length>0;){var i=5;i>e.length&&(i=e.length);var t=e.splice(0,i),o=__ez.dot.getURL("/detroitchicago/grapefruit.gif")+"?orig="+(!0===__ez.template.isOrig?1:0)+"&v="+btoa(JSON.stringify(t));__ez.dot.Fire(o)}e=[]}}})}();</script><script data-ezscrex='false' data-cfasync='false' data-pagespeed-no-defer>!function(){function e(i){return e="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e},e(i)}__ez.pel=function(){var i=[];function t(t,o,d,_,n,r,a,s){if(__ez.dot.isDefined(t)&&0!=__ez.dot.isAnyDefined(t.getSlotElementId,t.ElementId)){void 0===s&&(s=!1);var p=parseInt(__ez.dot.getTargeting(t,"ap")),f=__ez.dot.getSlotIID(t),u=__ez.dot.getAdUnit(t,s),z=parseInt(__ez.dot.getTargeting(t,"compid")),g=0,c=0,l=function(i){if("undefined"==typeof _ezim_d)return!1;var t=__ez.dot.getAdUnitPath(i).split("/").pop();if("object"===("undefined"==typeof _ezim_d?"undefined":e(_ezim_d))&&_ezim_d.hasOwnProperty(t))return _ezim_d[t];for(var o in _ezim_d)if(o.split("/").pop()===t)return _ezim_d[o];return!1}(t);"object"==e(l)&&(void 0!==l.creative_id&&(c=l.creative_id),void 0!==l.line_item_id&&(g=l.line_item_id)),__ez.dot.isDefined(f,u)&&__ez.dot.isValid(o)&&("0"===f&&!0!==s||""===u||i.push({type:"impression",impression_id:f,domain_id:__ez.dot.getDID(),unit:u,t_epoch:__ez.dot.getEpoch(0),revenue:d,est_revenue:_,ad_position:p,ad_size:"",bid_floor_filled:n,bid_floor_prev:r,stat_source_id:a,country_code:__ez.dot.getCC(),pageview_id:__ez.dot.getPageviewId(),comp_id:z,line_item_id:g,creative_id:c,data:__ez.dot.dataToStr(o),is_orig:s||__ez.template.isOrig}))}}function o(){void 0!==document.visibilityState&&"prerender"===document.visibilityState||(__ez.dot.isDefined(i)&&i.length>0&&[i.filter((function(e){return e.is_orig})),i.filter((function(e){return!e.is_orig}))].forEach((function(e){for(;e.length>0;){var i=e[0].is_orig||!1,t=5;t>e.length&&(t=e.length);var o=e.splice(0,t),d=__ez.dot.getURL("/porpoiseant/army.gif")+"?orig="+(!0===i?1:0)+"&sts="+btoa(JSON.stringify(o));(void 0!==window.isAmp&&isAmp||void 0!==window.ezWp&&ezWp)&&void 0!==window._ezaq&&_ezaq.hasOwnProperty("domain_id")&&(d+="&visit_uuid="+_ezaq.visit_uuid),__ez.dot.Fire(d)}})),i=[])}return{Add:t,AddAndFire:function(e,i){t(e,i,0,0,0,0,0),o()},AddAndFireOrig:function(e,i){t(e,i,0,0,0,0,0,!0),o()},AddById:function(e,t,o,d){var _=e.split("/");if(__ez.dot.isDefined(e)&&3===_.length&&__ez.dot.isValid(t)){var n=_[0],r={type:"impression",impression_id:_[2],domain_id:__ez.dot.getDID(),unit:n,t_epoch:__ez.dot.getEpoch(0),pageview_id:__ez.dot.getPageviewId(),data:__ez.dot.dataToStr(t),is_orig:o||__ez.template.isOrig};void 0!==d&&(r.revenue=d),i.push(r)}},Fire:o,GetPixels:function(){return i}}}()}();__ez.queue.addFile('/detroitchicago/raleigh.js', '/detroitchicago/raleigh.js?gcb=195-2&cb=6', false, ['/parsonsmaize/abilene.js'], true, false, true, false);__ez.queue.addFile('/detroitchicago/vista.js', '/detroitchicago/vista.js?gcb=195-2&cb=5', false, ['/parsonsmaize/abilene.js'], true, false, true, false);__ez.queue.addFile('/detroitchicago/tampa.js', '/detroitchicago/tampa.js?gcb=195-2&cb=5', false, ['/parsonsmaize/abilene.js'], true, false, true, false);</script><base href=""/><meta name="flattr:id" content="1ew3x0"/><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "url": "https://plantuml.com",
+  "name": "PlantUML",
+  "sameAs" : ["https://twitter.com/plantuml","https://en.wikipedia.org/wiki/PlantUML","https://www.wikidata.org/wiki/Q18346546"],
+  "logo": "https://cdn-0.plantuml.com/logo3.png",
+  "contactPoint": [{
+    "@type": "ContactPoint",
+    "email": "plantuml@gmail.com",
+    "url": "https://plantuml.com",
+    "contactType": "customer service"
+  }]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+    "@type": "ListItem",
+    "position": 1,
+    "item": {
+      "@id": "https://plantuml.com",
+      "name": "Home"
+    }
+  },{
+    "@type": "ListItem",
+    "position": 2,
+    "item": {
+      "@id": "https://plantuml.com/sitemap-language-specification",
+      "name": "Language specification"
+    }
+  },{
+    "@type": "ListItem",
+    "position": 3,
+    "item": {
+      "@id": "https://plantuml.com/stdlib",
+      "name": "Standard Library"
+  }
+  }]
+}
+</script><link rel="canonical" href="stdlib.html"/><link rel="alternate" hreflang="x-default" href="../stdlib.html"/><link rel="alternate" hreflang="de" href="../de/stdlib.html"/><link rel="alternate" hreflang="en" href="../stdlib.html"/><link rel="alternate" hreflang="es" href="../es/stdlib.html"/><link rel="alternate" hreflang="fr" href="stdlib.html"/><link rel="alternate" hreflang="ja" href="../ja/stdlib.html"/><link rel="alternate" hreflang="ru" href="../ru/stdlib.html"/><link rel="alternate" hreflang="ko" href="../ko/stdlib.html"/><link rel="alternate" hreflang="zh" href="../zh/stdlib.html"/><link rel="shortcut icon" href="../favicon.ico"/><link rel="preload" as="image" href="../svgrepo-house.svg"/><link rel="preload" as="image" href="../svgrepo-text-news.svg"/><link rel="preload" as="image" href="../svgrepo-rocket-3-start.svg"/><link rel="preload" as="image" href="../svgrepo-server.svg"/><link rel="preload" as="image" href="../svgrepo-play.svg"/><link rel="preload" as="image" href="../svgrepo-forum.svg"/><link rel="preload" as="image" href="../svgrepo-add-to-online-cart.svg"/><link rel="preload" as="image" href="../svgrepo-forum-message.svg"/><link rel="preload" as="image" href="../svgrepo-palette-fill.svg"/><link rel="preload" as="image" href="../svgrepo-cpu.svg"/><link rel="preload" as="image" href="../svgrepo-books-library.svg"/><link rel="preload" as="image" href="../svgrepo-signpost-fill.svg"/><link rel="preload" as="image" href="../svgrepo-library.svg"/><link rel="preload" as="image" href="../flags21.png"/><link rel="preload" as="image" href="../svgrepo-uxwing-light-mode-toggle.svg"/><title>Bibliothèque Standard de PlantUML</title><meta name="description" content="La Bibliothèque Standard permet l&#39;utilisation d&#39;icônes, de sprites et de couleurs proposées par des contributeurs tiers.Vous pouvez ainsi disposer d&#39;images standard pour vos propres diagrammes."/><meta property="og:type" content="article"/><meta property="og:title" content="Bibliothèque Standard de PlantUML"/><meta property="og:description" content="La Bibliothèque Standard permet l&#39;utilisation d&#39;icônes, de sprites et de couleurs proposées par des contributeurs tiers.Vous pouvez ainsi disposer d&#39;images standard pour vos propres diagrammes."/><meta property="og:url" content="https://plantuml.com/fr/stdlib"/><meta property="og:site_name" content="PlantUML.com"/><meta name="twitter:image" content="https://plantuml.com/og-stdlib"/><meta property="og:locale" content="fr"/><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Bibliothèque Standard de PlantUML"/><meta name="twitter:description" content="La Bibliothèque Standard permet l&#39;utilisation d&#39;icônes, de sprites et de couleurs proposées par des contributeurs tiers.Vous pouvez ainsi disposer d&#39;images standard pour vos propres diagrammes."/><meta name="twitter:site" content="@PlantUML"/><meta name="twitter:creator" content="@PlantUML"/><style>li{margin:2px}#external li{margin:13px}.pezoic{max-width:970px}@media screen and (max-width:1600px){.pezoic{max-width:768px}}.coptable{max-width:90%}.mytab{display:inline-block;border-radius:3px;border:1px solid #e1e4e8}.mytab:hover{border:1px dashed #0366d6;cursor:pointer;color:#0366d6;background:#f6f8fa}.cop{margin:25px 10px 0 10px}.cop:hover{cursor:pointer;filter:invert(30%) sepia(75%) saturate(4001%) hue-rotate(201deg) brightness(88%) contrast(98%)}.cop2{margin:25px 10px 0 10px}.cop2:hover{cursor:pointer}.msg{position:absolute;color:#396;background-color:#FFF;margin-top:55px;display:none;border-radius:3px;border:1px solid #4dff00}.mycell0{float:left;vertical-align:top;padding:10px}.mycell0 code:hover{cursor:default;color:#000}.mycell{float:right;vertical-align:top;padding:10px;max-width:55vw;overflow-x:auto}.mycell0 pre{max-width:55vw;overflow-x:auto}.cod{background:#edeff3;padding:2px 5px;border-radius:3px}.colo{display:inline-block;background:#edeff3;padding:7px 12px;border-radius:3px}.tag,.tagg,.tago,.tagr{text-rendering:optimizeLegibility;display:inline-block;padding:3px 5px 2px 4px;text-decoration:none;white-space:nowrap;border:1px solid #999;text-transform:uppercase;text-align:center;border-radius:3px;font-size:11px;font-weight:bold;line-height:90%}.tag{background-color:#eee}.tagg{background-color:#98fb98}.tago{background-color:#fafa00}.tagr{background-color:#ff4500}a{text-decoration:none;color:#0366d6}a:hover{text-decoration:underline}.menu1{border:0;font-family:Helvetica,sans-serif;font-size:14px;padding:0;margin:0;white-space:nowrap;overflow:hidden;vertical-align:middle;line-height:30px}.menu1 a{text-align:center;padding:10px 7px 10px 7px;text-decoration:none;color:#637282}.menu1 a:hover{color:#0366d6}#menu0{top:0;z-index:4;margin:0 0 0 10px;padding:0}@media screen and (max-width:1200px){#menu0{visibility:hidden}}.mhov img{margin:0 5px 0 0;padding:0}.mhov:hover{filter:invert(25%) sepia(97%) saturate(2026%) hue-rotate(201deg) brightness(91%) contrast(98%)}#menuside2{border:0;font-family:Helvetica,sans-serif;font-size:14px;padding:20px 0 4px 0;margin:0}#menuside2 span{vertical-align:top}#menuside2 li{list-style:none;position:relative;padding:0;margin:10px 20px 10px 10px;border:0}#menuside2 li a{display:inline-block;text-decoration:none;color:#637282;width:100%}#BC{z-index:0;padding-top:5px;top:35px}.breadcrumb{z-index:1;font-family:Helvetica,sans-serif;font-size:14px;text-align:center;display:inline-block;overflow:hidden;border-radius:5px}.breadcrumb a{text-decoration:none;outline:0;display:block;float:left;font-size:12px;line-height:24px;color:#373f49;padding:0 10px 0 35px;background:#f0f1f1;background:linear-gradient(#f0f1f1,#c6d2d2);position:relative}.breadcrumb a:first-child{padding-left:21px;border-radius:5px 0 0 5px}.breadcrumb a:first-child:before{left:14px}.breadcrumb a:last-child{visibility:hidden}.breadcrumb a.active,.breadcrumb a:hover{color:#0366d6;background:#c6d2d2;background:linear-gradient(#e3e4e4,#b8c7c7)}.breadcrumb a.active:after,.breadcrumb a:hover:after{background:#c6d2d2;background:linear-gradient(135deg,#e3e4e4,#b8c7c7)}.breadcrumb a:after{content:'';position:absolute;top:0;right:-12px;width:24px;height:24px;transform:scale(0.707) rotate(45deg);z-index:1;background:#f0f1f1;background:linear-gradient(135deg,#f0f1f1,#c6d2d2);box-shadow:2px -2px 0 2px rgba(0,0,0,0.1),3px -3px 0 2px rgba(255,255,255,0.1);border-radius:0 5px 0 50px}.breadcrumb a:last-child:after{content:none;visibility:hidden}.lga,.lga a,.lgi,.lgi a{font-family:Helvetica,sans-serif;font-size:13px;text-align:center;color:#fff;padding:0 5px;margin:0}.lga,.lga a{background-color:#008}.lgi,.lgi a{background-color:#888}.lga:hover,.lga:hover a{text-decoration:none;color:#BBB}.lgi:hover,.lgi:hover a{text-decoration:none;color:#CCC}</style><style>.backtop{margin:0 10px}.backtop:hover{cursor:pointer;filter:invert(30%) sepia(75%) saturate(4001%) hue-rotate(201deg) brightness(88%) contrast(98%)}</style><style>.dropbtn{padding:0;border:0;background:0}.dropdown{position:relative;display:inline-block;margin:0 10px}.dropdown-content{display:none;position:absolute;background-color:#f1f1f1;min-width:160px;box-shadow:0 8px 16px 0 rgba(0,0,0,0.2);z-index:1}.dropdown-content img{vertical-align:middle;margin:0 8px 0 1px}.dropdown-content a{font-size:small;font-weight:normal;color:black;padding:5px 10px;text-decoration:none;display:block}.dropdown-content a:hover{background-color:#ddd;color:#0366d6}.dropdown:hover .dropdown-content{display:block}.dropdown:hover .dropbtn{background-color:#3e8e41}</style><style>#flex1{margin:0;padding:0;display:flex;flex-direction:row;width:378px;height:100%}#lll{flex-grow:1;flex-shrink:1;max-width:162px;overflow:hidden}#mmm{flex-grow:0;flex-shrink:0;background:#edeff3;width:210px;min-width:210px;max-width:210px;flex-grow:0;flex-shrink:0;border-left:1px solid #d4d8de}#qqq{flex-grow:0;flex-shrink:0;width:4px;min-width:4px;max-width:4px;flex-grow:0;flex-shrink:0}#rrr{flex-grow:1;flex-shrink:1;max-width:162px;overflow:hidden}.cde{display:flex;flex-direction:column;justify-content:space-between;height:100%}.cd{display:flex;flex-direction:column;justify-content:space-start;height:100%}.aaa{height:30px;min-height:30px;max-height:30px;flex-grow:0;flex-shrink:0;background:#edeff3;border-bottom:1px solid #d4d8de}.bbb,.bbborder{flex-grow:1;flex-shrink:0}.bbborder{border-left:1px solid #d4d8de}#header{z-index:10;position:fixed;left:378px;right:0;height:30px;top:0;background:#edeff3;border-bottom:1px solid #d4d8de}#header2{z-index:7;position:fixed;left:378px;right:0;height:10px;top:30px;background:#fefefe}#left0{top:0;position:fixed;left:0;margin:0;bottom:0;width:378px;padding:0;z-index:2}#root{padding:0;margin:40px 0 0 388px;background:#fefefe}body{margin:auto;overflow-x:hidden;background:#fefefe}@media screen and (max-width:1190px){#flex1,#left0{width:215px}#root{margin:40px 0 0 224px}#header,#header2{left:215px}#left0{left:0}#lll,#rrr{width:0;visibility:hidden;flex-grow:0;flex-shrink:0}}@media screen and (max-width:1010px){#root{margin:0 0 0 216px}#header,#header2{display:none}#lll,#qqq{width:0;visibility:hidden;flex-grow:0;flex-shrink:0}#mmm{border-right:1px solid #d4d8de}}@media screen and (min-width:1700px){#header,#header2{left:518px}#left0,#flex1{width:518px}#root{margin-left:528px}#lll,#rrr{max-width:302px}}</style><script>window.pushMST_config={vapidPK:"BBodn2vLFoDO5AdCfmOOzNmcUsn52kTA6JNZNYVFymzEdWHonz_bkUcsaTkPXHvNGRkRUSAxMbup-H0l2sb1h_Q",enableOverlay:true,swPath:"/sw.js",i18n:{}};var pushmasterTag=document.createElement("script");pushmasterTag.src="https://cdn.pushmaster-cdn.xyz/scripts/publishers/629f5e297baecc00098a271b/SDK.js";pushmasterTag.setAttribute("defer","");var firstScriptTag=document.getElementsByTagName("script")[0];firstScriptTag.parentNode.insertBefore(pushmasterTag,firstScriptTag);</script><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-TKZNNQT9CZ"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date());gtag("config","G-TKZNNQT9CZ");</script><script>var llg="fr";var az=0;var amdark=0;function ljs(b){if(az){return false}var a=document.createElement("script");a.type="text/javascript";a.src="/btn-"+b+".js";document.body.innerHTML="<i style='position:absolute;top:30%;width:100%;'><center>Loading in progress...";document.body.appendChild(a)}function ctc(c){document.getElementById("img"+c).classList.remove("cop");document.getElementById("img"+c).classList.add("cop2");document.getElementById("pre"+c).style.backgroundColor="#4dff00";document.getElementById("msg"+c).style.display="inline";setTimeout(function(){document.getElementById("img"+c).classList.remove("cop2");document.getElementById("img"+c).classList.add("cop");document.getElementById("pre"+c).style.backgroundColor="";document.getElementById("msg"+c).style.display="none"},800);text=document.getElementById("pre"+c).innerText;if(window.clipboardData&&window.clipboardData.setData){return window.clipboardData.setData("Text",text)}else{if(document.queryCommandSupported&&document.queryCommandSupported("copy")){var a=document.createElement("textarea");a.textContent=text;a.style.position="fixed";document.body.appendChild(a);a.select();try{return document.execCommand("copy")}catch(b){return false}finally{document.body.removeChild(a)}}}};</script><script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><script type='text/javascript'>
+var ezoTemplate = 'pub_site';
+var ezouid = '1';
+var ezoFormfactor = '1';
+</script><script data-ezscrex="false" type='text/javascript'>
+var soc_app_id = '0';
+var did = 173770;
+var ezdomain = 'plantuml.com';
+var ezoicSearchable = 1;
+</script>
+<script data-ezscrex='false' data-pagespeed-no-defer data-cfasync='false'>
+function create_ezolpl() {
+	var d = new Date();
+	d.setTime(d.getTime() + (365*24*60*60*1000));
+	var expires = "expires="+d.toUTCString();
+	__ez.ck.setByCat("ezux_lpl_173770=" + new Date().getTime() + "|" + _ezaq.page_view_id + "|" + _ezaq.is_return_visitor + "; " + expires, 3);
+}
+function attach_ezolpl() {
+	if (document.readyState === "complete") {
+		create_ezolpl();
+		return;
+	}
+	window.addEventListener("load", create_ezolpl);
+}
+
+__ez.queue.addFunc("attach_ezolpl", "attach_ezolpl", null, false, ['/detroitchicago/boise.js'], true, false, false, false);
+</script></head><body><div id="left0"><div id="flex1"><div id="lll"><div class="cde"><div></div><div><span id="ezoic-pub-ad-placeholder-131"></span><!-- ezoic_pub_ad_placeholder-131-sidebar-120x600-131-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-131-sidebar-160x600-131-nonexxxnonexxxxxxezmaxscaleval100 --></div><div></div></div></div><div id="mmm"><div class="cde"><div><div><span id="ezoic-pub-ad-placeholder-105"></span><!-- ezoic_pub_ad_placeholder-105-sidebar_middle-120x240-105-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-105-sidebar_middle-125x125-105-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-105-sidebar_middle-180x150-105-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-105-sidebar_middle-200x200-105-nonexxxnonexxxxxxezmaxscaleval100 --></div><ul id="menuside2"><li><a href="index.html" class="mhov"><img src="../svgrepo-house.svg" width="16" height="16"/><span>Accueil</span></a></li><li><a href="news.html" class="mhov"><img src="../svgrepo-text-news.svg" width="16" height="16"/><span>Nouveautés !</span></a></li><li><a href="starting.html" class="mhov"><img src="../svgrepo-rocket-3-start.svg" width="16" height="16"/><span>Démarrage rapide</span></a></li><li><a href="https://www.plantuml.com/plantuml/uml/SyfFKj2rKt3CoKnELR1Io4ZDoSa70000" class="mhov"><img src="../svgrepo-server.svg" width="16" height="16"/><span>Online Server</span></a></li><li><a href="running.html" class="mhov"><img src="../svgrepo-play.svg" width="16" height="16"/><span>Utilisation</span></a></li><li><a href="faq.html" class="mhov"><img src="../svgrepo-forum.svg" width="16" height="16"/><span>Questions/Réponses</span></a></li><li><a href="download.html" class="mhov"><img src="../svgrepo-add-to-online-cart.svg" width="16" height="16"/><span>Téléchargement</span></a></li><li><a href="../qa.html" class="mhov"><img src="../svgrepo-forum-message.svg" width="16" height="16"/><span>Forum</span></a></li><li><a href="theme.html" class="mhov"><img src="../svgrepo-palette-fill.svg" width="16" height="16"/><span>Theme</span></a></li><li><a href="preprocessing.html" class="mhov"><img src="../svgrepo-cpu.svg" width="16" height="16"/><span>Préprocesseur</span></a></li><li><a href="stdlib.html" class="mhov"><img src="../svgrepo-books-library.svg" width="16" height="16"/><span>Librairie Standard</span></a></li><li><a href="https://crashedmind.github.io/PlantUMLHitchhikersGuide" class="mhov"><img src="../svgrepo-signpost-fill.svg" width="16" height="16"/><span>Hitchhiker&#39;s Guide</span></a></li><li><a href="guide.html" class="mhov"><img src="../svgrepo-library.svg" width="16" height="16"/><span>Documentation PDF</span></a></li></ul><div><span id="ezoic-pub-ad-placeholder-108"></span><!-- ezoic_pub_ad_placeholder-108-sidebar_middle-120x240-108-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-108-sidebar_middle-125x125-108-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-108-sidebar_middle-180x150-108-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-108-sidebar_middle-200x200-108-nonexxxnonexxxxxxezmaxscaleval100 --></div></div><div></div><div style="margin-bottom:35px;"><span id="ezoic-pub-ad-placeholder-186"></span><!-- ezoic_pub_ad_placeholder-186-sidebar_middle-120x240-186-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-186-sidebar_middle-125x125-186-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-186-sidebar_middle-180x150-186-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-186-sidebar_middle-200x200-186-nonexxxnonexxxxxxezmaxscaleval100 --></div></div></div><div id="qqq"><div class="cd"><div class="aaa"></div><div class="bbborder"></div></div></div><div id="rrr"><div class="cd"><div class="aaa"></div><div style="height:5px;"></div><div class="bbb"><div class="cde"><div></div><div><span id="ezoic-pub-ad-placeholder-175"></span><!-- ezoic_pub_ad_placeholder-175-sidebar-120x600-175-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-175-sidebar-160x600-175-nonexxxnonexxxxxxezmaxscaleval100 --></div><div></div></div></div></div></div></div></div><style>#contmenu{display:flex;height:30px;width:100%;margin:0;padding:0}#contmenua{height:30px;padding-right:25px}#contmenub{z-index:15;display:inline-block;flex-grow:1;flex-shrink:1;height:30px;background-color:#edeff3}#magic{white-space:nowrap;overflow:hidden;z-index:14;position:fixed;top:0;right:50px;height:30px;width:30px}#magic2{white-space:nowrap;overflow:hidden;z-index:16;position:fixed;top:0;right:0;height:30px;width:50px;background-color:#edeff3}#magic2 img{margin:5px 0 0 5px;filter:invert(44%) sepia(27%) saturate(310%) hue-rotate(170deg) brightness(92%) contrast(83%)}#magic2:hover img{filter:invert(25%) sepia(97%) saturate(2026%) hue-rotate(201deg) brightness(91%) contrast(98%)}#magic:hover #svgrepoleft{filter:invert(22%) sepia(53%) saturate(4563%) hue-rotate(202deg) brightness(95%) contrast(98%)}#magic:hover{width:100%;height:31px}#aze{height:30px;display:flex;flex-direction:row-reverse}#aze1{height:30px;background-color:#edeff3}#aze2{height:30px;background-color:#edeff3;padding-left:10px;border-left:1px solid #d4d8de;border-bottom:1px solid #d4d8de}#aze1 img{filter:invert(46%) sepia(6%) saturate(1254%) hue-rotate(171deg) brightness(94%) contrast(92%)}#aze3{width:3px;height:30px;background-color:#edeff3}</style><div id="header"><div id="contmenu"><div id="contmenua"><div class="menu1"><a href="sequence-diagram.html">Séquence</a><a href="use-case-diagram.html">Usecase</a><a href="class-diagram.html">Classe</a><a href="activity-diagram-beta.html">Activité</a><a href="component-diagram.html">Composant</a><a href="state-diagram.html">État</a><a href="object-diagram.html">Objet</a><a href="deployment-diagram.html">Déploiement</a><a href="timing-diagram.html">Temps</a><a href="nwdiag.html">Network</a><a href="salt.html">Wireframe</a><a href="archimate-diagram.html">Archimate</a><a href="gantt-diagram.html">Gantt</a><a href="mindmap-diagram.html">MindMap</a><a href="wbs-diagram.html">WBS</a><a href="json.html">JSON</a><a href="yaml.html">YAML</a></div></div><div id="contmenub"></div></div><div id="magic"><div id="aze"><div id="aze1"><img id="svgrepoleft" width="30" height="30" src="../svgrepo-left.svg"/></div><div id="aze2"><div class="menu1"><a href="sequence-diagram.html">Séquence</a><a href="use-case-diagram.html">Usecase</a><a href="class-diagram.html">Classe</a><a href="activity-diagram-beta.html">Activité</a><a href="component-diagram.html">Composant</a><a href="state-diagram.html">État</a><a href="object-diagram.html">Objet</a><a href="deployment-diagram.html">Déploiement</a><a href="timing-diagram.html">Temps</a><a href="nwdiag.html">Network</a><a href="salt.html">Wireframe</a><a href="archimate-diagram.html">Archimate</a><a href="gantt-diagram.html">Gantt</a><a href="mindmap-diagram.html">MindMap</a><a href="wbs-diagram.html">WBS</a><a href="json.html">JSON</a><a href="yaml.html">YAML</a></div></div><div id="aze3"></div></div></div><div id="magic2"><a href="../fr-dark/stdlib.html"><img src="../svgrepo-uxwing-light-mode-toggle.svg" height="20"/></a></div></div><div id="header2"></div><div id="root"><style>#haut1{margin:50px 0 20px;padding:0;min-height:80px}#donate{padding-top:5px;min-height:30px}</style><div id="haut1"><div style="float:left;"><div class="breadcrumb"><a href="sitemap.html">PlantUML</a><a href="sitemap-language-specification.html">Language specification</a><a href="stdlib.html">Standard Library</a><a href="stdlib.html#"></a></div><div id="donate">   <a href="https://discord.gg/sXhzexAQGh" style="text-decoration: none;"><img src="https://img.shields.io/discord/1083727021328306236?color=5865F2&amp;logo=discord&amp;logoColor=white" alt="Discord server"/></a>   <a href="https://github.com/sponsors/plantuml/" style="text-decoration: none;"><img src="https://img.shields.io/github/sponsors/plantuml?logo=github"/></a>   <a href="https://www.patreon.com/bePatron?patAmt=1&amp;u=527450&amp;rid=152970" style="text-decoration: none;"><img src="https://img.shields.io/badge/patreon-122-chocolate?logo=patreon"/></a>   <a href="../lp.html" style="text-decoration: none;"><img src="https://img.shields.io/liberapay/patrons/plantuml?color=gold&amp;logo=liberapay&amp;label=liberapay"/></a>   <a href="../en/paypal.html" style="text-decoration: none;"><img src="https://img.shields.io/badge/paypal-296-skyblue?logo=paypal&amp;logoColor=red"/></a></div></div><div style="float:right; margin:3px 0;"><style>#langlist{display:flex;justify-content:space-between;width:317px;height:16px;margin:3px 10px 3px 0}.sel2{border:2px solid #fefefe}.nosel2{border:2px solid #fefefe;filter:grayscale(100%) opacity(75%)}.sel2:hover,.nosel2:hover{cursor:pointer;border:2px solid #0366d6;border-spacing:0;filter:grayscale(0);filter:contrast(200%);filter:brightness(150%)}#flag1,#flag2,#flag3,#flag4,#flag5,#flag6,#flag7,#flag8{background:url(../flags21.png);background-repeat:no-repeat;background-clip:content-box;width:22px;height:16px}#flag2{background-position:-22px 0}#flag3{background-position:-44px 0}#flag4{background-position:-66px 0}#flag5{background-position:-88px 0}#flag6{background-position:-110px 0}#flag7{background-position:-132px 0}#flag8{background-position:-154px 0}</style><div id="langlist"><div id="flag1" onclick="location.href=&#39;/en/stdlib&#39;" class="nosel2"></div><div id="flag2" onclick="location.href=&#39;/de/stdlib&#39;" class="nosel2"></div><div id="flag3" onclick="location.href=&#39;/es/stdlib&#39;" class="nosel2"></div><div id="flag4" onclick="location.href=&#39;/fr/stdlib&#39;" class="sel2"></div><div id="flag5" onclick="location.href=&#39;/ja/stdlib&#39;" class="nosel2"></div><div id="flag6" onclick="location.href=&#39;/ko/stdlib&#39;" class="nosel2"></div><div id="flag7" onclick="location.href=&#39;/ru/stdlib&#39;" class="nosel2"></div><div id="flag8" onclick="location.href=&#39;/zh/stdlib&#39;" class="nosel2"></div></div></div></div><p><style>#topsticky{z-index:2;margin:0 240px 0 0}@media screen and (min-height:800px){#topsticky{position:sticky;top:40px}}@media screen and (max-width:1500px){#topsticky{margin:0}}</style></p><div id="topsticky"><span id="ezoic-pub-ad-placeholder-647"></span><!-- ezoic_pub_ad_placeholder-647-under_page_title-320x100-647-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-647-under_page_title-300x50v2-647-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-647-under_page_title-320x50-647-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-647-under_page_title-468x60-647-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-647-under_page_title-728x90-647-nonexxxnonexxxxxxezmaxscaleval100 --></div><p><a style="position:relative;top:-38px;" name="eb1e0aecf8ae1741"></a><style>#toc{z-index:2;position:sticky;top:40px;list-style-type:none;margin:0;padding:0 10px}.chap{clear:both}#toc ul{list-style-type:none;max-height:87vh;overflow-y:auto;background:#f6f8fa;border-width:2px;border-style:groove;border-radius:3px;border-color:#e1e4e8;margin:0;padding:0}@media screen and (min-height:450px){#toc ul{max-height:89.5vh}}@media screen and (min-height:550px){#toc ul{max-height:91.5vh}}@media screen and (min-height:700px){#toc ul{max-height:93.5vh}}@media screen and (min-height:900px){#toc ul{max-height:94.5vh}}#toc li{margin:5px 5px 5px 10px;padding:0}@media screen and (max-width:1500px){#toctd{display:none}#toc{display:none}}</style><table border="0" cellspacing="0" cellpadding="0" width="100%"><tbody><tr valign="top" width="100%"><td valign="top"><h1 class="chap"><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/cmp/dokuwiki/fr/stdlib#0"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/cmp/asciidoc/fr/stdlib#0"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/cmp/markdown/fr/stdlib#0"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>Bibliothèque standard de PlantUML</h1><p></p> Bienvenue au guide sur la <strong>bibliothèque standard</strong> officielle de PlantUML (<code class="cod">stdlib</code>). Ici, nous nous plongeons dans cette ressource intégrale qui est maintenant incluse dans toutes les versions officielles de PlantUML, facilitant une expérience de création de diagramme plus riche. La bibliothèque emprunte sa convention d&#39;inclusion de fichiers à la <a href="https://en.wikipedia.org/wiki/C_standard_library">&#34;bibliothèque standard C&#34;</a>, un protocole bien établi dans le monde de la programmation. <p></p><h3>Vue d&#39;ensemble de la bibliothèque standard</h3><p></p> La <a href="https://github.com/plantuml/plantuml-stdlib">bibliothèque standard</a> est un dépôt de fichiers et de ressources, constamment mis à jour pour améliorer votre expérience de PlantUML. Elle forme l&#39;épine dorsale de PlantUML, offrant une gamme de fonctionnalités et de caractéristiques à explorer. <p></p><h3>Contribution de la communauté</h3><p></p> Une partie importante du contenu de la bibliothèque est généreusement fournie par des contributeurs tiers. Nous leur exprimons notre sincère gratitude pour leurs contributions inestimables qui ont joué un rôle essentiel dans l&#39;enrichissement de la bibliothèque. <p></p> Nous encourageons les utilisateurs à se plonger dans les abondantes ressources offertes par la <a href="https://github.com/plantuml/plantuml-stdlib">bibliothèque standard</a>, non seulement pour améliorer leur expérience de création de diagrammes, mais aussi pour contribuer et faire partie de cet effort de collaboration. <a style="position:relative;top:-38px;" name="14add8003c6c84d4"></a><div style="clear:both;height:50px;"></div><h2 class="chap"><img onclick="window.scrollTo(0,0);" title="Back to top" src="../backtop1.svg" width="20" height="20" class="backtop"/><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/cmp/dokuwiki/fr/stdlib#1"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/cmp/asciidoc/fr/stdlib#1"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/cmp/markdown/fr/stdlib#1"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>Contenu de la bibliothèque standard</h2><p></p> Vous pouvez obtenir le contenu la bibliothèque standard à l&#39;aide du diagramme spécial suivant: <p></p><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msg254a98d1bb5d91f476b4388292f6fe56" class="msg"> 🎉 Copied! </div><img width="16" height="16" id="img254a98d1bb5d91f476b4388292f6fe56" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;254a98d1bb5d91f476b4388292f6fe56&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;254a98d1bb5d91f476b4388292f6fe56&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;254a98d1bb5d91f476b4388292f6fe56&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="pre254a98d1bb5d91f476b4388292f6fe56">@startuml
+stdlib
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="588" height="1046" class="scale" src="../imgw/img-254a98d1bb5d91f476b4388292f6fe56.png"/></div></div></td></tr></tbody></table></p><p></p><p></p> Il est également possible d&#39;utiliser la ligne de commande <code class="cod">java -jar plantuml.jar -stdlib</code> pour afficher cette même liste. <p></p> Enfin, vous pouvez extraire les sources complètes de la bibliothèque standard en utilisant <code class="cod">java -jar plantuml.jar -extractstdlib</code>. Tous les fichiers seront extraits dans le dossier <code class="cod">stdlib</code>. <p></p> Les sources utilisées pour construire les versions officielles de PlantUML sont hébergées ici <a href="https://github.com/plantuml/plantuml-stdlib">https://github.com/plantuml/plantuml-stdlib</a>. Vous pouvez créer une demande pour mettre à jour ou ajouter une bibliothèque si vous la trouvez pertinente. <a style="position:relative;top:-38px;" name="4ff66fed176e4ee1"></a><div style="clear:both;min-height:110px;margin-top:10px;"><div class="pezoic"><span id="ezoic-pub-ad-placeholder-179"></span><!-- ezoic_pub_ad_placeholder-179-under_second_paragraph-234x60-179-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-179-under_second_paragraph-468x60-179-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-179-under_second_paragraph-728x90-179-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-179-under_second_paragraph-970x90-179-nonexxxnonexxxxxxezmaxscaleval100 --></div></div><h2 class="chap"><img onclick="window.scrollTo(0,0);" title="Back to top" src="../backtop1.svg" width="20" height="20" class="backtop"/><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/cmp/dokuwiki/fr/stdlib#2"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/cmp/asciidoc/fr/stdlib#2"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/cmp/markdown/fr/stdlib#2"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>ArchiMate [archimate]</h2><p></p><table border="1" cellspacing="0" cellpadding="5"><tbody><tr><td><b> Type </b></td><td><b> Lien </b></td></tr><tr><td><code class="cod">stdlib</code></td><td><a href="https://github.com/plantuml/plantuml-stdlib/tree/master/archimate">https://github.com/plantuml/plantuml-stdlib/tree/master/archimate</a></td></tr><tr><td><code class="cod">src</code></td><td><a href="https://github.com/ebbypeter/Archimate-PlantUML">https://github.com/ebbypeter/Archimate-PlantUML</a></td></tr><tr><td><code class="cod">orig</code></td><td><a href="https://en.wikipedia.org/wiki/ArchiMate">https://en.wikipedia.org/wiki/ArchiMate</a></td></tr></tbody></table><p></p> Ce référentiel contient les macros PlantUML d&#39;ArchiMate et d&#39;autres inclusions pour créer des <a href="archimate-diagram.html">diagrammes Archimate</a> facilement et de manière cohérente. <p></p><p></p><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msg2ed6a851f8601c33ab8f98ea38a986eb" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="img2ed6a851f8601c33ab8f98ea38a986eb" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;2ed6a851f8601c33ab8f98ea38a986eb&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;2ed6a851f8601c33ab8f98ea38a986eb&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;2ed6a851f8601c33ab8f98ea38a986eb&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="pre2ed6a851f8601c33ab8f98ea38a986eb">@startuml
+!include &lt;archimate/Archimate&gt;
+
+title Archimate Sample - Internet Browser
+
+&#39; Elements
+Business_Object(businessObject, &#34;A Business Object&#34;)
+Business_Process(someBusinessProcess,&#34;Some Business Process&#34;)
+Business_Service(itSupportService, &#34;IT Support for Business (Application Service)&#34;)
+
+Application_DataObject(dataObject, &#34;Web Page Data \n &#39;on the fly&#39;&#34;)
+Application_Function(webpageBehaviour, &#34;Web page behaviour&#34;)
+Application_Component(ActivePartWebPage, &#34;Active Part of the web page \n &#39;on the fly&#39;&#34;)
+
+Technology_Artifact(inMemoryItem,&#34;in memory / &#39;on the fly&#39; html/javascript&#34;)
+Technology_Service(internetBrowser, &#34;Internet Browser Generic &amp; Plugin&#34;)
+Technology_Service(internetBrowserPlugin, &#34;Some Internet Browser Plugin&#34;)
+Technology_Service(webServer, &#34;Some web server&#34;)
+
+&#39;Relationships
+Rel_Flow_Left(someBusinessProcess, businessObject, &#34;&#34;)
+Rel_Serving_Up(itSupportService, someBusinessProcess, &#34;&#34;)
+Rel_Specialization_Up(webpageBehaviour, itSupportService, &#34;&#34;)
+Rel_Flow_Right(dataObject, webpageBehaviour, &#34;&#34;)
+Rel_Specialization_Up(dataObject, businessObject, &#34;&#34;)
+Rel_Assignment_Left(ActivePartWebPage, webpageBehaviour, &#34;&#34;)
+Rel_Specialization_Up(inMemoryItem, dataObject, &#34;&#34;)
+Rel_Realization_Up(inMemoryItem, ActivePartWebPage, &#34;&#34;)
+Rel_Specialization_Right(inMemoryItem,internetBrowser, &#34;&#34;)
+Rel_Serving_Up(internetBrowser, webpageBehaviour, &#34;&#34;)
+Rel_Serving_Up(internetBrowserPlugin, webpageBehaviour, &#34;&#34;)
+Rel_Aggregation_Right(internetBrowser, internetBrowserPlugin, &#34;&#34;)
+Rel_Access_Up(webServer, inMemoryItem, &#34;&#34;)
+Rel_Serving_Up(webServer, internetBrowser, &#34;&#34;)
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="789" height="664" class="scale" src="../imgw/img-2ed6a851f8601c33ab8f98ea38a986eb.png"/></div></div></td></tr></tbody></table></p><p></p><p></p><h3>Liste des sprites possibles</h3><p></p> Vous pouvez lister tous les <a href="sprite.html">sprites</a> possibles pour Archimate en utilisant le diagramme suivant <p></p><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msg575bc40ef37ed075f7c1e6ad6ccfe203" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="img575bc40ef37ed075f7c1e6ad6ccfe203" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;575bc40ef37ed075f7c1e6ad6ccfe203&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;575bc40ef37ed075f7c1e6ad6ccfe203&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;575bc40ef37ed075f7c1e6ad6ccfe203&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="pre575bc40ef37ed075f7c1e6ad6ccfe203">@startuml
+listsprite
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="766" height="518" class="scale" src="../imgw/img-575bc40ef37ed075f7c1e6ad6ccfe203.png"/></div></div></td></tr></tbody></table></p><p><a style="position:relative;top:-38px;" name="a464d2f6236a5c23"></a></p><div style="clear:both;height:50px;"></div><h2 class="chap"><img onclick="window.scrollTo(0,0);" title="Back to top" src="../backtop1.svg" width="20" height="20" class="backtop"/><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/cmp/dokuwiki/fr/stdlib#3"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/cmp/asciidoc/fr/stdlib#3"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/cmp/markdown/fr/stdlib#3"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>Amazon Labs AWS Library [awslib]</h2><p></p><table border="1" cellspacing="0" cellpadding="5"><tbody><tr><td><b> Type </b></td><td><b> Link </b></td></tr><tr><td><code class="cod">stdlib</code></td><td><a href="https://github.com/plantuml/plantuml-stdlib/tree/master/awslib">https://github.com/plantuml/plantuml-stdlib/tree/master/awslib</a></td></tr><tr><td><code class="cod">src</code></td><td><a href="https://github.com/awslabs/aws-icons-for-plantuml">https://github.com/awslabs/aws-icons-for-plantuml</a></td></tr><tr><td><code class="cod">orig</code></td><td><a href="https://aws.amazon.com/en/architecture/icons/">https://aws.amazon.com/en/architecture/icons/</a></td></tr></tbody></table><p></p> The Amazon Labs AWS library provides PlantUML sprites, macros, and other includes for Amazon Web Services (AWS) services and resources. <p></p> Used to create PlantUML diagrams with AWS components. All elements are generated from the official <a href="https://aws.amazon.com/fr/architecture/icons/">AWS Architecture Icons</a> and when combined with PlantUML and the <a href="https://c4model.com/">C4 model</a>, are a great way to communicate your design, deployment, and topology as code. <p></p><p></p><p></p><p><code></code></p><pre class="colo"><code>@startuml
+!include &lt;awslib/AWSCommon&gt;
+!include &lt;awslib/InternetOfThings/IoTRule&gt;
+!include &lt;awslib/Analytics/KinesisDataStreams&gt;
+!include &lt;awslib/ApplicationIntegration/SimpleQueueService&gt;
+
+left to right direction
+
+agent &#34;Published Event&#34; as event #fff
+
+IoTRule(iotRule, &#34;Action Error Rule&#34;, &#34;error if Kinesis fails&#34;)
+KinesisDataStreams(eventStream, &#34;IoT Events&#34;, &#34;2 shards&#34;)
+SimpleQueueService(errorQueue, &#34;Rule Error Queue&#34;, &#34;failed Rule actions&#34;)
+
+event --&gt; iotRule : JSON message
+iotRule --&gt; eventStream : messages
+iotRule --&gt; errorQueue : Failed action message
+@enduml
+</code></pre><p></p><p></p><p></p><div class="plantumlimg"><img loading="lazy" src="http://cdn-0.plantuml.com/plantuml/png/RL9DImCn4BtdLuphfO9bmQD8iMY5AbXr2vxJtSdkG3OfcMp5VsycknQbFILvUVC-GkuvwX27tgeBShKT6eGx_SMMTkNoithmVU_TulHkxI86Xt5ZjXsvbikrttuC5izGbqxRxqWrbo_aa8aVTTHL3AXxFaVVxotLEf9tOjA6l2qhwlSMtmSSiC9me3fPAOicGlGGgEqYD1Im5h9IkaKNeNWRTfQummPMXmGKe1bGTd1fZ55g2ZqZ7sMzXcAP1M0LWWyWM950p2SoC1K0eyboSQLE2yso_7X8aybWj6RHkG7kT6XayhJEBBja9575UagH8HaNrrGbN-cSKvJKM6W-Ny1K0sxXkTgyGe_CwI7KBooKF_4IRMBmVyenHs8yZPwZtL7n7bqZN-O7"/></div><p><a style="position:relative;top:-38px;" name="bf8b1cb709cb9f08"></a></p><div style="clear:both;min-height:110px;margin-top:10px;"><div class="pezoic"><span id="ezoic-pub-ad-placeholder-114"></span><!-- ezoic_pub_ad_placeholder-114-mid_content-234x60-114-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-114-mid_content-468x60-114-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-114-mid_content-728x90-114-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-114-mid_content-970x90-114-nonexxxnonexxxxxxezmaxscaleval100 --></div></div><h2 class="chap"><img onclick="window.scrollTo(0,0);" title="Back to top" src="../backtop1.svg" width="20" height="20" class="backtop"/><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/cmp/dokuwiki/fr/stdlib#4"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/cmp/asciidoc/fr/stdlib#4"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/cmp/markdown/fr/stdlib#4"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>Azure library [azure]</h2><p></p><table border="1" cellspacing="0" cellpadding="5"><tbody><tr><td><b> Type </b></td><td><b> Link </b></td></tr><tr><td><code class="cod">stdlib</code></td><td><a href="https://github.com/plantuml/plantuml-stdlib/tree/master/azure">https://github.com/plantuml/plantuml-stdlib/tree/master/azure</a></td></tr><tr><td><code class="cod">src</code></td><td><a href="https://github.com/RicardoNiepel/Azure-PlantUML/">https://github.com/RicardoNiepel/Azure-PlantUML/</a></td></tr><tr><td><code class="cod">orig</code></td><td><a href="https://docs.microsoft.com/en-us/azure/architecture/icons/">Microsoft Azure</a></td></tr></tbody></table><p></p> The Azure library consists of <a href="https://docs.microsoft.com/en-us/azure/architecture/icons/">Microsoft Azure</a> icons. <p></p> Use it by including the file that contains the sprite, eg: <code class="cod">!include &lt;azure/Analytics/AzureEventHub&gt;</code>. When imported, you can use the sprite as normally you would, using <code class="cod">&lt;$sprite_name&gt;</code>. <p></p> You may also include the <code class="cod">AzureCommon.puml</code> file, eg: <code class="cod">!include &lt;azure/AzureCommon&gt;</code>, which contains helper macros defined. With the <code class="cod">AzureCommon.puml</code> imported, you can use the <code class="cod">NAME_OF_SPRITE(parameters...)</code> macro. <p></p> Example of usage: <p></p><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msgacfdd505fe51444bd25dabce3af00813" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="imgacfdd505fe51444bd25dabce3af00813" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;acfdd505fe51444bd25dabce3af00813&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;acfdd505fe51444bd25dabce3af00813&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;acfdd505fe51444bd25dabce3af00813&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="preacfdd505fe51444bd25dabce3af00813">@startuml
+!include &lt;azure/AzureCommon&gt;
+!include &lt;azure/Analytics/AzureEventHub&gt;
+!include &lt;azure/Analytics/AzureStreamAnalyticsJob&gt;
+!include &lt;azure/Databases/AzureCosmosDb&gt;
+
+left to right direction
+
+agent &#34;Device Simulator&#34; as devices #fff
+
+AzureEventHub(fareDataEventHub, &#34;Fare Data&#34;, &#34;PK: Medallion HackLicense VendorId; 3 TUs&#34;)
+AzureEventHub(tripDataEventHub, &#34;Trip Data&#34;, &#34;PK: Medallion HackLicense VendorId; 3 TUs&#34;)
+AzureStreamAnalyticsJob(streamAnalytics, &#34;Stream Processing&#34;, &#34;6 SUs&#34;)
+AzureCosmosDb(outputCosmosDb, &#34;Output Database&#34;, &#34;1,000 RUs&#34;)
+
+devices --&gt; fareDataEventHub
+devices --&gt; tripDataEventHub
+fareDataEventHub --&gt; streamAnalytics
+tripDataEventHub --&gt; streamAnalytics
+streamAnalytics --&gt; outputCosmosDb
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="816" height="357" class="scale" src="../imgw/img-acfdd505fe51444bd25dabce3af00813.png"/></div></div></td></tr></tbody></table></p><p><a style="position:relative;top:-38px;" name="062f75176513a666"></a></p><div style="clear:both;height:50px;"></div><h2 class="chap"><img onclick="window.scrollTo(0,0);" title="Back to top" src="../backtop1.svg" width="20" height="20" class="backtop"/><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/cmp/dokuwiki/fr/stdlib#5"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/cmp/asciidoc/fr/stdlib#5"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/cmp/markdown/fr/stdlib#5"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>C4 Library [C4]</h2><p></p><table border="1" cellspacing="0" cellpadding="5"><tbody><tr><td><b> Type </b></td><td><b> Link </b></td></tr><tr><td><code class="cod">stdlib</code></td><td><a href="https://github.com/plantuml/plantuml-stdlib/tree/master/C4">https://github.com/plantuml/plantuml-stdlib/tree/master/C4</a></td></tr><tr><td><code class="cod">src</code></td><td><a href="https://github.com/plantuml-stdlib/C4-PlantUML">https://github.com/plantuml-stdlib/C4-PlantUML</a></td></tr><tr><td><code class="cod">orig</code></td><td><a href="https://en.wikipedia.org/wiki/C4_model">https://en.wikipedia.org/wiki/C4_model</a><br/><a href="https://c4model.com">https://c4model.com</a></td></tr></tbody></table><p></p><p></p><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msg16287c069fffc5f5807f15a153bb6001" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="img16287c069fffc5f5807f15a153bb6001" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;16287c069fffc5f5807f15a153bb6001&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;16287c069fffc5f5807f15a153bb6001&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;16287c069fffc5f5807f15a153bb6001&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="pre16287c069fffc5f5807f15a153bb6001">@startuml
+!include &lt;C4/C4_Container&gt;
+
+Person(personAlias, &#34;Label&#34;, &#34;Optional Description&#34;)
+Container(containerAlias, &#34;Label&#34;, &#34;Technology&#34;, &#34;Optional Description&#34;)
+System(systemAlias, &#34;Label&#34;, &#34;Optional Description&#34;)
+
+System_Ext(extSystemAlias, &#34;Label&#34;, &#34;Optional Description&#34;)
+
+Rel(personAlias, containerAlias, &#34;Label&#34;, &#34;Optional Technology&#34;)
+
+Rel_U(systemAlias, extSystemAlias, &#34;Label&#34;, &#34;Optional Technology&#34;)
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="391" height="347" class="scale" src="../imgw/img-16287c069fffc5f5807f15a153bb6001.png"/></div></div></td></tr></tbody></table></p><p><a style="position:relative;top:-38px;" name="dfa1f2b2b70eb2be"></a></p><div style="clear:both;min-height:110px;margin-top:10px;"><div class="pezoic"><span id="ezoic-pub-ad-placeholder-115"></span><!-- ezoic_pub_ad_placeholder-115-long_content-234x60-115-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-115-long_content-468x60-115-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-115-long_content-728x90-115-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-115-long_content-970x90-115-nonexxxnonexxxxxxezmaxscaleval100 --></div></div><h2 class="chap"><img onclick="window.scrollTo(0,0);" title="Back to top" src="../backtop1.svg" width="20" height="20" class="backtop"/><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/cmp/dokuwiki/fr/stdlib#6"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/cmp/asciidoc/fr/stdlib#6"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/cmp/markdown/fr/stdlib#6"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>Cloud Insight [cloudinsight]</h2><p></p><table border="1" cellspacing="0" cellpadding="5"><tbody><tr><td><b> Type </b></td><td><b> Link </b></td></tr><tr><td><code class="cod">stdlib</code></td><td><a href="https://github.com/plantuml/plantuml-stdlib/tree/master/cloudinsight">https://github.com/plantuml/plantuml-stdlib/tree/master/cloudinsight</a></td></tr><tr><td><code class="cod">src</code></td><td><a href="https://github.com/rabelenda/cicon-plantuml-sprites">https://github.com/rabelenda/cicon-plantuml-sprites</a></td></tr><tr><td><code class="cod">orig</code></td><td><a href="https://github.com/cloudinsight/cicon">Cloudinsight icons</a></td></tr></tbody></table><p></p> This repository contains PlantUML sprites generated from <a href="https://github.com/cloudinsight/cicon">Cloudinsight icons</a>, which can easily be used in PlantUML diagrams for nice visual representation of popular technologies. <p></p><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msg357911a21d5efd9bbc9ec9116b64ed6e" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="img357911a21d5efd9bbc9ec9116b64ed6e" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;357911a21d5efd9bbc9ec9116b64ed6e&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;357911a21d5efd9bbc9ec9116b64ed6e&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;357911a21d5efd9bbc9ec9116b64ed6e&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="pre357911a21d5efd9bbc9ec9116b64ed6e">@startuml
+!include &lt;cloudinsight/tomcat&gt;
+!include &lt;cloudinsight/kafka&gt;
+!include &lt;cloudinsight/java&gt;
+!include &lt;cloudinsight/cassandra&gt;
+
+title Cloudinsight sprites example
+
+skinparam monochrome true
+
+rectangle &#34;&lt;$tomcat&gt;\nwebapp&#34; as webapp
+queue &#34;&lt;$kafka&gt;&#34; as kafka
+rectangle &#34;&lt;$java&gt;\ndaemon&#34; as daemon
+database &#34;&lt;$cassandra&gt;&#34; as cassandra
+
+webapp -&gt; kafka
+kafka -&gt; daemon
+daemon --&gt; cassandra
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="300" height="284" class="scale" src="../imgw/img-357911a21d5efd9bbc9ec9116b64ed6e.png"/></div></div></td></tr></tbody></table></p><p><a style="position:relative;top:-38px;" name="5d13898d957d4524"></a></p><div style="clear:both;height:50px;"></div><h2 class="chap"><img onclick="window.scrollTo(0,0);" title="Back to top" src="../backtop1.svg" width="20" height="20" class="backtop"/><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/cmp/dokuwiki/fr/stdlib#7"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/cmp/asciidoc/fr/stdlib#7"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/cmp/markdown/fr/stdlib#7"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>Cloudogu [cloudogu]</h2><p></p><table border="1" cellspacing="0" cellpadding="5"><tbody><tr><td><b> Type </b></td><td><b> Link </b></td></tr><tr><td><code class="cod">stdlib</code></td><td><a href="https://github.com/plantuml/plantuml-stdlib/tree/master/cloudogu">https://github.com/plantuml/plantuml-stdlib/tree/master/cloudogu</a></td></tr><tr><td><code class="cod">src</code></td><td><a href="https://github.com/cloudogu/plantuml-cloudogu-sprites">https://github.com/cloudogu/plantuml-cloudogu-sprites</a></td></tr><tr><td><code class="cod">orig</code></td><td><a href="https://cloudogu.com">https://cloudogu.com</a></td></tr></tbody></table><p></p> The Cloudogu library provides PlantUML sprites, macros, and other includes for Cloudogu services and resources. <p></p><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msg06ed8dc61808a5607b57d88e16e557d8" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="img06ed8dc61808a5607b57d88e16e557d8" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;06ed8dc61808a5607b57d88e16e557d8&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;06ed8dc61808a5607b57d88e16e557d8&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;06ed8dc61808a5607b57d88e16e557d8&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="pre06ed8dc61808a5607b57d88e16e557d8">@startuml
+!include &lt;cloudogu/common&gt;
+!include &lt;cloudogu/dogus/jenkins&gt;
+!include &lt;cloudogu/dogus/cloudogu&gt;
+!include &lt;cloudogu/dogus/scm&gt;
+!include &lt;cloudogu/dogus/smeagol&gt;
+!include &lt;cloudogu/dogus/nexus&gt;
+!include &lt;cloudogu/tools/k8s&gt;
+
+node &#34;Cloudogu Ecosystem&#34; &lt;&lt;$cloudogu&gt;&gt; {
+	DOGU_JENKINS(jenkins, Jenkins) #ffffff
+	DOGU_SCM(scm, SCM-Manager) #ffffff
+	DOGU_SMEAGOL(smeagol, Smeagol) #ffffff
+	DOGU_NEXUS(nexus,Nexus) #ffffff
+}
+
+TOOL_K8S(k8s, Kubernetes) #ffffff
+
+actor developer
+
+developer --&gt; smeagol : &#34;Edit Slides&#34;
+smeagol -&gt; scm : Push
+scm -&gt; jenkins : Trigger
+jenkins -&gt; nexus : Deploy
+jenkins --&gt; k8s : Deploy
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="617" height="493" class="scale" src="../imgw/img-06ed8dc61808a5607b57d88e16e557d8.png"/></div></div></td></tr></tbody></table></p><p></p><p></p><strong>All cloudogu sprites</strong><p></p> See all possible cloudogu sprites on <a href="https://github.com/cloudogu/plantuml-cloudogu-sprites">plantuml-cloudogu-sprites</a>. <a style="position:relative;top:-38px;" name="1625302d65814e1d"></a><div style="clear:both;min-height:110px;margin-top:10px;"><div class="pezoic"><span id="ezoic-pub-ad-placeholder-116"></span><!-- ezoic_pub_ad_placeholder-116-longer_content-234x60-116-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-116-longer_content-468x60-116-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-116-longer_content-728x90-116-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-116-longer_content-970x90-116-nonexxxnonexxxxxxezmaxscaleval100 --></div></div><h2 class="chap"><img onclick="window.scrollTo(0,0);" title="Back to top" src="../backtop1.svg" width="20" height="20" class="backtop"/><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/cmp/dokuwiki/fr/stdlib#8"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/cmp/asciidoc/fr/stdlib#8"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/cmp/markdown/fr/stdlib#8"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>Elastic library [elastic]</h2><p></p><table border="1" cellspacing="0" cellpadding="5"><tbody><tr><td><b> Type </b></td><td><b> Link </b></td></tr><tr><td><code class="cod">stdlib</code></td><td><a href="https://github.com/plantuml/plantuml-stdlib/tree/master/elastic">https://github.com/plantuml/plantuml-stdlib/tree/master/elastic</a></td></tr><tr><td><code class="cod">src</code></td><td><a href="https://github.com/Crashedmind/PlantUML-Elastic-icons">https://github.com/Crashedmind/PlantUML-Elastic-icons</a></td></tr><tr><td><code class="cod">orig</code></td><td><a href="https://www.elastic.co">Elastic</a></td></tr></tbody></table><p></p> The Elastic library consists of <a href="https://www.elastic.co">Elastic</a> icons. It is similar in use to the AWS and Azure libraries (it used the same tool to create them). <p></p> Use it by including the file that contains the sprite, eg: <code class="cod">!include elastic/elastic_search/elastic_search&gt;</code>. When imported, you can use the sprite as normally you would, using <code class="cod">&lt;$sprite_name&gt;</code>. <p></p> You may also include the <code class="cod">common.puml</code> file, eg: <code class="cod">!include &lt;elastic/common&gt;</code>, which contains helper macros defined. With the <code class="cod">common.puml</code> imported, you can use the <code class="cod">NAME//OF//SPRITE(parameters...)</code> macro. <p></p> Example of usage: <p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msga0ea359173e13d3469261a056942abc0" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="imga0ea359173e13d3469261a056942abc0" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;a0ea359173e13d3469261a056942abc0&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;a0ea359173e13d3469261a056942abc0&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;a0ea359173e13d3469261a056942abc0&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="prea0ea359173e13d3469261a056942abc0">@startuml
+!include &lt;elastic/common&gt;
+!include &lt;elastic/elasticsearch/elasticsearch&gt;
+!include &lt;elastic/logstash/logstash&gt;
+!include &lt;elastic/kibana/kibana&gt;
+
+ELASTICSEARCH(ElasticSearch, &#34;Search and Analyze&#34;,database)
+LOGSTASH(Logstash, &#34;Parse and Transform&#34;,node)
+KIBANA(Kibana, &#34;Visualize&#34;,agent) 
+
+Logstash -right-&gt; ElasticSearch: Transformed Data
+ElasticSearch -right-&gt; Kibana: Data to View
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="719" height="187" class="scale" src="../imgw/img-a0ea359173e13d3469261a056942abc0.png"/></div></div></td></tr></tbody></table></p><p></p><p></p><strong>All Elastic Sprite Set</strong><p></p><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msgc7d67b888403979ee61346adf8a0e99a" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="imgc7d67b888403979ee61346adf8a0e99a" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;c7d67b888403979ee61346adf8a0e99a&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;c7d67b888403979ee61346adf8a0e99a&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;c7d67b888403979ee61346adf8a0e99a&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="prec7d67b888403979ee61346adf8a0e99a">@startuml
+&#39;Adapted from https://github.com/Crashedmind/PlantUML-Elastic-icons/blob/master/All.puml
+
+&#39;Elastic stuff here
+&#39;================================
+
+!include &lt;elastic/common&gt;
+!include &lt;elastic/apm/apm&gt;
+!include &lt;elastic/app_search/app_search&gt;
+!include &lt;elastic/beats/beats&gt;
+!include &lt;elastic/cloud/cloud&gt;
+!include &lt;elastic/cloud_in_kubernetes/cloud_in_kubernetes&gt;
+!include &lt;elastic/code_search/code_search&gt;
+!include &lt;elastic/ece/ece&gt;
+!include &lt;elastic/eck/eck&gt;
+&#39; Beware of the difference between Crashedmind and plantuml-stdlib version: with &#39;_&#39; usage!
+!include &lt;elastic/elasticsearch/elasticsearch&gt;
+!include &lt;elastic/endpoint/endpoint&gt;
+!include &lt;elastic/enterprise_search/enterprise_search&gt;
+!include &lt;elastic/kibana/kibana&gt;
+!include &lt;elastic/logging/logging&gt;
+!include &lt;elastic/logstash/logstash&gt;
+!include &lt;elastic/maps/maps&gt;
+!include &lt;elastic/metrics/metrics&gt;
+!include &lt;elastic/siem/siem&gt;
+!include &lt;elastic/site_search/site_search&gt;
+!include &lt;elastic/stack/stack&gt;
+!include &lt;elastic/uptime/uptime&gt;
+
+skinparam agentBackgroundColor White 
+
+APM(apm)
+APP_SEARCH(app_search)
+BEATS(beats)
+CLOUD(cloud)
+CLOUD_IN_KUBERNETES(cloud_in_kubernetes)
+CODE_SEARCH(code_search)
+ECE(ece)
+ECK(eck)
+ELASTICSEARCH(elastic_search)
+ENDPOINT(endpoint)
+ENTERPRISE_SEARCH(enterprise_search)
+KIBANA(kibana)
+LOGGING(logging)
+LOGSTASH(logstash)
+MAPS(maps)
+METRICS(metrics)
+SIEM(siem)
+SITE_SEARCH(site_search)
+STACK(stack)
+UPTIME(uptime)
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="807" height="743" class="scale" src="../imgw/img-c7d67b888403979ee61346adf8a0e99a.png"/></div></div></td></tr></tbody></table></p><p><a style="position:relative;top:-38px;" name="df026e38d6a98559"></a></p><div style="clear:both;height:50px;"></div><h2 class="chap"><img onclick="window.scrollTo(0,0);" title="Back to top" src="../backtop1.svg" width="20" height="20" class="backtop"/><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/cmp/dokuwiki/fr/stdlib#9"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/cmp/asciidoc/fr/stdlib#9"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/cmp/markdown/fr/stdlib#9"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>Google Material Icons [material]</h2><p></p><table border="1" cellspacing="0" cellpadding="5"><tbody><tr><td><b> Type </b></td><td><b> Link </b></td></tr><tr><td><code class="cod">stdlib</code></td><td><a href="https://github.com/plantuml/plantuml-stdlib/tree/master/material">https://github.com/plantuml/plantuml-stdlib/tree/master/material</a></td></tr><tr><td><code class="cod">src</code></td><td><a href="https://github.com/Templarian/MaterialDesign">https://github.com/Templarian/MaterialDesign</a></td></tr><tr><td><code class="cod">orig</code></td><td><a href="https://materialdesignicons.com">Material Design Icons</a></td></tr></tbody></table><p></p> This library consists of a free Material style icons from Google and other artists. <p></p> Use it by including the file that contains the sprite, eg: <code class="cod">!include &lt;material/ma_folder_move&gt;</code>. When imported, you can use the sprite as normally you would, using <code class="cod">&lt;$ma_sprite_name&gt;</code>. Notice that this library requires an <code class="cod">ma_</code> prefix on sprites names, this is to avoid clash of names if multiple sprites have the same name on different libraries. <p></p> You may also include the <code class="cod">common.puml</code> file, eg: <code class="cod">!include &lt;material/common&gt;</code>, which contains helper macros defined. With the <code class="cod">common.puml</code> imported, you can use the <code class="cod">MA_NAME_OF_SPRITE(parameters...)</code> macro, note again the use of the prefix <code class="cod">MA_</code>. <p></p> Example of usage: <p></p><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msgf856eb14f4e01d69f20824ef0ffaad2f" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="imgf856eb14f4e01d69f20824ef0ffaad2f" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;f856eb14f4e01d69f20824ef0ffaad2f&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;f856eb14f4e01d69f20824ef0ffaad2f&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;f856eb14f4e01d69f20824ef0ffaad2f&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="pref856eb14f4e01d69f20824ef0ffaad2f">@startuml
+!include &lt;material/common&gt;
+&#39; To import the sprite file you DON&#39;T need to place a prefix!
+!include &lt;material/folder_move&gt;
+
+MA_FOLDER_MOVE(Red, 1, dir, rectangle, &#34;A label&#34;)
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="187" height="123" class="scale" src="../imgw/img-f856eb14f4e01d69f20824ef0ffaad2f.png"/></div></div></td></tr></tbody></table></p><p></p><p></p><strong>Notes:</strong><p></p> When mixing sprites macros with other elements you may get a syntax error if, for example, trying to add a rectangle along with classes. In those cases, add <code class="cod">{</code> and <code class="cod">}</code> after the macro to create the empty rectangle. <p></p> Example of usage: <p></p><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msg76d536d56263fdb5e71503b4530fd6b3" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="img76d536d56263fdb5e71503b4530fd6b3" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;76d536d56263fdb5e71503b4530fd6b3&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;76d536d56263fdb5e71503b4530fd6b3&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;76d536d56263fdb5e71503b4530fd6b3&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="pre76d536d56263fdb5e71503b4530fd6b3">@startuml
+!include &lt;material/common&gt;
+&#39; To import the sprite file you DON&#39;T need to place a prefix!
+!include &lt;material/folder_move&gt;
+
+MA_FOLDER_MOVE(Red, 1, dir, rectangle, &#34;A label&#34;) {
+}
+
+class foo {
+    bar
+}
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="267" height="115" class="scale" src="../imgw/img-76d536d56263fdb5e71503b4530fd6b3.png"/></div></div></td></tr></tbody></table></p><p><a style="position:relative;top:-38px;" name="a3af2a4e966c1bd7"></a></p><div style="clear:both;min-height:110px;margin-top:10px;"><div class="pezoic"><span id="ezoic-pub-ad-placeholder-117"></span><!-- ezoic_pub_ad_placeholder-117-longest_content-234x60-117-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-117-longest_content-468x60-117-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-117-longest_content-728x90-117-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-117-longest_content-970x90-117-nonexxxnonexxxxxxezmaxscaleval100 --></div></div><h2 class="chap"><img onclick="window.scrollTo(0,0);" title="Back to top" src="../backtop1.svg" width="20" height="20" class="backtop"/><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/cmp/dokuwiki/fr/stdlib#10"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/cmp/asciidoc/fr/stdlib#10"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/cmp/markdown/fr/stdlib#10"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>Kubernetes [kubernetes]</h2><p></p><table border="1" cellspacing="0" cellpadding="5"><tbody><tr><td><b> Type </b></td><td><b> Link </b></td></tr><tr><td><code class="cod">stdlib</code></td><td><a href="https://github.com/plantuml/plantuml-stdlib/tree/master/kubernetes">https://github.com/plantuml/plantuml-stdlib/tree/master/kubernetes</a></td></tr><tr><td><code class="cod">src</code></td><td><a href="https://github.com/michiel/plantuml-kubernetes-sprites">https://github.com/michiel/plantuml-kubernetes-sprites</a></td></tr><tr><td><code class="cod">orig</code></td><td><a href="https://en.wikipedia.org/wiki/Kubernetes">Kubernetes</a></td></tr></tbody></table><p></p><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msgf9696f09a330e40aca2ccec0cfe57621" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="imgf9696f09a330e40aca2ccec0cfe57621" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;f9696f09a330e40aca2ccec0cfe57621&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;f9696f09a330e40aca2ccec0cfe57621&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;f9696f09a330e40aca2ccec0cfe57621&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="pref9696f09a330e40aca2ccec0cfe57621">@startuml
+!include &lt;kubernetes/k8s-sprites-unlabeled-25pct&gt;
+package &#34;Infrastructure&#34; {
+  component &#34;&lt;$master&gt;\nmaster&#34; as master
+  component &#34;&lt;$etcd&gt;\netcd&#34; as etcd
+  component &#34;&lt;$node&gt;\nnode&#34; as node
+}
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="287" height="346" class="scale" src="../imgw/img-f9696f09a330e40aca2ccec0cfe57621.png"/></div></div></td></tr></tbody></table></p><p><a style="position:relative;top:-38px;" name="1c5836677024f905"></a></p><div style="clear:both;height:50px;"></div><h2 class="chap"><img onclick="window.scrollTo(0,0);" title="Back to top" src="../backtop1.svg" width="20" height="20" class="backtop"/><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/cmp/dokuwiki/fr/stdlib#11"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/cmp/asciidoc/fr/stdlib#11"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/cmp/markdown/fr/stdlib#11"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>Logos [logos]</h2><p></p><table border="1" cellspacing="0" cellpadding="5"><tbody><tr><td><b> Type </b></td><td><b> Link </b></td></tr><tr><td><code class="cod">stdlib</code></td><td><a href="https://github.com/plantuml/plantuml-stdlib/tree/master/logos">https://github.com/plantuml/plantuml-stdlib/tree/master/logos</a></td></tr><tr><td><code class="cod">src</code></td><td><a href="https://github.com/plantuml-stdlib/gilbarbara-plantuml-sprites">https://github.com/plantuml-stdlib/gilbarbara-plantuml-sprites</a></td></tr><tr><td><code class="cod">orig</code></td><td><a href="https://github.com/gilbarbara/logos">Gil Barbara&#39;s logos</a></td></tr></tbody></table><p></p><p></p> This repository contains PlantUML sprites generated from <a href="https://github.com/gilbarbara/logos">Gil Barbara&#39;s logos</a>, which can easily be used in PlantUML diagrams for nice visual aid. <p></p><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msg53c887b81acc6fe3cb7768f97f5322f2" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="img53c887b81acc6fe3cb7768f97f5322f2" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;53c887b81acc6fe3cb7768f97f5322f2&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;53c887b81acc6fe3cb7768f97f5322f2&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;53c887b81acc6fe3cb7768f97f5322f2&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="pre53c887b81acc6fe3cb7768f97f5322f2">@startuml
+!include &lt;logos/flask&gt;
+!include &lt;logos/kafka&gt;
+!include &lt;logos/kotlin&gt;
+!include &lt;logos/cassandra&gt;
+
+title Gil Barbara&#39;s logos example
+
+skinparam monochrome true
+
+rectangle &#34;&lt;$flask&gt;\nwebapp&#34; as webapp
+queue &#34;&lt;$kafka&gt;&#34; as kafka
+rectangle &#34;&lt;$kotlin&gt;\ndaemon&#34; as daemon
+database &#34;&lt;$cassandra&gt;&#34; as cassandra
+
+webapp -&gt; kafka
+kafka -&gt; daemon
+daemon --&gt; cassandra
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="397" height="286" class="scale" src="../imgw/img-53c887b81acc6fe3cb7768f97f5322f2.png"/></div></div></td></tr></tbody></table></p><p></p><p></p><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msg8a5e2cecd3197a53d4f16ee4bef2a207" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="img8a5e2cecd3197a53d4f16ee4bef2a207" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;8a5e2cecd3197a53d4f16ee4bef2a207&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;8a5e2cecd3197a53d4f16ee4bef2a207&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;8a5e2cecd3197a53d4f16ee4bef2a207&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="pre8a5e2cecd3197a53d4f16ee4bef2a207">@startuml
+scale 0.7
+!include &lt;logos/apple-pay&gt;
+!include &lt;logos/dinersclub&gt;
+!include &lt;logos/discover&gt;
+!include &lt;logos/google-pay&gt;
+!include &lt;logos/jcb&gt;
+!include &lt;logos/maestro&gt;
+!include &lt;logos/mastercard&gt;
+!include &lt;logos/paypal&gt;
+!include &lt;logos/unionpay&gt;
+!include &lt;logos/visaelectron&gt;
+!include &lt;logos/visa&gt;
+&#39; ...
+
+title Gil Barbara&#39;s logos example - **Payment Scheme**
+
+actor customer
+rectangle &#34;&lt;$apple-pay&gt;&#34;    as ap
+rectangle &#34;&lt;$dinersclub&gt;&#34;   as dc
+rectangle &#34;&lt;$discover&gt;&#34;     as d
+rectangle &#34;&lt;$google-pay&gt;&#34;   as gp
+rectangle &#34;&lt;$jcb&gt;&#34;          as j
+rectangle &#34;&lt;$maestro&gt;&#34;      as ma
+rectangle &#34;&lt;$mastercard&gt;&#34;   as m
+rectangle &#34;&lt;$paypal&gt;&#34;       as p
+rectangle &#34;&lt;$unionpay&gt;&#34;     as up
+rectangle &#34;&lt;$visa&gt;&#34;         as v
+rectangle &#34;&lt;$visaelectron&gt;&#34; as ve
+rectangle &#34;...&#34; as etc
+
+customer --&gt; ap
+customer ---&gt; dc
+customer --&gt; d
+customer ---&gt; gp
+customer --&gt; j
+customer ---&gt; ma
+customer --&gt; m
+customer ---&gt; p
+customer --&gt; up
+customer ---&gt; v
+customer --&gt; ve
+customer ---&gt; etc
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="800" height="272" class="scale" src="../imgw/img-8a5e2cecd3197a53d4f16ee4bef2a207.png"/></div></div></td></tr></tbody></table></p><p><a style="position:relative;top:-38px;" name="537cb543eaa27ca6"></a></p><div style="clear:both;min-height:110px;margin-top:10px;"><div class="pezoic"><span id="ezoic-pub-ad-placeholder-118"></span><!-- ezoic_pub_ad_placeholder-118-incontent_5-234x60-118-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-118-incontent_5-468x60-118-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-118-incontent_5-728x90-118-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-118-incontent_5-970x90-118-nonexxxnonexxxxxxezmaxscaleval100 --></div></div><h2 class="chap"><img onclick="window.scrollTo(0,0);" title="Back to top" src="../backtop1.svg" width="20" height="20" class="backtop"/><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/cmp/dokuwiki/fr/stdlib#12"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/cmp/asciidoc/fr/stdlib#12"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/cmp/markdown/fr/stdlib#12"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>Office [office]</h2><p></p><table border="1" cellspacing="0" cellpadding="5"><tbody><tr><td><b> Type </b></td><td><b> Link </b></td></tr><tr><td><code class="cod">stdlib</code></td><td><a href="https://github.com/plantuml/plantuml-stdlib/tree/master/office">https://github.com/plantuml/plantuml-stdlib/tree/master/office</a></td></tr><tr><td><code class="cod">src</code></td><td><a href="https://github.com/Roemer/plantuml-office">https://github.com/Roemer/plantuml-office</a></td></tr><tr><td><code class="cod">orig</code></td><td></td></tr></tbody></table><p></p> There are sprites (*.puml) and colored png icons available. Be aware that the sprites are all only monochrome even if they have a color in their name (due to automatically generating the files). You can either color the sprites with the macro (see examples below) or directly use the fully colored pngs. See the following examples on how to use the sprites, the pngs and the macros. <p></p> Example of usage: <p></p><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msg8e37273d950feb249974cecb55c8454d" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="img8e37273d950feb249974cecb55c8454d" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;8e37273d950feb249974cecb55c8454d&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;8e37273d950feb249974cecb55c8454d&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;8e37273d950feb249974cecb55c8454d&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="pre8e37273d950feb249974cecb55c8454d">@startuml
+!include &lt;tupadr3/common&gt;
+
+!include &lt;office/Servers/database_server&gt;
+!include &lt;office/Servers/application_server&gt;
+!include &lt;office/Concepts/firewall_orange&gt;
+!include &lt;office/Clouds/cloud_disaster_red&gt;
+
+title Office Icons Example
+
+package &#34;Sprites&#34; {
+    OFF_DATABASE_SERVER(db,DB)
+    OFF_APPLICATION_SERVER(app,App-Server)
+    OFF_FIREWALL_ORANGE(fw,Firewall)
+    OFF_CLOUD_DISASTER_RED(cloud,Cloud)
+    db &lt;-&gt; app
+    app &lt;--&gt; fw
+    fw &lt;.left.&gt; cloud
+}
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="233" height="329" class="scale" src="../imgw/img-8e37273d950feb249974cecb55c8454d.png"/></div></div></td></tr></tbody></table></p><p></p><p></p><p></p><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msg8e8e4157967ff9963647d56fec7dd978" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="img8e8e4157967ff9963647d56fec7dd978" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;8e8e4157967ff9963647d56fec7dd978&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;8e8e4157967ff9963647d56fec7dd978&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;8e8e4157967ff9963647d56fec7dd978&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="pre8e8e4157967ff9963647d56fec7dd978">@startuml
+!include &lt;tupadr3/common&gt;
+
+!include &lt;office/servers/database_server&gt;
+!include &lt;office/servers/application_server&gt;
+!include &lt;office/Concepts/firewall_orange&gt;
+!include &lt;office/Clouds/cloud_disaster_red&gt;
+
+&#39; Used to center the label under the images
+skinparam defaultTextAlignment center
+
+title Extended Office Icons Example
+
+package &#34;Use sprite directly&#34; {
+    [Some &lt;$cloud_disaster_red&gt; object]
+}
+
+package &#34;Different macro usages&#34; {
+    OFF_CLOUD_DISASTER_RED(cloud1)
+    OFF_CLOUD_DISASTER_RED(cloud2,Default with text)
+    OFF_CLOUD_DISASTER_RED(cloud3,Other shape,Folder)
+    OFF_CLOUD_DISASTER_RED(cloud4,Even another shape,Database)
+    OFF_CLOUD_DISASTER_RED(cloud5,Colored,Rectangle, red)
+    OFF_CLOUD_DISASTER_RED(cloud6,Colored background) #red
+}
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="720" height="341" class="scale" src="../imgw/img-8e8e4157967ff9963647d56fec7dd978.png"/></div></div></td></tr></tbody></table></p><p><a style="position:relative;top:-38px;" name="fff2b51d50b42912"></a></p><div style="clear:both;height:50px;"></div><h2 class="chap"><img onclick="window.scrollTo(0,0);" title="Back to top" src="../backtop1.svg" width="20" height="20" class="backtop"/><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/cmp/dokuwiki/fr/stdlib#13"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/cmp/asciidoc/fr/stdlib#13"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/cmp/markdown/fr/stdlib#13"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>Open Security Architecture (OSA) [osa]</h2><p></p><table border="1" cellspacing="0" cellpadding="5"><tbody><tr><td><b> Type </b></td><td><b> Link </b></td></tr><tr><td><code class="cod">stdlib</code></td><td><a href="https://github.com/plantuml/plantuml-stdlib/tree/master/osa">https://github.com/plantuml/plantuml-stdlib/tree/master/osa</a></td></tr><tr><td><code class="cod">src</code></td><td><a href="https://github.com/Crashedmind/PlantUML-opensecurityarchitecture-icons">https://github.com/Crashedmind/PlantUML-opensecurityarchitecture-icons</a><br/><a href="https://github.com/Crashedmind/PlantUML-opensecurityarchitecture2-icons">https://github.com/Crashedmind/PlantUML-opensecurityarchitecture2-icons</a></td></tr><tr><td><code class="cod">orig</code></td><td><a href="https://www.opensecurityarchitecture.org">https://www.opensecurityarchitecture.org</a></td></tr></tbody></table><p></p><p></p><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msg47fbc442c99511a43031600a7e0a6e94" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="img47fbc442c99511a43031600a7e0a6e94" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;47fbc442c99511a43031600a7e0a6e94&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;47fbc442c99511a43031600a7e0a6e94&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;47fbc442c99511a43031600a7e0a6e94&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="pre47fbc442c99511a43031600a7e0a6e94">@startuml
+&#39;Adapted from https://github.com/Crashedmind/PlantUML-opensecurityarchitecture-icons/blob/master/all
+scale .5
+!include &lt;osa/arrow/green/left/left&gt;
+!include &lt;osa/arrow/yellow/right/right&gt;
+!include &lt;osa/awareness/awareness&gt;
+!include &lt;osa/contract/contract&gt;
+!include &lt;osa/database/database&gt;
+!include &lt;osa/desktop/desktop&gt;
+!include &lt;osa/desktop/imac/imac&gt;
+!include &lt;osa/device_music/device_music&gt;
+!include &lt;osa/device_scanner/device_scanner&gt;
+!include &lt;osa/device_usb/device_usb&gt;
+!include &lt;osa/device_wireless_router/device_wireless_router&gt;
+!include &lt;osa/disposal/disposal&gt;
+!include &lt;osa/drive_optical/drive_optical&gt;
+!include &lt;osa/firewall/firewall&gt;
+!include &lt;osa/hub/hub&gt;
+!include &lt;osa/ics/drive/drive&gt;
+!include &lt;osa/ics/plc/plc&gt;
+!include &lt;osa/ics/thermometer/thermometer&gt;
+!include &lt;osa/id/card/card&gt;
+!include &lt;osa/laptop/laptop&gt;
+!include &lt;osa/lifecycle/lifecycle&gt;
+!include &lt;osa/lightning/lightning&gt;
+!include &lt;osa/media_flash/media_flash&gt;
+!include &lt;osa/media_optical/media_optical&gt;
+!include &lt;osa/media_tape/media_tape&gt;
+!include &lt;osa/mobile/pda/pda&gt;
+!include &lt;osa/padlock/padlock&gt;
+!include &lt;osa/printer/printer&gt;
+!include &lt;osa/site_branch/site_branch&gt;
+!include &lt;osa/site_factory/site_factory&gt;
+!include &lt;osa/vpn/vpn&gt;
+!include &lt;osa/wireless/network/network&gt;
+
+rectangle &#34;OSA&#34; {
+rectangle &#34;Left:\n &lt;$left&gt;&#34;
+rectangle &#34;Right:\n &lt;$right&gt;&#34;
+rectangle &#34;Awareness:\n &lt;$awareness&gt;&#34;
+rectangle &#34;Contract:\n &lt;$contract&gt;&#34;
+rectangle &#34;Database:\n &lt;$database&gt;&#34;
+rectangle &#34;Desktop:\n &lt;$desktop&gt;&#34;
+rectangle &#34;Imac:\n &lt;$imac&gt;&#34;
+rectangle &#34;Device_music:\n &lt;$device_music&gt;&#34;
+rectangle &#34;Device_scanner:\n &lt;$device_scanner&gt;&#34;
+rectangle &#34;Device_usb:\n &lt;$device_usb&gt;&#34;
+rectangle &#34;Device_wireless_router:\n &lt;$device_wireless_router&gt;&#34;
+rectangle &#34;Disposal:\n &lt;$disposal&gt;&#34;
+rectangle &#34;Drive_optical:\n &lt;$drive_optical&gt;&#34;
+rectangle &#34;Firewall:\n &lt;$firewall&gt;&#34;
+rectangle &#34;Hub:\n &lt;$hub&gt;&#34;
+rectangle &#34;Drive:\n &lt;$drive&gt;&#34;
+rectangle &#34;Plc:\n &lt;$plc&gt;&#34;
+rectangle &#34;Thermometer:\n &lt;$thermometer&gt;&#34;
+rectangle &#34;Card:\n &lt;$card&gt;&#34;
+rectangle &#34;Laptop:\n &lt;$laptop&gt;&#34;
+rectangle &#34;Lifecycle:\n &lt;$lifecycle&gt;&#34;
+rectangle &#34;Lightning:\n &lt;$lightning&gt;&#34;
+rectangle &#34;Media_flash:\n &lt;$media_flash&gt;&#34;
+rectangle &#34;Media_optical:\n &lt;$media_optical&gt;&#34;
+rectangle &#34;Media_tape:\n &lt;$media_tape&gt;&#34;
+rectangle &#34;Pda:\n &lt;$pda&gt;&#34;
+rectangle &#34;Padlock:\n &lt;$padlock&gt;&#34;
+rectangle &#34;Printer:\n &lt;$printer&gt;&#34;
+rectangle &#34;Site_branch:\n &lt;$site_branch&gt;&#34;
+rectangle &#34;Site_factory:\n &lt;$site_factory&gt;&#34;
+rectangle &#34;Vpn:\n &lt;$vpn&gt;&#34;
+rectangle &#34;Network:\n &lt;$network&gt;&#34;
+}
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="575" height="680" class="scale" src="../imgw/img-47fbc442c99511a43031600a7e0a6e94.png"/></div></div></td></tr></tbody></table></p><p></p><p></p><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msgd5c68db6616c282d492a24a194fc917d" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="imgd5c68db6616c282d492a24a194fc917d" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;d5c68db6616c282d492a24a194fc917d&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;d5c68db6616c282d492a24a194fc917d&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;d5c68db6616c282d492a24a194fc917d&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="pred5c68db6616c282d492a24a194fc917d">@startuml
+scale .5
+!include &lt;osa/user/audit/audit&gt;
+&#39;beware of &#39;hat-sprite&#39;
+!include &lt;osa/user/black/hat/hat-sprite&gt;
+!include &lt;osa/user/blue/blue&gt;
+!include &lt;osa/user/blue/security/specialist/specialist&gt;
+!include &lt;osa/user/blue/sysadmin/sysadmin&gt;
+!include &lt;osa/user/blue/tester/tester&gt;
+!include &lt;osa/user/blue/tie/tie&gt;
+!include &lt;osa/user/green/architect/architect&gt;
+!include &lt;osa/user/green/business/manager/manager&gt;
+!include &lt;osa/user/green/developer/developer&gt;
+!include &lt;osa/user/green/green&gt;
+!include &lt;osa/user/green/operations/operations&gt;
+!include &lt;osa/user/green/project/manager/manager&gt;
+!include &lt;osa/user/green/service/manager/manager&gt;
+!include &lt;osa/user/green/warning/warning&gt;
+!include &lt;osa/user/large/group/group&gt;
+!include &lt;osa/users/blue/green/green&gt;
+!include &lt;osa/user/white/hat/hat&gt;
+
+listsprites
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="547" height="375" class="scale" src="../imgw/img-d5c68db6616c282d492a24a194fc917d.png"/></div></div></td></tr></tbody></table></p><p><a style="position:relative;top:-38px;" name="652bcf3694664bc9"></a></p><div style="clear:both;min-height:110px;margin-top:10px;"><div class="pezoic"><span id="ezoic-pub-ad-placeholder-119"></span><!-- ezoic_pub_ad_placeholder-119-incontent_6-234x60-119-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-119-incontent_6-468x60-119-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-119-incontent_6-728x90-119-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-119-incontent_6-970x90-119-nonexxxnonexxxxxxezmaxscaleval100 --></div></div><h2 class="chap"><img onclick="window.scrollTo(0,0);" title="Back to top" src="../backtop1.svg" width="20" height="20" class="backtop"/><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/cmp/dokuwiki/fr/stdlib#14"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/cmp/asciidoc/fr/stdlib#14"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/cmp/markdown/fr/stdlib#14"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>Tupadr3 library [tupadr3]</h2><p></p><table border="1" cellspacing="0" cellpadding="5"><tbody><tr><td><b> Type </b></td><td><b> Link </b></td></tr><tr><td><code class="cod">stdlib</code></td><td><a href="https://github.com/plantuml/plantuml-stdlib/tree/master/tupadr3">https://github.com/plantuml/plantuml-stdlib/tree/master/tupadr3</a></td></tr><tr><td><code class="cod">src</code></td><td><a href="https://github.com/tupadr3/plantuml-icon-font-sprites">https://github.com/tupadr3/plantuml-icon-font-sprites</a></td></tr><tr><td><code class="cod">orig</code></td><td><a href="https://github.com/tupadr3/plantuml-icon-font-sprites#icon-sets">https://github.com/tupadr3/plantuml-icon-font-sprites#icon-sets</a></td></tr></tbody></table><p></p> This library contains several libraries of icons (including Devicons and Font Awesome). <p></p> Use it by including the file that contains the sprite, eg: <code class="cod">!include &lt;font-awesome/align_center&gt;</code>. When imported, you can use the sprite as normally you would, using <code class="cod">&lt;$sprite_name&gt;</code>. <p></p> You may also include the <code class="cod">common.puml</code> file, eg: <code class="cod">!include &lt;font-awesome/common&gt;</code>, which contains helper macros defined. With the <code class="cod">common.puml</code> imported, you can use the <code class="cod">NAME_OF_SPRITE(parameters...)</code> macro. <p></p> Example of usage: <p></p><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msgb77d99b7f784b04a453751ff89fea627" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="imgb77d99b7f784b04a453751ff89fea627" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;b77d99b7f784b04a453751ff89fea627&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;b77d99b7f784b04a453751ff89fea627&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;b77d99b7f784b04a453751ff89fea627&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="preb77d99b7f784b04a453751ff89fea627">@startuml
+!include &lt;tupadr3/common&gt;
+!include &lt;tupadr3/font-awesome/server&gt;
+!include &lt;tupadr3/font-awesome/database&gt;
+
+title Styling example
+
+FA_SERVER(web1,web1) #Green
+FA_SERVER(web2,web2) #Yellow
+FA_SERVER(web3,web3) #Blue
+FA_SERVER(web4,web4) #YellowGreen
+
+FA_DATABASE(db1,LIVE,database,white) #RoyalBlue
+FA_DATABASE(db2,SPARE,database) #Red
+
+db1 &lt;--&gt; db2
+
+web1 &lt;--&gt; db1
+web2 &lt;--&gt; db1
+web3 &lt;--&gt; db1
+web4 &lt;--&gt; db1
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="389" height="457" class="scale" src="../imgw/img-b77d99b7f784b04a453751ff89fea627.png"/></div></div></td></tr></tbody></table></p><p></p><p></p><p></p><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msgee904548c47f235ecab5334c30635f4d" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="imgee904548c47f235ecab5334c30635f4d" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;ee904548c47f235ecab5334c30635f4d&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;ee904548c47f235ecab5334c30635f4d&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;ee904548c47f235ecab5334c30635f4d&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="preee904548c47f235ecab5334c30635f4d">@startuml
+!include &lt;tupadr3/common&gt;
+!include &lt;tupadr3/devicons/mysql&gt;
+
+DEV_MYSQL(db1)
+DEV_MYSQL(db2,label of db2)
+DEV_MYSQL(db3,label of db3,database)
+DEV_MYSQL(db4,label of db4,database,red) #DeepSkyBlue
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="253" height="263" class="scale" src="../imgw/img-ee904548c47f235ecab5334c30635f4d.png"/></div></div></td></tr></tbody></table></p><p><a style="position:relative;top:-38px;" name="3f4045fa72a6e17f"></a></p><div style="clear:both;height:50px;"></div><h2 class="chap"><img onclick="window.scrollTo(0,0);" title="Back to top" src="../backtop1.svg" width="20" height="20" class="backtop"/><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/cmp/dokuwiki/fr/stdlib#15"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/cmp/asciidoc/fr/stdlib#15"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/cmp/markdown/fr/stdlib#15"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>Bibliothèque AWS</h2><p></p><table border="1" cellspacing="0" cellpadding="5"><tbody><tr><td><b> Type </b></td><td><b> Link </b></td></tr><tr><td><code class="cod">stdlib</code></td><td><a href="https://github.com/plantuml/plantuml-stdlib/tree/master/aws">https://github.com/plantuml/plantuml-stdlib/tree/master/aws</a></td></tr><tr><td><code class="cod">src</code></td><td><a href="https://github.com/milo-minderbinder/AWS-PlantUML">https://github.com/milo-minderbinder/AWS-PlantUML</a></td></tr><tr><td><code class="cod">orig</code></td><td><a href="https://aws.amazon.com/en/architecture/icons/">https://aws.amazon.com/en/architecture/icons/</a></td></tr></tbody></table><p></p><strong>Warning: We are thinking about deprecating this library. </strong><p></p> So you should probably use <code class="cod">&lt;awslib&gt;</code> instead (see above). <p></p><hr/><p></p> La bibliothèque AWS est composée des icônes AWS en deux tailles différentes. <p></p> Pour l&#39;utiliser, il vous vaut inclure le ficheier qui contient le sprite (ex: <code class="cod">!include &lt;aws/Storage/AmazonS3/AmazonS3&gt;</code>). Une fois importé, vous pouvez utiliser le sprite normallement en l&#39;appelant de la manière suivante <code class="cod">&lt;$nom_du_sprite&gt;</code>. <p></p> Vous pouvez aussi inclure le fichier <code class="cod">common.puml</code> qui contient plusieurs macros utiles avec la commande <code class="cod">!include &lt;aws/common&gt;</code>. Avec ce fichier importé, vous pouvez par exmeple appeler la macro &#34;NOM_DU_SPRITE(parametres...). <p></p> Exemple d&#39;utilisation : <p></p><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msg64e189e2e0c1bf079e9325ed4b896829" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="img64e189e2e0c1bf079e9325ed4b896829" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;64e189e2e0c1bf079e9325ed4b896829&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;64e189e2e0c1bf079e9325ed4b896829&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;64e189e2e0c1bf079e9325ed4b896829&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="pre64e189e2e0c1bf079e9325ed4b896829">@startuml
+!include &lt;aws/common&gt;
+!include &lt;aws/Storage/AmazonS3/AmazonS3&gt;
+!include &lt;aws/Storage/AmazonS3/bucket/bucket&gt;
+
+AMAZONS3(s3_internal)
+AMAZONS3(s3_partner,&#34;Vendor&#39;s S3&#34;)
+s3_internal &lt;- s3_partner
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="255" height="150" class="scale" src="../imgw/img-64e189e2e0c1bf079e9325ed4b896829.png"/></div></div></td></tr></tbody></table></p><p></p></td><td id="toctd" valign="top" style="max-width:240px;min-width:240px;"><div id="toc"><ul><li><a href="stdlib.html#14add8003c6c84d4">Contenu de la bibliothèque standard</a></li><li><a href="stdlib.html#4ff66fed176e4ee1">ArchiMate [archimate]</a></li><li><a href="stdlib.html#a464d2f6236a5c23">Amazon Labs AWS Library [awslib]</a></li><li><a href="stdlib.html#bf8b1cb709cb9f08">Azure library [azure]</a></li><li><a href="stdlib.html#062f75176513a666">C4 Library [C4]</a></li><li><a href="stdlib.html#dfa1f2b2b70eb2be">Cloud Insight [cloudinsight]</a></li><li><a href="stdlib.html#5d13898d957d4524">Cloudogu [cloudogu]</a></li><li><a href="stdlib.html#1625302d65814e1d">Elastic library [elastic]</a></li><li><a href="stdlib.html#df026e38d6a98559">Google Material Icons [material]</a></li><li><a href="stdlib.html#a3af2a4e966c1bd7">Kubernetes [kubernetes]</a></li><li><a href="stdlib.html#1c5836677024f905">Logos [logos]</a></li><li><a href="stdlib.html#537cb543eaa27ca6">Office [office]</a></li><li><a href="stdlib.html#fff2b51d50b42912">Open Security Architecture (OSA) [osa]</a></li><li><a href="stdlib.html#652bcf3694664bc9">Tupadr3 library [tupadr3]</a></li><li><a href="stdlib.html#3f4045fa72a6e17f">Bibliothèque AWS</a></li></ul></div></td></tr></tbody></table></p><p></p><span id="ezoic-pub-ad-placeholder-104"></span><!-- ezoic_pub_ad_placeholder-104-bottom_of_page-234x60-104-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-104-bottom_of_page-468x60-104-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-104-bottom_of_page-728x90-104-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-104-bottom_of_page-970x250-104-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-104-bottom_of_page-300x250x3-104-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-104-bottom_of_page-970x90-104-nonexxxnonexxxxxxezmaxscaleval100 --></div><style>.btm{text-align:center}.btm a{text-decoration:none;color:#637282}.btm a:hover{color:#0366d6}</style><div class="btm"><hr/><a href="https://g.ezoic.net/privacy/plantuml.com"><small>Privacy Policy</small></a>      <a href="../direct-sales.html"><small>Advertise</small></a><p></p></div><script>var sc_project=11129411;var sc_invisible=1;var sc_security="957b00be";</script><script async="" src="https://www.statcounter.com/counter/counter.js"></script><!--[selectrongo:done]--><script type="text/javascript">
+				var __inScopeForCCPA = false;
+		function __uspapi(command, version, callback) {
+			var response = null;
+			var successs = false;
+			if (command === "getUSPData" && version === 1) {
+				var uspString = "1"; // Version
+				if (__inScopeForCCPA) {
+					uspString += "N"; // Has Explicit Notice for Opt Out been provided (ex footer or minor consent modal)
+					var result;
+					var consentCookie = (result = new RegExp('(?:^|; )ezoccpaconsent=([^;]*)').exec(document.cookie)) ? (result[1]) : null;
+					if (consentCookie === "nonconsent") {
+						uspString += "Y";
+					}
+					else {
+						uspString += "N";
+					}
+					uspString += "N" // Is pub a signatory to the IAB Limited Service Provider Agreement (http://www.iabprivacy.com/)
+				}
+				else {
+					uspString += "---";
+				}
+				response = {
+					uspString: uspString,
+					version: 1
+				};
+				success = true;
+			}
+			return callback(response, success);
+		};
+		function __receiveUspapiMessage(event) {
+			if (event.data.hasOwnProperty('__uspapiCall')) {
+				__uspapi('getUSPData', 1, function(uspData, success) {
+					event.source.postMessage({
+						__uspapiReturn: {
+							returnValue: uspData,
+							success: success,
+							callId: event.data.__uspapiCall.callId
+						}
+					},
+					event.origin);
+				});
+			}
+			return null;
+		};
+		window.addEventListener("message", __receiveUspapiMessage, false);
+</script>
+<script>__ez.queue.addFile('/tardisrocinante/vitals.js', '/tardisrocinante/vitals.js?gcb=2&cb=3', false, ['/parsonsmaize/mulvane.js'], true, false, true, false);</script>
+<script>var _audins_dom="plantuml_com",_audins_did=173770;__ez.queue.addDelayFunc("audins.js","__ez.script.add", "//go.ezodn.com/detroitchicago/audins.js?cb=195-2");</script><noscript><div style="display:none;"><img src="https://pixel.quantserve.com/pixel/p-31iz6hfFutd16.gif?labels=Domain.plantuml_com,DomainId.173770" border="0" height="1" width="1" alt="Quantcast"/></div></noscript>
+<script>__ez.queue.addFile('/beardeddragon/drake.js', '/beardeddragon/drake.js?gcb=2&cb=4', false, [], true, false, true, false);</script>
+<script type="text/javascript" style='display:none;'>var __ez_dims = (function() {
+		var setCookie = function( name, content, expiry ) {
+			return document.cookie = name+'='+content+((expiry)?';expires='+(new Date(Math.floor(new Date().getTime()+expiry*1000)).toUTCString()):'')+';path=/';
+		};
+		var ffid = 1;
+		var oh = window.screen.height;
+		var ow = window.screen.width;
+		var h = ffid === 1 ? oh : (oh > ow) ? oh : ow;
+		var w = ffid === 1 ? ow : (oh > ow) ? ow : oh;
+		var uh = window.innerHeight || document.documentElement.clientHeight || document.getElementsByTagName('body')[0].clientHeight;
+		var uw = window.innerWidth || document.documentElement.clientWidth || document.getElementsByTagName('body')[0].clientWidth;
+		setCookie('ezds', encodeURIComponent('ffid='+ffid+',w='+w+',h='+h), (31536e3*7));
+		setCookie('ezohw', encodeURIComponent('w='+uw+',h='+uh), (31536e3*7));
+	})();</script>
+<script type='text/javascript' style='display:none;' async>__ez.queue.addFile('/parsonsmaize/chanute.js', '/parsonsmaize/chanute.js?a=a&cb=7&dcb=195-2&shcb=34', true, ['/parsonsmaize/mulvane.js'], true, false, false, false);</script>
+<script type='text/javascript' style='display:none;' async>__ez.queue.addFile('/porpoiseant/jellyfish.js', '/porpoiseant/jellyfish.js?a=a&cb=10&dcb=195-2&shcb=34', false, [], true, false, false, false);</script></body></html>

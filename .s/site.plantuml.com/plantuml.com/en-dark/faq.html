@@ -1,0 +1,2105 @@
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<script data-ezscrex='false' data-cfasync='false' data-pagespeed-no-defer>var __ez=__ez||{};__ez.stms=Date.now();__ez.evt={};__ez.script={};__ez.ck=__ez.ck||{};__ez.template={};__ez.template.isOrig=false;__ez.queue=function(){var e=0,i=0,t=[],n=!1,o=[],r=[],s=!0,a=function(e,i,n,o,r,s,a){var l=arguments.length>7&&void 0!==arguments[7]?arguments[7]:window,d=this;this.name=e,this.funcName=i,this.parameters=null===n?null:p(n)?n:[n],this.isBlock=o,this.blockedBy=r,this.deleteWhenComplete=s,this.isError=!1,this.isComplete=!1,this.isInitialized=!1,this.proceedIfError=a,this.fWindow=l,this.isTimeDelay=!1,this.process=function(){f("... func = "+e),d.isInitialized=!0,d.isComplete=!0,f("... func.apply: "+e);var i=d.funcName.split("."),n=null,o=this.fWindow||window;i.length>3||(n=3===i.length?o[i[0]][i[1]][i[2]]:2===i.length?o[i[0]][i[1]]:o[d.funcName]),null!=n&&n.apply(null,this.parameters),!0===d.deleteWhenComplete&&delete t[e],!0===d.isBlock&&(f("----- F'D: "+d.name),u())}},l=function(e,i,t,n,o,r,s){var a=arguments.length>7&&void 0!==arguments[7]?arguments[7]:window,l=this;this.name=e,this.path=i,this.async=o,this.defer=r,this.isBlock=t,this.blockedBy=n,this.isInitialized=!1,this.isError=!1,this.isComplete=!1,this.proceedIfError=s,this.fWindow=a,this.isTimeDelay=!1,this.isPath=function(e){return"/"===e[0]&&"/"!==e[1]},this.getSrc=function(e){return void 0!==window.__ezScriptHost&&this.isPath(e)&&"banger.js"!==this.name?window.__ezScriptHost+e:e},this.process=function(){l.isInitialized=!0,f("... file = "+e);var i=this.fWindow?this.fWindow.document:document,t=i.createElement("script");t.src=this.getSrc(this.path),!0===o?t.async=!0:!0===r&&(t.defer=!0),t.onerror=function(){var e={url:window.location.href,name:l.name,path:l.path,user_agent:window.navigator.userAgent};"undefined"!=typeof _ezaq&&(e.pageview_id=_ezaq.page_view_id);var i=encodeURIComponent(JSON.stringify(e)),t=new XMLHttpRequest;t.open("GET","//g.ezoic.net/ezqlog?d="+i,!0),t.send(),f("----- ERR'D: "+l.name),l.isError=!0,!0===l.isBlock&&u()},t.onreadystatechange=t.onload=function(){var e=t.readyState;f("----- F'D: "+l.name),e&&!/loaded|complete/.test(e)||(l.isComplete=!0,!0===l.isBlock&&u())},i.getElementsByTagName("head")[0].appendChild(t)}},d=function(e,i){this.name=e,this.path="",this.async=!1,this.defer=!1,this.isBlock=!1,this.blockedBy=[],this.isInitialized=!0,this.isError=!1,this.isComplete=i,this.proceedIfError=!1,this.isTimeDelay=!1,this.process=function(){}};function c(e){!0!==h(e)&&0!=s&&e.process()}function h(e){if(!0===e.isTimeDelay&&!1===n)return f(e.name+" blocked = TIME DELAY!"),!0;if(p(e.blockedBy))for(var i=0;i<e.blockedBy.length;i++){var o=e.blockedBy[i];if(!1===t.hasOwnProperty(o))return f(e.name+" blocked = "+o),!0;if(!0===e.proceedIfError&&!0===t[o].isError)return!1;if(!1===t[o].isComplete)return f(e.name+" blocked = "+o),!0}return!1}function f(e){var i=window.location.href,t=new RegExp("[?&]ezq=([^&#]*)","i").exec(i);"1"===(t?t[1]:null)&&console.debug(e)}function u(){++e>200||(f("let's go"),m(o),m(r))}function m(e){for(var i in e)if(!1!==e.hasOwnProperty(i)){var t=e[i];!0===t.isComplete||h(t)||!0===t.isInitialized||!0===t.isError?!0===t.isError?f(t.name+": error"):!0===t.isComplete?f(t.name+": complete already"):!0===t.isInitialized&&f(t.name+": initialized already"):t.process()}}function p(e){return"[object Array]"==Object.prototype.toString.call(e)}return window.addEventListener("load",(function(){setTimeout((function(){n=!0,f("TDELAY -----"),u()}),5e3)}),!1),{addFile:function(e,i,n,s,a,d,h,f,u){var m=new l(e,i,n,s,a,d,h,u);!0===f?o[e]=m:r[e]=m,t[e]=m,c(m)},addDelayFile:function(e,i){var n=new l(e,i,!1,[],!1,!1,!0);n.isTimeDelay=!0,f(e+" ...  FILE! TDELAY"),r[e]=n,t[e]=n,c(n)},addFunc:function(e,n,s,l,d,h,f,u,m,p){!0===h&&(e=e+"_"+i++);var w=new a(e,n,s,l,d,f,u,p);!0===m?o[e]=w:r[e]=w,t[e]=w,c(w)},addDelayFunc:function(e,i,n){var o=new a(e,i,n,!1,[],!0,!0);o.isTimeDelay=!0,f(e+" ...  FUNCTION! TDELAY"),r[e]=o,t[e]=o,c(o)},items:t,processAll:u,setallowLoad:function(e){s=e},markLoaded:function(e){if(e&&0!==e.length){if(e in t){var i=t[e];!0===i.isComplete?f(i.name+" "+e+": error loaded duplicate"):(i.isComplete=!0,i.isInitialized=!0)}else t[e]=new d(e,!0);f("markLoaded dummyfile: "+t[e].name)}},logWhatsBlocked:function(){for(var e in t)!1!==t.hasOwnProperty(e)&&h(t[e])}}}();__ez.evt.add=function(e,t,n){e.addEventListener?e.addEventListener(t,n,!1):e.attachEvent?e.attachEvent("on"+t,n):e["on"+t]=n()},__ez.evt.remove=function(e,t,n){e.removeEventListener?e.removeEventListener(t,n,!1):e.detachEvent?e.detachEvent("on"+t,n):delete e["on"+t]};__ez.script.add=function(e){var t=document.createElement("script");t.src=e,t.async=!0,t.type="text/javascript",document.getElementsByTagName("head")[0].appendChild(t)};__ez.dot={};__ez.queue.addFile('/detroitchicago/boise.js', '/detroitchicago/boise.js?gcb=195-2&cb=2', true, [], true, false, true, false);__ez.queue.addFile('/parsonsmaize/abilene.js', '/parsonsmaize/abilene.js?gcb=195-2&cb=28', true, [], true, false, true, false);</script>
+<script data-ezscrex="false" type="text/javascript" data-cfasync="false">window._ezaq = Object.assign({}, typeof window._ezaq !== "undefined" ? window._ezaq : {}, {"ad_cache_level":1,"domain_id":173770,"ezcache_level":2,"ezcache_skip_code":0,"has_bad_image":0,"has_bad_words":0,"is_sitespeed":0,"lt_cache_level":0,"page_view_id":"6cf6c0d3-c7ad-4d83-5c31-eeddc1c1fb74","response_size_orig":78619,"response_time_orig":4,"template_id":134,"url":"https://plantuml.com/en-dark/faq","word_count":3192,"worst_bad_word_level":0});__ez.queue.markLoaded('ezaqBaseReady');</script>
+<script type="text/javascript">(function(){function storageAvailable(type){var storage;try{storage=window[type];var x='__storage_test__';storage.setItem(x,x);storage.removeItem(x);return true;}
+catch(e){return e instanceof DOMException&&(e.code===22||e.code===1014||e.name==='QuotaExceededError'||e.name==='NS_ERROR_DOM_QUOTA_REACHED')&&(storage&&storage.length!==0);}}
+function remove_ama_config(){if(storageAvailable('localStorage')){localStorage.removeItem("google_ama_config");}}
+remove_ama_config()})()</script>
+<script type="text/javascript">var ezoicTestActive = true</script>
+<script data-ezscrex="false" type="text/javascript" data-cfasync="false">window._ezaq = Object.assign({}, typeof window._ezaq !== "undefined" ? window._ezaq : {}, {"ab_test_id":"mod174-c","ad_cache_level":1,"ad_count_adjustment":0,"ad_lazyload_version":0,"ad_load_version":1,"ad_location_ids":"","adx_ad_count":0,"ai_placeholder_cache_level":1,"ai_placeholder_placement_cnt":-1,"bidder_method":1,"bidder_version":3,"city":"Krasnoyarsk","country":"RU","days_since_last_visit":-1,"display_ad_count":0,"domain_id":173770,"domain_test_group":20230802,"ds_adsize_opt_id":-1,"engaged_time_visit":0,"ezcache_level":2,"ezcache_skip_code":0,"form_factor_id":1,"framework_id":1,"has_bad_image":0,"has_bad_words":0,"iab_category":"","iab_category_0":"596","is_embed":false,"is_from_recommended_pages":false,"is_return_visitor":false,"is_sitespeed":0,"last_page_load":"","last_pageview_id":"","lt_cache_level":0,"max_ads":0,"metro_code":0,"optimization_version":1,"page_ad_positions":"","page_view_count":377,"page_view_id":"6cf6c0d3-c7ad-4d83-5c31-eeddc1c1fb74","position_selection_id":0,"postal_code":"660000","pv_event_count":0,"response_size_orig":78619,"response_time_orig":4,"serverid":"i-020e20bd20c9cad94","state":"KYA","sub_page_ad_positions":"","t_epoch":1697690937,"template_id":134,"time_on_site_visit":0,"url":"https://plantuml.com/en-dark/faq","word_count":3192,"worst_bad_word_level":0});__ez.queue.markLoaded('ezaqReady');</script>
+<script data-ezscrex='false' data-cfasync='false' data-pagespeed-no-defer>__ez.queue.addFile('/parsonsmaize/mulvane.js', '/parsonsmaize/mulvane.js?gcb=195-2&cb=5', true, ['/parsonsmaize/abilene.js'], true, false, true, false);__ez.queue.addFile('/parsonsmaize/olathe.js', '/parsonsmaize/olathe.js?gcb=195-2&cb=20', false, ['/parsonsmaize/abilene.js','/parsonsmaize/mulvane.js'], true, false, true, false);__ez.queue.addFile('/porpoiseant/et.js', '/porpoiseant/et.js?gcb=195-2&cb=2', false, [], true, false, true, false);!function(){var e;__ez.vep=(e=[],{Add:function(i,t){__ez.dot.isDefined(i)&&__ez.dot.isValid(t)&&e.push({type:"video",video_impression_id:i,domain_id:__ez.dot.getDID(),t_epoch:__ez.dot.getEpoch(0),data:__ez.dot.dataToStr(t)})},Fire:function(){if(void 0===document.visibilityState||"prerender"!==document.visibilityState){if(__ez.dot.isDefined(e)&&e.length>0)for(;e.length>0;){var i=5;i>e.length&&(i=e.length);var t=e.splice(0,i),o=__ez.dot.getURL("/detroitchicago/grapefruit.gif")+"?orig="+(!0===__ez.template.isOrig?1:0)+"&v="+btoa(JSON.stringify(t));__ez.dot.Fire(o)}e=[]}}})}();</script><script data-ezscrex='false' data-cfasync='false' data-pagespeed-no-defer>!function(){function e(i){return e="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e},e(i)}__ez.pel=function(){var i=[];function t(t,o,d,_,n,r,a,s){if(__ez.dot.isDefined(t)&&0!=__ez.dot.isAnyDefined(t.getSlotElementId,t.ElementId)){void 0===s&&(s=!1);var p=parseInt(__ez.dot.getTargeting(t,"ap")),f=__ez.dot.getSlotIID(t),u=__ez.dot.getAdUnit(t,s),z=parseInt(__ez.dot.getTargeting(t,"compid")),g=0,c=0,l=function(i){if("undefined"==typeof _ezim_d)return!1;var t=__ez.dot.getAdUnitPath(i).split("/").pop();if("object"===("undefined"==typeof _ezim_d?"undefined":e(_ezim_d))&&_ezim_d.hasOwnProperty(t))return _ezim_d[t];for(var o in _ezim_d)if(o.split("/").pop()===t)return _ezim_d[o];return!1}(t);"object"==e(l)&&(void 0!==l.creative_id&&(c=l.creative_id),void 0!==l.line_item_id&&(g=l.line_item_id)),__ez.dot.isDefined(f,u)&&__ez.dot.isValid(o)&&("0"===f&&!0!==s||""===u||i.push({type:"impression",impression_id:f,domain_id:__ez.dot.getDID(),unit:u,t_epoch:__ez.dot.getEpoch(0),revenue:d,est_revenue:_,ad_position:p,ad_size:"",bid_floor_filled:n,bid_floor_prev:r,stat_source_id:a,country_code:__ez.dot.getCC(),pageview_id:__ez.dot.getPageviewId(),comp_id:z,line_item_id:g,creative_id:c,data:__ez.dot.dataToStr(o),is_orig:s||__ez.template.isOrig}))}}function o(){void 0!==document.visibilityState&&"prerender"===document.visibilityState||(__ez.dot.isDefined(i)&&i.length>0&&[i.filter((function(e){return e.is_orig})),i.filter((function(e){return!e.is_orig}))].forEach((function(e){for(;e.length>0;){var i=e[0].is_orig||!1,t=5;t>e.length&&(t=e.length);var o=e.splice(0,t),d=__ez.dot.getURL("/porpoiseant/army.gif")+"?orig="+(!0===i?1:0)+"&sts="+btoa(JSON.stringify(o));(void 0!==window.isAmp&&isAmp||void 0!==window.ezWp&&ezWp)&&void 0!==window._ezaq&&_ezaq.hasOwnProperty("domain_id")&&(d+="&visit_uuid="+_ezaq.visit_uuid),__ez.dot.Fire(d)}})),i=[])}return{Add:t,AddAndFire:function(e,i){t(e,i,0,0,0,0,0),o()},AddAndFireOrig:function(e,i){t(e,i,0,0,0,0,0,!0),o()},AddById:function(e,t,o,d){var _=e.split("/");if(__ez.dot.isDefined(e)&&3===_.length&&__ez.dot.isValid(t)){var n=_[0],r={type:"impression",impression_id:_[2],domain_id:__ez.dot.getDID(),unit:n,t_epoch:__ez.dot.getEpoch(0),pageview_id:__ez.dot.getPageviewId(),data:__ez.dot.dataToStr(t),is_orig:o||__ez.template.isOrig};void 0!==d&&(r.revenue=d),i.push(r)}},Fire:o,GetPixels:function(){return i}}}()}();__ez.queue.addFile('/detroitchicago/raleigh.js', '/detroitchicago/raleigh.js?gcb=195-2&cb=6', false, ['/parsonsmaize/abilene.js'], true, false, true, false);__ez.queue.addFile('/detroitchicago/vista.js', '/detroitchicago/vista.js?gcb=195-2&cb=5', false, ['/parsonsmaize/abilene.js'], true, false, true, false);__ez.queue.addFile('/detroitchicago/tampa.js', '/detroitchicago/tampa.js?gcb=195-2&cb=5', false, ['/parsonsmaize/abilene.js'], true, false, true, false);</script><base href=""/>
+<meta name="flattr:id" content="1ew3x0"/>
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "url": "https://plantuml.com",
+  "name": "PlantUML",
+  "sameAs" : ["https://twitter.com/plantuml","https://en.wikipedia.org/wiki/PlantUML","https://www.wikidata.org/wiki/Q18346546"],
+  "logo": "https://cdn-0.plantuml.com/logo3.png",
+  "contactPoint": [{
+    "@type": "ContactPoint",
+    "email": "plantuml@gmail.com",
+    "url": "https://plantuml.com",
+    "contactType": "customer service"
+  }]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+    "@type": "ListItem",
+    "position": 1,
+    "item": {
+      "@id": "https://plantuml.com",
+      "name": "Home"
+    }
+  },{
+    "@type": "ListItem",
+    "position": 2,
+    "item": {
+      "@id": "https://plantuml.com/sitemap-news-and-information",
+      "name": "News and information"
+    }
+  },{
+    "@type": "ListItem",
+    "position": 3,
+    "item": {
+      "@id": "https://plantuml.com/faq",
+      "name": "F.A.Q."
+  }
+  }]
+}
+</script>
+<link rel="canonical" href="../faq.html"/>
+<link rel="alternate" hreflang="x-default" href="../faq.html"/>
+<link rel="alternate" hreflang="de" href="../de/faq.html"/>
+<link rel="alternate" hreflang="en" href="../faq.html"/>
+<link rel="alternate" hreflang="es" href="../es/faq.html"/>
+<link rel="alternate" hreflang="fr" href="../fr/faq.html"/>
+<link rel="alternate" hreflang="ja" href="../ja/faq.html"/>
+<link rel="alternate" hreflang="ru" href="../ru/faq.html"/>
+<link rel="alternate" hreflang="ko" href="../ko/faq.html"/>
+<link rel="alternate" hreflang="zh" href="../zh/faq.html"/>
+
+<link rel="shortcut icon" href="../favicon.ico"/>
+
+<link rel="preload" as="image" href="../svgrepo-house.svg"/>
+<link rel="preload" as="image" href="../svgrepo-text-news.svg"/>
+<link rel="preload" as="image" href="../svgrepo-rocket-3-start.svg"/>
+<link rel="preload" as="image" href="../svgrepo-server.svg"/>
+<link rel="preload" as="image" href="../svgrepo-play.svg"/>
+<link rel="preload" as="image" href="../svgrepo-forum.svg"/>
+<link rel="preload" as="image" href="../svgrepo-add-to-online-cart.svg"/>
+<link rel="preload" as="image" href="../svgrepo-forum-message.svg"/>
+<link rel="preload" as="image" href="../svgrepo-palette-fill.svg"/>
+<link rel="preload" as="image" href="../svgrepo-cpu.svg"/>
+<link rel="preload" as="image" href="../svgrepo-books-library.svg"/>
+<link rel="preload" as="image" href="../svgrepo-signpost-fill.svg"/>
+<link rel="preload" as="image" href="../svgrepo-library.svg"/>
+
+<link rel="preload" as="image" href="../flags21.png"/>
+
+<link rel="preload" as="image" href="../svgrepo-uxwing-dark-mode-toggle.svg"/>
+
+
+<!-- link rel="preload" as="image" href="https://img.shields.io/liberapay/patrons/plantuml.svg?logo=liberapay" -->
+
+
+<title>Frequently Asked Questions</title>
+<meta name="description" content="This pages lists some very common questions about PlantUML. Please read it first before sending us mail or asking your question on the forum."/>
+
+<meta property="og:type" content="article"/>
+<meta property="og:title" content="Frequently Asked Questions"/>
+<meta property="og:description" content="This pages lists some very common questions about PlantUML. Please read it first before sending us mail or asking your question on the forum."/>
+
+<meta property="og:url" content="https://plantuml.com/faq"/>
+<meta property="og:site_name" content="PlantUML.com"/>
+
+<!-- meta property="og:image" content="https://plantuml.com/og-faq" -->
+<meta name="twitter:image" content="https://plantuml.com/og-faq"/>
+<meta property="og:locale" content="en"/>
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Frequently Asked Questions"/>
+<meta name="twitter:description" content="This pages lists some very common questions about PlantUML. Please read it first before sending us mail or asking your question on the forum."/>
+<meta name="twitter:site" content="@PlantUML"/>
+<meta name="twitter:creator" content="@PlantUML"/>
+
+<script>
+if (window.location.href.indexOf("/en-dark/") == -1) {
+var lg = navigator.language.substring(0,2);
+if (lg=="de") window.location.href = "/de-dark/faq";
+if (lg=="es") window.location.href = "/es-dark/faq";
+if (lg=="fr") window.location.href = "/fr-dark/faq";
+if (lg=="ja") window.location.href = "/ja-dark/faq";
+if (lg=="ko") window.location.href = "/ko-dark/faq";
+if (lg=="ru") window.location.href = "/ru-dark/faq";
+if (lg=="zh") window.location.href = "/zh-dark/faq";
+}
+</script>
+
+
+
+
+<!-- https://www.w3schools.com/colors/colors_picker.asp -->
+<!-- filter css https://codepen.io/sosuke/pen/Pjoqqp -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<style>
+.scale {
+}
+
+li {
+	margin: 2px;
+}
+#external li {
+	margin: 13px;
+}
+
+.pezoic {
+  max-width:970px;
+}
+
+@media screen and (max-width: 1600px) {
+	.pezoic {
+	  max-width:768px;
+	}
+}
+
+.coptable {
+	max-width: 90%;
+}
+
+.mytab {
+	display:inline-block;
+	border-radius: 3px;
+	border: 1px solid #e1e4e8;
+}
+
+.mytab:hover {
+	border: 1px dashed #8CB4FF;
+	cursor: pointer;
+	color: #8CB4FF;
+	background: #111111;
+}
+
+.cop {
+	margin: 25px 10px 0 10px;
+	filter: invert(100%);
+}
+.cop:hover {
+	cursor: pointer; 
+filter: invert(59%) sepia(81%) saturate(1778%) hue-rotate(164deg) brightness(105%) contrast(103%);
+}
+.cop2 {
+	margin: 25px 10px 0 10px;
+}
+.cop2:hover {
+	cursor: pointer; 
+}
+.msg {
+	position: absolute;
+	color:#339966;
+	background-color: #FFF;
+	margin-top: 55px;
+	display:none;
+	border-radius: 3px;
+	border: 1px solid #4dff00;
+}
+
+.mycell0 {
+	float: left;
+	vertical-align : top;
+	padding:10px;
+}
+.mycell0 code:hover {
+	cursor: default; 
+	color: #fff;
+}
+
+.mycell {
+	float: right;
+	vertical-align : top;
+	padding:10px;
+	max-width: 55vw;
+	overflow-x: auto;
+}
+
+.mycell0 pre {
+	max-width: 55vw;
+	overflow-x: auto;
+}
+
+.cod {
+	background: #222222;
+	padding: 2px 5px;
+	border-radius: 3px;
+}
+.colo {
+	display: inline-block;
+	background: #222222;
+	padding: 7px 12px;
+	border-radius: 3px;
+}
+.tag,.tagg,.tago,.tagr {
+	text-rendering: optimizeLegibility;
+	display: inline-block;
+	padding: 3px 5px 2px 4px;
+	text-decoration: none;
+	white-space: nowrap;
+	border: 1px solid #999;
+	text-transform: uppercase;
+	text-align: center;
+	border-radius: 3px;
+	font-size: 11px;
+	font-weight: bold;
+	line-height: 90%;
+}
+.tag {
+	background-color: #EEEEEE;
+}
+.tagg {
+	background-color: #98FB98;
+}
+.tago {
+	background-color: #fafa00;
+}
+.tagr {
+	background-color: #FF4500;
+}
+
+
+a {
+    text-decoration:none;
+    color:#8CB4FF;
+}
+a:hover {
+    text-decoration:underline;
+}
+
+.menu1 {
+    border: 0;
+    font-family: Helvetica,sans-serif;
+    font-size: 14px;
+    padding: 0;
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+	vertical-align: middle;
+	line-height: 30px;
+}
+.menu1 a{
+    /*background: #FF0;*/
+    text-align:center;
+	padding:10px 7px 10px 7px;
+    text-decoration:none;
+    color:#b0c0d0;
+}
+.menu1 a:hover{
+    color:#8CB4FF;
+}
+#menu0 {
+    top:0;
+    z-index: 4;
+    margin:0 0 0 10px;
+    padding:0;
+}
+
+@media screen and (max-width: 1200px) {
+	#menu0 {
+	visibility: hidden;
+	}	
+}
+
+.mhov img {
+	margin: 0 5px 0 0;
+	padding: 0;
+}
+.mhov:hover {
+filter: invert(59%) sepia(81%) saturate(1778%) hue-rotate(164deg) brightness(105%) contrast(103%);
+}
+
+#menuside2 {
+    border:0;
+    font-family:Helvetica,sans-serif;
+    font-size:14px;
+    padding:20px 0 4px 0;
+    margin:0
+}
+#menuside2 span {
+    vertical-align: top;
+}
+#menuside2 li{
+    list-style:none;
+    position:relative;
+    padding:0;
+	margin:10px 20px 10px 10px;
+    border:0;
+}
+#menuside2 li a{
+	display: inline-block;
+    text-decoration:none;
+    color:#b0c0d0;
+    width:100%;
+}
+#menuside2 img {
+filter: invert(46%) sepia(13%) saturate(620%) hue-rotate(170deg) brightness(91%) contrast(85%);
+}
+
+#BC {
+    z-index: 0;
+    padding-top: 5px;
+    top: 35px;
+}
+
+.breadcrumb {
+z-index:1;
+	font-family:Helvetica,sans-serif;
+	font-size:14px;
+	text-align: center;
+	display: inline-block;
+	overflow: hidden;
+	border-radius: 5px;
+}
+
+
+.breadcrumb a {
+	text-decoration: none;
+	outline: none;
+	display: block;
+	float: left;
+	font-size: 12px;
+	line-height: 24px;
+	color: #373f49;
+	padding: 0 10px 0 35px;
+	background: #f0f1f1;
+	background: linear-gradient(#f0f1f1, #c6d2d2);
+	position: relative;
+}
+.breadcrumb a:first-child {
+	padding-left: 21px;
+	border-radius: 5px 0 0 5px; /*to match with the parent's radius*/
+}
+.breadcrumb a:first-child:before {
+	left: 14px;
+}
+.breadcrumb a:last-child {
+	visibility: hidden;
+}
+
+.breadcrumb a.active, .breadcrumb a:hover{
+	color: #0366d6;
+	background: #c6d2d2;
+	background: linear-gradient(#e3e4e4, #b8c7c7);
+}
+.breadcrumb a.active:after, .breadcrumb a:hover:after {
+	background: #c6d2d2;
+	background: linear-gradient(135deg, #e3e4e4, #b8c7c7);
+}
+
+.breadcrumb a:after {
+	content: '';
+	position: absolute;
+	top: 0; 
+	right: -12px; /*half of square's length*/
+	/*same dimension as the line-height of .breadcrumb a */
+	width: 24px; 
+	height: 24px;
+	transform: scale(0.707) rotate(45deg);
+	/*we need to prevent the arrows from getting buried under the next link*/
+	z-index: 1;
+	/*background same as links but the gradient will be rotated to compensate with the transform applied*/
+	background: #f0f1f1;
+	background: linear-gradient(135deg, #f0f1f1, #c6d2d2);
+	/*stylish arrow design using box shadow*/
+	box-shadow: 
+		2px -2px 0 2px rgba(0,0,0,0.1), 
+		3px -3px 0 2px rgba(255,255,255,0.1);
+	/*
+		5px - for rounded arrows and 
+		50px - to prevent hover glitches on the border created using shadows*/
+	border-radius: 0 5px 0 50px;
+}
+
+/*we dont need an arrow after the last link*/
+.breadcrumb a:last-child:after {
+	content: none;
+	visibility: hidden;
+}
+
+
+.lga,.lga a,.lgi,.lgi a {
+	font-family:Helvetica,sans-serif;
+	font-size:13px;
+	text-align: center;
+    color: #fff;
+    padding: 0 5px;
+    margin: 0;
+}
+.lga,.lga a {
+    background-color: #008;
+}
+.lgi,.lgi a {
+    background-color: #888;
+}
+.lga:hover,.lga:hover a {
+    text-decoration: none;
+    color: #BBB;
+}
+.lgi:hover,.lgi:hover a {
+    text-decoration: none;
+    color: #CCC;
+}
+
+</style>
+
+<style>
+.backtop {
+	margin:0px 10px;
+	filter: invert(100%);
+}
+.backtop:hover {
+	cursor: pointer;
+filter: invert(59%) sepia(81%) saturate(1778%) hue-rotate(164deg) brightness(105%) contrast(103%);
+}
+</style>
+
+
+
+
+<style>
+/* Dropdown Button */
+.dropbtn {
+  padding: 0px;
+  border: none;
+  background: none;
+  filter: invert(100%);
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+  margin: 0 10px;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content img {
+vertical-align:middle;
+margin: 0 8px 0 1px;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  font-size: small;
+  font-weight: normal;
+  color: black;
+  padding: 5px 10px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #ddd;
+  color: #8CB4FF;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {display: block;}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {background-color: #3e8e41;}
+</style>
+<style>
+#flex1 {
+	margin: 0;
+	padding: 0;
+	display: flex;
+	flex-direction: row;
+	width: 378px;
+	height: 100%;
+}
+
+#lll {
+	flex-grow: 1;
+	flex-shrink: 1;
+	max-width:162px;
+	overflow:hidden;
+}
+
+#mmm {
+	flex-grow: 0;
+	flex-shrink: 0;
+	background: #222222;
+	width: 210px;
+	min-width: 210px;
+	max-width: 210px;
+	flex-grow: 0;
+	flex-shrink: 0;
+    border-left: 1px solid #333333;
+}
+
+#qqq {
+	flex-grow: 0;
+	flex-shrink: 0;
+	width: 4px;
+	min-width: 4px;
+	max-width: 4px;
+	flex-grow: 0;
+	flex-shrink: 0;
+}
+
+#rrr {
+	flex-grow: 1;
+	flex-shrink: 1;
+	max-width:162px;
+	overflow:hidden;
+}
+
+.cde {
+	display: flex;
+	flex-direction: column;
+    justify-content:space-between;
+    height: 100%;
+}
+.cd {
+	display: flex;
+	flex-direction: column;
+    justify-content: space-start;
+    height: 100%;
+}
+
+.aaa {
+	height: 30px;
+	min-height: 30px;
+	max-height: 30px;
+	flex-grow: 0;
+	flex-shrink: 0;
+	background: #222222;
+    border-bottom: 1px solid #333333;
+}
+
+.bbb, .bbborder {
+	flex-grow: 1;
+	flex-shrink: 0;
+}
+
+.bbborder {
+    border-left: 1px solid #333333;
+}
+
+
+#header {
+    z-index: 10;
+    position: fixed;
+	left: 378px;
+	right: 0;
+    height: 30px;
+    top: 0;
+    background: #222222;
+    border-bottom: 1px solid #333333;
+    
+}
+#header2 {
+    z-index: 7;
+    position: fixed;
+	left: 378px;
+	right: 0;
+    height: 10px;
+    top: 30px;
+    background: #1B1B1B;
+}
+
+
+#left0 {
+	top:0;
+    position: fixed;
+    left: 0;
+    margin:0 ;
+    bottom: 0;
+    width: 378px;
+    padding: 0;
+    z-index: 2;
+    /*background: #F7F;*/
+}
+
+
+#root {
+    padding:0;
+	margin: 40px 0 0 388px;
+    background: #1B1B1B;
+}
+
+
+body {
+	margin: auto;
+	overflow-x: hidden;
+    background: #1B1B1B;
+    color: #FFF;
+}
+
+
+@media screen and (max-width: 1190px) {
+	#flex1, #left0 {
+		width: 215px;
+	}
+	#root {
+		margin: 40px 0 0 224px;
+	}
+	#header, #header2 {
+		left: 215px;
+	}
+	#left0 {
+		left: 0;
+	}
+	#lll, #rrr {
+  		width:0;
+		visibility: hidden;
+  		flex-grow: 0;
+  		flex-shrink: 0;
+	}
+	
+}
+@media screen and (max-width: 1010px) {
+	#root {
+		margin: 0 0 0 216px;
+	}
+	#header, #header2 {
+		display: none;
+	}
+	#lll, #qqq {
+  		width:0;
+		visibility: hidden;
+  		flex-grow: 0;
+  		flex-shrink: 0;
+	}
+	#mmm {
+		    border-right: 1px solid #333333;
+	}
+	
+}
+
+@media screen and (min-width:1700px){
+	#header, #header2 {
+		left:518px;
+	}
+	#left0, #flex1{
+		width:518px;
+	}
+	#root{
+		margin-left:528px;
+	}
+	#lll, #rrr {
+		max-width:302px;
+	}
+}
+
+
+</style>
+
+
+
+
+<script>window.pushMST_config={"vapidPK":"BBodn2vLFoDO5AdCfmOOzNmcUsn52kTA6JNZNYVFymzEdWHonz_bkUcsaTkPXHvNGRkRUSAxMbup-H0l2sb1h_Q","enableOverlay":true,"swPath":"/sw.js","i18n":{}};
+  var pushmasterTag = document.createElement('script');
+  pushmasterTag.src = "https://cdn.pushmaster-cdn.xyz/scripts/publishers/629f5e297baecc00098a271b/SDK.js";
+  pushmasterTag.setAttribute('defer','');
+
+  var firstScriptTag = document.getElementsByTagName('script')[0];
+  firstScriptTag.parentNode.insertBefore(pushmasterTag, firstScriptTag);
+</script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-TKZNNQT9CZ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-TKZNNQT9CZ');
+</script>
+
+
+
+<script>
+var llg = "en";
+var az=0;
+var amdark=1;
+function ljs(n) {
+	if (az) return false;
+    var sc = document.createElement("script");
+    sc.type = "text/javascript";
+    sc.src = "/btn-"+n+".js";
+	document.body.innerHTML = "<i style='position:absolute;top:30%;width:100%;'><center>Loading in progress...";
+    document.body.appendChild(sc);
+}
+function ctc(id) {
+document.getElementById('img'+id).classList.remove('cop'); document.getElementById('img'+id).classList.add('cop2');
+document.getElementById('pre'+id).style.backgroundColor = '#4dff00';
+document.getElementById('msg'+id).style.display = 'inline';
+
+setTimeout(function() { document.getElementById('img'+id).classList.remove('cop2'); document.getElementById('img'+id).classList.add('cop'); document.getElementById('pre'+id).style.backgroundColor = ''; document.getElementById('msg'+id).style.display = 'none';}, 800);      
+
+
+	text = document.getElementById('pre'+id).innerText;
+    if (window.clipboardData && window.clipboardData.setData)
+        return window.clipboardData.setData("Text", text);
+    else if (document.queryCommandSupported && document.queryCommandSupported("copy")) {
+        var ta = document.createElement("textarea");
+        ta.textContent = text;
+        ta.style.position = "fixed";
+        document.body.appendChild(ta);
+        ta.select();
+        try {
+            return document.execCommand("copy");
+        }
+        catch (ex) {
+            return false;
+        }
+        finally {
+            document.body.removeChild(ta);
+        }
+    }
+}
+</script>
+
+
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script type='text/javascript'>
+var ezoTemplate = 'pub_site';
+var ezouid = '1';
+var ezoFormfactor = '1';
+</script><script data-ezscrex="false" type='text/javascript'>
+var soc_app_id = '0';
+var did = 173770;
+var ezdomain = 'plantuml.com';
+var ezoicSearchable = 1;
+</script>
+<script data-ezscrex='false' data-pagespeed-no-defer data-cfasync='false'>
+function create_ezolpl() {
+	var d = new Date();
+	d.setTime(d.getTime() + (365*24*60*60*1000));
+	var expires = "expires="+d.toUTCString();
+	__ez.ck.setByCat("ezux_lpl_173770=" + new Date().getTime() + "|" + _ezaq.page_view_id + "|" + _ezaq.is_return_visitor + "; " + expires, 3);
+}
+function attach_ezolpl() {
+	if (document.readyState === "complete") {
+		create_ezolpl();
+		return;
+	}
+	window.addEventListener("load", create_ezolpl);
+}
+
+__ez.queue.addFunc("attach_ezolpl", "attach_ezolpl", null, false, ['/detroitchicago/boise.js'], true, false, false, false);
+</script></head>
+<body>
+
+<div id="left0">
+
+<div id="flex1">
+
+
+<div id="lll">
+
+<div class="cde">
+
+<!-- c --><div>
+</div>
+
+<!-- d --><div>
+<!-- Ezoic - Left0 - sidebar -->
+<span id="ezoic-pub-ad-placeholder-131"></span><!-- ezoic_pub_ad_placeholder-131-sidebar-120x600-131-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-131-sidebar-160x600-131-nonexxxnonexxxxxxezmaxscaleval100 -->
+<!-- End Ezoic - Left0 - sidebar -->
+</div>
+
+
+<!-- e --><div>
+</div>
+
+</div><!-- cde -->
+
+
+</div><!-- lll -->
+
+<div id="mmm">
+
+
+<div class="cde">
+
+<!-- c --><div>
+
+<!--menu 10-->
+<div>
+
+
+
+<!-- Ezoic - Menu2L - sidebar -->
+<span id="ezoic-pub-ad-placeholder-105"></span><!-- ezoic_pub_ad_placeholder-105-sidebar_middle-120x240-105-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-105-sidebar_middle-125x125-105-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-105-sidebar_middle-180x150-105-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-105-sidebar_middle-200x200-105-nonexxxnonexxxxxxezmaxscaleval100 -->
+<!-- End Ezoic - Menu2L - sidebar -->
+
+</div>
+
+<!-- https://stackoverflow.com/questions/22252472/how-to-change-the-color-of-an-svg-element -->
+<!-- https://codepen.io/sosuke/pen/Pjoqqp -->
+
+
+<ul id="menuside2">
+<li><a href="index.html" class="mhov"><img src="../svgrepo-house.svg" width="16" height="16"/><span>Home</span></a></li>
+<li><a href="news.html" class="mhov"><img src="../svgrepo-text-news.svg" width="16" height="16"/><span>What&#39;s New ?</span></a></li>
+<li><a href="starting.html" class="mhov"><img src="../svgrepo-rocket-3-start.svg" width="16" height="16"/><span>Getting Started</span></a></li>
+<li><a href="https://www.plantuml.com/plantuml/duml/SyfFKj2rKt3CoKnELR1Io4ZDoSa70000" class="mhov"><img src="../svgrepo-server.svg" width="16" height="16"/><span>Online Server</span></a></li>
+<li><a href="running.html" class="mhov"><img src="../svgrepo-play.svg" width="16" height="16"/><span>Running</span></a></li>
+<li><a href="faq.html" class="mhov"><img src="../svgrepo-forum.svg" width="16" height="16"/><span>F.A.Q.</span></a></li>
+<li><a href="download.html" class="mhov"><img src="../svgrepo-add-to-online-cart.svg" width="16" height="16"/><span>Download</span></a></li>
+<li><a href="../qa.html" class="mhov"><img src="../svgrepo-forum-message.svg" width="16" height="16"/><span>Forum</span></a></li>
+<li><a href="theme.html" class="mhov"><img src="../svgrepo-palette-fill.svg" width="16" height="16"/><span>Theme</span></a></li>
+<li><a href="preprocessing.html" class="mhov"><img src="../svgrepo-cpu.svg" width="16" height="16"/><span>Preprocessing</span></a></li>
+<li><a href="stdlib.html" class="mhov"><img src="../svgrepo-books-library.svg" width="16" height="16"/><span>Standard Library</span></a></li>
+<li><a href="https://crashedmind.github.io/PlantUMLHitchhikersGuide" class="mhov"><img src="../svgrepo-signpost-fill.svg" width="16" height="16"/><span>Hitchhiker&#39;s Guide</span></a></li>
+<li><a href="guide.html" class="mhov"><img src="../svgrepo-library.svg" width="16" height="16"/><span>PDF Guide</span></a></li>
+</ul>
+
+<!-- menu 20-->
+<div>
+
+<!-- Ezoic - Zmenubottom - sidebar_bottom -->
+<span id="ezoic-pub-ad-placeholder-108"></span><!-- ezoic_pub_ad_placeholder-108-sidebar_middle-120x240-108-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-108-sidebar_middle-125x125-108-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-108-sidebar_middle-180x150-108-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-108-sidebar_middle-200x200-108-nonexxxnonexxxxxxezmaxscaleval100 -->
+<!-- End Ezoic - Zmenubottom - sidebar_bottom -->
+
+</div>
+</div>
+
+<!-- d menu 30 --><div>
+</div>
+
+
+<!-- e menu 40 --><div style="margin-bottom:35px;">
+
+<!-- Ezoic - menu40 - sidebar -->
+<span id="ezoic-pub-ad-placeholder-186"></span><!-- ezoic_pub_ad_placeholder-186-sidebar_middle-120x240-186-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-186-sidebar_middle-125x125-186-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-186-sidebar_middle-180x150-186-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-186-sidebar_middle-200x200-186-nonexxxnonexxxxxxezmaxscaleval100 -->
+<!-- End Ezoic - menu40 - sidebar -->
+
+</div>
+
+</div><!-- cde -->
+
+
+
+
+</div><!-- mmm -->
+
+<div id="qqq">
+
+<div class="cd">
+<div class="aaa"></div>
+<div class="bbborder"></div>
+</div><!-- cd -->
+
+</div><!-- qqq -->
+
+<div id="rrr">
+
+<div class="cd">
+<div class="aaa"></div>
+
+<div style="height:5px;"></div>
+
+<div class="bbb">
+
+<div class="cde">
+
+<!-- c --><div>
+</div>
+
+<!-- d --><div>
+<!-- Ezoic - Left2 - sidebar -->
+<span id="ezoic-pub-ad-placeholder-175"></span><!-- ezoic_pub_ad_placeholder-175-sidebar-120x600-175-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-175-sidebar-160x600-175-nonexxxnonexxxxxxezmaxscaleval100 -->
+<!-- End Ezoic - Left2 - sidebar -->
+</div>
+
+<!-- e --><div>
+</div>
+
+</div><!-- cde -->
+
+</div><!-- bbb -->
+
+</div><!-- cd -->
+
+
+</div><!-- rrr -->
+
+
+
+</div><!-- flex1 -->
+
+
+</div><!-- left0 -->
+
+<style>
+#contmenu {
+display: flex;
+height: 30px;
+width: 100%;
+margin: 0;
+padding: 0;
+}
+
+#contmenua {
+height: 30px;
+padding-right: 25px;
+}
+
+#contmenub {
+z-index:15;
+display: inline-block;
+flex-grow:1;
+flex-shrink:1;
+height: 30px;
+background-color: #222222;
+}
+
+#magic {
+white-space: nowrap;
+overflow: hidden;
+z-index: 14;
+position: fixed;
+top: 0;
+right: 50px;
+height: 30px;
+width: 30px;
+}
+
+#magic2 {
+white-space: nowrap;
+overflow: hidden;
+z-index: 16;
+position: fixed;
+top: 0;
+right: 0;
+height: 30px;
+width: 50px;
+background-color: #222222;
+}
+#magic2 img {
+margin: 5px 0 0 5px;
+filter: invert(86%) sepia(23%) saturate(200%) hue-rotate(170deg) brightness(86%) contrast(88%);
+}
+#magic2:hover img {
+filter: invert(59%) sepia(81%) saturate(1778%) hue-rotate(164deg) brightness(105%) contrast(103%);
+}
+
+
+#magic:hover #svgrepoleft {
+filter: invert(59%) sepia(81%) saturate(1778%) hue-rotate(164deg) brightness(105%) contrast(103%);
+}
+
+
+#magic:hover {
+width: 100%;
+height: 31px;
+}
+
+#aze {
+	height: 30px;
+	display:flex;
+	flex-direction: row-reverse;
+}
+#aze1 {
+	height: 30px;
+	background-color: #222222;
+}
+#aze2 {
+	height: 30px;
+	background-color: #222222;
+	padding-left: 10px;
+	border-left: 1px solid #333333;
+	border-bottom: 1px solid #333333;
+}
+#aze1 img {
+    filter: invert(72%) sepia(4%) saturate(1039%) hue-rotate(169deg) brightness(108%) contrast(84%);
+}
+#aze3 {
+	width: 3px;
+	height: 30px;
+	background-color: #222222;
+}
+
+
+
+</style>
+
+<div id="header">
+<div id="contmenu">
+<div id="contmenua">
+<div class="menu1">
+<a href="sequence-diagram.html">Sequence</a>
+<a href="use-case-diagram.html">Use Case</a>
+<a href="class-diagram.html">Class</a>
+<a href="activity-diagram-beta.html">Activity</a>
+<a href="component-diagram.html">Component</a>
+<a href="state-diagram.html">State</a>
+<a href="object-diagram.html">Object</a>
+<a href="deployment-diagram.html">Deployment</a>
+<a href="timing-diagram.html">Timing</a>
+
+<a href="nwdiag.html">Network</a>
+<a href="salt.html">Wireframe</a>
+<a href="archimate-diagram.html">Archimate</a>
+<a href="gantt-diagram.html">Gantt</a>
+<a href="mindmap-diagram.html">MindMap</a>
+<a href="wbs-diagram.html">WBS</a>
+<a href="json.html">JSON</a>
+<a href="yaml.html">YAML</a>
+
+</div>
+</div>
+<div id="contmenub"></div>
+</div><!--contmenu-->
+<!-- https://developer.mozilla.org/fr/docs/Web/CSS/position -->
+<div id="magic">
+
+	<div id="aze">
+		<div id="aze1"><img id="svgrepoleft" width="30" height="30" src="../svgrepo-left.svg"/> </div><!-- aze1 -->
+		<div id="aze2">
+
+<div class="menu1">
+<a href="sequence-diagram.html">Sequence</a>
+<a href="use-case-diagram.html">Use Case</a>
+<a href="class-diagram.html">Class</a>
+<a href="activity-diagram-beta.html">Activity</a>
+<a href="component-diagram.html">Component</a>
+<a href="state-diagram.html">State</a>
+<a href="object-diagram.html">Object</a>
+<a href="deployment-diagram.html">Deployment</a>
+<a href="timing-diagram.html">Timing</a>
+
+<a href="nwdiag.html">Network</a>
+<a href="salt.html">Wireframe</a>
+<a href="archimate-diagram.html">Archimate</a>
+<a href="gantt-diagram.html">Gantt</a>
+<a href="mindmap-diagram.html">MindMap</a>
+<a href="wbs-diagram.html">WBS</a>
+<a href="json.html">JSON</a>
+<a href="yaml.html">YAML</a>
+
+</div>
+			
+
+		</div><!-- aze2 -->
+		<div id="aze3"></div><!-- aze3 https://codepen.io/sosuke/pen/Pjoqqp -->
+	</div><!-- aze -->
+
+
+</div><!--magic-->
+
+<div id="magic2">
+
+<a href="../faq.html">
+<img src="../svgrepo-uxwing-dark-mode-toggle.svg" height="20"/>
+</a>
+
+
+</div><!--magic2-->
+
+</div><!-- header -->
+<div id="header2"></div>
+
+
+
+
+
+<div id="root">
+
+<!-- https://css-tricks.com/snippets/css/a-guide-to-flexbox/ -->
+
+<style>
+
+#haut1 {
+	margin:50px 0 20px;
+	padding:0;
+	min-height:80px;
+}
+
+#donate {
+	padding-top: 5px;
+	min-height:30px;
+}
+
+</style>
+
+<div id="haut1">
+
+<!-- c --><div style="float:left;">	
+<!-- a simple div with some links -->
+<div class="breadcrumb">
+<a href="sitemap.html">PlantUML</a>
+<a href="sitemap-news-and-information.html">News and information</a>
+<a href="faq.html">F.A.Q.</a>
+<a href="faq.html#"></a>
+</div>
+
+
+<div id="donate">
+
+ 
+
+<a href="https://discord.gg/sXhzexAQGh" style="text-decoration: none;">
+<img src="https://img.shields.io/discord/1083727021328306236?color=5865F2&amp;logo=discord&amp;logoColor=white" alt="Discord server"/>
+</a>
+
+ 
+
+<a href="https://github.com/sponsors/plantuml/" style="text-decoration: none;">
+<img src="https://img.shields.io/github/sponsors/plantuml?logo=github"/>
+</a>
+
+ 
+
+<a href="https://www.patreon.com/bePatron?patAmt=1&amp;u=527450&amp;rid=152970" style="text-decoration: none;">
+<img src="https://img.shields.io/badge/patreon-122-chocolate?logo=patreon"/>
+</a>
+
+ 
+
+<a href="../lp.html" style="text-decoration: none;">
+<img src="https://img.shields.io/liberapay/patrons/plantuml?color=gold&amp;logo=liberapay&amp;label=liberapay"/>
+</a>
+
+ 
+
+<a href="../en/paypal.html" style="text-decoration: none;">
+<img src="https://img.shields.io/badge/paypal-296-skyblue?logo=paypal&amp;logoColor=red"/>
+</a>
+
+<!--
+ 
+
+<a href="https://github.com/sponsors/plantuml" style="text-decoration: none;">
+<img src="https://img.shields.io/github/sponsors/plantuml?label=github">
+</a>
+
+-->
+</div> <!-- donate -->
+</div><!-- c -->
+
+
+<!-- e --><div style="float:right; margin:3px 0;">
+
+<!-- https://github.com/joielechong/iso-country-flags-svg-collection -->
+
+<!-- https://www.flaticon.com/packs/international-flags -->
+<!-- https://flagicons.lipis.dev/?continent=Europe -->
+<!-- https://flagpedia.net/download/icons -->
+
+<!-- https://www.countryflags.io/ -->
+
+<style>
+#langlist {
+display: flex;
+justify-content: space-between;
+width: 317px;
+height: 16px;
+margin: 3px 10px 3px 0;
+}
+
+.sel2 {
+  border: 2px solid #1B1B1B;
+}
+.nosel2 {
+  border: 2px solid #1B1B1B;
+  filter: grayscale(100%) opacity(75%);
+}
+.sel2:hover, .nosel2:hover {
+  cursor: pointer;
+  border: 2px solid #8CB4FF;
+  border-spacing: 0;
+  filter: grayscale(0%);
+  filter: contrast(200%);
+  filter: brightness(150%);
+}
+#flag1,#flag2,#flag3,#flag4,#flag5,#flag6,#flag7,#flag8 {
+background: url(../flags21.png);
+background-repeat: no-repeat;
+background-clip: content-box;
+width: 22px;
+height: 16px;
+}
+#flag2 {
+background-position: -22px 0px;
+}
+#flag3 {
+background-position: -44px 0px;
+}
+#flag4 {
+background-position: -66px 0px;
+}
+#flag5 {
+background-position: -88px 0px;
+}
+#flag6 {
+background-position: -110px 0px;
+}
+#flag7 {
+background-position: -132px 0px;
+}
+#flag8 {
+background-position: -154px 0px;
+}
+</style>
+
+<div id="langlist">
+
+
+<div id="flag1" onclick="location.href=&#39;/en-dark/faq&#39;" class="sel2"></div>
+
+<div id="flag2" onclick="location.href=&#39;/de-dark/faq&#39;" class="nosel2"></div>
+
+
+<div id="flag3" onclick="location.href=&#39;/es-dark/faq&#39;" class="nosel2"></div>
+
+
+<div id="flag4" onclick="location.href=&#39;/fr-dark/faq&#39;" class="nosel2"></div>
+
+
+<div id="flag5" onclick="location.href=&#39;/ja-dark/faq&#39;" class="nosel2"></div>
+
+
+<div id="flag6" onclick="location.href=&#39;/ko-dark/faq&#39;" class="nosel2"></div>
+
+
+<div id="flag7" onclick="location.href=&#39;/ru-dark/faq&#39;" class="nosel2"></div>
+
+
+<div id="flag8" onclick="location.href=&#39;/zh-dark/faq&#39;" class="nosel2"></div>
+
+
+
+
+
+
+</div><!-- langlist -->
+</div><!-- e -->
+
+</div><!-- haut1 -->
+
+
+<p>
+
+
+<style>
+#topsticky {
+	z-index:2;
+	margin: 0 240px 0 0;
+}
+
+@media screen and (min-height: 800px) {
+#topsticky {
+  position:sticky; top: 40px;
+}
+}
+
+@media screen and (max-width: 1500px) {
+#topsticky {
+	margin: 0;
+}
+}
+
+</style>
+
+</p><div id="topsticky">
+<!-- Ezoic - under page title -->
+<span id="ezoic-pub-ad-placeholder-647"></span><!-- ezoic_pub_ad_placeholder-647-under_page_title-320x100-647-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-647-under_page_title-300x50v2-647-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-647-under_page_title-320x50-647-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-647-under_page_title-468x60-647-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-647-under_page_title-728x90-647-nonexxxnonexxxxxxezmaxscaleval100 -->
+<!-- End Ezoic - under page title -->
+</div>
+
+
+<p>
+
+
+<a style="position:relative;top:-38px;" name="066f54cf6e43025a"></a>
+<style>
+
+
+#toc {
+z-index: 2;
+position:sticky; top: 40px;
+list-style-type: none;
+margin: 0;
+padding: 0 10px;
+}
+.chap {
+clear:both;
+}
+#toc ul {
+list-style-type: none;
+max-height:87vh;
+overflow-y: auto;
+background: #000000;
+border-width: 2px;
+border-style: groove;
+border-radius: 3px;
+border-color: #e1e4e8;
+margin: 0;
+padding: 0;
+}
+@media screen and (min-height: 450px) {
+#toc ul {max-height:89.5vh;
+}
+}
+@media screen and (min-height: 550px) {
+#toc ul {max-height:91.5vh;
+}
+}
+@media screen and (min-height: 700px) {
+#toc ul {max-height:93.5vh;
+}
+}
+@media screen and (min-height: 900px) {
+#toc ul {max-height:94.5vh;
+}
+}
+#toc li {
+margin: 5px 5px 5px 10px;
+padding: 0;
+}
+@media screen and (max-width: 1500px) {
+	#toctd {
+	display: none;
+	}	
+	#toc {
+	display: none;
+	}	
+}
+</style>
+
+<table border="0" cellspacing="0" cellpadding="0" width="100%">
+<tbody><tr valign="top" width="100%">
+<td valign="top">
+<!--heading--><h1 class="chap"><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/doc/dokuwiki/en/faq#0"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/doc/asciidoc/en/faq#0"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/doc/markdown/en/faq#0"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>Frequently Asked Questions (FAQ)</h1>
+<a style="position:relative;top:-38px;" name="9be1c2970f548bf5"></a>
+<div style="clear:both;height:50px;">
+</div>
+<!--heading--><h2 class="chap"><img onclick="window.scrollTo(0,0);" title="Back to top" src="../backtop1.svg" width="20" height="20" class="backtop"/><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/doc/dokuwiki/en/faq#1"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/doc/asciidoc/en/faq#1"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/doc/markdown/en/faq#1"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>Understanding the Purpose of PlantUML</h2>
+<p></p>
+<strong>PlantUML</strong> stands as a robust tool utilized to <em>craft</em> UML diagrams through a straightforward and easily interpretable text description. However, it is pivotal to note that it does not restrict the creation of inconsistent diagrams — such as mutual inheritance between two classes. Consequently, it functions more as a <strong>drawing</strong> tool rather than a <strong>modeling</strong> tool.
+<p></p>
+Exploring why PlantUML could be your go-to for diagram creation:
+<p></p>
+<ul>
+<li><strong>Text-Based Creation</strong>: PlantUML operates on a text-based principle, allowing the creation of diagrams through simple, human-readable sentences. This facilitates an easy understanding and modification of your diagram structures, even without expertise in diagramming tools.</li>
+</ul>
+<p></p>
+<ul>
+<li><strong>Open-Source and Free</strong>: Being open-source and free of charge means you can utilize PlantUML without incurring licensing or subscription fees.</li>
+</ul>
+<p></p>
+<ul>
+<li><strong>Smart Layout Algorithms</strong>: The tool employs intelligent layout algorithms, ensuring a coherent and visually pleasing arrangement of your diagram’s elements, eliminating the hassle of manual alignment.</li>
+</ul>
+<p></p>
+<ul>
+<li><strong>Automated Diagram Generation</strong>: PlantUML stands as a generator that autonomously creates diagrams based on your provided text. This feature not only simplifies the rapid creation and updating of diagrams but also allows you to concentrate on delineating the structure and relationships rather than the aesthetics.</li>
+</ul>
+<p></p>
+<ul>
+<li><strong>High Customizability</strong>: Offering a high degree of customization, it enables you to tailor the appearance of your diagrams to your preference. Moreover, you can <a href="../qa.html">tap into the rich resource of the PlantUML community</a> for solutions to prevalent layout issues.</li>
+</ul>
+<p></p>
+In essence, PlantUML emerges as a potent and adaptable tool, facilitating the swift and effortless creation of professional diagrams. It caters especially to individuals who favor a text-based methodology for diagram creation, offering automated assistance in managing the layout and visualization of the diagrams.
+<a style="position:relative;top:-38px;" name="6bf8e8c6d419e153"></a>
+<div style="clear:both;min-height:110px;margin-top:10px;">
+
+<div class="pezoic">
+<!-- Ezoic - Fish0 - under_second_paragraph -->
+<span id="ezoic-pub-ad-placeholder-179"></span><!-- ezoic_pub_ad_placeholder-179-under_second_paragraph-234x60-179-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-179-under_second_paragraph-468x60-179-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-179-under_second_paragraph-728x90-179-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-179-under_second_paragraph-970x90-179-nonexxxnonexxxxxxezmaxscaleval100 -->
+<!-- End Ezoic - Fish0 - under_second_paragraph -->
+</div>
+
+</div>
+<!--heading--><h2 class="chap"><img onclick="window.scrollTo(0,0);" title="Back to top" src="../backtop1.svg" width="20" height="20" class="backtop"/><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/doc/dokuwiki/en/faq#2"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/doc/asciidoc/en/faq#2"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/doc/markdown/en/faq#2"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>Unhappy with PlantUML&#39;s Diagram Aesthetics? Here&#39;s What You Can Do</h2>
+<p></p>
+<ul>
+<li><strong>Leverage Themes</strong></li>
+</ul>
+<p></p>
+PlantUML permits the usage of <a href="theme.html">themes</a> to personalize the look of your diagrams. Not only does it offer a variety of built-in themes for quick selection, but it also empowers you to concoct your own unique themes through the definition of <a href="style-evolution.html">custom colors and styles</a>.
+<p></p>
+<ul>
+<li><strong>Benefit from Automatic Layout Adjustments</strong></li>
+</ul>
+<p></p>
+Say goodbye to the tedious task of manually aligning individual elements in your diagram. PlantUML&#39;s intelligent layout algorithms shoulder the hefty task of organizing the elements in your diagram clearly and logically. This ensures that you retain your focus on illustrating the vital relationships and structures, facilitating the creation of professional diagrams effortlessly and swiftly.
+<p></p>
+<ul>
+<li><strong>Understanding PlantUML as a Generator</strong></li>
+</ul>
+<p></p>
+Differentiating it from many of its counterparts, PlantUML operates primarily as a generator, fabricating diagrams autonomously based on the input text. This not only promotes rapid and fuss-free diagram creation but also streamlines the updating process — a simple alteration in the input text reflects instantly in the diagram.
+<p></p>
+However, this convenience comes at the cost of limited control over the precise layout, a constraint when compared to tools that permit manual element positioning. Despite this, many find the efficiency and time-saving attribute of a generator outweighs this shortcoming.
+<p></p>
+For those seeking advice or solutions to common layout issues, the <a href="../qa.html">PlantUML community forum</a> stands as a vibrant platform to exchange tips and procure answers to your dilemmas, enhancing your mastery over customizing your diagrams.
+<a style="position:relative;top:-38px;" name="0bb4912b52689d3d"></a>
+<div style="clear:both;height:50px;">
+</div>
+<!--heading--><h2 class="chap"><img onclick="window.scrollTo(0,0);" title="Back to top" src="../backtop1.svg" width="20" height="20" class="backtop"/><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/doc/dokuwiki/en/faq#3"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/doc/asciidoc/en/faq#3"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/doc/markdown/en/faq#3"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>How long do the images generated by PlantUML Server live for?</h2>
+<p></p>
+Links to png or svg generated by <a href="http://www.plantuml.com/plantuml">PlantUML Server</a> are valid forever (that is as long as the server is up).<br/>
+However, we do <strong>not</strong> store any diagrams on our servers.
+<p></p>
+This may sound contradictory. It is not: the whole diagram is <a href="text-encoding.html">compressed into the URL itself</a>. When the server receives the URL, it decompresses the URL to retrieve the diagram text and generates the image. There is no need to store anything. Even if the server is down, you can retrieve the diagram using the flag <code class="cod">-decodeurl</code> with the <a href="command-line.html">command line</a>. Furthermore, the diagram data is stored in PNG metadata, so you can fetch it even from a downloaded image.
+<p></p>
+Occasionally we may activate HTTP traces on our server. This is mainly for performance issues (when we have some) to understand the traffic we get. Once the issue solved, we turn back off HTTP traces and we remove the logs.
+<p></p>
+Concerning sensitive content: even if we do not store the generated diagrams, please be aware that all traffic goes through HTTP, so it&#39;s easy to catch.
+<p></p>
+So you should probably install <a href="server.html">a local server</a> on your own network if you plan to generate diagrams with sensitive information. You can do this with no Java/J2EE knowledge since there is <a href="picoweb.html">a tiny web server</a> included in PlantUML.jar.
+<a style="position:relative;top:-38px;" name="b86e17649b665cee"></a>
+<div style="clear:both;min-height:110px;margin-top:10px;">
+
+
+<div class="pezoic">
+<!-- Ezoic - Fish1 - mid_content -->
+<span id="ezoic-pub-ad-placeholder-114"></span><!-- ezoic_pub_ad_placeholder-114-mid_content-234x60-114-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-114-mid_content-468x60-114-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-114-mid_content-728x90-114-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-114-mid_content-970x90-114-nonexxxnonexxxxxxezmaxscaleval100 -->
+<!-- End Ezoic - Fish1 - mid_content -->
+</div>
+
+</div>
+<!--heading--><h2 class="chap"><img onclick="window.scrollTo(0,0);" title="Back to top" src="../backtop1.svg" width="20" height="20" class="backtop"/><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/doc/dokuwiki/en/faq#4"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/doc/asciidoc/en/faq#4"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/doc/markdown/en/faq#4"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>It does not work on my config!</h2>
+<p></p>
+<strong>PlantUML</strong> has been installed on various systems, and some users have reported minor issues when installing it.<br/>
+You can have a look <a href="faq-install.html">on this page</a> which give advises if something is wrong.
+<a style="position:relative;top:-38px;" name="8e05a6bcd8f17180"></a>
+<div style="clear:both;height:50px;">
+</div>
+<!--heading--><h2 class="chap"><img onclick="window.scrollTo(0,0);" title="Back to top" src="../backtop1.svg" width="20" height="20" class="backtop"/><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/doc/dokuwiki/en/faq#5"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/doc/asciidoc/en/faq#5"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/doc/markdown/en/faq#5"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>Which version of Graphviz should I use?</h2>
+<p></p>
+You have more information about Graphviz <a href="graphviz-dot.html">about Graphviz here</a>.
+<p></p>
+The following version have been tested, and are known to work:
+<p></p>
+<ul>
+<li>2.26.3</li>
+<li>2.28</li>
+<li>2.30.1</li>
+<li>2.34</li>
+<li>2.36</li>
+<li>2.38</li>
+<li>2.44</li>
+</ul>
+<p></p>
+Note that versions 2.39 to 2.42 <a href="http://plantuml.sourceforge.net/qa/?qa=4531/possible-bug-with-relation-in-rectangle-screenshot">do not work very well with PlantUML</a>.
+<p></p>
+With version 2.44, under Windows, you may have to run <code class="cod">dot -c</code> in a command line to finalize the installation, like in the following example:
+<p></p>
+<img src="../img/dotc.png"/>
+<p></p>
+You may have to run <code class="cod">dot -c</code> with <a href="https://www.howtogeek.com/194041/how-to-open-the-command-prompt-as-administrator-in-windows-8.1/">Administrator Right</a>.
+<p></p>
+Another option is to install <a href="https://www2.graphviz.org/Packages/stable/windows/10/msbuild/Release/Win32">Win32 version of GraphViz 2.44</a> which does not require this post-install process.
+<p></p>
+If you compile Graphviz by yourself, you have to build it with <em>libexpat</em> in order to work with PlantUML.
+<a style="position:relative;top:-38px;" name="cfea81a6dd16994c"></a>
+<div style="clear:both;min-height:110px;margin-top:10px;">
+
+<div class="pezoic">
+<!-- Ezoic - Fish2 - long_content -->
+<span id="ezoic-pub-ad-placeholder-115"></span><!-- ezoic_pub_ad_placeholder-115-long_content-234x60-115-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-115-long_content-468x60-115-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-115-long_content-728x90-115-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-115-long_content-970x90-115-nonexxxnonexxxxxxezmaxscaleval100 -->
+<!-- End Ezoic - Fish2 - long_content -->
+</div>
+
+</div>
+<!--heading--><h2 class="chap"><img onclick="window.scrollTo(0,0);" title="Back to top" src="../backtop1.svg" width="20" height="20" class="backtop"/><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/doc/dokuwiki/en/faq#6"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/doc/asciidoc/en/faq#6"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/doc/markdown/en/faq#6"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>Is this mature? I don&#39;t see any new release?</h2>
+<p></p>
+<a href="https://www.google.com/trends/explore#q=plantuml">Google Trends</a> are somehow positive. And there are <a href="https://www.google.com/search?tbm=bks&amp;q=plantuml">few books that mention PlantUML</a>. So yes, it&#39;s mature.
+<p></p>
+Note that <strong>PlantUML</strong> is developed with <a href="http://en.wikipedia.org/wiki/Continuous_integration">continuous integration</a> in mind. That means that there are new releases quite often, with (hopefully!) backward compatibility. So the file <strong><code class="cod">PlantUML.jar</code></strong> may changed over time, while keeping the same name.
+<p></p>
+If you want to know the exact version you are using, you can type in the command line:
+<p></p>
+<p>
+<code></code></p><pre class="colo"><code>java -jar plantuml.jar -version
+</code></pre>
+<p>
+</p><p></p>
+or use the following small special diagram description:
+<p></p>
+<p>
+<code></code></p><pre class="colo"><code>@startuml
+version
+@enduml
+</code></pre>
+<p>
+<a style="position:relative;top:-38px;" name="5d6defd5a6d71a6f"></a>
+</p><div style="clear:both;height:50px;">
+</div>
+<!--heading--><h2 class="chap"><img onclick="window.scrollTo(0,0);" title="Back to top" src="../backtop1.svg" width="20" height="20" class="backtop"/><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/doc/dokuwiki/en/faq#7"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/doc/asciidoc/en/faq#7"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/doc/markdown/en/faq#7"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>How to know if a new release is available?</h2>
+<p></p>
+To check if a newer version is available for download, you can go to <a href="download.html">the download page</a>.
+<p></p>
+You can also subscribe to the following rss flows:
+<p></p>
+<ul>
+<li><a href="http://forum.plantuml.net/feed/activity.rss">Recent activities on the Q&amp;A forum</a></li>
+<li><a href="http://forum.plantuml.net/feed/qa.rss">Recent questions and answers on the Q&amp;A forum</a></li>
+</ul>
+<p></p>
+Or you can use the command line:
+<p></p>
+<p>
+<code></code></p><pre class="colo"><code>java -jar plantuml.jar -version
+</code></pre>
+<p>
+</p><p></p>
+<p></p>
+Or use the following small special diagram description:
+<p></p>
+<p>
+<code></code></p><pre class="colo"><code>@startuml
+version
+@enduml
+</code></pre>
+<p>
+<a style="position:relative;top:-38px;" name="e689668a91b8d065"></a>
+</p><div style="clear:both;min-height:110px;margin-top:10px;">
+
+<div class="pezoic">
+<!-- Ezoic - Fish3 - longer_content -->
+<span id="ezoic-pub-ad-placeholder-116"></span><!-- ezoic_pub_ad_placeholder-116-longer_content-234x60-116-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-116-longer_content-468x60-116-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-116-longer_content-728x90-116-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-116-longer_content-970x90-116-nonexxxnonexxxxxxezmaxscaleval100 -->
+<!-- End Ezoic - Fish3 - longer_content -->
+</div>
+
+</div>
+<!--heading--><h2 class="chap"><img onclick="window.scrollTo(0,0);" title="Back to top" src="../backtop1.svg" width="20" height="20" class="backtop"/><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/doc/dokuwiki/en/faq#8"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/doc/asciidoc/en/faq#8"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/doc/markdown/en/faq#8"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>I want to generate huge diagrams!</h2>
+<p></p>
+PlantUML limits image width and height to 4096. There is an environment variable that you can set to override this limit: <code class="cod">PLANTUML_LIMIT_SIZE</code>. You have to define this variable before launching PlantUML, something like:
+<p></p>
+<p>
+<code></code></p><pre class="colo"><code>set PLANTUML_LIMIT_SIZE=8192
+</code></pre>
+<p>
+</p><p></p>
+or
+<p></p>
+<p>
+<code></code></p><pre class="colo"><code>setenv PLANTUML_LIMIT_SIZE 8192
+</code></pre>
+<p>
+</p><p></p>
+Another way is an option in the command line:
+<p></p>
+<p>
+<code></code></p><pre class="colo"><code>java -DPLANTUML_LIMIT_SIZE=8192 -jar /path/to/plantuml.jar ...
+</code></pre>
+<p>
+</p><p></p>
+Note that if you generate <strong>very</strong> big diagrams, (for example, something like 20 000 x 10 000 pixels), you can have some memory issues. The solution is to add this parameter to the java vm : <a href="http://javahowto.blogspot.com/2006/06/6-common-errors-in-setting-java-heap.html">-Xmx1024m</a>.
+<a style="position:relative;top:-38px;" name="fb512f3bcb2c5b7d"></a>
+<div style="clear:both;height:50px;">
+</div>
+<!--heading--><h2 class="chap"><img onclick="window.scrollTo(0,0);" title="Back to top" src="../backtop1.svg" width="20" height="20" class="backtop"/><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/doc/dokuwiki/en/faq#9"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/doc/asciidoc/en/faq#9"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/doc/markdown/en/faq#9"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>I have issues with accented characters.</h2>
+<p></p>
+Characters encoding is a subtle thing... By default, PlantUML use the default charset of your platform, which may or may not be UTF-8 . If you want to know which charset you are using, you can type the following command:
+<p></p>
+<p>
+<code></code></p><pre class="colo"><code>java -jar plantuml.jar -help
+
+...
+-charset XYZ To use a specific charset (default is windows-1252)
+...
+</code></pre>
+<p>
+</p><p></p>
+If you want to use a different charset, for example UTF-8, you can use the <code class="cod">-charset</code> flag :
+<p></p>
+<p>
+<code></code></p><pre class="colo"><code>java -jar plantuml.jar -charset UTF-8 ...
+</code></pre>
+<p>
+</p><p></p>
+<p></p>
+You can also find <a href="unicode.html">here information about unicode</a> . Note that even if Java <a href="http://bugs.sun.com/bugdatabase/view_bug.do?bug_id=4508058">does not support B.O.M. (Byte Order Mark) in UTF-8 format file</a>, a workaround has been put into PlantUML, so this should not be an issue.
+<a style="position:relative;top:-38px;" name="d28267f6da3b7069"></a>
+<div style="clear:both;min-height:110px;margin-top:10px;">
+
+<div class="pezoic">
+<!-- Ezoic - Fish4 - longest_content -->
+<span id="ezoic-pub-ad-placeholder-117"></span><!-- ezoic_pub_ad_placeholder-117-longest_content-234x60-117-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-117-longest_content-468x60-117-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-117-longest_content-728x90-117-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-117-longest_content-970x90-117-nonexxxnonexxxxxxezmaxscaleval100 -->
+<!-- End Ezoic - Fish4 - longest_content -->
+</div>
+
+</div>
+<!--heading--><h2 class="chap"><img onclick="window.scrollTo(0,0);" title="Back to top" src="../backtop1.svg" width="20" height="20" class="backtop"/><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/doc/dokuwiki/en/faq#10"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/doc/asciidoc/en/faq#10"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/doc/markdown/en/faq#10"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>I have issues with Asian characters.</h2>
+<p></p>
+Some Japanese users reported that they have to set the <code class="cod">LANG</code> variable to <code class="cod">ja_JP.UTF-8</code> in their shell before launching PlantUML.
+<p></p>
+<p>
+<code></code></p><pre class="colo"><code>export LANG = ja_JP.UTF-8
+</code></pre>
+<p>
+</p><p></p>
+Since <a href="svek.html">the new architecture</a>, it should simply work, because Java knows how to draw East Asian characters.
+<a style="position:relative;top:-38px;" name="a6da1c9169e3c782"></a>
+<div style="clear:both;height:50px;">
+</div>
+<!--heading--><h2 class="chap"><img onclick="window.scrollTo(0,0);" title="Back to top" src="../backtop1.svg" width="20" height="20" class="backtop"/><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/doc/dokuwiki/en/faq#11"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/doc/asciidoc/en/faq#11"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/doc/markdown/en/faq#11"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>How to generate EPS?</h2>
+<p></p>
+You can use the <code class="cod">-teps</code> flag in the command line, or <code class="cod">format=&#34;eps&#34;</code> in <a href="https://plantuml.com/en-dark/ant">the ANT task</a>.
+<a style="position:relative;top:-38px;" name="518a220e46e7849c"></a>
+<div style="clear:both;min-height:110px;margin-top:10px;">
+
+<div class="pezoic">
+<!-- Ezoic - Fish5 - incontent_5 -->
+<span id="ezoic-pub-ad-placeholder-118"></span><!-- ezoic_pub_ad_placeholder-118-incontent_5-234x60-118-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-118-incontent_5-468x60-118-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-118-incontent_5-728x90-118-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-118-incontent_5-970x90-118-nonexxxnonexxxxxxezmaxscaleval100 -->
+<!-- End Ezoic - Fish5 - incontent_5 -->
+</div>
+
+</div>
+<!--heading--><h2 class="chap"><img onclick="window.scrollTo(0,0);" title="Back to top" src="../backtop1.svg" width="20" height="20" class="backtop"/><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/doc/dokuwiki/en/faq#12"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/doc/asciidoc/en/faq#12"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/doc/markdown/en/faq#12"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>What about XMI?</h2>
+<p></p>
+Work is <a href="xmi.html">in progress</a>.
+<a style="position:relative;top:-38px;" name="ef810064611fabdc"></a>
+<div style="clear:both;height:50px;">
+</div>
+<!--heading--><h2 class="chap"><img onclick="window.scrollTo(0,0);" title="Back to top" src="../backtop1.svg" width="20" height="20" class="backtop"/><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/doc/dokuwiki/en/faq#13"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/doc/asciidoc/en/faq#13"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/doc/markdown/en/faq#13"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>Is @startuml needed in with -pipe flag?</h2>
+<p></p>
+<u>Short answer</u>: You <strong>do</strong> have to use <code class="cod">@startuml</code> (or <code class="cod">@startditaa</code>/<code class="cod">@startjcckit</code>...) when starting a diagram.
+<p></p>
+<u>Long answer</u>:
+<p></p>
+The <code class="cod">@startuml</code>/<code class="cod">@startditaa</code>/<code class="cod">@startjcckit</code> is useful to determine the type of diagram (uml, ditaa, jcckit...), and because you can optionally put a filename after the <code class="cod">@startXYZ</code>. This also allows to have several diagrams inside the same file.
+<p></p>
+Earlier versions of PlantUML were not supporting ditaa or jcckit. When you use <a href="command-line.html#pipe">-pipe</a> flag, since the diagram is generated to standard output, there could be only one diagram in the standard input. And there is no need to specify a filename. For all those reasons, <code class="cod">@startuml</code> was not needed when using <a href="command-line.html#pipe">-pipe</a> flag at that time.
+<p></p>
+Later, it has been decided to normalize this, and to impose <code class="cod">@startXYZ</code> everywhere, even with <a href="command-line.html#pipe">-pipe</a> flag, because it was confusing for users. Unfortunately, since some existing scripts were already using the fact that <code class="cod">@startuml</code> is not needed in <a href="command-line.html#pipe">-pipe</a> flag, it has been decided to keep this as a <em>deprecated</em> option, just to allow older scripts to run. We indeed do pay attention of ascending compatibility.
+<p></p>
+For newer scripts, you should not rely on this, and use <code class="cod">@startXYZ</code>/<code class="cod">@endXYZ</code> with the <a href="command-line.html#pipe">-pipe</a> flag.
+<a style="position:relative;top:-38px;" name="b1a5d65fedb84153"></a>
+<div style="clear:both;min-height:110px;margin-top:10px;">
+
+<div class="pezoic">
+<!-- Ezoic - Fish6 - incontent_6 -->
+<span id="ezoic-pub-ad-placeholder-119"></span><!-- ezoic_pub_ad_placeholder-119-incontent_6-234x60-119-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-119-incontent_6-468x60-119-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-119-incontent_6-728x90-119-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-119-incontent_6-970x90-119-nonexxxnonexxxxxxezmaxscaleval100 -->
+<!-- End Ezoic - Fish6 - incontent_6 -->
+</div>
+
+</div>
+<!--heading--><h2 class="chap"><img onclick="window.scrollTo(0,0);" title="Back to top" src="../backtop1.svg" width="20" height="20" class="backtop"/><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/doc/dokuwiki/en/faq#14"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/doc/asciidoc/en/faq#14"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/doc/markdown/en/faq#14"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>Under which license is PlantUML distributed?</h2>
+<p></p>
+PlantUML is distributed under the <a href="http://www.gnu.org/copyleft/gpl.html">GPL license</a>.<br/>
+You can print the license using the command line option:
+<p></p>
+<p>
+<code></code></p><pre class="colo"><code>java -jar plantuml.jar -license
+</code></pre>
+<p>
+</p><p></p>
+Or you can use the special diagram:
+<p></p>
+<p>
+<code></code></p><pre class="colo"><code>@startuml
+license
+@enduml
+</code></pre>
+<p>
+<a style="position:relative;top:-38px;" name="ddbc9d04378ee462"></a>
+</p><div style="clear:both;height:50px;">
+</div>
+<!--heading--><h2 class="chap"><img onclick="window.scrollTo(0,0);" title="Back to top" src="../backtop1.svg" width="20" height="20" class="backtop"/><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/doc/dokuwiki/en/faq#15"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/doc/asciidoc/en/faq#15"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/doc/markdown/en/faq#15"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>I don&#39;t like GPL!</h2>
+<p></p>
+You can also use:
+<p></p>
+<ul>
+<li><a href="download.html#lgpl">LGPL license</a></li>
+<li><a href="download.html#asl">Apache license</a></li>
+<li><a href="download.html#epl">Eclipse Public license</a></li>
+<li><a href="download.html#mit">MIT license</a></li>
+</ul>
+<p></p>
+Those versions miss few features (<a href="ditaa.html">DITAA</a> for example), but are 100% able to generate UML diagrams.
+<p></p>
+You can print the license of these versions using the command line option:
+<p></p>
+<p>
+<code></code></p><pre class="colo"><code>java -jar plantuml.jar -license
+</code></pre>
+<p>
+</p><p></p>
+Or you can use the special diagram:
+<p></p>
+<p>
+<code></code></p><pre class="colo"><code>@startuml
+license
+@enduml
+</code></pre>
+<p>
+<a style="position:relative;top:-38px;" name="479a824c6c37f0b6"></a>
+</p><div style="clear:both;min-height:110px;margin-top:10px;">
+
+<div class="pezoic">
+<!-- Ezoic - Fish7 - incontent_7 -->
+<span id="ezoic-pub-ad-placeholder-120"></span><!-- ezoic_pub_ad_placeholder-120-incontent_7-234x60-120-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-120-incontent_7-468x60-120-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-120-incontent_7-728x90-120-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-120-incontent_7-970x90-120-nonexxxnonexxxxxxezmaxscaleval100 -->
+<!-- End Ezoic - Fish7 - incontent_7 -->
+</div>
+
+</div>
+<!--heading--><h2 class="chap"><img onclick="window.scrollTo(0,0);" title="Back to top" src="../backtop1.svg" width="20" height="20" class="backtop"/><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/doc/dokuwiki/en/faq#16"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/doc/asciidoc/en/faq#16"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/doc/markdown/en/faq#16"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>Are images generated by PlantUML covered by the GPL/LGPL/ASL/EPL/MIT license?</h2>
+<p></p>
+No, they are not.
+<p></p>
+Images (whatever their format : PNG, SVG...) generated by the <strong>execution</strong> of PlantUML are owned by the author of their corresponding sources code (that is, their textual description in PlantUML language).
+<p></p>
+Images generated by the <strong>execution</strong> of PlantUML <strong>are not</strong> considered as <em>covered work</em>. You can do whatever you want with them.
+<p></p>
+The generated images can then be used without any reference to the GPL/LGPL/ASL/EPL/MIT license. It is not even necessary to stipulate that they have been generated with PlantUML, although this will be appreciated by PlantUML team.
+<p></p>
+There is an exception : if the textual description in PlantUML language is also covered by some license (like the GPL/LGPL/ASL/EPL/MIT), then the generated images are logically covered by this license.
+<a style="position:relative;top:-38px;" name="c9e3705e82bcbe12"></a>
+<div style="clear:both;height:50px;">
+</div>
+<!--heading--><h2 class="chap"><img onclick="window.scrollTo(0,0);" title="Back to top" src="../backtop1.svg" width="20" height="20" class="backtop"/><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/doc/dokuwiki/en/faq#17"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/doc/asciidoc/en/faq#17"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/doc/markdown/en/faq#17"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>Can I redistribute the LGPL binary file PlantUML.jar and if there any constraints about it?</h2>
+<p></p>
+As long as you do not modify the Java source code and the jar file, you can integrate PlantUML.jar in your own closed source software.
+<p></p>
+The only constraint is that you have to mention somewhere in your own license or in your documentation that you are using PlantUML and that PlantUML is distributed under LGPL.
+<p></p>
+You can then even sell your software and earn money, without any other constraints (although <a href="donors.html">donation will be appreciate</a> in that case <code class="cod">:-)</code>
+<p></p>
+<a style="position:relative;top:-38px;" name="ee2efd4dfd7c7032"></a>
+<div style="clear:both;min-height:110px;margin-top:10px;">
+
+<div class="pezoic">
+<!-- Ezoic - Fish8 - incontent_8 -->
+<span id="ezoic-pub-ad-placeholder-121"></span><!-- ezoic_pub_ad_placeholder-121-incontent_8-234x60-121-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-121-incontent_8-468x60-121-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-121-incontent_8-728x90-121-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-121-incontent_8-970x90-121-nonexxxnonexxxxxxezmaxscaleval100 -->
+<!-- End Ezoic - Fish8 - incontent_8 -->
+</div>
+
+</div>
+<!--heading--><h2 class="chap"><img onclick="window.scrollTo(0,0);" title="Back to top" src="../backtop1.svg" width="20" height="20" class="backtop"/><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/doc/dokuwiki/en/faq#18"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/doc/asciidoc/en/faq#18"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/doc/markdown/en/faq#18"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>What is the license of the PlantUML syntax?</h2>
+<p></p>
+There are no license for the PlantUML syntax itself : this means that everybody can use it.
+<p></p>
+So you can use PlantUML comments into your own code : <strong>those comments are owned by yourself</strong>, and are not considered as <em>covered work</em>, and are not covered by the GPL/LGPL/APL/EPL/MIT license.
+<p></p>
+Only the current implementation (that is, PlantUML program) is licensed under GPL, LGPL, ASL, EPL or MIT. On the other hand note that the documentation (examples, notices, ...) published in the PlantUML website is copyrighted. But you can still write your own documentation.
+<a style="position:relative;top:-38px;" name="46a1c7e6cc4ed2ba"></a>
+<div style="clear:both;height:50px;">
+</div>
+<!--heading--><h2 class="chap"><img onclick="window.scrollTo(0,0);" title="Back to top" src="../backtop1.svg" width="20" height="20" class="backtop"/><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/doc/dokuwiki/en/faq#19"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/doc/asciidoc/en/faq#19"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/doc/markdown/en/faq#19"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>What does EmptySvgException mean?</h2>
+<p></p>
+PlantUML is using <a href="graphviz-dot.html">Graphviz</a> to generate some diagrams. So PlantUML is launching <em>dot</em> program and retrieve the information generated by <em>dot</em> as a SVG flow.
+<p></p>
+This message means that PlantUML is getting an empty flow from <em>dot</em> execution, and therefore cannot generate UML diagrams. There may be several reasons why this happens:
+<p></p>
+<ul>
+<li>There is an issue with your Graphviz installation. Try a very simple diagram, with only one class for example.</li>
+<li>Your version of Graphviz is too old and is crashing with information provided by PlantUML. Check your version with <code class="cod">testdot</code></li>
+<li>Your diagram is too complex.</li>
+<li>There is a bug in PlantUML and/or in <em>dot</em>.</li>
+</ul>
+<a style="position:relative;top:-38px;" name="06143f6fe74ed705"></a>
+<div style="clear:both;min-height:110px;margin-top:10px;">
+
+<div class="pezoic">
+<!-- Ezoic - Fish9 - incontent_9 -->
+<span id="ezoic-pub-ad-placeholder-122"></span><!-- ezoic_pub_ad_placeholder-122-incontent_9-234x60-122-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-122-incontent_9-468x60-122-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-122-incontent_9-728x90-122-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-122-incontent_9-970x90-122-nonexxxnonexxxxxxezmaxscaleval100 -->
+<!-- End Ezoic - Fish9 - incontent_9 -->
+</div>
+
+</div>
+<!--heading--><h2 class="chap"><img onclick="window.scrollTo(0,0);" title="Back to top" src="../backtop1.svg" width="20" height="20" class="backtop"/><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/doc/dokuwiki/en/faq#20"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/doc/asciidoc/en/faq#20"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/doc/markdown/en/faq#20"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>Could not initialize class net.sourceforge.plantuml.ugraphic.UFont</h2>
+<p></p>
+If you have the error message <code class="cod">java.lang.NoClassDefFoundError: Could not initialize class net.sourceforge.plantuml.ugraphic.UFont</code>, it probably means that there are no fonts installed on your server.
+<p></p>
+You can solve it by adding <code class="cod">fontconfig</code> on your system:
+<p></p>
+<p>
+<code></code></p><pre class="colo"><code>sudo yum install fontconfig
+
+or
+
+sudo apt-get install fontconfig
+</code></pre>
+<p>
+</p><p></p>
+You may also need to install
+<p></p>
+<p>
+<code></code></p><pre class="colo"><code>ttf-droid
+</code></pre>
+<p>
+<a style="position:relative;top:-38px;" name="239d64f675c3e515"></a>
+</p><div style="clear:both;height:50px;">
+</div>
+<!--heading--><h2 class="chap"><img onclick="window.scrollTo(0,0);" title="Back to top" src="../backtop1.svg" width="20" height="20" class="backtop"/><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/doc/dokuwiki/en/faq#21"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/doc/asciidoc/en/faq#21"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/doc/markdown/en/faq#21"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>I have a message complaining about X11 or headless!</h2>
+<p></p>
+If you are running PlantUML on a linux server without graphical capability, you may have some error message:
+<p></p>
+<ul>
+<li>Can&#39;t connect to X11 window</li>
+<li>X11 connection rejected because of wrong authentication.</li>
+<li><a href="http://www.oracle.com/technetwork/articles/javase/headless-136834.html">HeadlessException</a></li>
+</ul>
+<p></p>
+<p></p>
+Basically, this is because PlantUML needs to have access to some graphical resources (more <a href="http://www.oracle.com/technetwork/articles/javase/headless-136834.html">information here</a>).
+You can turn PlantUML to headless mode, using the flag <code class="cod">-Djava.awt.headless=true</code>.
+For example:
+<p>
+<code></code></p><pre class="colo"><code>/usr/bin/java -Djava.awt.headless=true -jar /data/PlantUml/plantuml.jar ...
+</code></pre>
+<p>
+</p><p></p>
+If you see a similar message on MacOS Ventura after running <code class="cod">plantuml</code> with no arguments, this is a <a href="https://github.com/plantuml/plantuml/issues/275">known issue</a> but does not appear to indicate a problem since sub-commands (like <code class="cod">-gui</code>) do work.
+<a style="position:relative;top:-38px;" name="d9d8ccf1a58fcf92"></a>
+<div style="clear:both;min-height:110px;margin-top:10px;">
+
+<div class="pezoic">
+<!-- Ezoic - Fish10 - incontent_10 -->
+<span id="ezoic-pub-ad-placeholder-123"></span><!-- ezoic_pub_ad_placeholder-123-incontent_10-234x60-123-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-123-incontent_10-468x60-123-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-123-incontent_10-728x90-123-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-123-incontent_10-970x90-123-nonexxxnonexxxxxxezmaxscaleval100 -->
+<!-- End Ezoic - Fish10 - incontent_10 -->
+</div>
+
+</div>
+<!--heading--><h2 class="chap"><img onclick="window.scrollTo(0,0);" title="Back to top" src="../backtop1.svg" width="20" height="20" class="backtop"/><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/doc/dokuwiki/en/faq#22"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/doc/asciidoc/en/faq#22"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/doc/markdown/en/faq#22"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>I have an UnsatisfiedLinkError under Mac OS X!</h2>
+<p></p>
+Under Mac OS X, if you have some error message like:
+<p></p>
+<p>
+<code></code></p><pre class="colo"><code>Error java.lang.UnsatisfiedLinkError / liblwawt.dylib /libosxapp.dylib
+</code></pre>
+<p>
+</p><p></p>
+You need to follow the instructions on <a href="http://stackoverflow.com/questions/25914757/osx-yosemite-jvm-shared-library-does-not-contain-the-jni-createjavavm-symbol">http://stackoverflow.com/questions/25914757/osx-yosemite-jvm-shared-library-does-not-contain-the-jni-createjavavm-symbol</a>:
+<p></p>
+<ol>
+<li>Download and install the package: JavaForOSX.</li>
+<li>Found the file <code class="cod">AptanaStidio3.ini</code>, the file by default located under the directory here: <code class="cod">/Applications/Aptana Studio 3/AptanaStudio3.app/Contents/MacOS</code></li>
+<li>Add <code class="cod">-vm</code> argument to specify the java which will be used to lunch Aptana Studio: <code class="cod">-vm /Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home/bin/java</code></li>
+</ol>
+<p></p>
+This seems to work only under Java 6, so you may define the following alias to be used in your scripts.
+<p></p>
+<p>
+<code></code></p><pre class="colo"><code>alias java6=&#34;export JAVA_HOME=$(/usr/libexec/java_home -v 1.6.0)&#34;
+</code></pre>
+<p>
+<a style="position:relative;top:-38px;" name="bb154393caf979ba"></a>
+</p><div style="clear:both;height:50px;">
+</div>
+<!--heading--><h2 class="chap"><img onclick="window.scrollTo(0,0);" title="Back to top" src="../backtop1.svg" width="20" height="20" class="backtop"/><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/doc/dokuwiki/en/faq#23"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/doc/asciidoc/en/faq#23"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/doc/markdown/en/faq#23"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>PlantUML scripts are grabbing keyboard/window focus!</h2>
+<p></p>
+Depending on your configuration, you can try the flag <code class="cod">-Djava.awt.headless=true</code>.<br/>
+For example:
+<p></p>
+<p>
+<code></code></p><pre class="colo"><code>/usr/bin/java -Djava.awt.headless=true -jar /path/to/plantuml.jar ...
+</code></pre>
+<p>
+<a style="position:relative;top:-38px;" name="76ee48737d9f7a1a"></a>
+</p><div style="clear:both;min-height:110px;margin-top:10px;">
+
+<div class="pezoic">
+<!-- Ezoic - Fish11 - incontent_11 -->
+<span id="ezoic-pub-ad-placeholder-194"></span><!-- ezoic_pub_ad_placeholder-194-incontent_11-234x60-194-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-194-incontent_11-468x60-194-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-194-incontent_11-728x90-194-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-194-incontent_11-970x90-194-nonexxxnonexxxxxxezmaxscaleval100 -->
+<!-- End Ezoic - Fish11 - incontent_11 -->
+</div>
+
+</div>
+<!--heading--><h2 class="chap"><img onclick="window.scrollTo(0,0);" title="Back to top" src="../backtop1.svg" width="20" height="20" class="backtop"/><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/doc/dokuwiki/en/faq#24"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/doc/asciidoc/en/faq#24"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/doc/markdown/en/faq#24"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>I found an issue, but I cannot provide my diagram showing the issue because my diagram contains confidential data</h2>
+<p></p>
+There is a <code class="cod">-cypher</code> option with the command line that generates a <code class="cod">.preproc</code> file instead of regular image file.
+<p></p>
+The <code class="cod">.preproc</code> generated file looks like the input diagram expect that all words (except PlantUML language keywords) have been replaced by a random set of letters.
+<p></p>
+You can double check this by running several time the <code class="cod">-cypher</code> option (you will get a different text each time).
+You may also look at the <a href="https://github.com/plantuml/plantuml/blob/master/src/net/sourceforge/plantuml/utils/Cypher.java">Cypher.java class</a> used to execute this transformation to be sure that there are no backdoor there to retrieve back your original diagram.
+<p></p>
+If there is an issue in your original diagram, the same issue is likely to also occur with the cyphered one.
+Since the cyphered text is really meaningless, you can safely share it with us : there will be no way for us to guess what you are really working on.
+<p></p>
+But we will be able to reproduce the issue and fix it so that you can have your original (and confidential) diagram working.
+<a style="position:relative;top:-38px;" name="2724cf7361cb7765"></a>
+<div style="clear:both;height:50px;">
+</div>
+<!--heading--><h2 class="chap"><img onclick="window.scrollTo(0,0);" title="Back to top" src="../backtop1.svg" width="20" height="20" class="backtop"/><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/doc/dokuwiki/en/faq#25"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/doc/asciidoc/en/faq#25"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/doc/markdown/en/faq#25"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>I have an error message with the Eclipse Plugin.</h2>
+<p></p>
+If you have the following error message :
+<p></p>
+The currently displayed page contains invalid values
+<p></p>
+when displaying the Windows/Preferences/PlantUML, you should try to quit <a href="eclipse.html">Eclipse</a> and use the <code class="cod">-clean</code> flag on the command line:
+<p></p>
+<p>
+<code></code></p><pre class="colo"><code>eclipse -clean
+</code></pre>
+<p>
+</p><p></p>
+<a style="position:relative;top:-38px;" name="0ba5eae220ff22b9"></a>
+<div style="clear:both;min-height:110px;margin-top:10px;">
+
+<div class="pezoic">
+<!-- Ezoic - Fish12 - incontent_12 -->
+<span id="ezoic-pub-ad-placeholder-195"></span><!-- ezoic_pub_ad_placeholder-195-incontent_12-234x60-195-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-195-incontent_12-468x60-195-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-195-incontent_12-728x90-195-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-195-incontent_12-970x90-195-nonexxxnonexxxxxxezmaxscaleval100 -->
+<!-- End Ezoic - Fish12 - incontent_12 -->
+</div>
+
+</div>
+<!--heading--><h2 class="chap"><img onclick="window.scrollTo(0,0);" title="Back to top" src="../backtop1.svg" width="20" height="20" class="backtop"/><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/doc/dokuwiki/en/faq#26"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/doc/asciidoc/en/faq#26"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/doc/markdown/en/faq#26"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>I have a question that is not here!</h2>
+<p></p>
+You can use the <a href="http://forum.plantuml.net">forum</a> facility.
+<p></p>
+Someone will try to answer your question there.
+</td>
+<td id="toctd" valign="top" style="max-width:240px;min-width:240px;">
+<!--toc-->
+<div id="toc">
+<ul>
+<li><a href="faq.html#9be1c2970f548bf5">Understanding the Purpose of PlantUML</a>
+</li><li><a href="faq.html#6bf8e8c6d419e153">Unhappy with PlantUML&#39;s Diagram Aesthetics? Here&#39;s What You Can Do</a>
+</li><li><a href="faq.html#0bb4912b52689d3d">How long do the images generated by PlantUML Server live for?</a>
+</li><li><a href="faq.html#b86e17649b665cee">It does not work on my config!</a>
+</li><li><a href="faq.html#8e05a6bcd8f17180">Which version of Graphviz should I use?</a>
+</li><li><a href="faq.html#cfea81a6dd16994c">Is this mature? I don&#39;t see any new release?</a>
+</li><li><a href="faq.html#5d6defd5a6d71a6f">How to know if a new release is available?</a>
+</li><li><a href="faq.html#e689668a91b8d065">I want to generate huge diagrams!</a>
+</li><li><a href="faq.html#fb512f3bcb2c5b7d">I have issues with accented characters.</a>
+</li><li><a href="faq.html#d28267f6da3b7069">I have issues with Asian characters.</a>
+</li><li><a href="faq.html#a6da1c9169e3c782">How to generate EPS?</a>
+</li><li><a href="faq.html#518a220e46e7849c">What about XMI?</a>
+</li><li><a href="faq.html#ef810064611fabdc">Is @startuml needed in with -pipe flag?</a>
+</li><li><a href="faq.html#b1a5d65fedb84153">Under which license is PlantUML distributed?</a>
+</li><li><a href="faq.html#ddbc9d04378ee462">I don&#39;t like GPL!</a>
+</li><li><a href="faq.html#479a824c6c37f0b6">Are images generated by PlantUML covered by the GPL/LGPL/ASL/EPL/MIT license?</a>
+</li><li><a href="faq.html#c9e3705e82bcbe12">Can I redistribute the LGPL binary file PlantUML.jar and if there any constraints about it?</a>
+</li><li><a href="faq.html#ee2efd4dfd7c7032">What is the license of the PlantUML syntax?</a>
+</li><li><a href="faq.html#46a1c7e6cc4ed2ba">What does EmptySvgException mean?</a>
+</li><li><a href="faq.html#06143f6fe74ed705">Could not initialize class net.sourceforge.plantuml.ugraphic.UFont</a>
+</li><li><a href="faq.html#239d64f675c3e515">I have a message complaining about X11 or headless!</a>
+</li><li><a href="faq.html#d9d8ccf1a58fcf92">I have an UnsatisfiedLinkError under Mac OS X!</a>
+</li><li><a href="faq.html#bb154393caf979ba">PlantUML scripts are grabbing keyboard/window focus!</a>
+</li><li><a href="faq.html#76ee48737d9f7a1a">I found an issue, but I cannot provide my diagram showing the issue because my diagram contains confidential data</a>
+</li><li><a href="faq.html#2724cf7361cb7765">I have an error message with the Eclipse Plugin.</a>
+</li><li><a href="faq.html#0ba5eae220ff22b9">I have a question that is not here!</a>
+</li></ul>
+</div>
+</td>
+</tr>
+</tbody></table>
+
+
+</p><p>
+
+<!-- Ezoic - Natif02L - bottom_of_page -->
+</p><span id="ezoic-pub-ad-placeholder-104"></span><!-- ezoic_pub_ad_placeholder-104-bottom_of_page-234x60-104-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-104-bottom_of_page-468x60-104-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-104-bottom_of_page-728x90-104-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-104-bottom_of_page-970x250-104-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-104-bottom_of_page-300x250x3-104-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-104-bottom_of_page-970x90-104-nonexxxnonexxxxxxezmaxscaleval100 -->
+<!-- End Ezoic - Natif02L - bottom_of_page -->
+</div>
+<!-- https://css-tricks.com/almanac/properties/f/float/ -->
+<!-- https://css-tricks.com/snippets/css/a-guide-to-flexbox/ -->
+
+
+<style>
+.btm {
+text-align:center;
+}
+.btm a{
+    text-decoration:none;
+    color:#b0c0d0;
+}
+.btm a:hover{
+    color:#8CB4FF;
+}
+</style>
+
+<div class="btm">
+<hr/>
+<a href="https://g.ezoic.net/privacy/plantuml.com"><small>Privacy Policy</small></a>
+    
+<a href="../direct-sales.html"><small>Advertise</small></a>
+<p>
+</p></div><!--btm-->
+
+
+<!--root-->
+
+<!-- Start of StatCounter Code --><script type="text/javascript">
+var sc_project=11133780; var sc_invisible=1; var sc_security="3da8bfdb";
+</script>
+<script async="" type="text/javascript" src="https://www.statcounter.com/counter/counter.js"></script> <!-- End of StatCounter Code -->
+
+
+<!--[selectrongo:done]--><script type="text/javascript">
+				var __inScopeForCCPA = false;
+		function __uspapi(command, version, callback) {
+			var response = null;
+			var successs = false;
+			if (command === "getUSPData" && version === 1) {
+				var uspString = "1"; // Version
+				if (__inScopeForCCPA) {
+					uspString += "N"; // Has Explicit Notice for Opt Out been provided (ex footer or minor consent modal)
+					var result;
+					var consentCookie = (result = new RegExp('(?:^|; )ezoccpaconsent=([^;]*)').exec(document.cookie)) ? (result[1]) : null;
+					if (consentCookie === "nonconsent") {
+						uspString += "Y";
+					}
+					else {
+						uspString += "N";
+					}
+					uspString += "N" // Is pub a signatory to the IAB Limited Service Provider Agreement (http://www.iabprivacy.com/)
+				}
+				else {
+					uspString += "---";
+				}
+				response = {
+					uspString: uspString,
+					version: 1
+				};
+				success = true;
+			}
+			return callback(response, success);
+		};
+		function __receiveUspapiMessage(event) {
+			if (event.data.hasOwnProperty('__uspapiCall')) {
+				__uspapi('getUSPData', 1, function(uspData, success) {
+					event.source.postMessage({
+						__uspapiReturn: {
+							returnValue: uspData,
+							success: success,
+							callId: event.data.__uspapiCall.callId
+						}
+					},
+					event.origin);
+				});
+			}
+			return null;
+		};
+		window.addEventListener("message", __receiveUspapiMessage, false);
+</script>
+<script>__ez.queue.addFile('/tardisrocinante/vitals.js', '/tardisrocinante/vitals.js?gcb=2&cb=3', false, ['/parsonsmaize/mulvane.js'], true, false, true, false);</script>
+<script>var _audins_dom="plantuml_com",_audins_did=173770;__ez.queue.addDelayFunc("audins.js","__ez.script.add", "//go.ezodn.com/detroitchicago/audins.js?cb=195-2");</script><noscript><div style="display:none;"><img src="https://pixel.quantserve.com/pixel/p-31iz6hfFutd16.gif?labels=Domain.plantuml_com,DomainId.173770" border="0" height="1" width="1" alt="Quantcast"/></div></noscript>
+<script>__ez.queue.addFile('/beardeddragon/drake.js', '/beardeddragon/drake.js?gcb=2&cb=4', false, [], true, false, true, false);</script>
+<script type="text/javascript" style='display:none;'>var __ez_dims = (function() {
+		var setCookie = function( name, content, expiry ) {
+			return document.cookie = name+'='+content+((expiry)?';expires='+(new Date(Math.floor(new Date().getTime()+expiry*1000)).toUTCString()):'')+';path=/';
+		};
+		var ffid = 1;
+		var oh = window.screen.height;
+		var ow = window.screen.width;
+		var h = ffid === 1 ? oh : (oh > ow) ? oh : ow;
+		var w = ffid === 1 ? ow : (oh > ow) ? ow : oh;
+		var uh = window.innerHeight || document.documentElement.clientHeight || document.getElementsByTagName('body')[0].clientHeight;
+		var uw = window.innerWidth || document.documentElement.clientWidth || document.getElementsByTagName('body')[0].clientWidth;
+		setCookie('ezds', encodeURIComponent('ffid='+ffid+',w='+w+',h='+h), (31536e3*7));
+		setCookie('ezohw', encodeURIComponent('w='+uw+',h='+uh), (31536e3*7));
+	})();</script>
+<script type='text/javascript' style='display:none;' async>__ez.queue.addFile('/parsonsmaize/chanute.js', '/parsonsmaize/chanute.js?a=a&cb=7&dcb=195-2&shcb=34', true, ['/parsonsmaize/mulvane.js'], true, false, false, false);</script>
+<script type='text/javascript' style='display:none;' async>__ez.queue.addFile('/porpoiseant/jellyfish.js', '/porpoiseant/jellyfish.js?a=a&cb=10&dcb=195-2&shcb=34', false, [], true, false, false, false);</script></body></html>

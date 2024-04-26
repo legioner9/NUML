@@ -1,0 +1,580 @@
+<html lang="ru"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<script data-ezscrex='false' data-cfasync='false' data-pagespeed-no-defer>var __ez=__ez||{};__ez.stms=Date.now();__ez.evt={};__ez.script={};__ez.ck=__ez.ck||{};__ez.template={};__ez.template.isOrig=false;__ez.queue=function(){var e=0,i=0,t=[],n=!1,o=[],r=[],s=!0,a=function(e,i,n,o,r,s,a){var l=arguments.length>7&&void 0!==arguments[7]?arguments[7]:window,d=this;this.name=e,this.funcName=i,this.parameters=null===n?null:p(n)?n:[n],this.isBlock=o,this.blockedBy=r,this.deleteWhenComplete=s,this.isError=!1,this.isComplete=!1,this.isInitialized=!1,this.proceedIfError=a,this.fWindow=l,this.isTimeDelay=!1,this.process=function(){f("... func = "+e),d.isInitialized=!0,d.isComplete=!0,f("... func.apply: "+e);var i=d.funcName.split("."),n=null,o=this.fWindow||window;i.length>3||(n=3===i.length?o[i[0]][i[1]][i[2]]:2===i.length?o[i[0]][i[1]]:o[d.funcName]),null!=n&&n.apply(null,this.parameters),!0===d.deleteWhenComplete&&delete t[e],!0===d.isBlock&&(f("----- F'D: "+d.name),u())}},l=function(e,i,t,n,o,r,s){var a=arguments.length>7&&void 0!==arguments[7]?arguments[7]:window,l=this;this.name=e,this.path=i,this.async=o,this.defer=r,this.isBlock=t,this.blockedBy=n,this.isInitialized=!1,this.isError=!1,this.isComplete=!1,this.proceedIfError=s,this.fWindow=a,this.isTimeDelay=!1,this.isPath=function(e){return"/"===e[0]&&"/"!==e[1]},this.getSrc=function(e){return void 0!==window.__ezScriptHost&&this.isPath(e)&&"banger.js"!==this.name?window.__ezScriptHost+e:e},this.process=function(){l.isInitialized=!0,f("... file = "+e);var i=this.fWindow?this.fWindow.document:document,t=i.createElement("script");t.src=this.getSrc(this.path),!0===o?t.async=!0:!0===r&&(t.defer=!0),t.onerror=function(){var e={url:window.location.href,name:l.name,path:l.path,user_agent:window.navigator.userAgent};"undefined"!=typeof _ezaq&&(e.pageview_id=_ezaq.page_view_id);var i=encodeURIComponent(JSON.stringify(e)),t=new XMLHttpRequest;t.open("GET","//g.ezoic.net/ezqlog?d="+i,!0),t.send(),f("----- ERR'D: "+l.name),l.isError=!0,!0===l.isBlock&&u()},t.onreadystatechange=t.onload=function(){var e=t.readyState;f("----- F'D: "+l.name),e&&!/loaded|complete/.test(e)||(l.isComplete=!0,!0===l.isBlock&&u())},i.getElementsByTagName("head")[0].appendChild(t)}},d=function(e,i){this.name=e,this.path="",this.async=!1,this.defer=!1,this.isBlock=!1,this.blockedBy=[],this.isInitialized=!0,this.isError=!1,this.isComplete=i,this.proceedIfError=!1,this.isTimeDelay=!1,this.process=function(){}};function c(e){!0!==h(e)&&0!=s&&e.process()}function h(e){if(!0===e.isTimeDelay&&!1===n)return f(e.name+" blocked = TIME DELAY!"),!0;if(p(e.blockedBy))for(var i=0;i<e.blockedBy.length;i++){var o=e.blockedBy[i];if(!1===t.hasOwnProperty(o))return f(e.name+" blocked = "+o),!0;if(!0===e.proceedIfError&&!0===t[o].isError)return!1;if(!1===t[o].isComplete)return f(e.name+" blocked = "+o),!0}return!1}function f(e){var i=window.location.href,t=new RegExp("[?&]ezq=([^&#]*)","i").exec(i);"1"===(t?t[1]:null)&&console.debug(e)}function u(){++e>200||(f("let's go"),m(o),m(r))}function m(e){for(var i in e)if(!1!==e.hasOwnProperty(i)){var t=e[i];!0===t.isComplete||h(t)||!0===t.isInitialized||!0===t.isError?!0===t.isError?f(t.name+": error"):!0===t.isComplete?f(t.name+": complete already"):!0===t.isInitialized&&f(t.name+": initialized already"):t.process()}}function p(e){return"[object Array]"==Object.prototype.toString.call(e)}return window.addEventListener("load",(function(){setTimeout((function(){n=!0,f("TDELAY -----"),u()}),5e3)}),!1),{addFile:function(e,i,n,s,a,d,h,f,u){var m=new l(e,i,n,s,a,d,h,u);!0===f?o[e]=m:r[e]=m,t[e]=m,c(m)},addDelayFile:function(e,i){var n=new l(e,i,!1,[],!1,!1,!0);n.isTimeDelay=!0,f(e+" ...  FILE! TDELAY"),r[e]=n,t[e]=n,c(n)},addFunc:function(e,n,s,l,d,h,f,u,m,p){!0===h&&(e=e+"_"+i++);var w=new a(e,n,s,l,d,f,u,p);!0===m?o[e]=w:r[e]=w,t[e]=w,c(w)},addDelayFunc:function(e,i,n){var o=new a(e,i,n,!1,[],!0,!0);o.isTimeDelay=!0,f(e+" ...  FUNCTION! TDELAY"),r[e]=o,t[e]=o,c(o)},items:t,processAll:u,setallowLoad:function(e){s=e},markLoaded:function(e){if(e&&0!==e.length){if(e in t){var i=t[e];!0===i.isComplete?f(i.name+" "+e+": error loaded duplicate"):(i.isComplete=!0,i.isInitialized=!0)}else t[e]=new d(e,!0);f("markLoaded dummyfile: "+t[e].name)}},logWhatsBlocked:function(){for(var e in t)!1!==t.hasOwnProperty(e)&&h(t[e])}}}();__ez.evt.add=function(e,t,n){e.addEventListener?e.addEventListener(t,n,!1):e.attachEvent?e.attachEvent("on"+t,n):e["on"+t]=n()},__ez.evt.remove=function(e,t,n){e.removeEventListener?e.removeEventListener(t,n,!1):e.detachEvent?e.detachEvent("on"+t,n):delete e["on"+t]};__ez.script.add=function(e){var t=document.createElement("script");t.src=e,t.async=!0,t.type="text/javascript",document.getElementsByTagName("head")[0].appendChild(t)};__ez.dot={};__ez.queue.addFile('/detroitchicago/boise.js', '/detroitchicago/boise.js?gcb=195-2&cb=2', true, [], true, false, true, false);__ez.queue.addFile('/parsonsmaize/abilene.js', '/parsonsmaize/abilene.js?gcb=195-2&cb=28', true, [], true, false, true, false);</script>
+<script data-ezscrex="false" type="text/javascript" data-cfasync="false">window._ezaq = Object.assign({}, typeof window._ezaq !== "undefined" ? window._ezaq : {}, {"ad_cache_level":1,"domain_id":173770,"ezcache_level":2,"ezcache_skip_code":0,"has_bad_image":0,"has_bad_words":0,"is_sitespeed":0,"lt_cache_level":0,"page_view_id":"97b883d7-8ffb-4f88-7490-931c0544939c","response_size_orig":81454,"response_time_orig":3,"template_id":134,"url":"https://plantuml.com/ru/ebnf","word_count":3288,"worst_bad_word_level":0});__ez.queue.markLoaded('ezaqBaseReady');</script>
+<script type="text/javascript">(function(){function storageAvailable(type){var storage;try{storage=window[type];var x='__storage_test__';storage.setItem(x,x);storage.removeItem(x);return true;}
+catch(e){return e instanceof DOMException&&(e.code===22||e.code===1014||e.name==='QuotaExceededError'||e.name==='NS_ERROR_DOM_QUOTA_REACHED')&&(storage&&storage.length!==0);}}
+function remove_ama_config(){if(storageAvailable('localStorage')){localStorage.removeItem("google_ama_config");}}
+remove_ama_config()})()</script>
+<script type="text/javascript">var ezoicTestActive = true</script>
+<script data-ezscrex="false" type="text/javascript" data-cfasync="false">window._ezaq = Object.assign({}, typeof window._ezaq !== "undefined" ? window._ezaq : {}, {"ab_test_id":"mod174-c","ad_cache_level":1,"ad_count_adjustment":0,"ad_lazyload_version":0,"ad_load_version":1,"ad_location_ids":"","adx_ad_count":0,"ai_placeholder_cache_level":1,"ai_placeholder_placement_cnt":-1,"bidder_method":1,"bidder_version":3,"city":"Krasnoyarsk","country":"RU","days_since_last_visit":-1,"display_ad_count":0,"domain_id":173770,"domain_test_group":20230802,"ds_adsize_opt_id":-1,"engaged_time_visit":0,"ezcache_level":2,"ezcache_skip_code":0,"form_factor_id":1,"framework_id":1,"has_bad_image":0,"has_bad_words":0,"iab_category":"","iab_category_0":"596","is_embed":false,"is_from_recommended_pages":false,"is_return_visitor":false,"is_sitespeed":0,"last_page_load":"","last_pageview_id":"","lt_cache_level":0,"max_ads":0,"metro_code":0,"optimization_version":1,"page_ad_positions":"","page_view_count":255,"page_view_id":"97b883d7-8ffb-4f88-7490-931c0544939c","position_selection_id":0,"postal_code":"660000","pv_event_count":0,"response_size_orig":81454,"response_time_orig":3,"serverid":"i-01330c5887ea3c035","state":"KYA","sub_page_ad_positions":"","t_epoch":1697690905,"template_id":134,"time_on_site_visit":0,"url":"https://plantuml.com/ru/ebnf","word_count":3288,"worst_bad_word_level":0});__ez.queue.markLoaded('ezaqReady');</script>
+<script data-ezscrex='false' data-cfasync='false' data-pagespeed-no-defer>__ez.queue.addFile('/parsonsmaize/mulvane.js', '/parsonsmaize/mulvane.js?gcb=195-2&cb=5', true, ['/parsonsmaize/abilene.js'], true, false, true, false);__ez.queue.addFile('/parsonsmaize/olathe.js', '/parsonsmaize/olathe.js?gcb=195-2&cb=20', false, ['/parsonsmaize/abilene.js','/parsonsmaize/mulvane.js'], true, false, true, false);__ez.queue.addFile('/porpoiseant/et.js', '/porpoiseant/et.js?gcb=195-2&cb=2', false, [], true, false, true, false);!function(){var e;__ez.vep=(e=[],{Add:function(i,t){__ez.dot.isDefined(i)&&__ez.dot.isValid(t)&&e.push({type:"video",video_impression_id:i,domain_id:__ez.dot.getDID(),t_epoch:__ez.dot.getEpoch(0),data:__ez.dot.dataToStr(t)})},Fire:function(){if(void 0===document.visibilityState||"prerender"!==document.visibilityState){if(__ez.dot.isDefined(e)&&e.length>0)for(;e.length>0;){var i=5;i>e.length&&(i=e.length);var t=e.splice(0,i),o=__ez.dot.getURL("/detroitchicago/grapefruit.gif")+"?orig="+(!0===__ez.template.isOrig?1:0)+"&v="+btoa(JSON.stringify(t));__ez.dot.Fire(o)}e=[]}}})}();</script><script data-ezscrex='false' data-cfasync='false' data-pagespeed-no-defer>!function(){function e(i){return e="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e},e(i)}__ez.pel=function(){var i=[];function t(t,o,d,_,n,r,a,s){if(__ez.dot.isDefined(t)&&0!=__ez.dot.isAnyDefined(t.getSlotElementId,t.ElementId)){void 0===s&&(s=!1);var p=parseInt(__ez.dot.getTargeting(t,"ap")),f=__ez.dot.getSlotIID(t),u=__ez.dot.getAdUnit(t,s),z=parseInt(__ez.dot.getTargeting(t,"compid")),g=0,c=0,l=function(i){if("undefined"==typeof _ezim_d)return!1;var t=__ez.dot.getAdUnitPath(i).split("/").pop();if("object"===("undefined"==typeof _ezim_d?"undefined":e(_ezim_d))&&_ezim_d.hasOwnProperty(t))return _ezim_d[t];for(var o in _ezim_d)if(o.split("/").pop()===t)return _ezim_d[o];return!1}(t);"object"==e(l)&&(void 0!==l.creative_id&&(c=l.creative_id),void 0!==l.line_item_id&&(g=l.line_item_id)),__ez.dot.isDefined(f,u)&&__ez.dot.isValid(o)&&("0"===f&&!0!==s||""===u||i.push({type:"impression",impression_id:f,domain_id:__ez.dot.getDID(),unit:u,t_epoch:__ez.dot.getEpoch(0),revenue:d,est_revenue:_,ad_position:p,ad_size:"",bid_floor_filled:n,bid_floor_prev:r,stat_source_id:a,country_code:__ez.dot.getCC(),pageview_id:__ez.dot.getPageviewId(),comp_id:z,line_item_id:g,creative_id:c,data:__ez.dot.dataToStr(o),is_orig:s||__ez.template.isOrig}))}}function o(){void 0!==document.visibilityState&&"prerender"===document.visibilityState||(__ez.dot.isDefined(i)&&i.length>0&&[i.filter((function(e){return e.is_orig})),i.filter((function(e){return!e.is_orig}))].forEach((function(e){for(;e.length>0;){var i=e[0].is_orig||!1,t=5;t>e.length&&(t=e.length);var o=e.splice(0,t),d=__ez.dot.getURL("/porpoiseant/army.gif")+"?orig="+(!0===i?1:0)+"&sts="+btoa(JSON.stringify(o));(void 0!==window.isAmp&&isAmp||void 0!==window.ezWp&&ezWp)&&void 0!==window._ezaq&&_ezaq.hasOwnProperty("domain_id")&&(d+="&visit_uuid="+_ezaq.visit_uuid),__ez.dot.Fire(d)}})),i=[])}return{Add:t,AddAndFire:function(e,i){t(e,i,0,0,0,0,0),o()},AddAndFireOrig:function(e,i){t(e,i,0,0,0,0,0,!0),o()},AddById:function(e,t,o,d){var _=e.split("/");if(__ez.dot.isDefined(e)&&3===_.length&&__ez.dot.isValid(t)){var n=_[0],r={type:"impression",impression_id:_[2],domain_id:__ez.dot.getDID(),unit:n,t_epoch:__ez.dot.getEpoch(0),pageview_id:__ez.dot.getPageviewId(),data:__ez.dot.dataToStr(t),is_orig:o||__ez.template.isOrig};void 0!==d&&(r.revenue=d),i.push(r)}},Fire:o,GetPixels:function(){return i}}}()}();__ez.queue.addFile('/detroitchicago/raleigh.js', '/detroitchicago/raleigh.js?gcb=195-2&cb=6', false, ['/parsonsmaize/abilene.js'], true, false, true, false);__ez.queue.addFile('/detroitchicago/vista.js', '/detroitchicago/vista.js?gcb=195-2&cb=5', false, ['/parsonsmaize/abilene.js'], true, false, true, false);__ez.queue.addFile('/detroitchicago/tampa.js', '/detroitchicago/tampa.js?gcb=195-2&cb=5', false, ['/parsonsmaize/abilene.js'], true, false, true, false);</script><base href=""/><meta name="flattr:id" content="1ew3x0"/><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "url": "https://plantuml.com",
+  "name": "PlantUML",
+  "sameAs" : ["https://twitter.com/plantuml","https://en.wikipedia.org/wiki/PlantUML","https://www.wikidata.org/wiki/Q18346546"],
+  "logo": "https://cdn-0.plantuml.com/logo3.png",
+  "contactPoint": [{
+    "@type": "ContactPoint",
+    "email": "plantuml@gmail.com",
+    "url": "https://plantuml.com",
+    "contactType": "customer service"
+  }]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+    "@type": "ListItem",
+    "position": 1,
+    "item": {
+      "@id": "https://plantuml.com",
+      "name": "Home"
+    }
+  },{
+    "@type": "ListItem",
+    "position": 2,
+    "item": {
+      "@id": "https://plantuml.com/sitemap-language-specification",
+      "name": "Language specification"
+    }
+  },{
+    "@type": "ListItem",
+    "position": 3,
+    "item": {
+      "@id": "https://plantuml.com/ebnf",
+      "name": "Extended Backus-Naur Form"
+  }
+  }]
+}
+</script><link rel="canonical" href="ebnf.html"/><link rel="alternate" hreflang="x-default" href="../ebnf.html"/><link rel="alternate" hreflang="de" href="../de/ebnf.html"/><link rel="alternate" hreflang="en" href="../ebnf.html"/><link rel="alternate" hreflang="es" href="../es/ebnf.html"/><link rel="alternate" hreflang="fr" href="../fr/ebnf.html"/><link rel="alternate" hreflang="ja" href="../ja/ebnf.html"/><link rel="alternate" hreflang="ru" href="ebnf.html"/><link rel="alternate" hreflang="ko" href="../ko/ebnf.html"/><link rel="alternate" hreflang="zh" href="../zh/ebnf.html"/><link rel="shortcut icon" href="../favicon.ico"/><link rel="preload" as="image" href="../svgrepo-house.svg"/><link rel="preload" as="image" href="../svgrepo-text-news.svg"/><link rel="preload" as="image" href="../svgrepo-rocket-3-start.svg"/><link rel="preload" as="image" href="../svgrepo-server.svg"/><link rel="preload" as="image" href="../svgrepo-play.svg"/><link rel="preload" as="image" href="../svgrepo-forum.svg"/><link rel="preload" as="image" href="../svgrepo-add-to-online-cart.svg"/><link rel="preload" as="image" href="../svgrepo-forum-message.svg"/><link rel="preload" as="image" href="../svgrepo-palette-fill.svg"/><link rel="preload" as="image" href="../svgrepo-cpu.svg"/><link rel="preload" as="image" href="../svgrepo-books-library.svg"/><link rel="preload" as="image" href="../svgrepo-signpost-fill.svg"/><link rel="preload" as="image" href="../svgrepo-library.svg"/><link rel="preload" as="image" href="../flags21.png"/><link rel="preload" as="image" href="../svgrepo-uxwing-light-mode-toggle.svg"/><title>Extended Backus–Naur Form diagram</title><meta name="description" content="EBNF is a code that expresses the syntax of a formal language. An EBNF consists of terminal symbols and non-terminal production rules."/><meta property="og:type" content="article"/><meta property="og:url" content="https://plantuml.com/ru/ebnf"/><meta property="og:site_name" content="PlantUML.com"/><meta name="twitter:image" content="https://plantuml.com/og-ebnf"/><meta property="og:locale" content="ru"/><meta name="twitter:card" content="summary"/><meta name="twitter:site" content="@PlantUML"/><meta name="twitter:creator" content="@PlantUML"/><style>li{margin:2px}#external li{margin:13px}.pezoic{max-width:970px}@media screen and (max-width:1600px){.pezoic{max-width:768px}}.coptable{max-width:90%}.mytab{display:inline-block;border-radius:3px;border:1px solid #e1e4e8}.mytab:hover{border:1px dashed #0366d6;cursor:pointer;color:#0366d6;background:#f6f8fa}.cop{margin:25px 10px 0 10px}.cop:hover{cursor:pointer;filter:invert(30%) sepia(75%) saturate(4001%) hue-rotate(201deg) brightness(88%) contrast(98%)}.cop2{margin:25px 10px 0 10px}.cop2:hover{cursor:pointer}.msg{position:absolute;color:#396;background-color:#FFF;margin-top:55px;display:none;border-radius:3px;border:1px solid #4dff00}.mycell0{float:left;vertical-align:top;padding:10px}.mycell0 code:hover{cursor:default;color:#000}.mycell{float:right;vertical-align:top;padding:10px;max-width:55vw;overflow-x:auto}.mycell0 pre{max-width:55vw;overflow-x:auto}.cod{background:#edeff3;padding:2px 5px;border-radius:3px}.colo{display:inline-block;background:#edeff3;padding:7px 12px;border-radius:3px}.tag,.tagg,.tago,.tagr{text-rendering:optimizeLegibility;display:inline-block;padding:3px 5px 2px 4px;text-decoration:none;white-space:nowrap;border:1px solid #999;text-transform:uppercase;text-align:center;border-radius:3px;font-size:11px;font-weight:bold;line-height:90%}.tag{background-color:#eee}.tagg{background-color:#98fb98}.tago{background-color:#fafa00}.tagr{background-color:#ff4500}a{text-decoration:none;color:#0366d6}a:hover{text-decoration:underline}.menu1{border:0;font-family:Helvetica,sans-serif;font-size:14px;padding:0;margin:0;white-space:nowrap;overflow:hidden;vertical-align:middle;line-height:30px}.menu1 a{text-align:center;padding:10px 7px 10px 7px;text-decoration:none;color:#637282}.menu1 a:hover{color:#0366d6}#menu0{top:0;z-index:4;margin:0 0 0 10px;padding:0}@media screen and (max-width:1300px){#menu0{visibility:hidden}}.mhov img{margin:0 5px 0 0;padding:0}.mhov:hover{filter:invert(25%) sepia(97%) saturate(2026%) hue-rotate(201deg) brightness(91%) contrast(98%)}#menuside2{border:0;font-family:Helvetica,sans-serif;font-size:14px;padding:20px 0 4px 0;margin:0}#menuside2 span{vertical-align:top}#menuside2 li{list-style:none;position:relative;padding:0;margin:10px 20px 10px 10px;border:0}#menuside2 li a{display:inline-block;text-decoration:none;color:#637282;width:100%}#BC{z-index:0;padding-top:5px;top:35px}.breadcrumb{z-index:1;font-family:Helvetica,sans-serif;font-size:14px;text-align:center;display:inline-block;overflow:hidden;border-radius:5px}.breadcrumb a{text-decoration:none;outline:0;display:block;float:left;font-size:12px;line-height:24px;color:#373f49;padding:0 10px 0 35px;background:#f0f1f1;background:linear-gradient(#f0f1f1,#c6d2d2);position:relative}.breadcrumb a:first-child{padding-left:21px;border-radius:5px 0 0 5px}.breadcrumb a:first-child:before{left:14px}.breadcrumb a:last-child{visibility:hidden}.breadcrumb a.active,.breadcrumb a:hover{color:#0366d6;background:#c6d2d2;background:linear-gradient(#e3e4e4,#b8c7c7)}.breadcrumb a.active:after,.breadcrumb a:hover:after{background:#c6d2d2;background:linear-gradient(135deg,#e3e4e4,#b8c7c7)}.breadcrumb a:after{content:'';position:absolute;top:0;right:-12px;width:24px;height:24px;transform:scale(0.707) rotate(45deg);z-index:1;background:#f0f1f1;background:linear-gradient(135deg,#f0f1f1,#c6d2d2);box-shadow:2px -2px 0 2px rgba(0,0,0,0.1),3px -3px 0 2px rgba(255,255,255,0.1);border-radius:0 5px 0 50px}.breadcrumb a:last-child:after{content:none;visibility:hidden}.lga,.lga a,.lgi,.lgi a{font-family:Helvetica,sans-serif;font-size:13px;text-align:center;color:#fff;padding:0 5px;margin:0}.lga,.lga a{background-color:#008}.lgi,.lgi a{background-color:#888}.lga:hover,.lga:hover a{text-decoration:none;color:#BBB}.lgi:hover,.lgi:hover a{text-decoration:none;color:#CCC}</style><style>.backtop{margin:0 10px}.backtop:hover{cursor:pointer;filter:invert(30%) sepia(75%) saturate(4001%) hue-rotate(201deg) brightness(88%) contrast(98%)}</style><style>.dropbtn{padding:0;border:0;background:0}.dropdown{position:relative;display:inline-block;margin:0 10px}.dropdown-content{display:none;position:absolute;background-color:#f1f1f1;min-width:160px;box-shadow:0 8px 16px 0 rgba(0,0,0,0.2);z-index:1}.dropdown-content img{vertical-align:middle;margin:0 8px 0 1px}.dropdown-content a{font-size:small;font-weight:normal;color:black;padding:5px 10px;text-decoration:none;display:block}.dropdown-content a:hover{background-color:#ddd;color:#0366d6}.dropdown:hover .dropdown-content{display:block}.dropdown:hover .dropbtn{background-color:#3e8e41}</style><style>#flex1{margin:0;padding:0;display:flex;flex-direction:row;width:378px;height:100%}#lll{flex-grow:1;flex-shrink:1;max-width:162px;overflow:hidden}#mmm{flex-grow:0;flex-shrink:0;background:#edeff3;width:210px;min-width:210px;max-width:210px;flex-grow:0;flex-shrink:0;border-left:1px solid #d4d8de}#qqq{flex-grow:0;flex-shrink:0;width:4px;min-width:4px;max-width:4px;flex-grow:0;flex-shrink:0}#rrr{flex-grow:1;flex-shrink:1;max-width:162px;overflow:hidden}.cde{display:flex;flex-direction:column;justify-content:space-between;height:100%}.cd{display:flex;flex-direction:column;justify-content:space-start;height:100%}.aaa{height:30px;min-height:30px;max-height:30px;flex-grow:0;flex-shrink:0;background:#edeff3;border-bottom:1px solid #d4d8de}.bbb,.bbborder{flex-grow:1;flex-shrink:0}.bbborder{border-left:1px solid #d4d8de}#header{z-index:10;position:fixed;left:378px;right:0;height:30px;top:0;background:#edeff3;border-bottom:1px solid #d4d8de}#header2{z-index:7;position:fixed;left:378px;right:0;height:10px;top:30px;background:#fefefe}#left0{top:0;position:fixed;left:0;margin:0;bottom:0;width:378px;padding:0;z-index:2}#root{padding:0;margin:40px 0 0 388px;background:#fefefe}body{margin:auto;overflow-x:hidden;background:#fefefe}@media screen and (max-width:1190px){#flex1,#left0{width:215px}#root{margin:40px 0 0 224px}#header,#header2{left:215px}#left0{left:0}#lll,#rrr{width:0;visibility:hidden;flex-grow:0;flex-shrink:0}}@media screen and (max-width:1010px){#root{margin:0 0 0 216px}#header,#header2{display:none}#lll,#qqq{width:0;visibility:hidden;flex-grow:0;flex-shrink:0}#mmm{border-right:1px solid #d4d8de}}@media screen and (min-width:1700px){#header,#header2{left:518px}#left0,#flex1{width:518px}#root{margin-left:528px}#lll,#rrr{max-width:302px}}</style><script>window.pushMST_config={vapidPK:"BBodn2vLFoDO5AdCfmOOzNmcUsn52kTA6JNZNYVFymzEdWHonz_bkUcsaTkPXHvNGRkRUSAxMbup-H0l2sb1h_Q",enableOverlay:true,swPath:"/sw.js",i18n:{}};var pushmasterTag=document.createElement("script");pushmasterTag.src="https://cdn.pushmaster-cdn.xyz/scripts/publishers/629f5e297baecc00098a271b/SDK.js";pushmasterTag.setAttribute("defer","");var firstScriptTag=document.getElementsByTagName("script")[0];firstScriptTag.parentNode.insertBefore(pushmasterTag,firstScriptTag);</script><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-TKZNNQT9CZ"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date());gtag("config","G-TKZNNQT9CZ");</script><script>var llg="ru";var az=0;var amdark=0;function ljs(b){if(az){return false}var a=document.createElement("script");a.type="text/javascript";a.src="/btn-"+b+".js";document.body.innerHTML="<i style='position:absolute;top:30%;width:100%;'><center>Loading in progress...";document.body.appendChild(a)}function ctc(c){document.getElementById("img"+c).classList.remove("cop");document.getElementById("img"+c).classList.add("cop2");document.getElementById("pre"+c).style.backgroundColor="#4dff00";document.getElementById("msg"+c).style.display="inline";setTimeout(function(){document.getElementById("img"+c).classList.remove("cop2");document.getElementById("img"+c).classList.add("cop");document.getElementById("pre"+c).style.backgroundColor="";document.getElementById("msg"+c).style.display="none"},800);text=document.getElementById("pre"+c).innerText;if(window.clipboardData&&window.clipboardData.setData){return window.clipboardData.setData("Text",text)}else{if(document.queryCommandSupported&&document.queryCommandSupported("copy")){var a=document.createElement("textarea");a.textContent=text;a.style.position="fixed";document.body.appendChild(a);a.select();try{return document.execCommand("copy")}catch(b){return false}finally{document.body.removeChild(a)}}}};</script><script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><script type='text/javascript'>
+var ezoTemplate = 'pub_site';
+var ezouid = '1';
+var ezoFormfactor = '1';
+</script><script data-ezscrex="false" type='text/javascript'>
+var soc_app_id = '0';
+var did = 173770;
+var ezdomain = 'plantuml.com';
+var ezoicSearchable = 1;
+</script>
+<script data-ezscrex='false' data-pagespeed-no-defer data-cfasync='false'>
+function create_ezolpl() {
+	var d = new Date();
+	d.setTime(d.getTime() + (365*24*60*60*1000));
+	var expires = "expires="+d.toUTCString();
+	__ez.ck.setByCat("ezux_lpl_173770=" + new Date().getTime() + "|" + _ezaq.page_view_id + "|" + _ezaq.is_return_visitor + "; " + expires, 3);
+}
+function attach_ezolpl() {
+	if (document.readyState === "complete") {
+		create_ezolpl();
+		return;
+	}
+	window.addEventListener("load", create_ezolpl);
+}
+
+__ez.queue.addFunc("attach_ezolpl", "attach_ezolpl", null, false, ['/detroitchicago/boise.js'], true, false, false, false);
+</script></head><body><div id="left0"><div id="flex1"><div id="lll"><div class="cde"><div></div><div><span id="ezoic-pub-ad-placeholder-131"></span><!-- ezoic_pub_ad_placeholder-131-sidebar-120x600-131-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-131-sidebar-160x600-131-nonexxxnonexxxxxxezmaxscaleval100 --></div><div></div></div></div><div id="mmm"><div class="cde"><div><div><span id="ezoic-pub-ad-placeholder-105"></span><!-- ezoic_pub_ad_placeholder-105-sidebar_middle-120x240-105-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-105-sidebar_middle-125x125-105-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-105-sidebar_middle-180x150-105-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-105-sidebar_middle-200x200-105-nonexxxnonexxxxxxezmaxscaleval100 --></div><ul id="menuside2"><li><a href="index.html" class="mhov"><img src="../svgrepo-house.svg" width="16" height="16"/><span>В начало</span></a></li><li><a href="news.html" class="mhov"><img src="../svgrepo-text-news.svg" width="16" height="16"/><span>Что нового ?</span></a></li><li><a href="starting.html" class="mhov"><img src="../svgrepo-rocket-3-start.svg" width="16" height="16"/><span>Быстрый старт</span></a></li><li><a href="https://www.plantuml.com/plantuml/uml/SyfFKj2rKt3CoKnELR1Io4ZDoSa70000" class="mhov"><img src="../svgrepo-server.svg" width="16" height="16"/><span>Online Server</span></a></li><li><a href="running.html" class="mhov"><img src="../svgrepo-play.svg" width="16" height="16"/><span>Запуск</span></a></li><li><a href="faq.html" class="mhov"><img src="../svgrepo-forum.svg" width="16" height="16"/><span>F.A.Q.</span></a></li><li><a href="download.html" class="mhov"><img src="../svgrepo-add-to-online-cart.svg" width="16" height="16"/><span>Скачать</span></a></li><li><a href="../qa.html" class="mhov"><img src="../svgrepo-forum-message.svg" width="16" height="16"/><span>Форум</span></a></li><li><a href="theme.html" class="mhov"><img src="../svgrepo-palette-fill.svg" width="16" height="16"/><span>Theme</span></a></li><li><a href="preprocessing.html" class="mhov"><img src="../svgrepo-cpu.svg" width="16" height="16"/><span>Препроцессинг</span></a></li><li><a href="stdlib.html" class="mhov"><img src="../svgrepo-books-library.svg" width="16" height="16"/><span>Стандартная библиотека</span></a></li><li><a href="https://crashedmind.github.io/PlantUMLHitchhikersGuide" class="mhov"><img src="../svgrepo-signpost-fill.svg" width="16" height="16"/><span>Hitchhiker&#39;s Guide</span></a></li><li><a href="guide.html" class="mhov"><img src="../svgrepo-library.svg" width="16" height="16"/><span>PDF Guide</span></a></li></ul><div><span id="ezoic-pub-ad-placeholder-108"></span><!-- ezoic_pub_ad_placeholder-108-sidebar_middle-120x240-108-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-108-sidebar_middle-125x125-108-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-108-sidebar_middle-180x150-108-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-108-sidebar_middle-200x200-108-nonexxxnonexxxxxxezmaxscaleval100 --></div></div><div></div><div style="margin-bottom:35px;"><span id="ezoic-pub-ad-placeholder-186"></span><!-- ezoic_pub_ad_placeholder-186-sidebar_middle-120x240-186-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-186-sidebar_middle-125x125-186-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-186-sidebar_middle-180x150-186-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-186-sidebar_middle-200x200-186-nonexxxnonexxxxxxezmaxscaleval100 --></div></div></div><div id="qqq"><div class="cd"><div class="aaa"></div><div class="bbborder"></div></div></div><div id="rrr"><div class="cd"><div class="aaa"></div><div style="height:5px;"></div><div class="bbb"><div class="cde"><div></div><div><span id="ezoic-pub-ad-placeholder-175"></span><!-- ezoic_pub_ad_placeholder-175-sidebar-120x600-175-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-175-sidebar-160x600-175-nonexxxnonexxxxxxezmaxscaleval100 --></div><div></div></div></div></div></div></div></div><style>#contmenu{display:flex;height:30px;width:100%;margin:0;padding:0}#contmenua{height:30px;padding-right:25px}#contmenub{z-index:15;display:inline-block;flex-grow:1;flex-shrink:1;height:30px;background-color:#edeff3}#magic{white-space:nowrap;overflow:hidden;z-index:14;position:fixed;top:0;right:50px;height:30px;width:30px}#magic2{white-space:nowrap;overflow:hidden;z-index:16;position:fixed;top:0;right:0;height:30px;width:50px;background-color:#edeff3}#magic2 img{margin:5px 0 0 5px;filter:invert(44%) sepia(27%) saturate(310%) hue-rotate(170deg) brightness(92%) contrast(83%)}#magic2:hover img{filter:invert(25%) sepia(97%) saturate(2026%) hue-rotate(201deg) brightness(91%) contrast(98%)}#magic:hover #svgrepoleft{filter:invert(22%) sepia(53%) saturate(4563%) hue-rotate(202deg) brightness(95%) contrast(98%)}#magic:hover{width:100%;height:31px}#aze{height:30px;display:flex;flex-direction:row-reverse}#aze1{height:30px;background-color:#edeff3}#aze2{height:30px;background-color:#edeff3;padding-left:10px;border-left:1px solid #d4d8de;border-bottom:1px solid #d4d8de}#aze1 img{filter:invert(46%) sepia(6%) saturate(1254%) hue-rotate(171deg) brightness(94%) contrast(92%)}#aze3{width:3px;height:30px;background-color:#edeff3}</style><div id="header"><div id="contmenu"><div id="contmenua"><div class="menu1"><a href="sequence-diagram.html">последовательност</a><a href="use-case-diagram.html">прецедентов</a><a href="class-diagram.html">классов</a><a href="activity-diagram-beta.html">активности</a><a href="component-diagram.html">компонент</a><a href="state-diagram.html">состояний</a><a href="object-diagram.html">объект</a><a href="deployment-diagram.html">развёртывания</a><a href="timing-diagram.html">синхронизации</a><a href="nwdiag.html">Network</a><a href="salt.html">Wireframe</a><a href="archimate-diagram.html">Archimate</a><a href="gantt-diagram.html">Gantt</a><a href="mindmap-diagram.html">MindMap</a><a href="wbs-diagram.html">WBS</a><a href="json.html">JSON</a><a href="yaml.html">YAML</a></div></div><div id="contmenub"></div></div><div id="magic"><div id="aze"><div id="aze1"><img id="svgrepoleft" width="30" height="30" src="../svgrepo-left.svg"/></div><div id="aze2"><div class="menu1"><a href="sequence-diagram.html">последовательност</a><a href="use-case-diagram.html">прецедентов</a><a href="class-diagram.html">классов</a><a href="activity-diagram-beta.html">активности</a><a href="component-diagram.html">компонент</a><a href="state-diagram.html">состояний</a><a href="object-diagram.html">объект</a><a href="deployment-diagram.html">развёртывания</a><a href="timing-diagram.html">синхронизации</a><a href="nwdiag.html">Network</a><a href="salt.html">Wireframe</a><a href="archimate-diagram.html">Archimate</a><a href="gantt-diagram.html">Gantt</a><a href="mindmap-diagram.html">MindMap</a><a href="wbs-diagram.html">WBS</a><a href="json.html">JSON</a><a href="yaml.html">YAML</a></div></div><div id="aze3"></div></div></div><div id="magic2"><a href="../ru-dark/ebnf.html"><img src="../svgrepo-uxwing-light-mode-toggle.svg" height="20"/></a></div></div><div id="header2"></div><div id="root"><style>#haut1{margin:50px 0 20px;padding:0;min-height:80px}#donate{padding-top:5px;min-height:30px}</style><div id="haut1"><div style="float:left;"><div class="breadcrumb"><a href="sitemap.html">PlantUML</a><a href="sitemap-language-specification.html">Language specification</a><a href="ebnf.html">Extended Backus-Naur Form</a><a href="ebnf.html#"></a></div><div id="donate">   <a href="https://discord.gg/sXhzexAQGh" style="text-decoration: none;"><img src="https://img.shields.io/discord/1083727021328306236?color=5865F2&amp;logo=discord&amp;logoColor=white" alt="Discord server"/></a>   <a href="https://github.com/sponsors/plantuml/" style="text-decoration: none;"><img src="https://img.shields.io/github/sponsors/plantuml?logo=github"/></a>   <a href="https://www.patreon.com/bePatron?patAmt=1&amp;u=527450&amp;rid=152970" style="text-decoration: none;"><img src="https://img.shields.io/badge/patreon-122-chocolate?logo=patreon"/></a>   <a href="../lp.html" style="text-decoration: none;"><img src="https://img.shields.io/liberapay/patrons/plantuml?color=gold&amp;logo=liberapay&amp;label=liberapay"/></a>   <a href="../en/paypal.html" style="text-decoration: none;"><img src="https://img.shields.io/badge/paypal-296-skyblue?logo=paypal&amp;logoColor=red"/></a></div></div><div style="float:right; margin:3px 0;"><style>#langlist{display:flex;justify-content:space-between;width:317px;height:16px;margin:3px 10px 3px 0}.sel2{border:2px solid #fefefe}.nosel2{border:2px solid #fefefe;filter:grayscale(100%) opacity(75%)}.sel2:hover,.nosel2:hover{cursor:pointer;border:2px solid #0366d6;border-spacing:0;filter:grayscale(0);filter:contrast(200%);filter:brightness(150%)}#flag1,#flag2,#flag3,#flag4,#flag5,#flag6,#flag7,#flag8{background:url(../flags21.png);background-repeat:no-repeat;background-clip:content-box;width:22px;height:16px}#flag2{background-position:-22px 0}#flag3{background-position:-44px 0}#flag4{background-position:-66px 0}#flag5{background-position:-88px 0}#flag6{background-position:-110px 0}#flag7{background-position:-132px 0}#flag8{background-position:-154px 0}</style><div id="langlist"><div id="flag1" onclick="location.href=&#39;/en/ebnf&#39;" class="nosel2"></div><div id="flag2" onclick="location.href=&#39;/de/ebnf&#39;" class="nosel2"></div><div id="flag3" onclick="location.href=&#39;/es/ebnf&#39;" class="nosel2"></div><div id="flag4" onclick="location.href=&#39;/fr/ebnf&#39;" class="nosel2"></div><div id="flag5" onclick="location.href=&#39;/ja/ebnf&#39;" class="nosel2"></div><div id="flag6" onclick="location.href=&#39;/ko/ebnf&#39;" class="nosel2"></div><div id="flag7" onclick="location.href=&#39;/ru/ebnf&#39;" class="sel2"></div><div id="flag8" onclick="location.href=&#39;/zh/ebnf&#39;" class="nosel2"></div></div></div></div><p><style>#topsticky{z-index:2;margin:0 240px 0 0}@media screen and (min-height:800px){#topsticky{position:sticky;top:40px}}@media screen and (max-width:1500px){#topsticky{margin:0}}</style></p><div id="topsticky"><span id="ezoic-pub-ad-placeholder-647"></span><!-- ezoic_pub_ad_placeholder-647-under_page_title-320x100-647-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-647-under_page_title-300x50v2-647-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-647-under_page_title-320x50-647-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-647-under_page_title-468x60-647-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-647-under_page_title-728x90-647-nonexxxnonexxxxxxezmaxscaleval100 --></div><p><a style="position:relative;top:-38px;" name="7160f69036b2054e"></a><style>#toc{z-index:2;position:sticky;top:40px;list-style-type:none;margin:0;padding:0 10px}.chap{clear:both}#toc ul{list-style-type:none;max-height:87vh;overflow-y:auto;background:#f6f8fa;border-width:2px;border-style:groove;border-radius:3px;border-color:#e1e4e8;margin:0;padding:0}@media screen and (min-height:450px){#toc ul{max-height:89.5vh}}@media screen and (min-height:550px){#toc ul{max-height:91.5vh}}@media screen and (min-height:700px){#toc ul{max-height:93.5vh}}@media screen and (min-height:900px){#toc ul{max-height:94.5vh}}#toc li{margin:5px 5px 5px 10px;padding:0}@media screen and (max-width:1500px){#toctd{display:none}#toc{display:none}}</style><table border="0" cellspacing="0" cellpadding="0" width="100%"><tbody><tr valign="top" width="100%"><td valign="top"><h1 class="chap"><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/cmp/dokuwiki/ru/ebnf#0"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/cmp/asciidoc/ru/ebnf#0"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/cmp/markdown/ru/ebnf#0"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>Синтаксическая диаграмма</h1><p></p><p></p><a href="https://en.wikipedia.org/wiki/Extended_Backus%E2%80%93Naur_form">Расширенная форма Бэкуса-Наура (EBNF)</a> - это тип формального синтаксиса, используемый для описания структуры языка программирования или другого формального языка. Это расширение формы Бакуса-Наура (БНФ), которая была первоначально разработана Джоном Бакусом и Питером Науром для описания синтаксиса языка программирования Алгол. <p></p> EBNF добавляет несколько дополнительных метасимволов к оригинальным метасимволам BNF, что позволяет более кратко и читабельно описать синтаксис языка. Он широко используется в спецификации языков программирования, а также иногда применяется для описания синтаксиса других типов формальных языков, таких как языки запросов к базам данных или языки разметки. <p></p> Базовая поддержка <a href="https://en.wikipedia.org/wiki/Extended_Backus%E2%80%93Naur_form">EBNF</a> была введена в PlantUML. <p></p><center><div class="tago">WARNING</div> <b>This translation need to be updated.</b> <div class="tago">WARNING</div></center><a style="position:relative;top:-38px;" name="480f4bc351a60134"></a><div style="clear:both;height:50px;"></div><h2 class="chap"><img onclick="window.scrollTo(0,0);" title="Back to top" src="../backtop1.svg" width="20" height="20" class="backtop"/><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/cmp/dokuwiki/ru/ebnf#1"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/cmp/asciidoc/ru/ebnf#1"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/cmp/markdown/ru/ebnf#1"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>Minimal binary diagram</h2><p></p><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msg85547c24b9a2b3f143bf5039b17bc17d" class="msg"> 🎉 Copied! </div><img width="16" height="16" id="img85547c24b9a2b3f143bf5039b17bc17d" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;85547c24b9a2b3f143bf5039b17bc17d&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;85547c24b9a2b3f143bf5039b17bc17d&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;85547c24b9a2b3f143bf5039b17bc17d&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="pre85547c24b9a2b3f143bf5039b17bc17d">@startebnf
+binaryDigit = &#34;0&#34; | &#34;1&#34;;
+@endebnf
+</pre></code></div><div class="mycell"><img loading="lazy" width="150" height="128" class="scale" src="../imgw/img-85547c24b9a2b3f143bf5039b17bc17d.png"/></div></div></td></tr></tbody></table></p><p><a style="position:relative;top:-38px;" name="735437e6fd32864a"></a></p><div style="clear:both;min-height:110px;margin-top:10px;"><div class="pezoic"><span id="ezoic-pub-ad-placeholder-179"></span><!-- ezoic_pub_ad_placeholder-179-under_second_paragraph-234x60-179-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-179-under_second_paragraph-468x60-179-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-179-under_second_paragraph-728x90-179-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-179-under_second_paragraph-970x90-179-nonexxxnonexxxxxxezmaxscaleval100 --></div></div><h2 class="chap"><img onclick="window.scrollTo(0,0);" title="Back to top" src="../backtop1.svg" width="20" height="20" class="backtop"/><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/cmp/dokuwiki/ru/ebnf#2"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/cmp/asciidoc/ru/ebnf#2"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/cmp/markdown/ru/ebnf#2"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>All EBNF Elements</h2><p></p> EBNF elements handled by PlantUML are described below. <p></p><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msgfd68f7091ce4293a82b1a82121c82050" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="imgfd68f7091ce4293a82b1a82121c82050" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;fd68f7091ce4293a82b1a82121c82050&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;fd68f7091ce4293a82b1a82121c82050&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;fd68f7091ce4293a82b1a82121c82050&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="prefd68f7091ce4293a82b1a82121c82050">@startebnf
+title All EBNF elements managed by PlantUML
+
+(* Nodes *)
+litteral = &#34;a&#34;;
+special = ? a ?;
+rule = a;
+
+(* Edges *)
+required = a;
+optional = [a];
+
+zero_or_more = {a};
+one_or_more = a, {a};
+one_or_more_ebnf = {a}-;
+
+zero_or_more_with_separator = [a, {&#39;,&#39;, a}];
+one_or_more_with_separator = a, {&#39;,&#39;, a};
+zero_or_more_with_terminator = {a, &#39;,&#39;};
+one_or_more_with_terminator = a, &#39;,&#39;, {a, &#39;,&#39;};
+one_or_more_with_terminator_ebnf = {a, &#39;,&#39;}-;
+
+alternative = a | b;
+group = (a | b) , c;
+without_group = a | b , c;
+@endebnf
+</pre></code></div><div class="mycell"><img loading="lazy" width="328" height="1612" class="scale" src="../imgw/img-fd68f7091ce4293a82b1a82121c82050.png"/></div></div></td></tr></tbody></table></p><p><a style="position:relative;top:-38px;" name="85aeb07de49e6db4"></a></p><div style="clear:both;height:50px;"></div><h2 class="chap"><img onclick="window.scrollTo(0,0);" title="Back to top" src="../backtop1.svg" width="20" height="20" class="backtop"/><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/cmp/dokuwiki/ru/ebnf#3"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/cmp/asciidoc/ru/ebnf#3"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/cmp/markdown/ru/ebnf#3"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>Special sequence management with <code class="cod">special-sequence-symbol &#34;?&#34;</code></h2><p></p> You can manage special sequence with <code class="cod">special-sequence-symbol &#34;?&#34;</code>. <p></p><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msga94ee4550fa04b8b7313b9f961a148ff" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="imga94ee4550fa04b8b7313b9f961a148ff" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;a94ee4550fa04b8b7313b9f961a148ff&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;a94ee4550fa04b8b7313b9f961a148ff&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;a94ee4550fa04b8b7313b9f961a148ff&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="prea94ee4550fa04b8b7313b9f961a148ff">@startebnf
+(* Example from §8.1 ISO-EBNF *)
+
+h-tab = ? IS0 6429 character Horizontal Tabulation ? ;
+
+new-line = { ? IS0 6429 character Carriage Return ? },
+? IS0 6429 character Line Feed ?,
+{ ? IS0 6429 character Carriage Return ? };
+
+(* Other possible examples: *)
+h-tab = ?Unicode U+0009?;
+empty-special = ??;
+@endebnf
+</pre></code></div><div class="mycell"><img loading="lazy" width="938" height="422" class="scale" src="../imgw/img-a94ee4550fa04b8b7313b9f961a148ff.png"/></div></div></td></tr></tbody></table></p><p></p><p></p><em>[Ref. <a href="https://forum.plantuml.net/16781/allow-special-sequence-management-special-sequence-symbol">QA-16781</a>]</em><a style="position:relative;top:-38px;" name="795877454b6aa54b"></a><div style="clear:both;min-height:110px;margin-top:10px;"><div class="pezoic"><span id="ezoic-pub-ad-placeholder-114"></span><!-- ezoic_pub_ad_placeholder-114-mid_content-234x60-114-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-114-mid_content-468x60-114-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-114-mid_content-728x90-114-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-114-mid_content-970x90-114-nonexxxnonexxxxxxezmaxscaleval100 --></div></div><h2 class="chap"><img onclick="window.scrollTo(0,0);" title="Back to top" src="../backtop1.svg" width="20" height="20" class="backtop"/><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/cmp/dokuwiki/ru/ebnf#4"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/cmp/asciidoc/ru/ebnf#4"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/cmp/markdown/ru/ebnf#4"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>Full repetition management with <code class="cod">repetition-symbol &#34;*&#34;</code></h2><p></p> You can manage repetition with <code class="cod">repetition-symbol &#34;*&#34;</code>. <p></p><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msg3bb700e932c2019fd83c68bedd313e5f" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="img3bb700e932c2019fd83c68bedd313e5f" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;3bb700e932c2019fd83c68bedd313e5f&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;3bb700e932c2019fd83c68bedd313e5f&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;3bb700e932c2019fd83c68bedd313e5f&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="pre3bb700e932c2019fd83c68bedd313e5f">@startebnf
+(* Simplified Fortran example *)
+Fortran_77_continuation_line = 5 * &#34; &#34;,  &#39;[...]&#39;, 66 * [character];
+
+(* Minimal test *)
+test = 4 * &#39;2&#39;;
+
+(* Example of §5.7 Syntactic-factor of ISO EBNF *)
+aa = &#34;A&#34;;
+bb = 3 * aa, &#34;B&#34;;
+cc = 3 * [aa], &#34;C&#34;;
+dd = {aa}, &#34;D&#34;;
+ee = aa, {aa}, &#34;E&#34;;
+ff = 3 * aa, 3 * [aa], &#34;F&#34;;
+gg = 3 * {aa}, &#34;D&#34;;
+@endebnf
+</pre></code></div><div class="mycell"><img loading="lazy" width="328" height="1086" class="scale" src="../imgw/img-3bb700e932c2019fd83c68bedd313e5f.png"/></div></div></td></tr></tbody></table></p><p></p><p></p><em>[Ref. <a href="https://forum.plantuml.net/16750/ebnf-allow-full-repetition-management-with-repetition-symbol">QA-16750</a>]</em><a style="position:relative;top:-38px;" name="bd90d595616d1cf2"></a><div style="clear:both;height:50px;"></div><h2 class="chap"><img onclick="window.scrollTo(0,0);" title="Back to top" src="../backtop1.svg" width="20" height="20" class="backtop"/><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/cmp/dokuwiki/ru/ebnf#5"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/cmp/asciidoc/ru/ebnf#5"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/cmp/markdown/ru/ebnf#5"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>Drawing mode</h2><p></p> You can choice the drawing mode, and having a compacted mode by using <code class="cod">!pragma compact</code> command. <p></p><h3>Expanded mode <em>(by default)</em></h3><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msg87b4b3b9f99d8aea28c473df08672ad9" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="img87b4b3b9f99d8aea28c473df08672ad9" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;87b4b3b9f99d8aea28c473df08672ad9&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;87b4b3b9f99d8aea28c473df08672ad9&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;87b4b3b9f99d8aea28c473df08672ad9&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="pre87b4b3b9f99d8aea28c473df08672ad9">@startebnf
+title Expanded mode
+
+zero_or_more = {a};
+one_or_more = a, {a};
+one_or_more_ebnf = {a}-;
+
+zero_or_more_with_separator = [a, {&#39;,&#39;, a}];
+one_or_more_with_separator = a, {&#39;,&#39;, a};
+zero_or_more_with_terminator = {a, &#39;,&#39;};
+one_or_more_with_terminator = a, &#39;,&#39;, {a, &#39;,&#39;};
+
+@endebnf
+</pre></code></div><div class="mycell"><img loading="lazy" width="268" height="747" class="scale" src="../imgw/img-87b4b3b9f99d8aea28c473df08672ad9.png"/></div></div></td></tr></tbody></table></p><p></p><p></p><h3>Compacted mode </h3><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msg05a4a45cb3e6a64741bd925f316d4854" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="img05a4a45cb3e6a64741bd925f316d4854" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;05a4a45cb3e6a64741bd925f316d4854&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;05a4a45cb3e6a64741bd925f316d4854&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;05a4a45cb3e6a64741bd925f316d4854&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="pre05a4a45cb3e6a64741bd925f316d4854">@startebnf
+!pragma compact
+title Compacted mode
+
+zero_or_more = {a};
+one_or_more = a, {a};
+one_or_more_ebnf = {a}-;
+
+zero_or_more_with_separator = [a, {&#39;,&#39;, a}];
+one_or_more_with_separator = a, {&#39;,&#39;, a};
+zero_or_more_with_terminator = {a, &#39;,&#39;};
+one_or_more_with_terminator = a, &#39;,&#39;, {a, &#39;,&#39;};
+
+@endebnf
+</pre></code></div><div class="mycell"><img loading="lazy" width="248" height="714" class="scale" src="../imgw/img-05a4a45cb3e6a64741bd925f316d4854.png"/></div></div></td></tr></tbody></table></p><p></p><p></p><p></p><em>[Ref. <a href="https://forum.plantuml.net/16692/ebnf-theo-as-default">QA-16692</a>, <a href="https://forum.plantuml.net/16529/could-we-add-syntax-diagrams?show=16685#c16685">QA-16529</a>]</em><a style="position:relative;top:-38px;" name="5398a902fa7ed57d"></a><div style="clear:both;min-height:110px;margin-top:10px;"><div class="pezoic"><span id="ezoic-pub-ad-placeholder-115"></span><!-- ezoic_pub_ad_placeholder-115-long_content-234x60-115-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-115-long_content-468x60-115-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-115-long_content-728x90-115-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-115-long_content-970x90-115-nonexxxnonexxxxxxezmaxscaleval100 --></div></div><h2 class="chap"><img onclick="window.scrollTo(0,0);" title="Back to top" src="../backtop1.svg" width="20" height="20" class="backtop"/><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/cmp/dokuwiki/ru/ebnf#6"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/cmp/asciidoc/ru/ebnf#6"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/cmp/markdown/ru/ebnf#6"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>Notes on Elements</h2><p></p> Notes may be added to elements of your diagram by using EBNF comment tags. <p></p><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msg5b5dc28b31192ba5aeaf3c3fc4a78e6a" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="img5b5dc28b31192ba5aeaf3c3fc4a78e6a" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;5b5dc28b31192ba5aeaf3c3fc4a78e6a&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;5b5dc28b31192ba5aeaf3c3fc4a78e6a&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;5b5dc28b31192ba5aeaf3c3fc4a78e6a&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="pre5b5dc28b31192ba5aeaf3c3fc4a78e6a">@startebnf
+title Comments
+(* Notes for Rule1 *)
+Rule1 = {&#34;a-z&#34; (* any letter *) };
+(* Notes for Rule2 *)
+Rule2 =;
+(* Additional notes and references *)
+@endebnf
+</pre></code></div><div class="mycell"><img loading="lazy" width="232" height="385" class="scale" src="../imgw/img-5b5dc28b31192ba5aeaf3c3fc4a78e6a.png"/></div></div></td></tr></tbody></table></p><p><a style="position:relative;top:-38px;" name="bb2ede32ce6accb8"></a></p><div style="clear:both;height:50px;"></div><h2 class="chap"><img onclick="window.scrollTo(0,0);" title="Back to top" src="../backtop1.svg" width="20" height="20" class="backtop"/><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/cmp/dokuwiki/ru/ebnf#7"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/cmp/asciidoc/ru/ebnf#7"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/cmp/markdown/ru/ebnf#7"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>Using (global) style</h2><p></p><h3>Without style <em>(by default)</em></h3><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msgb4194a0d3d73bca13c2c0570d2f93483" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="imgb4194a0d3d73bca13c2c0570d2f93483" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;b4194a0d3d73bca13c2c0570d2f93483&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;b4194a0d3d73bca13c2c0570d2f93483&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;b4194a0d3d73bca13c2c0570d2f93483&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="preb4194a0d3d73bca13c2c0570d2f93483">@startebnf
+title Title
+not_styled_ebnf = {&#34;a&#34;, c , &#34;a&#34; (* Note on a *)}
+| ? special ?
+| &#34;repetition&#34;, 4 * &#39;2&#39;;
+(* Global End Note *)
+@endebnf
+</pre></code></div><div class="mycell"><img loading="lazy" width="352" height="352" class="scale" src="../imgw/img-b4194a0d3d73bca13c2c0570d2f93483.png"/></div></div></td></tr></tbody></table></p><p></p><p></p><p></p><h3>With style</h3><p></p> You can use <a href="style-evolution.html">style</a> to change rendering of elements. <p></p><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msgab024c94157b027f46ca6d1114f44b6c" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="imgab024c94157b027f46ca6d1114f44b6c" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;ab024c94157b027f46ca6d1114f44b6c&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;ab024c94157b027f46ca6d1114f44b6c&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;ab024c94157b027f46ca6d1114f44b6c&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="preab024c94157b027f46ca6d1114f44b6c">@startebnf
+&lt;style&gt;
+element {
+  ebnf {
+    LineColor blue
+    Fontcolor green
+    Backgroundcolor palegreen
+    note {
+      Backgroundcolor pink
+    }
+  }
+}
+&lt;/style&gt;
+title Title
+styled_ebnf = {&#34;a&#34;, c , &#34;a&#34; (* Note on a *)}
+| ? special ?
+| &#34;repetition&#34;, 4 * &#39;2&#39;;
+(* Global End Note *)
+@endebnf
+</pre></code></div><div class="mycell"><img loading="lazy" width="352" height="352" class="scale" src="../imgw/img-ab024c94157b027f46ca6d1114f44b6c.png"/></div></div></td></tr></tbody></table></p><p></p><p></p><em>[Ref. <a href="https://forum.plantuml.net/16529/could-we-add-syntax-diagrams?show=16685#c16685">QA-16529</a>]</em><a style="position:relative;top:-38px;" name="6ebedcbc408cf830"></a><div style="clear:both;min-height:110px;margin-top:10px;"><div class="pezoic"><span id="ezoic-pub-ad-placeholder-116"></span><!-- ezoic_pub_ad_placeholder-116-longer_content-234x60-116-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-116-longer_content-468x60-116-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-116-longer_content-728x90-116-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-116-longer_content-970x90-116-nonexxxnonexxxxxxezmaxscaleval100 --></div></div><h2 class="chap"><img onclick="window.scrollTo(0,0);" title="Back to top" src="../backtop1.svg" width="20" height="20" class="backtop"/><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/cmp/dokuwiki/ru/ebnf#8"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/cmp/asciidoc/ru/ebnf#8"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/cmp/markdown/ru/ebnf#8"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>Example of LISP Grammar</h2><p></p> LISP Grammar with PlantUML. <p></p><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msg2efa094d67f722e453c9fbafb4377458" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="img2efa094d67f722e453c9fbafb4377458" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;2efa094d67f722e453c9fbafb4377458&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;2efa094d67f722e453c9fbafb4377458&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;2efa094d67f722e453c9fbafb4377458&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="pre2efa094d67f722e453c9fbafb4377458">@startebnf
+title LISP Grammar
+grammars_expression = atomic_symbol | &#34;(&#34;, s_expression, &#34;.&#34;, s_expression, &#34;)&#34; | list;
+list = &#34;(&#34;, s_expression, { s_expression }, &#34;)&#34;;
+atomic_symbol = letter, atom_part;
+atom_part = empty | letter, atom_part | number, atom_part;
+letter = ? a-z ?;
+number = ? 1-9 ?;
+empty = &#34; &#34;;
+@endebnf
+</pre></code></div><div class="mycell"><img loading="lazy" width="442" height="729" class="scale" src="../imgw/img-2efa094d67f722e453c9fbafb4377458.png"/></div></div></td></tr></tbody></table></p><p></p><p></p> [Ref. ] <a style="position:relative;top:-38px;" name="4fd52eccba095c80"></a><div style="clear:both;height:50px;"></div><h2 class="chap"><img onclick="window.scrollTo(0,0);" title="Back to top" src="../backtop1.svg" width="20" height="20" class="backtop"/><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/cmp/dokuwiki/ru/ebnf#9"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/cmp/asciidoc/ru/ebnf#9"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/cmp/markdown/ru/ebnf#9"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>EBNF of PlantUMLs EBNF Grammar</h2><p></p> EBNF allows for self description, so here it is! <p></p><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msg9b6138e448ce3e543ce0468e5e5c5146" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="img9b6138e448ce3e543ce0468e5e5c5146" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;9b6138e448ce3e543ce0468e5e5c5146&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;9b6138e448ce3e543ce0468e5e5c5146&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;9b6138e448ce3e543ce0468e5e5c5146&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="pre9b6138e448ce3e543ce0468e5e5c5146">@startebnf
+grammar = { rule };
+rule = lhs , &#34;=&#34; (* definition *) , rhs , &#34;;&#34; (* termination *);
+lhs = identifier ;
+rhs = identifier
+     | terminal
+     | &#34;[&#34; , rhs (* optional *) , &#34;]&#34;
+     | &#34;{&#34; , rhs (* repetition *), &#34;}&#34;
+     | &#34;(&#34; , rhs (* grouping *) , &#34;)&#34;
+     | &#34;(*&#34; , string (* comment *) , &#34;*)&#34;
+     | &#34;?&#34; , rhs (* special sequence, aka notation *) , &#34;?&#34;
+     | rhs , &#34;|&#34; (* alternation *) , rhs
+     | rhs , &#34;,&#34; (* concatenation *), rhs ;
+identifier = letter , { letter | digit | &#34;_&#34; } ;
+terminal = &#34;&#39;&#34; , character , { character } , &#34;&#39;&#34;
+         | &#39;&#34;&#39; , character , { character } , &#39;&#34;&#39; ;
+character = letter | digit | symbol | &#34;_&#34; ;
+symbol = &#34;[&#34; | &#34;]&#34; | &#34;{&#34; | &#34;}&#34; | &#34;(&#34; | &#34;)&#34; | &#34;&lt;&#34; | &#34;&gt;&#34;
+       | &#34;&#39;&#34; | &#39;&#34;&#39; | &#34;=&#34; | &#34;|&#34; | &#34;.&#34; | &#34;,&#34; | &#34;;&#34; ;
+digit = ? 0-9 ? ;
+letter = ? A-Z or a-z ? ;
+@endebnf
+</pre></code></div><div class="mycell"><img loading="lazy" width="422" height="2259" class="scale" src="../imgw/img-9b6138e448ce3e543ce0468e5e5c5146.png"/></div></div></td></tr></tbody></table></p><p><a style="position:relative;top:-38px;" name="324aba8a3f83acb0"></a></p><div style="clear:both;min-height:110px;margin-top:10px;"><div class="pezoic"><span id="ezoic-pub-ad-placeholder-117"></span><!-- ezoic_pub_ad_placeholder-117-longest_content-234x60-117-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-117-longest_content-468x60-117-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-117-longest_content-728x90-117-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-117-longest_content-970x90-117-nonexxxnonexxxxxxezmaxscaleval100 --></div></div><h2 class="chap"><img onclick="window.scrollTo(0,0);" title="Back to top" src="../backtop1.svg" width="20" height="20" class="backtop"/><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/cmp/dokuwiki/ru/ebnf#10"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/cmp/asciidoc/ru/ebnf#10"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/cmp/markdown/ru/ebnf#10"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>Java Language Specification</h2><p></p> A real world example of a detailed programming language. <p></p><h3>Packages and Modules</h3><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msg8fb5b60ce1375ca86b9784c4dea10886" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="img8fb5b60ce1375ca86b9784c4dea10886" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;8fb5b60ce1375ca86b9784c4dea10886&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;8fb5b60ce1375ca86b9784c4dea10886&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;8fb5b60ce1375ca86b9784c4dea10886&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="pre8fb5b60ce1375ca86b9784c4dea10886">@startebnf
+CompilationUnit = OrdinaryCompilationUnit | ModularCompilationUnit;
+OrdinaryCompilationUnit = [PackageDeclaration], {ImportDeclaration}, {TopLevelClassOrInterfaceDeclaration};
+ModularCompilationUnit = {ImportDeclaration}, ModuleDeclaration;
+PackageDeclaration = {PackageModifier}, &#34;package&#34;, Identifier, {Identifier}, &#34;;&#34;;
+PackageModifier = Annotation;
+ImportDeclaration = SingleTypeImportDeclaration | TypeImportOnDemandDeclaration | SingleStaticImportDeclaration | StaticImportOnDemandDeclaration;
+SingleTypeImportDeclaration = &#34;import&#34;, TypeName, &#34;;&#34;;
+TypeImportOnDemandDeclaration = &#34;import&#34;, PackageOrTypeName, &#34;.*&#34;, &#34;;&#34;;
+SingleStaticImportDeclaration = &#34;import&#34;, &#34;static&#34;, TypeName, &#34;.&#34;, Identifier, &#34;;&#34;;
+StaticImportOnDemandDeclaration = &#34;import&#34;, &#34;static&#34;, TypeName, &#34;.*&#34;, &#34;;&#34;;
+TopLevelClassOrInterfaceDeclaration = (ClassDeclaration | InterfaceDeclaration), &#34;;&#34;;
+ModuleDeclaration = {Annotation}, [open], &#34;module&#34;, Identifier, {Identifier}, &#34;{&#34;, {ModuleDirective} &#34;}&#34;;
+ModuleDirective = (&#34;requires&#34;, {RequiresModifier}, ModuleName, &#34;;&#34;) | (&#34;exports&#34;, PackageName, [&#34;to&#34;, ModuleName {&#34;,&#34; ModuleName}], &#34;;&#34;) | (&#34;opens&#34;, PackageName, [&#34;to&#34; ModuleName {&#34;,&#34; ModuleName}], &#34;;&#34;) | (&#34;uses&#34;, TypeName, &#34;;&#34;) | (&#34;provides&#34;, TypeName, &#34;with&#34;, TypeName {&#34;,&#34; TypeName}, &#34;;&#34;);
+RequiresModifier = &#34;transitive&#34; | &#34;static&#34;;
+@endebnf
+</pre></code></div><div class="mycell"><img loading="lazy" width="779" height="1293" class="scale" src="../imgw/img-8fb5b60ce1375ca86b9784c4dea10886.png"/></div></div></td></tr></tbody></table></p><p></p><p></p><h3>Lexical Structure</h3><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msgaf1647d26e9e2a5cf4a3db215fd40982" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="imgaf1647d26e9e2a5cf4a3db215fd40982" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;af1647d26e9e2a5cf4a3db215fd40982&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;af1647d26e9e2a5cf4a3db215fd40982&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;af1647d26e9e2a5cf4a3db215fd40982&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="preaf1647d26e9e2a5cf4a3db215fd40982">@startebnf
+Identifier = ?IdentifierChars but not a ReservedKeyword or BooleanLiteral or NullLiteral?;
+IdentifierChars = JavaLetter, {JavaLetterOrDigit};
+JavaLetter = ? any Unicode character that is a &#34;Java letter&#34; ?;
+JavaLetterOrDigit = ? any Unicode character that is a &#34;Java letter-or-digit&#34; ?;
+TypeIdentifier = ? Identifier but not permits, record, sealed, var, or yield ?;
+UnqualifiedMethodIdentifier = ? Identifier but not yield ?;
+Literal = IntegerLiteral | FloatingPointLiteral | BooleanLiteral | CharacterLiteral | StringLiteral | TextBlock | NullLiteral;
+@endebnf
+</pre></code></div><div class="mycell"><img loading="lazy" width="560" height="766" class="scale" src="../imgw/img-af1647d26e9e2a5cf4a3db215fd40982.png"/></div></div></td></tr></tbody></table></p><p></p><p></p><h3>Types, Values, and Variables</h3><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msg0fc55abc1e62cfb4d41d31e04a3a7bec" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="img0fc55abc1e62cfb4d41d31e04a3a7bec" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;0fc55abc1e62cfb4d41d31e04a3a7bec&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;0fc55abc1e62cfb4d41d31e04a3a7bec&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;0fc55abc1e62cfb4d41d31e04a3a7bec&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="pre0fc55abc1e62cfb4d41d31e04a3a7bec">@startebnf
+Type = PrimitiveType | ReferenceType;
+PrimitiveType = [Annotation], (NumericType | boolean );
+NumericType = IntegralType | FloatingPointType
+IntegralType = &#34;byte&#34; | &#34;short&#34; | &#34;int&#34; | &#34;long&#34; | &#34;char&#34;;
+FloatingPointType = &#34;float&#34; | &#34;double&#34;;
+ReferenceType = ClassOrInterfaceType | TypeVariable | ArrayType;
+ClassOrInterfaceType = ClassType | InterfaceType
+ClassType = {Annotation}, TypeIdentifier, [TypeArguments];
+PackageName = {Annotation}, TypeIdentifier, [TypeArguments];
+ClassOrInterfaceType = {Annotation}, TypeIdentifier, [TypeArguments];
+InterfaceType = ClassType;
+TypeVariable = {Annotation}, TypeIdentifier;
+ArrayType = (PrimitiveType | ClassOrInterfaceType | TypeVariable), Dims;
+Dims=  {Annotation}, &#34;[&#34;, &#34;]&#34;, {{Annotation}, &#34;[&#34;, &#34;]&#34;};
+TypeParameter = {TypeParameterModifier}, TypeIdentifier, [TypeBound];
+TypeParameterModifier = Annotation;
+TypeBound = (&#34;extends&#34;, TypeVariable) | (&#34;extends&#34; ClassOrInterfaceType {AdditionalBound});
+AdditionalBound = &#34;&amp;&#34;, InterfaceType;
+TypeArguments = &#34;&lt;&#34;, TypeArgumentList, &#34;&gt;&#34;;
+TypeArgumentList = TypeArgument &#34;{&#34;, &#34;,&#34;, TypeArgument};
+TypeArgument = ReferenceType | Wildcard;
+Wildcard = {Annotation}, &#34;?&#34;, [WildcardBounds];
+WildcardBounds = (&#34;extends&#34; | &#34;super&#34;), ReferenceType;
+@endebnf
+</pre></code></div><div class="mycell"><img loading="lazy" width="576" height="1878" class="scale" src="../imgw/img-0fc55abc1e62cfb4d41d31e04a3a7bec.png"/></div></div></td></tr></tbody></table></p><p></p><p></p><h3>Names</h3><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msgf655f469a7c1a5b4d3369360bb37f7d9" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="imgf655f469a7c1a5b4d3369360bb37f7d9" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;f655f469a7c1a5b4d3369360bb37f7d9&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;f655f469a7c1a5b4d3369360bb37f7d9&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;f655f469a7c1a5b4d3369360bb37f7d9&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="pref655f469a7c1a5b4d3369360bb37f7d9">@startebnf
+ModuleName = Identifier | ( ModuleName, &#34;.&#34;, Identifier);
+PackageName = Identifier | (PackageName, &#34;.&#34;, Identifier);
+TypeName = TypeIdentifier | (PackageOrTypeName, &#34;.&#34;, TypeIdentifier);
+ExpressionName = Identifier | ( AmbiguousName, &#34;.&#34;, Identifier);
+MethodName = UnqualifiedMethodIdentifier;
+PackageOrTypeName = Identifier | (PackageOrTypeName, &#34;.&#34;, Identifier);
+AmbiguousName = Identifier | (AmbiguousName, &#34;.&#34;, Identifier);
+@endebnf
+</pre></code></div><div class="mycell"><img loading="lazy" width="431" height="738" class="scale" src="../imgw/img-f655f469a7c1a5b4d3369360bb37f7d9.png"/></div></div></td></tr></tbody></table></p><p></p><p></p><h3>Classes</h3><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msgc7ea98bee6b032043e3336358cd5332d" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="imgc7ea98bee6b032043e3336358cd5332d" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;c7ea98bee6b032043e3336358cd5332d&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;c7ea98bee6b032043e3336358cd5332d&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;c7ea98bee6b032043e3336358cd5332d&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="prec7ea98bee6b032043e3336358cd5332d">@startebnf
+ClassDeclaration = NormalClassDeclaration | EnumDeclaration | RecordDeclaration;
+NormalClassDeclaration = {ClassModifier}, &#34;class&#34;, TypeIdentifier, [TypeParameters], [ClassExtends], [ClassImplements], [ClassPermits], ClassBody;
+ClassModifier = Annotation | &#34;public&#34; | &#34;protected&#34; | &#34;private&#34; | &#34;abstract&#34; | &#34;static&#34; | &#34;final&#34; | &#34;sealed&#34; | &#34;non-sealed&#34; | &#34;strictfp&#34;;
+TypeParameters = &#34;&lt;&#34;, TypeParameterList, &#34;&gt;&#34;;
+TypeParameterList = TypeParameter, {&#34;,&#34;, TypeParameter};
+ClassExtends = &#34;extends&#34;, ClassType;
+ClassImplements = &#34;implements&#34;, InterfaceTypeList;
+InterfaceTypeList = InterfaceType, {&#34;,&#34;, InterfaceType};
+ClassPermits = &#34;permits&#34;, TypeName, {&#34;,&#34;, TypeName};
+ClassBody = &#34;{&#34;, {ClassBodyDeclaration}, &#34;}&#34;;
+ClassBodyDeclaration = ClassMemberDeclaration | InstanceInitializer | StaticInitializer | ConstructorDeclaration;
+ClassMemberDeclaration = (FieldDeclaration | MethodDeclaration | ClassDeclaration | InterfaceDeclaration), &#34;;&#34;;
+FieldDeclaration = {FieldModifier}, UnannType, VariableDeclaratorList, &#34;;&#34;;
+FieldModifier = Annotation | &#34;public&#34; | &#34;protected&#34; | &#34;private&#34; | &#34;static&#34; | &#34;final&#34; | &#34;transient&#34; | &#34;volatile&#34;;
+VariableDeclaratorList = VariableDeclarator, {&#34;,&#34;, VariableDeclarator};
+VariableDeclarator = VariableDeclaratorId, [&#34;=&#34;, VariableInitializer];
+VariableDeclaratorId = Identifier, [Dims];
+VariableInitializer = Expression | ArrayInitializer;
+UnannType = UnannPrimitiveType | UnannReferenceType;
+UnannPrimitiveType = NumericType | boolean;
+UnannReferenceType = UnannClassOrInterfaceType | UnannTypeVariable | UnannArrayType;
+UnannClassOrInterfaceType = UnannClassType | UnannInterfaceType;
+UnannClassType = (TypeIdentifier, [TypeArguments]) | (PackageName, &#34;.&#34;, {Annotation}, TypeIdentifier, [TypeArguments]) | (UnannClassOrInterfaceType, &#34;.&#34;, {Annotation}, TypeIdentifier, [TypeArguments]) | (TypeIdentifier, [TypeArguments]) | (TypeIdentifier, [TypeArguments]);
+UnannInterfaceType = UnannClassType;
+UnannTypeVariable = TypeIdentifier;
+UnannArrayType = (UnannPrimitiveType, Dims) | (UnannClassOrInterfaceType, Dims) | (UnannTypeVariable, Dims);
+MethodDeclaration = {MethodModifier}, MethodHeader, MethodBody;
+MethodModifier = Annotation | &#34;public&#34; | &#34;protected&#34; | &#34;private&#34; | &#34;abstract&#34; | &#34;static&#34; | &#34;final&#34; | &#34;synchronized&#34; | &#34;native&#34; | &#34;strictfp&#34;;
+MethodHeader = (Result, MethodDeclarator, [Throws]) | (TypeParameters, {Annotation}, Result, MethodDeclarator, [Throws]);
+Result = UnannType | &#34;void&#34;;
+MethodDeclarator = Identifier, ( [ ReceiverParameter, &#34;,&#34; ], [FormalParameterList] ), [Dims];
+ReceiverParameter = {Annotation}, UnannType, [Identifier, &#34;.&#34;], &#34;this&#34;;
+FormalParameterList = FormalParameter, {&#34;,&#34;, FormalParameter};
+FormalParameter = ({VariableModifier}, UnannType, VariableDeclaratorId) | VariableArityParameter;
+VariableArityParameter = {VariableModifier}, UnannType, {Annotation}, &#34;...&#34;, Identifier;
+VariableModifier = Annotation | &#34;final&#34;;
+Throws = &#34;throws&#34;, ExceptionTypeList;
+ExceptionTypeList = ExceptionType, {&#34;,&#34;, ExceptionType};
+ExceptionType = ClassType | TypeVariable;
+MethodBody = Block | &#34;;&#34;;
+InstanceInitializer = Block;
+StaticInitializer = &#34;static&#34;, Block;
+ConstructorDeclaration = {ConstructorModifier}, ConstructorDeclarator, [Throws], ConstructorBody;
+ConstructorModifier = Annotation | &#34;public&#34; | &#34;protected&#34; | &#34;private&#34;;
+ConstructorDeclarator = [TypeParameters], SimpleTypeName, ( [ReceiverParameter, &#34;,&#34;], [FormalParameterList] );
+SimpleTypeName = TypeIdentifier;
+ConstructorBody = { [ExplicitConstructorInvocation], [BlockStatements] };
+ExplicitConstructorInvocation = ( [TypeArguments], &#34;this&#34;, &#34;(&#34;, [ArgumentList], &#34;)&#34;, &#34;;&#34; ) | ([TypeArguments], &#34;super&#34;, &#34;(&#34;, [ArgumentList], &#34;)&#34;, &#34;;&#34; ) | (ExpressionName, &#34;.&#34;, [TypeArguments], &#34;super&#34;, &#34;(&#34;, [ArgumentList], &#34;)&#34;, &#34;;&#34; ) | (Primary, &#34;.&#34; [TypeArguments], &#34;super&#34;, &#34;(&#34; [ArgumentList], &#34;)&#34;, &#34;;&#34;;
+EnumDeclaration = {ClassModifier}, &#34;enum&#34;, TypeIdentifier, [ClassImplements], EnumBody;
+EnumBody = &#34;{&#34;, [EnumConstantList], [&#34;,&#34;], [EnumBodyDeclarations], &#34;}&#34;;
+EnumConstantList = EnumConstant, {&#34;,&#34;, EnumConstant};
+EnumConstant = {EnumConstantModifier}, Identifier, [&#34;(&#34;, [ArgumentList], &#34;)&#34;], [ClassBody];
+EnumConstantModifier = Annotation;
+EnumBodyDeclarations = &#34;;&#34;, {ClassBodyDeclaration};
+RecordDeclaration = {ClassModifier}, &#34;record&#34;, TypeIdentifier, [TypeParameters], RecordHeader, [ClassImplements], RecordBody;
+RecordHeader = &#34;(&#34;, [RecordComponentList], &#34;)&#34;;
+RecordComponentList = RecordComponent, {&#34;,&#34;, RecordComponent};
+RecordComponent = (RecordComponentModifier}, UnannType, Identifier) | VariableArityRecordComponent;
+VariableArityRecordComponent = {RecordComponentModifier}, UnannType, {Annotation}, &#34;...&#34;, Identifier;
+RecordComponentModifier = Annotation;
+RecordBody = &#34;{&#34;, {RecordBodyDeclaration}, &#34;}&#34;;
+RecordBodyDeclaration = ClassBodyDeclaration | CompactConstructorDeclaration;
+CompactConstructorDeclaration = {ConstructorModifier}, SimpleTypeName, ConstructorBody;
+@endebnf
+</pre></code></div><div class="mycell"><img loading="lazy" width="1132" height="4096" class="scale" src="../imgw/img-c7ea98bee6b032043e3336358cd5332d.png"/></div></div></td></tr></tbody></table></p><p></p><p></p><h3>Interfaces</h3><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msg6caea1ab8c387c847cb2c83d74419f03" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="img6caea1ab8c387c847cb2c83d74419f03" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;6caea1ab8c387c847cb2c83d74419f03&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;6caea1ab8c387c847cb2c83d74419f03&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;6caea1ab8c387c847cb2c83d74419f03&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="pre6caea1ab8c387c847cb2c83d74419f03">@startebnf
+InterfaceDeclaration = NormalInterfaceDeclaration | AnnotationInterfaceDeclaration;
+NormalInterfaceDeclaration = {InterfaceModifier}, &#34;interface&#34;, TypeIdentifier, [TypeParameters], [InterfaceExtends], [InterfacePermits], InterfaceBody;
+InterfaceModifier = Annotation | &#34;public&#34; | &#34;protected&#34; | &#34;private&#34; | &#34;abstract&#34; | &#34;static&#34; | &#34;sealed&#34; | &#34;non-sealed&#34; | &#34;strictfp&#34;;
+InterfaceExtends = &#34;extends&#34;, InterfaceTypeList;
+InterfacePermits = &#34;permits&#34;, TypeName, {&#34;,&#34;, TypeName};
+InterfaceBody = &#34;{&#34;, {InterfaceMemberDeclaration}, &#34;}&#34;;
+InterfaceMemberDeclaration = ConstantDeclaration | InterfaceMethodDeclaration | ClassDeclaration | InterfaceDeclaration | &#34;;&#34;;
+ConstantDeclaration = {ConstantModifier}, UnannType, VariableDeclaratorList, &#34;;&#34;;
+ConstantModifier = Annotation | &#34;public&#34; | &#34;static&#34; | &#34;final&#34;;
+InterfaceMethodDeclaration = {InterfaceMethodModifier}, MethodHeader, MethodBody;
+InterfaceMethodModifier = Annotation | &#34;public&#34; | &#34;private&#34; | &#34;abstract&#34; | &#34;default&#34; | &#34;static&#34; | &#34;strictfp&#34;;
+AnnotationInterfaceDeclaration = {InterfaceModifier}, &#34;@&#34;, &#34;interface&#34;, TypeIdentifier, AnnotationInterfaceBody;
+AnnotationInterfaceBody = &#34;{&#34;, {AnnotationInterfaceMemberDeclaration}, &#34;}&#34;;
+AnnotationInterfaceMemberDeclaration = AnnotationInterfaceElementDeclaration | ConstantDeclaration | ClassDeclaration | InterfaceDeclaration, &#34;;&#34;;
+AnnotationInterfaceElementDeclaration = {AnnotationInterfaceElementModifier}, UnannType, Identifier, &#34;(&#34;, &#34;)&#34;, [Dims], [DefaultValue], &#34;;&#34;;
+AnnotationInterfaceElementModifier = Annotation | &#34;public&#34; | &#34;abstract&#34;;
+DefaultValue = &#34;default&#34;, ElementValue;
+Annotation = NormalAnnotation | MarkerAnnotation | SingleElementAnnotation;
+NormalAnnotation = &#34;@&#34;, TypeName, &#34;(&#34;, [ElementValuePairList], &#34;)&#34;;
+ElementValuePairList = ElementValuePair, {&#34;,&#34;, ElementValuePair};
+ElementValuePair = Identifier, &#34;=&#34;, ElementValue;
+ElementValue = ConditionalExpression | ElementValueArrayInitializer | Annotation;
+ElementValueArrayInitializer = &#34;{&#34;, [ElementValueList], [&#34;,&#34;], &#34;}&#34;;
+ElementValueList = ElementValue, {&#34;,&#34;, ElementValue};
+MarkerAnnotation = &#34;@&#34;, TypeName;
+SingleElementAnnotation = &#34;@&#34;, TypeName, &#34;(&#34;, ElementValue, &#34;)&#34;;
+@endebnf
+</pre></code></div><div class="mycell"><img loading="lazy" width="1069" height="3324" class="scale" src="../imgw/img-6caea1ab8c387c847cb2c83d74419f03.png"/></div></div></td></tr></tbody></table></p><p></p><p></p><h3>Arrays</h3><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msg33de801c6070682048f78d6b8e292562" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="img33de801c6070682048f78d6b8e292562" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;33de801c6070682048f78d6b8e292562&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;33de801c6070682048f78d6b8e292562&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;33de801c6070682048f78d6b8e292562&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="pre33de801c6070682048f78d6b8e292562">@startebnf
+ArrayInitializer = &#34;{&#34;, [VariableInitializerList], [&#34;,&#34;], &#34;}&#34;;
+VariableInitializerList = VariableInitializer, {&#34;,&#34;, VariableInitializer};
+@endebnf
+</pre></code></div><div class="mycell"><img loading="lazy" width="430" height="205" class="scale" src="../imgw/img-33de801c6070682048f78d6b8e292562.png"/></div></div></td></tr></tbody></table></p><p></p><p></p><h3>Blocks, Statements, and Patterns</h3><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msg77e069d5877dd567ec7b5f1637cc9355" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="img77e069d5877dd567ec7b5f1637cc9355" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;77e069d5877dd567ec7b5f1637cc9355&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;77e069d5877dd567ec7b5f1637cc9355&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;77e069d5877dd567ec7b5f1637cc9355&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="pre77e069d5877dd567ec7b5f1637cc9355">@startebnf
+Block = &#34;{&#34;, [BlockStatements], &#34;}&#34;;
+BlockStatements = BlockStatement, {BlockStatement};
+BlockStatement = LocalClassOrInterfaceDeclaration | LocalVariableDeclarationStatement | Statement;
+LocalClassOrInterfaceDeclaration = ClassDeclaration | NormalInterfaceDeclaration;
+LocalVariableDeclarationStatement = LocalVariableDeclaration, &#34;;&#34;;
+LocalVariableDeclaration = {VariableModifier}, LocalVariableType, VariableDeclaratorList;
+LocalVariableType = UnannType | &#34;var&#34;;
+Statement = StatementWithoutTrailingSubstatement | LabeledStatement | IfThenStatement | IfThenElseStatement | WhileStatement | ForStatement;
+StatementNoShortIf = StatementWithoutTrailingSubstatement | LabeledStatementNoShortIf | IfThenElseStatementNoShortIf | WhileStatementNoShortIf | ForStatementNoShortIf;
+StatementWithoutTrailingSubstatement = Block | EmptyStatement | ExpressionStatement | AssertStatement | SwitchStatement | DoStatement | BreakStatement | ContinueStatement | ReturnStatement | SynchronizedStatement | ThrowStatement | TryStatement | YieldStatement
+EmptyStatement = &#34;;&#34;;
+LabeledStatement = Identifier, &#34;:&#34;, Statement;
+LabeledStatementNoShortIf = Identifier, &#34;:&#34;, StatementNoShortIf;
+ExpressionStatement = StatementExpression, &#34;;&#34;;
+StatementExpression = Assignment | PreIncrementExpression | PreDecrementExpression | PostIncrementExpression | PostDecrementExpression | MethodInvocation | ClassInstanceCreationExpression;
+IfThenStatement = &#34;if&#34;, &#34;(&#34;, Expression, &#34;)&#34;, Statement;
+IfThenElseStatement = &#34;if&#34;, &#34;(&#34;, Expression, &#34;)&#34;, StatementNoShortIf, &#34;else&#34;, Statement;
+IfThenElseStatementNoShortIf = &#34;if&#34;, &#34;(&#34;, Expression, &#34;)&#34;, StatementNoShortIf, &#34;else&#34;, StatementNoShortIf;
+AssertStatement = (&#34;assert&#34;, Expression, &#34;;&#34;) | (&#34;assert&#34;, Expression, &#34;:&#34;, Expression, &#34;;&#34;);
+SwitchStatement = &#34;switch&#34;, &#34;(&#34;, Expression, &#34;)&#34;, SwitchBlock;
+SwitchBlock = ( &#34;{&#34;, SwitchRule, {SwitchRule}, &#34;}&#34; ) | ( &#34;{&#34;, {SwitchBlockStatementGroup}, {SwitchLabel, &#34;:&#34;}, &#34;}&#34; );
+SwitchRule = (SwitchLabel, &#34;-&gt;&#34;, Expression, &#34;;&#34;) |(SwitchLabel, &#34;-&gt;&#34;, Block) | (SwitchLabel, &#34;-&gt;&#34;, ThrowStatement);
+SwitchBlockStatementGroup = SwitchLabel, &#34;:&#34;, {SwitchLabel, &#34;:&#34;}, BlockStatements;
+SwitchLabel = (&#34;case&#34;, CaseConstant, {&#34;,&#34;, CaseConstant}) | &#34;default&#34;;
+CaseConstant = ConditionalExpression;
+WhileStatement = &#34;while&#34;, &#34;(&#34;, Expression, &#34;)&#34;, Statement;
+WhileStatementNoShortIf = &#34;while&#34;, &#34;(&#34;, Expression, &#34;)&#34;, StatementNoShortIf;
+DoStatement = &#34;do&#34;, Statement, &#34;while&#34;, &#34;(&#34;, Expression, &#34;)&#34;, &#34;;&#34;;
+ForStatement = BasicForStatement | EnhancedForStatement | ForStatementNoShortIf | BasicForStatementNoShortIf | EnhancedForStatementNoShortIf;
+BasicForStatement = &#34;for&#34;, &#34;(&#34;, [ForInit], &#34;;&#34;, [Expression], &#34;;&#34;, [ForUpdate], &#34;)&#34;, Statement;
+BasicForStatementNoShortIf = &#34;for&#34;, &#34;(&#34;, [ForInit], &#34;;&#34;, [Expression], &#34;;&#34;, [ForUpdate], &#34;)&#34;, StatementNoShortIf;
+ForInit = StatementExpressionList | LocalVariableDeclaration;
+ForUpdate = StatementExpressionList;
+StatementExpressionList = StatementExpression, {&#34;,&#34;, StatementExpression};
+EnhancedForStatement = &#34;for&#34;, &#34;(&#34;, LocalVariableDeclaration, &#34;:&#34;, Expression, &#34;)&#34;, Statement;
+EnhancedForStatementNoShortIf = &#34;for&#34;, &#34;(&#34;, LocalVariableDeclaration, &#34;:&#34;, Expression, &#34;)&#34;, StatementNoShortIf;
+BreakStatement = break, [Identifier], &#34;;&#34;;
+YieldStatement = &#34;yield&#34;, Expression, &#34;;&#34;;
+ContinueStatement = &#34;continue&#34;, [Identifier], &#34;;&#34;;
+ReturnStatement = &#34;return&#34; [Expression], &#34;;&#34;;
+ThrowStatement = &#34;throw&#34;, Expression, &#34;;&#34;;
+SynchronizedStatement = &#34;synchronized&#34;, &#34;(&#34;, Expression, &#34;)&#34;, Block;
+TryStatement = (&#34;try&#34;, Block, Catches) | (&#34;try&#34;, Block, [Catches], Finally ) | TryWithResourcesStatement;
+Catches = CatchClause, {CatchClause};
+CatchClause = &#34;catch&#34;, &#34;(&#34;, CatchFormalParameter, &#34;)&#34;, Block;
+CatchFormalParameter = {VariableModifier}, CatchType, VariableDeclaratorId;
+CatchType = UnannClassType, {&#34;|&#34;, ClassType};
+Finally = &#34;finally&#34;, Block;
+TryWithResourcesStatement = &#34;try&#34;, ResourceSpecification, Block, [Catches], [Finally];
+ResourceSpecification = &#34;(&#34;, ResourceList, [&#34;;&#34;], &#34;)&#34;;
+ResourceList = Resource, {&#34;;&#34;, Resource};
+Resource = LocalVariableDeclaration | VariableAccess;
+Pattern = TypePattern;
+TypePattern = LocalVariableDeclaration;
+
+(* Expressions *)
+
+Primary = PrimaryNoNewArray | ArrayCreationExpression;
+PrimaryNoNewArray = Literal | ClassLiteral | &#34;this&#34; | (TypeName, &#34;.&#34;, &#34;this&#34;) | ( &#34;(&#34;, Expression, &#34;)&#34; ) | ClassInstanceCreationExpression | FieldAccess | ArrayAccess | MethodInvocation | MethodReference;
+ClassLiteral = (TypeName, { &#34;[&#34;, &#34;]&#34; }, &#34;.&#34;, &#34;class&#34;) | (NumericType, {&#34;[&#34;, &#34;]&#34;}, &#34;.&#34;, &#34;class&#34;) | (&#34;boolean&#34;, {&#34;[&#34;, &#34;]&#34;}, &#34;.&#34;, &#34;class&#34;) | (&#34;void&#34;, &#34;.&#34;, &#34;class&#34;);
+ClassInstanceCreationExpression = UnqualifiedClassInstanceCreationExpression | (ExpressionName, &#34;.&#34;, UnqualifiedClassInstanceCreationExpression) |(Primary, &#34;.&#34;, UnqualifiedClassInstanceCreationExpression);
+UnqualifiedClassInstanceCreationExpression = &#34;new&#34;, [TypeArguments], ClassOrInterfaceTypeToInstantiate, &#34;(&#34;, [ArgumentList], &#34;)&#34;, [ClassBody];
+ClassOrInterfaceTypeToInstantiate = {Annotation}, Identifier, {&#34;.&#34;, {Annotation}, Identifier}, [TypeArgumentsOrDiamond];
+TypeArgumentsOrDiamond = TypeArguments | (&#34;&lt;&#34;,&#34;&gt;&#34;);
+ArrayCreationExpression = ArrayCreationExpressionWithoutInitializer | ArrayCreationExpressionWithInitializer;
+ArrayCreationExpressionWithoutInitializer = (&#34;new&#34;, PrimitiveType, DimExprs, [Dims]) | (&#34;new&#34;, ClassOrInterfaceType, DimExprs, [Dims]);
+ArrayCreationExpressionWithInitializer = (&#34;new&#34;, PrimitiveType, Dims, ArrayInitializer) | (&#34;new&#34;, ClassOrInterfaceType, Dims, ArrayInitializer);
+DimExprs = DimExpr, {DimExpr};
+DimExpr = ({Annotation}, [ Expression ]) | (ArrayAccess, &#34;=&#34;, ExpressionName, &#34;[&#34;, Expression, &#34;]&#34;) | (PrimaryNoNewArray, &#34;[&#34;, Expression, &#34;]&#34;) | (ArrayCreationExpressionWithInitializer, &#34;[&#34;, Expression, &#34;]&#34;);
+FieldAccess = (Primary, &#34;.&#34;, Identifier), (&#34;super&#34;, &#34;.&#34;, Identifier), (TypeName, &#34;.&#34;, super, &#34;.&#34;, Identifier);
+MethodInvocation = (MethodName, &#34;(&#34;, [ArgumentList], &#34;)&#34;) | (TypeName, &#34;.&#34;, [TypeArguments], Identifier, &#34;(&#34;, [ArgumentList], &#34;)&#34;) | (ExpressionName, &#34;.&#34;, [TypeArguments], Identifier, &#34;(&#34;, [ArgumentList], &#34;)&#34;) | (Primary, &#34;.&#34;, [TypeArguments], Identifier, &#34;(&#34;, [ArgumentList], &#34;)&#34;) | (&#34;super&#34;, &#34;.&#34;, [TypeArguments], Identifier, &#34;(&#34;, [ArgumentList], &#34;)&#34;) | (TypeName, &#34;.&#34;, &#34;super&#34;, &#34;.&#34;, [TypeArguments], Identifier, &#34;(&#34;, [ArgumentList], &#34;)&#34;);
+ArgumentList = Expression, {&#34;,&#34;, Expression};
+MethodReference = (ExpressionName, &#34;::&#34;, [TypeArguments], Identifier) | (Primary, &#34;::&#34;, [TypeArguments], Identifier) | (ReferenceType, &#34;::&#34;, [TypeArguments], Identifier) | (&#34;super&#34;, &#34;::&#34;, [TypeArguments], Identifier) | (TypeName, &#34;.&#34;, super, &#34;::&#34;, [TypeArguments], Identifier) | (ClassType, &#34;::&#34;, [TypeArguments], &#34;new&#34;) | (ArrayType, &#34;::&#34;, &#34;new&#34;);
+Expression = LambdaExpression | AssignmentExpression;
+LambdaExpression = LambdaParameters, &#34;-&gt;&#34;, LambdaBody;
+LambdaParameters = (&#34;(&#34;, [LambdaParameterList], &#34;)&#34;) | Identifier;
+LambdaParameterList = (LambdaParameter, {&#34;,&#34;, LambdaParameter}) | (Identifier, {&#34;,&#34;, Identifier});
+LambdaParameter = ({VariableModifier}, LambdaParameterType, VariableDeclaratorId) | VariableArityParameter;
+LambdaParameterType = UnannType | &#34;var&#34;;
+LambdaBody = Expression | Block;
+AssignmentExpression = ConditionalExpression | Assignment;
+Assignment = LeftHandSide | AssignmentOperator | Expression;
+LeftHandSide = ExpressionName | FieldAccess | ArrayAccess;
+AssignmentOperator = &#34;=&#34; | &#34;*=&#34; | &#34;/=&#34; | &#34;%=&#34; | &#34;+=&#34; | &#34;-=&#34; | &#34;&lt;&lt;=&#34; | &#34;&gt;&gt;=&#34; | &#34;&gt;&gt;&gt;=&#34; | &#34;&amp;=&#34; | &#34;^=&#34; | &#34;|=&#34;;
+ConditionalExpression = ConditionalOrExpression | (ConditionalOrExpression, &#34;?&#34;, Expression, &#34;:&#34;, ConditionalExpression) | (ConditionalOrExpression, &#34;?&#34;, Expression, &#34;:&#34;, LambdaExpression);
+ConditionalOrExpression = ConditionalAndExpression | (ConditionalOrExpression, &#34;||&#34;, ConditionalAndExpression);
+ConditionalAndExpression = InclusiveOrExpression | (ConditionalAndExpression, &#34;&amp;&amp;&#34;, InclusiveOrExpression);
+InclusiveOrExpression = ExclusiveOrExpression | (InclusiveOrExpression, &#34;|&#34;, ExclusiveOrExpression);
+ExclusiveOrExpression = AndExpression | (ExclusiveOrExpression, &#34;^&#34;, AndExpression);
+AndExpression = EqualityExpression, (AndExpression, &#34;&amp;&#34;, EqualityExpression) | (EqualityExpression, &#34;=&#34;, RelationalExpression) | (EqualityExpression, &#34;==&#34;, RelationalExpression) | (EqualityExpression, &#34;!=&#34;, RelationalExpression);
+RelationalExpression = ShiftExpression | (RelationalExpression, &#34;&lt;&#34;, ShiftExpression) | (RelationalExpression, &#34;&gt;&#34;, ShiftExpression) | (RelationalExpression, &#34;&lt;=&#34;, ShiftExpression) | (RelationalExpression, &#34;&gt;=&#34;, ShiftExpression) | (InstanceofExpression);
+InstanceofExpression = (RelationalExpression, &#34;instanceof&#34;, ReferenceType) | (RelationalExpression, &#34;instanceof&#34;, Pattern);
+ShiftExpression = AdditiveExpression | (ShiftExpression, &#34;&lt;&lt;&#34;, AdditiveExpression) | (ShiftExpression, &#34;&gt;&gt;&#34;, AdditiveExpression) | (ShiftExpression, &#34;&gt;&gt;&gt;&#34;, AdditiveExpression);
+AdditiveExpression = MultiplicativeExpression | (AdditiveExpression, &#34;+&#34;, MultiplicativeExpression) | (AdditiveExpression, &#34;-&#34;, MultiplicativeExpression);
+MultiplicativeExpression = UnaryExpression | (MultiplicativeExpression, &#34;*&#34;, UnaryExpression) | (MultiplicativeExpression, &#34;/&#34;, UnaryExpression) | (MultiplicativeExpression, &#34;%&#34;, UnaryExpression);
+UnaryExpression = PreIncrementExpression | PreDecrementExpression | (&#34;+&#34;, UnaryExpression) | (&#34;-&#34;, UnaryExpression) | UnaryExpressionNotPlusMinus;
+PreIncrementExpression = &#34;++&#34;, UnaryExpression;
+PreDecrementExpression = &#34;--&#34;, UnaryExpression;
+UnaryExpressionNotPlusMinus = PostfixExpression | (&#34;~&#34;, UnaryExpression) | (&#34;!&#34;, UnaryExpression) | CastExpression | SwitchExpression;
+PostfixExpression = Primary | ExpressionName | PostIncrementExpression | PostDecrementExpression;
+PostIncrementExpression = PostfixExpression, &#34;++&#34;;
+PostDecrementExpression = PostfixExpression, &#34;--&#34;;
+CastExpression = (&#34;(&#34;, PrimitiveType, &#34;)&#34;, UnaryExpression) | (&#34;(&#34;, ReferenceType, {AdditionalBound}, &#34;)&#34;, UnaryExpressionNotPlusMinus) | (&#34;(&#34;, ReferenceType, {AdditionalBound}, &#34;)&#34;, LambdaExpression);
+SwitchExpression = &#34;switch&#34;, &#34;(&#34;, Expression, &#34;)&#34;, SwitchBlock;
+ConstantExpression = Expression;
+@endebnf
+</pre></code></div><div class="mycell"><img loading="lazy" width="874" height="4096" class="scale" src="../imgw/img-77e069d5877dd567ec7b5f1637cc9355.png"/></div></div></td></tr></tbody></table></p><p><a style="position:relative;top:-38px;" name="6007bd14bc7a4d17"></a></p><div style="clear:both;height:50px;"></div><h2 class="chap"><img onclick="window.scrollTo(0,0);" title="Back to top" src="../backtop1.svg" width="20" height="20" class="backtop"/><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/cmp/dokuwiki/ru/ebnf#11"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/cmp/asciidoc/ru/ebnf#11"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/cmp/markdown/ru/ebnf#11"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>Remaining defects </h2><p></p><em>Always observed on 2023-04-28</em><p></p><h3>Could you put &#39;arrow head&#39; on all rerouted lines?</h3><p></p><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msg3baad2b40a733fe23cc421895acd005f" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="img3baad2b40a733fe23cc421895acd005f" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;3baad2b40a733fe23cc421895acd005f&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;3baad2b40a733fe23cc421895acd005f&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;3baad2b40a733fe23cc421895acd005f&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="pre3baad2b40a733fe23cc421895acd005f">@startebnf
+title Could you put &#39;arrow head&#39; on all rerouted lines?
+test = [1], [12], [123], [1234];
+@endebnf
+</pre></code></div><div class="mycell"><img loading="lazy" width="385" height="145" class="scale" src="../imgw/img-3baad2b40a733fe23cc421895acd005f.png"/></div></div></td></tr></tbody></table></p><p></p><p></p><em>No Ref.</em><p></p><h3>Order issue</h3><p></p><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msg8d1167da6b5fe86781278968a408710d" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="img8d1167da6b5fe86781278968a408710d" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;8d1167da6b5fe86781278968a408710d&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;8d1167da6b5fe86781278968a408710d&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;8d1167da6b5fe86781278968a408710d&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="pre8d1167da6b5fe86781278968a408710d">@startebnf
+a = (one, two), three;
+b = (one (* 1 *), two (* 2 *)), three (* 3 *);
+@endebnf
+</pre></code></div><div class="mycell"><img loading="lazy" width="239" height="207" class="scale" src="../imgw/img-8d1167da6b5fe86781278968a408710d.png"/></div></div></td></tr></tbody></table></p><p></p><p></p><p></p><em>[Ref. <a href="https://forum.plantuml.net/17090/ebnf-perserve-the-order-of-element">QA-17090</a>]</em><p></p><h3>Allow accentuated or Unicode char on EBNF meta-identifier or rule name.</h3><p></p><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msgb1bc2a74b8b0b128950ceccffe53b32a" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="imgb1bc2a74b8b0b128950ceccffe53b32a" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;b1bc2a74b8b0b128950ceccffe53b32a&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;b1bc2a74b8b0b128950ceccffe53b32a&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;b1bc2a74b8b0b128950ceccffe53b32a&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="preb1bc2a74b8b0b128950ceccffe53b32a">@startebnf
+(* Test of accentuated or Unicode char*)
+alt = été | hiver;
+hiver = &#39;froid&#39;;
+été = &#39;chaud&#39;;
+@endebnf
+</pre></code></div><div class="mycell"><img loading="lazy" width="290" height="179" class="scale" src="../imgw/img-b1bc2a74b8b0b128950ceccffe53b32a.png"/></div></div></td></tr></tbody></table></p><p><em>[Ref. <a href="https://forum.plantuml.net/17145/ebnf-allow-accentuated-unicode-char-ebnf-meta-identifier-rule">QA-17145</a>]</em></p><p></p><h3>Allow full restriction management with <code class="cod">except-symbol &#34;-&#34;</code></h3><p></p><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msg635e242a1d2a75be7ca009efbf4f1a44" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="img635e242a1d2a75be7ca009efbf4f1a44" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;635e242a1d2a75be7ca009efbf4f1a44&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;635e242a1d2a75be7ca009efbf4f1a44&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;635e242a1d2a75be7ca009efbf4f1a44&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="pre635e242a1d2a75be7ca009efbf4f1a44">@startebnf
+title First [modified] example of §5.8 Syntactic-term of ISO-EBNF
+
+letter = ? &#34;A&#34; - &#34;Z&#34; ?;
+
+vowel = &#34;A&#34; | &#34;E&#34; | &#34;I&#34; | &#34;O&#34; | &#34;U&#34;;
+
+consonant = letter - vowel;
+@endebnf
+</pre></code></div><div class="mycell"><img loading="lazy" width="455" height="410" class="scale" src="../imgw/img-635e242a1d2a75be7ca009efbf4f1a44.png"/></div></div></td></tr></tbody></table></p><p></p><p></p><p></p><em>[Ref. <a href="https://forum.plantuml.net/16735/ebnf-allow-full-restriction-management-with-except-symbol">QA-16735</a>]</em></td><td id="toctd" valign="top" style="max-width:240px;min-width:240px;"><div id="toc"><ul><li><a href="ebnf.html#480f4bc351a60134">Minimal binary diagram</a></li><li><a href="ebnf.html#735437e6fd32864a">All EBNF Elements</a></li><li><a href="ebnf.html#85aeb07de49e6db4">Special sequence management with `+special-sequence-symbol &#34;?&#34;+`</a></li><li><a href="ebnf.html#795877454b6aa54b">Full repetition management with `+repetition-symbol &#34;*&#34;+`</a></li><li><a href="ebnf.html#bd90d595616d1cf2">Drawing mode</a></li><li><a href="ebnf.html#5398a902fa7ed57d">Notes on Elements</a></li><li><a href="ebnf.html#bb2ede32ce6accb8">Using (global) style</a></li><li><a href="ebnf.html#6ebedcbc408cf830">Example of LISP Grammar</a></li><li><a href="ebnf.html#4fd52eccba095c80">EBNF of PlantUMLs EBNF Grammar</a></li><li><a href="ebnf.html#324aba8a3f83acb0">Java Language Specification</a></li><li><a href="ebnf.html#6007bd14bc7a4d17">Remaining defects</a></li></ul></div></td></tr></tbody></table></p><p></p><span id="ezoic-pub-ad-placeholder-104"></span><!-- ezoic_pub_ad_placeholder-104-bottom_of_page-234x60-104-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-104-bottom_of_page-468x60-104-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-104-bottom_of_page-728x90-104-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-104-bottom_of_page-970x250-104-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-104-bottom_of_page-300x250x3-104-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-104-bottom_of_page-970x90-104-nonexxxnonexxxxxxezmaxscaleval100 --></div><style>.btm{text-align:center}.btm a{text-decoration:none;color:#637282}.btm a:hover{color:#0366d6}</style><div class="btm"><hr/><a href="https://g.ezoic.net/privacy/plantuml.com"><small>Privacy Policy</small></a>      <a href="../direct-sales.html"><small>Advertise</small></a><p></p></div><script>var sc_project=11129479;var sc_invisible=1;var sc_security="66ff16f1";</script><script async="" src="https://www.statcounter.com/counter/counter.js"></script><!--[selectrongo:done]--><script type="text/javascript">
+				var __inScopeForCCPA = false;
+		function __uspapi(command, version, callback) {
+			var response = null;
+			var successs = false;
+			if (command === "getUSPData" && version === 1) {
+				var uspString = "1"; // Version
+				if (__inScopeForCCPA) {
+					uspString += "N"; // Has Explicit Notice for Opt Out been provided (ex footer or minor consent modal)
+					var result;
+					var consentCookie = (result = new RegExp('(?:^|; )ezoccpaconsent=([^;]*)').exec(document.cookie)) ? (result[1]) : null;
+					if (consentCookie === "nonconsent") {
+						uspString += "Y";
+					}
+					else {
+						uspString += "N";
+					}
+					uspString += "N" // Is pub a signatory to the IAB Limited Service Provider Agreement (http://www.iabprivacy.com/)
+				}
+				else {
+					uspString += "---";
+				}
+				response = {
+					uspString: uspString,
+					version: 1
+				};
+				success = true;
+			}
+			return callback(response, success);
+		};
+		function __receiveUspapiMessage(event) {
+			if (event.data.hasOwnProperty('__uspapiCall')) {
+				__uspapi('getUSPData', 1, function(uspData, success) {
+					event.source.postMessage({
+						__uspapiReturn: {
+							returnValue: uspData,
+							success: success,
+							callId: event.data.__uspapiCall.callId
+						}
+					},
+					event.origin);
+				});
+			}
+			return null;
+		};
+		window.addEventListener("message", __receiveUspapiMessage, false);
+</script>
+<script>__ez.queue.addFile('/tardisrocinante/vitals.js', '/tardisrocinante/vitals.js?gcb=2&cb=3', false, ['/parsonsmaize/mulvane.js'], true, false, true, false);</script>
+<script>var _audins_dom="plantuml_com",_audins_did=173770;__ez.queue.addDelayFunc("audins.js","__ez.script.add", "//go.ezodn.com/detroitchicago/audins.js?cb=195-2");</script><noscript><div style="display:none;"><img src="https://pixel.quantserve.com/pixel/p-31iz6hfFutd16.gif?labels=Domain.plantuml_com,DomainId.173770" border="0" height="1" width="1" alt="Quantcast"/></div></noscript>
+<script>__ez.queue.addFile('/beardeddragon/drake.js', '/beardeddragon/drake.js?gcb=2&cb=4', false, [], true, false, true, false);</script>
+<script type="text/javascript" style='display:none;'>var __ez_dims = (function() {
+		var setCookie = function( name, content, expiry ) {
+			return document.cookie = name+'='+content+((expiry)?';expires='+(new Date(Math.floor(new Date().getTime()+expiry*1000)).toUTCString()):'')+';path=/';
+		};
+		var ffid = 1;
+		var oh = window.screen.height;
+		var ow = window.screen.width;
+		var h = ffid === 1 ? oh : (oh > ow) ? oh : ow;
+		var w = ffid === 1 ? ow : (oh > ow) ? ow : oh;
+		var uh = window.innerHeight || document.documentElement.clientHeight || document.getElementsByTagName('body')[0].clientHeight;
+		var uw = window.innerWidth || document.documentElement.clientWidth || document.getElementsByTagName('body')[0].clientWidth;
+		setCookie('ezds', encodeURIComponent('ffid='+ffid+',w='+w+',h='+h), (31536e3*7));
+		setCookie('ezohw', encodeURIComponent('w='+uw+',h='+uh), (31536e3*7));
+	})();</script>
+<script type='text/javascript' style='display:none;' async>__ez.queue.addFile('/parsonsmaize/chanute.js', '/parsonsmaize/chanute.js?a=a&cb=7&dcb=195-2&shcb=34', true, ['/parsonsmaize/mulvane.js'], true, false, false, false);</script>
+<script type='text/javascript' style='display:none;' async>__ez.queue.addFile('/porpoiseant/jellyfish.js', '/porpoiseant/jellyfish.js?a=a&cb=10&dcb=195-2&shcb=34', false, [], true, false, false, false);</script></body></html>

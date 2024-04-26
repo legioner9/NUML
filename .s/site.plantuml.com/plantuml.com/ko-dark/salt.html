@@ -1,0 +1,3462 @@
+<html lang="ko"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<script data-ezscrex='false' data-cfasync='false' data-pagespeed-no-defer>var __ez=__ez||{};__ez.stms=Date.now();__ez.evt={};__ez.script={};__ez.ck=__ez.ck||{};__ez.template={};__ez.template.isOrig=false;__ez.queue=function(){var e=0,i=0,t=[],n=!1,o=[],r=[],s=!0,a=function(e,i,n,o,r,s,a){var l=arguments.length>7&&void 0!==arguments[7]?arguments[7]:window,d=this;this.name=e,this.funcName=i,this.parameters=null===n?null:p(n)?n:[n],this.isBlock=o,this.blockedBy=r,this.deleteWhenComplete=s,this.isError=!1,this.isComplete=!1,this.isInitialized=!1,this.proceedIfError=a,this.fWindow=l,this.isTimeDelay=!1,this.process=function(){f("... func = "+e),d.isInitialized=!0,d.isComplete=!0,f("... func.apply: "+e);var i=d.funcName.split("."),n=null,o=this.fWindow||window;i.length>3||(n=3===i.length?o[i[0]][i[1]][i[2]]:2===i.length?o[i[0]][i[1]]:o[d.funcName]),null!=n&&n.apply(null,this.parameters),!0===d.deleteWhenComplete&&delete t[e],!0===d.isBlock&&(f("----- F'D: "+d.name),u())}},l=function(e,i,t,n,o,r,s){var a=arguments.length>7&&void 0!==arguments[7]?arguments[7]:window,l=this;this.name=e,this.path=i,this.async=o,this.defer=r,this.isBlock=t,this.blockedBy=n,this.isInitialized=!1,this.isError=!1,this.isComplete=!1,this.proceedIfError=s,this.fWindow=a,this.isTimeDelay=!1,this.isPath=function(e){return"/"===e[0]&&"/"!==e[1]},this.getSrc=function(e){return void 0!==window.__ezScriptHost&&this.isPath(e)&&"banger.js"!==this.name?window.__ezScriptHost+e:e},this.process=function(){l.isInitialized=!0,f("... file = "+e);var i=this.fWindow?this.fWindow.document:document,t=i.createElement("script");t.src=this.getSrc(this.path),!0===o?t.async=!0:!0===r&&(t.defer=!0),t.onerror=function(){var e={url:window.location.href,name:l.name,path:l.path,user_agent:window.navigator.userAgent};"undefined"!=typeof _ezaq&&(e.pageview_id=_ezaq.page_view_id);var i=encodeURIComponent(JSON.stringify(e)),t=new XMLHttpRequest;t.open("GET","//g.ezoic.net/ezqlog?d="+i,!0),t.send(),f("----- ERR'D: "+l.name),l.isError=!0,!0===l.isBlock&&u()},t.onreadystatechange=t.onload=function(){var e=t.readyState;f("----- F'D: "+l.name),e&&!/loaded|complete/.test(e)||(l.isComplete=!0,!0===l.isBlock&&u())},i.getElementsByTagName("head")[0].appendChild(t)}},d=function(e,i){this.name=e,this.path="",this.async=!1,this.defer=!1,this.isBlock=!1,this.blockedBy=[],this.isInitialized=!0,this.isError=!1,this.isComplete=i,this.proceedIfError=!1,this.isTimeDelay=!1,this.process=function(){}};function c(e){!0!==h(e)&&0!=s&&e.process()}function h(e){if(!0===e.isTimeDelay&&!1===n)return f(e.name+" blocked = TIME DELAY!"),!0;if(p(e.blockedBy))for(var i=0;i<e.blockedBy.length;i++){var o=e.blockedBy[i];if(!1===t.hasOwnProperty(o))return f(e.name+" blocked = "+o),!0;if(!0===e.proceedIfError&&!0===t[o].isError)return!1;if(!1===t[o].isComplete)return f(e.name+" blocked = "+o),!0}return!1}function f(e){var i=window.location.href,t=new RegExp("[?&]ezq=([^&#]*)","i").exec(i);"1"===(t?t[1]:null)&&console.debug(e)}function u(){++e>200||(f("let's go"),m(o),m(r))}function m(e){for(var i in e)if(!1!==e.hasOwnProperty(i)){var t=e[i];!0===t.isComplete||h(t)||!0===t.isInitialized||!0===t.isError?!0===t.isError?f(t.name+": error"):!0===t.isComplete?f(t.name+": complete already"):!0===t.isInitialized&&f(t.name+": initialized already"):t.process()}}function p(e){return"[object Array]"==Object.prototype.toString.call(e)}return window.addEventListener("load",(function(){setTimeout((function(){n=!0,f("TDELAY -----"),u()}),5e3)}),!1),{addFile:function(e,i,n,s,a,d,h,f,u){var m=new l(e,i,n,s,a,d,h,u);!0===f?o[e]=m:r[e]=m,t[e]=m,c(m)},addDelayFile:function(e,i){var n=new l(e,i,!1,[],!1,!1,!0);n.isTimeDelay=!0,f(e+" ...  FILE! TDELAY"),r[e]=n,t[e]=n,c(n)},addFunc:function(e,n,s,l,d,h,f,u,m,p){!0===h&&(e=e+"_"+i++);var w=new a(e,n,s,l,d,f,u,p);!0===m?o[e]=w:r[e]=w,t[e]=w,c(w)},addDelayFunc:function(e,i,n){var o=new a(e,i,n,!1,[],!0,!0);o.isTimeDelay=!0,f(e+" ...  FUNCTION! TDELAY"),r[e]=o,t[e]=o,c(o)},items:t,processAll:u,setallowLoad:function(e){s=e},markLoaded:function(e){if(e&&0!==e.length){if(e in t){var i=t[e];!0===i.isComplete?f(i.name+" "+e+": error loaded duplicate"):(i.isComplete=!0,i.isInitialized=!0)}else t[e]=new d(e,!0);f("markLoaded dummyfile: "+t[e].name)}},logWhatsBlocked:function(){for(var e in t)!1!==t.hasOwnProperty(e)&&h(t[e])}}}();__ez.evt.add=function(e,t,n){e.addEventListener?e.addEventListener(t,n,!1):e.attachEvent?e.attachEvent("on"+t,n):e["on"+t]=n()},__ez.evt.remove=function(e,t,n){e.removeEventListener?e.removeEventListener(t,n,!1):e.detachEvent?e.detachEvent("on"+t,n):delete e["on"+t]};__ez.script.add=function(e){var t=document.createElement("script");t.src=e,t.async=!0,t.type="text/javascript",document.getElementsByTagName("head")[0].appendChild(t)};__ez.dot={};__ez.queue.addFile('/detroitchicago/boise.js', '/detroitchicago/boise.js?gcb=195-2&cb=2', true, [], true, false, true, false);__ez.queue.addFile('/parsonsmaize/abilene.js', '/parsonsmaize/abilene.js?gcb=195-2&cb=28', true, [], true, false, true, false);</script>
+<script data-ezscrex="false" type="text/javascript" data-cfasync="false">window._ezaq = Object.assign({}, typeof window._ezaq !== "undefined" ? window._ezaq : {}, {"ad_cache_level":1,"domain_id":173770,"ezcache_level":2,"ezcache_skip_code":0,"has_bad_image":0,"has_bad_words":0,"is_sitespeed":0,"lt_cache_level":0,"page_view_id":"d6b2fcff-ac03-4ed7-52f5-5a6d870b0401","response_size_orig":107869,"response_time_orig":5,"template_id":134,"url":"https://plantuml.com/ko-dark/salt","word_count":2619,"worst_bad_word_level":0});__ez.queue.markLoaded('ezaqBaseReady');</script>
+<script type="text/javascript">(function(){function storageAvailable(type){var storage;try{storage=window[type];var x='__storage_test__';storage.setItem(x,x);storage.removeItem(x);return true;}
+catch(e){return e instanceof DOMException&&(e.code===22||e.code===1014||e.name==='QuotaExceededError'||e.name==='NS_ERROR_DOM_QUOTA_REACHED')&&(storage&&storage.length!==0);}}
+function remove_ama_config(){if(storageAvailable('localStorage')){localStorage.removeItem("google_ama_config");}}
+remove_ama_config()})()</script>
+<script type="text/javascript">var ezoicTestActive = true</script>
+<script data-ezscrex="false" type="text/javascript" data-cfasync="false">window._ezaq = Object.assign({}, typeof window._ezaq !== "undefined" ? window._ezaq : {}, {"ab_test_id":"mod174-c","ad_cache_level":1,"ad_count_adjustment":0,"ad_lazyload_version":0,"ad_load_version":1,"ad_location_ids":"","adx_ad_count":0,"ai_placeholder_cache_level":1,"ai_placeholder_placement_cnt":-1,"bidder_method":1,"bidder_version":3,"city":"Krasnoyarsk","country":"RU","days_since_last_visit":-1,"display_ad_count":0,"domain_id":173770,"domain_test_group":20230802,"ds_adsize_opt_id":-1,"engaged_time_visit":0,"ezcache_level":2,"ezcache_skip_code":0,"form_factor_id":1,"framework_id":1,"has_bad_image":0,"has_bad_words":0,"iab_category":"","iab_category_0":"596","is_embed":false,"is_from_recommended_pages":false,"is_return_visitor":false,"is_sitespeed":0,"last_page_load":"","last_pageview_id":"","lt_cache_level":0,"max_ads":0,"metro_code":0,"optimization_version":1,"page_ad_positions":"","page_view_count":1040,"page_view_id":"d6b2fcff-ac03-4ed7-52f5-5a6d870b0401","position_selection_id":0,"postal_code":"660000","pv_event_count":0,"response_size_orig":107869,"response_time_orig":5,"serverid":"i-020e20bd20c9cad94","state":"KYA","sub_page_ad_positions":"","t_epoch":1697691200,"template_id":134,"time_on_site_visit":0,"url":"https://plantuml.com/ko-dark/salt","word_count":2619,"worst_bad_word_level":0});__ez.queue.markLoaded('ezaqReady');</script>
+<script data-ezscrex='false' data-cfasync='false' data-pagespeed-no-defer>__ez.queue.addFile('/parsonsmaize/mulvane.js', '/parsonsmaize/mulvane.js?gcb=195-2&cb=5', true, ['/parsonsmaize/abilene.js'], true, false, true, false);__ez.queue.addFile('/parsonsmaize/olathe.js', '/parsonsmaize/olathe.js?gcb=195-2&cb=20', false, ['/parsonsmaize/abilene.js','/parsonsmaize/mulvane.js'], true, false, true, false);__ez.queue.addFile('/porpoiseant/et.js', '/porpoiseant/et.js?gcb=195-2&cb=2', false, [], true, false, true, false);!function(){var e;__ez.vep=(e=[],{Add:function(i,t){__ez.dot.isDefined(i)&&__ez.dot.isValid(t)&&e.push({type:"video",video_impression_id:i,domain_id:__ez.dot.getDID(),t_epoch:__ez.dot.getEpoch(0),data:__ez.dot.dataToStr(t)})},Fire:function(){if(void 0===document.visibilityState||"prerender"!==document.visibilityState){if(__ez.dot.isDefined(e)&&e.length>0)for(;e.length>0;){var i=5;i>e.length&&(i=e.length);var t=e.splice(0,i),o=__ez.dot.getURL("/detroitchicago/grapefruit.gif")+"?orig="+(!0===__ez.template.isOrig?1:0)+"&v="+btoa(JSON.stringify(t));__ez.dot.Fire(o)}e=[]}}})}();</script><script data-ezscrex='false' data-cfasync='false' data-pagespeed-no-defer>!function(){function e(i){return e="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e},e(i)}__ez.pel=function(){var i=[];function t(t,o,d,_,n,r,a,s){if(__ez.dot.isDefined(t)&&0!=__ez.dot.isAnyDefined(t.getSlotElementId,t.ElementId)){void 0===s&&(s=!1);var p=parseInt(__ez.dot.getTargeting(t,"ap")),f=__ez.dot.getSlotIID(t),u=__ez.dot.getAdUnit(t,s),z=parseInt(__ez.dot.getTargeting(t,"compid")),g=0,c=0,l=function(i){if("undefined"==typeof _ezim_d)return!1;var t=__ez.dot.getAdUnitPath(i).split("/").pop();if("object"===("undefined"==typeof _ezim_d?"undefined":e(_ezim_d))&&_ezim_d.hasOwnProperty(t))return _ezim_d[t];for(var o in _ezim_d)if(o.split("/").pop()===t)return _ezim_d[o];return!1}(t);"object"==e(l)&&(void 0!==l.creative_id&&(c=l.creative_id),void 0!==l.line_item_id&&(g=l.line_item_id)),__ez.dot.isDefined(f,u)&&__ez.dot.isValid(o)&&("0"===f&&!0!==s||""===u||i.push({type:"impression",impression_id:f,domain_id:__ez.dot.getDID(),unit:u,t_epoch:__ez.dot.getEpoch(0),revenue:d,est_revenue:_,ad_position:p,ad_size:"",bid_floor_filled:n,bid_floor_prev:r,stat_source_id:a,country_code:__ez.dot.getCC(),pageview_id:__ez.dot.getPageviewId(),comp_id:z,line_item_id:g,creative_id:c,data:__ez.dot.dataToStr(o),is_orig:s||__ez.template.isOrig}))}}function o(){void 0!==document.visibilityState&&"prerender"===document.visibilityState||(__ez.dot.isDefined(i)&&i.length>0&&[i.filter((function(e){return e.is_orig})),i.filter((function(e){return!e.is_orig}))].forEach((function(e){for(;e.length>0;){var i=e[0].is_orig||!1,t=5;t>e.length&&(t=e.length);var o=e.splice(0,t),d=__ez.dot.getURL("/porpoiseant/army.gif")+"?orig="+(!0===i?1:0)+"&sts="+btoa(JSON.stringify(o));(void 0!==window.isAmp&&isAmp||void 0!==window.ezWp&&ezWp)&&void 0!==window._ezaq&&_ezaq.hasOwnProperty("domain_id")&&(d+="&visit_uuid="+_ezaq.visit_uuid),__ez.dot.Fire(d)}})),i=[])}return{Add:t,AddAndFire:function(e,i){t(e,i,0,0,0,0,0),o()},AddAndFireOrig:function(e,i){t(e,i,0,0,0,0,0,!0),o()},AddById:function(e,t,o,d){var _=e.split("/");if(__ez.dot.isDefined(e)&&3===_.length&&__ez.dot.isValid(t)){var n=_[0],r={type:"impression",impression_id:_[2],domain_id:__ez.dot.getDID(),unit:n,t_epoch:__ez.dot.getEpoch(0),pageview_id:__ez.dot.getPageviewId(),data:__ez.dot.dataToStr(t),is_orig:o||__ez.template.isOrig};void 0!==d&&(r.revenue=d),i.push(r)}},Fire:o,GetPixels:function(){return i}}}()}();__ez.queue.addFile('/detroitchicago/raleigh.js', '/detroitchicago/raleigh.js?gcb=195-2&cb=6', false, ['/parsonsmaize/abilene.js'], true, false, true, false);__ez.queue.addFile('/detroitchicago/vista.js', '/detroitchicago/vista.js?gcb=195-2&cb=5', false, ['/parsonsmaize/abilene.js'], true, false, true, false);__ez.queue.addFile('/detroitchicago/tampa.js', '/detroitchicago/tampa.js?gcb=195-2&cb=5', false, ['/parsonsmaize/abilene.js'], true, false, true, false);</script><base href=""/>
+<meta name="flattr:id" content="1ew3x0"/>
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "url": "https://plantuml.com",
+  "name": "PlantUML",
+  "sameAs" : ["https://twitter.com/plantuml","https://en.wikipedia.org/wiki/PlantUML","https://www.wikidata.org/wiki/Q18346546"],
+  "logo": "https://cdn-0.plantuml.com/logo3.png",
+  "contactPoint": [{
+    "@type": "ContactPoint",
+    "email": "plantuml@gmail.com",
+    "url": "https://plantuml.com",
+    "contactType": "customer service"
+  }]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+    "@type": "ListItem",
+    "position": 1,
+    "item": {
+      "@id": "https://plantuml.com",
+      "name": "Home"
+    }
+  },{
+    "@type": "ListItem",
+    "position": 2,
+    "item": {
+      "@id": "https://plantuml.com/sitemap-language-specification",
+      "name": "Language specification"
+    }
+  },{
+    "@type": "ListItem",
+    "position": 3,
+    "item": {
+      "@id": "https://plantuml.com/salt",
+      "name": "Salt"
+  }
+  }]
+}
+</script>
+<link rel="canonical" href="../ko/salt.html"/>
+<link rel="alternate" hreflang="x-default" href="../salt.html"/>
+<link rel="alternate" hreflang="de" href="../de/salt.html"/>
+<link rel="alternate" hreflang="en" href="../salt.html"/>
+<link rel="alternate" hreflang="es" href="../es/salt.html"/>
+<link rel="alternate" hreflang="fr" href="../fr/salt.html"/>
+<link rel="alternate" hreflang="ja" href="../ja/salt.html"/>
+<link rel="alternate" hreflang="ru" href="../ru/salt.html"/>
+<link rel="alternate" hreflang="ko" href="../ko/salt.html"/>
+<link rel="alternate" hreflang="zh" href="../zh/salt.html"/>
+
+<link rel="shortcut icon" href="../favicon.ico"/>
+
+<link rel="preload" as="image" href="../svgrepo-house.svg"/>
+<link rel="preload" as="image" href="../svgrepo-text-news.svg"/>
+<link rel="preload" as="image" href="../svgrepo-rocket-3-start.svg"/>
+<link rel="preload" as="image" href="../svgrepo-server.svg"/>
+<link rel="preload" as="image" href="../svgrepo-play.svg"/>
+<link rel="preload" as="image" href="../svgrepo-forum.svg"/>
+<link rel="preload" as="image" href="../svgrepo-add-to-online-cart.svg"/>
+<link rel="preload" as="image" href="../svgrepo-forum-message.svg"/>
+<link rel="preload" as="image" href="../svgrepo-palette-fill.svg"/>
+<link rel="preload" as="image" href="../svgrepo-cpu.svg"/>
+<link rel="preload" as="image" href="../svgrepo-books-library.svg"/>
+<link rel="preload" as="image" href="../svgrepo-signpost-fill.svg"/>
+<link rel="preload" as="image" href="../svgrepo-library.svg"/>
+
+<link rel="preload" as="image" href="../flags21.png"/>
+
+<link rel="preload" as="image" href="../svgrepo-uxwing-dark-mode-toggle.svg"/>
+
+
+<!-- link rel="preload" as="image" href="https://img.shields.io/liberapay/patrons/plantuml.svg?logo=liberapay" -->
+
+
+<title>Draw GUI mockup with Salt</title>
+<meta name="description" content="Salt는 그래픽 인터페이스 디자인을 위한 서브 프로젝트이다. 버튼, 라디오 버튼, 체크박스, 윈도우, 트리, 메뉴, 테이블 등을 정의할 수 있다."/>
+
+<meta property="og:type" content="article"/>
+<meta property="og:title" content="Draw GUI mockup with Salt"/>
+<meta property="og:description" content="Salt는 그래픽 인터페이스 디자인을 위한 서브 프로젝트이다. 버튼, 라디오 버튼, 체크박스, 윈도우, 트리, 메뉴, 테이블 등을 정의할 수 있다."/>
+
+<meta property="og:url" content="https://plantuml.com/ko/salt"/>
+<meta property="og:site_name" content="PlantUML.com"/>
+
+<!-- meta property="og:image" content="https://plantuml.com/og-salt" -->
+<meta name="twitter:image" content="https://plantuml.com/og-salt"/>
+<meta property="og:locale" content="ko"/>
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Draw GUI mockup with Salt"/>
+<meta name="twitter:description" content="Salt는 그래픽 인터페이스 디자인을 위한 서브 프로젝트이다. 버튼, 라디오 버튼, 체크박스, 윈도우, 트리, 메뉴, 테이블 등을 정의할 수 있다."/>
+<meta name="twitter:site" content="@PlantUML"/>
+<meta name="twitter:creator" content="@PlantUML"/>
+
+
+
+
+
+<!-- https://www.w3schools.com/colors/colors_picker.asp -->
+<!-- filter css https://codepen.io/sosuke/pen/Pjoqqp -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<style>
+.scale {
+}
+
+li {
+	margin: 2px;
+}
+#external li {
+	margin: 13px;
+}
+
+.pezoic {
+  max-width:970px;
+}
+
+@media screen and (max-width: 1600px) {
+	.pezoic {
+	  max-width:768px;
+	}
+}
+
+.coptable {
+	max-width: 90%;
+}
+
+.mytab {
+	display:inline-block;
+	border-radius: 3px;
+	border: 1px solid #e1e4e8;
+}
+
+.mytab:hover {
+	border: 1px dashed #8CB4FF;
+	cursor: pointer;
+	color: #8CB4FF;
+	background: #111111;
+}
+
+.cop {
+	margin: 25px 10px 0 10px;
+	filter: invert(100%);
+}
+.cop:hover {
+	cursor: pointer; 
+filter: invert(59%) sepia(81%) saturate(1778%) hue-rotate(164deg) brightness(105%) contrast(103%);
+}
+.cop2 {
+	margin: 25px 10px 0 10px;
+}
+.cop2:hover {
+	cursor: pointer; 
+}
+.msg {
+	position: absolute;
+	color:#339966;
+	background-color: #FFF;
+	margin-top: 55px;
+	display:none;
+	border-radius: 3px;
+	border: 1px solid #4dff00;
+}
+
+.mycell0 {
+	float: left;
+	vertical-align : top;
+	padding:10px;
+}
+.mycell0 code:hover {
+	cursor: default; 
+	color: #fff;
+}
+
+.mycell {
+	float: right;
+	vertical-align : top;
+	padding:10px;
+	max-width: 55vw;
+	overflow-x: auto;
+}
+
+.mycell0 pre {
+	max-width: 55vw;
+	overflow-x: auto;
+}
+
+.cod {
+	background: #222222;
+	padding: 2px 5px;
+	border-radius: 3px;
+}
+.colo {
+	display: inline-block;
+	background: #222222;
+	padding: 7px 12px;
+	border-radius: 3px;
+}
+.tag,.tagg,.tago,.tagr {
+	text-rendering: optimizeLegibility;
+	display: inline-block;
+	padding: 3px 5px 2px 4px;
+	text-decoration: none;
+	white-space: nowrap;
+	border: 1px solid #999;
+	text-transform: uppercase;
+	text-align: center;
+	border-radius: 3px;
+	font-size: 11px;
+	font-weight: bold;
+	line-height: 90%;
+}
+.tag {
+	background-color: #EEEEEE;
+}
+.tagg {
+	background-color: #98FB98;
+}
+.tago {
+	background-color: #fafa00;
+}
+.tagr {
+	background-color: #FF4500;
+}
+
+
+a {
+    text-decoration:none;
+    color:#8CB4FF;
+}
+a:hover {
+    text-decoration:underline;
+}
+
+.menu1 {
+    border: 0;
+    font-family: Helvetica,sans-serif;
+    font-size: 14px;
+    padding: 0;
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+	vertical-align: middle;
+	line-height: 30px;
+}
+.menu1 a{
+    /*background: #FF0;*/
+    text-align:center;
+	padding:10px 7px 10px 7px;
+    text-decoration:none;
+    color:#b0c0d0;
+}
+.menu1 a:hover{
+    color:#8CB4FF;
+}
+#menu0 {
+    top:0;
+    z-index: 4;
+    margin:0 0 0 10px;
+    padding:0;
+}
+
+@media screen and (max-width: 1200px) {
+	#menu0 {
+	visibility: hidden;
+	}	
+}
+
+.mhov img {
+	margin: 0 5px 0 0;
+	padding: 0;
+}
+.mhov:hover {
+filter: invert(59%) sepia(81%) saturate(1778%) hue-rotate(164deg) brightness(105%) contrast(103%);
+}
+
+#menuside2 {
+    border:0;
+    font-family:Helvetica,sans-serif;
+    font-size:14px;
+    padding:20px 0 4px 0;
+    margin:0
+}
+#menuside2 span {
+    vertical-align: top;
+}
+#menuside2 li{
+    list-style:none;
+    position:relative;
+    padding:0;
+	margin:10px 20px 10px 10px;
+    border:0;
+}
+#menuside2 li a{
+	display: inline-block;
+    text-decoration:none;
+    color:#b0c0d0;
+    width:100%;
+}
+#menuside2 img {
+filter: invert(46%) sepia(13%) saturate(620%) hue-rotate(170deg) brightness(91%) contrast(85%);
+}
+
+#BC {
+    z-index: 0;
+    padding-top: 5px;
+    top: 35px;
+}
+
+.breadcrumb {
+z-index:1;
+	font-family:Helvetica,sans-serif;
+	font-size:14px;
+	text-align: center;
+	display: inline-block;
+	overflow: hidden;
+	border-radius: 5px;
+}
+
+
+.breadcrumb a {
+	text-decoration: none;
+	outline: none;
+	display: block;
+	float: left;
+	font-size: 12px;
+	line-height: 24px;
+	color: #373f49;
+	padding: 0 10px 0 35px;
+	background: #f0f1f1;
+	background: linear-gradient(#f0f1f1, #c6d2d2);
+	position: relative;
+}
+.breadcrumb a:first-child {
+	padding-left: 21px;
+	border-radius: 5px 0 0 5px; /*to match with the parent's radius*/
+}
+.breadcrumb a:first-child:before {
+	left: 14px;
+}
+.breadcrumb a:last-child {
+	visibility: hidden;
+}
+
+.breadcrumb a.active, .breadcrumb a:hover{
+	color: #0366d6;
+	background: #c6d2d2;
+	background: linear-gradient(#e3e4e4, #b8c7c7);
+}
+.breadcrumb a.active:after, .breadcrumb a:hover:after {
+	background: #c6d2d2;
+	background: linear-gradient(135deg, #e3e4e4, #b8c7c7);
+}
+
+.breadcrumb a:after {
+	content: '';
+	position: absolute;
+	top: 0; 
+	right: -12px; /*half of square's length*/
+	/*same dimension as the line-height of .breadcrumb a */
+	width: 24px; 
+	height: 24px;
+	transform: scale(0.707) rotate(45deg);
+	/*we need to prevent the arrows from getting buried under the next link*/
+	z-index: 1;
+	/*background same as links but the gradient will be rotated to compensate with the transform applied*/
+	background: #f0f1f1;
+	background: linear-gradient(135deg, #f0f1f1, #c6d2d2);
+	/*stylish arrow design using box shadow*/
+	box-shadow: 
+		2px -2px 0 2px rgba(0,0,0,0.1), 
+		3px -3px 0 2px rgba(255,255,255,0.1);
+	/*
+		5px - for rounded arrows and 
+		50px - to prevent hover glitches on the border created using shadows*/
+	border-radius: 0 5px 0 50px;
+}
+
+/*we dont need an arrow after the last link*/
+.breadcrumb a:last-child:after {
+	content: none;
+	visibility: hidden;
+}
+
+
+.lga,.lga a,.lgi,.lgi a {
+	font-family:Helvetica,sans-serif;
+	font-size:13px;
+	text-align: center;
+    color: #fff;
+    padding: 0 5px;
+    margin: 0;
+}
+.lga,.lga a {
+    background-color: #008;
+}
+.lgi,.lgi a {
+    background-color: #888;
+}
+.lga:hover,.lga:hover a {
+    text-decoration: none;
+    color: #BBB;
+}
+.lgi:hover,.lgi:hover a {
+    text-decoration: none;
+    color: #CCC;
+}
+
+</style>
+
+<style>
+.backtop {
+	margin:0px 10px;
+	filter: invert(100%);
+}
+.backtop:hover {
+	cursor: pointer;
+filter: invert(59%) sepia(81%) saturate(1778%) hue-rotate(164deg) brightness(105%) contrast(103%);
+}
+</style>
+
+
+
+
+<style>
+/* Dropdown Button */
+.dropbtn {
+  padding: 0px;
+  border: none;
+  background: none;
+  filter: invert(100%);
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+  margin: 0 10px;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content img {
+vertical-align:middle;
+margin: 0 8px 0 1px;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  font-size: small;
+  font-weight: normal;
+  color: black;
+  padding: 5px 10px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #ddd;
+  color: #8CB4FF;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {display: block;}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {background-color: #3e8e41;}
+</style>
+<style>
+#flex1 {
+	margin: 0;
+	padding: 0;
+	display: flex;
+	flex-direction: row;
+	width: 378px;
+	height: 100%;
+}
+
+#lll {
+	flex-grow: 1;
+	flex-shrink: 1;
+	max-width:162px;
+	overflow:hidden;
+}
+
+#mmm {
+	flex-grow: 0;
+	flex-shrink: 0;
+	background: #222222;
+	width: 210px;
+	min-width: 210px;
+	max-width: 210px;
+	flex-grow: 0;
+	flex-shrink: 0;
+    border-left: 1px solid #333333;
+}
+
+#qqq {
+	flex-grow: 0;
+	flex-shrink: 0;
+	width: 4px;
+	min-width: 4px;
+	max-width: 4px;
+	flex-grow: 0;
+	flex-shrink: 0;
+}
+
+#rrr {
+	flex-grow: 1;
+	flex-shrink: 1;
+	max-width:162px;
+	overflow:hidden;
+}
+
+.cde {
+	display: flex;
+	flex-direction: column;
+    justify-content:space-between;
+    height: 100%;
+}
+.cd {
+	display: flex;
+	flex-direction: column;
+    justify-content: space-start;
+    height: 100%;
+}
+
+.aaa {
+	height: 30px;
+	min-height: 30px;
+	max-height: 30px;
+	flex-grow: 0;
+	flex-shrink: 0;
+	background: #222222;
+    border-bottom: 1px solid #333333;
+}
+
+.bbb, .bbborder {
+	flex-grow: 1;
+	flex-shrink: 0;
+}
+
+.bbborder {
+    border-left: 1px solid #333333;
+}
+
+
+#header {
+    z-index: 10;
+    position: fixed;
+	left: 378px;
+	right: 0;
+    height: 30px;
+    top: 0;
+    background: #222222;
+    border-bottom: 1px solid #333333;
+    
+}
+#header2 {
+    z-index: 7;
+    position: fixed;
+	left: 378px;
+	right: 0;
+    height: 10px;
+    top: 30px;
+    background: #1B1B1B;
+}
+
+
+#left0 {
+	top:0;
+    position: fixed;
+    left: 0;
+    margin:0 ;
+    bottom: 0;
+    width: 378px;
+    padding: 0;
+    z-index: 2;
+    /*background: #F7F;*/
+}
+
+
+#root {
+    padding:0;
+	margin: 40px 0 0 388px;
+    background: #1B1B1B;
+}
+
+
+body {
+	margin: auto;
+	overflow-x: hidden;
+    background: #1B1B1B;
+    color: #FFF;
+}
+
+
+@media screen and (max-width: 1190px) {
+	#flex1, #left0 {
+		width: 215px;
+	}
+	#root {
+		margin: 40px 0 0 224px;
+	}
+	#header, #header2 {
+		left: 215px;
+	}
+	#left0 {
+		left: 0;
+	}
+	#lll, #rrr {
+  		width:0;
+		visibility: hidden;
+  		flex-grow: 0;
+  		flex-shrink: 0;
+	}
+	
+}
+@media screen and (max-width: 1010px) {
+	#root {
+		margin: 0 0 0 216px;
+	}
+	#header, #header2 {
+		display: none;
+	}
+	#lll, #qqq {
+  		width:0;
+		visibility: hidden;
+  		flex-grow: 0;
+  		flex-shrink: 0;
+	}
+	#mmm {
+		    border-right: 1px solid #333333;
+	}
+	
+}
+
+@media screen and (min-width:1700px){
+	#header, #header2 {
+		left:518px;
+	}
+	#left0, #flex1{
+		width:518px;
+	}
+	#root{
+		margin-left:528px;
+	}
+	#lll, #rrr {
+		max-width:302px;
+	}
+}
+
+
+</style>
+
+
+
+
+<script>window.pushMST_config={"vapidPK":"BBodn2vLFoDO5AdCfmOOzNmcUsn52kTA6JNZNYVFymzEdWHonz_bkUcsaTkPXHvNGRkRUSAxMbup-H0l2sb1h_Q","enableOverlay":true,"swPath":"/sw.js","i18n":{}};
+  var pushmasterTag = document.createElement('script');
+  pushmasterTag.src = "https://cdn.pushmaster-cdn.xyz/scripts/publishers/629f5e297baecc00098a271b/SDK.js";
+  pushmasterTag.setAttribute('defer','');
+
+  var firstScriptTag = document.getElementsByTagName('script')[0];
+  firstScriptTag.parentNode.insertBefore(pushmasterTag, firstScriptTag);
+</script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-TKZNNQT9CZ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-TKZNNQT9CZ');
+</script>
+
+
+
+<script>
+var llg = "ko";
+var az=0;
+var amdark=1;
+function ljs(n) {
+	if (az) return false;
+    var sc = document.createElement("script");
+    sc.type = "text/javascript";
+    sc.src = "/btn-"+n+".js";
+	document.body.innerHTML = "<i style='position:absolute;top:30%;width:100%;'><center>Loading in progress...";
+    document.body.appendChild(sc);
+}
+function ctc(id) {
+document.getElementById('img'+id).classList.remove('cop'); document.getElementById('img'+id).classList.add('cop2');
+document.getElementById('pre'+id).style.backgroundColor = '#4dff00';
+document.getElementById('msg'+id).style.display = 'inline';
+
+setTimeout(function() { document.getElementById('img'+id).classList.remove('cop2'); document.getElementById('img'+id).classList.add('cop'); document.getElementById('pre'+id).style.backgroundColor = ''; document.getElementById('msg'+id).style.display = 'none';}, 800);      
+
+
+	text = document.getElementById('pre'+id).innerText;
+    if (window.clipboardData && window.clipboardData.setData)
+        return window.clipboardData.setData("Text", text);
+    else if (document.queryCommandSupported && document.queryCommandSupported("copy")) {
+        var ta = document.createElement("textarea");
+        ta.textContent = text;
+        ta.style.position = "fixed";
+        document.body.appendChild(ta);
+        ta.select();
+        try {
+            return document.execCommand("copy");
+        }
+        catch (ex) {
+            return false;
+        }
+        finally {
+            document.body.removeChild(ta);
+        }
+    }
+}
+</script>
+
+
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script type='text/javascript'>
+var ezoTemplate = 'pub_site';
+var ezouid = '1';
+var ezoFormfactor = '1';
+</script><script data-ezscrex="false" type='text/javascript'>
+var soc_app_id = '0';
+var did = 173770;
+var ezdomain = 'plantuml.com';
+var ezoicSearchable = 1;
+</script>
+<script data-ezscrex='false' data-pagespeed-no-defer data-cfasync='false'>
+function create_ezolpl() {
+	var d = new Date();
+	d.setTime(d.getTime() + (365*24*60*60*1000));
+	var expires = "expires="+d.toUTCString();
+	__ez.ck.setByCat("ezux_lpl_173770=" + new Date().getTime() + "|" + _ezaq.page_view_id + "|" + _ezaq.is_return_visitor + "; " + expires, 3);
+}
+function attach_ezolpl() {
+	if (document.readyState === "complete") {
+		create_ezolpl();
+		return;
+	}
+	window.addEventListener("load", create_ezolpl);
+}
+
+__ez.queue.addFunc("attach_ezolpl", "attach_ezolpl", null, false, ['/detroitchicago/boise.js'], true, false, false, false);
+</script></head>
+<body>
+
+<div id="left0">
+
+<div id="flex1">
+
+
+<div id="lll">
+
+<div class="cde">
+
+<!-- c --><div>
+</div>
+
+<!-- d --><div>
+<!-- Ezoic - Left0 - sidebar -->
+<span id="ezoic-pub-ad-placeholder-131"></span><!-- ezoic_pub_ad_placeholder-131-sidebar-120x600-131-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-131-sidebar-160x600-131-nonexxxnonexxxxxxezmaxscaleval100 -->
+<!-- End Ezoic - Left0 - sidebar -->
+</div>
+
+
+<!-- e --><div>
+</div>
+
+</div><!-- cde -->
+
+
+</div><!-- lll -->
+
+<div id="mmm">
+
+
+<div class="cde">
+
+<!-- c --><div>
+
+<!--menu 10-->
+<div>
+
+
+
+<!-- Ezoic - Menu2L - sidebar -->
+<span id="ezoic-pub-ad-placeholder-105"></span><!-- ezoic_pub_ad_placeholder-105-sidebar_middle-120x240-105-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-105-sidebar_middle-125x125-105-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-105-sidebar_middle-180x150-105-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-105-sidebar_middle-200x200-105-nonexxxnonexxxxxxezmaxscaleval100 -->
+<!-- End Ezoic - Menu2L - sidebar -->
+
+</div>
+
+<!-- https://stackoverflow.com/questions/22252472/how-to-change-the-color-of-an-svg-element -->
+<!-- https://codepen.io/sosuke/pen/Pjoqqp -->
+
+
+<ul id="menuside2">
+<li><a href="index.html" class="mhov"><img src="../svgrepo-house.svg" width="16" height="16"/><span>홈</span></a></li>
+<li><a href="news.html" class="mhov"><img src="../svgrepo-text-news.svg" width="16" height="16"/><span>새소식</span></a></li>
+<li><a href="starting.html" class="mhov"><img src="../svgrepo-rocket-3-start.svg" width="16" height="16"/><span>시작하기</span></a></li>
+<li><a href="https://www.plantuml.com/plantuml/duml/SyfFKj2rKt3CoKnELR1Io4ZDoSa70000" class="mhov"><img src="../svgrepo-server.svg" width="16" height="16"/><span>Online Server</span></a></li>
+<li><a href="running.html" class="mhov"><img src="../svgrepo-play.svg" width="16" height="16"/><span>사용하기</span></a></li>
+<li><a href="faq.html" class="mhov"><img src="../svgrepo-forum.svg" width="16" height="16"/><span>F.A.Q.</span></a></li>
+<li><a href="download.html" class="mhov"><img src="../svgrepo-add-to-online-cart.svg" width="16" height="16"/><span>다운로드</span></a></li>
+<li><a href="../qa.html" class="mhov"><img src="../svgrepo-forum-message.svg" width="16" height="16"/><span>포럼</span></a></li>
+<li><a href="theme.html" class="mhov"><img src="../svgrepo-palette-fill.svg" width="16" height="16"/><span>Theme</span></a></li>
+<li><a href="preprocessing.html" class="mhov"><img src="../svgrepo-cpu.svg" width="16" height="16"/><span>전처리</span></a></li>
+<li><a href="stdlib.html" class="mhov"><img src="../svgrepo-books-library.svg" width="16" height="16"/><span>표준 라이브러리</span></a></li>
+<li><a href="https://crashedmind.github.io/PlantUMLHitchhikersGuide" class="mhov"><img src="../svgrepo-signpost-fill.svg" width="16" height="16"/><span>Hitchhiker&#39;s Guide</span></a></li>
+<li><a href="guide.html" class="mhov"><img src="../svgrepo-library.svg" width="16" height="16"/><span>PDF 가이드</span></a></li>
+</ul>
+
+<!-- menu 20-->
+<div>
+
+<!-- Ezoic - Zmenubottom - sidebar_bottom -->
+<span id="ezoic-pub-ad-placeholder-108"></span><!-- ezoic_pub_ad_placeholder-108-sidebar_middle-120x240-108-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-108-sidebar_middle-125x125-108-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-108-sidebar_middle-180x150-108-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-108-sidebar_middle-200x200-108-nonexxxnonexxxxxxezmaxscaleval100 -->
+<!-- End Ezoic - Zmenubottom - sidebar_bottom -->
+
+</div>
+</div>
+
+<!-- d menu 30 --><div>
+</div>
+
+
+<!-- e menu 40 --><div style="margin-bottom:35px;">
+
+<!-- Ezoic - menu40 - sidebar -->
+<span id="ezoic-pub-ad-placeholder-186"></span><!-- ezoic_pub_ad_placeholder-186-sidebar_middle-120x240-186-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-186-sidebar_middle-125x125-186-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-186-sidebar_middle-180x150-186-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-186-sidebar_middle-200x200-186-nonexxxnonexxxxxxezmaxscaleval100 -->
+<!-- End Ezoic - menu40 - sidebar -->
+
+</div>
+
+</div><!-- cde -->
+
+
+
+
+</div><!-- mmm -->
+
+<div id="qqq">
+
+<div class="cd">
+<div class="aaa"></div>
+<div class="bbborder"></div>
+</div><!-- cd -->
+
+</div><!-- qqq -->
+
+<div id="rrr">
+
+<div class="cd">
+<div class="aaa"></div>
+
+<div style="height:5px;"></div>
+
+<div class="bbb">
+
+<div class="cde">
+
+<!-- c --><div>
+</div>
+
+<!-- d --><div>
+<!-- Ezoic - Left2 - sidebar -->
+<span id="ezoic-pub-ad-placeholder-175"></span><!-- ezoic_pub_ad_placeholder-175-sidebar-120x600-175-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-175-sidebar-160x600-175-nonexxxnonexxxxxxezmaxscaleval100 -->
+<!-- End Ezoic - Left2 - sidebar -->
+</div>
+
+<!-- e --><div>
+</div>
+
+</div><!-- cde -->
+
+</div><!-- bbb -->
+
+</div><!-- cd -->
+
+
+</div><!-- rrr -->
+
+
+
+</div><!-- flex1 -->
+
+
+</div><!-- left0 -->
+
+<style>
+#contmenu {
+display: flex;
+height: 30px;
+width: 100%;
+margin: 0;
+padding: 0;
+}
+
+#contmenua {
+height: 30px;
+padding-right: 25px;
+}
+
+#contmenub {
+z-index:15;
+display: inline-block;
+flex-grow:1;
+flex-shrink:1;
+height: 30px;
+background-color: #222222;
+}
+
+#magic {
+white-space: nowrap;
+overflow: hidden;
+z-index: 14;
+position: fixed;
+top: 0;
+right: 50px;
+height: 30px;
+width: 30px;
+}
+
+#magic2 {
+white-space: nowrap;
+overflow: hidden;
+z-index: 16;
+position: fixed;
+top: 0;
+right: 0;
+height: 30px;
+width: 50px;
+background-color: #222222;
+}
+#magic2 img {
+margin: 5px 0 0 5px;
+filter: invert(86%) sepia(23%) saturate(200%) hue-rotate(170deg) brightness(86%) contrast(88%);
+}
+#magic2:hover img {
+filter: invert(59%) sepia(81%) saturate(1778%) hue-rotate(164deg) brightness(105%) contrast(103%);
+}
+
+
+#magic:hover #svgrepoleft {
+filter: invert(59%) sepia(81%) saturate(1778%) hue-rotate(164deg) brightness(105%) contrast(103%);
+}
+
+
+#magic:hover {
+width: 100%;
+height: 31px;
+}
+
+#aze {
+	height: 30px;
+	display:flex;
+	flex-direction: row-reverse;
+}
+#aze1 {
+	height: 30px;
+	background-color: #222222;
+}
+#aze2 {
+	height: 30px;
+	background-color: #222222;
+	padding-left: 10px;
+	border-left: 1px solid #333333;
+	border-bottom: 1px solid #333333;
+}
+#aze1 img {
+    filter: invert(72%) sepia(4%) saturate(1039%) hue-rotate(169deg) brightness(108%) contrast(84%);
+}
+#aze3 {
+	width: 3px;
+	height: 30px;
+	background-color: #222222;
+}
+
+
+
+</style>
+
+<div id="header">
+<div id="contmenu">
+<div id="contmenua">
+<div class="menu1">
+<a href="sequence-diagram.html">시퀀스</a>
+<a href="use-case-diagram.html">유스케이스</a>
+<a href="class-diagram.html">클래스</a>
+<a href="activity-diagram-beta.html">액티비티</a>
+<a href="component-diagram.html">컴포넌트</a>
+<a href="state-diagram.html">상태</a>
+<a href="object-diagram.html">객체</a>
+<a href="deployment-diagram.html">배치</a>
+<a href="timing-diagram.html">타이밍</a>
+
+<a href="nwdiag.html">Network</a>
+<a href="salt.html">Wireframe</a>
+<a href="archimate-diagram.html">Archimate</a>
+<a href="gantt-diagram.html">Gantt</a>
+<a href="mindmap-diagram.html">MindMap</a>
+<a href="wbs-diagram.html">WBS</a>
+<a href="json.html">JSON</a>
+<a href="yaml.html">YAML</a>
+
+</div>
+</div>
+<div id="contmenub"></div>
+</div><!--contmenu-->
+<!-- https://developer.mozilla.org/fr/docs/Web/CSS/position -->
+<div id="magic">
+
+	<div id="aze">
+		<div id="aze1"><img id="svgrepoleft" width="30" height="30" src="../svgrepo-left.svg"/> </div><!-- aze1 -->
+		<div id="aze2">
+
+<div class="menu1">
+<a href="sequence-diagram.html">시퀀스</a>
+<a href="use-case-diagram.html">유스케이스</a>
+<a href="class-diagram.html">클래스</a>
+<a href="activity-diagram-beta.html">액티비티</a>
+<a href="component-diagram.html">컴포넌트</a>
+<a href="state-diagram.html">상태</a>
+<a href="object-diagram.html">객체</a>
+<a href="deployment-diagram.html">배치</a>
+<a href="timing-diagram.html">타이밍</a>
+
+<a href="nwdiag.html">Network</a>
+<a href="salt.html">Wireframe</a>
+<a href="archimate-diagram.html">Archimate</a>
+<a href="gantt-diagram.html">Gantt</a>
+<a href="mindmap-diagram.html">MindMap</a>
+<a href="wbs-diagram.html">WBS</a>
+<a href="json.html">JSON</a>
+<a href="yaml.html">YAML</a>
+
+</div>
+			
+
+		</div><!-- aze2 -->
+		<div id="aze3"></div><!-- aze3 https://codepen.io/sosuke/pen/Pjoqqp -->
+	</div><!-- aze -->
+
+
+</div><!--magic-->
+
+<div id="magic2">
+
+<a href="../ko/salt.html">
+<img src="../svgrepo-uxwing-dark-mode-toggle.svg" height="20"/>
+</a>
+
+
+</div><!--magic2-->
+
+</div><!-- header -->
+<div id="header2"></div>
+
+
+
+
+
+<div id="root">
+
+<!-- https://css-tricks.com/snippets/css/a-guide-to-flexbox/ -->
+
+<style>
+
+#haut1 {
+	margin:50px 0 20px;
+	padding:0;
+	min-height:80px;
+}
+
+#donate {
+	padding-top: 5px;
+	min-height:30px;
+}
+
+</style>
+
+<div id="haut1">
+
+<!-- c --><div style="float:left;">	
+<!-- a simple div with some links -->
+<div class="breadcrumb">
+<a href="sitemap.html">PlantUML</a>
+<a href="https://plantuml.com/ko-dark/sitemap-language-specification">Language specification</a>
+<a href="salt.html">Salt</a>
+<a href="salt.html#"></a>
+</div>
+
+
+<div id="donate">
+
+ 
+
+<a href="https://discord.gg/sXhzexAQGh" style="text-decoration: none;">
+<img src="https://img.shields.io/discord/1083727021328306236?color=5865F2&amp;logo=discord&amp;logoColor=white" alt="Discord server"/>
+</a>
+
+ 
+
+<a href="https://github.com/sponsors/plantuml/" style="text-decoration: none;">
+<img src="https://img.shields.io/github/sponsors/plantuml?logo=github"/>
+</a>
+
+ 
+
+<a href="https://www.patreon.com/bePatron?patAmt=1&amp;u=527450&amp;rid=152970" style="text-decoration: none;">
+<img src="https://img.shields.io/badge/patreon-122-chocolate?logo=patreon"/>
+</a>
+
+ 
+
+<a href="../lp.html" style="text-decoration: none;">
+<img src="https://img.shields.io/liberapay/patrons/plantuml?color=gold&amp;logo=liberapay&amp;label=liberapay"/>
+</a>
+
+ 
+
+<a href="../en/paypal.html" style="text-decoration: none;">
+<img src="https://img.shields.io/badge/paypal-296-skyblue?logo=paypal&amp;logoColor=red"/>
+</a>
+
+<!--
+ 
+
+<a href="https://github.com/sponsors/plantuml" style="text-decoration: none;">
+<img src="https://img.shields.io/github/sponsors/plantuml?label=github">
+</a>
+
+-->
+</div> <!-- donate -->
+</div><!-- c -->
+
+
+<!-- e --><div style="float:right; margin:3px 0;">
+
+<!-- https://github.com/joielechong/iso-country-flags-svg-collection -->
+
+<!-- https://www.flaticon.com/packs/international-flags -->
+<!-- https://flagicons.lipis.dev/?continent=Europe -->
+<!-- https://flagpedia.net/download/icons -->
+
+<!-- https://www.countryflags.io/ -->
+
+<style>
+#langlist {
+display: flex;
+justify-content: space-between;
+width: 317px;
+height: 16px;
+margin: 3px 10px 3px 0;
+}
+
+.sel2 {
+  border: 2px solid #1B1B1B;
+}
+.nosel2 {
+  border: 2px solid #1B1B1B;
+  filter: grayscale(100%) opacity(75%);
+}
+.sel2:hover, .nosel2:hover {
+  cursor: pointer;
+  border: 2px solid #8CB4FF;
+  border-spacing: 0;
+  filter: grayscale(0%);
+  filter: contrast(200%);
+  filter: brightness(150%);
+}
+#flag1,#flag2,#flag3,#flag4,#flag5,#flag6,#flag7,#flag8 {
+background: url(../flags21.png);
+background-repeat: no-repeat;
+background-clip: content-box;
+width: 22px;
+height: 16px;
+}
+#flag2 {
+background-position: -22px 0px;
+}
+#flag3 {
+background-position: -44px 0px;
+}
+#flag4 {
+background-position: -66px 0px;
+}
+#flag5 {
+background-position: -88px 0px;
+}
+#flag6 {
+background-position: -110px 0px;
+}
+#flag7 {
+background-position: -132px 0px;
+}
+#flag8 {
+background-position: -154px 0px;
+}
+</style>
+
+<div id="langlist">
+
+
+<div id="flag1" onclick="location.href=&#39;/en-dark/salt&#39;" class="nosel2"></div>
+
+<div id="flag2" onclick="location.href=&#39;/de-dark/salt&#39;" class="nosel2"></div>
+
+
+<div id="flag3" onclick="location.href=&#39;/es-dark/salt&#39;" class="nosel2"></div>
+
+
+<div id="flag4" onclick="location.href=&#39;/fr-dark/salt&#39;" class="nosel2"></div>
+
+
+<div id="flag5" onclick="location.href=&#39;/ja-dark/salt&#39;" class="nosel2"></div>
+
+
+<div id="flag6" onclick="location.href=&#39;/ko-dark/salt&#39;" class="sel2"></div>
+
+
+<div id="flag7" onclick="location.href=&#39;/ru-dark/salt&#39;" class="nosel2"></div>
+
+
+<div id="flag8" onclick="location.href=&#39;/zh-dark/salt&#39;" class="nosel2"></div>
+
+
+
+
+
+
+</div><!-- langlist -->
+</div><!-- e -->
+
+</div><!-- haut1 -->
+
+
+<p>
+
+
+<style>
+#topsticky {
+	z-index:2;
+	margin: 0 240px 0 0;
+}
+
+@media screen and (min-height: 800px) {
+#topsticky {
+  position:sticky; top: 40px;
+}
+}
+
+@media screen and (max-width: 1500px) {
+#topsticky {
+	margin: 0;
+}
+}
+
+</style>
+
+</p><div id="topsticky">
+<!-- Ezoic - under page title -->
+<span id="ezoic-pub-ad-placeholder-647"></span><!-- ezoic_pub_ad_placeholder-647-under_page_title-320x100-647-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-647-under_page_title-300x50v2-647-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-647-under_page_title-320x50-647-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-647-under_page_title-468x60-647-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-647-under_page_title-728x90-647-nonexxxnonexxxxxxezmaxscaleval100 -->
+<!-- End Ezoic - under page title -->
+</div>
+
+
+<p>
+
+
+<a style="position:relative;top:-38px;" name="59611760774947cd"></a>
+<style>
+
+
+#toc {
+z-index: 2;
+position:sticky; top: 40px;
+list-style-type: none;
+margin: 0;
+padding: 0 10px;
+}
+.chap {
+clear:both;
+}
+#toc ul {
+list-style-type: none;
+max-height:87vh;
+overflow-y: auto;
+background: #000000;
+border-width: 2px;
+border-style: groove;
+border-radius: 3px;
+border-color: #e1e4e8;
+margin: 0;
+padding: 0;
+}
+@media screen and (min-height: 450px) {
+#toc ul {max-height:89.5vh;
+}
+}
+@media screen and (min-height: 550px) {
+#toc ul {max-height:91.5vh;
+}
+}
+@media screen and (min-height: 700px) {
+#toc ul {max-height:93.5vh;
+}
+}
+@media screen and (min-height: 900px) {
+#toc ul {max-height:94.5vh;
+}
+}
+#toc li {
+margin: 5px 5px 5px 10px;
+padding: 0;
+}
+@media screen and (max-width: 1500px) {
+	#toctd {
+	display: none;
+	}	
+	#toc {
+	display: none;
+	}	
+}
+</style>
+
+<table border="0" cellspacing="0" cellpadding="0" width="100%">
+<tbody><tr valign="top" width="100%">
+<td valign="top">
+<!--heading--><h1 class="chap"><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/cmp/dokuwiki/ko/salt#0"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/cmp/asciidoc/ko/salt#0"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/cmp/markdown/ko/salt#0"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>Salt (wireframe)</h1>
+<p></p>
+<strong>Salt</strong> 그래픽 인터페이스 디자인을 위한 서브 프로젝트이다.
+<p></p>
+<code class="cod">@startsalt</code> 키워드를 사용하거나, <code class="cod">@startuml</code> 아래에 salt 키워드를 사용할 수 있다.
+<p></p>
+<a style="position:relative;top:-38px;" name="8a3c20503dceb878"></a>
+<div style="clear:both;height:50px;">
+</div>
+<!--heading--><h2 class="chap"><img onclick="window.scrollTo(0,0);" title="Back to top" src="../backtop1.svg" width="20" height="20" class="backtop"/><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/cmp/dokuwiki/ko/salt#1"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/cmp/asciidoc/ko/salt#1"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/cmp/markdown/ko/salt#1"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>기본 위젯</h2>
+<p></p>
+윈도우는 반드시 브라킷({, })으로 감싸야 한다. 그리고 아래의 형식으로 사용한다.:
+<p></p>
+<ul>
+<li>버튼(Button)은 <code class="cod">[</code> 와 <code class="cod">]</code>.</li>
+<li>라디오 버튼(Radio button)은 <code class="cod">(</code> 와 <code class="cod">)</code>.</li>
+<li>체크박스(Checkbox)는 <code class="cod">[</code> 와 <code class="cod">]</code>.</li>
+<li>인풋박스(User text area)는 <code class="cod">&#34;</code>.</li>
+</ul>
+<p></p>
+<p>
+<table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0">
+<tbody><tr>
+<td valign="top">
+<div id="msg23fa5b8e472abdfafd3ba2abbb10dc81" class="msg">
+🎉 Copied!
+</div>
+<img width="16" height="16" id="img23fa5b8e472abdfafd3ba2abbb10dc81" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;23fa5b8e472abdfafd3ba2abbb10dc81&#39;)"/>
+<br/>
+<img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;23fa5b8e472abdfafd3ba2abbb10dc81&#39;)"/>
+</td>
+<td>
+<div class="mytab" onclick="javascript:ljs(&#39;23fa5b8e472abdfafd3ba2abbb10dc81&#39;)">
+<div class="mycell0">
+<code onmouseover="az=1" onmouseout="az=0"><pre id="pre23fa5b8e472abdfafd3ba2abbb10dc81">@startsalt
+{
+  Just plain text
+  [This is my button]
+  ()  Unchecked radio
+  (X) Checked radio
+  []  Unchecked box
+  [X] Checked box
+  &#34;Enter text here   &#34;
+  ^This is a droplist^
+}
+@endsalt
+</pre></code>
+</div>
+<div class="mycell">
+<img loading="lazy" width="179" height="160" class="scale" src="../imgw/dark-23fa5b8e472abdfafd3ba2abbb10dc81.png"/>
+</div>
+</div>
+</td>
+</tr>
+</tbody></table>
+</p><p>
+</p><p></p>
+<p></p>
+이 툴은 단순한 샘플 윈도우에 대한 토론을 위해 사용된다.
+<a style="position:relative;top:-38px;" name="80c9379f5bc0f2b7"></a>
+<div style="clear:both;min-height:110px;margin-top:10px;">
+
+<div class="pezoic">
+<!-- Ezoic - Fish0 - under_second_paragraph -->
+<span id="ezoic-pub-ad-placeholder-179"></span><!-- ezoic_pub_ad_placeholder-179-under_second_paragraph-234x60-179-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-179-under_second_paragraph-468x60-179-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-179-under_second_paragraph-728x90-179-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-179-under_second_paragraph-970x90-179-nonexxxnonexxxxxxezmaxscaleval100 -->
+<!-- End Ezoic - Fish0 - under_second_paragraph -->
+</div>
+
+</div>
+<!--heading--><h2 class="chap"><img onclick="window.scrollTo(0,0);" title="Back to top" src="../backtop1.svg" width="20" height="20" class="backtop"/><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/cmp/dokuwiki/ko/salt#2"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/cmp/asciidoc/ko/salt#2"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/cmp/markdown/ko/salt#2"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>Text area</h2>
+<p></p>
+Here is an attempt to create a <a href="https://html.spec.whatwg.org/multipage/form-elements.html#the-textarea-element">text area</a>:
+<p></p>
+<p>
+<table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0">
+<tbody><tr>
+<td valign="top">
+<div id="msg3371117cef564b8baf60e449e642aa0e" class="msg">
+🎉 Copied!
+</div>
+<img loading="lazy" width="16" height="16" id="img3371117cef564b8baf60e449e642aa0e" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;3371117cef564b8baf60e449e642aa0e&#39;)"/>
+<br/>
+<img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;3371117cef564b8baf60e449e642aa0e&#39;)"/>
+</td>
+<td>
+<div class="mytab" onclick="javascript:ljs(&#39;3371117cef564b8baf60e449e642aa0e&#39;)">
+<div class="mycell0">
+<code onmouseover="az=1" onmouseout="az=0"><pre id="pre3371117cef564b8baf60e449e642aa0e">@startsalt
+{+
+   This is a long
+   text in a textarea
+   .
+   &#34;                         &#34;
+}
+@endsalt
+</pre></code>
+</div>
+<div class="mycell">
+<img loading="lazy" width="219" height="81" class="scale" src="../imgw/dark-3371117cef564b8baf60e449e642aa0e.png"/>
+</div>
+</div>
+</td>
+</tr>
+</tbody></table>
+</p><p>
+</p><p></p>
+Note:
+<ul>
+<li>the dot (<code class="cod">.</code>) to fill up vertical space;</li>
+<li>the last line of space (<code class="cod">&#34;     &#34;</code>) to make the area wider.</li>
+</ul>
+<p></p>
+<em>[Ref. <a href="https://forum.plantuml.net/14765/">QA-14765</a>]</em>
+<p></p>
+<p></p>
+Then you can add <a href="salt.html#6b6xvjbaj4gpk362kjkx">scroll bar</a>:
+<p>
+<table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0">
+<tbody><tr>
+<td valign="top">
+<div id="msg1ec86d159cf58b3d0a736ed11a68ee6b" class="msg">
+🎉 Copied!
+</div>
+<img loading="lazy" width="16" height="16" id="img1ec86d159cf58b3d0a736ed11a68ee6b" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;1ec86d159cf58b3d0a736ed11a68ee6b&#39;)"/>
+<br/>
+<img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;1ec86d159cf58b3d0a736ed11a68ee6b&#39;)"/>
+</td>
+<td>
+<div class="mytab" onclick="javascript:ljs(&#39;1ec86d159cf58b3d0a736ed11a68ee6b&#39;)">
+<div class="mycell0">
+<code onmouseover="az=1" onmouseout="az=0"><pre id="pre1ec86d159cf58b3d0a736ed11a68ee6b">@startsalt
+{SI
+   This is a long
+   text in a textarea
+   .
+   &#34;                         &#34;
+}
+@endsalt
+</pre></code>
+</div>
+<div class="mycell">
+<img loading="lazy" width="238" height="81" class="scale" src="../imgw/dark-1ec86d159cf58b3d0a736ed11a68ee6b.png"/>
+</div>
+</div>
+</td>
+</tr>
+</tbody></table>
+</p><p>
+</p><p>
+<table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0">
+<tbody><tr>
+<td valign="top">
+<div id="msg3297867dd0f36f9f7d213697b832126b" class="msg">
+🎉 Copied!
+</div>
+<img loading="lazy" width="16" height="16" id="img3297867dd0f36f9f7d213697b832126b" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;3297867dd0f36f9f7d213697b832126b&#39;)"/>
+<br/>
+<img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;3297867dd0f36f9f7d213697b832126b&#39;)"/>
+</td>
+<td>
+<div class="mytab" onclick="javascript:ljs(&#39;3297867dd0f36f9f7d213697b832126b&#39;)">
+<div class="mycell0">
+<code onmouseover="az=1" onmouseout="az=0"><pre id="pre3297867dd0f36f9f7d213697b832126b">@startsalt
+{S-
+   This is a long
+   text in a textarea
+   .
+   &#34;                         &#34;
+}
+@endsalt
+</pre></code>
+</div>
+<div class="mycell">
+<img loading="lazy" width="219" height="100" class="scale" src="../imgw/dark-3297867dd0f36f9f7d213697b832126b.png"/>
+</div>
+</div>
+</td>
+</tr>
+</tbody></table>
+</p><p>
+<a style="position:relative;top:-38px;" name="6b65983f6b2d6e7b"></a>
+</p><div style="clear:both;height:50px;">
+</div>
+<!--heading--><h2 class="chap"><img onclick="window.scrollTo(0,0);" title="Back to top" src="../backtop1.svg" width="20" height="20" class="backtop"/><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/cmp/dokuwiki/ko/salt#3"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/cmp/asciidoc/ko/salt#3"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/cmp/markdown/ko/salt#3"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>Open, close droplist </h2>
+<p></p>
+You can open a droplist, by adding values enclosed by <code class="cod">^</code>, as:
+<p></p>
+<p>
+<table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0">
+<tbody><tr>
+<td valign="top">
+<div id="msg77efb09e7d5513a0eb36397f8a378268" class="msg">
+🎉 Copied!
+</div>
+<img loading="lazy" width="16" height="16" id="img77efb09e7d5513a0eb36397f8a378268" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;77efb09e7d5513a0eb36397f8a378268&#39;)"/>
+<br/>
+<img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;77efb09e7d5513a0eb36397f8a378268&#39;)"/>
+</td>
+<td>
+<div class="mytab" onclick="javascript:ljs(&#39;77efb09e7d5513a0eb36397f8a378268&#39;)">
+<div class="mycell0">
+<code onmouseover="az=1" onmouseout="az=0"><pre id="pre77efb09e7d5513a0eb36397f8a378268">@startsalt
+{
+  ^This is a closed droplist^ |
+  ^This is an open droplist^^ item 1^^ item 2^ |
+  ^This is another open droplist^ item 1^ item 2^ 
+}
+@endsalt
+</pre></code>
+</div>
+<div class="mycell">
+<img loading="lazy" width="695" height="59" class="scale" src="../imgw/dark-77efb09e7d5513a0eb36397f8a378268.png"/>
+</div>
+</div>
+</td>
+</tr>
+</tbody></table>
+</p><p>
+</p><p></p>
+<em>[Ref. <a href="https://forum.plantuml.net/4184">QA-4184</a>]</em>
+<a style="position:relative;top:-38px;" name="8770ed5d7126078c"></a>
+<div style="clear:both;min-height:110px;margin-top:10px;">
+
+
+<div class="pezoic">
+<!-- Ezoic - Fish1 - mid_content -->
+<span id="ezoic-pub-ad-placeholder-114"></span><!-- ezoic_pub_ad_placeholder-114-mid_content-234x60-114-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-114-mid_content-468x60-114-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-114-mid_content-728x90-114-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-114-mid_content-970x90-114-nonexxxnonexxxxxxezmaxscaleval100 -->
+<!-- End Ezoic - Fish1 - mid_content -->
+</div>
+
+</div>
+<!--heading--><h2 class="chap"><img onclick="window.scrollTo(0,0);" title="Back to top" src="../backtop1.svg" width="20" height="20" class="backtop"/><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/cmp/dokuwiki/ko/salt#4"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/cmp/asciidoc/ko/salt#4"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/cmp/markdown/ko/salt#4"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>그리드 사용하기</h2>
+<p></p>
+테이블은 <code class="cod">{</code>를 사용할 때 자동 생성된다. 그리고 컬럼을 구분하기 위해선 <code class="cod">|</code> 를 사용해야한다.
+<p></p>
+예시:
+<p></p>
+<p>
+<table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0">
+<tbody><tr>
+<td valign="top">
+<div id="msg539e6e37d91b2cfaa26f8088a4b9d1e6" class="msg">
+🎉 Copied!
+</div>
+<img loading="lazy" width="16" height="16" id="img539e6e37d91b2cfaa26f8088a4b9d1e6" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;539e6e37d91b2cfaa26f8088a4b9d1e6&#39;)"/>
+<br/>
+<img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;539e6e37d91b2cfaa26f8088a4b9d1e6&#39;)"/>
+</td>
+<td>
+<div class="mytab" onclick="javascript:ljs(&#39;539e6e37d91b2cfaa26f8088a4b9d1e6&#39;)">
+<div class="mycell0">
+<code onmouseover="az=1" onmouseout="az=0"><pre id="pre539e6e37d91b2cfaa26f8088a4b9d1e6">@startsalt
+{
+  Login    | &#34;MyName   &#34;
+  Password | &#34;****     &#34;
+  [Cancel] | [  OK   ]
+}
+@endsalt
+</pre></code>
+</div>
+<div class="mycell">
+<img loading="lazy" width="147" height="70" class="scale" src="../imgw/dark-539e6e37d91b2cfaa26f8088a4b9d1e6.png"/>
+</div>
+</div>
+</td>
+</tr>
+</tbody></table>
+</p><p>
+</p><p></p>
+Just after the opening bracket, you can use a character to define if you want to draw lines or columns of the grid :
+<p></p>
+<table border="1" cellspacing="0" cellpadding="5">
+<tbody><tr>
+<td><b>
+Symbol
+</b></td>
+<td><b>
+Result
+</b></td>
+</tr>
+<tr>
+<td>
+<code class="cod">#</code>
+</td>
+<td>
+To display all vertical and horizontal lines
+</td>
+</tr>
+<tr>
+<td>
+<code class="cod">!</code>
+</td>
+<td>
+To display all vertical lines
+</td>
+</tr>
+<tr>
+<td>
+<code class="cod">-</code>
+</td>
+<td>
+To display all horizontal lines
+</td>
+</tr>
+<tr>
+<td>
+<code class="cod">+</code>
+</td>
+<td>
+To display external lines
+</td>
+</tr>
+</tbody></table>
+<p></p>
+<p>
+<table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0">
+<tbody><tr>
+<td valign="top">
+<div id="msg0c94c1f36cbd0201978894d89d3304f5" class="msg">
+🎉 Copied!
+</div>
+<img loading="lazy" width="16" height="16" id="img0c94c1f36cbd0201978894d89d3304f5" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;0c94c1f36cbd0201978894d89d3304f5&#39;)"/>
+<br/>
+<img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;0c94c1f36cbd0201978894d89d3304f5&#39;)"/>
+</td>
+<td>
+<div class="mytab" onclick="javascript:ljs(&#39;0c94c1f36cbd0201978894d89d3304f5&#39;)">
+<div class="mycell0">
+<code onmouseover="az=1" onmouseout="az=0"><pre id="pre0c94c1f36cbd0201978894d89d3304f5">@startsalt
+{+
+  Login    | &#34;MyName   &#34;
+  Password | &#34;****     &#34;
+  [Cancel] | [  OK   ]
+}
+@endsalt
+</pre></code>
+</div>
+<div class="mycell">
+<img loading="lazy" width="150" height="75" class="scale" src="../imgw/dark-0c94c1f36cbd0201978894d89d3304f5.png"/>
+</div>
+</div>
+</td>
+</tr>
+</tbody></table>
+</p><p>
+</p><center><div class="tago">WARNING</div> <b>This translation need to be updated.</b> <div class="tago">WARNING</div></center>
+<a style="position:relative;top:-38px;" name="8839bd5b129e178e"></a>
+<div style="clear:both;height:50px;">
+</div>
+<!--heading--><h2 class="chap"><img onclick="window.scrollTo(0,0);" title="Back to top" src="../backtop1.svg" width="20" height="20" class="backtop"/><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/cmp/dokuwiki/ko/salt#5"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/cmp/asciidoc/ko/salt#5"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/cmp/markdown/ko/salt#5"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>Group box [^]</h2>
+<p></p>
+<p>
+<table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0">
+<tbody><tr>
+<td valign="top">
+<div id="msgb923ee4ec38918287e22eb4caa30426a" class="msg">
+🎉 Copied!
+</div>
+<img loading="lazy" width="16" height="16" id="imgb923ee4ec38918287e22eb4caa30426a" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;b923ee4ec38918287e22eb4caa30426a&#39;)"/>
+<br/>
+<img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;b923ee4ec38918287e22eb4caa30426a&#39;)"/>
+</td>
+<td>
+<div class="mytab" onclick="javascript:ljs(&#39;b923ee4ec38918287e22eb4caa30426a&#39;)">
+<div class="mycell0">
+<code onmouseover="az=1" onmouseout="az=0"><pre id="preb923ee4ec38918287e22eb4caa30426a">@startsalt
+{^&#34;My group box&#34;
+  Login    | &#34;MyName   &#34;
+  Password | &#34;****     &#34;
+  [Cancel] | [  OK   ]
+}
+@endsalt
+</pre></code>
+</div>
+<div class="mycell">
+<img loading="lazy" width="150" height="90" class="scale" src="../imgw/dark-b923ee4ec38918287e22eb4caa30426a.png"/>
+</div>
+</div>
+</td>
+</tr>
+</tbody></table>
+</p><p>
+</p><p></p>
+<em>[Ref. <a href="http://forum.plantuml.net/5840/please-allow-to-create-groupboxes-in-salt?show=5840#q5840">QA-5840</a>]</em>
+<a style="position:relative;top:-38px;" name="42b97f01c4a6ca6c"></a>
+<div style="clear:both;min-height:110px;margin-top:10px;">
+
+<div class="pezoic">
+<!-- Ezoic - Fish2 - long_content -->
+<span id="ezoic-pub-ad-placeholder-115"></span><!-- ezoic_pub_ad_placeholder-115-long_content-234x60-115-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-115-long_content-468x60-115-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-115-long_content-728x90-115-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-115-long_content-970x90-115-nonexxxnonexxxxxxezmaxscaleval100 -->
+<!-- End Ezoic - Fish2 - long_content -->
+</div>
+
+</div>
+<!--heading--><h2 class="chap"><img onclick="window.scrollTo(0,0);" title="Back to top" src="../backtop1.svg" width="20" height="20" class="backtop"/><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/cmp/dokuwiki/ko/salt#6"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/cmp/asciidoc/ko/salt#6"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/cmp/markdown/ko/salt#6"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>Using separator [.., ==, ~~, --]</h2>
+<p></p>
+You can use several horizontal lines as separator.
+<p></p>
+<p>
+<table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0">
+<tbody><tr>
+<td valign="top">
+<div id="msg4d18a5f16eeb3f8282baeecfdb31a29a" class="msg">
+🎉 Copied!
+</div>
+<img loading="lazy" width="16" height="16" id="img4d18a5f16eeb3f8282baeecfdb31a29a" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;4d18a5f16eeb3f8282baeecfdb31a29a&#39;)"/>
+<br/>
+<img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;4d18a5f16eeb3f8282baeecfdb31a29a&#39;)"/>
+</td>
+<td>
+<div class="mytab" onclick="javascript:ljs(&#39;4d18a5f16eeb3f8282baeecfdb31a29a&#39;)">
+<div class="mycell0">
+<code onmouseover="az=1" onmouseout="az=0"><pre id="pre4d18a5f16eeb3f8282baeecfdb31a29a">@startsalt
+{
+  Text1
+  ..
+  &#34;Some field&#34;
+  ==
+  Note on usage
+  ~~
+  Another text
+  --
+  [Ok]
+}
+@endsalt
+</pre></code>
+</div>
+<div class="mycell">
+<img loading="lazy" width="99" height="134" class="scale" src="../imgw/dark-4d18a5f16eeb3f8282baeecfdb31a29a.png"/>
+</div>
+</div>
+</td>
+</tr>
+</tbody></table>
+</p><p>
+<a style="position:relative;top:-38px;" name="759fb83534bc53b0"></a>
+</p><div style="clear:both;height:50px;">
+</div>
+<!--heading--><h2 class="chap"><img onclick="window.scrollTo(0,0);" title="Back to top" src="../backtop1.svg" width="20" height="20" class="backtop"/><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/cmp/dokuwiki/ko/salt#7"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/cmp/asciidoc/ko/salt#7"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/cmp/markdown/ko/salt#7"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>Tree widget [T]</h2>
+<p></p>
+To have a Tree, you have to start with <code class="cod">{T</code> and to use <code class="cod">+</code> to denote hierarchy.
+<p></p>
+<p>
+<table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0">
+<tbody><tr>
+<td valign="top">
+<div id="msg78d69756c64271ca05f7045b9b540cf2" class="msg">
+🎉 Copied!
+</div>
+<img loading="lazy" width="16" height="16" id="img78d69756c64271ca05f7045b9b540cf2" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;78d69756c64271ca05f7045b9b540cf2&#39;)"/>
+<br/>
+<img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;78d69756c64271ca05f7045b9b540cf2&#39;)"/>
+</td>
+<td>
+<div class="mytab" onclick="javascript:ljs(&#39;78d69756c64271ca05f7045b9b540cf2&#39;)">
+<div class="mycell0">
+<code onmouseover="az=1" onmouseout="az=0"><pre id="pre78d69756c64271ca05f7045b9b540cf2">@startsalt
+{
+{T
+ + World
+ ++ America
+ +++ Canada
+ +++ USA
+ ++++ New York
+ ++++ Boston
+ +++ Mexico
+ ++ Europe
+ +++ Italy
+ +++ Germany
+ ++++ Berlin
+ ++ Africa
+}
+}
+@endsalt
+</pre></code>
+</div>
+<div class="mycell">
+<img loading="lazy" width="104" height="191" class="scale" src="../imgw/dark-78d69756c64271ca05f7045b9b540cf2.png"/>
+</div>
+</div>
+</td>
+</tr>
+</tbody></table>
+</p><p>
+<a style="position:relative;top:-38px;" name="6f00692a1e2d5878"></a>
+</p><div style="clear:both;min-height:110px;margin-top:10px;">
+
+<div class="pezoic">
+<!-- Ezoic - Fish3 - longer_content -->
+<span id="ezoic-pub-ad-placeholder-116"></span><!-- ezoic_pub_ad_placeholder-116-longer_content-234x60-116-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-116-longer_content-468x60-116-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-116-longer_content-728x90-116-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-116-longer_content-970x90-116-nonexxxnonexxxxxxezmaxscaleval100 -->
+<!-- End Ezoic - Fish3 - longer_content -->
+</div>
+
+</div>
+<!--heading--><h2 class="chap"><img onclick="window.scrollTo(0,0);" title="Back to top" src="../backtop1.svg" width="20" height="20" class="backtop"/><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/cmp/dokuwiki/ko/salt#8"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/cmp/asciidoc/ko/salt#8"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/cmp/markdown/ko/salt#8"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>Tree table [T]</h2>
+<p></p>
+You can combine trees with tables.
+<p></p>
+<p></p>
+<p>
+<table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0">
+<tbody><tr>
+<td valign="top">
+<div id="msg462523af77b453fd99029f47bed3c73b" class="msg">
+🎉 Copied!
+</div>
+<img loading="lazy" width="16" height="16" id="img462523af77b453fd99029f47bed3c73b" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;462523af77b453fd99029f47bed3c73b&#39;)"/>
+<br/>
+<img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;462523af77b453fd99029f47bed3c73b&#39;)"/>
+</td>
+<td>
+<div class="mytab" onclick="javascript:ljs(&#39;462523af77b453fd99029f47bed3c73b&#39;)">
+<div class="mycell0">
+<code onmouseover="az=1" onmouseout="az=0"><pre id="pre462523af77b453fd99029f47bed3c73b">@startsalt
+{
+{T
++Region        | Population    | Age
++ World        | 7.13 billion  | 30
+++ America     | 964 million   | 30
++++ Canada     | 35 million    | 30
++++ USA        | 319 million   | 30
+++++ NYC       | 8 million     | 30
+++++ Boston    | 617 thousand  | 30
++++ Mexico     | 117 million   | 30
+++ Europe      | 601 million   | 30
++++ Italy      | 61 million    | 30
++++ Germany    | 82 million    | 30
+++++ Berlin    | 3 million     | 30
+++ Africa      | 1 billion     | 30
+}
+}
+@endsalt
+</pre></code>
+</div>
+<div class="mycell">
+<img loading="lazy" width="209" height="207" class="scale" src="../imgw/dark-462523af77b453fd99029f47bed3c73b.png"/>
+</div>
+</div>
+</td>
+</tr>
+</tbody></table>
+</p><p>
+</p><p></p>
+And add lines.
+<p></p>
+<p>
+<table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0">
+<tbody><tr>
+<td valign="top">
+<div id="msg06b6880c96c595dff48edc193f3f8dbe" class="msg">
+🎉 Copied!
+</div>
+<img loading="lazy" width="16" height="16" id="img06b6880c96c595dff48edc193f3f8dbe" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;06b6880c96c595dff48edc193f3f8dbe&#39;)"/>
+<br/>
+<img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;06b6880c96c595dff48edc193f3f8dbe&#39;)"/>
+</td>
+<td>
+<div class="mytab" onclick="javascript:ljs(&#39;06b6880c96c595dff48edc193f3f8dbe&#39;)">
+<div class="mycell0">
+<code onmouseover="az=1" onmouseout="az=0"><pre id="pre06b6880c96c595dff48edc193f3f8dbe">@startsalt
+{
+..
+== with T!
+{T!
++Region        | Population    | Age
++ World        | 7.13 billion  | 30
+++ America     | 964 million   | 30
+}
+..
+== with T-
+{T-
++Region        | Population    | Age
++ World        | 7.13 billion  | 30
+++ America     | 964 million   | 30
+}
+..
+== with T+
+{T+
++Region        | Population    | Age
++ World        | 7.13 billion  | 30
+++ America     | 964 million   | 30
+}
+..
+== with T#
+{T#
++Region        | Population    | Age
++ World        | 7.13 billion  | 30
+++ America     | 964 million   | 30
+}
+..
+}
+@endsalt
+</pre></code>
+</div>
+<div class="mycell">
+<img loading="lazy" width="184" height="315" class="scale" src="../imgw/dark-06b6880c96c595dff48edc193f3f8dbe.png"/>
+</div>
+</div>
+</td>
+</tr>
+</tbody></table>
+</p><p>
+</p><p></p>
+<p></p>
+<em>[Ref. <a href="https://forum.plantuml.net/1265/feature-request-tree-tables">QA-1265</a>]</em>
+<a style="position:relative;top:-38px;" name="21d475f2a55ac40a"></a>
+<div style="clear:both;height:50px;">
+</div>
+<!--heading--><h2 class="chap"><img onclick="window.scrollTo(0,0);" title="Back to top" src="../backtop1.svg" width="20" height="20" class="backtop"/><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/cmp/dokuwiki/ko/salt#9"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/cmp/asciidoc/ko/salt#9"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/cmp/markdown/ko/salt#9"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>Enclosing brackets [{, }]</h2>
+<p></p>
+You can define subelements by opening a new opening bracket.
+<p></p>
+<p>
+<table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0">
+<tbody><tr>
+<td valign="top">
+<div id="msg33541d0624d74687b7764b42c0c05b36" class="msg">
+🎉 Copied!
+</div>
+<img loading="lazy" width="16" height="16" id="img33541d0624d74687b7764b42c0c05b36" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;33541d0624d74687b7764b42c0c05b36&#39;)"/>
+<br/>
+<img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;33541d0624d74687b7764b42c0c05b36&#39;)"/>
+</td>
+<td>
+<div class="mytab" onclick="javascript:ljs(&#39;33541d0624d74687b7764b42c0c05b36&#39;)">
+<div class="mycell0">
+<code onmouseover="az=1" onmouseout="az=0"><pre id="pre33541d0624d74687b7764b42c0c05b36">@startsalt
+{
+Name         | &#34;                 &#34;
+Modifiers:   | { (X) public | () default | () private | () protected
+                [] abstract | [] final   | [] static }
+Superclass:  | { &#34;java.lang.Object &#34; | [Browse...] }
+}
+@endsalt
+</pre></code>
+</div>
+<div class="mycell">
+<img loading="lazy" width="335" height="88" class="scale" src="../imgw/dark-33541d0624d74687b7764b42c0c05b36.png"/>
+</div>
+</div>
+</td>
+</tr>
+</tbody></table>
+</p><p>
+<a style="position:relative;top:-38px;" name="8c3b5c405669f91a"></a>
+</p><div style="clear:both;min-height:110px;margin-top:10px;">
+
+<div class="pezoic">
+<!-- Ezoic - Fish4 - longest_content -->
+<span id="ezoic-pub-ad-placeholder-117"></span><!-- ezoic_pub_ad_placeholder-117-longest_content-234x60-117-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-117-longest_content-468x60-117-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-117-longest_content-728x90-117-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-117-longest_content-970x90-117-nonexxxnonexxxxxxezmaxscaleval100 -->
+<!-- End Ezoic - Fish4 - longest_content -->
+</div>
+
+</div>
+<!--heading--><h2 class="chap"><img onclick="window.scrollTo(0,0);" title="Back to top" src="../backtop1.svg" width="20" height="20" class="backtop"/><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/cmp/dokuwiki/ko/salt#10"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/cmp/asciidoc/ko/salt#10"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/cmp/markdown/ko/salt#10"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>Adding tabs [/]</h2>
+<p></p>
+You can add tabs using <code class="cod">{/</code> notation. Note that you can use HTML code to have bold text.
+<p></p>
+<p>
+<table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0">
+<tbody><tr>
+<td valign="top">
+<div id="msgec9439671b78e4fa53738f28e5322e95" class="msg">
+🎉 Copied!
+</div>
+<img loading="lazy" width="16" height="16" id="imgec9439671b78e4fa53738f28e5322e95" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;ec9439671b78e4fa53738f28e5322e95&#39;)"/>
+<br/>
+<img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;ec9439671b78e4fa53738f28e5322e95&#39;)"/>
+</td>
+<td>
+<div class="mytab" onclick="javascript:ljs(&#39;ec9439671b78e4fa53738f28e5322e95&#39;)">
+<div class="mycell0">
+<code onmouseover="az=1" onmouseout="az=0"><pre id="preec9439671b78e4fa53738f28e5322e95">@startsalt
+{+
+{/ &lt;b&gt;General | Fullscreen | Behavior | Saving }
+{
+{ Open image in: | ^Smart Mode^ }
+[X] Smooth images when zoomed
+[X] Confirm image deletion
+[ ] Show hidden images
+}
+[Close]
+}
+@endsalt
+</pre></code>
+</div>
+<div class="mycell">
+<img loading="lazy" width="260" height="130" class="scale" src="../imgw/dark-ec9439671b78e4fa53738f28e5322e95.png"/>
+</div>
+</div>
+</td>
+</tr>
+</tbody></table>
+</p><p>
+</p><p></p>
+Tab could also be vertically oriented:
+<p></p>
+<p>
+<table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0">
+<tbody><tr>
+<td valign="top">
+<div id="msgbd758f4918b58b116fc90715826742a4" class="msg">
+🎉 Copied!
+</div>
+<img loading="lazy" width="16" height="16" id="imgbd758f4918b58b116fc90715826742a4" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;bd758f4918b58b116fc90715826742a4&#39;)"/>
+<br/>
+<img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;bd758f4918b58b116fc90715826742a4&#39;)"/>
+</td>
+<td>
+<div class="mytab" onclick="javascript:ljs(&#39;bd758f4918b58b116fc90715826742a4&#39;)">
+<div class="mycell0">
+<code onmouseover="az=1" onmouseout="az=0"><pre id="prebd758f4918b58b116fc90715826742a4">@startsalt
+{+
+{/ &lt;b&gt;General
+Fullscreen
+Behavior
+Saving } |
+{
+{ Open image in: | ^Smart Mode^ }
+[X] Smooth images when zoomed
+[X] Confirm image deletion
+[ ] Show hidden images
+[Close]
+}
+}
+@endsalt
+</pre></code>
+</div>
+<div class="mycell">
+<img loading="lazy" width="263" height="133" class="scale" src="../imgw/dark-bd758f4918b58b116fc90715826742a4.png"/>
+</div>
+</div>
+</td>
+</tr>
+</tbody></table>
+</p><p>
+<a style="position:relative;top:-38px;" name="a676977bd30413a1"></a>
+</p><div style="clear:both;height:50px;">
+</div>
+<!--heading--><h2 class="chap"><img onclick="window.scrollTo(0,0);" title="Back to top" src="../backtop1.svg" width="20" height="20" class="backtop"/><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/cmp/dokuwiki/ko/salt#11"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/cmp/asciidoc/ko/salt#11"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/cmp/markdown/ko/salt#11"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>Using menu [*]</h2>
+<p></p>
+You can add a menu by using <code class="cod">{*</code> notation.
+<p></p>
+<p>
+<table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0">
+<tbody><tr>
+<td valign="top">
+<div id="msgf344344c1e9ba69e39c21871664047f3" class="msg">
+🎉 Copied!
+</div>
+<img loading="lazy" width="16" height="16" id="imgf344344c1e9ba69e39c21871664047f3" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;f344344c1e9ba69e39c21871664047f3&#39;)"/>
+<br/>
+<img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;f344344c1e9ba69e39c21871664047f3&#39;)"/>
+</td>
+<td>
+<div class="mytab" onclick="javascript:ljs(&#39;f344344c1e9ba69e39c21871664047f3&#39;)">
+<div class="mycell0">
+<code onmouseover="az=1" onmouseout="az=0"><pre id="pref344344c1e9ba69e39c21871664047f3">@startsalt
+{+
+{* File | Edit | Source | Refactor }
+{/ General | Fullscreen | Behavior | Saving }
+{
+{ Open image in: | ^Smart Mode^ }
+[X] Smooth images when zoomed
+[X] Confirm image deletion
+[ ] Show hidden images
+}
+[Close]
+}
+@endsalt
+</pre></code>
+</div>
+<div class="mycell">
+<img loading="lazy" width="260" height="147" class="scale" src="../imgw/dark-f344344c1e9ba69e39c21871664047f3.png"/>
+</div>
+</div>
+</td>
+</tr>
+</tbody></table>
+</p><p>
+</p><p></p>
+It is also possible to open a menu:
+<p></p>
+<p>
+<table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0">
+<tbody><tr>
+<td valign="top">
+<div id="msg4001f5ca47a95d2fa373b08dbbdf2276" class="msg">
+🎉 Copied!
+</div>
+<img loading="lazy" width="16" height="16" id="img4001f5ca47a95d2fa373b08dbbdf2276" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;4001f5ca47a95d2fa373b08dbbdf2276&#39;)"/>
+<br/>
+<img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;4001f5ca47a95d2fa373b08dbbdf2276&#39;)"/>
+</td>
+<td>
+<div class="mytab" onclick="javascript:ljs(&#39;4001f5ca47a95d2fa373b08dbbdf2276&#39;)">
+<div class="mycell0">
+<code onmouseover="az=1" onmouseout="az=0"><pre id="pre4001f5ca47a95d2fa373b08dbbdf2276">@startsalt
+{+
+{* File | Edit | Source | Refactor
+ Refactor | New | Open File | - | Close | Close All }
+{/ General | Fullscreen | Behavior | Saving }
+{
+{ Open image in: | ^Smart Mode^ }
+[X] Smooth images when zoomed
+[X] Confirm image deletion
+[ ] Show hidden images
+}
+[Close]
+}
+@endsalt
+</pre></code>
+</div>
+<div class="mycell">
+<img loading="lazy" width="260" height="147" class="scale" src="../imgw/dark-4001f5ca47a95d2fa373b08dbbdf2276.png"/>
+</div>
+</div>
+</td>
+</tr>
+</tbody></table>
+</p><p>
+</p><p></p>
+Like it is possible to open a droplist:
+<p>
+<table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0">
+<tbody><tr>
+<td valign="top">
+<div id="msg3fc10d7468d79a798b525e75ed41fc95" class="msg">
+🎉 Copied!
+</div>
+<img loading="lazy" width="16" height="16" id="img3fc10d7468d79a798b525e75ed41fc95" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;3fc10d7468d79a798b525e75ed41fc95&#39;)"/>
+<br/>
+<img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;3fc10d7468d79a798b525e75ed41fc95&#39;)"/>
+</td>
+<td>
+<div class="mytab" onclick="javascript:ljs(&#39;3fc10d7468d79a798b525e75ed41fc95&#39;)">
+<div class="mycell0">
+<code onmouseover="az=1" onmouseout="az=0"><pre id="pre3fc10d7468d79a798b525e75ed41fc95">@startsalt
+{+
+{* File | Edit | Source | Refactor }
+{/ General | Fullscreen | Behavior | Saving }
+{
+{ Open image in: | ^Smart Mode^^Normal Mode^ }
+[X] Smooth images when zoomed
+[X] Confirm image deletion
+[ ] Show hidden images
+}
+[Close]
+}
+@endsalt
+</pre></code>
+</div>
+<div class="mycell">
+<img loading="lazy" width="260" height="147" class="scale" src="../imgw/dark-3fc10d7468d79a798b525e75ed41fc95.png"/>
+</div>
+</div>
+</td>
+</tr>
+</tbody></table>
+</p><p>
+<em>[Ref. <a href="https://forum.plantuml.net/4184">QA-4184</a>]</em>
+<a style="position:relative;top:-38px;" name="7dcd8fd8195a1e65"></a>
+</p><div style="clear:both;min-height:110px;margin-top:10px;">
+
+<div class="pezoic">
+<!-- Ezoic - Fish5 - incontent_5 -->
+<span id="ezoic-pub-ad-placeholder-118"></span><!-- ezoic_pub_ad_placeholder-118-incontent_5-234x60-118-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-118-incontent_5-468x60-118-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-118-incontent_5-728x90-118-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-118-incontent_5-970x90-118-nonexxxnonexxxxxxezmaxscaleval100 -->
+<!-- End Ezoic - Fish5 - incontent_5 -->
+</div>
+
+</div>
+<!--heading--><h2 class="chap"><img onclick="window.scrollTo(0,0);" title="Back to top" src="../backtop1.svg" width="20" height="20" class="backtop"/><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/cmp/dokuwiki/ko/salt#12"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/cmp/asciidoc/ko/salt#12"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/cmp/markdown/ko/salt#12"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>Advanced table</h2>
+<p></p>
+You can use two special notations for table :
+<ul>
+<li><code class="cod">*</code> to indicate that a cell with span with left</li>
+<li><code class="cod">.</code> to denotate an empty cell</li>
+</ul>
+<p></p>
+<p>
+<table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0">
+<tbody><tr>
+<td valign="top">
+<div id="msgff7efeb6d3860f5f90a40fbba4b45e5e" class="msg">
+🎉 Copied!
+</div>
+<img loading="lazy" width="16" height="16" id="imgff7efeb6d3860f5f90a40fbba4b45e5e" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;ff7efeb6d3860f5f90a40fbba4b45e5e&#39;)"/>
+<br/>
+<img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;ff7efeb6d3860f5f90a40fbba4b45e5e&#39;)"/>
+</td>
+<td>
+<div class="mytab" onclick="javascript:ljs(&#39;ff7efeb6d3860f5f90a40fbba4b45e5e&#39;)">
+<div class="mycell0">
+<code onmouseover="az=1" onmouseout="az=0"><pre id="preff7efeb6d3860f5f90a40fbba4b45e5e">@startsalt
+{#
+. | Column 2 | Column 3
+Row header 1 | value 1 | value 2
+Row header 2 | A long cell | *
+}
+@endsalt
+</pre></code>
+</div>
+<div class="mycell">
+<img loading="lazy" width="202" height="62" class="scale" src="../imgw/dark-ff7efeb6d3860f5f90a40fbba4b45e5e.png"/>
+</div>
+</div>
+</td>
+</tr>
+</tbody></table>
+</p><p>
+<a style="position:relative;top:-38px;" name="e7fb84d0c153ca2e"></a>
+</p><div style="clear:both;height:50px;">
+</div>
+<!--heading--><h2 class="chap"><img onclick="window.scrollTo(0,0);" title="Back to top" src="../backtop1.svg" width="20" height="20" class="backtop"/><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/cmp/dokuwiki/ko/salt#13"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/cmp/asciidoc/ko/salt#13"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/cmp/markdown/ko/salt#13"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>Scroll Bars [S, SI, S-]</h2>
+<p></p>
+You can use <code class="cod">{S</code> notation for <a href="https://en.wikipedia.org/wiki/Scrollbar">scroll bar</a> like in following examples:
+<p></p>
+<ul>
+<li><code class="cod">{S</code>: for horizontal and vertical scrollbars</li>
+</ul>
+<p>
+<table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0">
+<tbody><tr>
+<td valign="top">
+<div id="msg4ddd7b9bf410b72dce87416786779d8e" class="msg">
+🎉 Copied!
+</div>
+<img loading="lazy" width="16" height="16" id="img4ddd7b9bf410b72dce87416786779d8e" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;4ddd7b9bf410b72dce87416786779d8e&#39;)"/>
+<br/>
+<img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;4ddd7b9bf410b72dce87416786779d8e&#39;)"/>
+</td>
+<td>
+<div class="mytab" onclick="javascript:ljs(&#39;4ddd7b9bf410b72dce87416786779d8e&#39;)">
+<div class="mycell0">
+<code onmouseover="az=1" onmouseout="az=0"><pre id="pre4ddd7b9bf410b72dce87416786779d8e">@startsalt
+{S
+Message
+.
+.
+.
+.
+}
+@endsalt
+</pre></code>
+</div>
+<div class="mycell">
+<img loading="lazy" width="83" height="115" class="scale" src="../imgw/dark-4ddd7b9bf410b72dce87416786779d8e.png"/>
+</div>
+</div>
+</td>
+</tr>
+</tbody></table>
+</p><p>
+</p><p></p>
+<ul>
+<li><code class="cod">{SI</code> : for vertical scrollbar only</li>
+</ul>
+<p>
+<table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0">
+<tbody><tr>
+<td valign="top">
+<div id="msg773a716570165b82428aae2ed1b67794" class="msg">
+🎉 Copied!
+</div>
+<img loading="lazy" width="16" height="16" id="img773a716570165b82428aae2ed1b67794" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;773a716570165b82428aae2ed1b67794&#39;)"/>
+<br/>
+<img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;773a716570165b82428aae2ed1b67794&#39;)"/>
+</td>
+<td>
+<div class="mytab" onclick="javascript:ljs(&#39;773a716570165b82428aae2ed1b67794&#39;)">
+<div class="mycell0">
+<code onmouseover="az=1" onmouseout="az=0"><pre id="pre773a716570165b82428aae2ed1b67794">@startsalt
+{SI
+Message
+.
+.
+.
+.
+}
+@endsalt
+</pre></code>
+</div>
+<div class="mycell">
+<img loading="lazy" width="83" height="96" class="scale" src="../imgw/dark-773a716570165b82428aae2ed1b67794.png"/>
+</div>
+</div>
+</td>
+</tr>
+</tbody></table>
+</p><p>
+</p><p></p>
+<ul>
+<li><code class="cod">{S-</code> : for horizontal scrollbar only</li>
+</ul>
+<p>
+<table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0">
+<tbody><tr>
+<td valign="top">
+<div id="msg387dbb8eb91d3f1efa06fae42d0d78b0" class="msg">
+🎉 Copied!
+</div>
+<img loading="lazy" width="16" height="16" id="img387dbb8eb91d3f1efa06fae42d0d78b0" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;387dbb8eb91d3f1efa06fae42d0d78b0&#39;)"/>
+<br/>
+<img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;387dbb8eb91d3f1efa06fae42d0d78b0&#39;)"/>
+</td>
+<td>
+<div class="mytab" onclick="javascript:ljs(&#39;387dbb8eb91d3f1efa06fae42d0d78b0&#39;)">
+<div class="mycell0">
+<code onmouseover="az=1" onmouseout="az=0"><pre id="pre387dbb8eb91d3f1efa06fae42d0d78b0">@startsalt
+{S-
+Message
+.
+.
+.
+.
+}
+@endsalt
+</pre></code>
+</div>
+<div class="mycell">
+<img loading="lazy" width="64" height="115" class="scale" src="../imgw/dark-387dbb8eb91d3f1efa06fae42d0d78b0.png"/>
+</div>
+</div>
+</td>
+</tr>
+</tbody></table>
+</p><p>
+<a style="position:relative;top:-38px;" name="5d50889672f6f860"></a>
+</p><div style="clear:both;min-height:110px;margin-top:10px;">
+
+<div class="pezoic">
+<!-- Ezoic - Fish6 - incontent_6 -->
+<span id="ezoic-pub-ad-placeholder-119"></span><!-- ezoic_pub_ad_placeholder-119-incontent_6-234x60-119-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-119-incontent_6-468x60-119-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-119-incontent_6-728x90-119-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-119-incontent_6-970x90-119-nonexxxnonexxxxxxezmaxscaleval100 -->
+<!-- End Ezoic - Fish6 - incontent_6 -->
+</div>
+
+</div>
+<!--heading--><h2 class="chap"><img onclick="window.scrollTo(0,0);" title="Back to top" src="../backtop1.svg" width="20" height="20" class="backtop"/><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/cmp/dokuwiki/ko/salt#14"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/cmp/asciidoc/ko/salt#14"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/cmp/markdown/ko/salt#14"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>Colors</h2>
+<p></p>
+It is possible to change text <a href="https://plantuml.com/ko-dark/color">color</a> of widget.
+<p></p>
+<p>
+<table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0">
+<tbody><tr>
+<td valign="top">
+<div id="msg829ee0fca33f19acacbe0d42f2f0f46a" class="msg">
+🎉 Copied!
+</div>
+<img loading="lazy" width="16" height="16" id="img829ee0fca33f19acacbe0d42f2f0f46a" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;829ee0fca33f19acacbe0d42f2f0f46a&#39;)"/>
+<br/>
+<img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;829ee0fca33f19acacbe0d42f2f0f46a&#39;)"/>
+</td>
+<td>
+<div class="mytab" onclick="javascript:ljs(&#39;829ee0fca33f19acacbe0d42f2f0f46a&#39;)">
+<div class="mycell0">
+<code onmouseover="az=1" onmouseout="az=0"><pre id="pre829ee0fca33f19acacbe0d42f2f0f46a">@startsalt
+{
+  &lt;color:Blue&gt;Just plain text
+  [This is my default button]
+  [&lt;color:green&gt;This is my green button]
+  [&lt;color:#9a9a9a&gt;This is my disabled button]
+  []  &lt;color:red&gt;Unchecked box
+  [X] &lt;color:green&gt;Checked box
+  &#34;Enter text here   &#34;
+  ^This is a droplist^
+  ^&lt;color:#9a9a9a&gt;This is a disabled droplist^
+  ^&lt;color:red&gt;This is a red droplist^
+}
+@endsalt
+</pre></code>
+</div>
+<div class="mycell">
+<img loading="lazy" width="251" height="220" class="scale" src="../imgw/dark-829ee0fca33f19acacbe0d42f2f0f46a.png"/>
+</div>
+</div>
+</td>
+</tr>
+</tbody></table>
+</p><p>
+</p><p></p>
+<em>[Ref. <a href="https://forum.plantuml.net/12177/change-color-of-salt-button-to-represent-disabled-status">QA-12177</a>]</em>
+<a style="position:relative;top:-38px;" name="196e6ddef819b32c"></a>
+<div style="clear:both;height:50px;">
+</div>
+<!--heading--><h2 class="chap"><img onclick="window.scrollTo(0,0);" title="Back to top" src="../backtop1.svg" width="20" height="20" class="backtop"/><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/cmp/dokuwiki/ko/salt#15"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/cmp/asciidoc/ko/salt#15"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/cmp/markdown/ko/salt#15"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>Creole on Salt</h2>
+<p></p>
+You can use <a href="creole.html">Creole or HTML Creole</a> on salt:
+<p></p>
+<p>
+<table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0">
+<tbody><tr>
+<td valign="top">
+<div id="msg4b66adcd170e9643525e7272964c0651" class="msg">
+🎉 Copied!
+</div>
+<img loading="lazy" width="16" height="16" id="img4b66adcd170e9643525e7272964c0651" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;4b66adcd170e9643525e7272964c0651&#39;)"/>
+<br/>
+<img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;4b66adcd170e9643525e7272964c0651&#39;)"/>
+</td>
+<td>
+<div class="mytab" onclick="javascript:ljs(&#39;4b66adcd170e9643525e7272964c0651&#39;)">
+<div class="mycell0">
+<code onmouseover="az=1" onmouseout="az=0"><pre id="pre4b66adcd170e9643525e7272964c0651">@startsalt
+{{^==Creole
+  This is **bold**
+  This is //italics//
+  This is &#34;&#34;monospaced&#34;&#34;
+  This is --stricken-out--
+  This is __underlined__
+  This is ~~wave-underlined~~
+  --test Unicode and icons--
+  This is &lt;U+221E&gt; long
+  This is a &lt;&amp;code&gt; icon
+  Use image : &lt;img:http://plantuml.com/logo3.png&gt;
+}|
+{^&lt;b&gt;HTML Creole 
+ This is &lt;b&gt;bold&lt;/b&gt;
+  This is &lt;i&gt;italics&lt;/i&gt;
+  This is &lt;font:monospaced&gt;monospaced&lt;/font&gt;
+  This is &lt;s&gt;stroked&lt;/s&gt;
+  This is &lt;u&gt;underlined&lt;/u&gt;
+  This is &lt;w&gt;waved&lt;/w&gt;
+  This is &lt;s:green&gt;stroked&lt;/s&gt;
+  This is &lt;u:red&gt;underlined&lt;/u&gt;
+  This is &lt;w:#0000FF&gt;waved&lt;/w&gt;
+  -- other examples --
+  This is &lt;color:blue&gt;Blue&lt;/color&gt;
+  This is &lt;back:orange&gt;Orange background&lt;/back&gt;
+  This is &lt;size:20&gt;big&lt;/size&gt;
+}|
+{^Creole line
+You can have horizontal line
+----
+Or double line
+====
+Or strong line
+____
+Or dotted line
+..My title..
+Or dotted title
+//and title... //
+==Title==
+Or double-line title
+--Another title--
+Or single-line title
+Enjoy!
+}|
+{^Creole list item
+**test list 1**
+* Bullet list
+* Second item
+** Sub item
+*** Sub sub item
+* Third item
+----
+**test list 2**
+# Numbered list
+# Second item
+## Sub item
+## Another sub item
+# Third item
+}|
+{^Mix on salt
+  ==&lt;color:Blue&gt;Just plain text
+  [This is my default button]
+  [&lt;b&gt;&lt;color:green&gt;This is my green button]
+  [ ---&lt;color:#9a9a9a&gt;This is my disabled button-- ]
+  []  &lt;size:20&gt;&lt;color:red&gt;Unchecked box
+  [X] &lt;color:green&gt;Checked box
+  &#34;//Enter text here//   &#34;
+  ^This is a droplist^
+  ^&lt;color:#9a9a9a&gt;This is a disabled droplist^
+  ^&lt;b&gt;&lt;color:red&gt;This is a red droplist^
+}}
+@endsalt
+</pre></code>
+</div>
+<div class="mycell">
+<img loading="lazy" width="944" height="327" class="scale" src="../imgw/dark-4b66adcd170e9643525e7272964c0651.png"/>
+</div>
+</div>
+</td>
+</tr>
+</tbody></table>
+</p><p>
+<a style="position:relative;top:-38px;" name="0ca671cd36473fb1"></a>
+</p><div style="clear:both;min-height:110px;margin-top:10px;">
+
+<div class="pezoic">
+<!-- Ezoic - Fish7 - incontent_7 -->
+<span id="ezoic-pub-ad-placeholder-120"></span><!-- ezoic_pub_ad_placeholder-120-incontent_7-234x60-120-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-120-incontent_7-468x60-120-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-120-incontent_7-728x90-120-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-120-incontent_7-970x90-120-nonexxxnonexxxxxxezmaxscaleval100 -->
+<!-- End Ezoic - Fish7 - incontent_7 -->
+</div>
+
+</div>
+<!--heading--><h2 class="chap"><img onclick="window.scrollTo(0,0);" title="Back to top" src="../backtop1.svg" width="20" height="20" class="backtop"/><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/cmp/dokuwiki/ko/salt#16"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/cmp/asciidoc/ko/salt#16"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/cmp/markdown/ko/salt#16"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>Pseudo sprite [&lt;&lt;, &gt;&gt;]</h2>
+<p></p>
+Using <code class="cod">&lt;&lt;</code> and <code class="cod">&gt;&gt;</code> you can define a pseudo-sprite or sprite-like drawing and reusing it latter.
+<p></p>
+<p>
+<table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0">
+<tbody><tr>
+<td valign="top">
+<div id="msg432c6b3a132c249f377111524dda62fc" class="msg">
+🎉 Copied!
+</div>
+<img loading="lazy" width="16" height="16" id="img432c6b3a132c249f377111524dda62fc" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;432c6b3a132c249f377111524dda62fc&#39;)"/>
+<br/>
+<img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;432c6b3a132c249f377111524dda62fc&#39;)"/>
+</td>
+<td>
+<div class="mytab" onclick="javascript:ljs(&#39;432c6b3a132c249f377111524dda62fc&#39;)">
+<div class="mycell0">
+<code onmouseover="az=1" onmouseout="az=0"><pre id="pre432c6b3a132c249f377111524dda62fc">@startsalt
+ {
+ [X] checkbox|[] checkbox
+ () radio | (X) radio
+ This is a text|[This is my button]|This is another text
+ &#34;A field&#34;|&#34;Another long Field&#34;|[A button]
+ &lt;&lt;folder
+ ............
+ .XXXXX......
+ .X...X......
+ .XXXXXXXXXX.
+ .X........X.
+ .X........X.
+ .X........X.
+ .X........X.
+ .XXXXXXXXXX.
+ ............
+ &gt;&gt;|&lt;color:blue&gt;other folder|&lt;&lt;folder&gt;&gt;
+^Droplist^
+}
+@endsalt
+</pre></code>
+</div>
+<div class="mycell">
+<img loading="lazy" width="349" height="133" class="scale" src="../imgw/dark-432c6b3a132c249f377111524dda62fc.png"/>
+</div>
+</div>
+</td>
+</tr>
+</tbody></table>
+</p><p>
+</p><p></p>
+<em>[Ref. <a href="https://forum.plantuml.net/5849/support-for-sprites-salt?show=5851#a5851">QA-5849</a>]</em>
+<a style="position:relative;top:-38px;" name="041a1eb0031c373d"></a>
+<div style="clear:both;height:50px;">
+</div>
+<!--heading--><h2 class="chap"><img onclick="window.scrollTo(0,0);" title="Back to top" src="../backtop1.svg" width="20" height="20" class="backtop"/><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/cmp/dokuwiki/ko/salt#17"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/cmp/asciidoc/ko/salt#17"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/cmp/markdown/ko/salt#17"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>OpenIconic</h2>
+<p></p>
+<a href="https://useiconic.com/open/">OpenIconic</a> is a very nice open source icon set. Those icons have been integrated into the <a href="creole.html">creole parser</a>, so you can use them out-of-the-box.
+You can use the following syntax: <code class="cod">&lt;&amp;ICON_NAME&gt;</code>.
+<p></p>
+<p>
+<table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0">
+<tbody><tr>
+<td valign="top">
+<div id="msge42a6effbcca7ddca69ed36f218b0cba" class="msg">
+🎉 Copied!
+</div>
+<img loading="lazy" width="16" height="16" id="imge42a6effbcca7ddca69ed36f218b0cba" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;e42a6effbcca7ddca69ed36f218b0cba&#39;)"/>
+<br/>
+<img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;e42a6effbcca7ddca69ed36f218b0cba&#39;)"/>
+</td>
+<td>
+<div class="mytab" onclick="javascript:ljs(&#39;e42a6effbcca7ddca69ed36f218b0cba&#39;)">
+<div class="mycell0">
+<code onmouseover="az=1" onmouseout="az=0"><pre id="pree42a6effbcca7ddca69ed36f218b0cba">@startsalt
+{
+  Login&lt;&amp;person&gt; | &#34;MyName   &#34;
+  Password&lt;&amp;key&gt; | &#34;****     &#34;
+  [Cancel &lt;&amp;circle-x&gt;] | [OK &lt;&amp;account-login&gt;]
+}
+@endsalt
+</pre></code>
+</div>
+<div class="mycell">
+<img loading="lazy" width="171" height="70" class="scale" src="../imgw/dark-e42a6effbcca7ddca69ed36f218b0cba.png"/>
+</div>
+</div>
+</td>
+</tr>
+</tbody></table>
+</p><p>
+</p><p></p>
+The complete list is available on OpenIconic Website, or you can use the following special diagram:
+<p></p>
+<p></p>
+<p>
+<table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0">
+<tbody><tr>
+<td valign="top">
+<div id="msg499b52c713e06214820132c840cb332b" class="msg">
+🎉 Copied!
+</div>
+<img loading="lazy" width="16" height="16" id="img499b52c713e06214820132c840cb332b" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;499b52c713e06214820132c840cb332b&#39;)"/>
+<br/>
+<img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;499b52c713e06214820132c840cb332b&#39;)"/>
+</td>
+<td>
+<div class="mytab" onclick="javascript:ljs(&#39;499b52c713e06214820132c840cb332b&#39;)">
+<div class="mycell0">
+<code onmouseover="az=1" onmouseout="az=0"><pre id="pre499b52c713e06214820132c840cb332b">@startuml
+listopeniconic
+@enduml
+</pre></code>
+</div>
+<div class="mycell">
+<img loading="lazy" width="919" height="502" class="scale" src="../imgw/dark-499b52c713e06214820132c840cb332b.png"/>
+</div>
+</div>
+</td>
+</tr>
+</tbody></table>
+</p><p>
+<a style="position:relative;top:-38px;" name="40f14e0e6698daaf"></a>
+</p><div style="clear:both;min-height:110px;margin-top:10px;">
+
+<div class="pezoic">
+<!-- Ezoic - Fish8 - incontent_8 -->
+<span id="ezoic-pub-ad-placeholder-121"></span><!-- ezoic_pub_ad_placeholder-121-incontent_8-234x60-121-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-121-incontent_8-468x60-121-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-121-incontent_8-728x90-121-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-121-incontent_8-970x90-121-nonexxxnonexxxxxxezmaxscaleval100 -->
+<!-- End Ezoic - Fish8 - incontent_8 -->
+</div>
+
+</div>
+<!--heading--><h2 class="chap"><img onclick="window.scrollTo(0,0);" title="Back to top" src="../backtop1.svg" width="20" height="20" class="backtop"/><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/cmp/dokuwiki/ko/salt#18"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/cmp/asciidoc/ko/salt#18"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/cmp/markdown/ko/salt#18"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>Add title, header, footer, caption or legend</h2>
+<p></p>
+<p>
+<table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0">
+<tbody><tr>
+<td valign="top">
+<div id="msg8370a923e47728bdf0a703bdf0044d5e" class="msg">
+🎉 Copied!
+</div>
+<img loading="lazy" width="16" height="16" id="img8370a923e47728bdf0a703bdf0044d5e" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;8370a923e47728bdf0a703bdf0044d5e&#39;)"/>
+<br/>
+<img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;8370a923e47728bdf0a703bdf0044d5e&#39;)"/>
+</td>
+<td>
+<div class="mytab" onclick="javascript:ljs(&#39;8370a923e47728bdf0a703bdf0044d5e&#39;)">
+<div class="mycell0">
+<code onmouseover="az=1" onmouseout="az=0"><pre id="pre8370a923e47728bdf0a703bdf0044d5e">@startsalt
+title My title
+header some header
+footer some footer
+caption This is caption
+legend
+The legend
+end legend
+
+{+
+  Login    | &#34;MyName   &#34;
+  Password | &#34;****     &#34;
+  [Cancel] | [  OK   ]
+}
+
+@endsalt
+</pre></code>
+</div>
+<div class="mycell">
+<img loading="lazy" width="150" height="214" class="scale" src="../imgw/dark-8370a923e47728bdf0a703bdf0044d5e.png"/>
+</div>
+</div>
+</td>
+</tr>
+</tbody></table>
+</p><p>
+</p><p></p>
+<em>(See also: <a href="https://plantuml.com/ko-dark/commons">Common commands</a>)</em>
+<a style="position:relative;top:-38px;" name="fee470bd71039c80"></a>
+<div style="clear:both;height:50px;">
+</div>
+<!--heading--><h2 class="chap"><img onclick="window.scrollTo(0,0);" title="Back to top" src="../backtop1.svg" width="20" height="20" class="backtop"/><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/cmp/dokuwiki/ko/salt#19"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/cmp/asciidoc/ko/salt#19"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/cmp/markdown/ko/salt#19"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>Zoom, DPI</h2>
+<p></p>
+<h3>Whitout zoom (by default)</h3>
+<p>
+<table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0">
+<tbody><tr>
+<td valign="top">
+<div id="msg8470139c3c45b10edf989f4a0c5379c6" class="msg">
+🎉 Copied!
+</div>
+<img loading="lazy" width="16" height="16" id="img8470139c3c45b10edf989f4a0c5379c6" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;8470139c3c45b10edf989f4a0c5379c6&#39;)"/>
+<br/>
+<img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;8470139c3c45b10edf989f4a0c5379c6&#39;)"/>
+</td>
+<td>
+<div class="mytab" onclick="javascript:ljs(&#39;8470139c3c45b10edf989f4a0c5379c6&#39;)">
+<div class="mycell0">
+<code onmouseover="az=1" onmouseout="az=0"><pre id="pre8470139c3c45b10edf989f4a0c5379c6">@startsalt
+{
+  &lt;&amp;person&gt; Login  | &#34;MyName   &#34;
+  &lt;&amp;key&gt; Password  | &#34;****     &#34;
+  [&lt;&amp;circle-x&gt; Cancel ] | [ &lt;&amp;account-login&gt; OK   ]
+}
+@endsalt
+</pre></code>
+</div>
+<div class="mycell">
+<img loading="lazy" width="180" height="70" class="scale" src="../imgw/dark-8470139c3c45b10edf989f4a0c5379c6.png"/>
+</div>
+</div>
+</td>
+</tr>
+</tbody></table>
+</p><p>
+</p><p></p>
+<h3>Scale</h3>
+<p></p>
+You can use the <code class="cod">scale</code> command to zoom the generated image.
+<p></p>
+You can use either a number or a fraction to define the scale factor. You can also specify either width or height (in pixel). And you can also give both width and height: the image is scaled to fit inside the specified dimension.
+<p>
+<table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0">
+<tbody><tr>
+<td valign="top">
+<div id="msgb1832f1199138e0dfd06ad58c8e95901" class="msg">
+🎉 Copied!
+</div>
+<img loading="lazy" width="16" height="16" id="imgb1832f1199138e0dfd06ad58c8e95901" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;b1832f1199138e0dfd06ad58c8e95901&#39;)"/>
+<br/>
+<img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;b1832f1199138e0dfd06ad58c8e95901&#39;)"/>
+</td>
+<td>
+<div class="mytab" onclick="javascript:ljs(&#39;b1832f1199138e0dfd06ad58c8e95901&#39;)">
+<div class="mycell0">
+<code onmouseover="az=1" onmouseout="az=0"><pre id="preb1832f1199138e0dfd06ad58c8e95901">@startsalt
+scale 2
+{
+  &lt;&amp;person&gt; Login  | &#34;MyName   &#34;
+  &lt;&amp;key&gt; Password  | &#34;****     &#34;
+  [&lt;&amp;circle-x&gt; Cancel ] | [ &lt;&amp;account-login&gt; OK   ]
+}
+@endsalt
+</pre></code>
+</div>
+<div class="mycell">
+<img loading="lazy" width="361" height="141" class="scale" src="../imgw/dark-b1832f1199138e0dfd06ad58c8e95901.png"/>
+</div>
+</div>
+</td>
+</tr>
+</tbody></table>
+</p><p>
+</p><p></p>
+<em>(See also: <a href="https://plantuml.com/ko-dark/commons#zw5yrgax40mpk362kjbn">Zoom on Common commands</a>)</em>
+<p></p>
+<h3>DPI</h3>
+You can also use the <code class="cod">skinparam dpi</code>command to zoom the generated image.
+<p>
+<table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0">
+<tbody><tr>
+<td valign="top">
+<div id="msgda248e4e2c25a56c4db5196ca5105afe" class="msg">
+🎉 Copied!
+</div>
+<img loading="lazy" width="16" height="16" id="imgda248e4e2c25a56c4db5196ca5105afe" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;da248e4e2c25a56c4db5196ca5105afe&#39;)"/>
+<br/>
+<img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;da248e4e2c25a56c4db5196ca5105afe&#39;)"/>
+</td>
+<td>
+<div class="mytab" onclick="javascript:ljs(&#39;da248e4e2c25a56c4db5196ca5105afe&#39;)">
+<div class="mycell0">
+<code onmouseover="az=1" onmouseout="az=0"><pre id="preda248e4e2c25a56c4db5196ca5105afe">@startsalt
+skinparam dpi 200
+{
+  &lt;&amp;person&gt; Login  | &#34;MyName   &#34;
+  &lt;&amp;key&gt; Password  | &#34;****     &#34;
+  [&lt;&amp;circle-x&gt; Cancel ] | [ &lt;&amp;account-login&gt; OK   ]
+}
+@endsalt
+</pre></code>
+</div>
+<div class="mycell">
+<img loading="lazy" width="376" height="147" class="scale" src="../imgw/dark-da248e4e2c25a56c4db5196ca5105afe.png"/>
+</div>
+</div>
+</td>
+</tr>
+</tbody></table>
+</p><p>
+<a style="position:relative;top:-38px;" name="89e5b0978f17879e"></a>
+</p><div style="clear:both;min-height:110px;margin-top:10px;">
+
+<div class="pezoic">
+<!-- Ezoic - Fish9 - incontent_9 -->
+<span id="ezoic-pub-ad-placeholder-122"></span><!-- ezoic_pub_ad_placeholder-122-incontent_9-234x60-122-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-122-incontent_9-468x60-122-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-122-incontent_9-728x90-122-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-122-incontent_9-970x90-122-nonexxxnonexxxxxxezmaxscaleval100 -->
+<!-- End Ezoic - Fish9 - incontent_9 -->
+</div>
+
+</div>
+<!--heading--><h2 class="chap"><img onclick="window.scrollTo(0,0);" title="Back to top" src="../backtop1.svg" width="20" height="20" class="backtop"/><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/cmp/dokuwiki/ko/salt#20"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/cmp/asciidoc/ko/salt#20"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/cmp/markdown/ko/salt#20"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>Include Salt &#34;on activity diagram&#34;</h2>
+<p></p>
+You can <a href="http://forum.plantuml.net/2427/salt-with-minimum-flowchat-capabilities?show=2427#q2427">read the following explanation</a>.
+<p></p>
+<p></p>
+<p>
+<table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0">
+<tbody><tr>
+<td valign="top">
+<div id="msg23bc7872a21ff6f90afa75225a23681b" class="msg">
+🎉 Copied!
+</div>
+<img loading="lazy" width="16" height="16" id="img23bc7872a21ff6f90afa75225a23681b" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;23bc7872a21ff6f90afa75225a23681b&#39;)"/>
+<br/>
+<img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;23bc7872a21ff6f90afa75225a23681b&#39;)"/>
+</td>
+<td>
+<div class="mytab" onclick="javascript:ljs(&#39;23bc7872a21ff6f90afa75225a23681b&#39;)">
+<div class="mycell0">
+<code onmouseover="az=1" onmouseout="az=0"><pre id="pre23bc7872a21ff6f90afa75225a23681b">@startuml
+(*) --&gt; &#34;
+{{
+salt
+{+
+&lt;b&gt;an example
+choose one option
+()one
+()two
+[ok]
+}
+}}
+&#34; as choose
+
+choose -right-&gt; &#34;
+{{
+salt
+{+
+&lt;b&gt;please wait
+operation in progress
+&lt;&amp;clock&gt;
+[cancel]
+}
+}}
+&#34; as wait
+wait -right-&gt; &#34;
+{{
+salt
+{+
+&lt;b&gt;success
+congratulations!
+[ok]
+}
+}}
+&#34; as success
+
+wait -down-&gt; &#34;
+{{
+salt
+{+
+&lt;b&gt;error
+failed, sorry
+[ok]
+}
+}}
+&#34;
+@enduml
+</pre></code>
+</div>
+<div class="mycell">
+<img loading="lazy" width="459" height="327" class="scale" src="../imgw/dark-23bc7872a21ff6f90afa75225a23681b.png"/>
+</div>
+</div>
+</td>
+</tr>
+</tbody></table>
+</p><p>
+</p><p></p>
+It can also be combined with <a href="preprocessing.html#macro_definition">define macro</a>.
+<p></p>
+<p>
+<table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0">
+<tbody><tr>
+<td valign="top">
+<div id="msg854022e2dcd2e423f3c7d3dc85a7608f" class="msg">
+🎉 Copied!
+</div>
+<img loading="lazy" width="16" height="16" id="img854022e2dcd2e423f3c7d3dc85a7608f" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;854022e2dcd2e423f3c7d3dc85a7608f&#39;)"/>
+<br/>
+<img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;854022e2dcd2e423f3c7d3dc85a7608f&#39;)"/>
+</td>
+<td>
+<div class="mytab" onclick="javascript:ljs(&#39;854022e2dcd2e423f3c7d3dc85a7608f&#39;)">
+<div class="mycell0">
+<code onmouseover="az=1" onmouseout="az=0"><pre id="pre854022e2dcd2e423f3c7d3dc85a7608f">@startuml
+!unquoted procedure SALT($x)
+&#34;{{
+salt
+%invoke_procedure(&#34;_&#34;+$x)
+}}&#34; as $x
+!endprocedure
+
+!procedure _choose()
+{+
+&lt;b&gt;an example
+choose one option
+()one
+()two
+[ok]
+}
+!endprocedure
+
+!procedure _wait()
+{+
+&lt;b&gt;please wait
+operation in progress
+&lt;&amp;clock&gt;
+[cancel]
+}
+!endprocedure
+
+!procedure _success()
+{+
+&lt;b&gt;success
+congratulations!
+[ok]
+}
+!endprocedure
+
+!procedure _error()
+{+
+&lt;b&gt;error
+failed, sorry
+[ok]
+}
+!endprocedure
+
+(*) --&gt; SALT(choose)
+-right-&gt; SALT(wait)
+wait -right-&gt; SALT(success)
+wait -down-&gt; SALT(error)
+@enduml
+</pre></code>
+</div>
+<div class="mycell">
+<img loading="lazy" width="459" height="327" class="scale" src="../imgw/dark-854022e2dcd2e423f3c7d3dc85a7608f.png"/>
+</div>
+</div>
+</td>
+</tr>
+</tbody></table>
+</p><p>
+<a style="position:relative;top:-38px;" name="abaa7291606b9f59"></a>
+</p><div style="clear:both;height:50px;">
+</div>
+<!--heading--><h2 class="chap"><img onclick="window.scrollTo(0,0);" title="Back to top" src="../backtop1.svg" width="20" height="20" class="backtop"/><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/cmp/dokuwiki/ko/salt#21"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/cmp/asciidoc/ko/salt#21"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/cmp/markdown/ko/salt#21"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>Include salt &#34;on while condition of activity diagram&#34;</h2>
+<p></p>
+You can include <code class="cod">salt</code> on while condition of activity diagram.
+<p></p>
+<p>
+<table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0">
+<tbody><tr>
+<td valign="top">
+<div id="msg22d071aef3a1237ffc9e3e46c1762107" class="msg">
+🎉 Copied!
+</div>
+<img loading="lazy" width="16" height="16" id="img22d071aef3a1237ffc9e3e46c1762107" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;22d071aef3a1237ffc9e3e46c1762107&#39;)"/>
+<br/>
+<img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;22d071aef3a1237ffc9e3e46c1762107&#39;)"/>
+</td>
+<td>
+<div class="mytab" onclick="javascript:ljs(&#39;22d071aef3a1237ffc9e3e46c1762107&#39;)">
+<div class="mycell0">
+<code onmouseover="az=1" onmouseout="az=0"><pre id="pre22d071aef3a1237ffc9e3e46c1762107">@startuml
+start
+while (\n{{\nsalt\n{+\nPassword | &#34;****     &#34;\n[Cancel] | [  OK   ]}\n}}\n) is (Incorrect)
+  :log attempt;
+  :attempt_count++;
+  if (attempt_count &gt; 4) then (yes)
+    :increase delay timer;
+    :wait for timer to expire;
+  else (no)
+  endif
+endwhile (correct)
+:log request;
+:disable service;
+@enduml
+</pre></code>
+</div>
+<div class="mycell">
+<img loading="lazy" width="260" height="617" class="scale" src="../imgw/dark-22d071aef3a1237ffc9e3e46c1762107.png"/>
+</div>
+</div>
+</td>
+</tr>
+</tbody></table>
+</p><p>
+</p><p></p>
+<em>[Ref. <a href="https://forum.plantuml.net/8547/mixing-wireframes-and-activity-diagrames?show=12221#a12221">QA-8547</a>]</em>
+<a style="position:relative;top:-38px;" name="ab3b362306046b9d"></a>
+<div style="clear:both;min-height:110px;margin-top:10px;">
+
+<div class="pezoic">
+<!-- Ezoic - Fish10 - incontent_10 -->
+<span id="ezoic-pub-ad-placeholder-123"></span><!-- ezoic_pub_ad_placeholder-123-incontent_10-234x60-123-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-123-incontent_10-468x60-123-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-123-incontent_10-728x90-123-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-123-incontent_10-970x90-123-nonexxxnonexxxxxxezmaxscaleval100 -->
+<!-- End Ezoic - Fish10 - incontent_10 -->
+</div>
+
+</div>
+<!--heading--><h2 class="chap"><img onclick="window.scrollTo(0,0);" title="Back to top" src="../backtop1.svg" width="20" height="20" class="backtop"/><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/cmp/dokuwiki/ko/salt#22"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/cmp/asciidoc/ko/salt#22"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/cmp/markdown/ko/salt#22"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>Include salt &#34;on repeat while condition of activity diagram&#34;</h2>
+<p></p>
+You can include <code class="cod">salt</code> on &#39;repeat while&#39; condition of activity diagram.
+<p></p>
+<p>
+<table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0">
+<tbody><tr>
+<td valign="top">
+<div id="msg359ba1af7a1dcc7eb6aa4a022ffc95cc" class="msg">
+🎉 Copied!
+</div>
+<img loading="lazy" width="16" height="16" id="img359ba1af7a1dcc7eb6aa4a022ffc95cc" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;359ba1af7a1dcc7eb6aa4a022ffc95cc&#39;)"/>
+<br/>
+<img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;359ba1af7a1dcc7eb6aa4a022ffc95cc&#39;)"/>
+</td>
+<td>
+<div class="mytab" onclick="javascript:ljs(&#39;359ba1af7a1dcc7eb6aa4a022ffc95cc&#39;)">
+<div class="mycell0">
+<code onmouseover="az=1" onmouseout="az=0"><pre id="pre359ba1af7a1dcc7eb6aa4a022ffc95cc">@startuml
+start
+repeat :read data;
+  :generate diagrams;
+repeat while (\n{{\nsalt\n{^&#34;Next step&#34;\n  Do you want to continue? \n[Yes]|[No]\n}\n}}\n)
+stop
+@enduml
+</pre></code>
+</div>
+<div class="mycell">
+<img loading="lazy" width="258" height="316" class="scale" src="../imgw/dark-359ba1af7a1dcc7eb6aa4a022ffc95cc.png"/>
+</div>
+</div>
+</td>
+</tr>
+</tbody></table>
+</p><p>
+</p><p></p>
+<em>[Ref. <a href="https://forum.plantuml.net/14287/salt-in-activity-beta-diagrams">QA-14287</a>]</em>
+<a style="position:relative;top:-38px;" name="7aa53dbdfc2137bf"></a>
+<div style="clear:both;height:50px;">
+</div>
+<!--heading--><h2 class="chap"><img onclick="window.scrollTo(0,0);" title="Back to top" src="../backtop1.svg" width="20" height="20" class="backtop"/><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/cmp/dokuwiki/ko/salt#23"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/cmp/asciidoc/ko/salt#23"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/cmp/markdown/ko/salt#23"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>Skinparam</h2>
+<p></p>
+You can use <strong>[only]</strong> some <a href="https://plantuml.com/ko-dark/skinparam">skinparam</a> command to change the skin of the drawing.
+<p></p>
+Some example:
+<p></p>
+<p>
+<table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0">
+<tbody><tr>
+<td valign="top">
+<div id="msg07398bc1cefacb50ea99535c37812589" class="msg">
+🎉 Copied!
+</div>
+<img loading="lazy" width="16" height="16" id="img07398bc1cefacb50ea99535c37812589" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;07398bc1cefacb50ea99535c37812589&#39;)"/>
+<br/>
+<img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;07398bc1cefacb50ea99535c37812589&#39;)"/>
+</td>
+<td>
+<div class="mytab" onclick="javascript:ljs(&#39;07398bc1cefacb50ea99535c37812589&#39;)">
+<div class="mycell0">
+<code onmouseover="az=1" onmouseout="az=0"><pre id="pre07398bc1cefacb50ea99535c37812589">@startsalt
+skinparam Backgroundcolor palegreen
+{+
+  Login    | &#34;MyName   &#34;
+  Password | &#34;****     &#34;
+  [Cancel] | [  OK   ]
+}
+@endsalt
+</pre></code>
+</div>
+<div class="mycell">
+<img loading="lazy" width="150" height="75" class="scale" src="../imgw/dark-07398bc1cefacb50ea99535c37812589.png"/>
+</div>
+</div>
+</td>
+</tr>
+</tbody></table>
+</p><p>
+</p><p></p>
+<p>
+<table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0">
+<tbody><tr>
+<td valign="top">
+<div id="msg5525cf3d1b9580523c9543c7fbf1f394" class="msg">
+🎉 Copied!
+</div>
+<img loading="lazy" width="16" height="16" id="img5525cf3d1b9580523c9543c7fbf1f394" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;5525cf3d1b9580523c9543c7fbf1f394&#39;)"/>
+<br/>
+<img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;5525cf3d1b9580523c9543c7fbf1f394&#39;)"/>
+</td>
+<td>
+<div class="mytab" onclick="javascript:ljs(&#39;5525cf3d1b9580523c9543c7fbf1f394&#39;)">
+<div class="mycell0">
+<code onmouseover="az=1" onmouseout="az=0"><pre id="pre5525cf3d1b9580523c9543c7fbf1f394">@startsalt
+skinparam handwritten true
+{+
+  Login    | &#34;MyName   &#34;
+  Password | &#34;****     &#34;
+  [Cancel] | [  OK   ]
+}
+@endsalt
+</pre></code>
+</div>
+<div class="mycell">
+<img loading="lazy" width="150" height="75" class="scale" src="../imgw/dark-5525cf3d1b9580523c9543c7fbf1f394.png"/>
+</div>
+</div>
+</td>
+</tr>
+</tbody></table>
+</p><p>
+</p><p></p>
+<div class="tag" style="background:#FFD700;">FIXME</div> 🚩
+FYI, some other skinparam does not work with salt, as:
+<p></p>
+<p>
+<table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0">
+<tbody><tr>
+<td valign="top">
+<div id="msg842bd3acfa9d02fc5b2efedaa15c1147" class="msg">
+🎉 Copied!
+</div>
+<img loading="lazy" width="16" height="16" id="img842bd3acfa9d02fc5b2efedaa15c1147" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;842bd3acfa9d02fc5b2efedaa15c1147&#39;)"/>
+<br/>
+<img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;842bd3acfa9d02fc5b2efedaa15c1147&#39;)"/>
+</td>
+<td>
+<div class="mytab" onclick="javascript:ljs(&#39;842bd3acfa9d02fc5b2efedaa15c1147&#39;)">
+<div class="mycell0">
+<code onmouseover="az=1" onmouseout="az=0"><pre id="pre842bd3acfa9d02fc5b2efedaa15c1147">@startsalt
+skinparam defaultFontName monospaced
+{+
+  Login    | &#34;MyName   &#34;
+  Password | &#34;****     &#34;
+  [Cancel] | [  OK   ]
+}
+@endsalt
+</pre></code>
+</div>
+<div class="mycell">
+<img loading="lazy" width="150" height="75" class="scale" src="../imgw/dark-842bd3acfa9d02fc5b2efedaa15c1147.png"/>
+</div>
+</div>
+</td>
+</tr>
+</tbody></table>
+</p><p>
+<a style="position:relative;top:-38px;" name="ae284f900f9d6e21"></a>
+</p><div style="clear:both;min-height:110px;margin-top:10px;">
+
+<div class="pezoic">
+<!-- Ezoic - Fish11 - incontent_11 -->
+<span id="ezoic-pub-ad-placeholder-194"></span><!-- ezoic_pub_ad_placeholder-194-incontent_11-234x60-194-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-194-incontent_11-468x60-194-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-194-incontent_11-728x90-194-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-194-incontent_11-970x90-194-nonexxxnonexxxxxxezmaxscaleval100 -->
+<!-- End Ezoic - Fish11 - incontent_11 -->
+</div>
+
+</div>
+<!--heading--><h2 class="chap"><img onclick="window.scrollTo(0,0);" title="Back to top" src="../backtop1.svg" width="20" height="20" class="backtop"/><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/cmp/dokuwiki/ko/salt#24"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/cmp/asciidoc/ko/salt#24"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/cmp/markdown/ko/salt#24"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>Style</h2>
+<p></p>
+You can use <strong>[only]</strong> some <a href="https://plantuml.com/ko-dark/style-evolution">style</a> command to change the skin of the drawing.
+<p></p>
+Some example:
+<p></p>
+<p>
+<table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0">
+<tbody><tr>
+<td valign="top">
+<div id="msgb1551156582d967473da3df8a24eb94a" class="msg">
+🎉 Copied!
+</div>
+<img loading="lazy" width="16" height="16" id="imgb1551156582d967473da3df8a24eb94a" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;b1551156582d967473da3df8a24eb94a&#39;)"/>
+<br/>
+<img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;b1551156582d967473da3df8a24eb94a&#39;)"/>
+</td>
+<td>
+<div class="mytab" onclick="javascript:ljs(&#39;b1551156582d967473da3df8a24eb94a&#39;)">
+<div class="mycell0">
+<code onmouseover="az=1" onmouseout="az=0"><pre id="preb1551156582d967473da3df8a24eb94a">@startsalt
+&lt;style&gt;
+saltDiagram {
+  BackgroundColor palegreen
+}
+&lt;/style&gt;
+{+
+  Login    | &#34;MyName   &#34;
+  Password | &#34;****     &#34;
+  [Cancel] | [  OK   ]
+}
+@endsalt
+</pre></code>
+</div>
+<div class="mycell">
+<img loading="lazy" width="150" height="75" class="scale" src="../imgw/dark-b1551156582d967473da3df8a24eb94a.png"/>
+</div>
+</div>
+</td>
+</tr>
+</tbody></table>
+</p><p>
+</p><p></p>
+<p></p>
+<div class="tag" style="background:#FFD700;">FIXME</div> 🚩
+FYI, some other style does not work with salt, as:
+<p></p>
+<p>
+<table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0">
+<tbody><tr>
+<td valign="top">
+<div id="msgcf5a43d9e7de87bc43224e0f8c2502e2" class="msg">
+🎉 Copied!
+</div>
+<img loading="lazy" width="16" height="16" id="imgcf5a43d9e7de87bc43224e0f8c2502e2" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;cf5a43d9e7de87bc43224e0f8c2502e2&#39;)"/>
+<br/>
+<img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;cf5a43d9e7de87bc43224e0f8c2502e2&#39;)"/>
+</td>
+<td>
+<div class="mytab" onclick="javascript:ljs(&#39;cf5a43d9e7de87bc43224e0f8c2502e2&#39;)">
+<div class="mycell0">
+<code onmouseover="az=1" onmouseout="az=0"><pre id="precf5a43d9e7de87bc43224e0f8c2502e2">@startsalt
+&lt;style&gt;
+saltDiagram {
+  Fontname Monospaced
+  FontSize 10
+  FontStyle italic
+  LineThickness 0.5
+  LineColor red
+}
+&lt;/style&gt;
+{+
+  Login    | &#34;MyName   &#34;
+  Password | &#34;****     &#34;
+  [Cancel] | [  OK   ]
+}
+@endsalt
+</pre></code>
+</div>
+<div class="mycell">
+<img loading="lazy" width="150" height="75" class="scale" src="../imgw/dark-cf5a43d9e7de87bc43224e0f8c2502e2.png"/>
+</div>
+</div>
+</td>
+</tr>
+</tbody></table>
+</p><p>
+</p><p></p>
+<em>[Ref. <a href="https://forum.plantuml.net/13460/there-skinparam-change-font-used-salt-like-other-diagram-types?show=13461#a13461">QA-13460</a>]</em>
+</td>
+<td id="toctd" valign="top" style="max-width:240px;min-width:240px;">
+<!--toc-->
+<div id="toc">
+<ul>
+<li><a href="salt.html#8a3c20503dceb878">기본 위젯</a>
+</li><li><a href="salt.html#80c9379f5bc0f2b7">Text area</a>
+</li><li><a href="salt.html#6b65983f6b2d6e7b">Open, close droplist</a>
+</li><li><a href="salt.html#8770ed5d7126078c">그리드 사용하기</a>
+</li><li><a href="salt.html#8839bd5b129e178e">Group box [^]</a>
+</li><li><a href="salt.html#42b97f01c4a6ca6c">Using separator [.., ==, ~~, --]</a>
+</li><li><a href="salt.html#759fb83534bc53b0">Tree widget [T]</a>
+</li><li><a href="salt.html#6f00692a1e2d5878">Tree table [T]</a>
+</li><li><a href="salt.html#21d475f2a55ac40a">Enclosing brackets [{, }]</a>
+</li><li><a href="salt.html#8c3b5c405669f91a">Adding tabs [/]</a>
+</li><li><a href="salt.html#a676977bd30413a1">Using menu [\*]</a>
+</li><li><a href="salt.html#7dcd8fd8195a1e65">Advanced table</a>
+</li><li><a href="salt.html#e7fb84d0c153ca2e">Scroll Bars [S, SI, S-]</a>
+</li><li><a href="salt.html#5d50889672f6f860">Colors</a>
+</li><li><a href="salt.html#196e6ddef819b32c">Creole on Salt</a>
+</li><li><a href="salt.html#0ca671cd36473fb1">Pseudo sprite [&lt;&lt;, &gt;&gt;]</a>
+</li><li><a href="salt.html#041a1eb0031c373d">OpenIconic</a>
+</li><li><a href="salt.html#40f14e0e6698daaf">Add title, header, footer, caption or legend</a>
+</li><li><a href="salt.html#fee470bd71039c80">Zoom, DPI</a>
+</li><li><a href="salt.html#89e5b0978f17879e">Include Salt &#34;on activity diagram&#34;</a>
+</li><li><a href="salt.html#abaa7291606b9f59">Include salt &#34;on while condition of activity diagram&#34;</a>
+</li><li><a href="salt.html#ab3b362306046b9d">Include salt &#34;on repeat while condition of activity diagram&#34;</a>
+</li><li><a href="salt.html#7aa53dbdfc2137bf">Skinparam</a>
+</li><li><a href="salt.html#ae284f900f9d6e21">Style</a>
+</li></ul>
+</div>
+</td>
+</tr>
+</tbody></table>
+
+
+</p><p>
+
+<!-- Ezoic - Natif02L - bottom_of_page -->
+</p><span id="ezoic-pub-ad-placeholder-104"></span><!-- ezoic_pub_ad_placeholder-104-bottom_of_page-234x60-104-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-104-bottom_of_page-468x60-104-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-104-bottom_of_page-728x90-104-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-104-bottom_of_page-970x250-104-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-104-bottom_of_page-300x250x3-104-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-104-bottom_of_page-970x90-104-nonexxxnonexxxxxxezmaxscaleval100 -->
+<!-- End Ezoic - Natif02L - bottom_of_page -->
+</div>
+<!-- https://css-tricks.com/almanac/properties/f/float/ -->
+<!-- https://css-tricks.com/snippets/css/a-guide-to-flexbox/ -->
+
+
+<style>
+.btm {
+text-align:center;
+}
+.btm a{
+    text-decoration:none;
+    color:#b0c0d0;
+}
+.btm a:hover{
+    color:#8CB4FF;
+}
+</style>
+
+<div class="btm">
+<hr/>
+<a href="https://g.ezoic.net/privacy/plantuml.com"><small>Privacy Policy</small></a>
+    
+<a href="../direct-sales.html"><small>Advertise</small></a>
+<p>
+</p></div><!--btm-->
+
+
+<!--root-->
+
+<!-- Start of StatCounter Code --><script type="text/javascript">
+var sc_project=11140436; var sc_invisible=1; var sc_security="f9fe83d7";
+</script>
+<script async="" type="text/javascript" src="https://www.statcounter.com/counter/counter.js"></script> <!-- End of StatCounter Code -->
+
+
+<!--[selectrongo:done]--><script type="text/javascript">
+				var __inScopeForCCPA = false;
+		function __uspapi(command, version, callback) {
+			var response = null;
+			var successs = false;
+			if (command === "getUSPData" && version === 1) {
+				var uspString = "1"; // Version
+				if (__inScopeForCCPA) {
+					uspString += "N"; // Has Explicit Notice for Opt Out been provided (ex footer or minor consent modal)
+					var result;
+					var consentCookie = (result = new RegExp('(?:^|; )ezoccpaconsent=([^;]*)').exec(document.cookie)) ? (result[1]) : null;
+					if (consentCookie === "nonconsent") {
+						uspString += "Y";
+					}
+					else {
+						uspString += "N";
+					}
+					uspString += "N" // Is pub a signatory to the IAB Limited Service Provider Agreement (http://www.iabprivacy.com/)
+				}
+				else {
+					uspString += "---";
+				}
+				response = {
+					uspString: uspString,
+					version: 1
+				};
+				success = true;
+			}
+			return callback(response, success);
+		};
+		function __receiveUspapiMessage(event) {
+			if (event.data.hasOwnProperty('__uspapiCall')) {
+				__uspapi('getUSPData', 1, function(uspData, success) {
+					event.source.postMessage({
+						__uspapiReturn: {
+							returnValue: uspData,
+							success: success,
+							callId: event.data.__uspapiCall.callId
+						}
+					},
+					event.origin);
+				});
+			}
+			return null;
+		};
+		window.addEventListener("message", __receiveUspapiMessage, false);
+</script>
+<script>__ez.queue.addFile('/tardisrocinante/vitals.js', '/tardisrocinante/vitals.js?gcb=2&cb=3', false, ['/parsonsmaize/mulvane.js'], true, false, true, false);</script>
+<script>var _audins_dom="plantuml_com",_audins_did=173770;__ez.queue.addDelayFunc("audins.js","__ez.script.add", "//go.ezodn.com/detroitchicago/audins.js?cb=195-2");</script><noscript><div style="display:none;"><img src="https://pixel.quantserve.com/pixel/p-31iz6hfFutd16.gif?labels=Domain.plantuml_com,DomainId.173770" border="0" height="1" width="1" alt="Quantcast"/></div></noscript>
+<script>__ez.queue.addFile('/beardeddragon/drake.js', '/beardeddragon/drake.js?gcb=2&cb=4', false, [], true, false, true, false);</script>
+<script type="text/javascript" style='display:none;'>var __ez_dims = (function() {
+		var setCookie = function( name, content, expiry ) {
+			return document.cookie = name+'='+content+((expiry)?';expires='+(new Date(Math.floor(new Date().getTime()+expiry*1000)).toUTCString()):'')+';path=/';
+		};
+		var ffid = 1;
+		var oh = window.screen.height;
+		var ow = window.screen.width;
+		var h = ffid === 1 ? oh : (oh > ow) ? oh : ow;
+		var w = ffid === 1 ? ow : (oh > ow) ? ow : oh;
+		var uh = window.innerHeight || document.documentElement.clientHeight || document.getElementsByTagName('body')[0].clientHeight;
+		var uw = window.innerWidth || document.documentElement.clientWidth || document.getElementsByTagName('body')[0].clientWidth;
+		setCookie('ezds', encodeURIComponent('ffid='+ffid+',w='+w+',h='+h), (31536e3*7));
+		setCookie('ezohw', encodeURIComponent('w='+uw+',h='+uh), (31536e3*7));
+	})();</script>
+<script type='text/javascript' style='display:none;' async>__ez.queue.addFile('/parsonsmaize/chanute.js', '/parsonsmaize/chanute.js?a=a&cb=7&dcb=195-2&shcb=34', true, ['/parsonsmaize/mulvane.js'], true, false, false, false);</script>
+<script type='text/javascript' style='display:none;' async>__ez.queue.addFile('/porpoiseant/jellyfish.js', '/porpoiseant/jellyfish.js?a=a&cb=10&dcb=195-2&shcb=34', false, [], true, false, false, false);</script></body></html>

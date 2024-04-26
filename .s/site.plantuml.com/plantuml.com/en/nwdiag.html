@@ -1,0 +1,812 @@
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<script data-ezscrex='false' data-cfasync='false' data-pagespeed-no-defer>var __ez=__ez||{};__ez.stms=Date.now();__ez.evt={};__ez.script={};__ez.ck=__ez.ck||{};__ez.template={};__ez.template.isOrig=false;__ez.queue=function(){var e=0,i=0,t=[],n=!1,o=[],r=[],s=!0,a=function(e,i,n,o,r,s,a){var l=arguments.length>7&&void 0!==arguments[7]?arguments[7]:window,d=this;this.name=e,this.funcName=i,this.parameters=null===n?null:p(n)?n:[n],this.isBlock=o,this.blockedBy=r,this.deleteWhenComplete=s,this.isError=!1,this.isComplete=!1,this.isInitialized=!1,this.proceedIfError=a,this.fWindow=l,this.isTimeDelay=!1,this.process=function(){f("... func = "+e),d.isInitialized=!0,d.isComplete=!0,f("... func.apply: "+e);var i=d.funcName.split("."),n=null,o=this.fWindow||window;i.length>3||(n=3===i.length?o[i[0]][i[1]][i[2]]:2===i.length?o[i[0]][i[1]]:o[d.funcName]),null!=n&&n.apply(null,this.parameters),!0===d.deleteWhenComplete&&delete t[e],!0===d.isBlock&&(f("----- F'D: "+d.name),u())}},l=function(e,i,t,n,o,r,s){var a=arguments.length>7&&void 0!==arguments[7]?arguments[7]:window,l=this;this.name=e,this.path=i,this.async=o,this.defer=r,this.isBlock=t,this.blockedBy=n,this.isInitialized=!1,this.isError=!1,this.isComplete=!1,this.proceedIfError=s,this.fWindow=a,this.isTimeDelay=!1,this.isPath=function(e){return"/"===e[0]&&"/"!==e[1]},this.getSrc=function(e){return void 0!==window.__ezScriptHost&&this.isPath(e)&&"banger.js"!==this.name?window.__ezScriptHost+e:e},this.process=function(){l.isInitialized=!0,f("... file = "+e);var i=this.fWindow?this.fWindow.document:document,t=i.createElement("script");t.src=this.getSrc(this.path),!0===o?t.async=!0:!0===r&&(t.defer=!0),t.onerror=function(){var e={url:window.location.href,name:l.name,path:l.path,user_agent:window.navigator.userAgent};"undefined"!=typeof _ezaq&&(e.pageview_id=_ezaq.page_view_id);var i=encodeURIComponent(JSON.stringify(e)),t=new XMLHttpRequest;t.open("GET","//g.ezoic.net/ezqlog?d="+i,!0),t.send(),f("----- ERR'D: "+l.name),l.isError=!0,!0===l.isBlock&&u()},t.onreadystatechange=t.onload=function(){var e=t.readyState;f("----- F'D: "+l.name),e&&!/loaded|complete/.test(e)||(l.isComplete=!0,!0===l.isBlock&&u())},i.getElementsByTagName("head")[0].appendChild(t)}},d=function(e,i){this.name=e,this.path="",this.async=!1,this.defer=!1,this.isBlock=!1,this.blockedBy=[],this.isInitialized=!0,this.isError=!1,this.isComplete=i,this.proceedIfError=!1,this.isTimeDelay=!1,this.process=function(){}};function c(e){!0!==h(e)&&0!=s&&e.process()}function h(e){if(!0===e.isTimeDelay&&!1===n)return f(e.name+" blocked = TIME DELAY!"),!0;if(p(e.blockedBy))for(var i=0;i<e.blockedBy.length;i++){var o=e.blockedBy[i];if(!1===t.hasOwnProperty(o))return f(e.name+" blocked = "+o),!0;if(!0===e.proceedIfError&&!0===t[o].isError)return!1;if(!1===t[o].isComplete)return f(e.name+" blocked = "+o),!0}return!1}function f(e){var i=window.location.href,t=new RegExp("[?&]ezq=([^&#]*)","i").exec(i);"1"===(t?t[1]:null)&&console.debug(e)}function u(){++e>200||(f("let's go"),m(o),m(r))}function m(e){for(var i in e)if(!1!==e.hasOwnProperty(i)){var t=e[i];!0===t.isComplete||h(t)||!0===t.isInitialized||!0===t.isError?!0===t.isError?f(t.name+": error"):!0===t.isComplete?f(t.name+": complete already"):!0===t.isInitialized&&f(t.name+": initialized already"):t.process()}}function p(e){return"[object Array]"==Object.prototype.toString.call(e)}return window.addEventListener("load",(function(){setTimeout((function(){n=!0,f("TDELAY -----"),u()}),5e3)}),!1),{addFile:function(e,i,n,s,a,d,h,f,u){var m=new l(e,i,n,s,a,d,h,u);!0===f?o[e]=m:r[e]=m,t[e]=m,c(m)},addDelayFile:function(e,i){var n=new l(e,i,!1,[],!1,!1,!0);n.isTimeDelay=!0,f(e+" ...  FILE! TDELAY"),r[e]=n,t[e]=n,c(n)},addFunc:function(e,n,s,l,d,h,f,u,m,p){!0===h&&(e=e+"_"+i++);var w=new a(e,n,s,l,d,f,u,p);!0===m?o[e]=w:r[e]=w,t[e]=w,c(w)},addDelayFunc:function(e,i,n){var o=new a(e,i,n,!1,[],!0,!0);o.isTimeDelay=!0,f(e+" ...  FUNCTION! TDELAY"),r[e]=o,t[e]=o,c(o)},items:t,processAll:u,setallowLoad:function(e){s=e},markLoaded:function(e){if(e&&0!==e.length){if(e in t){var i=t[e];!0===i.isComplete?f(i.name+" "+e+": error loaded duplicate"):(i.isComplete=!0,i.isInitialized=!0)}else t[e]=new d(e,!0);f("markLoaded dummyfile: "+t[e].name)}},logWhatsBlocked:function(){for(var e in t)!1!==t.hasOwnProperty(e)&&h(t[e])}}}();__ez.evt.add=function(e,t,n){e.addEventListener?e.addEventListener(t,n,!1):e.attachEvent?e.attachEvent("on"+t,n):e["on"+t]=n()},__ez.evt.remove=function(e,t,n){e.removeEventListener?e.removeEventListener(t,n,!1):e.detachEvent?e.detachEvent("on"+t,n):delete e["on"+t]};__ez.script.add=function(e){var t=document.createElement("script");t.src=e,t.async=!0,t.type="text/javascript",document.getElementsByTagName("head")[0].appendChild(t)};__ez.dot={};__ez.queue.addFile('/detroitchicago/boise.js', '/detroitchicago/boise.js?gcb=195-2&cb=2', true, [], true, false, true, false);__ez.queue.addFile('/parsonsmaize/abilene.js', '/parsonsmaize/abilene.js?gcb=195-2&cb=28', true, [], true, false, true, false);</script>
+<script data-ezscrex="false" type="text/javascript" data-cfasync="false">window._ezaq = Object.assign({}, typeof window._ezaq !== "undefined" ? window._ezaq : {}, {"ad_cache_level":1,"domain_id":173770,"ezcache_level":2,"ezcache_skip_code":0,"has_bad_image":0,"has_bad_words":0,"is_sitespeed":0,"lt_cache_level":0,"page_view_id":"bf65116d-1eb0-42bd-54d9-c74bb06fc5d1","response_size_orig":81685,"response_time_orig":5,"template_id":134,"url":"https://plantuml.com/en/nwdiag","word_count":2309,"worst_bad_word_level":0});__ez.queue.markLoaded('ezaqBaseReady');</script>
+<script type="text/javascript">(function(){function storageAvailable(type){var storage;try{storage=window[type];var x='__storage_test__';storage.setItem(x,x);storage.removeItem(x);return true;}
+catch(e){return e instanceof DOMException&&(e.code===22||e.code===1014||e.name==='QuotaExceededError'||e.name==='NS_ERROR_DOM_QUOTA_REACHED')&&(storage&&storage.length!==0);}}
+function remove_ama_config(){if(storageAvailable('localStorage')){localStorage.removeItem("google_ama_config");}}
+remove_ama_config()})()</script>
+<script type="text/javascript">var ezoicTestActive = true</script>
+<script data-ezscrex="false" type="text/javascript" data-cfasync="false">window._ezaq = Object.assign({}, typeof window._ezaq !== "undefined" ? window._ezaq : {}, {"ab_test_id":"mod174-c","ad_cache_level":1,"ad_count_adjustment":0,"ad_lazyload_version":0,"ad_load_version":1,"ad_location_ids":"","adx_ad_count":0,"ai_placeholder_cache_level":1,"ai_placeholder_placement_cnt":-1,"bidder_method":1,"bidder_version":3,"city":"Krasnoyarsk","country":"RU","days_since_last_visit":-1,"display_ad_count":0,"domain_id":173770,"domain_test_group":20230802,"ds_adsize_opt_id":-1,"engaged_time_visit":0,"ezcache_level":2,"ezcache_skip_code":0,"form_factor_id":1,"framework_id":1,"has_bad_image":0,"has_bad_words":0,"iab_category":"","iab_category_0":"596","is_embed":false,"is_from_recommended_pages":false,"is_return_visitor":false,"is_sitespeed":0,"last_page_load":"","last_pageview_id":"","lt_cache_level":0,"max_ads":0,"metro_code":0,"optimization_version":1,"page_ad_positions":"","page_view_count":1262,"page_view_id":"bf65116d-1eb0-42bd-54d9-c74bb06fc5d1","position_selection_id":0,"postal_code":"660000","pv_event_count":0,"response_size_orig":81685,"response_time_orig":5,"serverid":"i-00588e737cc0d1d34","state":"KYA","sub_page_ad_positions":"","t_epoch":1697691338,"template_id":134,"time_on_site_visit":0,"url":"https://plantuml.com/en/nwdiag","word_count":2309,"worst_bad_word_level":0});__ez.queue.markLoaded('ezaqReady');</script>
+<script data-ezscrex='false' data-cfasync='false' data-pagespeed-no-defer>__ez.queue.addFile('/parsonsmaize/mulvane.js', '/parsonsmaize/mulvane.js?gcb=195-2&cb=5', true, ['/parsonsmaize/abilene.js'], true, false, true, false);__ez.queue.addFile('/parsonsmaize/olathe.js', '/parsonsmaize/olathe.js?gcb=195-2&cb=20', false, ['/parsonsmaize/abilene.js','/parsonsmaize/mulvane.js'], true, false, true, false);__ez.queue.addFile('/porpoiseant/et.js', '/porpoiseant/et.js?gcb=195-2&cb=2', false, [], true, false, true, false);!function(){var e;__ez.vep=(e=[],{Add:function(i,t){__ez.dot.isDefined(i)&&__ez.dot.isValid(t)&&e.push({type:"video",video_impression_id:i,domain_id:__ez.dot.getDID(),t_epoch:__ez.dot.getEpoch(0),data:__ez.dot.dataToStr(t)})},Fire:function(){if(void 0===document.visibilityState||"prerender"!==document.visibilityState){if(__ez.dot.isDefined(e)&&e.length>0)for(;e.length>0;){var i=5;i>e.length&&(i=e.length);var t=e.splice(0,i),o=__ez.dot.getURL("/detroitchicago/grapefruit.gif")+"?orig="+(!0===__ez.template.isOrig?1:0)+"&v="+btoa(JSON.stringify(t));__ez.dot.Fire(o)}e=[]}}})}();</script><script data-ezscrex='false' data-cfasync='false' data-pagespeed-no-defer>!function(){function e(i){return e="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e},e(i)}__ez.pel=function(){var i=[];function t(t,o,d,_,n,r,a,s){if(__ez.dot.isDefined(t)&&0!=__ez.dot.isAnyDefined(t.getSlotElementId,t.ElementId)){void 0===s&&(s=!1);var p=parseInt(__ez.dot.getTargeting(t,"ap")),f=__ez.dot.getSlotIID(t),u=__ez.dot.getAdUnit(t,s),z=parseInt(__ez.dot.getTargeting(t,"compid")),g=0,c=0,l=function(i){if("undefined"==typeof _ezim_d)return!1;var t=__ez.dot.getAdUnitPath(i).split("/").pop();if("object"===("undefined"==typeof _ezim_d?"undefined":e(_ezim_d))&&_ezim_d.hasOwnProperty(t))return _ezim_d[t];for(var o in _ezim_d)if(o.split("/").pop()===t)return _ezim_d[o];return!1}(t);"object"==e(l)&&(void 0!==l.creative_id&&(c=l.creative_id),void 0!==l.line_item_id&&(g=l.line_item_id)),__ez.dot.isDefined(f,u)&&__ez.dot.isValid(o)&&("0"===f&&!0!==s||""===u||i.push({type:"impression",impression_id:f,domain_id:__ez.dot.getDID(),unit:u,t_epoch:__ez.dot.getEpoch(0),revenue:d,est_revenue:_,ad_position:p,ad_size:"",bid_floor_filled:n,bid_floor_prev:r,stat_source_id:a,country_code:__ez.dot.getCC(),pageview_id:__ez.dot.getPageviewId(),comp_id:z,line_item_id:g,creative_id:c,data:__ez.dot.dataToStr(o),is_orig:s||__ez.template.isOrig}))}}function o(){void 0!==document.visibilityState&&"prerender"===document.visibilityState||(__ez.dot.isDefined(i)&&i.length>0&&[i.filter((function(e){return e.is_orig})),i.filter((function(e){return!e.is_orig}))].forEach((function(e){for(;e.length>0;){var i=e[0].is_orig||!1,t=5;t>e.length&&(t=e.length);var o=e.splice(0,t),d=__ez.dot.getURL("/porpoiseant/army.gif")+"?orig="+(!0===i?1:0)+"&sts="+btoa(JSON.stringify(o));(void 0!==window.isAmp&&isAmp||void 0!==window.ezWp&&ezWp)&&void 0!==window._ezaq&&_ezaq.hasOwnProperty("domain_id")&&(d+="&visit_uuid="+_ezaq.visit_uuid),__ez.dot.Fire(d)}})),i=[])}return{Add:t,AddAndFire:function(e,i){t(e,i,0,0,0,0,0),o()},AddAndFireOrig:function(e,i){t(e,i,0,0,0,0,0,!0),o()},AddById:function(e,t,o,d){var _=e.split("/");if(__ez.dot.isDefined(e)&&3===_.length&&__ez.dot.isValid(t)){var n=_[0],r={type:"impression",impression_id:_[2],domain_id:__ez.dot.getDID(),unit:n,t_epoch:__ez.dot.getEpoch(0),pageview_id:__ez.dot.getPageviewId(),data:__ez.dot.dataToStr(t),is_orig:o||__ez.template.isOrig};void 0!==d&&(r.revenue=d),i.push(r)}},Fire:o,GetPixels:function(){return i}}}()}();__ez.queue.addFile('/detroitchicago/raleigh.js', '/detroitchicago/raleigh.js?gcb=195-2&cb=6', false, ['/parsonsmaize/abilene.js'], true, false, true, false);__ez.queue.addFile('/detroitchicago/vista.js', '/detroitchicago/vista.js?gcb=195-2&cb=5', false, ['/parsonsmaize/abilene.js'], true, false, true, false);__ez.queue.addFile('/detroitchicago/tampa.js', '/detroitchicago/tampa.js?gcb=195-2&cb=5', false, ['/parsonsmaize/abilene.js'], true, false, true, false);</script><base href=""/><meta name="flattr:id" content="1ew3x0"/><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "url": "https://plantuml.com",
+  "name": "PlantUML",
+  "sameAs" : ["https://twitter.com/plantuml","https://en.wikipedia.org/wiki/PlantUML","https://www.wikidata.org/wiki/Q18346546"],
+  "logo": "https://cdn-0.plantuml.com/logo3.png",
+  "contactPoint": [{
+    "@type": "ContactPoint",
+    "email": "plantuml@gmail.com",
+    "url": "https://plantuml.com",
+    "contactType": "customer service"
+  }]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+    "@type": "ListItem",
+    "position": 1,
+    "item": {
+      "@id": "https://plantuml.com",
+      "name": "Home"
+    }
+  },{
+    "@type": "ListItem",
+    "position": 2,
+    "item": {
+      "@id": "https://plantuml.com/sitemap-language-specification",
+      "name": "Language specification"
+    }
+  },{
+    "@type": "ListItem",
+    "position": 3,
+    "item": {
+      "@id": "https://plantuml.com/nwdiag",
+      "name": "nwdiag"
+  }
+  }]
+}
+</script><link rel="canonical" href="../nwdiag.html"/><link rel="alternate" hreflang="x-default" href="../nwdiag.html"/><link rel="alternate" hreflang="de" href="../de/nwdiag.html"/><link rel="alternate" hreflang="en" href="../nwdiag.html"/><link rel="alternate" hreflang="es" href="../es/nwdiag.html"/><link rel="alternate" hreflang="fr" href="../fr/nwdiag.html"/><link rel="alternate" hreflang="ja" href="../ja/nwdiag.html"/><link rel="alternate" hreflang="ru" href="../ru/nwdiag.html"/><link rel="alternate" hreflang="ko" href="../ko/nwdiag.html"/><link rel="alternate" hreflang="zh" href="../zh/nwdiag.html"/><link rel="shortcut icon" href="../favicon.ico"/><link rel="preload" as="image" href="../svgrepo-house.svg"/><link rel="preload" as="image" href="../svgrepo-text-news.svg"/><link rel="preload" as="image" href="../svgrepo-rocket-3-start.svg"/><link rel="preload" as="image" href="../svgrepo-server.svg"/><link rel="preload" as="image" href="../svgrepo-play.svg"/><link rel="preload" as="image" href="../svgrepo-forum.svg"/><link rel="preload" as="image" href="../svgrepo-add-to-online-cart.svg"/><link rel="preload" as="image" href="../svgrepo-forum-message.svg"/><link rel="preload" as="image" href="../svgrepo-palette-fill.svg"/><link rel="preload" as="image" href="../svgrepo-cpu.svg"/><link rel="preload" as="image" href="../svgrepo-books-library.svg"/><link rel="preload" as="image" href="../svgrepo-signpost-fill.svg"/><link rel="preload" as="image" href="../svgrepo-library.svg"/><link rel="preload" as="image" href="../flags21.png"/><link rel="preload" as="image" href="../svgrepo-uxwing-light-mode-toggle.svg"/><title>nwdiag</title><meta name="description" content="nwdiag network diagrams."/><meta property="og:type" content="article"/><meta property="og:title" content="nwdiag"/><meta property="og:description" content="nwdiag network diagrams."/><meta property="og:url" content="https://plantuml.com/nwdiag"/><meta property="og:site_name" content="PlantUML.com"/><meta name="twitter:image" content="https://plantuml.com/og-nwdiag"/><meta property="og:locale" content="en"/><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="nwdiag"/><meta name="twitter:description" content="nwdiag network diagrams."/><meta name="twitter:site" content="@PlantUML"/><meta name="twitter:creator" content="@PlantUML"/><script>if(window.location.href.indexOf("/en/")==-1){var lg=navigator.language.substring(0,2);if(lg=="de"){window.location.href="/de/nwdiag"}if(lg=="es"){window.location.href="/es/nwdiag"}if(lg=="fr"){window.location.href="/fr/nwdiag"}if(lg=="ja"){window.location.href="/ja/nwdiag"}if(lg=="ko"){window.location.href="/ko/nwdiag"}if(lg=="ru"){window.location.href="/ru/nwdiag"}if(lg=="zh"){window.location.href="/zh/nwdiag"}};</script><style>li{margin:2px}#external li{margin:13px}.pezoic{max-width:970px}@media screen and (max-width:1600px){.pezoic{max-width:768px}}.coptable{max-width:90%}.mytab{display:inline-block;border-radius:3px;border:1px solid #e1e4e8}.mytab:hover{border:1px dashed #0366d6;cursor:pointer;color:#0366d6;background:#f6f8fa}.cop{margin:25px 10px 0 10px}.cop:hover{cursor:pointer;filter:invert(30%) sepia(75%) saturate(4001%) hue-rotate(201deg) brightness(88%) contrast(98%)}.cop2{margin:25px 10px 0 10px}.cop2:hover{cursor:pointer}.msg{position:absolute;color:#396;background-color:#FFF;margin-top:55px;display:none;border-radius:3px;border:1px solid #4dff00}.mycell0{float:left;vertical-align:top;padding:10px}.mycell0 code:hover{cursor:default;color:#000}.mycell{float:right;vertical-align:top;padding:10px;max-width:55vw;overflow-x:auto}.mycell0 pre{max-width:55vw;overflow-x:auto}.cod{background:#edeff3;padding:2px 5px;border-radius:3px}.colo{display:inline-block;background:#edeff3;padding:7px 12px;border-radius:3px}.tag,.tagg,.tago,.tagr{text-rendering:optimizeLegibility;display:inline-block;padding:3px 5px 2px 4px;text-decoration:none;white-space:nowrap;border:1px solid #999;text-transform:uppercase;text-align:center;border-radius:3px;font-size:11px;font-weight:bold;line-height:90%}.tag{background-color:#eee}.tagg{background-color:#98fb98}.tago{background-color:#fafa00}.tagr{background-color:#ff4500}a{text-decoration:none;color:#0366d6}a:hover{text-decoration:underline}.menu1{border:0;font-family:Helvetica,sans-serif;font-size:14px;padding:0;margin:0;white-space:nowrap;overflow:hidden;vertical-align:middle;line-height:30px}.menu1 a{text-align:center;padding:10px 7px 10px 7px;text-decoration:none;color:#637282}.menu1 a:hover{color:#0366d6}#menu0{top:0;z-index:4;margin:0 0 0 10px;padding:0}@media screen and (max-width:1200px){#menu0{visibility:hidden}}.mhov img{margin:0 5px 0 0;padding:0}.mhov:hover{filter:invert(25%) sepia(97%) saturate(2026%) hue-rotate(201deg) brightness(91%) contrast(98%)}#menuside2{border:0;font-family:Helvetica,sans-serif;font-size:14px;padding:20px 0 4px 0;margin:0}#menuside2 span{vertical-align:top}#menuside2 li{list-style:none;position:relative;padding:0;margin:10px 20px 10px 10px;border:0}#menuside2 li a{display:inline-block;text-decoration:none;color:#637282;width:100%}#BC{z-index:0;padding-top:5px;top:35px}.breadcrumb{z-index:1;font-family:Helvetica,sans-serif;font-size:14px;text-align:center;display:inline-block;overflow:hidden;border-radius:5px}.breadcrumb a{text-decoration:none;outline:0;display:block;float:left;font-size:12px;line-height:24px;color:#373f49;padding:0 10px 0 35px;background:#f0f1f1;background:linear-gradient(#f0f1f1,#c6d2d2);position:relative}.breadcrumb a:first-child{padding-left:21px;border-radius:5px 0 0 5px}.breadcrumb a:first-child:before{left:14px}.breadcrumb a:last-child{visibility:hidden}.breadcrumb a.active,.breadcrumb a:hover{color:#0366d6;background:#c6d2d2;background:linear-gradient(#e3e4e4,#b8c7c7)}.breadcrumb a.active:after,.breadcrumb a:hover:after{background:#c6d2d2;background:linear-gradient(135deg,#e3e4e4,#b8c7c7)}.breadcrumb a:after{content:'';position:absolute;top:0;right:-12px;width:24px;height:24px;transform:scale(0.707) rotate(45deg);z-index:1;background:#f0f1f1;background:linear-gradient(135deg,#f0f1f1,#c6d2d2);box-shadow:2px -2px 0 2px rgba(0,0,0,0.1),3px -3px 0 2px rgba(255,255,255,0.1);border-radius:0 5px 0 50px}.breadcrumb a:last-child:after{content:none;visibility:hidden}.lga,.lga a,.lgi,.lgi a{font-family:Helvetica,sans-serif;font-size:13px;text-align:center;color:#fff;padding:0 5px;margin:0}.lga,.lga a{background-color:#008}.lgi,.lgi a{background-color:#888}.lga:hover,.lga:hover a{text-decoration:none;color:#BBB}.lgi:hover,.lgi:hover a{text-decoration:none;color:#CCC}</style><style>.backtop{margin:0 10px}.backtop:hover{cursor:pointer;filter:invert(30%) sepia(75%) saturate(4001%) hue-rotate(201deg) brightness(88%) contrast(98%)}</style><style>.dropbtn{padding:0;border:0;background:0}.dropdown{position:relative;display:inline-block;margin:0 10px}.dropdown-content{display:none;position:absolute;background-color:#f1f1f1;min-width:160px;box-shadow:0 8px 16px 0 rgba(0,0,0,0.2);z-index:1}.dropdown-content img{vertical-align:middle;margin:0 8px 0 1px}.dropdown-content a{font-size:small;font-weight:normal;color:black;padding:5px 10px;text-decoration:none;display:block}.dropdown-content a:hover{background-color:#ddd;color:#0366d6}.dropdown:hover .dropdown-content{display:block}.dropdown:hover .dropbtn{background-color:#3e8e41}</style><style>#flex1{margin:0;padding:0;display:flex;flex-direction:row;width:378px;height:100%}#lll{flex-grow:1;flex-shrink:1;max-width:162px;overflow:hidden}#mmm{flex-grow:0;flex-shrink:0;background:#edeff3;width:210px;min-width:210px;max-width:210px;flex-grow:0;flex-shrink:0;border-left:1px solid #d4d8de}#qqq{flex-grow:0;flex-shrink:0;width:4px;min-width:4px;max-width:4px;flex-grow:0;flex-shrink:0}#rrr{flex-grow:1;flex-shrink:1;max-width:162px;overflow:hidden}.cde{display:flex;flex-direction:column;justify-content:space-between;height:100%}.cd{display:flex;flex-direction:column;justify-content:space-start;height:100%}.aaa{height:30px;min-height:30px;max-height:30px;flex-grow:0;flex-shrink:0;background:#edeff3;border-bottom:1px solid #d4d8de}.bbb,.bbborder{flex-grow:1;flex-shrink:0}.bbborder{border-left:1px solid #d4d8de}#header{z-index:10;position:fixed;left:378px;right:0;height:30px;top:0;background:#edeff3;border-bottom:1px solid #d4d8de}#header2{z-index:7;position:fixed;left:378px;right:0;height:10px;top:30px;background:#fefefe}#left0{top:0;position:fixed;left:0;margin:0;bottom:0;width:378px;padding:0;z-index:2}#root{padding:0;margin:40px 0 0 388px;background:#fefefe}body{margin:auto;overflow-x:hidden;background:#fefefe}@media screen and (max-width:1190px){#flex1,#left0{width:215px}#root{margin:40px 0 0 224px}#header,#header2{left:215px}#left0{left:0}#lll,#rrr{width:0;visibility:hidden;flex-grow:0;flex-shrink:0}}@media screen and (max-width:1010px){#root{margin:0 0 0 216px}#header,#header2{display:none}#lll,#qqq{width:0;visibility:hidden;flex-grow:0;flex-shrink:0}#mmm{border-right:1px solid #d4d8de}}@media screen and (min-width:1700px){#header,#header2{left:518px}#left0,#flex1{width:518px}#root{margin-left:528px}#lll,#rrr{max-width:302px}}</style><script>window.pushMST_config={vapidPK:"BBodn2vLFoDO5AdCfmOOzNmcUsn52kTA6JNZNYVFymzEdWHonz_bkUcsaTkPXHvNGRkRUSAxMbup-H0l2sb1h_Q",enableOverlay:true,swPath:"/sw.js",i18n:{}};var pushmasterTag=document.createElement("script");pushmasterTag.src="https://cdn.pushmaster-cdn.xyz/scripts/publishers/629f5e297baecc00098a271b/SDK.js";pushmasterTag.setAttribute("defer","");var firstScriptTag=document.getElementsByTagName("script")[0];firstScriptTag.parentNode.insertBefore(pushmasterTag,firstScriptTag);</script><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-TKZNNQT9CZ"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date());gtag("config","G-TKZNNQT9CZ");</script><script>var llg="en";var az=0;var amdark=0;function ljs(b){if(az){return false}var a=document.createElement("script");a.type="text/javascript";a.src="/btn-"+b+".js";document.body.innerHTML="<i style='position:absolute;top:30%;width:100%;'><center>Loading in progress...";document.body.appendChild(a)}function ctc(c){document.getElementById("img"+c).classList.remove("cop");document.getElementById("img"+c).classList.add("cop2");document.getElementById("pre"+c).style.backgroundColor="#4dff00";document.getElementById("msg"+c).style.display="inline";setTimeout(function(){document.getElementById("img"+c).classList.remove("cop2");document.getElementById("img"+c).classList.add("cop");document.getElementById("pre"+c).style.backgroundColor="";document.getElementById("msg"+c).style.display="none"},800);text=document.getElementById("pre"+c).innerText;if(window.clipboardData&&window.clipboardData.setData){return window.clipboardData.setData("Text",text)}else{if(document.queryCommandSupported&&document.queryCommandSupported("copy")){var a=document.createElement("textarea");a.textContent=text;a.style.position="fixed";document.body.appendChild(a);a.select();try{return document.execCommand("copy")}catch(b){return false}finally{document.body.removeChild(a)}}}};</script><script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><script type='text/javascript'>
+var ezoTemplate = 'pub_site';
+var ezouid = '1';
+var ezoFormfactor = '1';
+</script><script data-ezscrex="false" type='text/javascript'>
+var soc_app_id = '0';
+var did = 173770;
+var ezdomain = 'plantuml.com';
+var ezoicSearchable = 1;
+</script>
+<script data-ezscrex='false' data-pagespeed-no-defer data-cfasync='false'>
+function create_ezolpl() {
+	var d = new Date();
+	d.setTime(d.getTime() + (365*24*60*60*1000));
+	var expires = "expires="+d.toUTCString();
+	__ez.ck.setByCat("ezux_lpl_173770=" + new Date().getTime() + "|" + _ezaq.page_view_id + "|" + _ezaq.is_return_visitor + "; " + expires, 3);
+}
+function attach_ezolpl() {
+	if (document.readyState === "complete") {
+		create_ezolpl();
+		return;
+	}
+	window.addEventListener("load", create_ezolpl);
+}
+
+__ez.queue.addFunc("attach_ezolpl", "attach_ezolpl", null, false, ['/detroitchicago/boise.js'], true, false, false, false);
+</script></head><body><div id="left0"><div id="flex1"><div id="lll"><div class="cde"><div></div><div><span id="ezoic-pub-ad-placeholder-131"></span><!-- ezoic_pub_ad_placeholder-131-sidebar-120x600-131-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-131-sidebar-160x600-131-nonexxxnonexxxxxxezmaxscaleval100 --></div><div></div></div></div><div id="mmm"><div class="cde"><div><div><span id="ezoic-pub-ad-placeholder-105"></span><!-- ezoic_pub_ad_placeholder-105-sidebar_middle-120x240-105-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-105-sidebar_middle-125x125-105-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-105-sidebar_middle-180x150-105-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-105-sidebar_middle-200x200-105-nonexxxnonexxxxxxezmaxscaleval100 --></div><ul id="menuside2"><li><a href="index.html" class="mhov"><img src="../svgrepo-house.svg" width="16" height="16"/><span>Home</span></a></li><li><a href="news.html" class="mhov"><img src="../svgrepo-text-news.svg" width="16" height="16"/><span>What&#39;s New ?</span></a></li><li><a href="starting.html" class="mhov"><img src="../svgrepo-rocket-3-start.svg" width="16" height="16"/><span>Getting Started</span></a></li><li><a href="https://www.plantuml.com/plantuml/uml/SyfFKj2rKt3CoKnELR1Io4ZDoSa70000" class="mhov"><img src="../svgrepo-server.svg" width="16" height="16"/><span>Online Server</span></a></li><li><a href="running.html" class="mhov"><img src="../svgrepo-play.svg" width="16" height="16"/><span>Running</span></a></li><li><a href="faq.html" class="mhov"><img src="../svgrepo-forum.svg" width="16" height="16"/><span>F.A.Q.</span></a></li><li><a href="download.html" class="mhov"><img src="../svgrepo-add-to-online-cart.svg" width="16" height="16"/><span>Download</span></a></li><li><a href="../qa.html" class="mhov"><img src="../svgrepo-forum-message.svg" width="16" height="16"/><span>Forum</span></a></li><li><a href="theme.html" class="mhov"><img src="../svgrepo-palette-fill.svg" width="16" height="16"/><span>Theme</span></a></li><li><a href="preprocessing.html" class="mhov"><img src="../svgrepo-cpu.svg" width="16" height="16"/><span>Preprocessing</span></a></li><li><a href="stdlib.html" class="mhov"><img src="../svgrepo-books-library.svg" width="16" height="16"/><span>Standard Library</span></a></li><li><a href="https://crashedmind.github.io/PlantUMLHitchhikersGuide" class="mhov"><img src="../svgrepo-signpost-fill.svg" width="16" height="16"/><span>Hitchhiker&#39;s Guide</span></a></li><li><a href="../PlantUML_Language_Reference_Guide.pdf.html" class="mhov"><img src="../svgrepo-library.svg" width="16" height="16"/><span>PDF Guide</span></a></li></ul><div><span id="ezoic-pub-ad-placeholder-108"></span><!-- ezoic_pub_ad_placeholder-108-sidebar_middle-120x240-108-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-108-sidebar_middle-125x125-108-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-108-sidebar_middle-180x150-108-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-108-sidebar_middle-200x200-108-nonexxxnonexxxxxxezmaxscaleval100 --></div></div><div></div><div style="margin-bottom:35px;"><span id="ezoic-pub-ad-placeholder-186"></span><!-- ezoic_pub_ad_placeholder-186-sidebar_middle-120x240-186-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-186-sidebar_middle-125x125-186-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-186-sidebar_middle-180x150-186-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-186-sidebar_middle-200x200-186-nonexxxnonexxxxxxezmaxscaleval100 --></div></div></div><div id="qqq"><div class="cd"><div class="aaa"></div><div class="bbborder"></div></div></div><div id="rrr"><div class="cd"><div class="aaa"></div><div style="height:5px;"></div><div class="bbb"><div class="cde"><div></div><div><span id="ezoic-pub-ad-placeholder-175"></span><!-- ezoic_pub_ad_placeholder-175-sidebar-120x600-175-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-175-sidebar-160x600-175-nonexxxnonexxxxxxezmaxscaleval100 --></div><div></div></div></div></div></div></div></div><style>#contmenu{display:flex;height:30px;width:100%;margin:0;padding:0}#contmenua{height:30px;padding-right:25px}#contmenub{z-index:15;display:inline-block;flex-grow:1;flex-shrink:1;height:30px;background-color:#edeff3}#magic{white-space:nowrap;overflow:hidden;z-index:14;position:fixed;top:0;right:50px;height:30px;width:30px}#magic2{white-space:nowrap;overflow:hidden;z-index:16;position:fixed;top:0;right:0;height:30px;width:50px;background-color:#edeff3}#magic2 img{margin:5px 0 0 5px;filter:invert(44%) sepia(27%) saturate(310%) hue-rotate(170deg) brightness(92%) contrast(83%)}#magic2:hover img{filter:invert(25%) sepia(97%) saturate(2026%) hue-rotate(201deg) brightness(91%) contrast(98%)}#magic:hover #svgrepoleft{filter:invert(22%) sepia(53%) saturate(4563%) hue-rotate(202deg) brightness(95%) contrast(98%)}#magic:hover{width:100%;height:31px}#aze{height:30px;display:flex;flex-direction:row-reverse}#aze1{height:30px;background-color:#edeff3}#aze2{height:30px;background-color:#edeff3;padding-left:10px;border-left:1px solid #d4d8de;border-bottom:1px solid #d4d8de}#aze1 img{filter:invert(46%) sepia(6%) saturate(1254%) hue-rotate(171deg) brightness(94%) contrast(92%)}#aze3{width:3px;height:30px;background-color:#edeff3}</style><div id="header"><div id="contmenu"><div id="contmenua"><div class="menu1"><a href="sequence-diagram.html">Sequence</a><a href="use-case-diagram.html">Use Case</a><a href="class-diagram.html">Class</a><a href="activity-diagram-beta.html">Activity</a><a href="component-diagram.html">Component</a><a href="state-diagram.html">State</a><a href="object-diagram.html">Object</a><a href="deployment-diagram.html">Deployment</a><a href="timing-diagram.html">Timing</a><a href="nwdiag.html">Network</a><a href="salt.html">Wireframe</a><a href="archimate-diagram.html">Archimate</a><a href="gantt-diagram.html">Gantt</a><a href="mindmap-diagram.html">MindMap</a><a href="wbs-diagram.html">WBS</a><a href="json.html">JSON</a><a href="yaml.html">YAML</a></div></div><div id="contmenub"></div></div><div id="magic"><div id="aze"><div id="aze1"><img id="svgrepoleft" width="30" height="30" src="../svgrepo-left.svg"/></div><div id="aze2"><div class="menu1"><a href="sequence-diagram.html">Sequence</a><a href="use-case-diagram.html">Use Case</a><a href="class-diagram.html">Class</a><a href="activity-diagram-beta.html">Activity</a><a href="component-diagram.html">Component</a><a href="state-diagram.html">State</a><a href="object-diagram.html">Object</a><a href="deployment-diagram.html">Deployment</a><a href="timing-diagram.html">Timing</a><a href="nwdiag.html">Network</a><a href="salt.html">Wireframe</a><a href="archimate-diagram.html">Archimate</a><a href="gantt-diagram.html">Gantt</a><a href="mindmap-diagram.html">MindMap</a><a href="wbs-diagram.html">WBS</a><a href="json.html">JSON</a><a href="yaml.html">YAML</a></div></div><div id="aze3"></div></div></div><div id="magic2"><a href="../en-dark/nwdiag.html"><img src="../svgrepo-uxwing-light-mode-toggle.svg" height="20"/></a></div></div><div id="header2"></div><div id="root"><style>#haut1{margin:50px 0 20px;padding:0;min-height:80px}#donate{padding-top:5px;min-height:30px}</style><div id="haut1"><div style="float:left;"><div class="breadcrumb"><a href="sitemap.html">PlantUML</a><a href="sitemap-language-specification.html">Language specification</a><a href="nwdiag.html">nwdiag</a><a href="nwdiag.html#"></a></div><div id="donate">   <a href="https://discord.gg/sXhzexAQGh" style="text-decoration: none;"><img src="https://img.shields.io/discord/1083727021328306236?color=5865F2&amp;logo=discord&amp;logoColor=white" alt="Discord server"/></a>   <a href="https://github.com/sponsors/plantuml/" style="text-decoration: none;"><img src="https://img.shields.io/github/sponsors/plantuml?logo=github"/></a>   <a href="https://www.patreon.com/bePatron?patAmt=1&amp;u=527450&amp;rid=152970" style="text-decoration: none;"><img src="https://img.shields.io/badge/patreon-122-chocolate?logo=patreon"/></a>   <a href="../lp.html" style="text-decoration: none;"><img src="https://img.shields.io/liberapay/patrons/plantuml?color=gold&amp;logo=liberapay&amp;label=liberapay"/></a>   <a href="paypal.html" style="text-decoration: none;"><img src="https://img.shields.io/badge/paypal-296-skyblue?logo=paypal&amp;logoColor=red"/></a></div></div><div style="float:right; margin:3px 0;"><style>#langlist{display:flex;justify-content:space-between;width:317px;height:16px;margin:3px 10px 3px 0}.sel2{border:2px solid #fefefe}.nosel2{border:2px solid #fefefe;filter:grayscale(100%) opacity(75%)}.sel2:hover,.nosel2:hover{cursor:pointer;border:2px solid #0366d6;border-spacing:0;filter:grayscale(0);filter:contrast(200%);filter:brightness(150%)}#flag1,#flag2,#flag3,#flag4,#flag5,#flag6,#flag7,#flag8{background:url(../flags21.png);background-repeat:no-repeat;background-clip:content-box;width:22px;height:16px}#flag2{background-position:-22px 0}#flag3{background-position:-44px 0}#flag4{background-position:-66px 0}#flag5{background-position:-88px 0}#flag6{background-position:-110px 0}#flag7{background-position:-132px 0}#flag8{background-position:-154px 0}</style><div id="langlist"><div id="flag1" onclick="location.href=&#39;/en/nwdiag&#39;" class="sel2"></div><div id="flag2" onclick="location.href=&#39;/de/nwdiag&#39;" class="nosel2"></div><div id="flag3" onclick="location.href=&#39;/es/nwdiag&#39;" class="nosel2"></div><div id="flag4" onclick="location.href=&#39;/fr/nwdiag&#39;" class="nosel2"></div><div id="flag5" onclick="location.href=&#39;/ja/nwdiag&#39;" class="nosel2"></div><div id="flag6" onclick="location.href=&#39;/ko/nwdiag&#39;" class="nosel2"></div><div id="flag7" onclick="location.href=&#39;/ru/nwdiag&#39;" class="nosel2"></div><div id="flag8" onclick="location.href=&#39;/zh/nwdiag&#39;" class="nosel2"></div></div></div></div><p><style>#topsticky{z-index:2;margin:0 240px 0 0}@media screen and (min-height:800px){#topsticky{position:sticky;top:40px}}@media screen and (max-width:1500px){#topsticky{margin:0}}</style></p><div id="topsticky"><span id="ezoic-pub-ad-placeholder-647"></span><!-- ezoic_pub_ad_placeholder-647-under_page_title-320x100-647-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-647-under_page_title-300x50v2-647-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-647-under_page_title-320x50-647-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-647-under_page_title-468x60-647-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-647-under_page_title-728x90-647-nonexxxnonexxxxxxezmaxscaleval100 --></div><p><a style="position:relative;top:-38px;" name="73a26b4967968217"></a><style>#toc{z-index:2;position:sticky;top:40px;list-style-type:none;margin:0;padding:0 10px}.chap{clear:both}#toc ul{list-style-type:none;max-height:87vh;overflow-y:auto;background:#f6f8fa;border-width:2px;border-style:groove;border-radius:3px;border-color:#e1e4e8;margin:0;padding:0}@media screen and (min-height:450px){#toc ul{max-height:89.5vh}}@media screen and (min-height:550px){#toc ul{max-height:91.5vh}}@media screen and (min-height:700px){#toc ul{max-height:93.5vh}}@media screen and (min-height:900px){#toc ul{max-height:94.5vh}}#toc li{margin:5px 5px 5px 10px;padding:0}@media screen and (max-width:1500px){#toctd{display:none}#toc{display:none}}</style><table border="0" cellspacing="0" cellpadding="0" width="100%"><tbody><tr valign="top" width="100%"><td valign="top"><h1 class="chap"><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/doc/dokuwiki/en/nwdiag#0"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/doc/asciidoc/en/nwdiag#0"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/doc/markdown/en/nwdiag#0"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>Network Diagram with nwdiag</h1><p></p> A <a href="https://en.wikipedia.org/wiki/Computer_network_diagram">network diagram</a> is a visual representation of a computer or telecommunications network. It illustrates the <strong>arrangement and interconnections</strong> of network components, including servers, routers, switches, hubs, and devices. Network diagrams are invaluable tools for network engineers and administrators to <strong>understand, set up, and troubleshoot networks</strong>. They are also essential for <strong>visualizing the structure and flow of data</strong> in a network, ensuring optimal performance and security. <p></p><a href="http://blockdiag.com/en/nwdiag/nwdiag-examples.html">nwdiag</a>, developed by <a href="https://twitter.com/tk0miya">Takeshi Komiya</a>, provides a streamlined platform to swiftly sketch <strong>network diagrams</strong>. We extend our gratitude to Takeshi for this <strong>innovative tool</strong>! <p></p> Given its intuitive syntax, <a href="http://blockdiag.com/en/nwdiag/nwdiag-examples.html">nwdiag</a> has been seamlessly integrated into <strong>PlantUML</strong>. The examples showcased here are inspired by the ones documented by <a href="https://twitter.com/tk0miya">Takeshi</a>. <a style="position:relative;top:-38px;" name="a5e72f15f187e8dc"></a><div style="clear:both;height:50px;"></div><h2 class="chap"><img onclick="window.scrollTo(0,0);" title="Back to top" src="../backtop1.svg" width="20" height="20" class="backtop"/><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/doc/dokuwiki/en/nwdiag#1"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/doc/asciidoc/en/nwdiag#1"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/doc/markdown/en/nwdiag#1"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>Simple diagram</h2><p></p><h3>Define a network</h3><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msgcdf019a5904948ba282a9de355c9e510" class="msg"> 🎉 Copied! </div><img width="16" height="16" id="imgcdf019a5904948ba282a9de355c9e510" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;cdf019a5904948ba282a9de355c9e510&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;cdf019a5904948ba282a9de355c9e510&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;cdf019a5904948ba282a9de355c9e510&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="precdf019a5904948ba282a9de355c9e510">@startuml
+nwdiag {
+  network dmz {
+      address = &#34;210.x.x.x/24&#34;
+  }
+}
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="149" height="74" class="scale" src="../imgw/img-cdf019a5904948ba282a9de355c9e510.png"/></div></div></td></tr></tbody></table></p><p></p><p></p><h3>Define some elements or servers on a network</h3><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msgd2b48558da5a8a4e66ac1bffdd3e8336" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="imgd2b48558da5a8a4e66ac1bffdd3e8336" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;d2b48558da5a8a4e66ac1bffdd3e8336&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;d2b48558da5a8a4e66ac1bffdd3e8336&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;d2b48558da5a8a4e66ac1bffdd3e8336&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="pred2b48558da5a8a4e66ac1bffdd3e8336">@startuml
+nwdiag {
+  network dmz {
+      address = &#34;210.x.x.x/24&#34;
+
+      web01 [address = &#34;210.x.x.1&#34;];
+      web02 [address = &#34;210.x.x.2&#34;];
+  }
+}
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="253" height="143" class="scale" src="../imgw/img-d2b48558da5a8a4e66ac1bffdd3e8336.png"/></div></div></td></tr></tbody></table></p><p></p><p></p><h3>Full example</h3><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msge9a86448543339fbeca6931d0dcbea71" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="imge9a86448543339fbeca6931d0dcbea71" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;e9a86448543339fbeca6931d0dcbea71&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;e9a86448543339fbeca6931d0dcbea71&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;e9a86448543339fbeca6931d0dcbea71&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="pree9a86448543339fbeca6931d0dcbea71">@startuml
+nwdiag {
+  network dmz {
+      address = &#34;210.x.x.x/24&#34;
+
+      web01 [address = &#34;210.x.x.1&#34;];
+      web02 [address = &#34;210.x.x.2&#34;];
+  }
+  network internal {
+      address = &#34;172.x.x.x/24&#34;;
+
+      web01 [address = &#34;172.x.x.1&#34;];
+      web02 [address = &#34;172.x.x.2&#34;];
+      db01;
+      db02;
+  }
+}
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="253" height="262" class="scale" src="../imgw/img-e9a86448543339fbeca6931d0dcbea71.png"/></div></div></td></tr></tbody></table></p><p><a style="position:relative;top:-38px;" name="2ae160764fd53ec8"></a></p><div style="clear:both;min-height:110px;margin-top:10px;"><div class="pezoic"><span id="ezoic-pub-ad-placeholder-179"></span><!-- ezoic_pub_ad_placeholder-179-under_second_paragraph-234x60-179-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-179-under_second_paragraph-468x60-179-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-179-under_second_paragraph-728x90-179-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-179-under_second_paragraph-970x90-179-nonexxxnonexxxxxxezmaxscaleval100 --></div></div><h2 class="chap"><img onclick="window.scrollTo(0,0);" title="Back to top" src="../backtop1.svg" width="20" height="20" class="backtop"/><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/doc/dokuwiki/en/nwdiag#2"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/doc/asciidoc/en/nwdiag#2"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/doc/markdown/en/nwdiag#2"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>Define multiple addresses</h2><p></p><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msg27a41641ac954a82b35eec895d9f0940" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="img27a41641ac954a82b35eec895d9f0940" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;27a41641ac954a82b35eec895d9f0940&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;27a41641ac954a82b35eec895d9f0940&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;27a41641ac954a82b35eec895d9f0940&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="pre27a41641ac954a82b35eec895d9f0940">@startuml
+nwdiag {
+  network dmz {
+      address = &#34;210.x.x.x/24&#34;
+
+      // set multiple addresses (using comma)
+      web01 [address = &#34;210.x.x.1, 210.x.x.20&#34;];
+      web02 [address = &#34;210.x.x.2&#34;];
+  }
+  network internal {
+      address = &#34;172.x.x.x/24&#34;;
+
+      web01 [address = &#34;172.x.x.1&#34;];
+      web02 [address = &#34;172.x.x.2&#34;];
+      db01;
+      db02;
+  }
+}
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="253" height="276" class="scale" src="../imgw/img-27a41641ac954a82b35eec895d9f0940.png"/></div></div></td></tr></tbody></table></p><p><a style="position:relative;top:-38px;" name="a474d00c7bcfdbc7"></a></p><div style="clear:both;height:50px;"></div><h2 class="chap"><img onclick="window.scrollTo(0,0);" title="Back to top" src="../backtop1.svg" width="20" height="20" class="backtop"/><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/doc/dokuwiki/en/nwdiag#3"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/doc/asciidoc/en/nwdiag#3"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/doc/markdown/en/nwdiag#3"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>Grouping nodes</h2><p></p><h3>Define group inside network definitions</h3><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msg36f85de1e05ff444c5bf23a1ff4773fc" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="img36f85de1e05ff444c5bf23a1ff4773fc" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;36f85de1e05ff444c5bf23a1ff4773fc&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;36f85de1e05ff444c5bf23a1ff4773fc&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;36f85de1e05ff444c5bf23a1ff4773fc&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="pre36f85de1e05ff444c5bf23a1ff4773fc">@startuml
+nwdiag {
+  network Sample_front {
+    address = &#34;192.168.10.0/24&#34;;
+
+    // define group
+    group web {
+      web01 [address = &#34;.1&#34;];
+      web02 [address = &#34;.2&#34;];
+    }
+  }
+  network Sample_back {
+    address = &#34;192.168.20.0/24&#34;;
+    web01 [address = &#34;.1&#34;];
+    web02 [address = &#34;.2&#34;];
+    db01 [address = &#34;.101&#34;];
+    db02 [address = &#34;.102&#34;];
+
+    // define network using defined nodes
+    group db {
+      db01;
+      db02;
+    }
+  }
+}
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="280" height="276" class="scale" src="../imgw/img-36f85de1e05ff444c5bf23a1ff4773fc.png"/></div></div></td></tr></tbody></table></p><p></p><p></p><h3>Define group outside of network definitions</h3><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msgb3158a526620fc118a3c99d75513677d" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="imgb3158a526620fc118a3c99d75513677d" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;b3158a526620fc118a3c99d75513677d&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;b3158a526620fc118a3c99d75513677d&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;b3158a526620fc118a3c99d75513677d&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="preb3158a526620fc118a3c99d75513677d">@startuml
+nwdiag {
+  // define group outside of network definitions
+  group {
+    color = &#34;#FFAAAA&#34;;
+
+    web01;
+    web02;
+    db01;
+  }
+
+  network dmz {
+    web01;
+    web02;
+  }
+  network internal {
+    web01;
+    web02;
+    db01;
+    db02;
+  }
+}
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="310" height="227" class="scale" src="../imgw/img-b3158a526620fc118a3c99d75513677d.png"/></div></div></td></tr></tbody></table></p><p></p><p></p><h3>Define several groups on same network</h3><h4>Example with 2 group</h4><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msg4830bc5618e193d43c58307148d9ba86" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="img4830bc5618e193d43c58307148d9ba86" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;4830bc5618e193d43c58307148d9ba86&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;4830bc5618e193d43c58307148d9ba86&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;4830bc5618e193d43c58307148d9ba86&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="pre4830bc5618e193d43c58307148d9ba86">@startuml
+nwdiag {
+  group {
+    color = &#34;#FFaaaa&#34;;
+    web01;
+    db01;
+  }
+  group {
+    color = &#34;#aaaaFF&#34;;
+    web02;
+    db02;
+  }
+  network dmz {
+      address = &#34;210.x.x.x/24&#34;
+
+      web01 [address = &#34;210.x.x.1&#34;];
+      web02 [address = &#34;210.x.x.2&#34;];
+  }
+  network internal {
+      address = &#34;172.x.x.x/24&#34;;
+
+      web01 [address = &#34;172.x.x.1&#34;];
+      web02 [address = &#34;172.x.x.2&#34;];
+      db01 ;
+      db02 ;
+  }
+}
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="253" height="262" class="scale" src="../imgw/img-4830bc5618e193d43c58307148d9ba86.png"/></div></div></td></tr></tbody></table></p><p><em>[Ref. <a href="https://forum.plantuml.net/12663">QA-12663</a>]</em></p><p></p><h4>Example with 3 groups</h4><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msg97e99ea0a03da1eb1819d0c631d5bf60" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="img97e99ea0a03da1eb1819d0c631d5bf60" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;97e99ea0a03da1eb1819d0c631d5bf60&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;97e99ea0a03da1eb1819d0c631d5bf60&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;97e99ea0a03da1eb1819d0c631d5bf60&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="pre97e99ea0a03da1eb1819d0c631d5bf60">@startuml
+nwdiag {
+  group {
+    color = &#34;#FFaaaa&#34;;
+    web01;
+    db01;
+  }
+  group {
+    color = &#34;#aaFFaa&#34;;
+    web02;
+    db02;
+  }
+  group {
+    color = &#34;#aaaaFF&#34;;
+    web03;
+    db03;
+  }
+
+  network dmz {
+      web01;
+      web02;
+      web03;
+  }
+  network internal {
+      web01;
+      db01 ;
+      web02;
+      db02 ;
+      web03;
+      db03;
+  }
+}
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="319" height="227" class="scale" src="../imgw/img-97e99ea0a03da1eb1819d0c631d5bf60.png"/></div></div></td></tr></tbody></table></p><p><em>[Ref. <a href="https://forum.plantuml.net/13138">QA-13138</a>]</em><a style="position:relative;top:-38px;" name="689b04b2da37f214"></a></p><div style="clear:both;min-height:110px;margin-top:10px;"><div class="pezoic"><span id="ezoic-pub-ad-placeholder-114"></span><!-- ezoic_pub_ad_placeholder-114-mid_content-234x60-114-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-114-mid_content-468x60-114-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-114-mid_content-728x90-114-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-114-mid_content-970x90-114-nonexxxnonexxxxxxezmaxscaleval100 --></div></div><h2 class="chap"><img onclick="window.scrollTo(0,0);" title="Back to top" src="../backtop1.svg" width="20" height="20" class="backtop"/><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/doc/dokuwiki/en/nwdiag#4"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/doc/asciidoc/en/nwdiag#4"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/doc/markdown/en/nwdiag#4"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>Extended Syntax (for network or group)</h2><p></p><h3>Network </h3><p></p> For network or network&#39;s component, you can add or change: <ul><li>addresses <em>(separated by comma <code class="cod">,</code>)</em>;</li><li><a href="color.html">color</a>;</li><li>description;</li><li><a href="deployment-diagram.html#5k3cq00k8n5ek362kjdn">shape</a>.</li></ul><p></p><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msg936ae0fbcf00b2ee64261bcf42c6d486" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="img936ae0fbcf00b2ee64261bcf42c6d486" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;936ae0fbcf00b2ee64261bcf42c6d486&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;936ae0fbcf00b2ee64261bcf42c6d486&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;936ae0fbcf00b2ee64261bcf42c6d486&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="pre936ae0fbcf00b2ee64261bcf42c6d486">@startuml
+nwdiag {
+  network Sample_front {
+    address = &#34;192.168.10.0/24&#34;
+    color = &#34;red&#34;
+
+    // define group
+    group web {
+      web01 [address = &#34;.1, .2&#34;, shape = &#34;node&#34;]
+      web02 [address = &#34;.2, .3&#34;]
+    }
+  }
+  network Sample_back {
+    address = &#34;192.168.20.0/24&#34;
+    color = &#34;palegreen&#34;
+    web01 [address = &#34;.1&#34;]
+    web02 [address = &#34;.2&#34;]
+    db01 [address = &#34;.101&#34;, shape = database ]
+    db02 [address = &#34;.102&#34;]
+
+    // define network using defined nodes
+    group db {
+      db01;
+      db02;
+    }
+  }
+}
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="300" height="309" class="scale" src="../imgw/img-936ae0fbcf00b2ee64261bcf42c6d486.png"/></div></div></td></tr></tbody></table></p><p></p><p></p><h3>Group</h3><p></p> For a group, you can add or change: <ul><li><a href="color.html">color</a>;</li><li>description.</li></ul><p></p><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msg906047471281f6172a21fb6d98754335" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="img906047471281f6172a21fb6d98754335" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;906047471281f6172a21fb6d98754335&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;906047471281f6172a21fb6d98754335&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;906047471281f6172a21fb6d98754335&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="pre906047471281f6172a21fb6d98754335">@startuml
+nwdiag {
+  group {
+    color = &#34;#CCFFCC&#34;;
+    description = &#34;Long group description&#34;;
+
+    web01;
+    web02;
+    db01;
+  }
+
+  network dmz {
+    web01;
+    web02;
+  }
+  network internal {
+    web01;
+    web02;
+    db01 [address = &#34;.101&#34;, shape = database];
+  }
+}
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="232" height="310" class="scale" src="../imgw/img-906047471281f6172a21fb6d98754335.png"/></div></div></td></tr></tbody></table></p><p></p><p></p><em>[Ref. <a href="https://forum.plantuml.net/12056">QA-12056</a>]</em><a style="position:relative;top:-38px;" name="ef406f4e5b0858a8"></a><div style="clear:both;height:50px;"></div><h2 class="chap"><img onclick="window.scrollTo(0,0);" title="Back to top" src="../backtop1.svg" width="20" height="20" class="backtop"/><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/doc/dokuwiki/en/nwdiag#5"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/doc/asciidoc/en/nwdiag#5"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/doc/markdown/en/nwdiag#5"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>Using Sprites</h2><p></p> You can use all <a href="https://plantuml.com/en/sprite">sprites</a> (icons) from the <a href="stdlib.html">Standard Library</a> or any other library. <p></p> Use the notation <code class="cod">&lt;$sprite&gt;</code> to use a sprite, <code class="cod">\n</code> to make a new line, or any other <a href="https://plantuml.com/en/creole">Creole</a> syntax. <p></p><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msgd8bc2ebdad36dfac2c8cf6562d63364a" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="imgd8bc2ebdad36dfac2c8cf6562d63364a" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;d8bc2ebdad36dfac2c8cf6562d63364a&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;d8bc2ebdad36dfac2c8cf6562d63364a&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;d8bc2ebdad36dfac2c8cf6562d63364a&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="pred8bc2ebdad36dfac2c8cf6562d63364a">@startuml
+!include &lt;office/Servers/application_server&gt;
+!include &lt;office/Servers/database_server&gt;
+
+nwdiag {
+  network dmz {
+      address = &#34;210.x.x.x/24&#34;
+
+      // set multiple addresses (using comma)
+      web01 [address = &#34;210.x.x.1, 210.x.x.20&#34;,  description = &#34;&lt;$application_server&gt;\n web01&#34;]
+      web02 [address = &#34;210.x.x.2&#34;,  description = &#34;&lt;$application_server&gt;\n web02&#34;];
+  }
+  network internal {
+      address = &#34;172.x.x.x/24&#34;;
+
+      web01 [address = &#34;172.x.x.1&#34;];
+      web02 [address = &#34;172.x.x.2&#34;];
+      db01 [address = &#34;172.x.x.100&#34;,  description = &#34;&lt;$database_server&gt;\n db01&#34;];
+      db02 [address = &#34;172.x.x.101&#34;,  description = &#34;&lt;$database_server&gt;\n db02&#34;];
+  }
+}
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="259" height="386" class="scale" src="../imgw/img-d8bc2ebdad36dfac2c8cf6562d63364a.png"/></div></div></td></tr></tbody></table></p><p></p><p></p><p></p><em>[Ref. <a href="https://forum.plantuml.net/11862/nwdiag-beautifier?show=11866#a11866">QA-11862</a>]</em><a style="position:relative;top:-38px;" name="3a5665cf21923894"></a><div style="clear:both;min-height:110px;margin-top:10px;"><div class="pezoic"><span id="ezoic-pub-ad-placeholder-115"></span><!-- ezoic_pub_ad_placeholder-115-long_content-234x60-115-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-115-long_content-468x60-115-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-115-long_content-728x90-115-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-115-long_content-970x90-115-nonexxxnonexxxxxxezmaxscaleval100 --></div></div><h2 class="chap"><img onclick="window.scrollTo(0,0);" title="Back to top" src="../backtop1.svg" width="20" height="20" class="backtop"/><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/doc/dokuwiki/en/nwdiag#6"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/doc/asciidoc/en/nwdiag#6"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/doc/markdown/en/nwdiag#6"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>Using OpenIconic</h2><p></p> You can also use the icons from <a href="https://plantuml.com/en/openiconic">OpenIconic</a> in network or node descriptions. <p></p> Use the notation <code class="cod">&lt;&amp;icon&gt;</code> to make an icon, <code class="cod">&lt;&amp;icon*n&gt;</code> to multiply the size by a factor <code class="cod">n</code>, and <code class="cod">\n</code> to make a newline: <p></p><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msg0a758924a369922cbb30990f2da0267d" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="img0a758924a369922cbb30990f2da0267d" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;0a758924a369922cbb30990f2da0267d&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;0a758924a369922cbb30990f2da0267d&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;0a758924a369922cbb30990f2da0267d&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="pre0a758924a369922cbb30990f2da0267d">@startuml
+
+nwdiag {
+  group nightly {
+    color = &#34;#FFAAAA&#34;;
+    description = &#34;&lt;&amp;clock&gt; Restarted nightly &lt;&amp;clock&gt;&#34;;
+    web02;
+    db01;
+  }
+  network dmz {
+      address = &#34;210.x.x.x/24&#34;
+
+      user [description = &#34;&lt;&amp;person*4.5&gt;\n user1&#34;];
+      // set multiple addresses (using comma)
+      web01 [address = &#34;210.x.x.1, 210.x.x.20&#34;,  description = &#34;&lt;&amp;cog*4&gt;\nweb01&#34;]
+      web02 [address = &#34;210.x.x.2&#34;,  description = &#34;&lt;&amp;cog*4&gt;\nweb02&#34;];
+
+  }
+  network internal {
+      address = &#34;172.x.x.x/24&#34;;
+
+      web01 [address = &#34;172.x.x.1&#34;];
+      web02 [address = &#34;172.x.x.2&#34;];
+      db01 [address = &#34;172.x.x.100&#34;,  description = &#34;&lt;&amp;spreadsheet*4&gt;\n db01&#34;];
+      db02 [address = &#34;172.x.x.101&#34;,  description = &#34;&lt;&amp;spreadsheet*4&gt;\n db02&#34;];
+      ptr  [address = &#34;172.x.x.110&#34;,  description = &#34;&lt;&amp;print*4&gt;\n ptr01&#34;];
+  }
+}
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="381" height="400" class="scale" src="../imgw/img-0a758924a369922cbb30990f2da0267d.png"/></div></div></td></tr></tbody></table></p><p><a style="position:relative;top:-38px;" name="c6841ad9e8293811"></a></p><div style="clear:both;height:50px;"></div><h2 class="chap"><img onclick="window.scrollTo(0,0);" title="Back to top" src="../backtop1.svg" width="20" height="20" class="backtop"/><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/doc/dokuwiki/en/nwdiag#7"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/doc/asciidoc/en/nwdiag#7"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/doc/markdown/en/nwdiag#7"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>Same nodes on more than two networks</h2><p></p> You can use same nodes on different networks (more than two networks); <em>nwdiag</em> use in this case <em>&#39;jump line&#39;</em> over networks. <p></p><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msg4cfddfcc2a274d558fcbaab8772fb677" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="img4cfddfcc2a274d558fcbaab8772fb677" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;4cfddfcc2a274d558fcbaab8772fb677&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;4cfddfcc2a274d558fcbaab8772fb677&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;4cfddfcc2a274d558fcbaab8772fb677&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="pre4cfddfcc2a274d558fcbaab8772fb677">@startuml
+nwdiag {
+  // define group at outside network definitions
+  group {
+    color = &#34;#7777FF&#34;;
+
+    web01;
+    web02;
+    db01;
+  }
+
+  network dmz {
+    color = &#34;pink&#34;
+
+    web01;
+    web02;
+  }
+
+  network internal {
+    web01;
+    web02;
+    db01 [shape = database ];
+  }
+
+  network internal2 {
+    color = &#34;LightBlue&#34;;
+
+    web01;
+    web02;
+    db01;
+  }
+
+}
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="317" height="286" class="scale" src="../imgw/img-4cfddfcc2a274d558fcbaab8772fb677.png"/></div></div></td></tr></tbody></table></p><p><a style="position:relative;top:-38px;" name="5269e00666792dc8"></a></p><div style="clear:both;min-height:110px;margin-top:10px;"><div class="pezoic"><span id="ezoic-pub-ad-placeholder-116"></span><!-- ezoic_pub_ad_placeholder-116-longer_content-234x60-116-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-116-longer_content-468x60-116-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-116-longer_content-728x90-116-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-116-longer_content-970x90-116-nonexxxnonexxxxxxezmaxscaleval100 --></div></div><h2 class="chap"><img onclick="window.scrollTo(0,0);" title="Back to top" src="../backtop1.svg" width="20" height="20" class="backtop"/><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/doc/dokuwiki/en/nwdiag#8"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/doc/asciidoc/en/nwdiag#8"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/doc/markdown/en/nwdiag#8"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>Peer networks</h2><p></p> Peer networks are simple connections between two nodes, for which we don&#39;t use a horizontal &#34;busbar&#34; network <p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msgc207bcdc3f6b6241e8e009fb183ad1d2" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="imgc207bcdc3f6b6241e8e009fb183ad1d2" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;c207bcdc3f6b6241e8e009fb183ad1d2&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;c207bcdc3f6b6241e8e009fb183ad1d2&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;c207bcdc3f6b6241e8e009fb183ad1d2&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="prec207bcdc3f6b6241e8e009fb183ad1d2">@startuml
+nwdiag {
+  inet [shape = cloud];
+  inet -- router;
+
+  network {
+    router;
+    web01;
+    web02;
+  }
+}
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="194" height="342" class="scale" src="../imgw/img-c207bcdc3f6b6241e8e009fb183ad1d2.png"/></div></div></td></tr></tbody></table></p><p><a style="position:relative;top:-38px;" name="54d98c3b820d13ab"></a></p><div style="clear:both;height:50px;"></div><h2 class="chap"><img onclick="window.scrollTo(0,0);" title="Back to top" src="../backtop1.svg" width="20" height="20" class="backtop"/><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/doc/dokuwiki/en/nwdiag#9"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/doc/asciidoc/en/nwdiag#9"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/doc/markdown/en/nwdiag#9"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>Peer networks and group</h2><p></p><h3>Without group</h3><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msgbae59863dad7cdcba7dcccbc9d14823d" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="imgbae59863dad7cdcba7dcccbc9d14823d" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;bae59863dad7cdcba7dcccbc9d14823d&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;bae59863dad7cdcba7dcccbc9d14823d&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;bae59863dad7cdcba7dcccbc9d14823d&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="prebae59863dad7cdcba7dcccbc9d14823d">@startuml
+nwdiag {
+    internet [ shape = cloud];
+    internet -- router;
+
+    network proxy {
+        router;
+        app;
+    }
+    network default {
+    	app;
+        db;
+    }
+}
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="155" height="447" class="scale" src="../imgw/img-bae59863dad7cdcba7dcccbc9d14823d.png"/></div></div></td></tr></tbody></table></p><p></p><p></p><h3>Group on first</h3><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msgb77578f61563f7bbb5fc32f4453d979f" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="imgb77578f61563f7bbb5fc32f4453d979f" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;b77578f61563f7bbb5fc32f4453d979f&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;b77578f61563f7bbb5fc32f4453d979f&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;b77578f61563f7bbb5fc32f4453d979f&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="preb77578f61563f7bbb5fc32f4453d979f">@startuml
+nwdiag {
+    internet [ shape = cloud];
+    internet -- router;
+
+    group {
+      color = &#34;pink&#34;;
+      app;
+      db;
+    }
+
+    network proxy {
+        router;
+        app;
+    }
+
+    network default {
+    	app;
+        db;
+    }
+}
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="155" height="447" class="scale" src="../imgw/img-b77578f61563f7bbb5fc32f4453d979f.png"/></div></div></td></tr></tbody></table></p><p></p><p></p><h3>Group on second</h3><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msg5a0ba53587a80a7a1e1d4134f0427890" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="img5a0ba53587a80a7a1e1d4134f0427890" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;5a0ba53587a80a7a1e1d4134f0427890&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;5a0ba53587a80a7a1e1d4134f0427890&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;5a0ba53587a80a7a1e1d4134f0427890&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="pre5a0ba53587a80a7a1e1d4134f0427890">@startuml
+nwdiag {
+    internet [ shape = cloud];
+    internet -- router;
+
+    network proxy {
+        router;
+        app;
+    }
+
+    group {
+      color = &#34;pink&#34;;
+      app;
+      db;
+    }
+
+    network default {
+    	app;
+        db;
+    }
+}
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="155" height="447" class="scale" src="../imgw/img-5a0ba53587a80a7a1e1d4134f0427890.png"/></div></div></td></tr></tbody></table></p><p></p><p></p><h3>Group on third</h3><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msg3cb22f1daff2454e99d142d7c87f9c13" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="img3cb22f1daff2454e99d142d7c87f9c13" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;3cb22f1daff2454e99d142d7c87f9c13&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;3cb22f1daff2454e99d142d7c87f9c13&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;3cb22f1daff2454e99d142d7c87f9c13&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="pre3cb22f1daff2454e99d142d7c87f9c13">@startuml
+nwdiag {
+    internet [ shape = cloud];
+    internet -- router;
+
+    network proxy {
+        router;
+        app;
+    }
+    network default {
+    	app;
+        db;
+    }
+    group {
+      color = &#34;pink&#34;;
+      app;
+      db;
+    }
+}
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="155" height="447" class="scale" src="../imgw/img-3cb22f1daff2454e99d142d7c87f9c13.png"/></div></div></td></tr></tbody></table></p><p></p><p></p><em>[Ref. <a href="https://github.com/plantuml/plantuml/issues/408">Issue#408</a> and <a href="https://forum.plantuml.net/12655/nwdiag-overlapp-problem-with-3-newtorks?show=12661#c12661">QA-12655</a>]</em><a style="position:relative;top:-38px;" name="8ba6f1ec3040c130"></a><div style="clear:both;min-height:110px;margin-top:10px;"><div class="pezoic"><span id="ezoic-pub-ad-placeholder-117"></span><!-- ezoic_pub_ad_placeholder-117-longest_content-234x60-117-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-117-longest_content-468x60-117-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-117-longest_content-728x90-117-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-117-longest_content-970x90-117-nonexxxnonexxxxxxezmaxscaleval100 --></div></div><h2 class="chap"><img onclick="window.scrollTo(0,0);" title="Back to top" src="../backtop1.svg" width="20" height="20" class="backtop"/><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/doc/dokuwiki/en/nwdiag#10"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/doc/asciidoc/en/nwdiag#10"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/doc/markdown/en/nwdiag#10"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>Add title, caption, header, footer or legend on network diagram</h2><p></p><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msg2eb9155a232d62b25279a2411eea8443" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="img2eb9155a232d62b25279a2411eea8443" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;2eb9155a232d62b25279a2411eea8443&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;2eb9155a232d62b25279a2411eea8443&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;2eb9155a232d62b25279a2411eea8443&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="pre2eb9155a232d62b25279a2411eea8443">@startuml
+
+header some header
+
+footer some footer
+
+title My title
+
+nwdiag {
+  network inet {
+      web01 [shape = cloud]
+  }
+}
+
+legend
+The legend
+end legend
+
+caption This is caption
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="134" height="271" class="scale" src="../imgw/img-2eb9155a232d62b25279a2411eea8443.png"/></div></div></td></tr></tbody></table></p><p></p><p></p><em>[Ref. <a href="https://forum.plantuml.net/11303/nwdiag-ignores-on-title-keyword-in-plantuml-1-2020-7">QA-11303</a> and <a href="https://plantuml.com/en/commons">Common commands</a>]</em><a style="position:relative;top:-38px;" name="6c877ca10407b478"></a><div style="clear:both;height:50px;"></div><h2 class="chap"><img onclick="window.scrollTo(0,0);" title="Back to top" src="../backtop1.svg" width="20" height="20" class="backtop"/><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/doc/dokuwiki/en/nwdiag#11"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/doc/asciidoc/en/nwdiag#11"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/doc/markdown/en/nwdiag#11"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>With or without shadow</h2><p></p><h3>With shadow (by default)</h3><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msgb3c1b67e8dee6bda0281f750eab1a498" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="imgb3c1b67e8dee6bda0281f750eab1a498" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;b3c1b67e8dee6bda0281f750eab1a498&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;b3c1b67e8dee6bda0281f750eab1a498&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;b3c1b67e8dee6bda0281f750eab1a498&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="preb3c1b67e8dee6bda0281f750eab1a498">@startuml
+nwdiag {
+  network nw {
+    server;
+    internet;
+  }
+  internet [shape = cloud];
+}
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="218" height="132" class="scale" src="../imgw/img-b3c1b67e8dee6bda0281f750eab1a498.png"/></div></div></td></tr></tbody></table></p><p></p><p></p><p></p><h3>Without shadow</h3><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msg383364c75e7aadecfc1786585700517a" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="img383364c75e7aadecfc1786585700517a" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;383364c75e7aadecfc1786585700517a&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;383364c75e7aadecfc1786585700517a&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;383364c75e7aadecfc1786585700517a&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="pre383364c75e7aadecfc1786585700517a">@startuml
+&lt;style&gt;
+root {
+ shadowing 0
+}
+&lt;/style&gt;
+nwdiag {
+  network nw {
+    server;
+    internet;
+  }
+  internet [shape = cloud];
+}
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="218" height="132" class="scale" src="../imgw/img-383364c75e7aadecfc1786585700517a.png"/></div></div></td></tr></tbody></table></p><p></p><p></p><em>[Ref. <a href="https://forum.plantuml.net/14516/">QA-14516</a>]</em><a style="position:relative;top:-38px;" name="18d135f438c5b485"></a><div style="clear:both;min-height:110px;margin-top:10px;"><div class="pezoic"><span id="ezoic-pub-ad-placeholder-118"></span><!-- ezoic_pub_ad_placeholder-118-incontent_5-234x60-118-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-118-incontent_5-468x60-118-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-118-incontent_5-728x90-118-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-118-incontent_5-970x90-118-nonexxxnonexxxxxxezmaxscaleval100 --></div></div><h2 class="chap"><img onclick="window.scrollTo(0,0);" title="Back to top" src="../backtop1.svg" width="20" height="20" class="backtop"/><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/doc/dokuwiki/en/nwdiag#12"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/doc/asciidoc/en/nwdiag#12"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/doc/markdown/en/nwdiag#12"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>Change width of the networks</h2><p></p> You can change the width of the networks, especially in order to have the same full width for only some or all networks. <p></p> Here are some examples, with all the possibilities: <ul><li>without</li></ul><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msg6b898734a77b2c613333dce1d98db82d" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="img6b898734a77b2c613333dce1d98db82d" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;6b898734a77b2c613333dce1d98db82d&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;6b898734a77b2c613333dce1d98db82d&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;6b898734a77b2c613333dce1d98db82d&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="pre6b898734a77b2c613333dce1d98db82d">@startuml
+nwdiag {
+  network NETWORK_BASE {
+   dev_A [address = &#34;dev_A&#34; ]
+   dev_B [address = &#34;dev_B&#34; ]
+  }
+  network IntNET1 {
+   dev_B [address = &#34;dev_B1&#34; ]
+   dev_M [address = &#34;dev_M1&#34; ]
+  }
+  network IntNET2 {
+   dev_B [address = &#34;dev_B2&#34; ]
+   dev_M [address = &#34;dev_M2&#34; ]
+ }
+}
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="285" height="332" class="scale" src="../imgw/img-6b898734a77b2c613333dce1d98db82d.png"/></div></div></td></tr></tbody></table></p><p></p><p></p><ul><li>only the first</li></ul><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msgc0bdede9b67bca7cc3c29536f78f2dc1" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="imgc0bdede9b67bca7cc3c29536f78f2dc1" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;c0bdede9b67bca7cc3c29536f78f2dc1&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;c0bdede9b67bca7cc3c29536f78f2dc1&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;c0bdede9b67bca7cc3c29536f78f2dc1&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="prec0bdede9b67bca7cc3c29536f78f2dc1">@startuml
+nwdiag {
+  network NETWORK_BASE {
+   width = full
+   dev_A [address = &#34;dev_A&#34; ]
+   dev_B [address = &#34;dev_B&#34; ]
+  }
+  network IntNET1 {
+   dev_B [address = &#34;dev_B1&#34; ]
+   dev_M [address = &#34;dev_M1&#34; ]
+  }
+  network IntNET2 {
+   dev_B [address = &#34;dev_B2&#34; ]
+   dev_M [address = &#34;dev_M2&#34; ]
+ }
+}
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="285" height="332" class="scale" src="../imgw/img-c0bdede9b67bca7cc3c29536f78f2dc1.png"/></div></div></td></tr></tbody></table></p><p></p><p></p><ul><li>the first and the second</li></ul><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msg1c2d86ced675a1aa2c68f35241fe988a" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="img1c2d86ced675a1aa2c68f35241fe988a" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;1c2d86ced675a1aa2c68f35241fe988a&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;1c2d86ced675a1aa2c68f35241fe988a&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;1c2d86ced675a1aa2c68f35241fe988a&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="pre1c2d86ced675a1aa2c68f35241fe988a">@startuml
+nwdiag {
+  network NETWORK_BASE {
+   width = full
+   dev_A [address = &#34;dev_A&#34; ]
+   dev_B [address = &#34;dev_B&#34; ]
+  }
+  network IntNET1 {
+   width = full
+   dev_B [address = &#34;dev_B1&#34; ]
+   dev_M [address = &#34;dev_M1&#34; ]
+  }
+  network IntNET2 {
+   dev_B [address = &#34;dev_B2&#34; ]
+   dev_M [address = &#34;dev_M2&#34; ]
+ }
+}
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="285" height="332" class="scale" src="../imgw/img-1c2d86ced675a1aa2c68f35241fe988a.png"/></div></div></td></tr></tbody></table></p><p></p><p></p><ul><li>all the network (with same full width)</li></ul><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msg4a37e13d5731288bd26704d28a368bdc" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="img4a37e13d5731288bd26704d28a368bdc" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;4a37e13d5731288bd26704d28a368bdc&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;4a37e13d5731288bd26704d28a368bdc&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;4a37e13d5731288bd26704d28a368bdc&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="pre4a37e13d5731288bd26704d28a368bdc">@startuml
+nwdiag {
+  network NETWORK_BASE {
+   width = full
+   dev_A [address = &#34;dev_A&#34; ]
+   dev_B [address = &#34;dev_B&#34; ]
+  }
+  network IntNET1 {
+   width = full
+   dev_B [address = &#34;dev_B1&#34; ]
+   dev_M [address = &#34;dev_M1&#34; ]
+  }
+  network IntNET2 {
+   width = full
+   dev_B [address = &#34;dev_B2&#34; ]
+   dev_M [address = &#34;dev_M2&#34; ]
+ }
+}
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="285" height="332" class="scale" src="../imgw/img-4a37e13d5731288bd26704d28a368bdc.png"/></div></div></td></tr></tbody></table></p><p><a style="position:relative;top:-38px;" name="32fe42d8ea1f1541"></a></p><div style="clear:both;height:50px;"></div><h2 class="chap"><img onclick="window.scrollTo(0,0);" title="Back to top" src="../backtop1.svg" width="20" height="20" class="backtop"/><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/doc/dokuwiki/en/nwdiag#13"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/doc/asciidoc/en/nwdiag#13"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/doc/markdown/en/nwdiag#13"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>Other internal networks</h2><p></p> You can define other internal networks (TCP/IP, USB, SERIAL,...). <p></p><ul><li>Without address or type</li></ul><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msge9824356ced578d465d9cc34eaf5ae94" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="imge9824356ced578d465d9cc34eaf5ae94" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;e9824356ced578d465d9cc34eaf5ae94&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;e9824356ced578d465d9cc34eaf5ae94&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;e9824356ced578d465d9cc34eaf5ae94&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="pree9824356ced578d465d9cc34eaf5ae94">@startuml
+nwdiag {
+  network LAN1 {
+     a [address = &#34;a1&#34;];
+  }
+  network LAN2 {
+     a [address = &#34;a2&#34;];
+     switch;
+  }
+  switch -- equip;
+  equip -- printer;
+}
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="132" height="465" class="scale" src="../imgw/img-e9824356ced578d465d9cc34eaf5ae94.png"/></div></div></td></tr></tbody></table></p><p></p><p></p><p></p><ul><li>With address or type</li></ul><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msgc0add96ae1cd0d4787cb7b562cbe974e" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="imgc0add96ae1cd0d4787cb7b562cbe974e" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;c0add96ae1cd0d4787cb7b562cbe974e&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;c0add96ae1cd0d4787cb7b562cbe974e&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;c0add96ae1cd0d4787cb7b562cbe974e&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="prec0add96ae1cd0d4787cb7b562cbe974e">@startuml
+nwdiag {
+  network LAN1 {
+     a [address = &#34;a1&#34;];
+  }
+  network LAN2 {
+     a [address = &#34;a2&#34;];
+     switch [address = &#34;s2&#34;];
+  }
+  switch -- equip;
+  equip [address = &#34;e3&#34;];
+  equip -- printer;
+  printer [address = &#34;USB&#34;];
+}
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="132" height="506" class="scale" src="../imgw/img-c0add96ae1cd0d4787cb7b562cbe974e.png"/></div></div></td></tr></tbody></table></p><p></p><p></p><em>[Ref. <a href="https://forum.plantuml.net/12824">QA-12824</a>]</em><a style="position:relative;top:-38px;" name="bb2ede32ce6accb8"></a><div style="clear:both;min-height:110px;margin-top:10px;"><div class="pezoic"><span id="ezoic-pub-ad-placeholder-119"></span><!-- ezoic_pub_ad_placeholder-119-incontent_6-234x60-119-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-119-incontent_6-468x60-119-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-119-incontent_6-728x90-119-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-119-incontent_6-970x90-119-nonexxxnonexxxxxxezmaxscaleval100 --></div></div><h2 class="chap"><img onclick="window.scrollTo(0,0);" title="Back to top" src="../backtop1.svg" width="20" height="20" class="backtop"/><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/doc/dokuwiki/en/nwdiag#14"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/doc/asciidoc/en/nwdiag#14"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/doc/markdown/en/nwdiag#14"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>Using (global) style</h2><p></p><h3>Without style <em>(by default)</em></h3><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msg4cf64926351dd460558ea695dfbb76d6" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="img4cf64926351dd460558ea695dfbb76d6" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;4cf64926351dd460558ea695dfbb76d6&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;4cf64926351dd460558ea695dfbb76d6&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;4cf64926351dd460558ea695dfbb76d6&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="pre4cf64926351dd460558ea695dfbb76d6">@startuml
+nwdiag {
+  network DMZ {
+      address = &#34;y.x.x.x/24&#34;
+      web01 [address = &#34;y.x.x.1&#34;];
+      web02 [address = &#34;y.x.x.2&#34;];
+  }
+
+   network Internal {
+    web01;
+    web02;
+    db01 [address = &#34;w.w.w.z&#34;, shape = database];
+  } 
+
+    group {
+    description = &#34;long group label&#34;;
+    web01;
+    web02;
+    db01;
+  }
+}
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="237" height="331" class="scale" src="../imgw/img-4cf64926351dd460558ea695dfbb76d6.png"/></div></div></td></tr></tbody></table></p><p></p><p></p><p></p><h3>With style</h3><p></p> You can use <a href="https://plantuml.com/en/style-evolution">style</a> to change rendering of elements. <p></p><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msgad78257ef02853d083a0a436be785498" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="imgad78257ef02853d083a0a436be785498" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;ad78257ef02853d083a0a436be785498&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;ad78257ef02853d083a0a436be785498&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;ad78257ef02853d083a0a436be785498&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="pread78257ef02853d083a0a436be785498">@startuml
+&lt;style&gt;
+nwdiagDiagram {
+  network {
+    BackGroundColor green
+    LineColor red
+    LineThickness 1.0
+    FontSize 18
+    FontColor navy
+  }
+  server {
+    BackGroundColor pink
+    LineColor yellow
+    LineThickness 1.0
+    &#39; FontXXX only for description or label
+    FontSize 18
+    FontColor #blue
+  }
+  arrow {
+    &#39; FontXXX only for address 
+    FontSize 17
+    FontColor #red
+    FontName Monospaced
+    LineColor black
+  }
+  group {
+    BackGroundColor cadetblue
+    LineColor black
+    LineThickness 2.0
+    FontSize 11
+    FontStyle bold
+    Margin 5
+    Padding 5
+  }
+}
+&lt;/style&gt;
+nwdiag {
+  network DMZ {
+      address = &#34;y.x.x.x/24&#34;
+      web01 [address = &#34;y.x.x.1&#34;];
+      web02 [address = &#34;y.x.x.2&#34;];
+  }
+
+   network Internal {
+    web01;
+    web02;
+    db01 [address = &#34;w.w.w.z&#34;, shape = database];
+  } 
+
+    group {
+    description = &#34;long group label&#34;;
+    web01;
+    web02;
+    db01;
+  }
+}
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="296" height="366" class="scale" src="../imgw/img-ad78257ef02853d083a0a436be785498.png"/></div></div></td></tr></tbody></table></p><p></p><p></p><em>[Ref. <a href="https://forum.plantuml.net/14479">QA-14479</a>]</em><a style="position:relative;top:-38px;" name="d0459ee530297569"></a><div style="clear:both;height:50px;"></div><h2 class="chap"><img onclick="window.scrollTo(0,0);" title="Back to top" src="../backtop1.svg" width="20" height="20" class="backtop"/><div class="dropdown"><button class="dropbtn"><img width="16" height="16" src="../edit1.svg"/></button><div class="dropdown-content"><a href="http://alphadoc.plantuml.com/doc/dokuwiki/en/nwdiag#15"><img width="20" height="20" src="../dokuwiki.png"/>Edit in Dokuwiki</a><a href="http://alphadoc.plantuml.com/doc/asciidoc/en/nwdiag#15"><img width="20" height="20" src="../asciidoc32.png"/>Edit in Asciidoc</a><a href="http://alphadoc.plantuml.com/doc/markdown/en/nwdiag#15"><img width="20" height="20" src="../markdown.png"/>Edit in Markdown</a></div></div>Appendix: Test of all shapes on Network diagram (nwdiag)</h2><p></p><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msgfdc34a856e3b23c4c24e74c2f1e4ee5a" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="imgfdc34a856e3b23c4c24e74c2f1e4ee5a" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;fdc34a856e3b23c4c24e74c2f1e4ee5a&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;fdc34a856e3b23c4c24e74c2f1e4ee5a&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;fdc34a856e3b23c4c24e74c2f1e4ee5a&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="prefdc34a856e3b23c4c24e74c2f1e4ee5a">@startuml
+nwdiag {
+  network Network {
+    Actor       [shape = actor]       
+    Agent       [shape = agent]       
+    Artifact    [shape = artifact]    
+    Boundary    [shape = boundary]    
+    Card        [shape = card]        
+    Cloud       [shape = cloud]       
+    Collections [shape = collections] 
+    Component   [shape = component]   
+  }
+}
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="775" height="162" class="scale" src="../imgw/img-fdc34a856e3b23c4c24e74c2f1e4ee5a.png"/></div></div></td></tr></tbody></table></p><p></p><p></p><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msg8f743432c80733268c48ead782780954" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="img8f743432c80733268c48ead782780954" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;8f743432c80733268c48ead782780954&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;8f743432c80733268c48ead782780954&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;8f743432c80733268c48ead782780954&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="pre8f743432c80733268c48ead782780954">@startuml
+nwdiag {
+  network Network {
+    Control     [shape = control]     
+    Database    [shape = database]    
+    Entity      [shape = entity]      
+    File        [shape = file]        
+    Folder      [shape = folder]      
+    Frame       [shape = frame]       
+    Hexagon     [shape = hexagon]     
+    Interface   [shape = interface]   
+  }
+}
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="779" height="140" class="scale" src="../imgw/img-8f743432c80733268c48ead782780954.png"/></div></div></td></tr></tbody></table></p><p></p><p></p><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msgcbea4e6c82c44c7764bc3e2def09540d" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="imgcbea4e6c82c44c7764bc3e2def09540d" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;cbea4e6c82c44c7764bc3e2def09540d&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;cbea4e6c82c44c7764bc3e2def09540d&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;cbea4e6c82c44c7764bc3e2def09540d&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="precbea4e6c82c44c7764bc3e2def09540d">@startuml
+nwdiag {
+  network Network {
+    Label       [shape = label]       
+    Node        [shape = node]        
+    Package     [shape = package]     
+    Person      [shape = person]      
+    Queue       [shape = queue]       
+    Stack       [shape = stack]       
+    Rectangle   [shape = rectangle]   
+    Storage     [shape = storage]     
+    Usecase     [shape = usecase]     
+  }
+}
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="927" height="141" class="scale" src="../imgw/img-cbea4e6c82c44c7764bc3e2def09540d.png"/></div></div></td></tr></tbody></table></p><p></p><p></p><div class="tag" style="background:#FFAAAA;">FIXME</div><ol><li>Overlap of label for folder</li><li>Hexagon shape is missing</li></ol><p></p><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msg50a8fc7b5ae5174fa28968c1b0adaf25" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="img50a8fc7b5ae5174fa28968c1b0adaf25" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;50a8fc7b5ae5174fa28968c1b0adaf25&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;50a8fc7b5ae5174fa28968c1b0adaf25&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;50a8fc7b5ae5174fa28968c1b0adaf25&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="pre50a8fc7b5ae5174fa28968c1b0adaf25">@startuml
+nwdiag {
+network Network {
+Folder [shape = folder]
+Hexagon [shape = hexagon]
+}
+}
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="290" height="140" class="scale" src="../imgw/img-50a8fc7b5ae5174fa28968c1b0adaf25.png"/></div></div></td></tr></tbody></table></p><p></p><p></p><p><table class="coptable" valign="top" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"><div id="msg93cd72c32a292275e0f48bf8e438cf36" class="msg"> 🎉 Copied! </div><img loading="lazy" width="16" height="16" id="img93cd72c32a292275e0f48bf8e438cf36" title="Copy to clipboard" class="cop" src="../clipboard1.svg" onclick="ctc(&#39;93cd72c32a292275e0f48bf8e438cf36&#39;)"/><br/><img loading="lazy" width="16" height="16" title="Edit online" class="cop" src="../edit1.svg" onclick="javascript:ljs(&#39;93cd72c32a292275e0f48bf8e438cf36&#39;)"/></td><td><div class="mytab" onclick="javascript:ljs(&#39;93cd72c32a292275e0f48bf8e438cf36&#39;)"><div class="mycell0"><code onmouseover="az=1" onmouseout="az=0"><pre id="pre93cd72c32a292275e0f48bf8e438cf36">@startuml
+nwdiag {
+network Network {
+Folder [shape = folder, description = &#34;Test, long long label\nTest, long long label&#34;]
+Hexagon [shape = hexagon, description = &#34;Test, long long label\nTest, long long label&#34;]
+}
+}
+@enduml
+</pre></code></div><div class="mycell"><img loading="lazy" width="395" height="185" class="scale" src="../imgw/img-93cd72c32a292275e0f48bf8e438cf36.png"/></div></div></td></tr></tbody></table></p><p></p><p></p><div class="tag" style="background:#FFAAAA;">FIXME</div></td><td id="toctd" valign="top" style="max-width:240px;min-width:240px;"><div id="toc"><ul><li><a href="nwdiag.html#a5e72f15f187e8dc">Simple diagram</a></li><li><a href="nwdiag.html#2ae160764fd53ec8">Define multiple addresses</a></li><li><a href="nwdiag.html#a474d00c7bcfdbc7">Grouping nodes</a></li><li><a href="nwdiag.html#689b04b2da37f214">Extended Syntax (for network or group)</a></li><li><a href="nwdiag.html#ef406f4e5b0858a8">Using Sprites</a></li><li><a href="nwdiag.html#3a5665cf21923894">Using OpenIconic</a></li><li><a href="nwdiag.html#c6841ad9e8293811">Same nodes on more than two networks</a></li><li><a href="nwdiag.html#5269e00666792dc8">Peer networks</a></li><li><a href="nwdiag.html#54d98c3b820d13ab">Peer networks and group</a></li><li><a href="nwdiag.html#8ba6f1ec3040c130">Add title, caption, header, footer or legend on network diagram</a></li><li><a href="nwdiag.html#6c877ca10407b478">With or without shadow</a></li><li><a href="nwdiag.html#18d135f438c5b485">Change width of the networks</a></li><li><a href="nwdiag.html#32fe42d8ea1f1541">Other internal networks</a></li><li><a href="nwdiag.html#bb2ede32ce6accb8">Using (global) style</a></li><li><a href="nwdiag.html#d0459ee530297569">Appendix: Test of all shapes on Network diagram (nwdiag)</a></li></ul></div></td></tr></tbody></table></p><p></p><span id="ezoic-pub-ad-placeholder-104"></span><!-- ezoic_pub_ad_placeholder-104-bottom_of_page-234x60-104-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-104-bottom_of_page-468x60-104-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-104-bottom_of_page-728x90-104-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-104-bottom_of_page-970x250-104-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-104-bottom_of_page-300x250x3-104-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-104-bottom_of_page-970x90-104-nonexxxnonexxxxxxezmaxscaleval100 --></div><style>.btm{text-align:center}.btm a{text-decoration:none;color:#637282}.btm a:hover{color:#0366d6}</style><div class="btm"><hr/><a href="https://g.ezoic.net/privacy/plantuml.com"><small>Privacy Policy</small></a>      <a href="../direct-sales.html"><small>Advertise</small></a><p></p></div><script>var sc_project=11133780;var sc_invisible=1;var sc_security="3da8bfdb";</script><script async="" src="https://www.statcounter.com/counter/counter.js"></script><!--[selectrongo:done]--><script type="text/javascript">
+				var __inScopeForCCPA = false;
+		function __uspapi(command, version, callback) {
+			var response = null;
+			var successs = false;
+			if (command === "getUSPData" && version === 1) {
+				var uspString = "1"; // Version
+				if (__inScopeForCCPA) {
+					uspString += "N"; // Has Explicit Notice for Opt Out been provided (ex footer or minor consent modal)
+					var result;
+					var consentCookie = (result = new RegExp('(?:^|; )ezoccpaconsent=([^;]*)').exec(document.cookie)) ? (result[1]) : null;
+					if (consentCookie === "nonconsent") {
+						uspString += "Y";
+					}
+					else {
+						uspString += "N";
+					}
+					uspString += "N" // Is pub a signatory to the IAB Limited Service Provider Agreement (http://www.iabprivacy.com/)
+				}
+				else {
+					uspString += "---";
+				}
+				response = {
+					uspString: uspString,
+					version: 1
+				};
+				success = true;
+			}
+			return callback(response, success);
+		};
+		function __receiveUspapiMessage(event) {
+			if (event.data.hasOwnProperty('__uspapiCall')) {
+				__uspapi('getUSPData', 1, function(uspData, success) {
+					event.source.postMessage({
+						__uspapiReturn: {
+							returnValue: uspData,
+							success: success,
+							callId: event.data.__uspapiCall.callId
+						}
+					},
+					event.origin);
+				});
+			}
+			return null;
+		};
+		window.addEventListener("message", __receiveUspapiMessage, false);
+</script>
+<script>__ez.queue.addFile('/tardisrocinante/vitals.js', '/tardisrocinante/vitals.js?gcb=2&cb=3', false, ['/parsonsmaize/mulvane.js'], true, false, true, false);</script>
+<script>var _audins_dom="plantuml_com",_audins_did=173770;__ez.queue.addDelayFunc("audins.js","__ez.script.add", "//go.ezodn.com/detroitchicago/audins.js?cb=195-2");</script><noscript><div style="display:none;"><img src="https://pixel.quantserve.com/pixel/p-31iz6hfFutd16.gif?labels=Domain.plantuml_com,DomainId.173770" border="0" height="1" width="1" alt="Quantcast"/></div></noscript>
+<script>__ez.queue.addFile('/beardeddragon/drake.js', '/beardeddragon/drake.js?gcb=2&cb=4', false, [], true, false, true, false);</script>
+<script type="text/javascript" style='display:none;'>var __ez_dims = (function() {
+		var setCookie = function( name, content, expiry ) {
+			return document.cookie = name+'='+content+((expiry)?';expires='+(new Date(Math.floor(new Date().getTime()+expiry*1000)).toUTCString()):'')+';path=/';
+		};
+		var ffid = 1;
+		var oh = window.screen.height;
+		var ow = window.screen.width;
+		var h = ffid === 1 ? oh : (oh > ow) ? oh : ow;
+		var w = ffid === 1 ? ow : (oh > ow) ? ow : oh;
+		var uh = window.innerHeight || document.documentElement.clientHeight || document.getElementsByTagName('body')[0].clientHeight;
+		var uw = window.innerWidth || document.documentElement.clientWidth || document.getElementsByTagName('body')[0].clientWidth;
+		setCookie('ezds', encodeURIComponent('ffid='+ffid+',w='+w+',h='+h), (31536e3*7));
+		setCookie('ezohw', encodeURIComponent('w='+uw+',h='+uh), (31536e3*7));
+	})();</script>
+<script type='text/javascript' style='display:none;' async>__ez.queue.addFile('/parsonsmaize/chanute.js', '/parsonsmaize/chanute.js?a=a&cb=7&dcb=195-2&shcb=34', true, ['/parsonsmaize/mulvane.js'], true, false, false, false);</script>
+<script type='text/javascript' style='display:none;' async>__ez.queue.addFile('/porpoiseant/jellyfish.js', '/porpoiseant/jellyfish.js?a=a&cb=10&dcb=195-2&shcb=34', false, [], true, false, false, false);</script></body></html>
