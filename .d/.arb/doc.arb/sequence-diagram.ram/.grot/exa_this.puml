@@ -1,3 +1,4 @@
 @startuml
-skinparameters
+mainframe Это **основной фрейм**
+Alice->Bob : Привет
 @enduml

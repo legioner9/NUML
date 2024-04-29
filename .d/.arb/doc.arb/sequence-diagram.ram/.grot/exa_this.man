@@ -1,0 +1,728 @@
+    @startuml
+
+title **Simple** communication example\non several lines
+header Page Header
+footer Page %page% of %lastpage%
+
+    mainframe Это **основной фрейм**
+
+    skinparam sequenceMessageAlign right
+    skinparam responseMessageBelowArrow true
+
+    participant A [
+        =Alise
+        ----
+        ""SubTitle""
+    ]
+    participant Bob
+    participant Alice
+    note over Alice, Bob #FFAAAA: Будет отображено\n над Алисой и Бобо
+    "Bob()" -[#red]> "Это что-то\nочень длинное" as Long
+    note left: это первая заметка
+    A-[#0000FF]>Long : Hello!
+    note right
+    заметки
+    могут занимать
+    несколько строчек
+    end note
+    newpage
+    Alice <- Alice: Это сигнал к самому себе.\nТакже это является демонстрацией\nмногострочного \nтекста.
+    Alice -> Bob
+
+    @enduml
+
+<!-- ```plantuml
+``` -->
+
+```plantuml
+@startuml
+
+title __Simple__ communication example\non several lines
+
+header Page Header
+footer Page %page% of %lastpage%
+
+mainframe Это **основной фрейм**
+
+skinparam sequenceMessageAlign right
+skinparam responseMessageBelowArrow true
+
+participant A [
+    =Alise
+    ----
+    ""SubTitle""
+]
+participant Bob
+participant Alice
+note over Alice, Bob #FFAAAA: Будет отображено\n над Алисой и Бобо
+"Bob()" -[#red]> "Это что-то\nочень длинное" as Long
+note left: это первая заметка
+A-[#0000FF]>Long : Hello!
+note right
+заметки
+могут занимать
+несколько строчек
+end note
+newpage
+Alice <- Alice: Это сигнал к самому себе.\nТакже это является демонстрацией\nмногострочного \nтекста.
+Alice -> Bob
+
+@enduml
+```
+
+    @startuml
+    Alice -> Bob: Authentication Request
+
+    alt successful case
+
+        Bob -> Alice: Authentication Accepted
+
+    else some kind of failure
+
+        Bob -> Alice: Authentication Failure
+        group My own label [Моя дополнительна метка]
+        Alice -> Log : Log attack start
+            loop 1000 times
+                Alice -> Bob: DNS Attack
+            end
+        Alice -> Log : Log attack end
+        end
+
+    else Another type of failure
+
+    Bob -> Alice: Please repeat
+
+    end
+    @enduml
+
+```plantuml
+@startuml
+Alice -> Bob: Authentication Request
+
+alt successful case
+
+    Bob -> Alice: Authentication Accepted
+
+else some kind of failure
+
+    Bob -> Alice: Authentication Failure
+    group My own label [Моя дополнительна метка]
+    Alice -> Log : Log attack start
+        loop 1000 times
+            Alice -> Bob: DNS Attack
+        end
+    Alice -> Log : Log attack end
+    end
+
+else Another type of failure
+
+   Bob -> Alice: Please repeat
+
+end
+@enduml
+```
+
+@startuml
+caller -> server : conReq
+hnote over caller : idle
+caller <- server : conConf
+rnote over server
+"r" as rectangle
+"h" as hexagon
+endrnote
+rnote over server
+что-то важное
+на нескольких
+строчках
+endrnote
+hnote over caller
+что-то не важное
+на нескольких
+строчках
+endhnote
+@enduml
+
+```plantuml
+@startuml
+caller -> server : conReq
+hnote over caller : idle
+caller <- server : conConf
+rnote over server
+ "r" as rectangle
+ "h" as hexagon
+endrnote
+rnote over server
+ что-то важное
+ на нескольких
+ строчках
+endrnote
+hnote over caller
+ что-то не важное
+ на нескольких
+ строчках
+endhnote
+@enduml
+
+```
+
+### Creole и HTML
+
+    @startuml
+    participant Alice
+    participant "The **Famous** Bob" as Bob
+
+    Alice -> Bob : hello --there--
+    ... Some ~~long delay~~ ...
+    Bob -> Alice : ok
+    note left
+    This is **bold**
+    This is //italics//
+    This is ""monospaced""
+    This is --stroked--
+    This is __underlined__
+    This is ~~waved~~
+    end note
+
+    == Repetition ==
+
+    Alice -> Bob : A //well formatted// message
+    note right of Alice
+    This is <back:cadetblue><size:18>displayed</size></back>
+    __left of__ Alice.
+    end note
+    note left of Bob
+    <u:red>This</u> is <color #118888>displayed</color>
+    **<color purple>left of</color> <s:red>Alice</strike> Bob**.
+    end note
+    note over Alice, Bob
+    <w:#FF33FF>This is hosted</w> by <img sourceforge.jpg>
+    end note
+    @enduml
+
+```plantuml
+@startuml
+participant Alice
+participant "The **Famous** Bob" as Bob
+
+Alice -> Bob : hello --there--
+... Some ~~long delay~~ ...
+Bob -> Alice : ok
+note left
+  This is **bold**
+  This is //italics//
+  This is ""monospaced""
+  This is --stroked--
+  This is __underlined__
+  This is ~~waved~~
+end note
+
+== Repetition ==
+
+...5 минут спустя...
+
+Alice -> Bob : A //well formatted// message
+note right of Alice
+ This is <back:cadetblue><size:18>displayed</size></back>
+ __left of__ Alice.
+end note
+note left of Bob
+ <u:red>This</u> is <color #118888>displayed</color>
+ **<color purple>left of</color> <s:red>Alice</strike> Bob**.
+end note
+note over Alice, Bob
+ <w:#FF33FF>This is hosted</w> by <img sourceforge.jpg>
+end note
+@enduml
+
+```
+
+### Ссылки
+
+    @startuml
+    participant Alice
+    actor Bob
+
+    ref over Alice, Bob : инициализация
+
+    Alice -> Bob : hello
+
+    ref over Bob
+    Тут мы можем занять
+    несколько строчек
+    end ref
+    @enduml
+
+```plantuml
+@startuml
+participant Alice
+actor Bob
+
+ref over Alice, Bob : инициализация
+
+Alice -> Bob : hello
+
+ref over Bob
+  Тут мы можем занять
+  несколько строчек
+end ref
+@enduml
+
+```
+
+### Активация и деактивация линии существования
+
+    @startuml
+    participant User
+
+    User -> A: DoWork
+    activate A
+
+    A -> B: << createRequest >>
+    activate B
+
+    B -> C: DoWork
+    activate C
+    C --> B: WorkDone
+    destroy C
+
+    B --> A: RequestCreated
+    deactivate B
+
+    A -> User: Done
+    deactivate A
+
+    @enduml
+
+```plantuml
+
+@startuml
+participant User
+
+User -> A: DoWork
+activate A
+
+A -> B: << createRequest >>
+activate B
+
+B -> C: DoWork
+activate C
+C --> B: WorkDone
+destroy C
+
+B --> A: RequestCreated
+deactivate B
+
+A -> User: Done
+deactivate A
+
+@enduml
+
+```
+
+#### Можно использовать вложенные линии существования, и можно указывать цвет для этих линий
+
+    @startuml
+    participant User
+
+    User -> A: DoWork
+    activate A #FFBBBB
+
+    A -> A: Internal call
+    activate A #DarkSalmon
+
+    A -> B: << createRequest >>
+    activate B
+
+    B --> A: RequestCreated
+    deactivate B
+    deactivate A
+    A -> User: Done
+    deactivate A
+
+    @enduml
+
+```plantuml
+@startuml
+participant User
+
+User -> A: DoWork
+activate A #FFBBBB
+
+A -> A: Internal call
+activate A #DarkSalmon
+
+A -> B: << createRequest >>
+activate B
+
+B --> A: RequestCreated
+deactivate B
+deactivate A
+A -> User: Done
+deactivate A
+
+@enduml
+
+```
+
+#### Autoactivation is possible and works with the return keywords: Автоактивация также возможна, для этого используйте команду autoactivate on. Для определения конца активации используются команды return:
+
+    @startuml
+    autoactivate on
+    alice -> bob : старт
+    bob -> bob : собственный старт
+    bill -> bob #005500 : старт другого потока
+    bob -> george ** : создание
+    return финиш другого потока
+    return собственный финиш
+    bob -> george !! : удаление
+    return финиш
+
+    @enduml
+
+```plantuml
+@startuml
+autoactivate on
+alice -> bob : старт
+bob -> bob : собственный старт
+bill -> bob #005500 : старт другого потока
+bob -> george ** : создание
+return финиш другого потока
+return собственный финиш
+bob -> george !! : удаление
+return финиш
+
+@enduml
+
+```
+
+### Return
+
+Команда return генерирует сообщение возврата с необязательной текстовой меткой.
+Точкой возврата является та линия, которая вызвала последнюю активацию текущей линии жизни.
+Синтаксис - return label, где label, если указано, является любой строкой, приемлемой для обычных сообщений.
+
+    @startuml
+    Bob -> Alice : привет
+    activate Alice
+    Alice -> Alice : какое-то действие
+    return пока
+    @enduml
+
+```plantuml
+@startuml
+Bob -> Alice : привет
+activate Alice
+Alice -> Alice : какое-то действие
+return пока
+@enduml
+
+```
+
+### Отображение создания участника процессом
+
+    @startuml
+    Bob -> Alice : hello
+
+    create Other
+    Alice -> Other : new
+
+    create control String
+    Alice -> String
+    note right : You can also put notes!
+
+    Alice --> Bob : ok
+
+    @enduml
+
+```plantuml
+@startuml
+Bob -> Alice : hello
+
+create Other
+Alice -> Other : new
+
+create control String
+Alice -> String
+note right : You can also put notes!
+
+Alice --> Bob : ok
+
+@enduml
+
+```
+
+### Быстрый синтаксис для активации, деактивации и создания
+
+- ++ Активировать цель (опционально за этим может следовать цвет)
+- -- Деактивировать источник
+- \*\* Создать экземпляр цели
+- !! Уничтожить экземпляр цели
+
+  @startuml
+  alice -> bob ++ : hello
+  bob -> bob ++ : self call
+  bob -> bib ++ #005500 : hello
+  bob -> george \*\* : create
+  return done
+  return rc
+  bob -> george !! : delete
+  return success
+  @enduml
+
+```plantuml
+@startuml
+alice -> bob ++ : hello
+bob -> bob ++ : self call
+bob -> bib ++  #005500 : hello
+bob -> george ** : create
+return done
+return rc
+bob -> george !! : delete
+return success
+@enduml
+
+```
+
+#### Затем вы можете смешивать активацию и деактивацию в одной строке
+
+    @startuml
+    alice   ->  bob     ++   : hello1
+    bob     ->  charlie --++ : hello2
+    charlie --> alice   --   : ok
+    @enduml
+
+```plantuml
+@startuml
+alice   ->  bob     ++   : hello1
+bob     ->  charlie --++ : hello2
+charlie --> alice   --   : ok
+@enduml
+
+```
+
+    @startuml
+    @startuml
+    alice -> bob   --++ #gold: hello
+    bob   -> alice --++ #gold: you too
+    alice -> bob   --: step1
+    alice -> bob   : step2
+    @enduml
+    @enduml
+
+```plantuml
+@startuml
+@startuml
+alice -> bob   --++ #gold: hello
+bob   -> alice --++ #gold: you too
+alice -> bob   --: step1
+alice -> bob   : step2
+@enduml
+@enduml
+
+```
+
+### Входящие и исходящие сообщения
+
+    @startuml
+    [-> A: DoWork
+
+    activate A
+
+    A -> A: Internal call
+    activate A
+
+    A ->] : << createRequest >>
+
+    A<--] : RequestCreated
+    deactivate A
+    [<- A: Done
+    deactivate A
+    @enduml
+
+```plantuml
+@startuml
+[-> A: DoWork
+
+activate A
+
+A -> A: Internal call
+activate A
+
+A ->] : << createRequest >>
+
+A<--] : RequestCreated
+deactivate A
+[<- A: Done
+deactivate A
+@enduml
+
+```
+
+### Короткие стрелки для входящих и исходящих сообщений
+
+    @startuml
+    ?-> Alice    : ""?->""\n**short** to actor1
+    [-> Alice    : ""[->""\n**from start** to actor1
+    [-> Bob      : ""[->""\n**from start** to actor2
+    ?-> Bob      : ""?->""\n**short** to actor2
+    Alice ->]    : ""->]""\nfrom actor1 **to end**
+    Alice ->?    : ""->?""\n**short** from actor1
+    Alice -> Bob : ""->"" \nfrom actor1 to actor2
+    @enduml
+
+```plantuml
+@startuml
+?-> Alice    : ""?->""\n**short** to actor1
+[-> Alice    : ""[->""\n**from start** to actor1
+[-> Bob      : ""[->""\n**from start** to actor2
+?-> Bob      : ""?->""\n**short** to actor2
+Alice ->]    : ""->]""\nfrom actor1 **to end**
+Alice ->?    : ""->?""\n**short** from actor1
+Alice -> Bob : ""->"" \nfrom actor1 to actor2
+@enduml
+
+```
+
+### Якоря и длительность
+
+С помощью teoz можно добавить якоря на диаграмму и использовать якоря для указания длительности
+
+@startuml
+!pragma teoz true
+
+{start} Alice -> Bob : старт некоторых работ, занимающих какое-то время
+Bob -> Max : что-то одно
+Max -> Bob : что-то другое
+{end} Bob -> Alice : конец
+
+{start} <-> {end} : прошедшее время
+
+@enduml
+
+```plantuml
+@startuml
+!pragma teoz true
+
+{start} Alice -> Bob : старт некоторых работ, занимающих какое-то время
+Bob -> Max : что-то одно
+Max -> Bob : что-то другое
+{end} Bob -> Alice : конец
+
+{start} <-> {end} : прошедшее время
+
+@enduml
+
+```
+
+Для указания прагмы можно использовать опцию командной строки -P
+
+java -jar plantuml.jar -Pteoz=true
+
+### Шаблоны и отметки
+
+Можно добавить шаблоны к участникам используя << и >>.
+В шаблоне вы можете добавить отмеченного участника в цветном круге используя синтаксис (X,color).
+
+    @startuml
+
+    participant "Famous Bob" as Bob << Generated >>
+    participant Alice << (C,#ADD1B2) Testable >>
+
+    Bob->Alice: First message
+
+    @enduml
+
+```plantuml
+@startuml
+
+participant "Famous Bob" as Bob << Generated >>
+participant Alice << (R,#ADD1B2) Testable >>
+
+Bob->Alice: First message
+
+@enduml
+
+```
+
+По умолчанию, символ guillemet используется для отображения шаблона. Вы можете изменить это поведение, используя skinparam guillemet:
+
+    @startuml
+
+    skinparam guillemet false
+    participant "Famous Bob" as Bob << Generated >>
+    participant Alice << (C,#ADD1B2) Testable >>
+
+    Bob->Alice: First message
+
+    @enduml
+
+```plantuml
+@startuml
+
+skinparam guillemet false
+participant "Famous Bob" as Bob << Generated >>
+participant Alice << (C,#ADD1B2) Testable >>
+
+Bob->Alice: First message
+
+@enduml
+
+```
+
+    @startuml
+
+    participant Bob << (C,#ADD1B2) >>
+    participant Alice << (C,#ADD1B2) >>
+
+    Bob->Alice: First message
+
+    @enduml
+
+```plantuml
+@startuml
+
+participant Bob << (C,#ADD1B2) >>
+participant Alice << (C,#ADD1B2) >>
+
+Bob->Alice: First message
+
+@enduml
+
+```
+
+### Больше информации в заголовках
+
+@startuml
+
+    title
+    <u>Simple</u> communication example
+    on <i>several</i> lines and using <font color=red>html</font>
+    This is hosted by <img:sourceforge.jpg>
+    end title
+
+    Alice -> Bob: Authentication Request
+    Bob -> Alice: Authentication Response
+
+    @enduml
+
+```plantuml
+@startuml
+
+title
+ <u>Simple</u> communication example
+ on <i>several</i> lines and using <font color=red>html</font>
+ This is hosted by <img:1.jpg>
+end title
+
+Alice -> Bob: Authentication Request
+Bob -> Alice: Authentication Response
+
+@enduml
+
+```
+
+<!-- ```plantuml
+``` -->
+
+<!-- ```plantuml
+``` -->
