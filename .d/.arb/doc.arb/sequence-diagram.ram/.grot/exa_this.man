@@ -16,7 +16,7 @@ footer Page %page% of %lastpage%
     ]
     participant Bob
     participant Alice
-    note over Alice, Bob #FFAAAA: Будет отображено\n над Алисой и Бобо
+    note over Alice, Bob #FF0000/FFFF00: Будет отображено\n над Алисой и Бобо
     "Bob()" -[#red]> "Это что-то\nочень длинное" as Long
     note left: это первая заметка
     A-[#0000FF]>Long : Hello!
@@ -54,7 +54,7 @@ participant A [
 ]
 participant Bob
 participant Alice
-note over Alice, Bob #FFAAAA: Будет отображено\n над Алисой и Бобо
+note over Alice, Bob #FF0000/FFFF00: Будет отображено\n над Алисой и Бобо
 "Bob()" -[#red]> "Это что-то\nочень длинное" as Long
 note left: это первая заметка
 A-[#0000FF]>Long : Hello!
@@ -721,8 +721,37 @@ Bob -> Alice: Authentication Response
 
 ```
 
-<!-- ```plantuml
-``` -->
+### Группировка участников
+
+    @startuml
+
+    box "Internal Service" #LightBlue
+    participant Bob
+    participant Alice
+    end box
+    participant Other
+
+    Bob -> Alice : hello
+    Alice -> Other : hello
+
+    @enduml
+
+
+```plantuml
+@startuml
+
+box "Internal Service" #LightBlue
+participant Bob
+participant Alice
+end box
+participant Other
+
+Bob -> Alice : hello
+Alice -> Other : hello
+
+@enduml
+
+```
 
 <!-- ```plantuml
 ``` -->
