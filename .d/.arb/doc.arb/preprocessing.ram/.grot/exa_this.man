@@ -1,9 +1,565 @@
+## Переменные, созданные вне функции, являются глобальными, то есть вы можете получить к ним доступ отовсюду (в том числе из функций). Вы можете подчеркнуть это, используя необязательное global ключевое слово при определении переменной.
+    
     @startuml
-    skinparameters
+    !$a  = 42
+    !$ab = "foo1"
+    !$cd = "foo2"
+    !$ef = $ab + $cd
+    !$foo = { "name": "John", "age" : 30 }
+
+    Alice -> Bob : $a
+    Alice -> Bob : $ab
+    Alice -> Bob : $cd
+    Alice -> Bob : $ef
+    Alice -> Bob : Do you know **$foo.name** ?
     @enduml
 
+
+```plantuml
+@startuml
+!$a  = 42
+!$ab = "foo1"
+!$cd = "foo2"
+!$ef = $ab + $cd
+!$foo = { "name": "John", "age" : 30 }
+
+Alice -> Bob : $a
+Alice -> Bob : $ab
+Alice -> Bob : $cd
+Alice -> Bob : $ef
+Alice -> Bob : Do you know **$foo.name** ?
+@enduml
+
+```
+
+## Вы также можете присвоить значение переменной, только если оно еще не определено, с помощью следующего синтаксиса: !$a ?= "foo"
+
+    @startuml
+    Alice -> Bob : 1. **$name** should be empty
+
+    !$name ?= "Charlie"
+    Alice -> Bob : 2. **$name** should be Charlie
+
+    !$name = "David"
+    Alice -> Bob : 3. **$name** should be David
+
+    !$name ?= "Ethan"
+    Alice -> Bob : 4. **$name** should be David
+    @enduml
+
+
+```plantuml
+@startuml
+Alice -> Bob : 1. **$name** should be empty
+
+!$name ?= "Charlie"
+Alice -> Bob : 2. **$name** should be Charlie
+
+!$name = "David"
+Alice -> Bob : 3. **$name** should be David
+
+!$name ?= "Ethan"
+Alice -> Bob : 4. **$name** should be David
+@enduml
+
+```
+
+## Логическое представление [0 равно false]
+Реального логического типа не существует, но PlantUML использует это целочисленное соглашение:
+
+- Целое число 0 означает false
+- и любое ненулевое число (как 1) или любая строка (как "1", или даже "0") означает true.
+
+## Логическая операция и оператор [&&, ||, ()]
+Вы можете использовать логическое выражение в тесте с :
+
+- скобки();
+- и оператор&&;
+- или оператор||.
+
+## Встроенные логические функции [%false(), %true(), %not(\<exp>)]
+Для удобства вы можете использовать эти встроенные логические функции:
+
+- %false()
+- %true()
+- %not(<exp>)
+
+## Conditions [!if, !else, !elseif, !endif]
+- You can use expression in condition.
+- else and elseif are also implemented
+
+.
+
+    @startuml
+    !$a = 10
+    !$ijk = "foo"
+    Alice -> Bob : A
+    !if ($ijk == "foo") && ($a+10>=4)
+    Alice -> Bob : yes
+    !else
+    Alice -> Bob : This should not appear
+    !endif
+    Alice -> Bob : B
+    @enduml
+
+
+```plantuml
+@startuml
+!$a = 10
+!$ijk = "foo"
+Alice -> Bob : A
+!if ($ijk == "foo") && ($a+10>=4)
+Alice -> Bob : yes
+!else
+Alice -> Bob : This should not appear
+!endif
+Alice -> Bob : B
+@enduml
+
+```
+
+## While loop [!while, !endwhile]
+You can use !while and !endwhile keywords to have repeat loops.
+
+    @startuml
+    !procedure $foo($arg)
+    :procedure start;
+    !while $arg!=0
+        !$i=3
+        #palegreen:arg=$arg;
+        !while $i!=0
+        :arg=$arg and i=$i;
+        !$i = $i - 1
+        !endwhile
+        !$arg = $arg - 1
+    !endwhile
+    :procedure end;
+    !endprocedure
+
+    start
+    $foo(2)
+    end
+    @enduml
+
+
+```plantuml
+@startuml
+!procedure $foo($arg)
+  :procedure start;
+  !while $arg!=0
+    !$i=3
+    #palegreen:arg=$arg;
+    !while $i!=0
+      :arg=$arg and i=$i;
+      !$i = $i - 1
+    !endwhile
+    !$arg = $arg - 1
+  !endwhile
+  :procedure end;
+!endprocedure
+
+start
+$foo(2)
+end
+@enduml
+
+```
+## While loop (on Mindmap diagram)
+
+    @startmindmap
+    !procedure $foo($arg)
+    !while $arg!=0
+        !$i=3
+        **[#palegreen] arg = $arg
+        !while $i!=0
+        *** i = $i
+        !$i = $i - 1
+        !endwhile
+        !$arg = $arg - 1
+    !endwhile
+    !endprocedure
+
+    *:While
+    Loop;
+    $foo(2)
+    @endmindmap
+
+```plantuml
+@startmindmap
+!procedure $foo($arg)
+  !while $arg!=0
+    !$i=3
+    **[#palegreen] arg = $arg
+    !while $i!=0
+      *** i = $i
+      !$i = $i - 1
+    !endwhile
+    !$arg = $arg - 1
+  !endwhile
+!endprocedure
+
+*:While
+Loop;
+$foo(2)
+@endmindmap
+
+```
+## While loop (on Component/Deployment diagram)
+
+    @startuml
+    !procedure $foo($arg)
+    !while $arg!=0
+        [Component $arg] as $arg
+        !$arg = $arg - 1
+    !endwhile
+    !endprocedure
+
+    $foo(4)
+
+    1->2
+    3-->4
+    @enduml
+
+```plantuml
+@startuml
+!procedure $foo($arg)
+  !while $arg!=0
+    [Component $arg] as $arg
+    !$arg = $arg - 1
+  !endwhile
+!endprocedure
+
+$foo(4)
+
+1->2
+3-->4
+@enduml
+
+```
+
+## Procedure [!procedure, !endprocedure]
+- Procedure names should start with a $
+- Argument names should start with a $
+- Procedures can call other procedures
+
+.
+
+    @startuml
+    !procedure $msg($source, $destination)
+    $source --> $destination
+    !endprocedure
+
+    !procedure $init_class($name)
+    class $name {
+        $addCommonMethod()
+    }
+    !endprocedure
+
+
+    !procedure $addCommonMethod()
+    toString()
+    hashCode()
+    !endprocedure
+
+
+    $init_class("foo1")
+    $init_class("foo2")
+    $msg("foo1", "foo2")
+    @enduml
+
+```plantuml
+@startuml
+!procedure $msg($source, $destination)
+  $source --> $destination
+!endprocedure
+
+!procedure $init_class($name)
+  class $name {
+    $addCommonMethod()
+  }
+!endprocedure
+
+
+!procedure $addCommonMethod()
+  toString()
+  hashCode()
+!endprocedure
+
+
+$init_class("foo1")
+$init_class("foo2")
+$msg("foo1", "foo2")
+@enduml
+
+```
+## Return function [!function, !endfunction]
+Функция возврата не выводит никакого текста. Она просто определяет функцию, которую вы можете вызвать:
+- directly in variable definition or in diagram text
+- from other return functions
+- from procedures
+- Function name should start with a $
+- Argument names should start with a $
+
+.
+
+    @startuml
+    !function $double($a)
+    !return $a + $a
+    !endfunction
+
+    Alice -> Bob : The double of 3 is $double(3)
+    @enduml
+
+```plantuml
+@startuml
+!function $double($a)
+!return $a + $a
+!endfunction
+
+Alice -> Bob : The double of 3 is $double(3)
+@enduml
+
+```
+
+## Простое определение функции можно сократить в одну строку:
+
+    @startuml
+    !function $double($a) !return $a + $a
+
+    Alice -> Bob : The double of 3 is $double(3)
+    Alice -> Bob : $double("This work also for strings.")
+    @enduml
+
+
+```plantuml
+@startuml
+!function $double($a) !return $a + $a
+
+Alice -> Bob : The double of 3 is $double(3)
+Alice -> Bob : $double("This work also for strings.")
+@enduml
+
+```
+
+Как и в процедуре (функция void), переменные по умолчанию являются локальными (они уничтожаются при выходе из функции). Однако вы можете получить доступ к глобальным переменным из функции. Однако вы можете использовать ключевое слово local для создания локальной переменной, если когда-либо существует глобальная переменная с таким же именем.
+
+    @startuml
+    !function $dummy()
+    !local $ijk = "local"
+    !return "Alice -> Bob : " + $ijk
+    !endfunction
+
+    !global $ijk = "foo"
+
+    Alice -> Bob : $ijk
+    $dummy()
+    Alice -> Bob : $ijk
+    @enduml
+
+
+```plantuml
+@startuml
+!function $dummy()
+!local $ijk = "local"
+!return "Alice -> Bob : " + $ijk
+!endfunction
+
+!global $ijk = "foo"
+
+Alice -> Bob : $ijk
+$dummy()
+Alice -> Bob : $ijk
+@enduml
+
+```
+
+## Значение аргумента по умолчанию
+Как в процедурах, так и в функциях возврата вы можете определить значения по умолчанию для аргументов.
+
+    @startuml
+    !function $inc($value, $step=1)
+    !return $value + $step
+    !endfunction
+
+    Alice -> Bob : Just one more $inc(3)
+    Alice -> Bob : Add two to three : $inc(3, 2)
+    @enduml
+
+
+```plantuml
+@startuml
+!function $inc($value, $step=1)
+!return $value + $step
+!endfunction
+
+Alice -> Bob : Just one more $inc(3)
+Alice -> Bob : Add two to three : $inc(3, 2)
+@enduml
+
+```
+Только аргументы в конце списка параметров могут иметь значения по умолчанию.
+
+    @startuml
+    !procedure defaulttest($x, $y="DefaultY", $z="DefaultZ")
+    note over Alice
+    x = $x
+    y = $y
+    z = $z
+    end note
+    !endprocedure
+
+    defaulttest(1, 2, 3)
+    defaulttest(1, 2)
+    defaulttest(1)
+    @enduml
+
+```plantuml
+@startuml
+!procedure defaulttest($x, $y="DefaultY", $z="DefaultZ")
+note over Alice
+  x = $x
+  y = $y
+  z = $z
+end note
+!endprocedure
+
+defaulttest(1, 2, 3)
+defaulttest(1, 2)
+defaulttest(1)
+@enduml
+
+```
+## Процедура или функция без кавычек [!unquoted]
+
+По умолчанию вы должны заключать в кавычки при вызове функции или процедуры. Можно использовать ключевое слово unquoted, чтобы указать, что функция или процедура не требуют кавычек для своих аргументов.
+
+    @startuml
+    !unquoted function id($text1, $text2="FOO") !return $text1 + $text2
+
+    alice -> bob : id(aa)
+    alice -> bob : id(ab,cd)
+    @enduml
+
+```plantuml
+@startuml
+!unquoted function id($text1, $text2="FOO") !return $text1 + $text2
+
+alice -> bob : id(aa)
+alice -> bob : id(ab,cd)
+@enduml
+
+```
+
+## Ключевые слова аргументы
+
+Как и в Python, вы можете использовать аргументы ключевых слов :
+
+    @startuml
+
+    !unquoted procedure $element($alias, $description="", $label="", $technology="", $size=12, $colour="green")
+    rectangle $alias as "
+    <color:$colour><<$alias>></color>
+    ==$label==
+    //<size:$size>[$technology]</size>//
+
+    $description"
+    !endprocedure
+
+    $element(myalias, "This description is %newline()on several lines", $size=10, $technology="Java")
+    @enduml
+
+```plantuml
+@startuml
+
+!unquoted procedure $element($alias, $description="", $label="", $technology="", $size=12, $colour="green")
+rectangle $alias as "
+<color:$colour><<$alias>></color>
+==$label==
+//<size:$size>[$technology]</size>//
+
+  $description"
+!endprocedure
+
+$element(myalias, "This description is %newline()on several lines", $size=10, $technology="Java")
+@enduml
+
+```
+
+## Включая файлы или URL [!include, !include_many, !include_once]
+Используйте директиву !include, чтобы включить файл в вашу диаграмму. Используя URL, вы также можете включить файл из Интернета / Интрасети. Также можно получить доступ к защищенным ресурсам Интернета, это описано в разделе Аутентификация по URL.
+
+Представьте, что у вас есть тот же самый класс, который появляется на многих диаграммах. Вместо дублирования описания этого класса вы можете определить файл, содержащий описание.
+
+File List.iuml
+
+    interface List
+    List : int size()
+    List : void clear()
+
+
+Файл List.iuml может быть включен во многие диаграммы, и любая модификация в этом файле изменит все диаграммы, которые его включают.
+
+Вы также можете поместить несколько @startuml/@enduml текстовых блоков во включаемый файл, а затем указать, какой блок вы хотите включить, добавив, !0 где 0 - номер блока. Обозначение !0 обозначает первую диаграмму.
+
+Например, если вы используете !include foo.txt!1, будет включен второй @startuml/@enduml блок внутри foo.txt.
+
+Вы также можете присвоить идентификатор некоторому @startuml/@enduml текстовому блоку во включаемом файле, используя @startuml(id=MY_OWN_ID) синтаксис, а затем включить добавление блока !MY_OWN_ID при включении файла, используя что-то вроде !include foo.txt!MY_OWN_ID.
+
+По умолчанию файл может быть включен только один раз. Вы можете использовать !include_many вместо !include, если хотите включить какой-либо файл несколько раз. Обратите внимание, что также существует !include_once директива, которая выдает ошибку, если файл включается несколько раз.
+
+
 <!-- ```plantuml
+
 ``` -->
 
 <!-- ```plantuml
+
+``` -->
+
+<!-- ```plantuml
+
+``` -->
+
+<!-- ```plantuml
+
+``` -->
+
+<!-- ```plantuml
+
+``` -->
+
+<!-- ```plantuml
+
+``` -->
+
+<!-- ```plantuml
+
+``` -->
+
+<!-- ```plantuml
+
+``` -->
+
+<!-- ```plantuml
+
+``` -->
+
+<!-- ```plantuml
+
+``` -->
+
+<!-- ```plantuml
+
+``` -->
+
+<!-- ```plantuml
+
+``` -->
+
+<!-- ```plantuml
+
+``` -->
+
+<!-- ```plantuml
+
 ``` -->
